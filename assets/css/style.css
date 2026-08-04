@@ -47,7 +47,17 @@ nav a:hover{
 }
 
 .hero{
-    background: url("../IMG-20260710-WA0004.jpg") center center/cover no-repeat;
+    .hero{
+    background: url("../IMG-20260710-WA0000.jpg") center center/cover no-repeat;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    width: 100%;
+}
     min-height: 100vh;
     display: flex;
     justify-content: center;
