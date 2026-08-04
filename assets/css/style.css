@@ -195,3 +195,16 @@ footer{
 .hero p{
     color:#fff;
 }
+.hero h1,
+.hero h2,
+.hero p{
+    color:#fff;
+}
+
+footer{
+    background:#0b3d91;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    clear:both;
+}
