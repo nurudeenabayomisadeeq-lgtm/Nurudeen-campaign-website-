@@ -156,3 +156,32 @@ footer{
 .whatsapp:hover{
     transform:scale(1.1);
 }
+.hero{
+    background:url("../IMG-20260710-WA0004.jpg") center center/cover no-repeat;
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.55);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    padding:20px;
+}
+
+.hero h1,
+.hero h2,
+.hero p{
+    color:#fff;
+}
