@@ -47,8 +47,15 @@ nav a:hover{
 }
 
 .hero{
-    text-align:center;
-    padding:40px 20px;
+    background: url("../IMG-20260710-WA0004.jpg") center center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
 .hero img{
     width:90%;
@@ -84,11 +91,14 @@ button:hover,
 }
 
 footer{
-    background:#003b8e;
-    color:#fff;
-    text-align:center;
+    footer{
+    background:#0b3d91;
+    color:white;
     padding:20px;
-    margin-top:40px;
+    text-align:center;
+    clear:both;
+}
+}
 }
 
 @media (max-width:768px){
