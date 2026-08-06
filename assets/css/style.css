@@ -373,3 +373,17 @@ footer{
 .gallery img:hover{
     transform:scale(1.03);
 }
+.contact{
+    max-width:700px;
+    margin:40px auto;
+    padding:30px;
+    text-align:center;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+
+.contact p{
+    margin:15px 0;
+    font-size:18px;
+}
