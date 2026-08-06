@@ -301,3 +301,38 @@ footer{
     margin: 20px auto;
     border-radius: 15px;
 }
+.hero{
+    background:#0b2d6d;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero-img{
+    width:220px;
+    height:auto;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.hero h1{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    color:#ffd700;
+    margin:10px 0;
+}
+
+.btn{
+    display:inline-block;
+    background:#e31b23;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 24px;
+    margin:10px;
+    border-radius:8px;
+    font-weight:bold;
+}
