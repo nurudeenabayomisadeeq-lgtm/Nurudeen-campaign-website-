@@ -336,3 +336,23 @@ footer{
     border-radius:8px;
     font-weight:bold;
 }
+.why-vote{
+    padding:50px 20px;
+    text-align:center;
+    background:#f8f9fa;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    width:300px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
