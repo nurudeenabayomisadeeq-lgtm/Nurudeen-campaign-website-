@@ -942,3 +942,35 @@ footer{
     font-weight:bold;
     color:#d71920;
 }
+#darkModeBtn{
+    background:#d71920;
+    color:#fff;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#darkModeBtn:hover{
+    background:#fff;
+    color:#0b3d91;
+}
+
+.dark-mode{
+    background:#121212;
+    color:#ffffff;
+}
+
+.dark-mode section{
+    background:#1e1e1e;
+}
+
+.dark-mode .testimonial-card,
+.dark-mode .manifesto-card,
+.dark-mode .news-post,
+.dark-mode .contact-card,
+.dark-mode .gallery-item{
+    background:#2a2a2a;
+    color:#ffffff;
+}
