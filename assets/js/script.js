@@ -57,3 +57,24 @@ function topFunction() {
         behavior: "smooth"
     });
 }
+// Election Countdown
+const electionDate = new Date("February 08, 2027 08:00:00").getTime();
+
+const timer = setInterval(function () {
+
+    const now = new Date().getTime();
+    const distance = electionDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    document.getElementById("countdown").innerHTML =
+        days + " Days " + hours + " Hours " + minutes + " Minutes";
+
+    if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML = "Election Day!";
+    }
+
+}, 1000);
