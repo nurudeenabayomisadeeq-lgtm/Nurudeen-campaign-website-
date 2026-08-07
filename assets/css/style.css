@@ -877,3 +877,23 @@ footer{
 #topBtn:hover{
     background:#0b3d91;
 }
+.social-icons{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.social-icons a{
+    background:#0b3d91;
+    color:white;
+    padding:12px 20px;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#d71920;
+}
