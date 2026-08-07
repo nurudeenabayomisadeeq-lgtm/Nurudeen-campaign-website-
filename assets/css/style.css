@@ -756,3 +756,37 @@ footer{
 .gallery-item p{
     padding:0 15px 20px;
 }
+.news-page{
+    max-width:1000px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.news-page h1{
+    text-align:center;
+    color:#0b3d91;
+    margin-bottom:40px;
+}
+
+.news-post{
+    background:#fff;
+    padding:25px;
+    margin-bottom:25px;
+    border-left:6px solid #d71920;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.date{
+    color:#777;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.news-post a{
+    display:inline-block;
+    margin-top:15px;
+    color:#d71920;
+    text-decoration:none;
+    font-weight:bold;
+}
