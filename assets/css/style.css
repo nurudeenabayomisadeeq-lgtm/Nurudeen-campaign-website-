@@ -562,3 +562,26 @@ footer{
     border-radius:10px;
     box-shadow:0 4px 10px rgba(0,0,0,.1);
 }
+.campaign-video{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.video-container{
+    position:relative;
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    padding-bottom:56.25%;
+    height:0;
+}
+
+.video-container iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:none;
+    border-radius:15px;
+}
