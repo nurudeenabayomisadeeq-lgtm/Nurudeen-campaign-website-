@@ -20,3 +20,4 @@ function showSlides(){
 
     setTimeout(showSlides,3000);
 }
+<img src="assets/images/nuru1.jpg">
