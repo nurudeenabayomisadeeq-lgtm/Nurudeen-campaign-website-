@@ -613,3 +613,33 @@ footer{
     line-height:1.8;
     margin-bottom:20px;
 }
+.testimonials{
+    padding:70px 20px;
+    background:#f8f9fa;
+    text-align:center;
+}
+
+.testimonials h2{
+    color:#0b3d91;
+    margin-bottom:30px;
+}
+
+.testimonial-card{
+    background:#fff;
+    max-width:800px;
+    margin:20px auto;
+    padding:25px;
+    border-left:5px solid #d71920;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.testimonial-card p{
+    font-style:italic;
+    line-height:1.7;
+}
+
+.testimonial-card h4{
+    margin-top:15px;
+    color:#0b3d91;
+}
