@@ -543,3 +543,22 @@ footer{
     color:#d71920;
     margin-bottom:10px;
 }
+.latest-news{
+    padding:60px 20px;
+    background:#f8f9fa;
+}
+
+.latest-news h2{
+    text-align:center;
+    color:#0b3d91;
+    margin-bottom:30px;
+}
+
+.news-card{
+    background:#fff;
+    padding:20px;
+    margin-bottom:20px;
+    border-left:5px solid #d71920;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
