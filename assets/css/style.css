@@ -740,3 +740,19 @@ footer{
 .manifesto-card p{
     line-height:1.8;
 }
+.gallery-item{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+.gallery-item h3{
+    color:#0b3d91;
+    margin-top:15px;
+}
+
+.gallery-item p{
+    padding:0 15px 20px;
+}
