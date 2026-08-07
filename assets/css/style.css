@@ -516,3 +516,30 @@ footer{
     color:#d71920;
     margin-bottom:15px;
 }
+.stats{
+    background:#0b3d91;
+    color:#fff;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.stat-box{
+    background:#ffffff;
+    color:#0b3d91;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+.stat-box h3{
+    font-size:40px;
+    color:#d71920;
+    margin-bottom:10px;
+}
