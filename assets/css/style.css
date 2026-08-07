@@ -926,3 +926,19 @@ footer{
     text-decoration:none;
     font-weight:bold;
 }
+.countdown{
+    background:#f8f9fa;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.countdown h2{
+    color:#0b3d91;
+    margin-bottom:20px;
+}
+
+#countdown{
+    font-size:32px;
+    font-weight:bold;
+    color:#d71920;
+}
