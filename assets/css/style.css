@@ -850,3 +850,11 @@ footer{
 .notice-bar marquee{
     width:100%;
 }
+.btn{
+    transition:all .3s ease;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 15px rgba(0,0,0,.2);
+}
