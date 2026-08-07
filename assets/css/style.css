@@ -835,3 +835,14 @@ footer{
 .join-form button:hover{
     background:#0b3d91;
 }
+.notice-bar{
+    background:#d71920;
+    color:#fff;
+    padding:12px 0;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.notice-bar marquee{
+    width:100%;
+}
