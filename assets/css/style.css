@@ -414,3 +414,22 @@ footer{
     background:#f4f4f4;
     text-align:center;
 }
+.campaign-banner{
+    background:linear-gradient(135deg,#0b2d6d,#d71920);
+    color:#fff;
+    text-align:center;
+    padding:50px 20px;
+    margin:30px 0;
+    border-radius:15px;
+}
+
+.campaign-banner h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.campaign-banner p{
+    font-size:18px;
+    max-width:700px;
+    margin:0 auto 25px;
+}
