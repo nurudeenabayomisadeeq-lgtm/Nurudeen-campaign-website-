@@ -484,3 +484,35 @@ footer{
     from{opacity:.4;}
     to{opacity:1;}
 }
+.why-vote{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.why-vote h2{
+    color:#0b3d91;
+    margin-bottom:30px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#d71920;
+    margin-bottom:15px;
+}
