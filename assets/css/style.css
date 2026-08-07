@@ -28,11 +28,15 @@ header p{
 }
 
 nav{
-    background:#d71920;
+    background:#0b3d91;
+    padding:15px 30px;
     display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    padding:15px;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
 }
 
 nav a{
