@@ -897,3 +897,32 @@ footer{
 .social-icons a:hover{
     background:#d71920;
 }
+.contact-page{
+    max-width:900px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.contact-page h1{
+    text-align:center;
+    color:#0b3d91;
+    margin-bottom:20px;
+}
+
+.contact-card{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.contact-card h3{
+    color:#d71920;
+    margin-top:20px;
+}
+
+.contact-card a{
+    color:#0b3d91;
+    text-decoration:none;
+    font-weight:bold;
+}
