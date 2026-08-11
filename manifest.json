@@ -1,1 +1,13 @@
 
+{
+  "name": "Hon. Nurudeen Abayomi Sadeeq",
+  "short_name": "IMOLE 2027",
+  "description": "Official campaign website of Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "lang": "en-NG"
+}
