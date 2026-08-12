@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Live Election Results | IMOLE 2027</title>
+    <title>Election Results | IMOLE 2027</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="manifest" href="manifest.json">
@@ -14,9 +14,9 @@
 
     <style>
         .results-page {
-            padding: 30px 15px 60px;
             max-width: 1100px;
             margin: auto;
+            padding: 30px 15px 60px;
         }
 
         .results-header {
@@ -29,26 +29,37 @@
         }
 
         .results-header p {
-            margin: 5px 0;
+            margin: 6px 0;
         }
 
-        .results-summary {
+        .results-badge {
+            display: inline-block;
+            padding: 7px 14px;
+            border-radius: 20px;
+            background: #e8f5e9;
+            color: #176b2c;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .summary-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .summary-card {
             background: #ffffff;
             padding: 20px;
-            border-radius: 15px;
             text-align: center;
+            border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.10);
         }
 
         .summary-card h2 {
-            margin: 5px 0;
+            margin: 8px 0 0;
+            font-size: 30px;
         }
 
         .ward-results {
@@ -72,25 +83,45 @@
             margin: 8px 0;
         }
 
+        .progress-container {
+            width: 100%;
+            height: 10px;
+            background: #eeeeee;
+            border-radius: 10px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background: #777777;
+        }
+
         .status {
             font-weight: bold;
-            margin-top: 15px;
         }
 
         .pending {
-            color: #b36b00;
+            color: #9a6500;
         }
 
         .reported {
-            color: #087f23;
+            color: #176b2c;
         }
 
         .notice {
+            margin-top: 35px;
+            padding: 20px;
             background: #f5f5f5;
-            padding: 18px;
-            border-radius: 12px;
-            margin-top: 30px;
+            border-radius: 14px;
             text-align: center;
+        }
+
+        .last-updated {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -105,18 +136,23 @@
 <section class="results-page">
 
     <div class="results-header">
+
         <h1>LIVE ELECTION RESULTS</h1>
 
-        <p>
-            Ojo Constituency II
-        </p>
+        <p><strong>Ojo Constituency II</strong></p>
 
         <p>
-            Results received from polling units will be updated here.
+            Verified polling-unit results received and reported here.
         </p>
+
+        <span class="results-badge">
+            RESULTS DASHBOARD
+        </span>
+
     </div>
 
-    <div class="results-summary">
+
+    <div class="summary-grid">
 
         <div class="summary-card">
             <p>Total Polling Units</p>
@@ -135,63 +171,176 @@
 
     </div>
 
+
     <div class="ward-results">
 
         <div class="ward-card">
+
             <h2>Ward D — Ijanikin</h2>
+
             <p>Total Polling Units: <strong>43</strong></p>
-            <p>Results Reported: <strong>0</strong></p>
-            <p>Pending: <strong>43</strong></p>
-            <p class="status pending">Awaiting Results</p>
+
+            <p>
+                Reported:
+                <strong>0</strong>
+            </p>
+
+            <p>
+                Pending:
+                <strong>43</strong>
+            </p>
+
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            <p class="status pending">
+                Awaiting Results
+            </p>
+
         </div>
 
+
         <div class="ward-card">
+
             <h2>Ward F — Ilogbo</h2>
+
             <p>Total Polling Units: <strong>80</strong></p>
-            <p>Results Reported: <strong>0</strong></p>
-            <p>Pending: <strong>80</strong></p>
-            <p class="status pending">Awaiting Results</p>
+
+            <p>
+                Reported:
+                <strong>0</strong>
+            </p>
+
+            <p>
+                Pending:
+                <strong>80</strong>
+            </p>
+
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            <p class="status pending">
+                Awaiting Results
+            </p>
+
         </div>
 
+
         <div class="ward-card">
+
             <h2>Ward I — Etegbin</h2>
+
             <p>Total Polling Units: <strong>22</strong></p>
-            <p>Results Reported: <strong>0</strong></p>
-            <p>Pending: <strong>22</strong></p>
-            <p class="status pending">Awaiting Results</p>
+
+            <p>
+                Reported:
+                <strong>0</strong>
+            </p>
+
+            <p>
+                Pending:
+                <strong>22</strong>
+            </p>
+
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            <p class="status pending">
+                Awaiting Results
+            </p>
+
         </div>
 
+
         <div class="ward-card">
+
             <h2>Ward G — Irewe</h2>
+
             <p>Total Polling Units: <strong>9</strong></p>
-            <p>Results Reported: <strong>0</strong></p>
-            <p>Pending: <strong>9</strong></p>
-            <p class="status pending">Awaiting Results</p>
+
+            <p>
+                Reported:
+                <strong>0</strong>
+            </p>
+
+            <p>
+                Pending:
+                <strong>9</strong>
+            </p>
+
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            <p class="status pending">
+                Awaiting Results
+            </p>
+
         </div>
 
+
         <div class="ward-card">
+
             <h2>Ward J — Idoluwo</h2>
+
             <p>Total Polling Units: <strong>8</strong></p>
-            <p>Results Reported: <strong>0</strong></p>
-            <p>Pending: <strong>8</strong></p>
-            <p class="status pending">Awaiting Results</p>
+
+            <p>
+                Reported:
+                <strong>0</strong>
+            </p>
+
+            <p>
+                Pending:
+                <strong>8</strong>
+            </p>
+
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            <p class="status pending">
+                Awaiting Results
+            </p>
+
         </div>
 
     </div>
+
 
     <div class="notice">
-        <strong>Election Day Notice</strong>
+
+        <strong>Verification Notice</strong>
+
         <p>
-            Results displayed on this page will be updated as verified
-            polling-unit results are received.
+            Only verified polling-unit results should be entered or
+            published. Results shown here are not official election
+            results unless confirmed by the appropriate electoral authority.
         </p>
+
     </div>
+
+
+    <p class="last-updated">
+        Last updated: Awaiting verified results
+    </p>
 
 </section>
 
+
 <footer>
-    <p>&copy; 2026 HON. Nurudeen Abayomi Sadeeq</p>
-    <p>Nigeria Democratic Congress (NDC)</p>
+
+    <p>
+        &copy; 2026 HON. Nurudeen Abayomi Sadeeq
+    </p>
+
+    <p>
+        Nigeria Democratic Congress (NDC)
+    </p>
+
 </footer>
 
 </body>
