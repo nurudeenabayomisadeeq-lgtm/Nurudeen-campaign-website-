@@ -969,7 +969,7 @@ OPEN SPACE AT LONDON STREET OKE AGBO<br>
     </p>
 
 </footer>
-<script>
+    <script>
 function searchPollingUnits() {
     const input = document.getElementById("puSearch");
     const filter = input.value.toLowerCase().trim();
@@ -978,30 +978,43 @@ function searchPollingUnits() {
 
     wardCards.forEach(function(ward) {
         const wardText = ward.textContent.toLowerCase();
+
+        const words = filter
+            .split(/\s+/)
+            .filter(Boolean);
+
+        const wardMatch = words.every(function(word) {
+            return wardText.includes(word);
+        });
+
         const units = ward.querySelectorAll(".polling-unit-list > div");
+        let unitMatch = false;
 
-        if (filter === "" || wardText.includes(filter)) {
+        units.forEach(function(unit) {
+            const unitText = unit.textContent.toLowerCase();
+
+            const match = filter === "" ||
+                words.every(function(word) {
+                    return unitText.includes(word);
+                });
+
+            unit.style.display = match ? "" : "none";
+
+            if (match) {
+                unitMatch = true;
+            }
+        });
+
+        if (filter === "" || wardMatch || unitMatch) {
             ward.style.display = "";
-
-            units.forEach(function(unit) {
-                unit.style.display = "";
-            });
-
-        } else {
-            let unitMatch = false;
-
-            units.forEach(function(unit) {
-                const unitText = unit.textContent.toLowerCase();
-
-                if (unitText.includes(filter)) {
+            
+            if (wardMatch) {
+                units.forEach(function(unit) {
                     unit.style.display = "";
-                    unitMatch = true;
-                } else {
-                    unit.style.display = "none";
-                }
-            });
-
-            ward.style.display = unitMatch ? "" : "none";
+                });
+            }
+        } else {
+            ward.style.display = "none";
         }
     });
 }
