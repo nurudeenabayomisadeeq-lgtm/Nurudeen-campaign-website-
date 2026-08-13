@@ -967,16 +967,29 @@ OPEN SPACE AT LONDON STREET OKE AGBO<br>
 <script>
 function searchPollingUnits() {
     const input = document.getElementById("puSearch");
-    const filter = input.value.toLowerCase();
-    const units = document.querySelectorAll(".polling-unit-list > div");
+    const filter = input.value.toLowerCase().trim();
 
-    units.forEach(function(unit) {
-        const text = unit.textContent.toLowerCase();
+    const wardCards = document.querySelectorAll(".ward-card");
 
-        if (text.includes(filter)) {
-            unit.style.display = "";
+    wardCards.forEach(function(ward) {
+        const units = ward.querySelectorAll(".polling-unit-list > div");
+        let hasMatch = false;
+
+        units.forEach(function(unit) {
+            const text = unit.textContent.toLowerCase();
+
+            if (filter === "" || text.includes(filter)) {
+                unit.style.display = "";
+                hasMatch = true;
+            } else {
+                unit.style.display = "none";
+            }
+        });
+
+        if (filter === "" || hasMatch) {
+            ward.style.display = "";
         } else {
-            unit.style.display = "none";
+            ward.style.display = "none";
         }
     });
 }
