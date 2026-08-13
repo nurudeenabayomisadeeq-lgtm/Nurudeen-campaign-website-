@@ -977,29 +977,31 @@ function searchPollingUnits() {
     const wardCards = document.querySelectorAll(".ward-card");
 
     wardCards.forEach(function(ward) {
-
         const wardText = ward.textContent.toLowerCase();
-        const wardMatch = wardText.includes(filter);
-
         const units = ward.querySelectorAll(".polling-unit-list > div");
 
-        let unitMatch = false;
-
-        units.forEach(function(unit) {
-            const unitText = unit.textContent.toLowerCase();
-
-            if (filter === "" || wardMatch || unitText.includes(filter)) {
-                unit.style.display = "";
-                unitMatch = true;
-            } else {
-                unit.style.display = "none";
-            }
-        });
-
-        if (filter === "" || wardMatch || unitMatch) {
+        if (filter === "" || wardText.includes(filter)) {
             ward.style.display = "";
+
+            units.forEach(function(unit) {
+                unit.style.display = "";
+            });
+
         } else {
-            ward.style.display = "none";
+            let unitMatch = false;
+
+            units.forEach(function(unit) {
+                const unitText = unit.textContent.toLowerCase();
+
+                if (unitText.includes(filter)) {
+                    unit.style.display = "";
+                    unitMatch = true;
+                } else {
+                    unit.style.display = "none";
+                }
+            });
+
+            ward.style.display = unitMatch ? "" : "none";
         }
     });
 }
