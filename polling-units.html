@@ -953,6 +953,22 @@ OPEN SPACE AT LONDON STREET OKE AGBO<br>
     </p>
 
 </footer>
+<script>
+function searchPollingUnits() {
+    const input = document.getElementById("puSearch");
+    const filter = input.value.toLowerCase();
+    const units = document.querySelectorAll(".polling-unit-list > div");
 
+    units.forEach(function(unit) {
+        const text = unit.textContent.toLowerCase();
+
+        if (text.includes(filter)) {
+            unit.style.display = "";
+        } else {
+            unit.style.display = "none";
+        }
+    });
+}
+</script>
 </body>
 </html>
