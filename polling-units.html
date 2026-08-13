@@ -977,17 +977,18 @@ function searchPollingUnits() {
     const wardCards = document.querySelectorAll(".ward-card");
 
     wardCards.forEach(function(ward) {
-        const wardText = ward.textContent.toLowerCase();
 
+        const wardText = ward.textContent.toLowerCase();
         const wardMatch = wardText.includes(filter);
+
         const units = ward.querySelectorAll(".polling-unit-list > div");
 
         let unitMatch = false;
 
         units.forEach(function(unit) {
-            const text = unit.textContent.toLowerCase();
+            const unitText = unit.textContent.toLowerCase();
 
-            if (filter === "" || wardMatch || text.includes(filter)) {
+            if (filter === "" || wardMatch || unitText.includes(filter)) {
                 unit.style.display = "";
                 unitMatch = true;
             } else {
