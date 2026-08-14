@@ -27,7 +27,6 @@
     <a href="manifesto.html">Manifesto</a>
     <a href="polling-units.html">Polling Units</a>
     <a href="news.html">News</a>
-    <a href="events.html">Events</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
     <a href="election.html">Election</a>
@@ -54,6 +53,7 @@
 </section>
 
 <section class="quick-info">
+    <section class="about-preview">
     <div class="container">
 
         <div class="info-card">
@@ -92,6 +92,76 @@
 
 <section class="updates">
     <div class="container">
+
+        <h2>Election Information</h2>
+
+        <article>
+            <h3>2027 Lagos State House of Assembly Election</h3>
+
+            <p>
+                <strong>Election Date:</strong> 6 February 2027
+            </p>
+
+            <p>
+                <strong>Countdown:</strong>
+                <span id="home-countdown">Loading...</span>
+            </p>
+
+            <p>
+                Official election results will only be published here
+                when they are officially available.
+            </p>
+
+            <a href="election.html">
+                View Election Information
+            </a>
+        </article>
+
+    </div>
+</section>
+
+<script>
+const homeElectionDate =
+    new Date("February 6, 2027 00:00:00").getTime();
+
+setInterval(function () {
+
+    const now = new Date().getTime();
+    const distance = homeElectionDate - now;
+
+    if (distance <= 0) {
+        document.getElementById("home-countdown").textContent =
+            "Election Day";
+        return;
+    }
+
+    const days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+    );
+
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (distance % (1000 * 60)) /
+        1000
+    );
+
+    document.getElementById("home-countdown").textContent =
+        days + " Days " +
+        hours + " Hours " +
+        minutes + " Minutes " +
+        seconds + " Seconds";
+
+}, 1000);
+</script>
         <h2>Latest Updates</h2>
 
         <article>
