@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Election Information | Hon. Nurudeen Abayomi Sadeeq</title>
+
+    <meta name="description"
+          content="Election date, countdown and official results information.">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <h1>HON. NURUDEEN ABAYOMI SADEEQ</h1>
+        <p>Lagos State House of Assembly — Ojo Constituency II</p>
+        <p>Nigeria Democratic Congress (NDC)</p>
+    </div>
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="manifesto.html">Manifesto</a>
+    <a href="polling-units.html">Polling Units</a>
+    <a href="news.html">News</a>
+    <a href="events.html">Events</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="election.html">Election</a>
+</nav>
+
+<main>
+
+<section class="about-preview">
+    <div class="container">
+
+        <h2>2027 Election Information</h2>
+
+        <p>
+            Lagos State House of Assembly election information for
+            Ojo Constituency II.
+        </p>
+
+        <div class="info-card">
+
+            <h3>Election Date</h3>
+
+            <p>
+                <strong>6 February 2027</strong>
+            </p>
+
+            <p>
+                According to the current election schedule published by INEC.
+            </p>
+
+        </div>
+
+        <div class="info-card">
+
+            <h3>Election Countdown</h3>
+
+            <div id="countdown">
+                Loading countdown...
+            </div>
+
+        </div>
+
+        <div class="info-card">
+
+            <h3>Official Results</h3>
+
+            <p>
+                Results will only be displayed here after they have been
+                officially published by the relevant electoral authorities.
+            </p>
+
+            <p>
+                <a
+                    href="https://www.inecnigeria.org/collation-and-declaration-of-results/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View INEC Results & Collation Information
+                </a>
+            </p>
+
+        </div>
+
+        <div class="info-card">
+
+            <h3>Results Status</h3>
+
+            <p>
+                <strong>Not yet available.</strong>
+            </p>
+
+            <p>
+                This page will not publish unofficial or estimated results.
+            </p>
+
+        </div>
+
+        <p>
+            <strong>Last updated:</strong> August 2026
+        </p>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Hon. Nurudeen Abayomi Sadeeq</p>
+    <p>Nigeria Democratic Congress (NDC) | Ojo Constituency II</p>
+</footer>
+
+<script>
+const electionDate = new Date("February 6, 2027 00:00:00").getTime();
+
+const countdown = setInterval(function () {
+
+    const now = new Date().getTime();
+    const distance = electionDate - now;
+
+    if (distance <= 0) {
+        clearInterval(countdown);
+
+        document.getElementById("countdown").innerHTML =
+            "<strong>Election Day</strong>";
+
+        return;
+    }
+
+    const days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+    );
+
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (distance % (1000 * 60)) /
+        1000
+    );
+
+    document.getElementById("countdown").innerHTML =
+        "<strong>" +
+        days + " Days " +
+        hours + " Hours " +
+        minutes + " Minutes " +
+        seconds + " Seconds" +
+        "</strong>";
+
+}, 1000);
+</script>
+
+</body>
+</html>
