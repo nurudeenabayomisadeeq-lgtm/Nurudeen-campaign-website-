@@ -10,6 +10,56 @@
           content="Official information website for Hon. Nurudeen Abayomi Sadeeq, Lagos State House of Assembly candidate for Ojo Constituency II.">
 
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .election-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .election-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .countdown-box {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .countdown-item {
+            background: #fff;
+            padding: 20px 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+        }
+
+        .countdown-item strong {
+            display: block;
+            font-size: 30px;
+        }
+
+        .results-box {
+            margin-top: 30px;
+            padding: 25px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+        }
+
+        .result-status {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .countdown-box {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -21,22 +71,25 @@
         <p>Nigeria Democratic Congress (NDC)</p>
     </div>
 </header>
+
 <nav class="main-nav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="manifesto.html">Manifesto</a>
     <a href="polling-units.html">Polling Units</a>
     <a href="news.html">News</a>
+    <a href="events.html">Events</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
-    <a href="election.html">Election</a>
 </nav>
 
 <main>
 
 <section class="hero">
     <div class="container">
+
         <h2>IMOLE 2027</h2>
+
         <h3>Hon. Nurudeen Abayomi Sadeeq</h3>
 
         <p>
@@ -49,11 +102,13 @@
             <a href="manifesto.html">View Manifesto</a>
             <a href="polling-units.html">Polling Unit Directory</a>
         </div>
+
     </div>
 </section>
 
+
 <section class="quick-info">
-    <section class="about-preview">
+
     <div class="container">
 
         <div class="info-card">
@@ -63,7 +118,8 @@
 
         <div class="info-card">
             <h3>Polling Units</h3>
-            <p>162 polling units listed across 5 wards.</p>
+            <p><strong>170 Polling Units</strong></p>
+            <p>Across 6 wards.</p>
             <a href="polling-units.html">View Directory</a>
         </div>
 
@@ -74,10 +130,90 @@
         </div>
 
     </div>
+
 </section>
 
+
+<!-- ELECTION COUNTDOWN -->
+
+<section class="election-section">
+
+    <div class="election-container">
+
+        <h2>🗳️ 2027 ELECTION COUNTDOWN</h2>
+
+        <p>
+            Lagos State House of Assembly Election
+        </p>
+
+        <h3>6 March 2027</h3>
+
+        <div class="countdown-box">
+
+            <div class="countdown-item">
+                <strong id="days">0</strong>
+                Days
+            </div>
+
+            <div class="countdown-item">
+                <strong id="hours">0</strong>
+                Hours
+            </div>
+
+            <div class="countdown-item">
+                <strong id="minutes">0</strong>
+                Minutes
+            </div>
+
+            <div class="countdown-item">
+                <strong id="seconds">0</strong>
+                Seconds
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ELECTION DAY RESULTS -->
+
+<section class="election-section">
+
+    <div class="election-container">
+
+        <h2>📊 ELECTION DAY RESULTS</h2>
+
+        <div class="results-box">
+
+            <p class="result-status">
+                Results will be published here after they are officially announced and verified.
+            </p>
+
+            <p>
+                Ojo Constituency II
+            </p>
+
+            <p>
+                Polling Units: <strong>170</strong>
+            </p>
+
+            <p>
+                Wards: <strong>6</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <section class="about-preview">
+
     <div class="container">
+
         <h2>About the Candidate</h2>
 
         <p>
@@ -87,51 +223,71 @@
         </p>
 
         <a href="about.html">View Full Profile</a>
+
     </div>
+
 </section>
 
+
 <section class="updates">
+
     <div class="container">
 
-        <h2>Election Information</h2>
+        <h2>Latest Updates</h2>
 
         <article>
-            <h3>2027 Lagos State House of Assembly Election</h3>
-
+            <h3>Campaign News</h3>
             <p>
-                <strong>Election Date:</strong> 6 February 2027
+                Official campaign announcements and constituency updates.
             </p>
+            <a href="news.html">View News</a>
+        </article>
 
+        <article>
+            <h3>Upcoming Events</h3>
             <p>
-                <strong>Countdown:</strong>
-                <span id="home-countdown">Loading...</span>
+                Information about scheduled campaign and constituency events.
             </p>
-
-            <p>
-                Official election results will only be published here
-                when they are officially available.
-            </p>
-
-            <a href="election.html">
-                View Election Information
-            </a>
+            <a href="events.html">View Events</a>
         </article>
 
     </div>
+
 </section>
 
-<script>
-const homeElectionDate =
-    new Date("February 6, 2027 00:00:00").getTime();
+</main>
 
-setInterval(function () {
+
+<footer>
+
+    <p>
+        &copy; 2026 Hon. Nurudeen Abayomi Sadeeq
+    </p>
+
+    <p>
+        Nigeria Democratic Congress (NDC)
+    </p>
+
+</footer>
+
+
+<script>
+
+const electionDate = new Date("March 6, 2027 00:00:00").getTime();
+
+function updateCountdown() {
 
     const now = new Date().getTime();
-    const distance = homeElectionDate - now;
+
+    const distance = electionDate - now;
 
     if (distance <= 0) {
-        document.getElementById("home-countdown").textContent =
-            "Election Day";
+
+        document.getElementById("days").innerHTML = "0";
+        document.getElementById("hours").innerHTML = "0";
+        document.getElementById("minutes").innerHTML = "0";
+        document.getElementById("seconds").innerHTML = "0";
+
         return;
     }
 
@@ -140,50 +296,31 @@ setInterval(function () {
     );
 
     const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) /
-        (1000 * 60 * 60)
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
     );
 
     const minutes = Math.floor(
-        (distance % (1000 * 60 * 60)) /
-        (1000 * 60)
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
     );
 
     const seconds = Math.floor(
-        (distance % (1000 * 60)) /
-        1000
+        (distance % (1000 * 60))
+        / 1000
     );
 
-    document.getElementById("home-countdown").textContent =
-        days + " Days " +
-        hours + " Hours " +
-        minutes + " Minutes " +
-        seconds + " Seconds";
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+}
 
-}, 1000);
+updateCountdown();
+
+setInterval(updateCountdown, 1000);
+
 </script>
-        <h2>Latest Updates</h2>
-
-        <article>
-            <h3>Campaign News</h3>
-            <p>Official campaign announcements and constituency updates.</p>
-            <a href="news.html">View News</a>
-        </article>
-
-        <article>
-            <h3>Upcoming Events</h3>
-            <p>Information about scheduled campaign and constituency events.</p>
-            <a href="events.html">View Events</a>
-        </article>
-    </div>
-</section>
-
-</main>
-
-<footer>
-    <p>&copy; 2026 Hon. Nurudeen Abayomi Sadeeq</p>
-    <p>Nigeria Democratic Congress (NDC)</p>
-</footer>
 
 </body>
 </html>
