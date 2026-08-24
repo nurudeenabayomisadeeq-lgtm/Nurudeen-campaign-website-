@@ -241,6 +241,51 @@
         height: 80px;
     }
 }
+ .movement-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.movement-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.movement-section > .container > p {
+    max-width: 700px;
+    margin: 0 auto 35px;
+}
+
+.movement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.movement-card {
+    display: block;
+    padding: 28px 20px;
+    background: #fff;
+    border-radius: 16px;
+    text-decoration: none;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.movement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+}
+
+.movement-card h3 {
+    margin-bottom: 10px;
+}
+
+.movement-card p {
+    margin: 0;
+}   
     </style>
 </head>
 
@@ -278,11 +323,52 @@
     <a href="events.html">Events</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
+<a href="join.html">Join the Movement</a>
 </nav>
 
 <main>
 
+<section class="movement-section">
+    <div class="container">
 
+        <h2>JOIN THE MOVEMENT</h2>
+
+        <p>
+            Be part of the IMOLE 2027 movement.
+            Together, we can build a stronger and better Ojo Constituency II.
+        </p>
+
+        <div class="movement-grid">
+
+            <a href="join.html" class="movement-card">
+                <h3>🌟 JOIN THE MOVEMENT</h3>
+                <p>Become part of the IMOLE 2027 family.</p>
+            </a>
+
+            <a href="imole-babes.html" class="movement-card">
+                <h3>💃 IMOLE BABES</h3>
+                <p>Join the women supporting the IMOLE movement.</p>
+            </a>
+
+            <a href="imole-army.html" class="movement-card">
+                <h3>🔥 IMOLE ARMY</h3>
+                <p>Stand with the movement and support our campaign activities.</p>
+            </a>
+
+            <a href="volunteer.html" class="movement-card">
+                <h3>🤝 VOLUNTEER</h3>
+                <p>Give your time, skills and energy to the movement.</p>
+            </a>
+
+            <a href="donations.html" class="movement-card">
+                <h3>❤️ DONATIONS</h3>
+                <p>Support the movement through lawful and transparent contributions.</p>
+            </a>
+
+        </div>
+
+    </div>
+</section>
 <section class="hero">
     <div class="container">
 <img
