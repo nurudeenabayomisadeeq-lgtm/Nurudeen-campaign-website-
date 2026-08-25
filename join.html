@@ -415,59 +415,92 @@
             CHAT WITH US ON WHATSAPP
 
         </a>
+<section class="donation-box" id="donations">
 
-    </section>
+    <h2>❤️ SUPPORT IMOLE 2027</h2>
 
+    <p>
+        Support the IMOLE 2027 movement through
+        lawful, transparent and properly documented
+        contributions.
+    </p>
 
-    <section class="donation-box" id="donations">
-
-        <h2>❤️ SUPPORT THE MOVEMENT</h2>
+    <div class="donation-details">
 
         <p>
-            You can support the movement through lawful,
-            transparent and properly documented contributions.
+            <strong>Bank:</strong><br>
+            Opay
         </p>
 
         <p>
-            <strong>Donation details will be published here.</strong>
+            <strong>Account Name:</strong><br>
+            Nurudeen Abayomi Sadeeq
         </p>
 
-    </section>
-
-
-    <div class="notice">
-
-        <strong>Important Notice</strong>
-
         <p>
-            Information submitted through this page should be
-            accurate. Campaign activities and contributions will
-            be conducted in accordance with applicable laws and
-            electoral regulations.
+            <strong>Account Number:</strong><br>
+
+            <span id="accountNumber">
+                8159461760
+            </span>
+        </p>
+
+        <button
+            type="button"
+            onclick="copyAccountNumber()"
+            class="join-button">
+
+            📋 COPY ACCOUNT NUMBER
+
+        </button>
+
+        <p id="copyMessage"
+           class="success-note"
+           style="display:none;">
+
+            ✅ Account number copied successfully.
+
         </p>
 
     </div>
 
+    <p class="notice">
+        Please ensure all contributions are made voluntarily
+        and in accordance with applicable laws and electoral
+        regulations.
+    </p>
+
 </section>
-
-</main>
-
-
-<footer>
-
-    <p>
-        &copy; 2026 Hon. Nurudeen Abayomi Sadeeq
-    </p>
-
-    <p>
-        Nigeria Democratic Congress (NDC)
-    </p>
-
-</footer>
-
 
 <script>
 
+function copyAccountNumber() {
+
+    const accountNumber =
+        document.getElementById("accountNumber").textContent.trim();
+
+    navigator.clipboard.writeText(accountNumber)
+        .then(function() {
+
+            document.getElementById("copyMessage").style.display = "block";
+
+            setTimeout(function() {
+
+                document.getElementById("copyMessage").style.display = "none";
+
+            }, 3000);
+
+        })
+        .catch(function() {
+
+            alert("Account Number: " + accountNumber);
+
+        });
+
+}
+
+</script>
+    
 function sendRegistrationToWhatsApp(event) {
 
     event.preventDefault();
