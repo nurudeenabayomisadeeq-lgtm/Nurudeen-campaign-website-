@@ -1,3 +1,18 @@
+/* =========================================================
+   IMOLE 2027 — MASTER WEBSITE STYLESHEET
+   Hon. Nurudeen Abayomi Sadeeq
+   Lagos State House of Assembly — Ojo Constituency II
+   Nigeria Democratic Congress (NDC)
+
+   File:
+   assets/css/style.css
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,97 +21,252 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     background: #f4f6f9;
     color: #222;
+
     line-height: 1.6;
+
+    min-height: 100vh;
 }
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+::selection {
+    background: #06449b;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   GLOBAL CONTAINER
+========================================================= */
 
 .container {
     width: 92%;
-    max-width: 1100px;
-    margin: auto;
+    max-width: 1150px;
+    margin: 0 auto;
 }
 
-/* HEADER */
+
+/* =========================================================
+   SITE HEADER
+========================================================= */
+
 .site-header {
-    background: #06449b;
-    color: white;
+    background:
+        linear-gradient(
+            135deg,
+            #06449b,
+            #07377c
+        );
+
+    color: #ffffff;
+
     text-align: center;
+
     padding: 28px 15px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.site-header::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -90px;
+    top: -110px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.08);
+}
+
+.site-header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    left: -80px;
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.06);
+}
+
+.site-header .container {
+    position: relative;
+    z-index: 2;
 }
 
 .site-header h1 {
-    font-size: 26px;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
     margin-bottom: 8px;
 }
 
 .site-header p {
     margin: 4px 0;
+    font-size: 15px;
 }
 
-/* NAVIGATION */
+.site-header p:last-child {
+    font-weight: bold;
+    letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
 .main-nav {
     background: #ffffff;
+
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     flex-wrap: wrap;
-    gap: 8px;
-    padding: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+    gap: 7px;
+
+    padding: 10px;
+
+    box-shadow:
+        0 3px 14px rgba(0,0,0,0.09);
+
     position: sticky;
+
     top: 0;
-    z-index: 100;
+
+    z-index: 1000;
 }
 
 .main-nav a {
     text-decoration: none;
+
     color: #06449b;
-    font-weight: bold;
-    padding: 9px 13px;
-    border-radius: 6px;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    padding: 10px 13px;
+
+    border-radius: 8px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .main-nav a:hover {
     background: #06449b;
-    color: white;
+    color: #ffffff;
+    transform: translateY(-1px);
 }
 
-/* HERO */
+.main-nav a:focus {
+    outline: 2px solid #06449b;
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
 .hero {
-    background: linear-gradient(
-        rgba(0, 52, 120, 0.88),
-        rgba(0, 52, 120, 0.88)
-    );
-    color: white;
+    background:
+        linear-gradient(
+            rgba(0, 52, 120, 0.90),
+            rgba(0, 52, 120, 0.90)
+        );
+
+    color: #ffffff;
+
     text-align: center;
-    padding: 75px 15px;
+
+    padding: 80px 15px;
 }
 
 .hero h2 {
-    font-size: 48px;
+    font-size: 50px;
+
+    line-height: 1.15;
+
     margin-bottom: 10px;
+
+    font-weight: 800;
 }
 
 .hero h3 {
     font-size: 28px;
+
+    line-height: 1.3;
+
     margin-bottom: 15px;
 }
 
 .hero p {
-    max-width: 700px;
+    max-width: 750px;
+
     margin: 0 auto 28px;
+
     font-size: 17px;
+
+    line-height: 1.8;
 }
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
 
 .hero-buttons {
     display: flex;
+
     justify-content: center;
+
+    align-items: center;
+
     flex-wrap: wrap;
+
     gap: 12px;
 }
 
@@ -105,71 +275,140 @@ body {
 .info-card a,
 .updates a {
     display: inline-block;
+
     text-decoration: none;
-    background: white;
+
+    background: #ffffff;
+
     color: #06449b;
-    padding: 12px 18px;
-    border-radius: 7px;
-    font-weight: bold;
+
+    padding: 12px 19px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
 }
 
-/* INFORMATION CARDS */
+.hero-buttons a:hover,
+.about-preview a:hover,
+.info-card a:hover,
+.updates a:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.18);
+}
+
+
+/* =========================================================
+   QUICK INFORMATION
+========================================================= */
+
 .quick-info {
-    padding: 45px 0;
+    padding: 50px 0;
 }
 
 .quick-info .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 20px;
 }
 
 .info-card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
+    background: #ffffff;
+
+    padding: 27px 22px;
+
+    border-radius: 15px;
+
     text-align: center;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,0.12);
 }
 
 .info-card h3 {
     color: #06449b;
+
     margin-bottom: 10px;
+
+    font-size: 21px;
+}
+
+.info-card p {
+    line-height: 1.7;
 }
 
 .info-card a {
     margin-top: 15px;
+
     background: #06449b;
-    color: white;
+
+    color: #ffffff;
 }
 
-/* ABOUT */
+
+/* =========================================================
+   ABOUT PREVIEW
+========================================================= */
+
 .about-preview {
-    background: white;
-    padding: 55px 15px;
+    background: #ffffff;
+
+    padding: 60px 15px;
+
     text-align: center;
 }
 
 .about-preview h2,
 .updates h2 {
     color: #06449b;
+
     margin-bottom: 15px;
-    font-size: 30px;
+
+    font-size: 31px;
 }
 
 .about-preview p {
-    max-width: 750px;
-    margin: 0 auto 22px;
+    max-width: 780px;
+
+    margin: 0 auto 24px;
+
+    line-height: 1.8;
 }
 
 .about-preview a {
     background: #06449b;
-    color: white;
+
+    color: #ffffff;
 }
 
-/* UPDATES */
+
+/* =========================================================
+   UPDATES
+========================================================= */
+
 .updates {
-    padding: 55px 0;
+    padding: 60px 0;
 }
 
 .updates h2 {
@@ -177,120 +416,526 @@ body {
 }
 
 .updates article {
-    background: white;
-    padding: 25px;
+    background: #ffffff;
+
+    padding: 26px;
+
     margin: 18px 0;
-    border-radius: 10px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 4px 14px rgba(0,0,0,0.07);
 }
 
 .updates article h3 {
     color: #06449b;
+
     margin-bottom: 8px;
+
+    font-size: 21px;
+}
+
+.updates article p {
+    line-height: 1.7;
 }
 
 .updates a {
     margin-top: 12px;
+
     background: #06449b;
-    color: white;
+
+    color: #ffffff;
 }
 
-/* FOOTER */
+
+/* =========================================================
+   GENERAL PAGE SECTIONS
+========================================================= */
+
+main {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+}
+
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   RESULTS / NEWS / EVENTS / GALLERY CARDS
+========================================================= */
+
+.results-page,
+.news-page,
+.events-page,
+.gallery-page {
+    width: 92%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   GENERAL HEADINGS
+========================================================= */
+
+.results-header h1,
+.news-header h1,
+.events-header h1,
+.gallery-header h1 {
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CARD HOVER EFFECT
+========================================================= */
+
+.news-card,
+.event-card,
+.gallery-card,
+.ward-card,
+.summary-card,
+.featured-news,
+.gallery-cta,
+.news-join,
+.join-box {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+========================================================= */
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d5d9df;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #222;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #06449b;
+
+    box-shadow:
+        0 0 0 3px rgba(6,68,155,0.12);
+}
+
+textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(6,68,155,0.35);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
 footer {
-    background: #06449b;
-    color: white;
+    background:
+        linear-gradient(
+            135deg,
+            #06449b,
+            #07377c
+        );
+
+    color: #ffffff;
+
     text-align: center;
-    padding: 25px 15px;
+
+    padding: 30px 15px;
+
+    margin-top: 20px;
 }
 
 footer p {
-    margin: 5px;
+    margin: 6px 0;
+
+    line-height: 1.6;
 }
 
-/* MOBILE */
+footer p:last-child {
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   SCROLL TO TOP SUPPORT
+========================================================= */
+
+#backToTop {
+    position: fixed;
+
+    right: 18px;
+    bottom: 18px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #06449b;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.20);
+
+    display: none;
+
+    z-index: 2000;
+}
+
+#backToTop.show {
+    display: block;
+}
+
+
+/* =========================================================
+   MOBILE — TABLETS
+========================================================= */
+
 @media (max-width: 768px) {
 
-    .site-header h1 {
-        font-size: 21px;
+    .site-header {
+        padding: 24px 14px;
     }
+
+    .site-header h1 {
+        font-size: 23px;
+    }
+
+    .site-header p {
+        font-size: 14px;
+    }
+
+
+    /* NAV */
 
     .main-nav {
         justify-content: flex-start;
+
         overflow-x: auto;
+
         flex-wrap: nowrap;
+
+        scrollbar-width: thin;
+
+        padding: 9px;
     }
 
     .main-nav a {
         white-space: nowrap;
-        font-size: 14px;
+
+        font-size: 13px;
+
+        padding: 10px 12px;
     }
 
+
+    /* HERO */
+
     .hero {
-        padding: 55px 15px;
+        padding: 58px 15px;
     }
 
     .hero h2 {
-        font-size: 38px;
+        font-size: 39px;
     }
 
     .hero h3 {
-        font-size: 22px;
+        font-size: 23px;
     }
 
-    .quick-info .container {
-        grid-template-columns: 1fr;
+    .hero p {
+        font-size: 16px;
     }
+
+
+    /* HERO BUTTONS */
 
     .hero-buttons {
         flex-direction: column;
+
         align-items: stretch;
+
+        max-width: 420px;
+
+        margin: auto;
     }
 
     .hero-buttons a {
         text-align: center;
     }
-}
-/* ================================
-   MOBILE NAVIGATION
-================================ */
 
-.main-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px 10px;
-}
 
-.main-nav a {
-    text-decoration: none;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-weight: 600;
-}
+    /* INFO */
 
-/* Mobile phones */
-@media (max-width: 600px) {
-
-    .main-nav {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-        padding: 10px;
+    .quick-info .container {
+        grid-template-columns: 1fr;
     }
 
-    .main-nav a {
-        text-align: center;
-        padding: 12px 5px;
-        font-size: 14px;
+
+    /* PAGE WIDTH */
+
+    .results-page,
+    .news-page,
+    .events-page,
+    .gallery-page {
+        width: 94%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — PHONES
+========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 15px;
+    }
+
+
+    .container {
+        width: 94%;
+    }
+
+
+    /* HEADER */
+
+    .site-header {
+        padding: 22px 12px;
     }
 
     .site-header h1 {
-        font-size: 22px;
+        font-size: 21px;
+
         line-height: 1.3;
     }
 
     .site-header p {
-        font-size: 14px;
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    /* NAVIGATION */
+
+    .main-nav {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 7px;
+
+        padding: 9px;
+
+        overflow: visible;
+    }
+
+    .main-nav a {
+        text-align: center;
+
+        white-space: normal;
+
+        padding: 11px 5px;
+
+        font-size: 13px;
+
+        border-radius: 8px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 48px 14px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero h3 {
+        font-size: 21px;
+    }
+
+    .hero p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* INFO */
+
+    .quick-info {
+        padding: 38px 0;
+    }
+
+    .info-card {
+        padding: 22px 18px;
+    }
+
+
+    /* ABOUT */
+
+    .about-preview {
+        padding: 45px 14px;
+    }
+
+    .about-preview h2,
+    .updates h2 {
+        font-size: 27px;
+    }
+
+
+    /* UPDATES */
+
+    .updates {
+        padding: 45px 0;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 25px 12px;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+
+
+    /* BUTTONS */
+
+    .hero-buttons a,
+    .about-preview a,
+    .info-card a,
+    .updates a {
+        width: 100%;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .site-header h1 {
+        font-size: 19px;
+    }
+
+    .site-header p {
+        font-size: 12px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+
+        padding: 10px 4px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero h3 {
+        font-size: 19px;
+    }
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+    .main-nav {
+        display: none;
+    }
+
+    .hero {
+        color: #000000;
+
+        background: none;
+    }
+
+    footer {
+        background: none;
+
+        color: #000000;
+    }
+
+    a {
+        text-decoration: none;
     }
 }
