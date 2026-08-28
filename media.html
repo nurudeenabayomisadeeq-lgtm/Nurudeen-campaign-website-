@@ -8,10 +8,10 @@
 <title>Media Centre | IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq</title>
 
 <meta name="description"
-content="Official IMOLE 2027 Media Centre featuring campaign songs, music, videos and media highlights of Hon. Nurudeen Abayomi Sadeeq.">
+content="Official IMOLE 2027 Media Centre featuring campaign music, videos, media highlights and the journey of Hon. Nurudeen Abayomi Sadeeq for Ojo Constituency II.">
 
 <meta name="keywords"
-content="IMOLE 2027, Nurudeen Abayomi Sadeeq, campaign music, campaign video, Ojo Constituency II, NDC">
+content="IMOLE 2027, Nurudeen Abayomi Sadeeq, NDC, Ojo Constituency II, campaign music, campaign video, Lagos State House of Assembly">
 
 <meta name="author"
 content="Hon. Nurudeen Abayomi Sadeeq Campaign">
@@ -23,25 +23,30 @@ content="Hon. Nurudeen Abayomi Sadeeq Campaign">
 <style>
 
 /* =========================================================
-   IMOLE 2027 MEDIA CENTRE
-   PREMIUM CAMPAIGN MEDIA DESIGN
+   IMOLE 2027 — MEDIA CENTRE
+   PREMIUM RESPONSIVE DESIGN
 ========================================================= */
 
 :root {
     --navy: #061b3a;
-    --navy2: #031329;
-    --blue: #0a4da2;
-    --blue2: #0876d1;
+    --navy-dark: #020d20;
+    --blue: #0757b8;
+    --blue-light: #1688e8;
     --gold: #f5b800;
-    --gold-light: #ffd84d;
+    --gold-light: #ffda55;
     --white: #ffffff;
-    --text: #253247;
-    --muted: #68758a;
+    --text: #172338;
+    --muted: #6c788b;
     --light: #f4f7fb;
     --border: #e2e8f0;
-    --green: #13a85c;
-    --red: #e53935;
-    --shadow: 0 18px 50px rgba(4, 25, 58, .13);
+    --green: #12a45b;
+
+    --shadow:
+        0 20px 55px rgba(3, 24, 57, .12);
+
+    --shadow-dark:
+        0 25px 70px rgba(0,0,0,.25);
+
     --radius: 22px;
 }
 
@@ -55,27 +60,43 @@ html {
 
 body {
     margin: 0;
+    padding: 0;
+
     font-family:
         Arial,
         Helvetica,
         sans-serif;
+
     color: var(--text);
+
     background: var(--light);
+
     line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+img,
+video {
+    max-width: 100%;
 }
 
 img {
-    max-width: 100%;
     display: block;
 }
 
 button,
 input {
-    font-family: inherit;
+    font: inherit;
 }
 
 a {
-    transition: .25s ease;
+    transition:
+        .25s ease;
+}
+
+button {
+    cursor: pointer;
 }
 
 
@@ -84,23 +105,42 @@ a {
 ========================================================= */
 
 .top-bar {
-    background: var(--navy2);
-    color: rgba(255,255,255,.85);
-    padding: 8px 15px;
-    font-size: 13px;
+    background:
+        var(--navy-dark);
+
+    color:
+        rgba(255,255,255,.82);
+
+    font-size:
+        13px;
+
+    padding:
+        8px 15px;
 }
 
 .top-bar-inner {
-    max-width: 1250px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
+    max-width:
+        1250px;
+
+    margin:
+        auto;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
 }
 
 .top-bar strong {
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 }
 
 
@@ -109,99 +149,205 @@ a {
 ========================================================= */
 
 .header {
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    color:
+        white;
+
+    padding:
+        20px;
+        
     background:
         linear-gradient(
             135deg,
-            #061b3a,
-            #0a4da2
+            #020d20 0%,
+            #061b3a 45%,
+            #0757b8 100%
         );
-
-    color: white;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
 }
 
 .header::before {
-    content: "";
-    position: absolute;
-    width: 380px;
-    height: 380px;
-    border-radius: 50%;
-    background: rgba(255,255,255,.045);
-    right: -130px;
-    top: -230px;
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        430px;
+
+    height:
+        430px;
+
+    right:
+        -180px;
+
+    top:
+        -260px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,.045);
 }
 
 .header::after {
-    content: "";
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    background: rgba(245,184,0,.06);
-    left: -120px;
-    bottom: -170px;
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        300px;
+
+    height:
+        300px;
+
+    left:
+        -160px;
+
+    bottom:
+        -220px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(245,184,0,.07);
 }
 
 .header-inner {
-    max-width: 1250px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    position: relative;
-    z-index: 2;
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    max-width:
+        1250px;
+
+    margin:
+        auto;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
 }
 
 .logo {
-    width: 78px;
-    height: 78px;
-    border-radius: 50%;
-    object-fit: contain;
-    background: white;
-    padding: 5px;
-    box-shadow: 0 8px 25px rgba(0,0,0,.22);
+    width:
+        78px;
+
+    height:
+        78px;
+
+    object-fit:
+        contain;
+
+    background:
+        white;
+
+    padding:
+        5px;
+
+    border-radius:
+        50%;
+
+    box-shadow:
+        0 8px 28px rgba(0,0,0,.25);
 }
 
 .header-text h1 {
-    margin: 0;
-    font-size: 25px;
-    font-weight: 950;
-    letter-spacing: .5px;
+    margin:
+        0;
+
+    font-size:
+        25px;
+
+    line-height:
+        1.2;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        .4px;
 }
 
 .header-text p {
-    margin: 3px 0;
-    font-size: 14px;
+    margin:
+        4px 0;
+
+    font-size:
+        14px;
 }
 
 .badge {
-    display: inline-block;
-    margin-top: 6px;
-    padding: 5px 13px;
-    border-radius: 30px;
-    background: var(--gold);
-    color: #111;
-    font-size: 12px;
-    font-weight: 900;
+    display:
+        inline-block;
+
+    margin-top:
+        7px;
+
+    padding:
+        5px 14px;
+
+    border-radius:
+        30px;
+
+    background:
+        var(--gold);
+
+    color:
+        #111;
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
 }
 
 
 /* =========================================================
-   MOBILE MENU
+   MOBILE MENU BUTTON
 ========================================================= */
 
 .menu-button {
-    display: none;
-    width: 100%;
-    border: 0;
-    background: var(--navy);
-    color: white;
-    padding: 14px;
-    font-size: 16px;
-    font-weight: 900;
-    cursor: pointer;
+    display:
+        none;
+
+    width:
+        100%;
+
+    border:
+        0;
+
+    padding:
+        14px;
+
+    background:
+        var(--navy);
+
+    color:
+        white;
+
+    font-size:
+        16px;
+
+    font-weight:
+        900;
 }
 
 
@@ -210,52 +356,99 @@ a {
 ========================================================= */
 
 .nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position:
+        sticky;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    top:
+        0;
 
-    gap: 4px;
-    padding: 8px;
+    z-index:
+        1000;
 
-    background: rgba(255,255,255,.97);
-    backdrop-filter: blur(12px);
+    display:
+        flex;
 
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        4px;
+
+    padding:
+        8px;
+
+    background:
+        rgba(255,255,255,.97);
+
+    backdrop-filter:
+        blur(14px);
+
+    border-bottom:
+        1px solid var(--border);
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.07);
 }
 
 .nav a {
-    text-decoration: none;
-    color: var(--navy);
-    font-weight: 800;
-    font-size: 13px;
-    padding: 9px 12px;
-    border-radius: 8px;
+    text-decoration:
+        none;
+
+    color:
+        var(--navy);
+
+    font-weight:
+        800;
+
+    font-size:
+        13px;
+
+    padding:
+        9px 12px;
+
+    border-radius:
+        9px;
 }
 
 .nav a:hover {
-    background: var(--blue);
-    color: white;
+    background:
+        var(--blue);
+
+    color:
+        white;
+
+    transform:
+        translateY(-1px);
 }
 
 .nav .active {
-    background: var(--blue);
-    color: white;
+    background:
+        var(--blue);
+
+    color:
+        white;
 }
 
 .nav .donate {
-    background: var(--gold);
-    color: #111;
+    background:
+        var(--gold);
+
+    color:
+        #111;
 }
 
 .nav .join {
-    background: var(--navy);
-    color: white;
+    background:
+        var(--navy);
+
+    color:
+        white;
 }
 
 
@@ -264,117 +457,221 @@ a {
 ========================================================= */
 
 .hero {
-    position: relative;
-    overflow: hidden;
+    position:
+        relative;
 
-    padding: 90px 20px 100px;
+    overflow:
+        hidden;
+
+    padding:
+        95px 20px 105px;
+
+    color:
+        white;
 
     background:
         radial-gradient(
-            circle at 85% 25%,
-            rgba(245,184,0,.17),
+            circle at 82% 25%,
+            rgba(245,184,0,.18),
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 15% 90%,
+            rgba(22,136,232,.18),
             transparent 25%
         ),
         linear-gradient(
             135deg,
-            #031329,
-            #061b3a 45%,
-            #0a4da2
+            #020d20,
+            #061b3a 48%,
+            #0757b8
         );
+}
 
-    color: white;
+.hero::before {
+    content:
+        "IMOLE";
+
+    position:
+        absolute;
+
+    right:
+        -40px;
+
+    bottom:
+        -75px;
+
+    font-size:
+        190px;
+
+    font-weight:
+        950;
+
+    color:
+        rgba(255,255,255,.025);
+
+    pointer-events:
+        none;
 }
 
 .hero-inner {
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    max-width:
+        1000px;
+
+    margin:
+        auto;
+
+    text-align:
+        center;
 }
 
 .hero-label {
-    display: inline-block;
+    display:
+        inline-block;
 
-    padding: 8px 16px;
+    padding:
+        8px 17px;
 
-    border-radius: 30px;
+    border:
+        1px solid rgba(255,255,255,.25);
 
-    border: 1px solid rgba(255,255,255,.22);
+    border-radius:
+        30px;
 
-    background: rgba(255,255,255,.08);
+    background:
+        rgba(255,255,255,.08);
 
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
-    font-size: 13px;
-    font-weight: 900;
-    letter-spacing: 2px;
+    font-size:
+        13px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1.7px;
 }
 
 .hero h2 {
-    margin: 20px 0 12px;
+    margin:
+        22px 0 15px;
 
     font-size:
-        clamp(40px, 7vw, 76px);
+        clamp(42px, 7vw, 82px);
 
-    line-height: 1;
+    line-height:
+        .98;
 
-    font-weight: 950;
+    font-weight:
+        950;
 
-    letter-spacing: -2px;
+    letter-spacing:
+        -3px;
 }
 
 .hero h2 span {
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 }
 
 .hero p {
-    max-width: 760px;
-    margin: 0 auto;
+    max-width:
+        760px;
 
-    color: rgba(255,255,255,.86);
+    margin:
+        auto;
 
-    font-size: 17px;
+    color:
+        rgba(255,255,255,.86);
+
+    font-size:
+        17px;
 }
 
 .hero-actions {
-    margin-top: 30px;
+    display:
+        flex;
 
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+    margin-top:
+        30px;
 }
 
 .hero-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display:
+        inline-flex;
 
-    padding: 14px 22px;
+    align-items:
+        center;
 
-    border-radius: 10px;
+    justify-content:
+        center;
 
-    text-decoration: none;
+    min-height:
+        50px;
 
-    font-weight: 900;
-}
+    padding:
+        13px 22px;
 
-.hero-button.gold {
-    background: var(--gold);
-    color: #111;
-}
+    border-radius:
+        11px;
 
-.hero-button.white {
-    background: white;
-    color: var(--navy);
-}
+    text-decoration:
+        none;
 
-.hero-button.outline {
-    border: 2px solid rgba(255,255,255,.45);
-    color: white;
+    font-weight:
+        900;
 }
 
 .hero-button:hover {
-    transform: translateY(-3px);
+    transform:
+        translateY(-3px);
+}
+
+.hero-button.gold {
+    background:
+        var(--gold);
+
+    color:
+        #111;
+}
+
+.hero-button.white {
+    background:
+        white;
+
+    color:
+        var(--navy);
+}
+
+.hero-button.outline {
+    border:
+        2px solid rgba(255,255,255,.45);
+
+    color:
+        white;
+
+    background:
+        rgba(255,255,255,.03);
 }
 
 
@@ -383,188 +680,282 @@ a {
 ========================================================= */
 
 .section {
-    padding: 75px 20px;
+    padding:
+        78px 20px;
 }
 
 .container {
-    max-width: 1200px;
-    margin: auto;
+    max-width:
+        1200px;
+
+    margin:
+        auto;
 }
 
 .heading {
-    text-align: center;
-    max-width: 780px;
-    margin: 0 auto 42px;
+    max-width:
+        800px;
+
+    margin:
+        0 auto 43px;
+
+    text-align:
+        center;
 }
 
 .heading .eyebrow {
-    color: var(--blue);
-    font-size: 13px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    color:
+        var(--blue);
+
+    font-size:
+        13px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        2px;
+
+    text-transform:
+        uppercase;
 }
 
 .heading h2 {
-    color: var(--navy);
-    margin: 8px 0 12px;
-    font-size: 37px;
-    line-height: 1.2;
+    margin:
+        8px 0 12px;
+
+    color:
+        var(--navy);
+
+    font-size:
+        38px;
+
+    line-height:
+        1.2;
 }
 
 .heading p {
-    color: var(--muted);
-    margin: 0;
+    margin:
+        0;
+
+    color:
+        var(--muted);
 }
 
 
 /* =========================================================
-   FEATURED VIDEO
+   VIDEO
 ========================================================= */
 
 .video-section {
-    background: white;
+    background:
+        white;
 }
 
 .video-wrapper {
-    max-width: 1050px;
-    margin: auto;
+    max-width:
+        1080px;
 
-    background: #000;
+    margin:
+        auto;
 
-    border-radius: 24px;
+    overflow:
+        hidden;
 
-    overflow: hidden;
+    border-radius:
+        25px;
+
+    background:
+        #000;
 
     box-shadow:
-        0 25px 70px rgba(0,0,0,.22);
-
-    position: relative;
+        var(--shadow-dark);
 }
 
 .video-wrapper video {
-    width: 100%;
-    display: block;
-    max-height: 650px;
-    background: #000;
+    display:
+        block;
+
+    width:
+        100%;
+
+    max-height:
+        650px;
+
+    background:
+        #000;
 }
 
 .video-info {
-    padding: 25px;
+    padding:
+        26px;
+
+    color:
+        white;
+
     background:
         linear-gradient(
             135deg,
-            #071f4d,
-            #0a4da2
+            #061b3a,
+            #0757b8
         );
-
-    color: white;
-}
-
-.video-info h3 {
-    margin: 0 0 6px;
-    font-size: 24px;
-}
-
-.video-info p {
-    margin: 0;
-    color: rgba(255,255,255,.78);
 }
 
 .video-tag {
-    display: inline-block;
+    display:
+        inline-block;
 
-    margin-bottom: 10px;
+    margin-bottom:
+        10px;
 
-    background: var(--gold);
-    color: #111;
+    padding:
+        5px 11px;
 
-    padding: 5px 10px;
+    border-radius:
+        20px;
 
-    border-radius: 20px;
+    background:
+        var(--gold);
 
-    font-size: 11px;
-    font-weight: 900;
+    color:
+        #111;
+
+    font-size:
+        11px;
+
+    font-weight:
+        900;
+}
+
+.video-info h3 {
+    margin:
+        0 0 7px;
+
+    font-size:
+        25px;
+}
+
+.video-info p {
+    margin:
+        0;
+
+    color:
+        rgba(255,255,255,.78);
 }
 
 
 /* =========================================================
-   MUSIC PLAYER
+   MUSIC
 ========================================================= */
 
 .music-section {
     background:
         linear-gradient(
             135deg,
-            #f7faff,
+            #f8fbff,
             #edf4fc
         );
 }
 
 .player {
-    max-width: 1000px;
-    margin: auto;
+    max-width:
+        1020px;
+
+    margin:
+        auto;
+
+    padding:
+        30px;
+
+    border-radius:
+        28px;
+
+    color:
+        white;
 
     background:
         linear-gradient(
             145deg,
-            #071f4d,
-            #0a4da2
+            #061b3a,
+            #0757b8
         );
 
-    border-radius: 28px;
-
-    padding: 30px;
-
-    color: white;
-
-    box-shadow: var(--shadow);
+    box-shadow:
+        var(--shadow);
 }
 
 .player-top {
-    display: grid;
-    grid-template-columns: 145px 1fr;
-    gap: 25px;
-    align-items: center;
+    display:
+        grid;
+
+    grid-template-columns:
+        150px 1fr;
+
+    gap:
+        25px;
+
+    align-items:
+        center;
 }
 
 .album-art {
-    width: 145px;
-    height: 145px;
+    width:
+        150px;
 
-    border-radius: 22px;
+    height:
+        150px;
 
-    object-fit: cover;
+    object-fit:
+        cover;
 
-    border: 5px solid rgba(255,255,255,.9);
+    border:
+        5px solid rgba(255,255,255,.9);
+
+    border-radius:
+        22px;
 
     box-shadow:
         0 15px 35px rgba(0,0,0,.3);
 }
 
 .track-info small {
-    color: var(--gold-light);
-    font-weight: 900;
-    letter-spacing: 1px;
+    color:
+        var(--gold-light);
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1.5px;
 }
 
 .track-info h3 {
-    margin: 5px 0;
-    font-size: 28px;
+    margin:
+        6px 0;
+
+    font-size:
+        30px;
+
+    line-height:
+        1.15;
 }
 
 .track-info p {
-    margin: 0;
-    color: rgba(255,255,255,.75);
+    margin:
+        0;
+
+    color:
+        rgba(255,255,255,.75);
 }
 
 .audio-player {
-    width: 100%;
-    margin-top: 25px;
+    margin-top:
+        24px;
 }
 
 .audio-player audio {
-    width: 100%;
+    width:
+        100%;
 }
 
 
@@ -573,140 +964,228 @@ a {
 ========================================================= */
 
 .visualizer {
-    height: 55px;
+    height:
+        58px;
 
-    display: flex;
-    align-items: end;
-    justify-content: center;
+    margin:
+        20px 0;
 
-    gap: 5px;
+    display:
+        flex;
 
-    margin: 20px 0;
+    align-items:
+        flex-end;
+
+    justify-content:
+        center;
+
+    gap:
+        5px;
 }
 
 .bar {
-    width: 5px;
+    width:
+        5px;
 
-    height: 12px;
+    height:
+        10px;
 
-    background: var(--gold);
+    border-radius:
+        5px;
 
-    border-radius: 5px;
+    background:
+        var(--gold);
 
     animation:
-        bounce
-        1s
-        infinite
-        ease-in-out;
+        bounce 1s infinite ease-in-out;
 
-    animation-play-state: paused;
+    animation-play-state:
+        paused;
 }
 
 .player.playing .bar {
-    animation-play-state: running;
+    animation-play-state:
+        running;
 }
 
-.bar:nth-child(2) { animation-delay: .1s; }
-.bar:nth-child(3) { animation-delay: .2s; }
-.bar:nth-child(4) { animation-delay: .3s; }
-.bar:nth-child(5) { animation-delay: .4s; }
-.bar:nth-child(6) { animation-delay: .5s; }
-.bar:nth-child(7) { animation-delay: .6s; }
-.bar:nth-child(8) { animation-delay: .7s; }
-.bar:nth-child(9) { animation-delay: .8s; }
-.bar:nth-child(10) { animation-delay: .9s; }
+.bar:nth-child(2) {
+    animation-delay:
+        .1s;
+}
+
+.bar:nth-child(3) {
+    animation-delay:
+        .2s;
+}
+
+.bar:nth-child(4) {
+    animation-delay:
+        .3s;
+}
+
+.bar:nth-child(5) {
+    animation-delay:
+        .4s;
+}
+
+.bar:nth-child(6) {
+    animation-delay:
+        .5s;
+}
+
+.bar:nth-child(7) {
+    animation-delay:
+        .6s;
+}
+
+.bar:nth-child(8) {
+    animation-delay:
+        .7s;
+}
+
+.bar:nth-child(9) {
+    animation-delay:
+        .8s;
+}
+
+.bar:nth-child(10) {
+    animation-delay:
+        .9s;
+}
 
 @keyframes bounce {
 
     0% {
-        height: 10px;
+        height:
+            10px;
     }
 
     50% {
-        height: 48px;
+        height:
+            48px;
     }
 
     100% {
-        height: 15px;
+        height:
+            15px;
     }
 
 }
 
 
 /* =========================================================
-   PLAYER CONTROLS
+   MUSIC CONTROLS
 ========================================================= */
 
 .controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display:
+        flex;
 
-    gap: 12px;
+    justify-content:
+        center;
 
-    margin-top: 10px;
+    align-items:
+        center;
+
+    gap:
+        13px;
+
+    margin-top:
+        12px;
 }
 
 .control {
-    width: 48px;
-    height: 48px;
+    width:
+        48px;
 
-    border: 0;
+    height:
+        48px;
 
-    border-radius: 50%;
+    border:
+        0;
 
-    background: rgba(255,255,255,.12);
+    border-radius:
+        50%;
 
-    color: white;
+    background:
+        rgba(255,255,255,.12);
 
-    font-size: 18px;
+    color:
+        white;
 
-    cursor: pointer;
+    font-size:
+        18px;
 }
 
 .control:hover {
-    background: var(--gold);
-    color: #111;
+    background:
+        var(--gold);
+
+    color:
+        #111;
 }
 
 .control.main {
-    width: 62px;
-    height: 62px;
+    width:
+        64px;
 
-    background: var(--gold);
-    color: #111;
+    height:
+        64px;
 
-    font-size: 24px;
+    background:
+        var(--gold);
+
+    color:
+        #111;
+
+    font-size:
+        24px;
 }
 
 .player-options {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    display:
+        flex;
 
-    margin-top: 20px;
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        10px;
+
+    margin-top:
+        20px;
 }
 
 .option-button {
-    border: 1px solid rgba(255,255,255,.25);
+    border:
+        1px solid rgba(255,255,255,.25);
 
-    background: rgba(255,255,255,.07);
+    background:
+        rgba(255,255,255,.07);
 
-    color: white;
+    color:
+        white;
 
-    padding: 8px 14px;
+    padding:
+        8px 15px;
 
-    border-radius: 20px;
+    border-radius:
+        20px;
 
-    cursor: pointer;
-
-    font-weight: 700;
+    font-weight:
+        700;
 }
 
+.option-button:hover,
 .option-button.active {
-    background: var(--gold);
-    color: #111;
+    background:
+        var(--gold);
+
+    color:
+        #111;
 }
 
 
@@ -715,204 +1194,329 @@ a {
 ========================================================= */
 
 .library {
-    margin-top: 35px;
-
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(2, 1fr);
 
-    gap: 15px;
+    gap:
+        15px;
+
+    margin-top:
+        35px;
 }
 
 .song {
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    gap: 15px;
+    gap:
+        15px;
 
-    padding: 17px;
+    padding:
+        17px;
 
-    background: white;
+    border:
+        1px solid var(--border);
 
-    border: 1px solid var(--border);
+    border-radius:
+        17px;
 
-    border-radius: 16px;
+    background:
+        white;
 
-    cursor: pointer;
+    cursor:
+        pointer;
 
-    transition: .25s ease;
+    transition:
+        .25s ease;
 }
 
 .song:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow);
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        var(--shadow);
 }
 
 .song.active {
-    border-color: var(--gold);
+    border-color:
+        var(--gold);
+
     box-shadow:
-        0 8px 25px
-        rgba(245,184,0,.16);
+        0 8px 25px rgba(245,184,0,.16);
 }
 
 .song-number {
-    width: 40px;
-    height: 40px;
+    width:
+        40px;
 
-    flex-shrink: 0;
+    height:
+        40px;
 
-    border-radius: 50%;
+    flex-shrink:
+        0;
 
-    background: var(--navy);
+    display:
+        flex;
 
-    color: white;
+    align-items:
+        center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content:
+        center;
 
-    font-weight: 900;
+    border-radius:
+        50%;
+
+    background:
+        var(--navy);
+
+    color:
+        white;
+
+    font-weight:
+        900;
 }
 
 .song-details {
-    flex: 1;
-    min-width: 0;
+    flex:
+        1;
+
+    min-width:
+        0;
 }
 
 .song-details strong {
-    display: block;
+    display:
+        block;
 
-    color: var(--navy);
+    color:
+        var(--navy);
 
-    font-size: 15px;
+    font-size:
+        15px;
 }
 
 .song-details span {
-    display: block;
+    display:
+        block;
 
-    color: var(--muted);
+    overflow:
+        hidden;
 
-    font-size: 12px;
+    color:
+        var(--muted);
 
-    white-space: nowrap;
+    font-size:
+        12px;
 
-    overflow: hidden;
+    white-space:
+        nowrap;
 
-    text-overflow: ellipsis;
+    text-overflow:
+        ellipsis;
 }
 
 .song-play {
-    width: 42px;
-    height: 42px;
+    width:
+        42px;
 
-    border-radius: 50%;
+    height:
+        42px;
 
-    border: 0;
+    flex-shrink:
+        0;
 
-    background: var(--blue);
+    border:
+        0;
 
-    color: white;
+    border-radius:
+        50%;
 
-    cursor: pointer;
+    background:
+        var(--blue);
 
-    font-size: 16px;
+    color:
+        white;
+
+    font-size:
+        16px;
 }
 
 .song-play:hover {
-    background: var(--gold);
-    color: #111;
+    background:
+        var(--gold);
+
+    color:
+        #111;
 }
 
 
 /* =========================================================
-   MEDIA CARDS
+   MEDIA HIGHLIGHTS
 ========================================================= */
 
 .media-grid {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 20px;
+    gap:
+        22px;
 }
 
 .media-card {
-    background: white;
+    overflow:
+        hidden;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
-    border-radius: 20px;
+    border-radius:
+        21px;
 
-    overflow: hidden;
+    background:
+        white;
 
     box-shadow:
         0 7px 25px rgba(0,0,0,.05);
+
+    transition:
+        .25s ease;
+}
+
+.media-card:hover {
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--shadow);
 }
 
 .media-card-image {
-    height: 220px;
+    position:
+        relative;
+
+    height:
+        230px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    overflow:
+        hidden;
 
     background:
         linear-gradient(
             135deg,
             #061b3a,
-            #0a4da2
+            #0757b8
         );
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
 }
 
 .media-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+}
+
+.media-card-image::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.38),
+            transparent 60%
+        );
 }
 
 .media-icon {
-    position: absolute;
+    position:
+        absolute;
 
-    width: 62px;
-    height: 62px;
+    z-index:
+        2;
 
-    border-radius: 50%;
+    width:
+        62px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height:
+        62px;
 
-    background: rgba(255,255,255,.94);
+    display:
+        flex;
 
-    font-size: 28px;
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,.94);
+
+    font-size:
+        27px;
 
     box-shadow:
         0 10px 30px rgba(0,0,0,.25);
 }
 
 .media-card-content {
-    padding: 20px;
+    padding:
+        21px;
 }
 
 .media-card-content h3 {
-    margin: 0 0 7px;
+    margin:
+        0 0 7px;
 
-    color: var(--navy);
+    color:
+        var(--navy);
 
-    font-size: 19px;
+    font-size:
+        19px;
 }
 
 .media-card-content p {
-    margin: 0;
+    margin:
+        0;
 
-    color: var(--muted);
+    color:
+        var(--muted);
 
-    font-size: 14px;
+    font-size:
+        14px;
 }
 
 
@@ -921,61 +1525,144 @@ a {
 ========================================================= */
 
 .cta {
-    padding: 80px 20px;
+    position:
+        relative;
 
-    text-align: center;
+    overflow:
+        hidden;
 
-    color: white;
+    padding:
+        85px 20px;
+
+    color:
+        white;
+
+    text-align:
+        center;
 
     background:
         linear-gradient(
             135deg,
-            #031329,
-            #0a4da2
+            #020d20,
+            #0757b8
         );
 }
 
+.cta::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        320px;
+
+    height:
+        320px;
+
+    border-radius:
+        50%;
+
+    right:
+        -130px;
+
+    top:
+        -180px;
+
+    background:
+        rgba(245,184,0,.08);
+}
+
 .cta-inner {
-    max-width: 800px;
-    margin: auto;
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    max-width:
+        820px;
+
+    margin:
+        auto;
 }
 
 .cta h2 {
-    margin: 0 0 12px;
+    margin:
+        0 0 12px;
 
-    font-size: 40px;
+    font-size:
+        42px;
 }
 
 .cta p {
-    color: rgba(255,255,255,.82);
+    margin:
+        0;
+
+    color:
+        rgba(255,255,255,.82);
 }
 
 .cta-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 25px;
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+    margin-top:
+        28px;
 }
 
 .cta a {
-    text-decoration: none;
+    display:
+        inline-flex;
 
-    padding: 13px 20px;
+    align-items:
+        center;
 
-    border-radius: 10px;
+    justify-content:
+        center;
 
-    font-weight: 900;
+    padding:
+        13px 20px;
+
+    border-radius:
+        10px;
+
+    text-decoration:
+        none;
+
+    font-weight:
+        900;
 }
 
 .cta .gold {
-    background: var(--gold);
-    color: #111;
+    background:
+        var(--gold);
+
+    color:
+        #111;
 }
 
 .cta .white {
-    background: white;
-    color: var(--navy);
+    background:
+        white;
+
+    color:
+        var(--navy);
+}
+
+.cta a:hover {
+    transform:
+        translateY(-3px);
 }
 
 
@@ -984,27 +1671,44 @@ a {
 ========================================================= */
 
 footer {
-    background: var(--navy2);
+    padding:
+        40px 20px;
 
-    color: rgba(255,255,255,.75);
+    background:
+        var(--navy-dark);
 
-    text-align: center;
+    color:
+        rgba(255,255,255,.72);
 
-    padding: 38px 20px;
+    text-align:
+        center;
 }
 
 .footer-title {
-    color: white;
+    margin:
+        0 0 5px;
 
-    font-weight: 900;
+    color:
+        white;
 
-    font-size: 17px;
+    font-size:
+        18px;
+
+    font-weight:
+        900;
 }
 
 .footer-slogan {
-    color: var(--gold-light);
+    color:
+        var(--gold-light);
 
-    font-weight: 900;
+    font-weight:
+        900;
+}
+
+footer p {
+    margin:
+        7px 0;
 }
 
 
@@ -1013,54 +1717,75 @@ footer {
 ========================================================= */
 
 .back-top {
-    position: fixed;
+    position:
+        fixed;
 
-    right: 18px;
-    bottom: 18px;
+    right:
+        18px;
 
-    width: 48px;
-    height: 48px;
+    bottom:
+        18px;
 
-    border: 0;
+    z-index:
+        2000;
 
-    border-radius: 50%;
+    width:
+        48px;
 
-    background: var(--gold);
+    height:
+        48px;
 
-    color: #111;
+    display:
+        none;
 
-    font-size: 22px;
+    align-items:
+        center;
 
-    font-weight: 900;
+    justify-content:
+        center;
 
-    cursor: pointer;
+    border:
+        0;
 
-    display: none;
+    border-radius:
+        50%;
 
-    z-index: 2000;
+    background:
+        var(--gold);
+
+    color:
+        #111;
+
+    font-size:
+        22px;
+
+    font-weight:
+        900;
 
     box-shadow:
         0 8px 25px rgba(0,0,0,.2);
 }
 
 .back-top.show {
-    display: block;
+    display:
+        flex;
 }
 
 
 /* =========================================================
-   MOBILE
+   RESPONSIVE
 ========================================================= */
 
-@media (max-width: 900px) {
-
-    .library {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 950px) {
 
     .media-grid {
         grid-template-columns:
             repeat(2, 1fr);
+    }
+
+    .library {
+        grid-template-columns:
+            1fr;
     }
 
 }
@@ -1069,99 +1794,187 @@ footer {
 @media (max-width: 700px) {
 
     .top-bar-inner {
-        justify-content: center;
-        text-align: center;
+        justify-content:
+            center;
+
+        text-align:
+            center;
     }
 
     .top-bar-inner span:last-child {
-        display: none;
+        display:
+            none;
     }
 
     .header-inner {
-        flex-direction: column;
-        text-align: center;
+        flex-direction:
+            column;
+
+        text-align:
+            center;
     }
 
     .header-text h1 {
-        font-size: 21px;
+        font-size:
+            21px;
     }
 
     .menu-button {
-        display: block;
+        display:
+            block;
     }
 
     .nav {
-        display: none;
+        display:
+            none;
 
-        position: relative;
+        position:
+            relative;
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        align-items: stretch;
+        align-items:
+            stretch;
+
+        padding:
+            8px 12px;
     }
 
     .nav.show {
-        display: flex;
+        display:
+            flex;
     }
 
     .nav a {
-        width: 100%;
-        text-align: center;
+        width:
+            100%;
+
+        text-align:
+            center;
     }
 
     .hero {
         padding:
-            65px
-            16px
-            75px;
+            68px 16px 78px;
     }
 
     .hero h2 {
-        font-size: 42px;
+        font-size:
+            43px;
+
+        letter-spacing:
+            -1.5px;
     }
 
     .hero p {
-        font-size: 15px;
+        font-size:
+            15px;
     }
 
     .hero-actions {
-        flex-direction: column;
+        flex-direction:
+            column;
     }
 
     .hero-button {
-        width: 100%;
+        width:
+            100%;
     }
 
     .section {
-        padding: 55px 15px;
+        padding:
+            58px 15px;
     }
 
     .heading h2 {
-        font-size: 29px;
+        font-size:
+            29px;
     }
 
     .player {
-        padding: 20px;
-        border-radius: 20px;
+        padding:
+            20px;
+
+        border-radius:
+            21px;
     }
 
     .player-top {
-        grid-template-columns: 1fr;
-        text-align: center;
+        grid-template-columns:
+            1fr;
+
+        text-align:
+            center;
     }
 
     .album-art {
-        margin: auto;
-        width: 170px;
-        height: 170px;
+        width:
+            175px;
+
+        height:
+            175px;
+
+        margin:
+            auto;
+    }
+
+    .track-info h3 {
+        font-size:
+            25px;
     }
 
     .media-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
+    }
+
+    .media-card-image {
+        height:
+            240px;
+    }
+
+    .cta {
+        padding:
+            70px 18px;
     }
 
     .cta h2 {
-        font-size: 30px;
+        font-size:
+            31px;
+    }
+
+    .cta-buttons {
+        flex-direction:
+            column;
+    }
+
+    .cta a {
+        width:
+            100%;
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior:
+            auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
     }
 
 }
@@ -1173,10 +1986,10 @@ footer {
 
 :focus-visible {
     outline:
-        3px solid
-        var(--gold);
+        3px solid var(--gold);
 
-    outline-offset: 3px;
+    outline-offset:
+        3px;
 }
 
 </style>
@@ -1255,7 +2068,8 @@ footer {
 <button
     class="menu-button"
     id="menuButton"
-    aria-expanded="false">
+    aria-expanded="false"
+    aria-controls="mainNav">
 
     ☰ MENU
 
@@ -1268,7 +2082,8 @@ footer {
 
 <nav
     class="nav"
-    id="mainNav">
+    id="mainNav"
+    aria-label="Main navigation">
 
     <a href="index.html">
         🏠 Home
@@ -1304,7 +2119,8 @@ footer {
 
     <a
         href="media.html"
-        class="active">
+        class="active"
+        aria-current="page">
 
         🎵 Media
 
@@ -1354,9 +2170,10 @@ footer {
         </h2>
 
         <p>
-            Experience the campaign through music,
-            inspirational sounds, campaign videos and
-            media highlights from the IMOLE 2027 movement.
+            Experience the IMOLE 2027 movement through
+            campaign music, inspirational sounds,
+            campaign videos, photographs and media
+            highlights from Ojo Constituency II.
         </p>
 
         <div class="hero-actions">
@@ -1413,9 +2230,9 @@ footer {
             </h2>
 
             <p>
-                Watch campaign messages, movement highlights
-                and the journey towards a better Ojo
-                Constituency II.
+                Watch campaign messages, movement
+                highlights and the journey towards a
+                better Ojo Constituency II.
             </p>
 
         </div>
@@ -1433,7 +2250,8 @@ footer {
                     src="assets/47ce1089-66a6-441d-850d-11cee3fb6cfc-watermark.mp4"
                     type="video/mp4">
 
-                Your browser does not support HTML5 video.
+                Your browser does not support
+                HTML5 video.
 
             </video>
 
@@ -1484,15 +2302,17 @@ footer {
             </h2>
 
             <p>
-                Listen to the songs and jingles created to
-                carry the IMOLE message across Ojo
-                Constituency II and beyond.
+                Listen to campaign songs, jingles and
+                movement sounds created to carry the IMOLE
+                message across Ojo Constituency II and beyond.
             </p>
 
         </div>
 
 
-        <!-- PLAYER -->
+        <!-- =================================================
+             PLAYER
+        ================================================= -->
 
         <div
             class="player"
@@ -1503,7 +2323,7 @@ footer {
                 <img
                     id="albumArt"
                     src="assets/IMG-20260710-WA0004.jpg"
-                    alt="IMOLE 2027"
+                    alt="IMOLE 2027 campaign"
                     class="album-art"
                 >
 
@@ -1518,7 +2338,7 @@ footer {
                     </h3>
 
                     <p id="trackArtist">
-                        IMOLE 2027 Campaign Music
+                        Progress Mix
                     </p>
 
                 </div>
@@ -1528,7 +2348,9 @@ footer {
 
             <!-- VISUALIZER -->
 
-            <div class="visualizer">
+            <div
+                class="visualizer"
+                aria-hidden="true">
 
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -1543,6 +2365,8 @@ footer {
 
             </div>
 
+
+            <!-- AUDIO -->
 
             <div class="audio-player">
 
@@ -1555,14 +2379,20 @@ footer {
                         src="assets/Ojo Go Better (Progress Mix).mp3"
                         type="audio/mpeg">
 
+                    Your browser does not support
+                    HTML5 audio.
+
                 </audio>
 
             </div>
 
 
+            <!-- CONTROLS -->
+
             <div class="controls">
 
                 <button
+                    type="button"
                     class="control"
                     id="prevButton"
                     aria-label="Previous song">
@@ -1572,6 +2402,7 @@ footer {
                 </button>
 
                 <button
+                    type="button"
                     class="control main"
                     id="playButton"
                     aria-label="Play or pause">
@@ -1581,6 +2412,7 @@ footer {
                 </button>
 
                 <button
+                    type="button"
                     class="control"
                     id="nextButton"
                     aria-label="Next song">
@@ -1592,9 +2424,12 @@ footer {
             </div>
 
 
+            <!-- OPTIONS -->
+
             <div class="player-options">
 
                 <button
+                    type="button"
                     class="option-button"
                     id="shuffleButton">
 
@@ -1603,6 +2438,7 @@ footer {
                 </button>
 
                 <button
+                    type="button"
                     class="option-button"
                     id="repeatButton">
 
@@ -1615,9 +2451,13 @@ footer {
         </div>
 
 
-        <!-- SONG LIBRARY -->
+        <!-- =================================================
+             SONG LIBRARY
+        ================================================= -->
 
-        <div class="library" id="songLibrary">
+        <div
+            class="library"
+            id="songLibrary">
 
 
             <div
@@ -1640,8 +2480,13 @@ footer {
 
                 </div>
 
-                <button class="song-play">
+                <button
+                    type="button"
+                    class="song-play"
+                    aria-label="Play Ojo Go Better">
+
                     ▶
+
                 </button>
 
             </div>
@@ -1667,8 +2512,13 @@ footer {
 
                 </div>
 
-                <button class="song-play">
+                <button
+                    type="button"
+                    class="song-play"
+                    aria-label="Play Ojó Á Dára">
+
                     ▶
+
                 </button>
 
             </div>
@@ -1694,8 +2544,13 @@ footer {
 
                 </div>
 
-                <button class="song-play">
+                <button
+                    type="button"
+                    class="song-play"
+                    aria-label="Play Nuru L'ọkàn">
+
                     ▶
+
                 </button>
 
             </div>
@@ -1721,8 +2576,13 @@ footer {
 
                 </div>
 
-                <button class="song-play">
+                <button
+                    type="button"
+                    class="song-play"
+                    aria-label="Play OJO DEY MOVE">
+
                     ▶
+
                 </button>
 
             </div>
@@ -1748,8 +2608,13 @@ footer {
 
                 </div>
 
-                <button class="song-play">
+                <button
+                    type="button"
+                    class="song-play"
+                    aria-label="Play OJO ZAI FI KYAU">
+
                     ▶
+
                 </button>
 
             </div>
@@ -1775,8 +2640,13 @@ footer {
 
                 </div>
 
-                <button class="song-play">
+                <button
+                    type="button"
+                    class="song-play"
+                    aria-label="Play Ojo Ga-adị Mma">
+
                     ▶
+
                 </button>
 
             </div>
@@ -1802,8 +2672,13 @@ footer {
 
                 </div>
 
-                <button class="song-play">
+                <button
+                    type="button"
+                    class="song-play"
+                    aria-label="Play Sadeeq Campaign Jingle">
+
                     ▶
+
                 </button>
 
             </div>
@@ -1835,8 +2710,8 @@ footer {
             </h2>
 
             <p>
-                Explore the people, message and movement
-                behind IMOLE 2027.
+                Explore the people, message and grassroots
+                movement behind IMOLE 2027.
             </p>
 
         </div>
@@ -1845,6 +2720,8 @@ footer {
         <div class="media-grid">
 
 
+            <!-- CARD 1 -->
+
             <article class="media-card">
 
                 <div class="media-card-image">
@@ -1852,10 +2729,15 @@ footer {
                     <img
                         src="assets/IMG-20260710-WA0004.jpg"
                         alt="Hon. Nurudeen Abayomi Sadeeq"
+                        loading="lazy"
                     >
 
-                    <div class="media-icon">
+                    <div
+                        class="media-icon"
+                        aria-hidden="true">
+
                         👤
+
                     </div>
 
                 </div>
@@ -1869,7 +2751,7 @@ footer {
                     <p>
                         Learn more about Hon. Nurudeen
                         Abayomi Sadeeq and the IMOLE 2027
-                        vision.
+                        vision for Ojo Constituency II.
                     </p>
 
                 </div>
@@ -1877,17 +2759,24 @@ footer {
             </article>
 
 
+            <!-- CARD 2 -->
+
             <article class="media-card">
 
                 <div class="media-card-image">
 
                     <img
                         src="assets/IMG-20260728-WA0032.jpg"
-                        alt="IMOLE 2027 campaign"
+                        alt="IMOLE 2027 campaign activities"
+                        loading="lazy"
                     >
 
-                    <div class="media-icon">
+                    <div
+                        class="media-icon"
+                        aria-hidden="true">
+
                         📸
+
                     </div>
 
                 </div>
@@ -1901,13 +2790,15 @@ footer {
                     <p>
                         Follow campaign activities,
                         grassroots engagement and community
-                        moments.
+                        moments across Ojo Constituency II.
                     </p>
 
                 </div>
 
             </article>
 
+
+            <!-- CARD 3 -->
 
             <article class="media-card">
 
@@ -1916,10 +2807,15 @@ footer {
                     <img
                         src="assets/IMG-20260710-WA0004.jpg"
                         alt="IMOLE 2027 movement"
+                        loading="lazy"
                     >
 
-                    <div class="media-icon">
+                    <div
+                        class="media-icon"
+                        aria-hidden="true">
+
                         🔥
+
                     </div>
 
                 </div>
@@ -1931,9 +2827,9 @@ footer {
                     </h3>
 
                     <p>
-                        Service, development,
-                        accountability and grassroots
-                        participation.
+                        Service, development, accountability
+                        and grassroots participation —
+                        the heart of IMOLE 2027.
                     </p>
 
                 </div>
@@ -1949,7 +2845,7 @@ footer {
 
 
 <!-- ======================================================
-     CTA
+     CALL TO ACTION
 ====================================================== -->
 
 <section class="cta">
@@ -1961,7 +2857,7 @@ footer {
         </h2>
 
         <p>
-            Listen to the message. Share the vision.
+            Hear the message. Share the vision.
             Join the movement.
         </p>
 
@@ -1990,7 +2886,7 @@ footer {
                 ❤️ SUPPORT THE MOVEMENT
 
             </a>
-<a href="media.html">🎵 Media</a>
+
         </div>
 
     </div>
@@ -2038,6 +2934,7 @@ footer {
 ====================================================== -->
 
 <button
+    type="button"
     class="back-top"
     id="backTop"
     aria-label="Back to top">
@@ -2059,22 +2956,21 @@ const menuButton =
 const mainNav =
     document.getElementById("mainNav");
 
+
 menuButton.addEventListener(
     "click",
-    function() {
+    function () {
 
-        mainNav.classList.toggle("show");
-
-        const open =
-            mainNav.classList.contains("show");
+        const isOpen =
+            mainNav.classList.toggle("show");
 
         menuButton.setAttribute(
             "aria-expanded",
-            open
+            isOpen ? "true" : "false"
         );
 
         menuButton.innerHTML =
-            open
+            isOpen
                 ? "✕ CLOSE MENU"
                 : "☰ MENU";
 
@@ -2082,25 +2978,27 @@ menuButton.addEventListener(
 );
 
 
-/* CLOSE MENU */
+/* =========================================================
+   CLOSE MOBILE MENU AFTER LINK CLICK
+========================================================= */
 
 document
-    .querySelectorAll(".nav a")
-    .forEach(function(link) {
+    .querySelectorAll("#mainNav a")
+    .forEach(function (link) {
 
         link.addEventListener(
             "click",
-            function() {
+            function () {
 
                 mainNav.classList.remove("show");
-
-                menuButton.innerHTML =
-                    "☰ MENU";
 
                 menuButton.setAttribute(
                     "aria-expanded",
                     "false"
                 );
+
+                menuButton.innerHTML =
+                    "☰ MENU";
 
             }
         );
@@ -2203,6 +3101,10 @@ let repeat =
     false;
 
 
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
 const audio =
     document.getElementById(
         "audioPlayer"
@@ -2216,6 +3118,26 @@ const player =
 const playButton =
     document.getElementById(
         "playButton"
+    );
+
+const prevButton =
+    document.getElementById(
+        "prevButton"
+    );
+
+const nextButtonElement =
+    document.getElementById(
+        "nextButton"
+    );
+
+const shuffleButton =
+    document.getElementById(
+        "shuffleButton"
+    );
+
+const repeatButton =
+    document.getElementById(
+        "repeatButton"
     );
 
 const title =
@@ -2243,27 +3165,44 @@ function loadSong(
     autoplay = false
 ) {
 
+    if (
+        index < 0 ||
+        index >= songs.length
+    ) {
+
+        index = 0;
+
+    }
+
     currentSong =
         index;
 
     const song =
         songs[currentSong];
 
+
     audio.src =
         song.file;
+
 
     title.textContent =
         song.title;
 
+
     artist.textContent =
         song.artist;
+
 
     albumArt.src =
         "assets/IMG-20260710-WA0004.jpg";
 
+
     document
         .querySelectorAll(".song")
-        .forEach(function(item, i) {
+        .forEach(function (
+            item,
+            i
+        ) {
 
             item.classList.toggle(
                 "active",
@@ -2272,10 +3211,11 @@ function loadSong(
 
         });
 
+
     if (autoplay) {
 
         audio.play()
-            .catch(function() {});
+            .catch(function () {});
 
     }
 
@@ -2288,12 +3228,12 @@ function loadSong(
 
 playButton.addEventListener(
     "click",
-    function() {
+    function () {
 
         if (audio.paused) {
 
             audio.play()
-                .catch(function() {});
+                .catch(function () {});
 
         } else {
 
@@ -2305,9 +3245,13 @@ playButton.addEventListener(
 );
 
 
+/* =========================================================
+   PLAY EVENT
+========================================================= */
+
 audio.addEventListener(
     "play",
-    function() {
+    function () {
 
         playButton.textContent =
             "❚❚";
@@ -2320,9 +3264,13 @@ audio.addEventListener(
 );
 
 
+/* =========================================================
+   PAUSE EVENT
+========================================================= */
+
 audio.addEventListener(
     "pause",
-    function() {
+    function () {
 
         playButton.textContent =
             "▶";
@@ -2336,49 +3284,46 @@ audio.addEventListener(
 
 
 /* =========================================================
-   PREVIOUS
+   PREVIOUS SONG
 ========================================================= */
 
-document
-    .getElementById("prevButton")
-    .addEventListener(
-        "click",
-        function() {
+prevButton.addEventListener(
+    "click",
+    function () {
 
-            let index =
-                currentSong - 1;
+        let index =
+            currentSong - 1;
 
-            if (index < 0) {
+        if (index < 0) {
 
-                index =
-                    songs.length - 1;
-
-            }
-
-            loadSong(
-                index,
-                true
-            );
+            index =
+                songs.length - 1;
 
         }
-    );
+
+        loadSong(
+            index,
+            true
+        );
+
+    }
+);
 
 
 /* =========================================================
-   NEXT
+   NEXT SONG
 ========================================================= */
 
-document
-    .getElementById("nextButton")
-    .addEventListener(
-        "click",
-        nextSong
-    );
+nextButtonElement.addEventListener(
+    "click",
+    nextSong
+);
 
 
 function nextSong() {
 
     let index;
+
 
     if (shuffle) {
 
@@ -2387,6 +3332,7 @@ function nextSong() {
                 Math.random() *
                 songs.length
             );
+
 
         if (
             index ===
@@ -2406,16 +3352,19 @@ function nextSong() {
         index =
             currentSong + 1;
 
+
         if (
             index >=
             songs.length
         ) {
 
-            index = 0;
+            index =
+                0;
 
         }
 
     }
+
 
     loadSong(
         index,
@@ -2426,19 +3375,20 @@ function nextSong() {
 
 
 /* =========================================================
-   AUTO NEXT
+   SONG ENDED
 ========================================================= */
 
 audio.addEventListener(
     "ended",
-    function() {
+    function () {
 
         if (repeat) {
 
-            audio.currentTime = 0;
+            audio.currentTime =
+                0;
 
             audio.play()
-                .catch(function() {});
+                .catch(function () {});
 
             return;
 
@@ -2454,14 +3404,9 @@ audio.addEventListener(
    SHUFFLE
 ========================================================= */
 
-const shuffleButton =
-    document.getElementById(
-        "shuffleButton"
-    );
-
 shuffleButton.addEventListener(
     "click",
-    function() {
+    function () {
 
         shuffle =
             !shuffle;
@@ -2479,14 +3424,9 @@ shuffleButton.addEventListener(
    REPEAT
 ========================================================= */
 
-const repeatButton =
-    document.getElementById(
-        "repeatButton"
-    );
-
 repeatButton.addEventListener(
     "click",
-    function() {
+    function () {
 
         repeat =
             !repeat;
@@ -2501,16 +3441,23 @@ repeatButton.addEventListener(
 
 
 /* =========================================================
-   SONG LIBRARY CLICK
+   SONG LIBRARY
 ========================================================= */
 
 document
     .querySelectorAll(".song")
-    .forEach(function(songElement) {
+    .forEach(function (
+        songElement
+    ) {
 
         songElement.addEventListener(
             "click",
-            function() {
+            function (event) {
+
+                /*
+                 * Prevent duplicate handling when
+                 * clicking the small play button.
+                 */
 
                 const index =
                     Number(
@@ -2529,6 +3476,86 @@ document
 
 
 /* =========================================================
+   KEYBOARD SHORTCUTS
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        /*
+         * Do not interfere with typing
+         * inside form fields.
+         */
+
+        const tag =
+            document.activeElement.tagName;
+
+        if (
+            tag === "INPUT" ||
+            tag === "TEXTAREA"
+        ) {
+
+            return;
+
+        }
+
+
+        if (
+            event.code === "Space"
+        ) {
+
+            event.preventDefault();
+
+            if (audio.paused) {
+
+                audio.play()
+                    .catch(function () {});
+
+            } else {
+
+                audio.pause();
+
+            }
+
+        }
+
+
+        if (
+            event.code === "ArrowRight"
+        ) {
+
+            nextSong();
+
+        }
+
+
+        if (
+            event.code === "ArrowLeft"
+        ) {
+
+            let index =
+                currentSong - 1;
+
+            if (index < 0) {
+
+                index =
+                    songs.length - 1;
+
+            }
+
+            loadSong(
+                index,
+                true
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
    BACK TO TOP
 ========================================================= */
 
@@ -2537,9 +3564,10 @@ const backTop =
         "backTop"
     );
 
+
 window.addEventListener(
     "scroll",
-    function() {
+    function () {
 
         if (
             window.scrollY >
@@ -2564,11 +3592,16 @@ window.addEventListener(
 
 backTop.addEventListener(
     "click",
-    function() {
+    function () {
 
         window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+
+            top:
+                0,
+
+            behavior:
+                "smooth"
+
         });
 
     }
@@ -2576,16 +3609,21 @@ backTop.addEventListener(
 
 
 /* =========================================================
-   INITIALISE
+   IMAGE FALLBACK
 ========================================================= */
 
-loadSong(
-    0,
-    false
-);
+document
+    .querySelectorAll("img")
+    .forEach(function (image) {
 
-</script>
+        image.addEventListener(
+            "error",
+            function () {
 
+                /*
+                 * Keep broken images from
+                 * destroying the layout.
+                 */
 
-</body>
-</html>
+                this.style.background =
+                    "linear-gradient(135deg
