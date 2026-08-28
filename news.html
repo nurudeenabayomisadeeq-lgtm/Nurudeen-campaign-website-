@@ -1,488 +1,999 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8">
 
-    <title>News & Updates | IMOLE 2027</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Latest news, campaign activities, ward meetings, community engagements and announcements from Hon. Nurudeen Abayomi Sadeeq and the IMOLE 2027 movement.">
+<title>News & Updates | IMOLE 2027</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="manifest" href="manifest.json">
+<meta name="description"
+      content="Latest news, campaign activities, ward engagements, community updates and announcements from Hon. Nurudeen Abayomi Sadeeq and the IMOLE 2027 movement in Ojo Constituency II.">
 
-    <meta name="theme-color" content="#ffffff">
+<meta name="theme-color"
+      content="#ffffff">
 
-    <style>
+<link rel="stylesheet"
+      href="assets/css/style.css">
+
+<link rel="manifest"
+      href="manifest.json">
+
+
+<style>
+
+    /* ==============================
+       NEWS PAGE
+    ============================== */
+
+    .news-page {
+
+        max-width: 1150px;
+
+        margin: auto;
+
+        padding: 40px 15px 70px;
+
+    }
+
+
+    /* ==============================
+       HEADER
+    ============================== */
+
+    .news-header {
+
+        text-align: center;
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .news-header h1 {
+
+        font-size: 38px;
+
+        margin-bottom: 12px;
+
+    }
+
+
+    .news-header p {
+
+        max-width: 780px;
+
+        margin: auto;
+
+        line-height: 1.8;
+
+    }
+
+
+    /* ==============================
+       FEATURED STORY
+    ============================== */
+
+    .featured-news {
+
+        background: #ffffff;
+
+        padding: 32px;
+
+        border-radius: 20px;
+
+        margin-bottom: 40px;
+
+        box-shadow:
+            0 6px 22px rgba(0,0,0,0.12);
+
+    }
+
+
+    .featured-label {
+
+        display: inline-block;
+
+        padding: 7px 13px;
+
+        border-radius: 20px;
+
+        font-size: 13px;
+
+        font-weight: bold;
+
+        margin-bottom: 12px;
+
+    }
+
+
+    .featured-news h2 {
+
+        font-size: 28px;
+
+        margin: 8px 0 12px;
+
+        line-height: 1.3;
+
+    }
+
+
+    .featured-news p {
+
+        line-height: 1.8;
+
+    }
+
+
+    .news-date {
+
+        font-size: 14px;
+
+        font-weight: bold;
+
+        margin-bottom: 12px;
+
+    }
+
+
+    /* ==============================
+       NEWS GRID
+    ============================== */
+
+    .news-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(auto-fit, minmax(280px, 1fr));
+
+        gap: 22px;
+
+    }
+
+
+    /* ==============================
+       NEWS CARD
+    ============================== */
+
+    .news-card {
+
+        background: #ffffff;
+
+        padding: 25px;
+
+        border-radius: 17px;
+
+        box-shadow:
+            0 5px 18px rgba(0,0,0,0.10);
+
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+
+    }
+
+
+    .news-card:hover {
+
+        transform: translateY(-5px);
+
+        box-shadow:
+            0 9px 25px rgba(0,0,0,0.16);
+
+    }
+
+
+    .news-category {
+
+        font-size: 13px;
+
+        font-weight: bold;
+
+        text-transform: uppercase;
+
+        margin-bottom: 8px;
+
+    }
+
+
+    .news-card h3 {
+
+        margin: 8px 0 10px;
+
+        font-size: 21px;
+
+        line-height: 1.35;
+
+    }
+
+
+    .news-card p {
+
+        line-height: 1.7;
+
+    }
+
+
+    /* ==============================
+       BUTTONS
+    ============================== */
+
+    .news-button {
+
+        display: inline-block;
+
+        margin-top: 10px;
+
+        padding: 10px 17px;
+
+        border-radius: 8px;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+    }
+
+
+    .featured-button {
+
+        display: inline-block;
+
+        margin-top: 10px;
+
+        padding: 13px 20px;
+
+        border-radius: 8px;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+    }
+
+
+    /* ==============================
+       NEWS CATEGORIES
+    ============================== */
+
+    .categories {
+
+        margin: 45px 0 25px;
+
+        text-align: center;
+
+    }
+
+
+    .categories h2 {
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .category-list {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 10px;
+
+    }
+
+
+    .category-list a {
+
+        display: inline-block;
+
+        padding: 9px 15px;
+
+        border-radius: 20px;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+        font-size: 14px;
+
+    }
+
+
+    /* ==============================
+       SOCIAL MEDIA
+    ============================== */
+
+    .social-box {
+
+        margin-top: 45px;
+
+        padding: 30px 20px;
+
+        text-align: center;
+
+        border-radius: 18px;
+
+        background: #f5f5f5;
+
+    }
+
+
+    .social-box p {
+
+        max-width: 700px;
+
+        margin: 10px auto;
+
+        line-height: 1.7;
+
+    }
+
+
+    .social-button {
+
+        display: inline-block;
+
+        margin-top: 15px;
+
+        padding: 13px 22px;
+
+        border-radius: 8px;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+    }
+
+
+    /* ==============================
+       JOIN CTA
+    ============================== */
+
+    .news-join {
+
+        margin-top: 40px;
+
+        padding: 35px 20px;
+
+        text-align: center;
+
+        border-radius: 18px;
+
+        background: #ffffff;
+
+        box-shadow:
+            0 5px 20px rgba(0,0,0,0.10);
+
+    }
+
+
+    .news-join p {
+
+        max-width: 700px;
+
+        margin: 10px auto 20px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .news-join-button {
+
+        display: inline-block;
+
+        padding: 14px 24px;
+
+        border-radius: 8px;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+    }
+
+
+    /* ==============================
+       MOBILE
+    ============================== */
+
+    @media (max-width: 600px) {
 
         .news-page {
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 15px 70px;
+
+            padding:
+                30px 12px 50px;
+
         }
 
-        .news-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
 
         .news-header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
+
+            font-size: 29px;
+
         }
 
-        .news-header p {
-            max-width: 750px;
-            margin: auto;
-            line-height: 1.7;
-        }
 
         .featured-news {
-            background: #fff;
-            padding: 30px;
-            border-radius: 18px;
-            margin-bottom: 35px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+
+            padding: 22px;
+
         }
 
-        .featured-label {
-            display: inline-block;
-            padding: 7px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
 
         .featured-news h2 {
-            margin-top: 8px;
+
+            font-size: 23px;
+
         }
 
-        .featured-news p {
-            line-height: 1.7;
-        }
 
         .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 22px;
-        }
 
-        .news-card {
-            background: #fff;
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
-            transition: 0.3s;
-        }
-
-        .news-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.16);
-        }
-
-        .news-category {
-            font-size: 13px;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        .news-card h3 {
-            margin: 8px 0 10px;
-            font-size: 21px;
-        }
-
-        .news-date {
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
-
-        .news-card p {
-            line-height: 1.7;
-        }
-
-        .news-button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .facebook-box {
-            margin-top: 40px;
-            padding: 25px;
-            text-align: center;
-            background: #f5f5f5;
-            border-radius: 16px;
-        }
-
-        .facebook-button {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 12px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        @media (max-width: 600px) {
-
-            .news-header h1 {
-                font-size: 28px;
-            }
-
-            .featured-news {
-                padding: 22px;
-            }
+            grid-template-columns: 1fr;
 
         }
 
-    </style>
-</head>
 
-<body>
+        .category-list {
 
-<header class="site-header">
+            flex-direction: column;
 
-    <div class="container">
+        }
 
-        <h1>IMOLE 2027</h1>
 
-        <p>
-            HON. NURUDEEN ABAYOMI SADEEQ
-        </p>
+        .category-list a {
 
-        <p>
-            Lagos State House of Assembly — Ojo Constituency II
-        </p>
+            width: 100%;
 
-        <p>
-            Nigeria Democratic Congress (NDC)
-        </p>
+            box-sizing: border-box;
+
+        }
+
+    }
+
+</style>
+
+</head><body><!-- ==============================
+     HEADER
+============================== --><header class="site-header"><div class="container">
+
+    <h1>
+        IMOLE 2027
+    </h1>
+
+    <p>
+        HON. NURUDEEN ABAYOMI SADEEQ
+    </p>
+
+    <p>
+        Lagos State House of Assembly —
+        Ojo Constituency II
+    </p>
+
+    <p>
+        Nigeria Democratic Congress (NDC)
+    </p>
+
+</div>
+
+</header><!-- ==============================
+     NAVIGATION
+============================== --><nav class="main-nav"><a href="index.html">
+    Home
+</a>
+
+<a href="about.html">
+    About
+</a>
+
+<a href="manifesto.html">
+    Manifesto
+</a>
+
+<a href="polling-units.html">
+    Polling Units
+</a>
+
+<a href="results.html">
+    Results
+</a>
+
+<a href="news.html">
+    News
+</a>
+
+<a href="events.html">
+    Events
+</a>
+
+<a href="gallery.html">
+    Gallery
+</a>
+
+<a href="contact.html">
+    Contact
+</a>
+
+<a href="join.html">
+    🔥 Join the Movement
+</a>
+
+</nav><main><section class="news-page"><!-- ==============================
+     NEWS HEADER
+============================== -->
+
+<div class="news-header">
+
+    <h1>
+        📰 NEWS & UPDATES
+    </h1>
+
+    <p>
+        Stay informed about IMOLE 2027 campaign
+        activities, community engagements, ward
+        meetings, announcements and updates from
+        Hon. Nurudeen Abayomi Sadeeq.
+    </p>
+
+</div>
+
+
+<!-- ==============================
+     FEATURED NEWS
+============================== -->
+
+<article class="featured-news">
+
+    <span class="featured-label">
+        ⭐ FEATURED UPDATE
+    </span>
+
+
+    <h2>
+        IMOLE 2027 Continues Grassroots Engagement
+    </h2>
+
+
+    <p class="news-date">
+        August 2026
+    </p>
+
+
+    <p>
+        The IMOLE 2027 movement continues its
+        grassroots engagement across Ojo
+        Constituency II, connecting with community
+        leaders, youths, women and other stakeholders.
+    </p>
+
+
+    <p>
+        The movement's engagements are focused on
+        listening to the people, strengthening
+        community participation and promoting a
+        vision centred on service, development and
+        accountability.
+    </p>
+
+
+    <a
+        href="https://www.facebook.com/share/1BfTYeyYXr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="featured-button">
+
+        VIEW CAMPAIGN UPDATE →
+
+    </a>
+
+</article>
+
+
+<!-- ==============================
+     CATEGORIES
+============================== -->
+
+<section class="categories">
+
+    <h2>
+        🗂️ CAMPAIGN CATEGORIES
+    </h2>
+
+
+    <div class="category-list">
+
+        <a href="#community">
+            🤝 Community
+        </a>
+
+        <a href="#wards">
+            🏘️ Ward Activities
+        </a>
+
+        <a href="#youth">
+            👥 Youth & Women
+        </a>
+
+        <a href="#development">
+            🛠️ Development
+        </a>
+
+        <a href="#announcements">
+            📢 Announcements
+        </a>
+
+        <a href="#movement">
+            🔥 IMOLE Movement
+        </a>
 
     </div>
 
-</header>
+</section>
 
 
-<nav class="main-nav">
+<!-- ==============================
+     NEWS GRID
+============================== -->
 
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="manifesto.html">Manifesto</a>
-    <a href="polling-units.html">Polling Units</a>
-    <a href="results.html">Results</a>
-    <a href="news.html">News</a>
-    <a href="events.html">Events</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-    <a href="join.html">Join the Movement</a>
-
-</nav>
+<div class="news-grid">
 
 
-<main>
+    <!-- COMMUNITY -->
 
-<section class="news-page">
+    <article
+        class="news-card"
+        id="community">
 
-    <div class="news-header">
-
-        <h1>📰 NEWS & UPDATES</h1>
-
-        <p>
-            Stay informed about the activities, engagements,
-            meetings and community initiatives of Hon. Nurudeen
-            Abayomi Sadeeq and the IMOLE 2027 movement.
-        </p>
-
-    </div>
+        <div class="news-category">
+            🤝 COMMUNITY ENGAGEMENT
+        </div>
 
 
-    <!-- FEATURED NEWS -->
+        <h3>
+            Engagement with Community Leaders
+        </h3>
 
-    <article class="featured-news">
 
-        <span class="featured-label">
-            ⭐ FEATURED UPDATE
-        </span>
-
-        <h2>
-            IMOLE 2027 Continues Grassroots Engagement
-        </h2>
-
-        <p class="news-date">
+        <div class="news-date">
             August 2026
-        </p>
+        </div>
+
 
         <p>
-            The IMOLE 2027 movement continues its grassroots
-            engagement across Ojo Constituency II, meeting with
-            community leaders, youths, women and other
-            stakeholders.
+            The IMOLE 2027 movement continues to
+            engage traditional rulers, community
+            leaders, youth leaders and other
+            stakeholders across Ojo Constituency II.
         </p>
 
-        <p>
-            These engagements are focused on listening to the
-            people and promoting a vision of service,
-            development and accountability.
-        </p>
 
-        <a href="https://www.facebook.com/share/1BfTYeyYXr/"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="news-button">
+        <a
+            href="https://www.facebook.com/share/1BfTYeyYXr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="news-button">
 
-            VIEW FACEBOOK UPDATE →
+            VIEW UPDATE →
 
         </a>
 
     </article>
 
 
-    <!-- NEWS GRID -->
+    <!-- WARD ACTIVITIES -->
 
-    <div class="news-grid">
+    <article
+        class="news-card"
+        id="wards">
 
+        <div class="news-category">
+            🏘️ WARD ACTIVITIES
+        </div>
 
-        <!-- NEWS 1 -->
 
-        <article class="news-card">
+        <h3>
+            IMOLE 2027 Ward Mobilisation
+        </h3>
 
-            <div class="news-category">
-                🤝 COMMUNITY ENGAGEMENT
-            </div>
 
-            <h3>
-                Courtesy Visits to Community Leaders
-            </h3>
+        <div class="news-date">
+            August 2026
+        </div>
 
-            <div class="news-date">
-                August 2026
-            </div>
-
-            <p>
-                Hon. Nurudeen Abayomi Sadeeq and members of
-                the movement continue to engage traditional
-                rulers, community leaders, youth leaders and
-                other stakeholders across Ojo Constituency II.
-            </p>
-
-            <a href="https://www.facebook.com/share/1BfTYeyYXr/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="news-button">
-
-                Read More →
-
-            </a>
-
-        </article>
-
-
-        <!-- NEWS 2 -->
-
-        <article class="news-card">
-
-            <div class="news-category">
-                🏘️ WARD ACTIVITIES
-            </div>
-
-            <h3>
-                IMOLE 2027 Ward Mobilisation
-            </h3>
-
-            <div class="news-date">
-                August 2026
-            </div>
-
-            <p>
-                Ward-level engagements continue as the movement
-                strengthens grassroots participation and
-                community interaction across Ojo Constituency II.
-            </p>
-
-            <a href="https://www.facebook.com/share/1BfTYeyYXr/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="news-button">
-
-                View Update →
-
-            </a>
-
-        </article>
-
-
-        <!-- NEWS 3 -->
-
-        <article class="news-card">
-
-            <div class="news-category">
-                👥 YOUTH & WOMEN
-            </div>
-
-            <h3>
-                Youth and Women Participation
-            </h3>
-
-            <div class="news-date">
-                August 2026
-            </div>
-
-            <p>
-                The IMOLE 2027 movement is encouraging greater
-                participation from young people and women in
-                community development and political engagement.
-            </p>
-
-            <a href="join.html"
-               class="news-button">
-
-                Join the Movement →
-
-            </a>
-
-        </article>
-
-
-        <!-- NEWS 4 -->
-
-        <article class="news-card">
-
-            <div class="news-category">
-                🛠️ DEVELOPMENT
-            </div>
-
-            <h3>
-                Skills Development & Empowerment
-            </h3>
-
-            <div class="news-date">
-                August 2026
-            </div>
-
-            <p>
-                Information about proposed skills-development,
-                vocational training and empowerment initiatives
-                for young people and women.
-            </p>
-
-        </article>
-
-
-        <!-- NEWS 5 -->
-
-        <article class="news-card">
-
-            <div class="news-category">
-                📢 ANNOUNCEMENT
-            </div>
-
-            <h3>
-                IMOLE 2027 Campaign Updates
-            </h3>
-
-            <div class="news-date">
-                August 2026
-            </div>
-
-            <p>
-                Follow this page for official announcements,
-                campaign activities, meeting schedules and
-                important constituency updates.
-            </p>
-
-            <a href="events.html"
-               class="news-button">
-
-                View Events →
-
-            </a>
-
-        </article>
-
-
-        <!-- NEWS 6 -->
-
-        <article class="news-card">
-
-            <div class="news-category">
-                🔥 IMOLE MOVEMENT
-            </div>
-
-            <h3>
-                Join the IMOLE Movement
-            </h3>
-
-            <div class="news-date">
-                August 2026
-            </div>
-
-            <p>
-                Become part of the movement through IMOLE BABES,
-                IMOLE ARMY, volunteering, media, community
-                mobilisation and other support activities.
-            </p>
-
-            <a href="join.html"
-               class="news-button">
-
-                JOIN IMOLE 2027 →
-
-            </a>
-
-        </article>
-
-
-    </div>
-
-
-    <!-- FACEBOOK -->
-
-    <section class="facebook-box">
-
-        <h2>📱 Follow Campaign Updates</h2>
 
         <p>
-            Follow the official campaign social media updates
-            for photographs, videos, announcements and reports
-            from constituency activities.
+            Ward-level engagements remain an
+            important part of the IMOLE 2027
+            grassroots campaign as the movement
+            interacts with residents and supporters.
         </p>
 
-        <a href="https://www.facebook.com/share/1BfTYeyYXr/"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="facebook-button">
 
-            VIEW FACEBOOK PAGE →
+        <a
+            href="events.html"
+            class="news-button">
+
+            VIEW EVENTS →
 
         </a>
 
-    </section>
+    </article>
 
+
+    <!-- YOUTH AND WOMEN -->
+
+    <article
+        class="news-card"
+        id="youth">
+
+        <div class="news-category">
+            👥 YOUTH & WOMEN
+        </div>
+
+
+        <h3>
+            Youth and Women Participation
+        </h3>
+
+
+        <div class="news-date">
+            August 2026
+        </div>
+
+
+        <p>
+            IMOLE 2027 encourages meaningful
+            participation by young people and women
+            in community engagement, mobilisation
+            and public affairs.
+        </p>
+
+
+        <a
+            href="join.html#join-form"
+            class="news-button">
+
+            JOIN THE MOVEMENT →
+
+        </a>
+
+    </article>
+
+
+    <!-- DEVELOPMENT -->
+
+    <article
+        class="news-card"
+        id="development">
+
+        <div class="news-category">
+            🛠️ DEVELOPMENT
+        </div>
+
+
+        <h3>
+            Service, Development & Accountability
+        </h3>
+
+
+        <div class="news-date">
+            IMOLE 2027
+        </div>
+
+
+        <p>
+            The movement's message is centred on
+            service to the people, community
+            development and accountability.
+            Explore the manifesto for the candidate's
+            published priorities.
+        </p>
+
+
+        <a
+            href="manifesto.html"
+            class="news-button">
+
+            READ MANIFESTO →
+
+        </a>
+
+    </article>
+
+
+    <!-- ANNOUNCEMENTS -->
+
+    <article
+        class="news-card"
+        id="announcements">
+
+        <div class="news-category">
+            📢 ANNOUNCEMENT
+        </div>
+
+
+        <h3>
+            Official IMOLE 2027 Updates
+        </h3>
+
+
+        <div class="news-date">
+            2026 Campaign Season
+        </div>
+
+
+        <p>
+            Follow this page for official
+            announcements, campaign activities,
+            constituency engagements and other
+            verified IMOLE 2027 updates.
+        </p>
+
+
+        <a
+            href="events.html"
+            class="news-button">
+
+            VIEW EVENTS →
+
+        </a>
+
+    </article>
+
+
+    <!-- IMOLE MOVEMENT -->
+
+    <article
+        class="news-card"
+        id="movement">
+
+        <div class="news-category">
+            🔥 IMOLE MOVEMENT
+        </div>
+
+
+        <h3>
+            Join the IMOLE 2027 Movement
+        </h3>
+
+
+        <div class="news-date">
+            IMOLE 2027
+        </div>
+
+
+        <p>
+            Support the movement through
+            volunteering, IMOLE BABES, IMOLE ARMY,
+            media and communication, community
+            mobilisation and other lawful activities.
+        </p>
+
+
+        <a
+            href="join.html#join-form"
+            class="news-button">
+
+            🔥 JOIN IMOLE 2027 →
+
+        </a>
+
+    </article>
+
+
+</div>
+
+
+<!-- ==============================
+     GALLERY CTA
+============================== -->
+
+<section class="news-join">
+
+    <h2>
+        📸 SEE IMOLE 2027 IN ACTION
+    </h2>
+
+
+    <p>
+        Explore photographs from campaign
+        engagements, meetings, community visits
+        and other IMOLE 2027 activities.
+    </p>
+
+
+    <a
+        href="gallery.html"
+        class="news-join-button">
+
+        📸 VIEW CAMPAIGN GALLERY
+
+    </a>
 
 </section>
 
-</main>
 
+<!-- ==============================
+     SOCIAL MEDIA
+============================== -->
 
-<footer>
+<section class="social-box">
+
+    <h2>
+        📱 FOLLOW CAMPAIGN UPDATES
+    </h2>
+
 
     <p>
-        &copy; 2026 Hon. Nurudeen Abayomi Sadeeq
+        Follow campaign updates for photographs,
+        videos, announcements and reports from
+        IMOLE 2027 activities.
     </p>
+
+
+    <a
+        href="https://www.facebook.com/share/1BfTYeyYXr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-button">
+
+        VIEW FACEBOOK UPDATES →
+
+    </a>
+
+</section>
+
+
+<!-- ==============================
+     JOIN CTA
+============================== -->
+
+<section class="news-join">
+
+    <h2>
+        🔥 BE PART OF IMOLE 2027
+    </h2>
+
 
     <p>
-        Nigeria Democratic Congress (NDC) |
-        Ojo Constituency II
+        Stay connected with the movement and
+        participate in lawful campaign activities
+        across Ojo Constituency II.
     </p>
 
-</footer>
 
-</body>
+    <a
+        href="join.html"
+        class="news-join-button">
+
+        🌟 JOIN THE MOVEMENT
+
+    </a>
+
+</section>
+
+</section></main><!-- ==============================
+     FOOTER
+============================== --><footer><p>
+    &copy; 2026 Hon. Nurudeen Abayomi Sadeeq
+</p>
+
+
+<p>
+    Nigeria Democratic Congress (NDC)
+    | Ojo Constituency II
+</p>
+
+
+<p>
+    IMOLE 2027 —
+    Service • Development • Accountability
+</p>
+
+</footer></body>
 </html>
