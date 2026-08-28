@@ -395,42 +395,26 @@ function toggleMenu() {
         .classList.toggle("show");
 }
 
-
 function joinBabes(event) {
-
     event.preventDefault();
 
-    const name =
-        document.getElementById("name").value;
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const ward = document.getElementById("ward").value;
+    const message = document.getElementById("message").value.trim();
 
-    const phone =
-        document.getElementById("phone").value;
+    const whatsappMessage =
+        "💃🏾 IMOLE BABES REGISTRATION\n\n" +
+        "Full Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "Ward: " + ward + "\n" +
+        "Message: " + message;
 
-    const ward =
-        document.getElementById("ward").value;
-
-    const message =
-        document.getElementById("message").value;
-
-    const whatsappText =
-        "IMOLE BABES REGISTRATION%0A%0A" +
-        "Full Name: " +
-        encodeURIComponent(name) +
-        "%0A" +
-        "Phone: " +
-        encodeURIComponent(phone) +
-        "%0A" +
-        "Ward: " +
-        encodeURIComponent(ward) +
-        "%0A" +
-        "Message: " +
-        encodeURIComponent(message);
-
-    window.open(
+    const whatsappURL =
         "https://wa.me/2348033002235?text=" +
-        whatsappText,
-        "_blank"
-    );
+        encodeURIComponent(whatsappMessage);
+
+    window.open(whatsappURL, "_blank");
 }
 
 </script>
