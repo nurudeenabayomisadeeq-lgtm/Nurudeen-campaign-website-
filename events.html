@@ -1,330 +1,1064 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8">
 
-    <title>Events & Schedule | IMOLE 2027</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Upcoming events, meetings and public activities of Hon. Nurudeen Abayomi Sadeeq and the IMOLE 2027 movement in Ojo Constituency II.">
+<title>Events & Schedule | IMOLE 2027</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="manifest" href="manifest.json">
+<meta name="description"
+      content="Upcoming meetings, ward activities, stakeholder engagements, community visits and campaign events of Hon. Nurudeen Abayomi Sadeeq and the IMOLE 2027 movement in Ojo Constituency II.">
 
-    <meta name="theme-color" content="#ffffff">
+<meta name="theme-color"
+      content="#ffffff">
 
-    <style>
+<link rel="stylesheet"
+      href="assets/css/style.css">
+
+<link rel="manifest"
+      href="manifest.json">
+
+
+<style>
+
+    /* ==============================
+       EVENTS PAGE
+    ============================== */
+
+    .events-page {
+
+        max-width: 1150px;
+
+        margin: auto;
+
+        padding: 40px 15px 70px;
+
+    }
+
+
+    /* ==============================
+       PAGE HEADER
+    ============================== */
+
+    .events-header {
+
+        text-align: center;
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .events-header h1 {
+
+        font-size: 38px;
+
+        margin-bottom: 12px;
+
+    }
+
+
+    .events-header p {
+
+        max-width: 780px;
+
+        margin: auto;
+
+        line-height: 1.8;
+
+    }
+
+
+    /* ==============================
+       QUICK INFO
+    ============================== */
+
+    .event-intro {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(auto-fit, minmax(220px, 1fr));
+
+        gap: 18px;
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .intro-card {
+
+        background: #ffffff;
+
+        padding: 22px;
+
+        text-align: center;
+
+        border-radius: 16px;
+
+        box-shadow:
+            0 5px 18px rgba(0,0,0,0.10);
+
+    }
+
+
+    .intro-card .icon {
+
+        font-size: 32px;
+
+        margin-bottom: 8px;
+
+    }
+
+
+    .intro-card h3 {
+
+        margin: 8px 0;
+
+    }
+
+
+    .intro-card p {
+
+        line-height: 1.6;
+
+        margin: 0;
+
+    }
+
+
+    /* ==============================
+       SECTION TITLE
+    ============================== */
+
+    .section-title {
+
+        text-align: center;
+
+        margin: 45px 0 25px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 29px;
+
+        margin-bottom: 8px;
+
+    }
+
+
+    .section-title p {
+
+        line-height: 1.6;
+
+    }
+
+
+    /* ==============================
+       EVENT GRID
+    ============================== */
+
+    .event-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(auto-fit, minmax(290px, 1fr));
+
+        gap: 22px;
+
+    }
+
+
+    /* ==============================
+       EVENT CARD
+    ============================== */
+
+    .event-card {
+
+        background: #ffffff;
+
+        padding: 25px;
+
+        border-radius: 18px;
+
+        box-shadow:
+            0 5px 20px rgba(0,0,0,0.11);
+
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+
+    }
+
+
+    .event-card:hover {
+
+        transform: translateY(-5px);
+
+        box-shadow:
+            0 9px 25px rgba(0,0,0,0.16);
+
+    }
+
+
+    .event-status {
+
+        display: inline-block;
+
+        padding: 7px 12px;
+
+        border-radius: 20px;
+
+        font-size: 12px;
+
+        font-weight: bold;
+
+        margin-bottom: 12px;
+
+    }
+
+
+    .event-card h2 {
+
+        margin: 8px 0 18px;
+
+        font-size: 22px;
+
+        line-height: 1.35;
+
+    }
+
+
+    .event-detail {
+
+        margin: 11px 0;
+
+        line-height: 1.65;
+
+    }
+
+
+    .event-description {
+
+        margin-top: 16px;
+
+        line-height: 1.75;
+
+    }
+
+
+    /* ==============================
+       EVENT BUTTONS
+    ============================== */
+
+    .event-button {
+
+        display: inline-block;
+
+        margin-top: 15px;
+
+        padding: 11px 17px;
+
+        border-radius: 8px;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+    }
+
+
+    .whatsapp-button {
+
+        display: inline-block;
+
+        margin-top: 10px;
+
+        padding: 11px 17px;
+
+        border-radius: 8px;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+    }
+
+
+    /* ==============================
+       PAST EVENTS
+    ============================== */
+
+    .past-events {
+
+        opacity: 0.88;
+
+    }
+
+
+    .past-events .event-card {
+
+        box-shadow:
+            0 4px 14px rgba(0,0,0,0.08);
+
+    }
+
+
+    /* ==============================
+       EVENT INFORMATION
+    ============================== */
+
+    .notice-box {
+
+        margin-top: 45px;
+
+        padding: 28px 22px;
+
+        border-radius: 18px;
+
+        background: #f5f5f5;
+
+        text-align: center;
+
+        line-height: 1.8;
+
+    }
+
+
+    /* ==============================
+       JOIN CTA
+    ============================== */
+
+    .join-box {
+
+        margin-top: 40px;
+
+        padding: 35px 20px;
+
+        text-align: center;
+
+        border-radius: 18px;
+
+        background: #ffffff;
+
+        box-shadow:
+            0 5px 20px rgba(0,0,0,0.10);
+
+    }
+
+
+    .join-box p {
+
+        max-width: 700px;
+
+        margin: 10px auto 20px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .join-button {
+
+        display: inline-block;
+
+        padding: 14px 24px;
+
+        border-radius: 8px;
+
+        text-decoration: none;
+
+        font-weight: bold;
+
+    }
+
+
+    /* ==============================
+       MOBILE
+    ============================== */
+
+    @media (max-width: 600px) {
 
         .events-page {
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 15px 70px;
+
+            padding:
+                30px 12px 50px;
+
         }
 
-        .events-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
 
         .events-header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
+
+            font-size: 29px;
+
         }
 
-        .events-header p {
-            max-width: 750px;
-            margin: auto;
-            line-height: 1.7;
-        }
 
         .event-grid {
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(280px, 1fr));
-            gap: 22px;
+
+            grid-template-columns: 1fr;
+
         }
+
 
         .event-card {
-            background: #fff;
-            padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.11);
-            transition: 0.3s;
-        }
 
-        .event-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 9px 25px rgba(0,0,0,0.16);
-        }
-
-        .event-status {
-            display: inline-block;
-            padding: 6px 11px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
-
-        .event-card h2 {
-            margin: 8px 0 18px;
-        }
-
-        .event-detail {
-            margin: 10px 0;
-            line-height: 1.6;
-        }
-
-        .event-description {
-            margin-top: 15px;
-            line-height: 1.7;
-        }
-
-        .event-contact {
-            margin-top: 18px;
-            padding-top: 15px;
-            border-top: 1px solid #ddd;
-            font-size: 14px;
-        }
-
-        .notice-box {
-            margin-top: 40px;
-            padding: 25px;
-            border-radius: 16px;
-            background: #f5f5f5;
-            text-align: center;
-            line-height: 1.7;
-        }
-
-        @media (max-width: 600px) {
-
-            .events-header h1 {
-                font-size: 28px;
-            }
-
-            .event-card {
-                padding: 21px;
-            }
+            padding: 21px;
 
         }
 
-    </style>
-</head>
 
-<body>
+        .section-title h2 {
 
-<header class="site-header">
+            font-size: 25px;
 
-    <div class="container">
+        }
 
-        <h1>IMOLE 2027</h1>
+    }
+
+</style>
+
+</head><body><!-- ==============================
+     HEADER
+============================== --><header class="site-header"><div class="container">
+
+    <h1>
+        IMOLE 2027
+    </h1>
+
+    <p>
+        HON. NURUDEEN ABAYOMI SADEEQ
+    </p>
+
+    <p>
+        Lagos State House of Assembly —
+        Ojo Constituency II
+    </p>
+
+    <p>
+        Nigeria Democratic Congress (NDC)
+    </p>
+
+</div>
+
+</header><!-- ==============================
+     NAVIGATION
+============================== --><nav class="main-nav"><a href="index.html">
+    Home
+</a>
+
+<a href="about.html">
+    About
+</a>
+
+<a href="manifesto.html">
+    Manifesto
+</a>
+
+<a href="polling-units.html">
+    Polling Units
+</a>
+
+<a href="results.html">
+    Results
+</a>
+
+<a href="news.html">
+    News
+</a>
+
+<a href="events.html">
+    Events
+</a>
+
+<a href="gallery.html">
+    Gallery
+</a>
+
+<a href="contact.html">
+    Contact
+</a>
+
+<a href="join.html">
+    🔥 Join the Movement
+</a>
+
+</nav><main><section class="events-page"><!-- ==============================
+     HEADER
+============================== -->
+
+<div class="events-header">
+
+    <h1>
+        📅 EVENTS & SCHEDULE
+    </h1>
+
+
+    <p>
+        Stay informed about officially confirmed
+        meetings, ward activities, stakeholder
+        engagements, community visits and other
+        IMOLE 2027 activities across Ojo
+        Constituency II.
+    </p>
+
+</div>
+
+
+<!-- ==============================
+     QUICK INFORMATION
+============================== -->
+
+<section class="event-intro">
+
+
+    <div class="intro-card">
+
+        <div class="icon">
+            📅
+        </div>
+
+        <h3>
+            Upcoming Events
+        </h3>
 
         <p>
-            HON. NURUDEEN ABAYOMI SADEEQ
-        </p>
-
-        <p>
-            Lagos State House of Assembly — Ojo Constituency II
-        </p>
-
-        <p>
-            Nigeria Democratic Congress (NDC)
+            Check this page regularly for newly
+            confirmed activities.
         </p>
 
     </div>
 
-</header>
 
+    <div class="intro-card">
 
-<nav class="main-nav">
+        <div class="icon">
+            🏘️
+        </div>
 
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="manifesto.html">Manifesto</a>
-    <a href="polling-units.html">Polling Units</a>
-    <a href="results.html">Results</a>
-    <a href="news.html">News</a>
-    <a href="events.html">Events</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-    <a href="join.html">Join the Movement</a>
-
-</nav>
-
-
-<main>
-
-<section class="events-page">
-
-    <div class="events-header">
-
-        <h1>📅 EVENTS & SCHEDULE</h1>
+        <h3>
+            Ward Activities
+        </h3>
 
         <p>
-            Stay informed about upcoming meetings, stakeholder
-            engagements and constituency activities involving
-            the IMOLE 2027 movement.
+            Grassroots meetings and constituency
+            engagements.
         </p>
 
     </div>
 
 
-    <div class="event-grid">
+    <div class="intro-card">
 
+        <div class="icon">
+            🤝
+        </div>
 
-        <!-- EVENT 1 -->
+        <h3>
+            Stakeholder Engagement
+        </h3>
 
-        <article class="event-card">
-
-            <span class="event-status">
-                📅 MEETING
-            </span>
-
-            <h2>
-                NDC General Meeting
-            </h2>
-
-            <p class="event-detail">
-                <strong>📅 Date:</strong>
-                Saturday, 8 August 2026
-            </p>
-
-            <p class="event-detail">
-                <strong>⏰ Time:</strong>
-                5:00 PM
-            </p>
-
-            <p class="event-detail">
-                <strong>📍 Venue:</strong><br>
-                Lord Cee Hotel, Peace Estate,<br>
-                Opposite Iba Housing Estate Main Gate,<br>
-                Along LASU Road.
-            </p>
-
-        </article>
-
-
-        <!-- EVENT 2 -->
-
-        <article class="event-card">
-
-            <span class="event-status">
-                🤝 STAKEHOLDER MEETING
-            </span>
-
-            <h2>
-                Meeting with Balogun Ibode
-            </h2>
-
-            <p class="event-detail">
-                <strong>📅 Date:</strong>
-                Saturday, 8 August 2026
-            </p>
-
-            <p class="event-detail">
-                <strong>⏰ Time:</strong>
-                10:00 AM
-            </p>
-
-            <p class="event-description">
-                Coordinators, Women Leaders, Youth Leaders,
-                Media Aides, Secretary and Logistics Team
-                were listed for attendance.
-            </p>
-
-        </article>
-
-
-        <!-- EVENT 3 -->
-
-        <article class="event-card">
-
-            <span class="event-status">
-                ⛪ COMMUNITY ENGAGEMENT
-            </span>
-
-            <h2>
-                Meeting with CAN Executive
-            </h2>
-
-            <p class="event-detail">
-                <strong>📅 Date:</strong>
-                Saturday, 29 August 2026
-            </p>
-
-            <p class="event-detail">
-                <strong>⏰ Time:</strong>
-                11:00 AM
-            </p>
-
-            <p class="event-detail">
-                <strong>📍 Venue:</strong>
-                Messiah Parish
-            </p>
-
-        </article>
-
-
-        <!-- FUTURE EVENT TEMPLATE -->
-
-        <article class="event-card">
-
-            <span class="event-status">
-                📢 UPCOMING
-            </span>
-
-            <h2>
-                More IMOLE 2027 Activities
-            </h2>
-
-            <p class="event-description">
-                New meetings, ward engagements, stakeholder
-                visits and community activities will be
-                published here as they are officially confirmed.
-            </p>
-
-        </article>
-
+        <p>
+            Meetings with community leaders and
+            stakeholders.
+        </p>
 
     </div>
 
 
-    <div class="notice-box">
+    <div class="intro-card">
 
-        <strong>📢 EVENT INFORMATION</strong>
+        <div class="icon">
+            📱
+        </div>
+
+        <h3>
+            Stay Connected
+        </h3>
 
         <p>
-            Please confirm event details with the IMOLE 2027
-            campaign team before attending. Dates, times and
-            venues may change when official updates are issued.
-        </p>
-
-        <p>
-            For participation and volunteer information,
-            visit the <a href="join.html">Join the Movement</a>
-            page.
+            Contact the movement for participation
+            information.
         </p>
 
     </div>
 
 </section>
 
-</main>
 
+<!-- ==============================
+     UPCOMING EVENTS
+============================== -->
 
-<footer>
+<div class="section-title">
+
+    <h2>
+        🔥 UPCOMING EVENTS
+    </h2>
 
     <p>
-        &copy; 2026 Hon. Nurudeen Abayomi Sadeeq
+        Officially confirmed upcoming activities.
     </p>
+
+</div>
+
+
+<div class="event-grid">
+
+
+    <!-- EVENT: CAN EXECUTIVE -->
+
+    <article class="event-card">
+
+        <span class="event-status">
+            📅 UPCOMING
+        </span>
+
+
+        <h2>
+            Meeting with CAN Executive
+        </h2>
+
+
+        <p class="event-detail">
+
+            <strong>📅 Date:</strong><br>
+
+            Saturday, 29 August 2026
+
+        </p>
+
+
+        <p class="event-detail">
+
+            <strong>⏰ Time:</strong><br>
+
+            11:00 AM
+
+        </p>
+
+
+        <p class="event-detail">
+
+            <strong>📍 Venue:</strong><br>
+
+            Messiah Parish
+
+        </p>
+
+
+        <p class="event-description">
+
+            Community engagement with the CAN
+            Executive as part of ongoing constituency
+            outreach.
+
+        </p>
+
+
+        <a
+            href="https://wa.me/2348033002235?text=Hello%20IMOLE%202027%20team%2C%20I%20would%20like%20more%20information%20about%20the%20CAN%20Executive%20meeting."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="whatsapp-button">
+
+            📱 ASK ABOUT THIS EVENT
+
+        </a>
+
+    </article>
+
+
+    <!-- FUTURE EVENT -->
+
+    <article class="event-card">
+
+        <span class="event-status">
+            📢 TO BE ANNOUNCED
+        </span>
+
+
+        <h2>
+            Ward Meetings & Mobilisation
+        </h2>
+
+
+        <p class="event-description">
+
+            New ward meetings, grassroots
+            mobilisation activities and constituency
+            engagements will be published here after
+            official confirmation.
+
+        </p>
+
+
+        <a
+            href="join.html"
+            class="event-button">
+
+            🔥 JOIN THE MOVEMENT
+
+        </a>
+
+    </article>
+
+
+    <!-- FUTURE EVENT -->
+
+    <article class="event-card">
+
+        <span class="event-status">
+            📢 TO BE ANNOUNCED
+        </span>
+
+
+        <h2>
+            Community Stakeholder Engagements
+        </h2>
+
+
+        <p class="event-description">
+
+            Details of upcoming meetings with
+            traditional, community, youth and women
+            stakeholders will be published when
+            officially confirmed.
+
+        </p>
+
+
+        <a
+            href="contact.html"
+            class="event-button">
+
+            📱 CONTACT THE TEAM
+
+        </a>
+
+    </article>
+
+
+</div>
+
+
+<!-- ==============================
+     CAMPAIGN ACTIVITIES
+============================== -->
+
+<div class="section-title">
+
+    <h2>
+        🏘️ IMOLE 2027 ACTIVITIES
+    </h2>
 
     <p>
-        Nigeria Democratic Congress (NDC) |
-        Ojo Constituency II
+        The movement continues to engage residents,
+        supporters and stakeholders across Ojo
+        Constituency II.
     </p>
 
-</footer>
+</div>
 
-</body>
+
+<div class="event-grid">
+
+
+    <article class="event-card">
+
+        <span class="event-status">
+            🤝 COMMUNITY
+        </span>
+
+
+        <h2>
+            Community Engagement
+        </h2>
+
+
+        <p class="event-description">
+
+            Engagement with community leaders,
+            residents and other stakeholders remains
+            an important part of the IMOLE 2027
+            grassroots approach.
+
+        </p>
+
+
+        <a
+            href="news.html"
+            class="event-button">
+
+            📰 VIEW NEWS
+
+        </a>
+
+    </article>
+
+
+    <article class="event-card">
+
+        <span class="event-status">
+            👥 PEOPLE
+        </span>
+
+
+        <h2>
+            Youth & Women Engagement
+        </h2>
+
+
+        <p class="event-description">
+
+            The movement welcomes lawful and
+            meaningful participation from young
+            people and women interested in community
+            development and public affairs.
+
+        </p>
+
+
+        <a
+            href="join.html"
+            class="event-button">
+
+            🌟 GET INVOLVED
+
+        </a>
+
+    </article>
+
+
+    <article class="event-card">
+
+        <span class="event-status">
+            🔥 MOVEMENT
+        </span>
+
+
+        <h2>
+            IMOLE Army & Volunteers
+        </h2>
+
+
+        <p class="event-description">
+
+            Supporters can participate through
+            volunteering, media and communication,
+            community mobilisation and other lawful
+            campaign activities.
+
+        </p>
+
+
+        <a
+            href="join.html#join-form"
+            class="event-button">
+
+            🤝 VOLUNTEER
+
+        </a>
+
+    </article>
+
+
+</div>
+
+
+<!-- ==============================
+     PAST EVENT INFORMATION
+============================== -->
+
+<div class="section-title">
+
+    <h2>
+        📚 RECENT ACTIVITIES
+    </h2>
+
+    <p>
+        Previously scheduled campaign activities.
+    </p>
+
+</div>
+
+
+<div class="event-grid past-events">
+
+
+    <article class="event-card">
+
+        <span class="event-status">
+            📋 MEETING
+        </span>
+
+
+        <h2>
+            NDC General Meeting
+        </h2>
+
+
+        <p class="event-detail">
+
+            <strong>📅 Date:</strong><br>
+
+            Saturday, 8 August 2026
+
+        </p>
+
+
+        <p class="event-detail">
+
+            <strong>⏰ Time:</strong><br>
+
+            5:00 PM
+
+        </p>
+
+
+        <p class="event-detail">
+
+            <strong>📍 Venue:</strong><br>
+
+            Lord Cee Hotel, Peace Estate,<br>
+            Opposite Iba Housing Estate Main Gate,<br>
+            Along LASU Road.
+
+        </p>
+
+    </article>
+
+
+    <article class="event-card">
+
+        <span class="event-status">
+            🤝 STAKEHOLDER
+        </span>
+
+
+        <h2>
+            Meeting with Balogun Ibode
+        </h2>
+
+
+        <p class="event-detail">
+
+            <strong>📅 Date:</strong><br>
+
+            Saturday, 8 August 2026
+
+        </p>
+
+
+        <p class="event-detail">
+
+            <strong>⏰ Time:</strong><br>
+
+            10:00 AM
+
+        </p>
+
+
+        <p class="event-description">
+
+            Coordinators, Women Leaders, Youth Leaders,
+            Media Aides, Secretary and Logistics Team
+            were listed for attendance.
+
+        </p>
+
+    </article>
+
+
+</div>
+
+
+<!-- ==============================
+     NOTICE
+============================== -->
+
+<div class="notice-box">
+
+    <strong>
+        📢 IMPORTANT EVENT INFORMATION
+    </strong>
+
+
+    <p>
+        Event details may change. Please confirm
+        the date, time and venue with the IMOLE 2027
+        campaign team before attending.
+    </p>
+
+
+    <p>
+        Only officially confirmed events should be
+        treated as final.
+    </p>
+
+
+    <p>
+        For participation and volunteer information,
+        visit the
+        <a href="join.html">
+            Join the Movement
+        </a>
+        page.
+    </p>
+
+</div>
+
+
+<!-- ==============================
+     JOIN CTA
+============================== -->
+
+<section class="join-box">
+
+    <h2>
+        🔥 BE PART OF IMOLE 2027
+    </h2>
+
+
+    <p>
+        Join the movement and receive information
+        about upcoming meetings, activities and
+        opportunities to contribute your time and
+        skills.
+    </p>
+
+
+    <a
+        href="join.html"
+        class="join-button">
+
+        🌟 JOIN THE MOVEMENT
+
+    </a>
+
+</section>
+
+</section></main><!-- ==============================
+     FOOTER
+============================== --><footer><p>
+    &copy; 2026 Hon. Nurudeen Abayomi Sadeeq
+</p>
+
+
+<p>
+    Nigeria Democratic Congress (NDC)
+    | Ojo Constituency II
+</p>
+
+
+<p>
+    IMOLE 2027 —
+    Service • Development • Accountability
+</p>
+
+</footer></body>
 </html>
