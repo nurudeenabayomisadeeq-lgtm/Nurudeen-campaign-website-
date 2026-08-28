@@ -1,1064 +1,588 @@
-<!DOCTYPE html><html lang="en">
-<head><meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>Events & Schedule | IMOLE 2027</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-      content="Upcoming meetings, ward activities, stakeholder engagements, community visits and campaign events of Hon. Nurudeen Abayomi Sadeeq and the IMOLE 2027 movement in Ojo Constituency II.">
+    <title>Events & Schedule | IMOLE 2027</title>
 
-<meta name="theme-color"
-      content="#ffffff">
+    <meta name="description"
+          content="Upcoming meetings, ward activities, stakeholder engagements, community visits and campaign events of Hon. Nurudeen Abayomi Sadeeq and the IMOLE 2027 movement in Ojo Constituency II.">
 
-<link rel="stylesheet"
-      href="assets/css/style.css">
+    <meta name="keywords"
+          content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Ojo Constituency II, NDC, Lagos Assembly, campaign events, ward meetings">
 
-<link rel="manifest"
-      href="manifest.json">
+    <meta name="theme-color"
+          content="#ffffff">
+
+    <meta property="og:title"
+          content="Events & Schedule | IMOLE 2027">
+
+    <meta property="og:description"
+          content="Official IMOLE 2027 campaign events, meetings, ward activities and stakeholder engagements.">
+
+    <meta property="og:type"
+          content="website">
+
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+
+    <link rel="manifest"
+          href="manifest.json">
 
 
 <style>
 
-    /* ==============================
-       EVENTS PAGE
-    ============================== */
+/* =====================================================
+   EVENTS PAGE
+===================================================== */
 
-    .events-page {
+.events-page {
 
-        max-width: 1150px;
+    max-width: 1150px;
 
-        margin: auto;
+    margin: auto;
 
-        padding: 40px 15px 70px;
+    padding: 35px 15px 70px;
 
-    }
+}
 
 
-    /* ==============================
-       PAGE HEADER
-    ============================== */
+/* =====================================================
+   PAGE HEADER
+===================================================== */
 
-    .events-header {
+.events-header {
 
-        text-align: center;
+    text-align: center;
 
-        margin-bottom: 40px;
+    margin-bottom: 35px;
 
-    }
+}
 
+.events-header h1 {
 
-    .events-header h1 {
+    font-size: 38px;
 
-        font-size: 38px;
+    margin: 10px 0;
 
-        margin-bottom: 12px;
+}
 
-    }
+.events-header p {
 
+    max-width: 800px;
 
-    .events-header p {
+    margin: auto;
 
-        max-width: 780px;
+    line-height: 1.8;
 
-        margin: auto;
+}
 
-        line-height: 1.8;
 
-    }
+/* =====================================================
+   EVENT COUNTDOWN
+===================================================== */
 
+.next-event-box {
 
-    /* ==============================
-       QUICK INFO
-    ============================== */
+    background: #ffffff;
 
-    .event-intro {
+    padding: 28px 20px;
 
-        display: grid;
+    border-radius: 20px;
 
-        grid-template-columns:
-            repeat(auto-fit, minmax(220px, 1fr));
+    text-align: center;
 
-        gap: 18px;
+    margin-bottom: 35px;
 
-        margin-bottom: 40px;
+    box-shadow:
+        0 6px 22px rgba(0,0,0,0.12);
 
-    }
+}
 
+.next-event-box h2 {
 
-    .intro-card {
+    margin: 5px 0 10px;
 
-        background: #ffffff;
+}
 
-        padding: 22px;
+.next-event-title {
 
-        text-align: center;
+    font-size: 20px;
 
-        border-radius: 16px;
+    font-weight: bold;
 
-        box-shadow:
-            0 5px 18px rgba(0,0,0,0.10);
+    margin: 10px 0;
 
-    }
+}
 
+.event-countdown {
 
-    .intro-card .icon {
+    display: grid;
 
-        font-size: 32px;
+    grid-template-columns:
+        repeat(4, 1fr);
 
-        margin-bottom: 8px;
+    gap: 12px;
 
-    }
+    max-width: 600px;
 
+    margin: 22px auto 0;
 
-    .intro-card h3 {
+}
 
-        margin: 8px 0;
+.countdown-unit {
 
-    }
+    background: #f5f5f5;
 
+    border-radius: 12px;
 
-    .intro-card p {
+    padding: 15px 8px;
 
-        line-height: 1.6;
+}
 
-        margin: 0;
+.countdown-unit strong {
 
-    }
+    display: block;
 
+    font-size: 27px;
 
-    /* ==============================
-       SECTION TITLE
-    ============================== */
+    margin-bottom: 4px;
 
-    .section-title {
+}
 
-        text-align: center;
 
-        margin: 45px 0 25px;
+/* =====================================================
+   QUICK INFORMATION
+===================================================== */
 
-    }
+.event-intro {
 
+    display: grid;
 
-    .section-title h2 {
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
 
-        font-size: 29px;
+    gap: 18px;
 
-        margin-bottom: 8px;
+    margin-bottom: 45px;
 
-    }
+}
 
+.intro-card {
 
-    .section-title p {
+    background: #ffffff;
 
-        line-height: 1.6;
+    padding: 22px;
 
-    }
+    text-align: center;
 
+    border-radius: 16px;
 
-    /* ==============================
-       EVENT GRID
-    ============================== */
+    box-shadow:
+        0 5px 18px rgba(0,0,0,0.10);
 
-    .event-grid {
+}
 
-        display: grid;
+.intro-card .icon {
 
-        grid-template-columns:
-            repeat(auto-fit, minmax(290px, 1fr));
+    font-size: 32px;
 
-        gap: 22px;
+    margin-bottom: 8px;
 
-    }
+}
 
+.intro-card h3 {
 
-    /* ==============================
-       EVENT CARD
-    ============================== */
+    margin: 8px 0;
 
-    .event-card {
+}
 
-        background: #ffffff;
+.intro-card p {
 
-        padding: 25px;
+    line-height: 1.6;
 
-        border-radius: 18px;
+    margin: 0;
 
-        box-shadow:
-            0 5px 20px rgba(0,0,0,0.11);
+}
 
-        transition:
-            transform 0.25s ease,
-            box-shadow 0.25s ease;
 
-    }
+/* =====================================================
+   SEARCH AND FILTER
+===================================================== */
 
+.event-tools {
 
-    .event-card:hover {
+    background: #ffffff;
 
-        transform: translateY(-5px);
+    padding: 20px;
 
-        box-shadow:
-            0 9px 25px rgba(0,0,0,0.16);
+    border-radius: 16px;
 
-    }
+    margin-bottom: 35px;
 
+    box-shadow:
+        0 4px 16px rgba(0,0,0,0.10);
 
-    .event-status {
+}
 
-        display: inline-block;
+.event-search {
 
-        padding: 7px 12px;
+    width: 100%;
 
-        border-radius: 20px;
+    box-sizing: border-box;
 
-        font-size: 12px;
+    padding: 13px 15px;
 
-        font-weight: bold;
+    border: 1px solid #ddd;
 
-        margin-bottom: 12px;
+    border-radius: 9px;
 
-    }
+    font-size: 16px;
 
+    outline: none;
 
-    .event-card h2 {
+}
 
-        margin: 8px 0 18px;
+.event-search:focus {
 
-        font-size: 22px;
+    border-color: #777;
 
-        line-height: 1.35;
+}
 
-    }
+.filter-buttons {
 
+    display: flex;
 
-    .event-detail {
+    flex-wrap: wrap;
 
-        margin: 11px 0;
+    justify-content: center;
 
-        line-height: 1.65;
+    gap: 10px;
 
-    }
+    margin-top: 15px;
 
+}
 
-    .event-description {
+.filter-button {
 
-        margin-top: 16px;
+    border: none;
 
-        line-height: 1.75;
+    padding: 10px 16px;
 
-    }
+    border-radius: 20px;
 
+    cursor: pointer;
 
-    /* ==============================
-       EVENT BUTTONS
-    ============================== */
+    font-weight: bold;
 
-    .event-button {
+    background: #eeeeee;
 
-        display: inline-block;
+}
 
-        margin-top: 15px;
+.filter-button.active {
 
-        padding: 11px 17px;
+    background: #222222;
 
-        border-radius: 8px;
+    color: #ffffff;
 
-        text-decoration: none;
+}
 
-        font-weight: bold;
 
-    }
+/* =====================================================
+   SECTION TITLE
+===================================================== */
 
+.section-title {
 
-    .whatsapp-button {
+    text-align: center;
 
-        display: inline-block;
+    margin: 45px 0 25px;
 
-        margin-top: 10px;
+}
 
-        padding: 11px 17px;
+.section-title h2 {
 
-        border-radius: 8px;
+    font-size: 29px;
 
-        text-decoration: none;
+    margin-bottom: 8px;
 
-        font-weight: bold;
+}
 
-    }
+.section-title p {
 
+    line-height: 1.6;
 
-    /* ==============================
-       PAST EVENTS
-    ============================== */
+}
 
-    .past-events {
 
-        opacity: 0.88;
+/* =====================================================
+   EVENT GRID
+===================================================== */
 
-    }
+.event-grid {
 
+    display: grid;
 
-    .past-events .event-card {
+    grid-template-columns:
+        repeat(auto-fit, minmax(290px, 1fr));
 
-        box-shadow:
-            0 4px 14px rgba(0,0,0,0.08);
+    gap: 22px;
 
-    }
+}
 
 
-    /* ==============================
-       EVENT INFORMATION
-    ============================== */
+/* =====================================================
+   EVENT CARD
+===================================================== */
 
-    .notice-box {
+.event-card {
 
-        margin-top: 45px;
+    background: #ffffff;
 
-        padding: 28px 22px;
+    padding: 25px;
 
-        border-radius: 18px;
+    border-radius: 18px;
 
-        background: #f5f5f5;
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.11);
 
-        text-align: center;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 
-        line-height: 1.8;
+}
 
-    }
+.event-card:hover {
 
+    transform: translateY(-5px);
 
-    /* ==============================
-       JOIN CTA
-    ============================== */
+    box-shadow:
+        0 9px 25px rgba(0,0,0,0.16);
 
-    .join-box {
+}
 
-        margin-top: 40px;
+.event-card.hidden {
 
-        padding: 35px 20px;
+    display: none;
 
-        text-align: center;
+}
 
-        border-radius: 18px;
+.event-status {
 
-        background: #ffffff;
+    display: inline-block;
 
-        box-shadow:
-            0 5px 20px rgba(0,0,0,0.10);
+    padding: 7px 12px;
 
-    }
+    border-radius: 20px;
 
+    font-size: 12px;
 
-    .join-box p {
+    font-weight: bold;
 
-        max-width: 700px;
+    margin-bottom: 12px;
 
-        margin: 10px auto 20px;
+    background: #eeeeee;
 
-        line-height: 1.7;
+}
 
-    }
+.event-card h2 {
 
+    margin: 8px 0 18px;
 
-    .join-button {
+    font-size: 22px;
 
-        display: inline-block;
+    line-height: 1.35;
 
-        padding: 14px 24px;
+}
 
-        border-radius: 8px;
+.event-detail {
 
-        text-decoration: none;
+    margin: 11px 0;
 
-        font-weight: bold;
+    line-height: 1.65;
 
-    }
+}
 
+.event-description {
 
-    /* ==============================
-       MOBILE
-    ============================== */
+    margin-top: 16px;
 
-    @media (max-width: 600px) {
+    line-height: 1.75;
 
-        .events-page {
+}
 
-            padding:
-                30px 12px 50px;
 
-        }
+/* =====================================================
+   EVENT ACTIONS
+===================================================== */
 
+.event-actions {
 
-        .events-header h1 {
+    display: flex;
 
-            font-size: 29px;
+    flex-wrap: wrap;
 
-        }
+    gap: 10px;
 
+    margin-top: 18px;
 
-        .event-grid {
+}
 
-            grid-template-columns: 1fr;
+.event-button,
+.whatsapp-button,
+.calendar-button {
 
-        }
+    display: inline-block;
 
+    padding: 11px 16px;
 
-        .event-card {
+    border-radius: 8px;
 
-            padding: 21px;
+    text-decoration: none;
 
-        }
+    font-weight: bold;
 
+    border: none;
 
-        .section-title h2 {
+    cursor: pointer;
 
-            font-size: 25px;
+    font-size: 14px;
 
-        }
+}
 
-    }
+.event-button {
 
-</style>
+    background: #eeeeee;
 
-</head><body><!-- ==============================
-     HEADER
-============================== --><header class="site-header"><div class="container">
+    color: inherit;
 
-    <h1>
-        IMOLE 2027
-    </h1>
+}
 
-    <p>
-        HON. NURUDEEN ABAYOMI SADEEQ
-    </p>
+.whatsapp-button {
 
-    <p>
-        Lagos State House of Assembly —
-        Ojo Constituency II
-    </p>
+    background: #eeeeee;
 
-    <p>
-        Nigeria Democratic Congress (NDC)
-    </p>
+    color: inherit;
 
-</div>
+}
 
-</header><!-- ==============================
-     NAVIGATION
-============================== --><nav class="main-nav"><a href="index.html">
-    Home
-</a>
+.calendar-button {
 
-<a href="about.html">
-    About
-</a>
+    background: #eeeeee;
 
-<a href="manifesto.html">
-    Manifesto
-</a>
+    color: inherit;
 
-<a href="polling-units.html">
-    Polling Units
-</a>
+}
 
-<a href="results.html">
-    Results
-</a>
 
-<a href="news.html">
-    News
-</a>
+/* =====================================================
+   NO RESULTS
+===================================================== */
 
-<a href="events.html">
-    Events
-</a>
+.no-results {
 
-<a href="gallery.html">
-    Gallery
-</a>
+    display: none;
 
-<a href="contact.html">
-    Contact
-</a>
+    text-align: center;
 
-<a href="join.html">
-    🔥 Join the Movement
-</a>
+    padding: 30px 15px;
 
-</nav><main><section class="events-page"><!-- ==============================
-     HEADER
-============================== -->
+    background: #ffffff;
 
-<div class="events-header">
+    border-radius: 15px;
 
-    <h1>
-        📅 EVENTS & SCHEDULE
-    </h1>
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.08);
 
+}
 
-    <p>
-        Stay informed about officially confirmed
-        meetings, ward activities, stakeholder
-        engagements, community visits and other
-        IMOLE 2027 activities across Ojo
-        Constituency II.
-    </p>
+.no-results.show {
 
-</div>
+    display: block;
 
+}
 
-<!-- ==============================
-     QUICK INFORMATION
-============================== -->
 
-<section class="event-intro">
+/* =====================================================
+   PAST EVENTS
+===================================================== */
 
+.past-events {
 
-    <div class="intro-card">
+    opacity: 0.90;
 
-        <div class="icon">
-            📅
-        </div>
+}
 
-        <h3>
-            Upcoming Events
-        </h3>
 
-        <p>
-            Check this page regularly for newly
-            confirmed activities.
-        </p>
+/* =====================================================
+   NOTICE
+===================================================== */
 
-    </div>
+.notice-box {
 
+    margin-top: 45px;
 
-    <div class="intro-card">
+    padding: 28px 22px;
 
-        <div class="icon">
-            🏘️
-        </div>
+    border-radius: 18px;
 
-        <h3>
-            Ward Activities
-        </h3>
+    background: #f5f5f5;
 
-        <p>
-            Grassroots meetings and constituency
-            engagements.
-        </p>
+    text-align: center;
 
-    </div>
+    line-height: 1.8;
 
+}
 
-    <div class="intro-card">
 
-        <div class="icon">
-            🤝
-        </div>
+/* =====================================================
+   JOIN CTA
+===================================================== */
 
-        <h3>
-            Stakeholder Engagement
-        </h3>
+.join-box {
 
-        <p>
-            Meetings with community leaders and
-            stakeholders.
-        </p>
+    margin-top: 40px;
 
-    </div>
+    padding: 35px 20px;
 
+    text-align: center;
 
-    <div class="intro-card">
+    border-radius: 18px;
 
-        <div class="icon">
-            📱
-        </div>
+    background: #ffffff;
 
-        <h3>
-            Stay Connected
-        </h3>
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.10);
 
-        <p>
-            Contact the movement for participation
-            information.
-        </p>
+}
 
-    </div>
+.join-box p {
 
-</section>
+    max-width: 700px;
 
+    margin: 10px auto 20px;
 
-<!-- ==============================
-     UPCOMING EVENTS
-============================== -->
+    line-height: 1.7;
 
-<div class="section-title">
+}
 
-    <h2>
-        🔥 UPCOMING EVENTS
-    </h2>
+.join-button {
 
-    <p>
-        Officially confirmed upcoming activities.
-    </p>
+    display: inline-block;
 
-</div>
+    padding: 14px 24px;
 
+    border-radius: 8px;
 
-<div class="event-grid">
+    text-decoration: none;
 
+    font-weight: bold;
 
-    <!-- EVENT: CAN EXECUTIVE -->
+}
 
-    <article class="event-card">
 
-        <span class="event-status">
-            📅 UPCOMING
-        </span>
-
-
-        <h2>
-            Meeting with CAN Executive
-        </h2>
-
-
-        <p class="event-detail">
-
-            <strong>📅 Date:</strong><br>
-
-            Saturday, 29 August 2026
-
-        </p>
-
-
-        <p class="event-detail">
-
-            <strong>⏰ Time:</strong><br>
-
-            11:00 AM
-
-        </p>
-
-
-        <p class="event-detail">
-
-            <strong>📍 Venue:</strong><br>
-
-            Messiah Parish
-
-        </p>
-
-
-        <p class="event-description">
-
-            Community engagement with the CAN
-            Executive as part of ongoing constituency
-            outreach.
-
-        </p>
-
-
-        <a
-            href="https://wa.me/2348033002235?text=Hello%20IMOLE%202027%20team%2C%20I%20would%20like%20more%20information%20about%20the%20CAN%20Executive%20meeting."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="whatsapp-button">
-
-            📱 ASK ABOUT THIS EVENT
-
-        </a>
-
-    </article>
-
-
-    <!-- FUTURE EVENT -->
-
-    <article class="event-card">
-
-        <span class="event-status">
-            📢 TO BE ANNOUNCED
-        </span>
-
-
-        <h2>
-            Ward Meetings & Mobilisation
-        </h2>
-
-
-        <p class="event-description">
-
-            New ward meetings, grassroots
-            mobilisation activities and constituency
-            engagements will be published here after
-            official confirmation.
-
-        </p>
-
-
-        <a
-            href="join.html"
-            class="event-button">
-
-            🔥 JOIN THE MOVEMENT
-
-        </a>
-
-    </article>
-
-
-    <!-- FUTURE EVENT -->
-
-    <article class="event-card">
-
-        <span class="event-status">
-            📢 TO BE ANNOUNCED
-        </span>
-
-
-        <h2>
-            Community Stakeholder Engagements
-        </h2>
-
-
-        <p class="event-description">
-
-            Details of upcoming meetings with
-            traditional, community, youth and women
-            stakeholders will be published when
-            officially confirmed.
-
-        </p>
-
-
-        <a
-            href="contact.html"
-            class="event-button">
-
-            📱 CONTACT THE TEAM
-
-        </a>
-
-    </article>
-
-
-</div>
-
-
-<!-- ==============================
-     CAMPAIGN ACTIVITIES
-============================== -->
-
-<div class="section-title">
-
-    <h2>
-        🏘️ IMOLE 2027 ACTIVITIES
-    </h2>
-
-    <p>
-        The movement continues to engage residents,
-        supporters and stakeholders across Ojo
-        Constituency II.
-    </p>
-
-</div>
-
-
-<div class="event-grid">
-
-
-    <article class="event-card">
-
-        <span class="event-status">
-            🤝 COMMUNITY
-        </span>
-
-
-        <h2>
-            Community Engagement
-        </h2>
-
-
-        <p class="event-description">
-
-            Engagement with community leaders,
-            residents and other stakeholders remains
-            an important part of the IMOLE 2027
-            grassroots approach.
-
-        </p>
-
-
-        <a
-            href="news.html"
-            class="event-button">
-
-            📰 VIEW NEWS
-
-        </a>
-
-    </article>
-
-
-    <article class="event-card">
-
-        <span class="event-status">
-            👥 PEOPLE
-        </span>
-
-
-        <h2>
-            Youth & Women Engagement
-        </h2>
-
-
-        <p class="event-description">
-
-            The movement welcomes lawful and
-            meaningful participation from young
-            people and women interested in community
-            development and public affairs.
-
-        </p>
-
-
-        <a
-            href="join.html"
-            class="event-button">
-
-            🌟 GET INVOLVED
-
-        </a>
-
-    </article>
-
-
-    <article class="event-card">
-
-        <span class="event-status">
-            🔥 MOVEMENT
-        </span>
-
-
-        <h2>
-            IMOLE Army & Volunteers
-        </h2>
-
-
-        <p class="event-description">
-
-            Supporters can participate through
-            volunteering, media and communication,
-            community mobilisation and other lawful
-            campaign activities.
-
-        </p>
-
-
-        <a
-            href="join.html#join-form"
-            class="event-button">
-
-            🤝 VOLUNTEER
-
-        </a>
-
-    </article>
-
-
-</div>
-
-
-<!-- ==============================
-     PAST EVENT INFORMATION
-============================== -->
-
-<div class="section-title">
-
-    <h2>
-        📚 RECENT ACTIVITIES
-    </h2>
-
-    <p>
-        Previously scheduled campaign activities.
-    </p>
-
-</div>
-
-
-<div class="event-grid past-events">
-
-
-    <article class="event-card">
-
-        <span class="event-status">
-            📋 MEETING
-        </span>
-
-
-        <h2>
-            NDC General Meeting
-        </h2>
-
-
-        <p class="event-detail">
-
-            <strong>📅 Date:</strong><br>
-
-            Saturday, 8 August 2026
-
-        </p>
-
-
-        <p class="event-detail">
-
-            <strong>⏰ Time:</strong><br>
-
-            5:00 PM
-
-        </p>
-
-
-        <p class="event-detail">
-
-            <strong>📍 Venue:</strong><br>
-
-            Lord Cee Hotel, Peace Estate,<br>
-            Opposite Iba Housing Estate Main Gate,<br>
-            Along LASU Road.
-
-        </p>
-
-    </article>
-
-
-    <article class="event-card">
-
-        <span class="event-status">
-            🤝 STAKEHOLDER
-        </span>
-
-
-        <h2>
-            Meeting with Balogun Ibode
-        </h2>
-
-
-        <p class="event-detail">
-
-            <strong>📅 Date:</strong><br>
-
-            Saturday, 8 August 2026
-
-        </p>
-
-
-        <p class="event-detail">
-
-            <strong>⏰ Time:</strong><br>
-
-            10:00 AM
-
-        </p>
-
-
-        <p class="event-description">
-
-            Coordinators, Women Leaders, Youth Leaders,
-            Media Aides, Secretary and Logistics Team
-            were listed for attendance.
-
-        </p>
-
-    </article>
-
-
-</div>
-
-
-<!-- ==============================
-     NOTICE
-============================== -->
-
-<div class="notice-box">
-
-    <strong>
-        📢 IMPORTANT EVENT INFORMATION
-    </strong>
-
-
-    <p>
-        Event details may change. Please confirm
-        the date, time and venue with the IMOLE 2027
-        campaign team before attending.
-    </p>
-
-
-    <p>
-        Only officially confirmed events should be
-        treated as final.
-    </p>
-
-
-    <p>
-        For participation and volunteer information,
-        visit the
-        <a href="join.html">
-            Join the Movement
-        </a>
-        page.
-    </p>
-
-</div>
-
-
-<!-- ==============================
-     JOIN CTA
-============================== -->
-
-<section class="join-box">
-
-    <h2>
-        🔥 BE PART OF IMOLE 2027
-    </h2>
-
-
-    <p>
-        Join the movement and receive information
-        about upcoming meetings, activities and
-        opportunities to contribute your time and
-        skills.
-    </p>
-
-
-    <a
-        href="join.html"
-        class="join-button">
-
-        🌟 JOIN THE MOVEMENT
-
-    </a>
-
-</section>
-
-</section></main><!-- ==============================
-     FOOTER
-============================== --><footer><p>
-    &copy; 2026 Hon. Nurudeen Abayomi Sadeeq
-</p>
-
-
-<p>
-    Nigeria Democratic Congress (NDC)
-    | Ojo Constituency II
-</p>
-
-
-<p>
-    IMOLE 2027 —
-    Service • Development • Accountability
-</p>
-
-</footer></body>
-</html>
+/* =================================================
