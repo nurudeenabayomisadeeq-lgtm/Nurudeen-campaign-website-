@@ -9,16 +9,36 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Join the Movement | IMOLE 2027</title>
+    <title>Join IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq</title>
 
     <meta
         name="description"
-        content="Join the IMOLE 2027 movement of Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II."
+        content="Join IMOLE 2027 and support Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II, under the Nigeria Democratic Congress (NDC)."
+    >
+
+    <meta
+        name="keywords"
+        content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Ojo Constituency II, NDC, IMOLE BABES, IMOLE ARMY, volunteer, campaign"
+    >
+
+    <meta
+        name="author"
+        content="Hon. Nurudeen Abayomi Sadeeq Campaign"
     >
 
     <meta
         name="theme-color"
         content="#06449b"
+    >
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="default"
     >
 
     <link
@@ -33,9 +53,9 @@
 
     <style>
 
-        /* =================================
+        /* =========================================
            JOIN PAGE
-        ================================= */
+        ========================================= */
 
         .join-page {
             max-width: 1150px;
@@ -44,80 +64,176 @@
         }
 
 
-        /* =================================
+        /* =========================================
            PAGE HEADER
-        ================================= */
+        ========================================= */
 
         .join-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         .join-header h1 {
-            font-size: 38px;
+            font-size: 40px;
+            color: #06449b;
             margin-bottom: 12px;
+            line-height: 1.2;
         }
 
         .join-header p {
-            max-width: 780px;
+            max-width: 800px;
             margin: auto;
             line-height: 1.8;
+            font-size: 16px;
         }
 
 
-        /* =================================
-           HERO JOIN BOX
-        ================================= */
+        /* =========================================
+           HERO
+        ========================================= */
 
         .join-hero {
-            background: #06449b;
-            color: white;
-            padding: 45px 25px;
+            background:
+                linear-gradient(
+                    rgba(6,68,155,0.96),
+                    rgba(6,68,155,0.96)
+                );
+
+            color: #ffffff;
+
+            padding: 50px 25px;
+
             border-radius: 20px;
+
             text-align: center;
+
             margin-bottom: 40px;
-            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+
+            box-shadow:
+                0 8px 28px rgba(0,0,0,0.16);
+        }
+
+        .join-hero .hero-icon {
+            font-size: 55px;
+            margin-bottom: 10px;
         }
 
         .join-hero h2 {
-            font-size: 32px;
-            margin-bottom: 12px;
+            font-size: 34px;
+            margin-bottom: 14px;
+            line-height: 1.25;
         }
 
         .join-hero p {
-            max-width: 750px;
+            max-width: 780px;
             margin: auto;
             line-height: 1.8;
+            font-size: 16px;
         }
 
 
-        /* =================================
-           PARTICIPATION CARDS
-        ================================= */
+        /* =========================================
+           QUICK STATS
+        ========================================= */
+
+        .join-stats {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(190px, 1fr));
+
+            gap: 18px;
+
+            margin-bottom: 45px;
+        }
+
+        .join-stat {
+            background: #ffffff;
+
+            padding: 23px 18px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            box-shadow:
+                0 4px 16px rgba(0,0,0,0.09);
+        }
+
+        .join-stat strong {
+            display: block;
+
+            color: #06449b;
+
+            font-size: 27px;
+
+            margin-bottom: 5px;
+        }
+
+        .join-stat span {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           PARTICIPATION OPTIONS
+        ========================================= */
+
+        .section-heading {
+            text-align: center;
+            margin: 45px 0 25px;
+        }
+
+        .section-heading h2 {
+            color: #06449b;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .section-heading p {
+            max-width: 720px;
+            margin: auto;
+            line-height: 1.7;
+        }
 
         .participation-grid {
             display: grid;
+
             grid-template-columns:
                 repeat(auto-fit, minmax(220px, 1fr));
+
             gap: 20px;
+
             margin-bottom: 45px;
         }
 
         .participation-card {
-            background: white;
-            padding: 27px 20px;
-            border-radius: 16px;
+            background: #ffffff;
+
+            padding: 28px 20px;
+
+            border-radius: 17px;
+
             text-align: center;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
-            transition: transform 0.25s ease;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.10);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
         .participation-card:hover {
             transform: translateY(-5px);
+
+            box-shadow:
+                0 9px 25px rgba(0,0,0,0.15);
         }
 
         .participation-icon {
-            font-size: 42px;
+            font-size: 43px;
             margin-bottom: 10px;
         }
 
@@ -127,43 +243,65 @@
         }
 
         .participation-card p {
-            line-height: 1.6;
+            line-height: 1.65;
+            margin: 0;
         }
 
 
-        /* =================================
+        /* =========================================
            REGISTRATION SECTION
-        ================================= */
+        ========================================= */
 
         .registration-section {
-            background: white;
-            padding: 35px 25px;
-            border-radius: 18px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+            background: #ffffff;
+
+            padding: 38px 25px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 6px 22px rgba(0,0,0,0.10);
+
             margin-bottom: 40px;
         }
 
         .registration-section h2 {
             text-align: center;
+
             color: #06449b;
+
+            font-size: 30px;
+
             margin-bottom: 10px;
         }
 
         .registration-intro {
             text-align: center;
-            max-width: 720px;
+
+            max-width: 760px;
+
             margin: 0 auto 30px;
+
             line-height: 1.7;
         }
 
 
-        /* =================================
+        /* =========================================
            FORM
-        ================================= */
+        ========================================= */
 
         .join-form {
             max-width: 850px;
             margin: auto;
+        }
+
+        .form-row {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 18px;
         }
 
         .form-group {
@@ -172,24 +310,41 @@
 
         .form-group label {
             display: block;
+
             font-weight: bold;
+
             margin-bottom: 7px;
+        }
+
+        .required-mark {
+            color: #c62828;
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
+
             padding: 13px 14px;
-            border: 1px solid #d5d5d5;
-            border-radius: 8px;
+
+            border:
+                1px solid #d4d8dd;
+
+            border-radius: 9px;
+
             font-family: inherit;
+
             font-size: 15px;
-            background: #fff;
+
+            background: #ffffff;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
         .form-group textarea {
-            min-height: 120px;
+            min-height: 125px;
             resize: vertical;
         }
 
@@ -197,178 +352,367 @@
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
+
             border-color: #06449b;
-            box-shadow: 0 0 0 2px rgba(6,68,155,0.10);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(6,68,155,0.10);
+        }
+
+        .field-help {
+            display: block;
+
+            margin-top: 5px;
+
+            font-size: 12px;
+
+            color: #666;
         }
 
 
-        /* =================================
-           TWO COLUMN FORM
-        ================================= */
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 18px;
-        }
-
-
-        /* =================================
-           CHECKBOXES
-        ================================= */
+        /* =========================================
+           INTEREST CHECKBOXES
+        ========================================= */
 
         .checkbox-group {
             display: grid;
+
             grid-template-columns:
-                repeat(auto-fit, minmax(220px, 1fr));
+                repeat(auto-fit, minmax(230px, 1fr));
+
             gap: 10px;
+
             margin-top: 8px;
         }
 
         .checkbox-item {
             display: flex;
+
             align-items: center;
-            gap: 8px;
-            padding: 10px;
+
+            gap: 9px;
+
+            padding: 12px;
+
             background: #f5f6f8;
-            border-radius: 8px;
+
+            border:
+                1px solid transparent;
+
+            border-radius: 9px;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .checkbox-item:hover {
+            border-color: #06449b;
         }
 
         .checkbox-item input {
             width: auto;
+            accent-color: #06449b;
         }
 
 
-        /* =================================
+        /* =========================================
            CONSENT
-        ================================= */
+        ========================================= */
 
         .consent-box {
             background: #f5f6f8;
-            padding: 15px;
+
+            padding: 16px;
+
             border-radius: 10px;
-            margin: 20px 0;
+
+            margin: 22px 0;
+
             line-height: 1.6;
+
             font-size: 14px;
         }
 
         .consent-box label {
             display: flex;
+
             gap: 10px;
+
             align-items: flex-start;
+
+            cursor: pointer;
         }
 
         .consent-box input {
             margin-top: 4px;
+
+            min-width: 16px;
         }
 
 
-        /* =================================
+        /* =========================================
            SUBMIT BUTTON
-        ================================= */
+        ========================================= */
 
         .submit-button {
             display: block;
+
             width: 100%;
+
             border: none;
+
             background: #06449b;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 9px;
+
+            color: #ffffff;
+
+            padding: 16px 20px;
+
+            border-radius: 10px;
+
             font-size: 17px;
+
             font-weight: bold;
+
             cursor: pointer;
+
+            transition:
+                transform 0.2s ease,
+                opacity 0.2s ease;
         }
 
         .submit-button:hover {
-            opacity: 0.9;
+            opacity: 0.92;
+
+            transform: translateY(-1px);
+        }
+
+        .submit-button:active {
+            transform: translateY(0);
         }
 
 
-        /* =================================
-           WHATSAPP BOX
-        ================================= */
+        /* =========================================
+           FORM STATUS
+        ========================================= */
+
+        .form-status {
+            display: none;
+
+            margin-top: 18px;
+
+            padding: 15px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            line-height: 1.6;
+
+            font-weight: bold;
+        }
+
+        .form-status.show {
+            display: block;
+        }
+
+        .form-status.success {
+            background: #e8f5e9;
+            color: #1b5e20;
+        }
+
+        .form-status.error {
+            background: #ffebee;
+            color: #b71c1c;
+        }
+
+
+        /* =========================================
+           WHATSAPP
+        ========================================= */
 
         .whatsapp-box {
             margin-top: 35px;
+
             background: #f5f6f8;
-            padding: 25px 20px;
-            border-radius: 15px;
+
+            padding: 27px 20px;
+
+            border-radius: 16px;
+
             text-align: center;
         }
 
         .whatsapp-box h3 {
-            margin-bottom: 10px;
+            margin-bottom: 9px;
         }
 
         .whatsapp-box p {
-            max-width: 650px;
-            margin: 0 auto 18px;
+            max-width: 680px;
+
+            margin:
+                0 auto 18px;
+
             line-height: 1.7;
         }
 
         .whatsapp-button {
             display: inline-block;
+
             background: #25D366;
-            color: white;
+
+            color: #ffffff;
+
             padding: 13px 22px;
-            border-radius: 8px;
+
+            border-radius: 9px;
+
             text-decoration: none;
+
             font-weight: bold;
+
+            transition:
+                opacity 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .whatsapp-button:hover {
+            opacity: 0.9;
+
+            transform: translateY(-1px);
         }
 
 
-        /* =================================
-           DONATIONS
-        ================================= */
+        /* =========================================
+           DONATION
+        ========================================= */
 
         .donation-section {
-            background: white;
-            padding: 35px 25px;
-            border-radius: 18px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+            background: #ffffff;
+
+            padding: 38px 25px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.10);
+
             margin-bottom: 40px;
+
             text-align: center;
         }
 
         .donation-section h2 {
             color: #06449b;
+
             margin-bottom: 12px;
+
+            font-size: 29px;
         }
 
         .donation-section p {
-            max-width: 750px;
-            margin: 0 auto 15px;
+            max-width: 780px;
+
+            margin:
+                0 auto 15px;
+
             line-height: 1.7;
         }
 
         .donation-note {
             background: #fff7e6;
-            padding: 15px;
+
+            padding: 16px;
+
             border-radius: 10px;
+
             margin-top: 20px;
+
             line-height: 1.6;
         }
 
 
-        /* =================================
+        /* =========================================
            INFORMATION BOX
-        ================================= */
+        ========================================= */
 
         .information-box {
             background: #f5f6f8;
-            padding: 28px 22px;
+
+            padding: 30px 22px;
+
             border-radius: 18px;
+
             text-align: center;
+
             line-height: 1.8;
+
+            margin-bottom: 35px;
+        }
+
+        .information-box h2 {
+            color: #06449b;
+
+            margin-bottom: 10px;
         }
 
 
-        /* =================================
-           MOBILE
-        ================================= */
+        /* =========================================
+           FINAL CTA
+        ========================================= */
 
-        @media (max-width: 600px) {
+        .final-cta {
+            background: #06449b;
+
+            color: #ffffff;
+
+            padding: 40px 20px;
+
+            border-radius: 20px;
+
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+        .final-cta p {
+            max-width: 700px;
+
+            margin:
+                0 auto 20px;
+
+            line-height: 1.7;
+        }
+
+        .final-cta a {
+            display: inline-block;
+
+            background: #ffffff;
+
+            color: #06449b;
+
+            padding: 13px 22px;
+
+            border-radius: 9px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 700px) {
 
             .join-page {
                 padding:
@@ -376,15 +720,32 @@
             }
 
             .join-header h1 {
-                font-size: 29px;
+                font-size: 30px;
+            }
+
+            .join-header p {
+                font-size: 15px;
             }
 
             .join-hero {
-                padding: 35px 18px;
+                padding: 38px 18px;
+            }
+
+            .join-hero .hero-icon {
+                font-size: 45px;
             }
 
             .join-hero h2 {
                 font-size: 27px;
+            }
+
+            .join-hero p {
+                font-size: 15px;
+            }
+
+            .join-stats {
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .participation-grid {
@@ -393,7 +754,12 @@
 
             .registration-section,
             .donation-section {
-                padding: 25px 17px;
+                padding:
+                    27px 16px;
+            }
+
+            .registration-section h2 {
+                font-size: 26px;
             }
 
             .form-row {
@@ -405,18 +771,40 @@
                 grid-template-columns: 1fr;
             }
 
+            .section-heading h2 {
+                font-size: 26px;
+            }
+
+            .final-cta h2 {
+                font-size: 26px;
+            }
+
+        }
+
+
+        @media (max-width: 400px) {
+
+            .join-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .join-hero h2 {
+                font-size: 24px;
+            }
+
         }
 
     </style>
 
 </head>
 
+
 <body>
 
 
-<!-- =================================
+<!-- =========================================
      HEADER
-================================= -->
+========================================= -->
 
 <header class="site-header">
 
@@ -446,9 +834,9 @@
 </header>
 
 
-<!-- =================================
+<!-- =========================================
      MOBILE MENU
-================================= -->
+========================================= -->
 
 <button
     class="menu-toggle"
@@ -461,9 +849,9 @@
 </button>
 
 
-<!-- =================================
+<!-- =========================================
      NAVIGATION
-================================= -->
+========================================= -->
 
 <nav
     class="main-nav"
@@ -513,177 +901,262 @@
 </nav>
 
 
+<!-- =========================================
+     MAIN
+========================================= -->
+
 <main>
 
 
 <section class="join-page">
 
 
-<!-- =================================
+<!-- =========================================
      PAGE HEADER
-================================= -->
+========================================= -->
 
-<div class="join-header">
+<header class="join-header">
 
     <h1>
         🔥 JOIN IMOLE 2027
     </h1>
 
     <p>
-        Become part of the people-focused movement
-        supporting Hon. Nurudeen Abayomi Sadeeq for
-        Lagos State House of Assembly, Ojo Constituency II.
+        Become part of the movement supporting
+        Hon. Nurudeen Abayomi Sadeeq for Lagos State
+        House of Assembly, Ojo Constituency II,
+        under the Nigeria Democratic Congress (NDC).
+    </p>
+
+</header>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="join-hero">
+
+    <div class="hero-icon">
+        🌟
+    </div>
+
+    <h2>
+        YOUR VOICE. YOUR COMMUNITY. YOUR MOVEMENT.
+    </h2>
+
+    <p>
+        Every supporter, volunteer and community
+        participant can contribute meaningfully.
+        Join IMOLE 2027 and help promote
+        service, development and accountability
+        across Ojo Constituency II.
+    </p>
+
+</section>
+
+
+<!-- =========================================
+     QUICK INFORMATION
+========================================= -->
+
+<section class="join-stats">
+
+    <div class="join-stat">
+
+        <strong>
+            🌟
+        </strong>
+
+        <span>
+            General Supporters
+        </span>
+
+    </div>
+
+
+    <div class="join-stat">
+
+        <strong>
+            💃
+        </strong>
+
+        <span>
+            IMOLE BABES
+        </span>
+
+    </div>
+
+
+    <div class="join-stat">
+
+        <strong>
+            🔥
+        </strong>
+
+        <span>
+            IMOLE ARMY
+        </span>
+
+    </div>
+
+
+    <div class="join-stat">
+
+        <strong>
+            🤝
+        </strong>
+
+        <span>
+            Volunteers
+        </span>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================================
+     PARTICIPATION OPTIONS
+========================================= -->
+
+<div class="section-heading">
+
+    <h2>
+        🤝 FIND YOUR PLACE IN THE MOVEMENT
+    </h2>
+
+    <p>
+        Choose how you would like to participate
+        in peaceful, lawful and meaningful
+        campaign activities.
     </p>
 
 </div>
 
 
-<!-- =================================
-     HERO
-================================= -->
+<section class="participation-grid">
 
-<section class="join-hero">
 
-    <h2>
-        🌟 YOUR VOICE. YOUR COMMUNITY. YOUR MOVEMENT.
-    </h2>
+    <article class="participation-card">
 
-    <p>
-        Whether you want to volunteer, support
-        community engagement, assist with media,
-        join IMOLE BABES, join IMOLE ARMY or simply
-        receive campaign information, there is a
-        place for you in IMOLE 2027.
-    </p>
+        <div class="participation-icon">
+            🌟
+        </div>
+
+        <h3>
+            General Supporter
+        </h3>
+
+        <p>
+            Join the IMOLE 2027 family and receive
+            information about campaign activities,
+            meetings and constituency engagements.
+        </p>
+
+    </article>
+
+
+    <article class="participation-card">
+
+        <div class="participation-icon">
+            💃
+        </div>
+
+        <h3>
+            IMOLE BABES
+        </h3>
+
+        <p>
+            Join women participating in community
+            engagement, mobilisation and other
+            lawful campaign activities.
+        </p>
+
+    </article>
+
+
+    <article class="participation-card">
+
+        <div class="participation-icon">
+            🔥
+        </div>
+
+        <h3>
+            IMOLE ARMY
+        </h3>
+
+        <p>
+            Participate in grassroots outreach,
+            communication and peaceful mobilisation
+            activities.
+        </p>
+
+    </article>
+
+
+    <article class="participation-card">
+
+        <div class="participation-icon">
+            🤝
+        </div>
+
+        <h3>
+            Volunteer
+        </h3>
+
+        <p>
+            Contribute your time, knowledge, skills
+            and experience to the movement.
+        </p>
+
+    </article>
+
+
+    <article class="participation-card">
+
+        <div class="participation-icon">
+            📱
+        </div>
+
+        <h3>
+            Media & Communication
+        </h3>
+
+        <p>
+            Assist with photography, video,
+            social media, writing and communication.
+        </p>
+
+    </article>
+
+
+    <article class="participation-card">
+
+        <div class="participation-icon">
+            🏘️
+        </div>
+
+        <h3>
+            Ward Activities
+        </h3>
+
+        <p>
+            Participate in community and
+            ward-level engagements across
+            Ojo Constituency II.
+        </p>
+
+    </article>
+
 
 </section>
 
 
-<!-- =================================
-     PARTICIPATION OPTIONS
-================================= -->
-
-<section>
-
-    <div class="participation-grid">
-
-
-        <div class="participation-card">
-
-            <div class="participation-icon">
-                🌟
-            </div>
-
-            <h3>
-                Supporter
-            </h3>
-
-            <p>
-                Join the IMOLE 2027 family and stay
-                informed about campaign activities.
-            </p>
-
-        </div>
-
-
-        <div class="participation-card">
-
-            <div class="participation-icon">
-                💃
-            </div>
-
-            <h3>
-                IMOLE BABES
-            </h3>
-
-            <p>
-                Join women supporting community
-                engagement and the IMOLE 2027 movement.
-            </p>
-
-        </div>
-
-
-        <div class="participation-card">
-
-            <div class="participation-icon">
-                🔥
-            </div>
-
-            <h3>
-                IMOLE ARMY
-            </h3>
-
-            <p>
-                Participate in lawful grassroots
-                mobilisation and community activities.
-            </p>
-
-        </div>
-
-
-        <div class="participation-card">
-
-            <div class="participation-icon">
-                🤝
-            </div>
-
-            <h3>
-                Volunteer
-            </h3>
-
-            <p>
-                Contribute your time, skills and
-                experience to the campaign.
-            </p>
-
-        </div>
-
-
-        <div class="participation-card">
-
-            <div class="participation-icon">
-                📱
-            </div>
-
-            <h3>
-                Media Team
-            </h3>
-
-            <p>
-                Help with photography, video,
-                social media and communication.
-            </p>
-
-        </div>
-
-
-        <div class="participation-card">
-
-            <div class="participation-icon">
-                🏘️
-            </div>
-
-            <h3>
-                Ward Activities
-            </h3>
-
-            <p>
-                Participate in community and ward-level
-                engagement activities.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =================================
+<!-- =========================================
      REGISTRATION
-================================= -->
+========================================= -->
 
 <section
     class="registration-section"
@@ -691,11 +1164,11 @@
 >
 
     <h2>
-        📝 JOIN THE MOVEMENT
+        📝 REGISTER YOUR INTEREST
     </h2>
 
     <p class="registration-intro">
-        Complete the form below. When you submit,
+        Complete the form below. After submission,
         WhatsApp will open with your information
         prepared for the campaign team.
     </p>
@@ -704,17 +1177,22 @@
     <form
         class="join-form"
         id="joinForm"
+        novalidate
     >
 
 
-        <!-- NAME -->
+        <!-- NAME + PHONE -->
 
         <div class="form-row">
+
 
             <div class="form-group">
 
                 <label for="fullName">
-                    Full Name *
+
+                    Full Name
+                    <span class="required-mark">*</span>
+
                 </label>
 
                 <input
@@ -722,6 +1200,7 @@
                     id="fullName"
                     name="fullName"
                     placeholder="Enter your full name"
+                    autocomplete="name"
                     required
                 >
 
@@ -731,7 +1210,10 @@
             <div class="form-group">
 
                 <label for="phone">
-                    Phone Number *
+
+                    Phone Number
+                    <span class="required-mark">*</span>
+
                 </label>
 
                 <input
@@ -739,17 +1221,25 @@
                     id="phone"
                     name="phone"
                     placeholder="e.g. 08012345678"
+                    autocomplete="tel"
+                    inputmode="tel"
                     required
                 >
 
+                <span class="field-help">
+                    Enter a number the team can use to contact you.
+                </span>
+
             </div>
+
 
         </div>
 
 
-        <!-- EMAIL / AGE -->
+        <!-- EMAIL + AGE -->
 
         <div class="form-row">
+
 
             <div class="form-group">
 
@@ -762,6 +1252,7 @@
                     id="email"
                     name="email"
                     placeholder="Optional"
+                    autocomplete="email"
                 >
 
             </div>
@@ -782,33 +1273,34 @@
                         Select age group
                     </option>
 
-                    <option>
+                    <option value="Under 18">
                         Under 18
                     </option>
 
-                    <option>
+                    <option value="18–25">
                         18–25
                     </option>
 
-                    <option>
+                    <option value="26–35">
                         26–35
                     </option>
 
-                    <option>
+                    <option value="36–45">
                         36–45
                     </option>
 
-                    <option>
+                    <option value="46–60">
                         46–60
                     </option>
 
-                    <option>
+                    <option value="61+">
                         61+
                     </option>
 
                 </select>
 
             </div>
+
 
         </div>
 
@@ -830,27 +1322,27 @@
                     Select your ward / area
                 </option>
 
-                <option>
+                <option value="Ward D — Ijanikin">
                     Ward D — Ijanikin
                 </option>
 
-                <option>
+                <option value="Ward F — Ilogbo">
                     Ward F — Ilogbo
                 </option>
 
-                <option>
+                <option value="Ward G — Irewe">
                     Ward G — Irewe
                 </option>
 
-                <option>
+                <option value="Ward I — Etegbin">
                     Ward I — Etegbin
                 </option>
 
-                <option>
+                <option value="Ward J — Idoluwo">
                     Ward J — Idoluwo
                 </option>
 
-                <option>
+                <option value="Other / Not Sure">
                     Other / Not Sure
                 </option>
 
@@ -859,12 +1351,13 @@
         </div>
 
 
-        <!-- PARTICIPATION -->
+        <!-- INTEREST -->
 
         <div class="form-group">
 
             <label>
                 How would you like to participate?
+                <span class="required-mark">*</span>
             </label>
 
 
@@ -879,7 +1372,7 @@
                         value="General Supporter"
                     >
 
-                    General Supporter
+                    🌟 General Supporter
 
                 </label>
 
@@ -928,7 +1421,7 @@
                     <input
                         type="checkbox"
                         name="interest"
-                        value="Media and Communication"
+                        value="Media & Communication"
                     >
 
                     📱 Media & Communication
@@ -965,7 +1458,7 @@
             <textarea
                 id="skills"
                 name="skills"
-                placeholder="Tell us about any skills you can contribute — media, photography, communication, organisation, community work, logistics, etc."
+                placeholder="Tell us about skills you can contribute — media, photography, communication, organisation, logistics, community work, etc."
             ></textarea>
 
         </div>
@@ -1013,6 +1506,8 @@
         </div>
 
 
+        <!-- SUBMIT -->
+
         <button
             type="submit"
             class="submit-button"
@@ -1023,23 +1518,34 @@
         </button>
 
 
+        <!-- STATUS -->
+
+        <div
+            id="formStatus"
+            class="form-status"
+            role="status"
+            aria-live="polite"
+        ></div>
+
+
     </form>
 
 
-    <!-- =================================
-         WHATSAPP
-    ================================= -->
+    <!-- =========================================
+         DIRECT WHATSAPP
+    ========================================= -->
 
     <div class="whatsapp-box">
 
         <h3>
-            📱 Prefer WhatsApp?
+            📱 Prefer to Chat Directly?
         </h3>
 
         <p>
-            You can also contact the IMOLE 2027 team
-            directly for information about joining,
-            volunteering and campaign activities.
+            Contact the IMOLE 2027 team directly
+            through WhatsApp for information about
+            joining, volunteering and campaign
+            activities.
         </p>
 
         <a
@@ -1058,9 +1564,9 @@
 </section>
 
 
-<!-- =================================
-     DONATIONS
-================================= -->
+<!-- =========================================
+     SUPPORT
+========================================= -->
 
 <section
     class="donation-section"
@@ -1073,14 +1579,15 @@
 
     <p>
         People who wish to support IMOLE 2027 may
-        contact the campaign team for information
-        about approved and lawful ways to contribute.
+        contact the authorised campaign team for
+        information about approved and lawful ways
+        to contribute.
     </p>
 
     <p>
-        All campaign support should be handled
-        transparently and in accordance with applicable
-        electoral and financial laws.
+        Campaign support should be handled
+        transparently and in accordance with
+        applicable electoral and financial laws.
     </p>
 
 
@@ -1093,9 +1600,9 @@
         <br>
 
         Do not send money to unofficial individuals
-        claiming to represent the campaign. Please
-        verify any contribution instructions directly
-        with the authorised campaign team.
+        claiming to represent the campaign. Verify
+        all contribution instructions directly with
+        the authorised campaign team.
 
     </div>
 
@@ -1113,9 +1620,9 @@
 </section>
 
 
-<!-- =================================
-     INFORMATION
-================================= -->
+<!-- =========================================
+     VALUES
+========================================= -->
 
 <section class="information-box">
 
@@ -1139,14 +1646,37 @@
 </section>
 
 
+<!-- =========================================
+     FINAL CTA
+========================================= -->
+
+<section class="final-cta">
+
+    <h2>
+        🔥 READY TO JOIN IMOLE 2027?
+    </h2>
+
+    <p>
+        Register your interest today and become
+        part of the growing network of supporters,
+        volunteers and community participants.
+    </p>
+
+    <a href="#join-form">
+        🌟 REGISTER NOW
+    </a>
+
+</section>
+
+
 </section>
 
 </main>
 
 
-<!-- =================================
+<!-- =========================================
      FOOTER
-================================= -->
+========================================= -->
 
 <footer>
 
@@ -1167,16 +1697,16 @@
 </footer>
 
 
-<!-- =================================
+<!-- =========================================
      JAVASCRIPT
-================================= -->
+========================================= -->
 
 <script>
 
 
-/* =================================
+/* =========================================
    MOBILE MENU
-================================= */
+========================================= */
 
 function toggleMenu() {
 
@@ -1186,13 +1716,10 @@ function toggleMenu() {
     const button =
         document.getElementById("menuButton");
 
-
     menu.classList.toggle("show");
-
 
     const isOpen =
         menu.classList.contains("show");
-
 
     button.setAttribute(
         "aria-expanded",
@@ -1202,9 +1729,9 @@ function toggleMenu() {
 }
 
 
-/* =================================
-   CLOSE MOBILE MENU
-================================= */
+/* =========================================
+   CLOSE MOBILE MENU AFTER LINK CLICK
+========================================= */
 
 document
     .querySelectorAll(".main-nav a")
@@ -1220,7 +1747,6 @@ document
                 const button =
                     document.getElementById("menuButton");
 
-
                 menu.classList.remove("show");
 
                 button.setAttribute(
@@ -1234,9 +1760,9 @@ document
     });
 
 
-/* =================================
+/* =========================================
    JOIN FORM → WHATSAPP
-================================= */
+========================================= */
 
 document
     .getElementById("joinForm")
@@ -1245,6 +1771,10 @@ document
         function(event) {
 
             event.preventDefault();
+
+
+            const form =
+                event.target;
 
 
             const fullName =
@@ -1294,6 +1824,17 @@ document
                     .trim();
 
 
+            const consent =
+                document
+                    .getElementById("consent")
+                    .checked;
+
+
+            const status =
+                document
+                    .getElementById("formStatus");
+
+
             const interests =
                 Array
                     .from(
@@ -1302,16 +1843,73 @@ document
                         )
                     )
                     .map(function(item) {
+
                         return item.value;
+
                     });
+
+
+            /* =================================
+               VALIDATION
+            ================================= */
+
+            if (!fullName) {
+
+                showFormStatus(
+                    "Please enter your full name.",
+                    "error"
+                );
+
+                document
+                    .getElementById("fullName")
+                    .focus();
+
+                return;
+
+            }
+
+
+            if (!phone) {
+
+                showFormStatus(
+                    "Please enter your phone number.",
+                    "error"
+                );
+
+                document
+                    .getElementById("phone")
+                    .focus();
+
+                return;
+
+            }
+
+
+            if (
+                phone.replace(/\D/g, "").length < 7
+            ) {
+
+                showFormStatus(
+                    "Please enter a valid phone number.",
+                    "error"
+                );
+
+                document
+                    .getElementById("phone")
+                    .focus();
+
+                return;
+
+            }
 
 
             if (
                 interests.length === 0
             ) {
 
-                alert(
-                    "Please select at least one way you would like to participate."
+                showFormStatus(
+                    "Please select at least one way you would like to participate.",
+                    "error"
                 );
 
                 return;
@@ -1319,16 +1917,36 @@ document
             }
 
 
+            if (!consent) {
+
+                showFormStatus(
+                    "Please confirm your consent before continuing.",
+                    "error"
+                );
+
+                return;
+
+            }
+
+
+            /* =================================
+               CAMPAIGN WHATSAPP
+            ================================= */
+
             const campaignWhatsApp =
                 "2348033002235";
 
+
+            /* =================================
+               CREATE MESSAGE
+            ================================= */
 
             let whatsappMessage =
                 "🔥 IMOLE 2027 — JOIN THE MOVEMENT\n\n";
 
 
             whatsappMessage +=
-                "New Supporter Registration\n\n";
+                "NEW SUPPORTER REGISTRATION\n\n";
 
 
             whatsappMessage +=
@@ -1403,6 +2021,10 @@ document
                 "\nService • Development • Accountability";
 
 
+            /* =================================
+               CREATE WHATSAPP URL
+            ================================= */
+
             const whatsappURL =
                 "https://wa.me/" +
                 campaignWhatsApp +
@@ -1412,6 +2034,20 @@ document
                 );
 
 
+            /* =================================
+               SUCCESS MESSAGE
+            ================================= */
+
+            showFormStatus(
+                "Your registration is ready. WhatsApp will open so you can send it to the campaign team.",
+                "success"
+            );
+
+
+            /* =================================
+               OPEN WHATSAPP
+            ================================= */
+
             window.open(
                 whatsappURL,
                 "_blank",
@@ -1420,6 +2056,77 @@ document
 
         }
     );
+
+
+/* =========================================
+   FORM STATUS FUNCTION
+========================================= */
+
+function showFormStatus(
+    message,
+    type
+) {
+
+    const status =
+        document.getElementById(
+            "formStatus"
+        );
+
+
+    status.textContent =
+        message;
+
+
+    status.className =
+        "form-status show " +
+        type;
+
+
+    status.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    });
+
+}
+
+
+/* =========================================
+   ESCAPE KEY / ACCESSIBILITY
+========================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            const menu =
+                document.getElementById(
+                    "mainMenu"
+                );
+
+            const button =
+                document.getElementById(
+                    "menuButton"
+                );
+
+
+            menu.classList.remove(
+                "show"
+            );
+
+
+            button.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+
+    }
+);
 
 
 </script>
