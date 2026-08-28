@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,16 +6,24 @@
 
     <title>Election Results | IMOLE 2027</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="manifest" href="manifest.json">
+    <meta name="description"
+          content="Election results dashboard for Hon. Nurudeen Abayomi Sadeeq, Lagos State House of Assembly, Ojo Constituency II, Nigeria Democratic Congress (NDC).">
 
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="manifest.json">
+
     <style>
+
+        /* =========================================
+           RESULTS PAGE
+        ========================================= */
+
         .results-page {
-            max-width: 1100px;
+            max-width: 1150px;
             margin: auto;
-            padding: 30px 15px 60px;
+            padding: 30px 15px 70px;
         }
 
         .results-header {
@@ -26,123 +33,427 @@
 
         .results-header h1 {
             margin-bottom: 8px;
+            font-size: 34px;
         }
 
         .results-header p {
-            margin: 6px 0;
+            margin: 7px 0;
+            line-height: 1.6;
         }
 
         .results-badge {
             display: inline-block;
-            padding: 7px 14px;
-            border-radius: 20px;
+            padding: 8px 16px;
+            margin-top: 12px;
+            border-radius: 30px;
             background: #e8f5e9;
             color: #176b2c;
-            font-weight: bold;
-            margin-top: 10px;
+            font-weight: 700;
+            font-size: 14px;
         }
+
+
+        /* =========================================
+           ELECTION STATUS
+        ========================================= */
+
+        .election-status {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+        }
+
+        .election-status h2 {
+            margin-top: 0;
+        }
+
+        .status-message {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .awaiting {
+            color: #9a6500;
+        }
+
+        .verified {
+            color: #176b2c;
+        }
+
+
+        /* =========================================
+           SUMMARY
+        ========================================= */
 
         .summary-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns:
+                repeat(auto-fit, minmax(180px, 1fr));
             gap: 15px;
             margin-bottom: 35px;
         }
 
         .summary-card {
-            background: #ffffff;
-            padding: 20px;
+            background: #fff;
+            padding: 22px 15px;
             text-align: center;
-            border-radius: 15px;
+            border-radius: 16px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+        }
+
+        .summary-card p {
+            margin: 0;
+            line-height: 1.5;
         }
 
         .summary-card h2 {
             margin: 8px 0 0;
-            font-size: 30px;
+            font-size: 32px;
         }
+
+
+        /* =========================================
+           SEARCH
+        ========================================= */
+
+        .results-tools {
+            margin-bottom: 30px;
+        }
+
+        .results-search {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px 16px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .results-search:focus {
+            border-color: #0645a5;
+        }
+
+
+        /* =========================================
+           WARD RESULTS
+        ========================================= */
 
         .ward-results {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns:
+                repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
         .ward-card {
-            background: #ffffff;
+            background: #fff;
             padding: 22px;
-            border-radius: 16px;
+            border-radius: 17px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.12);
         }
 
         .ward-card h2 {
             margin-top: 0;
+            line-height: 1.3;
         }
 
         .ward-card p {
             margin: 8px 0;
+            line-height: 1.5;
         }
+
+
+        /* =========================================
+           WARD HEADER
+        ========================================= */
+
+        .ward-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .ward-number {
+            font-size: 13px;
+            font-weight: bold;
+            padding: 6px 9px;
+            border-radius: 8px;
+            background: #f1f1f1;
+            white-space: nowrap;
+        }
+
+
+        /* =========================================
+           PROGRESS BAR
+        ========================================= */
 
         .progress-container {
             width: 100%;
-            height: 10px;
+            height: 12px;
             background: #eeeeee;
-            border-radius: 10px;
-            margin: 15px 0;
+            border-radius: 20px;
+            margin: 18px 0 10px;
             overflow: hidden;
         }
 
         .progress-bar {
-            width: 0%;
             height: 100%;
-            background: #777777;
+            width: 0%;
+            background: #777;
+            transition: width 0.4s ease;
         }
 
-        .status {
+        .progress-text {
+            text-align: right;
+            font-size: 13px;
             font-weight: bold;
         }
 
-        .pending {
+
+        /* =========================================
+           RESULT STATUS
+        ========================================= */
+
+        .status {
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+        .status.pending {
             color: #9a6500;
         }
 
-        .reported {
+        .status.reported {
             color: #176b2c;
         }
 
+        .status.partial {
+            color: #0645a5;
+        }
+
+
+        /* =========================================
+           WARD RESULT TOTALS
+        ========================================= */
+
+        .ward-totals {
+            display: grid;
+            grid-template-columns:
+                repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .total-box {
+            background: #f7f7f7;
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .total-box span {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .total-box strong {
+            font-size: 22px;
+        }
+
+
+        /* =========================================
+           VIEW BUTTON
+        ========================================= */
+
+        .view-results-btn {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            background: #0645a5;
+            color: #fff;
+        }
+
+        .view-results-btn:hover {
+            opacity: 0.9;
+        }
+
+
+        /* =========================================
+           CONSTITUENCY TOTALS
+        ========================================= */
+
+        .constituency-total {
+            background: #fff;
+            padding: 25px 20px;
+            margin-top: 35px;
+            border-radius: 17px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+            text-align: center;
+        }
+
+        .constituency-total h2 {
+            margin-top: 0;
+        }
+
+        .candidate-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .candidate-total {
+            background: #f7f7f7;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .candidate-total span {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .candidate-total strong {
+            font-size: 28px;
+        }
+
+
+        /* =========================================
+           VERIFICATION NOTICE
+        ========================================= */
+
         .notice {
             margin-top: 35px;
-            padding: 20px;
+            padding: 22px 18px;
             background: #f5f5f5;
             border-radius: 14px;
             text-align: center;
+            line-height: 1.7;
         }
+
+        .notice strong {
+            font-size: 18px;
+        }
+
+
+        /* =========================================
+           LAST UPDATED
+        ========================================= */
 
         .last-updated {
             text-align: center;
             margin-top: 20px;
             font-size: 14px;
+            opacity: 0.8;
         }
+
+
+        /* =========================================
+           NO SEARCH RESULTS
+        ========================================= */
+
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 30px 15px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+            margin-top: 20px;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            .results-page {
+                padding: 25px 12px 55px;
+            }
+
+            .results-header h1 {
+                font-size: 27px;
+            }
+
+            .ward-results {
+                grid-template-columns: 1fr;
+            }
+
+            .ward-card {
+                padding: 19px;
+            }
+
+            .ward-header {
+                flex-direction: column;
+            }
+
+            .ward-number {
+                align-self: flex-start;
+            }
+
+            .candidate-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .summary-card h2 {
+                font-size: 27px;
+            }
+
+        }
+
     </style>
 </head>
 
 <body>
+
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header>
     <h1>IMOLE 2027</h1>
     <p>NDC Ojo Constituency II</p>
 </header>
 
+
+<!-- =========================================
+     MAIN RESULTS PAGE
+========================================= -->
+
 <section class="results-page">
+
+
+    <!-- HEADER -->
 
     <div class="results-header">
 
-        <h1>LIVE ELECTION RESULTS</h1>
-
-        <p><strong>Ojo Constituency II</strong></p>
+        <h1>🗳️ ELECTION RESULTS</h1>
 
         <p>
-            Verified polling-unit results received and reported here.
+            <strong>
+                Lagos State House of Assembly
+            </strong>
+        </p>
+
+        <p>
+            Ojo Constituency II
+        </p>
+
+        <p>
+            Results dashboard prepared for the publication
+            of verified election information.
         </p>
 
         <span class="results-badge">
@@ -152,221 +463,691 @@
     </div>
 
 
+    <!-- =====================================
+         CURRENT STATUS
+    ====================================== -->
+
+    <div class="election-status">
+
+        <h2>📢 Election Results Status</h2>
+
+        <p class="status-message awaiting"
+           id="overallStatus">
+
+            Awaiting verified results
+
+        </p>
+
+        <p>
+            No polling-unit results have been entered yet.
+            This dashboard will update automatically when
+            verified results are added.
+        </p>
+
+    </div>
+
+
+    <!-- =====================================
+         SUMMARY
+    ====================================== -->
+
     <div class="summary-grid">
 
-        <div class="summary-card">
-            <p>Total Polling Units</p>
-            <h2>170</h2>
-        </div>
 
         <div class="summary-card">
-            <p>Results Reported</p>
-            <h2 id="reported">0</h2>
+
+            <p>
+                Total Polling Units
+            </p>
+
+            <h2 id="totalPU">
+                170
+            </h2>
+
         </div>
 
+
         <div class="summary-card">
-            <p>Pending</p>
-            <h2 id="pending">170</h2>
+
+            <p>
+                Results Reported
+            </p>
+
+            <h2 id="reportedPU">
+                0
+            </h2>
+
         </div>
+
+
+        <div class="summary-card">
+
+            <p>
+                Pending
+            </p>
+
+            <h2 id="pendingPU">
+                170
+            </h2>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <p>
+                Reporting Progress
+            </p>
+
+            <h2 id="progressPercent">
+                0%
+            </h2>
+
+        </div>
+
 
     </div>
 
 
-    <div class="ward-results">
+    <!-- =====================================
+         SEARCH
+    ====================================== -->
 
-        <div class="ward-card">
+    <div class="results-tools">
 
-            <h2>Ward D — Ijanikin</h2>
+        <input
+            type="search"
+            id="wardSearch"
+            class="results-search"
+            placeholder="🔎 Search ward..."
+            oninput="searchWards()"
+            aria-label="Search wards"
+        >
 
-            <p>Total Polling Units: <strong>43</strong></p>
+    </div>
+
+
+    <!-- =====================================
+         WARD RESULTS
+    ====================================== -->
+
+    <div class="ward-results"
+         id="wardResults">
+
+
+        <!-- WARD D -->
+
+        <div class="ward-card"
+             data-ward="ward d ijanikin">
+
+            <div class="ward-header">
+
+                <h2>
+                    Ward D — Ijanikin
+                </h2>
+
+                <span class="ward-number">
+                    WARD D
+                </span>
+
+            </div>
 
             <p>
-                Reported:
-                <strong>0</strong>
+                Total Polling Units:
+                <strong data-total="43">43</strong>
+            </p>
+
+            <p>
+                Results Reported:
+                <strong class="ward-reported">0</strong>
             </p>
 
             <p>
                 Pending:
-                <strong>43</strong>
+                <strong class="ward-pending">43</strong>
             </p>
 
             <div class="progress-container">
-                <div class="progress-bar"></div>
+
+                <div class="progress-bar"
+                     data-total="43"
+                     data-reported="0">
+                </div>
+
             </div>
 
-            <p class="status pending">
-                Awaiting Results
+            <p class="progress-text">
+                <span class="ward-progress">
+                    0%
+                </span>
+                reported
             </p>
+
+            <p class="status pending">
+                ⏳ Awaiting Results
+            </p>
+
+            <div class="ward-totals">
+
+                <div class="total-box">
+                    <span>
+                        Valid Votes
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+                </div>
+
+                <div class="total-box">
+                    <span>
+                        Rejected
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+            <a
+                href="polling-units.html"
+                class="view-results-btn"
+            >
+                View Ward Polling Units
+            </a>
 
         </div>
 
 
-        <div class="ward-card">
+        <!-- WARD F -->
 
-            <h2>Ward F — Ilogbo</h2>
+        <div class="ward-card"
+             data-ward="ward f ilogbo">
 
-            <p>Total Polling Units: <strong>80</strong></p>
+            <div class="ward-header">
+
+                <h2>
+                    Ward F — Ilogbo
+                </h2>
+
+                <span class="ward-number">
+                    WARD F
+                </span>
+
+            </div>
 
             <p>
-                Reported:
-                <strong>0</strong>
+                Total Polling Units:
+                <strong data-total="80">80</strong>
+            </p>
+
+            <p>
+                Results Reported:
+                <strong class="ward-reported">0</strong>
             </p>
 
             <p>
                 Pending:
-                <strong>80</strong>
+                <strong class="ward-pending">80</strong>
             </p>
 
             <div class="progress-container">
-                <div class="progress-bar"></div>
+
+                <div class="progress-bar"
+                     data-total="80"
+                     data-reported="0">
+                </div>
+
             </div>
 
-            <p class="status pending">
-                Awaiting Results
+            <p class="progress-text">
+                <span class="ward-progress">
+                    0%
+                </span>
+                reported
             </p>
+
+            <p class="status pending">
+                ⏳ Awaiting Results
+            </p>
+
+            <div class="ward-totals">
+
+                <div class="total-box">
+                    <span>
+                        Valid Votes
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+                </div>
+
+                <div class="total-box">
+                    <span>
+                        Rejected
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+            <a
+                href="polling-units.html"
+                class="view-results-btn"
+            >
+                View Ward Polling Units
+            </a>
 
         </div>
 
 
-        <div class="ward-card">
+        <!-- WARD I -->
 
-            <h2>Ward I — Etegbin</h2>
+        <div class="ward-card"
+             data-ward="ward i etegbin">
 
-            <p>Total Polling Units: <strong>22</strong></p>
+            <div class="ward-header">
+
+                <h2>
+                    Ward I — Etegbin
+                </h2>
+
+                <span class="ward-number">
+                    WARD I
+                </span>
+
+            </div>
 
             <p>
-                Reported:
-                <strong>0</strong>
+                Total Polling Units:
+                <strong data-total="22">22</strong>
+            </p>
+
+            <p>
+                Results Reported:
+                <strong class="ward-reported">0</strong>
             </p>
 
             <p>
                 Pending:
-                <strong>22</strong>
+                <strong class="ward-pending">22</strong>
             </p>
 
             <div class="progress-container">
-                <div class="progress-bar"></div>
+
+                <div class="progress-bar"
+                     data-total="22"
+                     data-reported="0">
+                </div>
+
             </div>
 
-            <p class="status pending">
-                Awaiting Results
+            <p class="progress-text">
+                <span class="ward-progress">
+                    0%
+                </span>
+                reported
             </p>
+
+            <p class="status pending">
+                ⏳ Awaiting Results
+            </p>
+
+            <div class="ward-totals">
+
+                <div class="total-box">
+                    <span>
+                        Valid Votes
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+                </div>
+
+                <div class="total-box">
+                    <span>
+                        Rejected
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+            <a
+                href="polling-units.html"
+                class="view-results-btn"
+            >
+                View Ward Polling Units
+            </a>
 
         </div>
 
 
-        <div class="ward-card">
+        <!-- WARD G -->
 
-            <h2>Ward G — Irewe</h2>
+        <div class="ward-card"
+             data-ward="ward g irewe">
 
-            <p>Total Polling Units: <strong>9</strong></p>
+            <div class="ward-header">
+
+                <h2>
+                    Ward G — Irewe
+                </h2>
+
+                <span class="ward-number">
+                    WARD G
+                </span>
+
+            </div>
 
             <p>
-                Reported:
-                <strong>0</strong>
+                Total Polling Units:
+                <strong data-total="9">9</strong>
+            </p>
+
+            <p>
+                Results Reported:
+                <strong class="ward-reported">0</strong>
             </p>
 
             <p>
                 Pending:
-                <strong>9</strong>
+                <strong class="ward-pending">9</strong>
             </p>
 
             <div class="progress-container">
-                <div class="progress-bar"></div>
+
+                <div class="progress-bar"
+                     data-total="9"
+                     data-reported="0">
+                </div>
+
             </div>
 
-            <p class="status pending">
-                Awaiting Results
+            <p class="progress-text">
+                <span class="ward-progress">
+                    0%
+                </span>
+                reported
             </p>
+
+            <p class="status pending">
+                ⏳ Awaiting Results
+            </p>
+
+            <div class="ward-totals">
+
+                <div class="total-box">
+                    <span>
+                        Valid Votes
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+                </div>
+
+                <div class="total-box">
+                    <span>
+                        Rejected
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+            <a
+                href="polling-units.html"
+                class="view-results-btn"
+            >
+                View Ward Polling Units
+            </a>
 
         </div>
 
 
-        <div class="ward-card">
+        <!-- WARD J -->
 
-            <h2>Ward J — Idoluwo</h2>
+        <div class="ward-card"
+             data-ward="ward j idoluwo">
 
-            <p>Total Polling Units: <strong>8</strong></p>
+            <div class="ward-header">
+
+                <h2>
+                    Ward J — Idoluwo
+                </h2>
+
+                <span class="ward-number">
+                    WARD J
+                </span>
+
+            </div>
 
             <p>
-                Reported:
-                <strong>0</strong>
+                Total Polling Units:
+                <strong data-total="8">8</strong>
+            </p>
+
+            <p>
+                Results Reported:
+                <strong class="ward-reported">0</strong>
             </p>
 
             <p>
                 Pending:
-                <strong>8</strong>
+                <strong class="ward-pending">8</strong>
             </p>
 
             <div class="progress-container">
-                <div class="progress-bar"></div>
+
+                <div class="progress-bar"
+                     data-total="8"
+                     data-reported="0">
+                </div>
+
             </div>
 
-            <p class="status pending">
-                Awaiting Results
+            <p class="progress-text">
+                <span class="ward-progress">
+                    0%
+                </span>
+                reported
             </p>
+
+            <p class="status pending">
+                ⏳ Awaiting Results
+            </p>
+
+            <div class="ward-totals">
+
+                <div class="total-box">
+                    <span>
+                        Valid Votes
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+                </div>
+
+                <div class="total-box">
+                    <span>
+                        Rejected
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+            <a
+                href="polling-units.html"
+                class="view-results-btn"
+            >
+                View Ward Polling Units
+            </a>
 
         </div>
 
-        <div class="ward-card">
 
-        <h2>Tafi Ward</h2>
+        <!-- TAFI -->
 
-        <p>Total Polling Units: <strong>8</strong></p>
+        <div class="ward-card"
+             data-ward="tafi ward">
+
+            <div class="ward-header">
+
+                <h2>
+                    Tafi Ward
+                </h2>
+
+                <span class="ward-number">
+                    TAFI
+                </span>
+
+            </div>
+
+            <p>
+                Total Polling Units:
+                <strong data-total="8">8</strong>
+            </p>
+
+            <p>
+                Results Reported:
+                <strong class="ward-reported">0</strong>
+            </p>
+
+            <p>
+                Pending:
+                <strong class="ward-pending">8</strong>
+            </p>
+
+            <div class="progress-container">
+
+                <div class="progress-bar"
+                     data-total="8"
+                     data-reported="0">
+                </div>
+
+            </div>
+
+            <p class="progress-text">
+                <span class="ward-progress">
+                    0%
+                </span>
+                reported
+            </p>
+
+            <p class="status pending">
+                ⏳ Awaiting Results
+            </p>
+
+            <div class="ward-totals">
+
+                <div class="total-box">
+                    <span>
+                        Valid Votes
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+                </div>
+
+                <div class="total-box">
+                    <span>
+                        Rejected
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+            <a
+                href="polling-units.html"
+                class="view-results-btn"
+            >
+                View Ward Polling Units
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- NO SEARCH RESULT -->
+
+    <div
+        class="no-results"
+        id="noResults"
+    >
+
+        <h3>
+            No ward found
+        </h3>
 
         <p>
-            Reported:
-            <strong>0</strong>
-        </p>
-
-        <p>
-            Pending:
-            <strong>8</strong>
-        </p>
-
-        <div class="progress-container">
-            <div class="progress-bar"></div>
-        </div>
-
-        <p class="status pending">
-            Awaiting Results
+            Try searching for another ward name.
         </p>
 
     </div>
 
-</div> <!-- CLOSE WARD RESULTS -->
 
-<div class="notice">
+    <!-- =====================================
+         CONSTITUENCY TOTAL
+    ====================================== -->
 
-    <strong>Verification Notice</strong>
+    <div class="constituency-total">
 
-    <p>
-        Only verified polling-unit results should be entered or
-        published. Results shown here are not official election
-        results unless confirmed by the appropriate electoral authority.
-    </p>
+        <h2>
+            📊 CONSTITUENCY SUMMARY
+        </h2>
 
-</div>
-
-
-    <p class="last-updated">
-        Last updated: Awaiting verified results
-    </p>
-
-</section>
+        <p>
+            Candidate totals will appear here when
+            verified polling-unit results are entered.
+        </p>
 
 
-<footer>
+        <div class="candidate-grid">
 
-    <p>
-        &copy; 2026 HON. Nurudeen Abayomi Sadeeq
-    </p>
 
-    <p>
-        Nigeria Democratic Congress (NDC)
-    </p>
+            <div class="candidate-total">
 
-</footer>
+                <span>
+                    Hon. Nurudeen Abayomi Sadeeq
+                </span>
 
-</body>
-</html>
+                <strong id="candidateVotes">
+                    0
+                </strong>
+
+                <small>
+                    Votes reported
+                </small>
+
+            </div>
+
+
+            <div class="candidate-total">
+
+               
