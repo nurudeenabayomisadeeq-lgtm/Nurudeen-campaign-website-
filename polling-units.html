@@ -1,1182 +1,2575 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Polling Unit Directory | IMOLE 2027</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="manifest" href="manifest.json">
+    <title>Polling Units | IMOLE 2027</title>
 
-    <meta name="theme-color" content="#ffffff">
+    <meta name="description"
+          content="Polling Unit Directory for Ojo Constituency II — IMOLE 2027, Hon. Nurudeen Abayomi Sadeeq, Nigeria Democratic Congress (NDC).">
+
+    <meta name="theme-color"
+          content="#0645a5">
+
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+
+    <link rel="manifest"
+          href="manifest.json">
+
 
     <style>
-        .pu-page {
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px 15px 60px;
+
+        /* =====================================================
+           PAGE RESET
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .site-header {
+            background: #0645a5;
+            color: #ffffff;
+            text-align: center;
+            padding: 28px 15px;
+        }
+
+        .site-header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+        .site-header p {
+            margin: 7px 0 0;
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           MOBILE MENU
+        ===================================================== */
+
+        .menu-toggle {
+            display: none;
+            width: 100%;
+            border: none;
+            background: #04377f;
+            color: #ffffff;
+            padding: 14px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .main-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .main-nav a {
+            color: #222;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 14px 13px;
+            font-size: 14px;
+        }
+
+        .main-nav a:hover {
+            background: #eef4ff;
+            color: #0645a5;
+        }
+
+        .main-nav .join-link {
+            background: #0645a5;
+            color: #ffffff;
+            border-radius: 6px;
+            margin: 5px;
+        }
+
+
+        /* =====================================================
+           MAIN PAGE
+        ===================================================== */
+
+        .pu-page {
+            max-width: 1200px;
+            margin: auto;
+            padding: 35px 15px 70px;
+        }
+
+
+        /* =====================================================
+           PAGE INTRO
+        ===================================================== */
 
         .pu-header {
             text-align: center;
             margin-bottom: 30px;
         }
 
+        .pu-header h2 {
+            font-size: 34px;
+            margin: 0 0 10px;
+        }
+
+        .pu-header p {
+            margin: 7px 0;
+            line-height: 1.6;
+        }
+
+        .directory-badge {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: #e8f5e9;
+            color: #176b2c;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           SUMMARY
+        ===================================================== */
+
         .pu-summary {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            grid-template-columns:
+                repeat(auto-fit, minmax(180px, 1fr));
+
             gap: 15px;
             margin-bottom: 30px;
         }
 
         .pu-summary-card {
-            background: #fff;
-            padding: 20px;
+            background: #ffffff;
+            padding: 22px 15px;
             text-align: center;
-            border-radius: 15px;
+            border-radius: 16px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.10);
         }
 
-        .pu-summary-card h2 {
-            margin: 5px 0;
-            font-size: 28px;
+        .pu-summary-card p {
+            margin: 0 0 7px;
+            font-size: 14px;
+            font-weight: 700;
         }
+
+        .pu-summary-card h2 {
+            margin: 0;
+            font-size: 32px;
+            color: #0645a5;
+        }
+
+
+        /* =====================================================
+           SEARCH AREA
+        ===================================================== */
+
+        .search-panel {
+            background: #ffffff;
+            padding: 22px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .search-title {
+            text-align: center;
+            margin: 0 0 15px;
+        }
+
+        .search-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .pu-search {
+            flex: 1;
+        }
+
+        .pu-search input {
+            width: 100%;
+            padding: 15px 16px;
+            border: 1px solid #cfcfcf;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .pu-search input:focus {
+            border-color: #0645a5;
+            box-shadow: 0 0 0 3px rgba(6,69,165,0.10);
+        }
+
+        .clear-button {
+            border: none;
+            background: #0645a5;
+            color: #ffffff;
+            padding: 0 20px;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .clear-button:hover {
+            opacity: 0.9;
+        }
+
+        .search-help {
+            text-align: center;
+            margin: 12px 0 0;
+            font-size: 13px;
+            color: #666;
+        }
+
+
+        /* =====================================================
+           WARD FILTER BUTTONS
+        ===================================================== */
+
+        .ward-filter {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 9px;
+            margin-top: 18px;
+        }
+
+        .ward-filter button {
+            border: 1px solid #0645a5;
+            background: #ffffff;
+            color: #0645a5;
+            padding: 9px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .ward-filter button.active,
+        .ward-filter button:hover {
+            background: #0645a5;
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           RESULTS MESSAGE
+        ===================================================== */
+
+        .search-results {
+            text-align: center;
+            margin: -12px 0 20px;
+            font-weight: 700;
+            color: #0645a5;
+        }
+
+
+        /* =====================================================
+           WARD GRID
+        ===================================================== */
 
         .ward-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns:
+                repeat(auto-fit, minmax(320px, 1fr));
+
+            gap: 22px;
         }
+
+
+        /* =====================================================
+           WARD CARD
+        ===================================================== */
 
         .ward-card {
-            background: #fff;
+            background: #ffffff;
             padding: 22px;
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+            border-radius: 17px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
-        .ward-card h2 {
-            margin-top: 0;
+        .ward-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 23px rgba(0,0,0,0.14);
         }
 
-        .ward-card p {
-            margin: 8px 0;
+        .ward-card.hidden {
+            display: none;
+        }
+
+        .ward-heading {
+            border-bottom: 1px solid #eeeeee;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        .ward-heading h2 {
+            margin: 0 0 7px;
+            font-size: 22px;
+        }
+
+        .ward-heading p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+
+        /* =====================================================
+           POLLING UNIT
+        ===================================================== */
+
+        .polling-unit-list {
+            margin-top: 10px;
+        }
+
+        .polling-unit {
+            background: #f7f8fa;
+            padding: 14px;
+            margin-bottom: 9px;
+            border-radius: 11px;
+            border-left: 4px solid #0645a5;
+            line-height: 1.55;
+        }
+
+        .polling-unit:last-child {
+            margin-bottom: 0;
+        }
+
+        .pu-code {
+            display: block;
+            font-size: 15px;
+            font-weight: 800;
+            color: #0645a5;
+            margin-bottom: 3px;
+        }
+
+        .pu-location {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
         }
 
         .pu-status {
-            margin-top: 15px;
-            font-weight: bold;
+            display: inline-block;
+            margin-top: 7px;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.3px;
         }
+
+        .existing {
+            background: #e8f5e9;
+            color: #176b2c;
+        }
+
+        .new-pu {
+            background: #fff3cd;
+            color: #8a5a00;
+        }
+
+
+        /* =====================================================
+           NO RESULTS
+        ===================================================== */
+
+        .no-results {
+            display: none;
+            background: #ffffff;
+            text-align: center;
+            padding: 35px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-top: 20px;
+        }
+
+        .no-results.show {
+            display: block;
+        }
+
+        .no-results h3 {
+            margin-top: 0;
+        }
+
+
+        /* =====================================================
+           VERIFICATION NOTICE
+        ===================================================== */
 
         .notice {
-            margin-top: 30px;
-            padding: 18px;
-            background: #f5f5f5;
-            border-radius: 12px;
+            margin-top: 35px;
+            padding: 22px;
+            background: #fff3cd;
+            border-radius: 15px;
             text-align: center;
+            line-height: 1.7;
         }
-        .polling-unit-list {
-    margin-top: 20px;
-}
 
-.polling-unit-list > div {
-    background: #f8f8f8;
-    padding: 14px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    line-height: 1.6;
-}
+        .notice strong {
+            font-size: 17px;
+        }
 
-.polling-unit-list small {
-    font-weight: bold;
-}
+        .notice p {
+            margin-bottom: 0;
+        }
 
 
- </style>
+        /* =====================================================
+           BACK TO TOP
+        ===================================================== */
+
+        .back-top {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .back-top a {
+            display: inline-block;
+            padding: 11px 18px;
+            border-radius: 8px;
+            background: #0645a5;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #111111;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        footer p {
+            margin: 7px 0;
+            line-height: 1.5;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .main-nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .main-nav.show {
+                display: flex;
+            }
+
+            .main-nav a {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #eeeeee;
+            }
+
+            .main-nav .join-link {
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .site-header {
+                padding: 22px 12px;
+            }
+
+            .site-header h1 {
+                font-size: 25px;
+            }
+
+            .pu-page {
+                padding: 28px 12px 50px;
+            }
+
+            .pu-header h2 {
+                font-size: 27px;
+            }
+
+            .search-row {
+                flex-direction: column;
+            }
+
+            .clear-button {
+                padding: 13px;
+            }
+
+            .ward-list {
+                grid-template-columns: 1fr;
+            }
+
+            .ward-card {
+                padding: 17px;
+            }
+
+            .ward-heading h2 {
+                font-size: 20px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL PHONES
+        ===================================================== */
+
+        @media (max-width: 420px) {
+
+            .pu-summary {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pu-summary-card {
+                padding: 17px 8px;
+            }
+
+            .pu-summary-card h2 {
+                font-size: 27px;
+            }
+
+            .pu-header h2 {
+                font-size: 24px;
+            }
+
+            .polling-unit {
+                padding: 12px;
+            }
+
+            .pu-location {
+                font-size: 13px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
-<body>
 
-<header>
+<body id="top">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
     <h1>IMOLE 2027</h1>
-    <p>NDC Ojo Constituency II</p>
-</header>
-
-<section class="pu-page">
-
-    <div class="pu-header">
-
-        <h1>POLLING UNIT DIRECTORY</h1>
-
-        <p>
-            Ojo Constituency II
-        </p>
-
-        <p>
-            Official polling-unit information will be added
-            as verified details become available.
-        </p>
-
-        </div>
-
-    <div class="pu-summary">
-
-    <div class="pu-summary-card">
-        <p>Total Polling Units</p>
-        <h2 id="totalPU">0</h2>
-    </div>
-
-    <div class="pu-summary-card">
-        <p>Wards</p>
-        <h2 id="totalWards">0</h2>
-    </div>
-
-    <div class="pu-summary-card">
-        <p>Existing PUs</p>
-        <h2 id="existingPU">0</h2>
-    </div>
-
-    <div class="pu-summary-card">
-        <p>New PUs</p>
-        <h2 id="newPU">0</h2>
-    </div>
-
-</div>
-
-    <div class="pu-search">
-        <input
-            type="text"
-            id="puSearch"
-            placeholder="🔎 Search polling unit, location or ward..."
-            oninput="searchPollingUnits()"
-        >
-    </div>
-
-    <div class="ward-list">
-
-        <div class="ward-card">
-
-    <h2>Ward D — Ijanikin</h2>
-
-    <p><strong>43 Polling Units</strong></p>
-
-    <div class="polling-unit-list">
-
-        <div><strong>24-17-04-001</strong><br>
-        OPEN SPACE AT NO. 8 KOMOLAFE AIYETORO, IJANIKIN<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-002</strong><br>
-        IN FRONT OF NO. 9 KOSOKO ST. AIYETORO, IJANIKIN<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-003</strong><br>
-        OPEN SPACE AT THE GATE OF EXT. AFFAIRS STAFF QUARTERS<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-004</strong><br>
-        JUNCTION OF OWOSENI ST./AMOSU ST. IJANIKIN<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-005</strong><br>
-        JUNCTION OF ALAFIA/AMOSU ST. SIDE 'A'<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-006</strong><br>
-        OPEN SPACE AT ALAFIA/AMOSU IGBORO<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-007</strong><br>
-        OPEN SPACE AT JUNCTION OF RAFIU IGBORO/ALOGBE ST.<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-008</strong><br>
-        GOVT. SEC. SCH., IJANIKIN<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-009</strong><br>
-        OPEN SPACE NEAR PALACE, IJANIKIN<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-010</strong><br>
-        IN FRONT OF PHOTO-CLINIC IJANIKIN<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-011</strong><br>
-        BESIDE NO. 28, OWODE ST. IJANIKIN<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-012</strong><br>
-        OPEN SPACE AT NO. 4 OWODE ST. IJANIKIN<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-013</strong><br>
-        OPEN SPACE AT THE BACK OF CELE BUS STOP IJANIKIN I<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-014</strong><br>
-        OPEN SPACE AT THE BACK OF CELE BUS STOP IJANIKIN II<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-015</strong><br>
-        WITHIN THE COMPOUND (CAMPUS) NEAR AOCOED GATE (NOW LASUED)<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-016</strong><br>
-        IN FRONT OF NO. 9 KOSOKO ST.<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-017</strong><br>
-        JUNCTION OF OWOSENI/AMOSU ST. IJANIKIN<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-018</strong><br>
-        JUNCTION OF OWOSENI ST. IJANIKIN<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-019</strong><br>
-        AT NO. 4 FOLAJIMI BLESSING ST. ALASIA IJANIKIN<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-020</strong><br>
-        OPEN SPACE AT PALACE FRONTAGE<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-021</strong><br>
-        PALACE FRONTAGE (OPEN SPACE NEAR THE PRY. SCH.)<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-022</strong><br>
-        IN FRONT OF NO. 2 ARAROMI ST. IJANIKIN<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-023</strong><br>
-        IN FRONT OF NO. 4, ARAROMI ST. IJANIKIN<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-04-024</strong><br>
-        OPEN SPACE AT OYABIYI JUNCTION IBASA ROAD<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-025</strong><br>
-        OPEN SPACE AT IBEFU OFF ONIJANIKIN ROAD<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-026</strong><br>
-        OPEN SPACE NEAR ADIO BUS STOP<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-027</strong><br>
-        OPEN SPACE INFRONT OF UNITY ESTATE<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-028</strong><br>
-        OPEN SPACE AT THE JUNCTION OF AGO IDOSA STR.<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-029</strong><br>
-        OPEN SPACE AT 20 ODOFIN STREET<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-030</strong><br>
-        OPEN SPACE AT 5/6 ODOFIN COMPOUND<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-031</strong><br>
-        OPEN SPACE BESIDE 28, OWODE STREET IJANIKIN<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-032</strong><br>
-        OPEN SPACE AT IJANIKIN CENTRAL MOSQUE<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-033</strong><br>
-        OPEN SPACE AT 8 ALOGBE IGBORO STREET<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-034</strong><br>
-        OPEN SPACE AT 30 PALACE ROAD IJANIKIN<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-035</strong><br>
-        FRONT OF HIBAT FILLING STATION IJANIKIN<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-036</strong><br>
-        OPEN SPACE AT OLUREMI TINUBU HALL AOCOED (NOW LASUED)<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-037</strong><br>
-        OPEN SPACE AT AOCOED SECOND GATE (NOW LASUED)<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-038</strong><br>
-        OPEN SPACE AT ONIJANIKIN STREET<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-039</strong><br>
-        OPEN SPACE AT OWODE/AMOSU STREET<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-040</strong><br>
-        OPEN SPACE AT THE BACK OF IJANIKIN POLICE STATION<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-041</strong><br>
-        OPEN SPACE AT AGO ARE STREET ALASIA IJANIKIN<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-042</strong><br>
-        OPEN SPACE BY MASHALASHI JUNCTION IJANIKIN<br>
-        <small>NEW PU</small></div>
-
-        <div><strong>24-17-04-043</strong><br>
-        BESIDE OBA PALACE IJANIKIN<br>
-        <small>NEW PU</small></div>
-
-    </div>
-
-</div>
-
-
-        
-<div class="ward-card">
-
-    <h2>Ward F — Ilogbo</h2>
-
-    <p><strong>80 Polling Units</strong></p>
-
-    <div class="polling-unit-list">
-
-        <div><strong>24-17-06-001</strong><br>
-        BESIDE THE PLAYING GROUND, KETU<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-002</strong><br>
-        OPEN SPACE WITHIN KETU VILLAGE NEAR FALOYES<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-003</strong><br>
-        L.A. PRY. SCH. ERA I<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-004</strong><br>
-        L.A. PRY. SCH. ERA II<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-005</strong><br>
-        L.A. PRY. SCH. ILOGBO (SIDE A)<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-006</strong><br>
-        L.A. PRY. SCH. ILOGBO (SIDE B)<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-007</strong><br>
-        OPEN SPACE AT PLAYING GROUND<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-008</strong><br>
-        SHIBIRI JUNCTION BY ETEGBIN RD (RIGHT SIDE) I<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-009</strong><br>
-        SHIBIRI JUNCTION BY ETEGBIN RD (RIGHT SIDE) II<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-010</strong><br>
-        JUNCTION OF ORAWA ST. OTTO I<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-011</strong><br>
-        JUNCTION OF ORAWA ST. OTTO II<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-012</strong><br>
-        OPEN SPACE AT IJAKE'S OTTO<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-013</strong><br>
-        IJAKE'S JUNCTION<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-014</strong><br>
-        OPEN SPACE IN FRONT OF AFRICAN METH. CHURCH, OTTO<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-015</strong><br>
-        OPEN SPACE AT GORIOLA'S JUNCTION OTTO-AWORI - I<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-016</strong><br>
-        OPEN SPACE AT GORIOLA'S JUNCTION OTTO-AWORI- II<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-017</strong><br>
-        OPEN SPACE AT ARAROMI ST.<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-018</strong><br>
-        OPEN SPACE AT OTTO AWORI B/STOP ALONG THE ROAD<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-019</strong><br>
-        OPEN SPACE AT THE FED. GOVT. COLLEGE IJANIKIN<br>
-        <small>EXISTING PU</small></div>
-
-        <div><strong>24-17-06-020</strong><br>
-        OPEN SPACE AT THE JUNCTION OF ITIRE ILOGBO PLAYING GROUND<br>
-        <small>EXISTING PU</small></div>
-
-    <div class="polling-unit-list">
-<div><strong>24-17-06-021</strong><br>
-OPEN SPACE AT THE JUNCTION OF SHIBIRI VILLAGE<br>
-<small>EXISTING PU</small></div>
-
-<div><strong>24-17-06-022</strong><br>
-OPEN SPACE WITHIN IMUDE VILLAGE AT IYALODE B/STOP<br>
-<small>EXISTING PU</small></div>
-
-<div><strong>24-17-06-023</strong><br>
-OPEN SPACE WITHIN ADALOKO VILLAGE<br>
-<small>EXISTING PU</small></div>
-
-<div><strong>24-17-06-024</strong><br>
-ILOGBO CENTRE D, L.A. PRY. SCH. ILOGBO<br>
-<small>EXISTING PU</small></div>
-
-<div><strong>24-17-06-025</strong><br>
-OPEN SPACE WITHIN OKE AGBO VILLAGE<br>
-<small>EXISTING PU</small></div>
-
-<div><strong>24-17-06-026</strong><br>
-OPEN SPACE AT DIVINE BUS STOP KETU<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-027</strong><br>
-OPEN SPACE AT CHARLES STREET NEAR ADEKANBI PAKO B/STOP<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-028</strong><br>
-OPEN SPACE INFRONT OF COMMUNITY PRY SCH<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-029</strong><br>
-OPEN SPACE BESIDE KENRAL COLLEGE KETU<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-030</strong><br>
-OPEN SPACE INFRONT OF WABROS HOTEL ERA<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-031</strong><br>
-OPEN SPACE IN FRONT OF SAM-JULLY HOTEL ABULE<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-032</strong><br>
-OPEN SPACE AT ATUNSE BUS STOP ABULE ERA<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-033</strong><br>
-OPEN SPACE IN FRONT OF LAWYER EGUNTOLA CLOSE, ABULE, ADALOKO RD<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-034</strong><br>
-OPEN SPACE AT ADELE BUS STOP ERA<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-035</strong><br>
-OPEN SPACE AT IYALODE BUS STOP ILOGBO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-036</strong><br>
-OPEN SPACE AT OLORI EBI BUS STOP ILOGBO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-037</strong><br>
-OPEN SPACE AT MODUPE ALATEOWO STREET, ILOGBO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-038</strong><br>
-OPEN SPACE AT PAKO BUS STOP<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-039</strong><br>
-OPEN SPACE AT SHEBAS BUS STOP ILOGBO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-040</strong><br>
-OPEN SPACE AT OKE AGBO JUNCTION<br>
-<small>NEW PU</small></div>
-   <div><strong>24-17-06-041</strong><br>
-OPEN SPACE AT BABALOLA BUS STOP<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-042</strong><br>
-OPEN SPACE AT MOSHALASHI BUS STOP ILOGBO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-043</strong><br>
-OPEN SPACE AT TRANSFORMER BUS STOP<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-044</strong><br>
-OPEN SPACE AT ALAGAYI MARKET ILOGBO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-045</strong><br>
-OPEN SPACE AT MUSTAPHA STREET<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-046</strong><br>
-OPEN SPACE AT HEALTH CENTRE OKE- IJEWU ILOGBO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-047</strong><br>
-OPEN SPACE AT PRAYING GROUND ANIMASHAUN B/ STOP<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-048</strong><br>
-OPEN SPACE AT 7.7 JUNCTION SHIBIRI<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-049</strong><br>
-OPEN SPACE AT AJAKAYE STREET SHIBIRI<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-050</strong><br>
-OPEN SPACE AT JOSEPHINE STREET IGBO NLA SHIBIRI<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-051</strong><br>
-OPEN SPACE AT BAALE STREET BY CENTRAL MOSQUE<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-052</strong><br>
-OPEN SPACE AT KAREEM STREET SHIBIRI<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-053</strong><br>
-BESIDE OTTO- AWORI TOWN HALL<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-054</strong><br>
-OPEN SPACE AT AGBENI STREET, OTTO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-055</strong><br>
-OPEN SPACE AT MATORI STREET OTTO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-056</strong><br>
-OPEN SPACE IN FRONT OF ULTIMATE HOTEL OTTO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-057</strong><br>
-OPEN SPACE INFRONT OF GORIOLA MOSQUE OTTO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-058</strong><br>
-OPEN SPACE AT IDERELU JUNCTION OTTO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-059</strong><br>
-OPEN SPACE AT ONIKOSI AVENUE OTTO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-060</strong><br>
-OPEN SPACE AT SIGNS AND WONDERS BUS STOP<br>
-<small>NEW PU</small></div> 
-        
-<div><strong>24-17-06-061</strong><br>
-OPEN SPACE BESIDE MY BUILDER NUR &amp; PRY SCH. FEDERAL SECOND GATE<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-062</strong><br>
-OPEN SPACE AT THE JUNCTION OF AJOSE STREET IYANA-ERA ROAD<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-063</strong><br>
-OPEN SPACE AT TOPE BUS STOP ILOGBO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-064</strong><br>
-OPEN SPACE BY TOPE MARKET ILOGBO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-065</strong><br>
-OPEN SPACE AT DEBOTEL STREET ITIRE<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-066</strong><br>
-OPEN SPACE AT OLOWOPARIOLA STREET SHIBIRI<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-067</strong><br>
-OPEN SPACE BY SANTANA BUS STOP SHIBIRI<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-068</strong><br>
-OPEN SPACE AT AFOLABI STREET SHIBIRI<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-069</strong><br>
-OPEN SPACE AT ORITSHA COMMUNITY<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-070</strong><br>
-AYEKOTO COMMUNITY PRIMARY SCHOOL<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-071</strong><br>
-AJEWANWA COMMUNITY PRIMARY SCHOOL<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-072</strong><br>
-OPEN SPACE AT ITAKETE COMMUNITY<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-073</strong><br>
-OPEN SPACE AT ABAPASHA STREET IMUDE<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-074</strong><br>
-OPEN SPACE OPPOSITE TRANSFORMER ABADI BUS STOP<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-075</strong><br>
-OPEN SPACE AT CALABAR MARKET<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-076</strong><br>
-OPEN SPACE INFRONT OF MEGA STREET ILOGBO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-077</strong><br>
-OPEN SPACE AT OREMETA JUNCTION ILOGBO<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-078</strong><br>
-OPEN SPACE AT TAILOR STREET<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-079</strong><br>
-OPEN SPACE AT MASHALASHI STREET BY GANIU ATANDA JUNCTION<br>
-<small>NEW PU</small></div>
-
-<div><strong>24-17-06-080</strong><br>
-OPEN SPACE AT LONDON STREET OKE AGBO<br>
-<small>NEW PU</small>
-</div>
-       </div>
-
-
-
-        <div class="ward-card">
-
-    <h2>Ward I — Etegbin</h2>
-
-    <p><strong>22 Polling Units</strong></p>
-
-    <div class="polling-unit-list">
-
-        <div>
-            <strong>24-17-09-001</strong><br>
-            COMMUNITY HALL ILEMBA AWORI<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-002</strong><br>
-            ILEMBA AWORI (RASAKI BUS-STOP)<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-003</strong><br>
-            ILEMBA AWORI (NEAR DALINGO HOTEL) IYANA BUS-STOP I<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-004</strong><br>
-            ILEMBA AWORI (NEAR DALINGO HOTEL) IYANA BUS-STOP II<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-005</strong><br>
-            EGAN COMMUNITY HALL<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-006</strong><br>
-            ST. PETERS PRY. SCH. ISHAGIRA<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-007</strong><br>
-            L.A. PRY. SCH. ETEGBIN I<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-008</strong><br>
-            L.A. PRY. SCH. ETEGBIN II<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-009</strong><br>
-            OPEN SPACE AT ONITIDE STREET ILEMBA AWORI<br>
-            <small>NEW PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-010</strong><br>
-            OPEN SPACE AT CELE STREET OFF AKINIBA STR.<br>
-            <small>NEW PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-011</strong><br>
-            OPEN SPACE AT JUNCTION OF ILELABOYE STR. ILEMBA AWORI<br>
-            <small>NEW PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-012</strong><br>
-            OPEN SPACE AT ONI ORISAN STREET ILEMBA AWORI<br>
-            <small>NEW PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-013</strong><br>
-            OPEN SPACE AT ALUBARIKA BUS STOP<br>
-            <small>NEW PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-014</strong><br>
-            OPEN SPACE AT YOTOMI STREET, ILEMBA AWORI<br>
-            <small>NEW PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-015</strong><br>
-            OPEN SPACE AT THE JUNCTION OF MOSAFEJO COMPOUND<br>
-            <small>NEW PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-016</strong><br>
-            OPEN SPACE AT HOUSE NO 1 IDI OSHO STREET ISHAGIRA<br>
-            <small>NEW PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-017</strong><br>
-            OPEN SPACE AT JUNCTION OF KOSOKO ELEMIJAYE RD.<br>
-            <small>NEW PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-018</strong><br>
-            OPEN SPACE AT JUNCTION OF ILAJA STREET<br>
-            <small>NEW PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-019</strong><br>
-            OPEN SPACE AT JUNCTION OF MOB STREET<br>
-            <small>NEW PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-020</strong><br>
-            OPEN SPACE AT JUNCTION OF LADUBA STREET<br>
-            <small>NEW PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-021</strong><br>
-            OPEN SPACE AT JUNCTION OF OLAWOLE CLOSE<br>
-            <small>NEW PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-09-022</strong><br>
-            OPEN SPACE AT JUNCTION OF MOSHALASHI STREET<br>
-            <small>NEW PU</small>
-        </div>
-
-    </div>
-
-</div>
-
-
-        
-<div class="ward-card">
-
-    <h2>Ward G — Irewe</h2>
-
-    <p><strong>9 Polling Units</strong></p>
-
-    <div class="polling-unit-list">
-
-        <div>
-            <strong>24-17-07-001</strong><br>
-            OSOLU SEC. SCHOOL IREWE I<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-07-002</strong><br>
-            OSOLU SEC. SCHOOL IREWE II<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-07-003</strong><br>
-            OPEN SPACE WITHIN OJORIN VILLAGE<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-07-004</strong><br>
-            COMMUNITY HALL ITOGBESA I<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-07-005</strong><br>
-            COMMUNITY HALL ITOGBESA II<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-07-006</strong><br>
-            OPEN SPACE WITHIN EREKUN VILLAGE<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-07-007</strong><br>
-            L.A. PRY. SCHOOL OKOLUNDUN<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-07-008</strong><br>
-            OPEN SPACE WITHIN ORI GELE<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-07-009</strong><br>
-            OPEN SPACE WITHIN ONIGBONGBO VILLAGE<br>
-            <small>EXISTING PU</small>
-        </div>
-
-    </div>
-
-</div>
-
-        <div class="ward-card">
-
-    <h2>Ward J — Idoluwo</h2>
-
-    <p><strong>8 Polling Units</strong></p>
-
-    <div class="polling-unit-list">
-
-        <div>
-            <strong>24-17-10-001</strong><br>
-            ST. MARY PRY. SCHOOL IDOLUWO-ILE I<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-10-002</strong><br>
-            ST. MARY PRY. SCHOOL IDOLUWO-ILE II<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-10-003</strong><br>
-            ST. PHILIPS PRY. SCH. ESOFIN<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-10-004</strong><br>
-            OPEN SPACE WITHIN OJOTA VILLAGE<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-10-005</strong><br>
-            ST. PHILIPS PRY. SCH. ESOFIN<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-10-006</strong><br>
-            OPEN SPACE WITHIN OJOTA VILLAGE<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-10-007</strong><br>
-            ST PHILIP PRIMARY SCHOOL ESOFIN I<br>
-            <small>NEW PU</small>
-        </div>
-
-        <div>
-            <strong>24-17-10-008</strong><br>
-            ST PHILIP PRIMARY SCHOOL ESOFIN II<br>
-            <small>NEW PU</small>
-        </div>
-
-    </div>
-
-</div>
-
-<div class="ward-card">
-
-    <h2>Tafi Ward — 8 Polling Units</h2>
-
-    <div class="polling-unit-list">
-
-        <div>
-            <strong>001</strong><br>
-            L.A. PRIMARY SCHOOL MOBA<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>002</strong><br>
-            COMMUNITY HALL IBODE<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>003</strong><br>
-            L.A. PRY. SCH. ALAGUNTAN<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>004</strong><br>
-            OPEN SPACE WITHIN AGAJA VILLAGE<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>005</strong><br>
-            SALVATION ARMY PRY. SCH. OLOMOMETA<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>006</strong><br>
-            IGBOLOGBO VILLAGE (OPEN SPACE) WITHIN THE VILLAGE<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>007</strong><br>
-            ST. FRANCIS PRY. SCH. IGBO-OJA<br>
-            <small>EXISTING PU</small>
-        </div>
-
-        <div>
-            <strong>008</strong><br>
-            L.A. PRY. SCHOOL TAFFI AWORI<br>
-            <small>EXISTING PU</small>
-        </div>
-
-    </div>
-
-</div>
-    <div class="notice">
-
-        <strong>Verification Notice</strong>
-
-        <p>
-            Polling-unit numbers, names and locations should be
-            added only from verified electoral information.
-        </p>
-
-    </div>
-
-</section>
-
-
-<footer>
 
     <p>
-        &copy; 2026 HON. Nurudeen Abayomi Sadeeq
+        HON. NURUDEEN ABAYOMI SADEEQ
     </p>
 
     <p>
         Nigeria Democratic Congress (NDC)
     </p>
 
+    <p>
+        Lagos State House of Assembly — Ojo Constituency II
+    </p>
+
+</header>
+
+
+<!-- =====================================================
+     MOBILE MENU BUTTON
+===================================================== -->
+
+<button
+    class="menu-toggle"
+    id="menuButton"
+    onclick="toggleMenu()"
+    aria-label="Open navigation menu"
+    aria-expanded="false">
+
+    ☰ MENU
+
+</button>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav class="main-nav" id="mainMenu">
+
+    <a href="index.html">Home</a>
+
+    <a href="about.html">About</a>
+
+    <a href="manifesto.html">Manifesto</a>
+
+    <a href="polling-units.html">Polling Units</a>
+
+    <a href="results.html">Results</a>
+
+    <a href="news.html">News</a>
+
+    <a href="events.html">Events</a>
+
+    <a href="gallery.html">Gallery</a>
+
+    <a href="contact.html">Contact</a>
+
+    <a href="join.html" class="join-link">
+        🔥 JOIN THE MOVEMENT
+    </a>
+
+</nav>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+<section class="pu-page">
+
+
+    <!-- =================================================
+         PAGE HEADER
+    ================================================= -->
+
+    <div class="pu-header">
+
+        <h2>
+            🗳️ POLLING UNIT DIRECTORY
+        </h2>
+
+        <p>
+            <strong>Ojo Constituency II</strong>
+        </p>
+
+        <p>
+            Search and explore the polling-unit directory
+            across the listed wards.
+        </p>
+
+        <span class="directory-badge">
+            170 POLLING UNITS • 6 WARDS
+        </span>
+
+    </div>
+
+
+    <!-- =================================================
+         SUMMARY
+    ================================================= -->
+
+    <div class="pu-summary">
+
+        <div class="pu-summary-card">
+
+            <p>
+                Total Polling Units
+            </p>
+
+            <h2 id="totalPU">
+                170
+            </h2>
+
+        </div>
+
+
+        <div class="pu-summary-card">
+
+            <p>
+                Wards
+            </p>
+
+            <h2 id="totalWards">
+                6
+            </h2>
+
+        </div>
+
+
+        <div class="pu-summary-card">
+
+            <p>
+                Existing PUs
+            </p>
+
+            <h2 id="existingPU">
+                0
+            </h2>
+
+        </div>
+
+
+        <div class="pu-summary-card">
+
+            <p>
+                New PUs
+            </p>
+
+            <h2 id="newPU">
+                0
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         SEARCH PANEL
+    ================================================= -->
+
+    <section class="search-panel">
+
+        <h3 class="search-title">
+            🔎 FIND A POLLING UNIT
+        </h3>
+
+
+        <div class="search-row">
+
+            <div class="pu-search">
+
+                <input
+                    id="puSearch"
+                    type="search"
+                    autocomplete="off"
+                    placeholder="Search PU number, location or ward..."
+                    aria-label="Search polling units">
+
+            </div>
+
+
+            <button
+                type="button"
+                class="clear-button"
+                onclick="clearSearch()">
+
+                CLEAR
+
+            </button>
+
+        </div>
+
+
+        <p class="search-help">
+            Example: search for <strong>Ilogbo</strong>,
+            <strong>24-17-06-001</strong>,
+            <strong>Shibiri</strong> or <strong>Ward F</strong>.
+        </p>
+
+
+        <!-- WARD FILTER -->
+
+        <div class="ward-filter">
+
+            <button
+                type="button"
+                class="active"
+                data-ward="all">
+
+                ALL WARDS
+
+            </button>
+
+            <button
+                type="button"
+                data-ward="D">
+
+                WARD D
+
+            </button>
+
+            <button
+                type="button"
+                data-ward="F">
+
+                WARD F
+
+            </button>
+
+            <button
+                type="button"
+                data-ward="I">
+
+                WARD I
+
+            </button>
+
+            <button
+                type="button"
+                data-ward="G">
+
+                WARD G
+
+            </button>
+
+            <button
+                type="button"
+                data-ward="J">
+
+                WARD J
+
+            </button>
+
+            <button
+                type="button"
+                data-ward="TAFI">
+
+                TAFI
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <div
+        class="search-results"
+        id="searchResults">
+
+        Showing all 170 polling units
+
+    </div>
+
+
+    <!-- =================================================
+         WARD LIST
+    ================================================= -->
+
+    <div class="ward-list" id="wardList">
+
+
+        <!-- =================================================
+             WARD D
+        ================================================= -->
+
+        <section
+            class="ward-card"
+            data-ward="D">
+
+            <div class="ward-heading">
+
+                <h2>
+                    Ward D — Ijanikin
+                </h2>
+
+                <p>
+                    <strong>43 Polling Units</strong>
+                </p>
+
+            </div>
+
+
+            <div class="polling-unit-list">
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-001
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT NO. 8 KOMOLAFE AIYETORO, IJANIKIN
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-002
+                    </span>
+
+                    <span class="pu-location">
+                        IN FRONT OF NO. 9 KOSOKO ST. AIYETORO, IJANIKIN
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-003
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT THE GATE OF EXT. AFFAIRS STAFF QUARTERS
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-004
+                    </span>
+
+                    <span class="pu-location">
+                        JUNCTION OF OWOSENI ST./AMOSU ST. IJANIKIN
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-005
+                    </span>
+
+                    <span class="pu-location">
+                        JUNCTION OF ALAFIA/AMOSU ST. SIDE 'A'
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-006
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT ALAFIA/AMOSU IGBORO
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-007
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT JUNCTION OF RAFIU IGBORO/ALOGBE ST.
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-008
+                    </span>
+
+                    <span class="pu-location">
+                        GOVT. SEC. SCH., IJANIKIN
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-009
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE NEAR PALACE, IJANIKIN
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-010
+                    </span>
+
+                    <span class="pu-location">
+                        IN FRONT OF PHOTO-CLINIC IJANIKIN
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-011
+                    </span>
+
+                    <span class="pu-location">
+                        BESIDE NO. 28, OWODE ST. IJANIKIN
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-012
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT NO. 4 OWODE ST. IJANIKIN
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-013
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT THE BACK OF CELE BUS STOP IJANIKIN I
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-014
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT THE BACK OF CELE BUS STOP IJANIKIN II
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-015
+                    </span>
+
+                    <span class="pu-location">
+                        WITHIN THE COMPOUND (CAMPUS) NEAR AOCOED GATE (NOW LASUED)
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-016
+                    </span>
+
+                    <span class="pu-location">
+                        IN FRONT OF NO. 9 KOSOKO ST.
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-017
+                    </span>
+
+                    <span class="pu-location">
+                        JUNCTION OF OWOSENI/AMOSU ST. IJANIKIN
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-018
+                    </span>
+
+                    <span class="pu-location">
+                        JUNCTION OF OWOSENI ST. IJANIKIN
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-019
+                    </span>
+
+                    <span class="pu-location">
+                        AT NO. 4 FOLAJIMI BLESSING ST. ALASIA IJANIKIN
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-020
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT PALACE FRONTAGE
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-021
+                    </span>
+
+                    <span class="pu-location">
+                        PALACE FRONTAGE (OPEN SPACE NEAR THE PRY. SCH.)
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-022
+                    </span>
+
+                    <span class="pu-location">
+                        IN FRONT OF NO. 2 ARAROMI ST. IJANIKIN
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-023
+                    </span>
+
+                    <span class="pu-location">
+                        IN FRONT OF NO. 4, ARAROMI ST. IJANIKIN
+                    </span>
+
+                    <span class="pu-status existing">
+                        EXISTING PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-024
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT OYABIYI JUNCTION IBASA ROAD
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-025
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT IBEFU OFF ONIJANIKIN ROAD
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-026
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE NEAR ADIO BUS STOP
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-027
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE INFRONT OF UNITY ESTATE
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-028
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT THE JUNCTION OF AGO IDOSA STR.
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-029
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT 20 ODOFIN STREET
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-030
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT 5/6 ODOFIN COMPOUND
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-031
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE BESIDE 28, OWODE STREET IJANIKIN
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-032
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT IJANIKIN CENTRAL MOSQUE
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-033
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT 8 ALOGBE IGBORO STREET
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-034
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT 30 PALACE ROAD IJANIKIN
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-035
+                    </span>
+
+                    <span class="pu-location">
+                        FRONT OF HIBAT FILLING STATION IJANIKIN
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-036
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT OLUREMI TINUBU HALL AOCOED (NOW LASUED)
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-037
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT AOCOED SECOND GATE (NOW LASUED)
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-038
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT ONIJANIKIN STREET
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-039
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT OWODE/AMOSU STREET
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-040
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT THE BACK OF IJANIKIN POLICE STATION
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-041
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE AT AGO ARE STREET ALASIA IJANIKIN
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-042
+                    </span>
+
+                    <span class="pu-location">
+                        OPEN SPACE BY MASHALASHI JUNCTION IJANIKIN
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+
+                <div class="polling-unit">
+
+                    <span class="pu-code">
+                        24-17-04-043
+                    </span>
+
+                    <span class="pu-location">
+                        BESIDE OBA PALACE IJANIKIN
+                    </span>
+
+                    <span class="pu-status new-pu">
+                        NEW PU
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             WARD F
+        ================================================= -->
+
+        <section
+            class="ward-card"
+            data-ward="F">
+
+            <div class="ward-heading">
+
+                <h2>
+                    Ward F — Ilogbo
+                </h2>
+
+                <p>
+                    <strong>80 Polling Units</strong>
+                </p>
+
+            </div>
+
+
+            <div class="polling-unit-list">
+
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-001</span><span class="pu-location">BESIDE THE PLAYING GROUND, KETU</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-002</span><span class="pu-location">OPEN SPACE WITHIN KETU VILLAGE NEAR FALOYES</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-003</span><span class="pu-location">L.A. PRY. SCH. ERA I</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-004</span><span class="pu-location">L.A. PRY. SCH. ERA II</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-005</span><span class="pu-location">L.A. PRY. SCH. ILOGBO (SIDE A)</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-006</span><span class="pu-location">L.A. PRY. SCH. ILOGBO (SIDE B)</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-007</span><span class="pu-location">OPEN SPACE AT PLAYING GROUND</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-008</span><span class="pu-location">SHIBIRI JUNCTION BY ETEGBIN RD (RIGHT SIDE) I</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-009</span><span class="pu-location">SHIBIRI JUNCTION BY ETEGBIN RD (RIGHT SIDE) II</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-010</span><span class="pu-location">JUNCTION OF ORAWA ST. OTTO I</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-011</span><span class="pu-location">JUNCTION OF ORAWA ST. OTTO II</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-012</span><span class="pu-location">OPEN SPACE AT IJAKE'S OTTO</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-013</span><span class="pu-location">IJAKE'S JUNCTION</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-014</span><span class="pu-location">OPEN SPACE IN FRONT OF AFRICAN METH. CHURCH, OTTO</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-015</span><span class="pu-location">OPEN SPACE AT GORIOLA'S JUNCTION OTTO-AWORI - I</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-016</span><span class="pu-location">OPEN SPACE AT GORIOLA'S JUNCTION OTTO-AWORI- II</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-017</span><span class="pu-location">OPEN SPACE AT ARAROMI ST.</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-018</span><span class="pu-location">OPEN SPACE AT OTTO AWORI B/STOP ALONG THE ROAD</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-019</span><span class="pu-location">OPEN SPACE AT THE FED. GOVT. COLLEGE IJANIKIN</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-020</span><span class="pu-location">OPEN SPACE AT THE JUNCTION OF ITIRE ILOGBO PLAYING GROUND</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-021</span><span class="pu-location">OPEN SPACE AT THE JUNCTION OF SHIBIRI VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-022</span><span class="pu-location">OPEN SPACE WITHIN IMUDE VILLAGE AT IYALODE B/STOP</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-023</span><span class="pu-location">OPEN SPACE WITHIN ADALOKO VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-024</span><span class="pu-location">ILOGBO CENTRE D, L.A. PRY. SCH. ILOGBO</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-025</span><span class="pu-location">OPEN SPACE WITHIN OKE AGBO VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-026</span><span class="pu-location">OPEN SPACE AT DIVINE BUS STOP KETU</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-027</span><span class="pu-location">OPEN SPACE AT CHARLES STREET NEAR ADEKANBI PAKO B/STOP</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-028</span><span class="pu-location">OPEN SPACE INFRONT OF COMMUNITY PRY SCH</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-029</span><span class="pu-location">OPEN SPACE BESIDE KENRAL COLLEGE KETU</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-030</span><span class="pu-location">OPEN SPACE INFRONT OF WABROS HOTEL ERA</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-031</span><span class="pu-location">OPEN SPACE IN FRONT OF SAM-JULLY HOTEL ABULE</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-032</span><span class="pu-location">OPEN SPACE AT ATUNSE BUS STOP ABULE ERA</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-033</span><span class="pu-location">OPEN SPACE IN FRONT OF LAWYER EGUNTOLA CLOSE, ABULE, ADALOKO RD</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-034</span><span class="pu-location">OPEN SPACE AT ADELE BUS STOP ERA</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-035</span><span class="pu-location">OPEN SPACE AT IYALODE BUS STOP ILOGBO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-036</span><span class="pu-location">OPEN SPACE AT OLORI EBI BUS STOP ILOGBO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-037</span><span class="pu-location">OPEN SPACE AT MODUPE ALATEOWO STREET, ILOGBO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-038</span><span class="pu-location">OPEN SPACE AT PAKO BUS STOP</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-039</span><span class="pu-location">OPEN SPACE AT SHEBAS BUS STOP ILOGBO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-040</span><span class="pu-location">OPEN SPACE AT OKE AGBO JUNCTION</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-041</span><span class="pu-location">OPEN SPACE AT BABALOLA BUS STOP</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-042</span><span class="pu-location">OPEN SPACE AT MOSHALASHI BUS STOP ILOGBO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-043</span><span class="pu-location">OPEN SPACE AT TRANSFORMER BUS STOP</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-044</span><span class="pu-location">OPEN SPACE AT ALAGAYI MARKET ILOGBO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-045</span><span class="pu-location">OPEN SPACE AT MUSTAPHA STREET</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-046</span><span class="pu-location">OPEN SPACE AT HEALTH CENTRE OKE- IJEWU ILOGBO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-047</span><span class="pu-location">OPEN SPACE AT PRAYING GROUND ANIMASHAUN B/ STOP</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-048</span><span class="pu-location">OPEN SPACE AT 7.7 JUNCTION SHIBIRI</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-049</span><span class="pu-location">OPEN SPACE AT AJAKAYE STREET SHIBIRI</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-050</span><span class="pu-location">OPEN SPACE AT JOSEPHINE STREET IGBO NLA SHIBIRI</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-051</span><span class="pu-location">OPEN SPACE AT BAALE STREET BY CENTRAL MOSQUE</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-052</span><span class="pu-location">OPEN SPACE AT KAREEM STREET SHIBIRI</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-053</span><span class="pu-location">BESIDE OTTO- AWORI TOWN HALL</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-054</span><span class="pu-location">OPEN SPACE AT AGBENI STREET, OTTO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-055</span><span class="pu-location">OPEN SPACE AT MATORI STREET OTTO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-056</span><span class="pu-location">OPEN SPACE IN FRONT OF ULTIMATE HOTEL OTTO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-057</span><span class="pu-location">OPEN SPACE INFRONT OF GORIOLA MOSQUE OTTO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-058</span><span class="pu-location">OPEN SPACE AT IDERELU JUNCTION OTTO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-059</span><span class="pu-location">OPEN SPACE AT ONIKOSI AVENUE OTTO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-060</span><span class="pu-location">OPEN SPACE AT SIGNS AND WONDERS BUS STOP</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-061</span><span class="pu-location">OPEN SPACE BESIDE MY BUILDER NUR &amp; PRY SCH. FEDERAL SECOND GATE</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-062</span><span class="pu-location">OPEN SPACE AT THE JUNCTION OF AJOSE STREET IYANA-ERA ROAD</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-063</span><span class="pu-location">OPEN SPACE AT TOPE BUS STOP ILOGBO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-064</span><span class="pu-location">OPEN SPACE BY TOPE MARKET ILOGBO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-065</span><span class="pu-location">OPEN SPACE AT DEBOTEL STREET ITIRE</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-066</span><span class="pu-location">OPEN SPACE AT OLOWOPARIOLA STREET SHIBIRI</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-067</span><span class="pu-location">OPEN SPACE BY SANTANA BUS STOP SHIBIRI</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-068</span><span class="pu-location">OPEN SPACE AT AFOLABI STREET SHIBIRI</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-069</span><span class="pu-location">OPEN SPACE AT ORITSHA COMMUNITY</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-070</span><span class="pu-location">AYEKOTO COMMUNITY PRIMARY SCHOOL</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-071</span><span class="pu-location">AJEWANWA COMMUNITY PRIMARY SCHOOL</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-072</span><span class="pu-location">OPEN SPACE AT ITAKETE COMMUNITY</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-073</span><span class="pu-location">OPEN SPACE AT ABAPASHA STREET IMUDE</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-074</span><span class="pu-location">OPEN SPACE OPPOSITE TRANSFORMER ABADI BUS STOP</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-075</span><span class="pu-location">OPEN SPACE AT CALABAR MARKET</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-076</span><span class="pu-location">OPEN SPACE INFRONT OF MEGA STREET ILOGBO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-077</span><span class="pu-location">OPEN SPACE AT OREMETA JUNCTION ILOGBO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-078</span><span class="pu-location">OPEN SPACE AT TAILOR STREET</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-079</span><span class="pu-location">OPEN SPACE AT MASHALASHI STREET BY GANIU ATANDA JUNCTION</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-06-080</span><span class="pu-location">OPEN SPACE AT LONDON STREET OKE AGBO</span><span class="pu-status new-pu">NEW PU</span></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             WARD I
+        ================================================= -->
+
+        <section
+            class="ward-card"
+            data-ward="I">
+
+            <div class="ward-heading">
+
+                <h2>
+                    Ward I — Etegbin
+                </h2>
+
+                <p>
+                    <strong>22 Polling Units</strong>
+                </p>
+
+            </div>
+
+
+            <div class="polling-unit-list">
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-001</span><span class="pu-location">COMMUNITY HALL ILEMBA AWORI</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-002</span><span class="pu-location">ILEMBA AWORI (RASAKI BUS-STOP)</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-003</span><span class="pu-location">ILEMBA AWORI (NEAR DALINGO HOTEL) IYANA BUS-STOP I</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-004</span><span class="pu-location">ILEMBA AWORI (NEAR DALINGO HOTEL) IYANA BUS-STOP II</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-005</span><span class="pu-location">EGAN COMMUNITY HALL</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-006</span><span class="pu-location">ST. PETERS PRY. SCH. ISHAGIRA</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-007</span><span class="pu-location">L.A. PRY. SCH. ETEGBIN I</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-008</span><span class="pu-location">L.A. PRY. SCH. ETEGBIN II</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-009</span><span class="pu-location">OPEN SPACE AT ONITIDE STREET ILEMBA AWORI</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-010</span><span class="pu-location">OPEN SPACE AT CELE STREET OFF AKINIBA STR.</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-011</span><span class="pu-location">OPEN SPACE AT JUNCTION OF ILELABOYE STR. ILEMBA AWORI</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-012</span><span class="pu-location">OPEN SPACE AT ONI ORISAN STREET ILEMBA AWORI</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-013</span><span class="pu-location">OPEN SPACE AT ALUBARIKA BUS STOP</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-014</span><span class="pu-location">OPEN SPACE AT YOTOMI STREET, ILEMBA AWORI</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-015</span><span class="pu-location">OPEN SPACE AT THE JUNCTION OF MOSAFEJO COMPOUND</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-016</span><span class="pu-location">OPEN SPACE AT HOUSE NO 1 IDI OSHO STREET ISHAGIRA</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-017</span><span class="pu-location">OPEN SPACE AT JUNCTION OF KOSOKO ELEMIJAYE RD.</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-018</span><span class="pu-location">OPEN SPACE AT JUNCTION OF ILAJA STREET</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-019</span><span class="pu-location">OPEN SPACE AT JUNCTION OF MOB STREET</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-020</span><span class="pu-location">OPEN SPACE AT JUNCTION OF LADUBA STREET</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-021</span><span class="pu-location">OPEN SPACE AT JUNCTION OF OLAWOLE CLOSE</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-09-022</span><span class="pu-location">OPEN SPACE AT JUNCTION OF MOSHALASHI STREET</span><span class="pu-status new-pu">NEW PU</span></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             WARD G
+        ================================================= -->
+
+        <section
+            class="ward-card"
+            data-ward="G">
+
+            <div class="ward-heading">
+
+                <h2>
+                    Ward G — Irewe
+                </h2>
+
+                <p>
+                    <strong>9 Polling Units</strong>
+                </p>
+
+            </div>
+
+
+            <div class="polling-unit-list">
+
+                <div class="polling-unit"><span class="pu-code">24-17-07-001</span><span class="pu-location">OSOLU SEC. SCHOOL IREWE I</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-07-002</span><span class="pu-location">OSOLU SEC. SCHOOL IREWE II</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-07-003</span><span class="pu-location">OPEN SPACE WITHIN OJORIN VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-07-004</span><span class="pu-location">COMMUNITY HALL ITOGBESA I</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-07-005</span><span class="pu-location">COMMUNITY HALL ITOGBESA II</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-07-006</span><span class="pu-location">OPEN SPACE WITHIN EREKUN VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-07-007</span><span class="pu-location">L.A. PRY. SCHOOL OKOLUNDUN</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-07-008</span><span class="pu-location">OPEN SPACE WITHIN ORI GELE</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-07-009</span><span class="pu-location">OPEN SPACE WITHIN ONIGBONGBO VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             WARD J
+        ================================================= -->
+
+        <section
+            class="ward-card"
+            data-ward="J">
+
+            <div class="ward-heading">
+
+                <h2>
+                    Ward J — Idoluwo
+                </h2>
+
+                <p>
+                    <strong>8 Polling Units</strong>
+                </p>
+
+            </div>
+
+
+            <div class="polling-unit-list">
+
+                <div class="polling-unit"><span class="pu-code">24-17-10-001</span><span class="pu-location">ST. MARY PRY. SCHOOL IDOLUWO-ILE I</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-10-002</span><span class="pu-location">ST. MARY PRY. SCHOOL IDOLUWO-ILE II</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-10-003</span><span class="pu-location">ST. PHILIPS PRY. SCH. ESOFIN</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-10-004</span><span class="pu-location">OPEN SPACE WITHIN OJOTA VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-10-005</span><span class="pu-location">ST. PHILIPS PRY. SCH. ESOFIN</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-10-006</span><span class="pu-location">OPEN SPACE WITHIN OJOTA VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-10-007</span><span class="pu-location">ST PHILIP PRIMARY SCHOOL ESOFIN I</span><span class="pu-status new-pu">NEW PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">24-17-10-008</span><span class="pu-location">ST PHILIP PRIMARY SCHOOL ESOFIN II</span><span class="pu-status new-pu">NEW PU</span></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TAFI
+        ================================================= -->
+
+        <section
+            class="ward-card"
+            data-ward="TAFI">
+
+            <div class="ward-heading">
+
+                <h2>
+                    Tafi Ward
+                </h2>
+
+                <p>
+                    <strong>8 Polling Units</strong>
+                </p>
+
+            </div>
+
+
+            <div class="polling-unit-list">
+
+                <div class="polling-unit"><span class="pu-code">001</span><span class="pu-location">L.A. PRIMARY SCHOOL MOBA</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">002</span><span class="pu-location">COMMUNITY HALL IBODE</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">003</span><span class="pu-location">L.A. PRY. SCH. ALAGUNTAN</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">004</span><span class="pu-location">OPEN SPACE WITHIN AGAJA VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">005</span><span class="pu-location">SALVATION ARMY PRY. SCH. OLOMOMETA</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">006</span><span class="pu-location">IGBOLOGBO VILLAGE (OPEN SPACE) WITHIN THE VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">007</span><span class="pu-location">ST. FRANCIS PRY. SCH. IGBO-OJA</span><span class="pu-status existing">EXISTING PU</span></div>
+
+                <div class="polling-unit"><span class="pu-code">008</span><span class="pu-location">L.A. PRY. SCHOOL TAFFI AWORI</span><span class="pu-status existing">EXISTING PU</span></div>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+    <!-- =================================================
+         NO RESULTS
+    ================================================= -->
+
+    <div
+        class="no-results"
+        id="noResults">
+
+        <h3>
+            🔎 No polling unit found
+        </h3>
+
+        <p>
+            Try another polling-unit number, ward,
+            community or location.
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         VERIFICATION NOTICE
+    ================================================= -->
+
+    <div class="notice">
+
+        <strong>
+            ⚠️ VERIFICATION NOTICE
+        </strong>
+
+        <p>
+            Polling-unit numbers, names and locations shown
+            on this page are provided for constituency
+            directory purposes and should be verified against
+            official electoral information before publication
+            or use.
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         BACK TO TOP
+    ================================================= -->
+
+    <div class="back-top">
+
+        <a href="#top">
+            ↑ BACK TO TOP
+        </a>
+
+    </div>
+
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        &copy; 2026 HON. NURUDEEN ABAYOMI SADEEQ
+    </p>
+
+    <p>
+        Nigeria Democratic Congress (NDC)
+        | Ojo Constituency II
+    </p>
+
+    <p>
+        IMOLE 2027 —
+        Service • Development • Accountability
+    </p>
+
 </footer>
-    <script>
-function searchPollingUnits() {
-    const input = document.getElementById("puSearch");
-    const filter = input.value.toLowerCase().trim();
-
-    const wardCards = document.querySelectorAll(".ward-card");
-
-    wardCards.forEach(function(ward) {
-        const wardText = ward.textContent.toLowerCase();
-
-        const words = filter
-            .split(/\s+/)
-            .filter(Boolean);
-
-        const wardMatch = words.every(function(word) {
-            return wardText.includes(word);
-        });
-
-        const units = ward.querySelectorAll(".polling-unit-list > div");
-        let unitMatch = false;
-
-        units.forEach(function(unit) {
-            const unitText = unit.textContent.toLowerCase();
-
-            const match = filter === "" ||
-                words.every(function(word) {
-                    return unitText.includes(word);
-                });
-
-            unit.style.display = match ? "" : "none";
-
-            if (match) {
-                unitMatch = true;
-            }
-        });
-
-        if (filter === "" || wardMatch || unitMatch) {
-            ward.style.display = "";
-            
-            if (wardMatch) {
-                units.forEach(function(unit) {
-                    unit.style.display = "";
-                });
-            }
-        } else {
-            ward.style.display = "none";
-        }
-    });
-}
-</script>
-    <script>
-function searchPollingUnits() {
-    const input = document.getElementById("puSearch");
-    const filter = input.value.toLowerCase().trim();
-
-    const wardCards = document.querySelectorAll(".ward-card");
-
-    wardCards.forEach(function(ward) {
-        const wardText = ward.textContent.toLowerCase();
-
-        const words = filter
-            .split(/\s+/)
-            .filter(Boolean);
-
-        const wardMatch = words.every(function(word) {
-            return wardText.includes(word);
-        });
-
-        const units = ward.querySelectorAll(".polling-unit-list > div");
-        let unitMatch = false;
-
-        units.forEach(function(unit) {
-            const unitText = unit.textContent.toLowerCase();
-
-            const match = filter === "" ||
-                words.every(function(word) {
-                    return unitText.includes(word);
-                });
-
-            unit.style.display = match ? "" : "none";
-
-            if (match) {
-                unitMatch = true;
-            }
-        });
-
-        if (filter === "" || wardMatch || unitMatch) {
-            ward.style.display = "";
-
-            if (wardMatch) {
-                units.forEach(function(unit) {
-                    unit.style.display = "";
-                });
-            }
-        } else {
-            ward.style.display = "none";
-        }
-    });
-}
 
 
-/* AUTOMATIC POLLING UNIT STATISTICS */
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
-function updatePollingUnitStats() {
+<script>
 
-    const wardCards = document.querySelectorAll(".ward-card");
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
 
-    let totalPU = 0;
-    let existingPU = 0;
-    let newPU = 0;
-    let totalWards = 0;
+    function toggleMenu() {
 
-    wardCards.forEach(function(ward) {
+        const menu =
+            document.getElementById("mainMenu");
 
-        const units = ward.querySelectorAll(
-            ".polling-unit-list > div"
+        const button =
+            document.getElementById("menuButton");
+
+        menu.classList.toggle("show");
+
+        const isOpen =
+            menu.classList.contains("show");
+
+        button.setAttribute(
+            "aria-expanded",
+            isOpen
         );
 
-        if (units.length > 0) {
-            totalWards++;
-        }
+    }
 
-        units.forEach(function(unit) {
 
-            totalPU++;
+    /* =====================================================
+       CLOSE MOBILE MENU AFTER CLICK
+    ===================================================== */
 
-            const status = unit.textContent.toLowerCase();
+    document
+        .querySelectorAll(".main-nav a")
+        .forEach(function(link) {
 
-            if (status.includes("existing pu")) {
-                existingPU++;
+            link.addEventListener(
+                "click",
+                function() {
+
+                    const menu =
+                        document.getElementById("mainMenu");
+
+                    const button =
+                        document.getElementById("menuButton");
+
+                    menu.classList.remove("show");
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       VARIABLES
+    ===================================================== */
+
+    const searchInput =
+        document.getElementById("puSearch");
+
+    const wardCards =
+        document.querySelectorAll(".ward-card");
+
+    const noResults =
+        document.getElementById("noResults");
+
+    const searchResults =
+        document.getElementById("searchResults");
+
+    let selectedWard = "all";
+
+
+    /* =====================================================
+       SEARCH
+    ===================================================== */
+
+    function searchPollingUnits() {
+
+        const search =
+            searchInput.value
+                .toLowerCase()
+                .trim();
+
+        const words =
+            search
+                .split(/\s+/)
+                .filter(Boolean);
+
+        let visibleUnits = 0;
+        let totalMatchingWards = 0;
+
+
+        wardCards.forEach(function(ward) {
+
+            const wardName =
+                ward.textContent.toLowerCase();
+
+            const wardType =
+                ward.getAttribute("data-ward");
+
+            const wardAllowed =
+                selectedWard === "all" ||
+                wardType === selectedWard;
+
+
+            const units =
+                ward.querySelectorAll(".polling-unit");
+
+
+            let matchingUnits = 0;
+
+
+            units.forEach(function(unit) {
+
+                const unitText =
+                    unit.textContent.toLowerCase();
+
+                const textMatch =
+                    search === "" ||
+                    words.every(function(word) {
+                        return unitText.includes(word);
+                    });
+
+
+                unit.style.display =
+                    textMatch ? "" : "none";
+
+
+                if (textMatch) {
+                    matchingUnits++;
+                    visibleUnits++;
+                }
+
+            });
+
+
+            /*
+             * If the search matches the ward name,
+             * display all units in that ward.
+             */
+
+            const wardNameMatch =
+                search !== "" &&
+                words.every(function(word) {
+                    return wardName.includes(word);
+                });
+
+
+            if (wardNameMatch) {
+
+                units.forEach(function(unit) {
+
+                    unit.style.display = "";
+
+                });
+
+                matchingUnits =
+                    units.length;
+
             }
 
-            if (status.includes("new pu")) {
-                newPU++;
+
+            const shouldShow =
+                wardAllowed &&
+                (
+                    search === "" ||
+                    matchingUnits > 0 ||
+                    wardNameMatch
+                );
+
+
+            ward.classList.toggle(
+                "hidden",
+                !shouldShow
+            );
+
+
+            if (shouldShow) {
+                totalMatchingWards++;
             }
 
         });
 
-    });
 
-    document.getElementById("totalPU").textContent = totalPU;
-    document.getElementById("totalWards").textContent = totalWards;
-    document.getElementById("existingPU").textContent = existingPU;
-    document.getElementById("newPU").textContent = newPU;
-}
+        /*
+         * Calculate visible polling units again
+         * after ward filtering.
+         */
+
+        visibleUnits = 0;
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    updatePollingUnitStats();
-});
+        wardCards.forEach(function(ward) {
+
+            if (
+                ward.classList.contains("hidden")
+            ) {
+                return;
+            }
+
+
+            ward.querySelectorAll(".polling-unit")
+                .forEach(function(unit) {
+
+                    if (
+                        unit.style.display !== "none"
+                    ) {
+                        visibleUnits++;
+                    }
+
+                });
+
+        });
+
+
+        /*
+         * No result message.
+         */
+
+        if (visibleUnits === 0) {
+
+            noResults.classList.add("show");
+
+        } else {
+
+            noResults.classList.remove("show");
+
+        }
+
+
+        /*
+         * Search status.
+         */
+
+        if (search === "" &&
+            selectedWard === "all") {
+
+            searchResults.textContent =
+                "Showing all 170 polling units";
+
+        } else {
+
+            searchResults.textContent =
+                "Showing " +
+                visibleUnits +
+                " matching polling unit" +
+                (visibleUnits === 1 ? "" : "s");
+
+        }
+
+    }
+
+
+    /* =====================================================
+       CLEAR SEARCH
+    ===================================================== */
+
+    function clearSearch() {
+
+        searchInput.value = "";
+
+        selectedWard = "all";
+
+
+        document
+            .querySelectorAll(".ward-filter button")
+            .forEach(function(button) {
+
+                button.classList.remove("active");
+
+            });
+
+
+        document
+            .querySelector(
+                '.ward-filter button[data-ward="all"]'
+            )
+            .classList.add("active");
+
+
+        searchPollingUnits();
+
+        searchInput.focus();
+
+    }
+
+
+    /* =====================================================
+       WARD FILTER
+    ===================================================== */
+
+    document
+        .querySelectorAll(".ward-filter button")
+        .forEach(function(button) {
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    document
+                        .querySelectorAll(
+                            ".ward-filter button"
+                        )
+                        .forEach(function(btn) {
+
+                            btn.classList.remove(
+                                "active"
+                            );
+
+                        });
+
+
+                    button.classList.add("active");
+
+
+                    selectedWard =
+                        button.getAttribute(
+                            "data-ward"
+                        );
+
+
+                    searchPollingUnits();
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       LIVE SEARCH
+    ===================================================== */
+
+    searchInput.addEventListener(
+        "input",
+        searchPollingUnits
+    );
+
+
+    /* =====================================================
+       POLLING UNIT STATISTICS
+    ===================================================== */
+
+    function updatePollingUnitStats() {
+
+        let total = 0;
+
+        let existing = 0;
+
+        let fresh = 0;
+
+        let wards = 0;
+
+
+        wardCards.forEach(function(ward) {
+
+            const units =
+                ward.querySelectorAll(
+                    ".polling-unit"
+                );
+
+
+            if (units.length > 0) {
+                wards++;
+            }
+
+
+            units.forEach(function(unit) {
+
+                total++;
+
+
+                const status =
+                    unit
+                        .querySelector(".pu-status")
+                        .textContent
+                        .toLowerCase();
+
+
+                if (
+                    status.includes("existing")
+                ) {
+                    existing++;
+                }
+
+
+                if (
+                    status.includes("new")
+                ) {
+                    fresh++;
+                }
+
+            });
+
+        });
+
+
+        document.getElementById(
+            "totalPU"
+        ).textContent = total;
+
+
+        document.getElementById(
+            "totalWards"
+        ).textContent = wards;
+
+
+        document.getElementById(
+            "existingPU"
+        ).textContent = existing;
+
+
+        document.getElementById(
+            "newPU"
+        ).textContent = fresh;
+
+    }
+
+
+    /* =====================================================
+       START PAGE
+    ===================================================== */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function() {
+
+            updatePollingUnitStats();
+
+            searchPollingUnits();
+
+        }
+    );
+
 </script>
+
+
 </body>
 </html>
