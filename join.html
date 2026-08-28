@@ -50,13 +50,13 @@
             text-align: center;
             text-decoration: none;
             color: inherit;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
             transition: 0.3s;
         }
 
         .movement-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 9px 25px rgba(0,0,0,0.18);
+            box-shadow: 0 9px 25px rgba(0, 0, 0, 0.18);
         }
 
         .movement-card .icon {
@@ -77,7 +77,7 @@
             background: #fff;
             padding: 30px 20px;
             border-radius: 18px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
         }
 
         .join-form-section h2 {
@@ -128,7 +128,8 @@
             text-align: center;
         }
 
-        .whatsapp-box {
+        .whatsapp-box,
+        .donation-box {
             margin-top: 35px;
             text-align: center;
             padding: 25px;
@@ -145,12 +146,18 @@
             font-weight: bold;
         }
 
-        .donation-box {
-            margin-top: 35px;
-            padding: 25px;
-            text-align: center;
-            border-radius: 15px;
-            background: #f5f5f5;
+        .donation-details {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        .donation-details p {
+            line-height: 1.6;
+        }
+
+        #accountNumber {
+            font-size: 20px;
+            font-weight: bold;
         }
 
         .notice {
@@ -167,8 +174,16 @@
         }
 
         @media (max-width: 600px) {
+            .join-page {
+                padding: 30px 12px 50px;
+            }
+
             .join-header h1 {
                 font-size: 28px;
+            }
+
+            .movement-card {
+                padding: 25px 15px;
             }
         }
     </style>
@@ -229,59 +244,83 @@
     </div>
 
 
+    <!-- MOVEMENT OPTIONS -->
+
     <div class="movement-grid">
 
         <a href="#join-form" class="movement-card">
+
             <div class="icon">🌟</div>
+
             <h2>JOIN THE MOVEMENT</h2>
+
             <p>
                 Become an official supporter of the
                 IMOLE 2027 movement.
             </p>
+
         </a>
 
 
         <a href="#join-form" class="movement-card">
+
             <div class="icon">💃</div>
+
             <h2>IMOLE BABES</h2>
+
             <p>
                 Join the women supporting and mobilising
                 for IMOLE 2027.
             </p>
+
         </a>
 
 
         <a href="#join-form" class="movement-card">
+
             <div class="icon">🔥</div>
+
             <h2>IMOLE ARMY</h2>
+
             <p>
                 Stand with the movement and participate
                 in grassroots mobilisation.
             </p>
+
         </a>
 
 
         <a href="#join-form" class="movement-card">
+
             <div class="icon">🤝</div>
+
             <h2>VOLUNTEER</h2>
+
             <p>
                 Give your time, skills and energy
                 to support the movement.
             </p>
+
         </a>
 
 
         <a href="#donations" class="movement-card">
+
             <div class="icon">❤️</div>
+
             <h2>DONATIONS</h2>
+
             <p>
                 Support the movement through lawful
                 and transparent contributions.
             </p>
+
         </a>
 
     </div>
 
+
+    <!-- JOIN FORM -->
 
     <section class="join-form-section" id="join-form">
 
@@ -299,7 +338,9 @@
                 <input
                     type="text"
                     id="name"
+                    name="name"
                     placeholder="Enter your full name"
+                    autocomplete="name"
                     required>
 
             </div>
@@ -314,7 +355,9 @@
                 <input
                     type="tel"
                     id="phone"
+                    name="phone"
                     placeholder="Enter your phone number"
+                    autocomplete="tel"
                     required>
 
             </div>
@@ -326,19 +369,39 @@
                     Ward
                 </label>
 
-                <select id="ward" required>
+                <select id="ward" name="ward" required>
 
                     <option value="">
                         Select your ward
                     </option>
 
-                    <option>Ward D — Ijanikin</option>
-                    <option>Ward F — Ilogbo</option>
-                    <option>Ward G — Irewe</option>
-                    <option>Ward I — Etegbin</option>
-                    <option>Ward J — Idoluwo</option>
-                    <option>Tafi Ward</option>
-                    <option>Other</option>
+                    <option value="Ward D — Ijanikin">
+                        Ward D — Ijanikin
+                    </option>
+
+                    <option value="Ward F — Ilogbo">
+                        Ward F — Ilogbo
+                    </option>
+
+                    <option value="Ward G — Irewe">
+                        Ward G — Irewe
+                    </option>
+
+                    <option value="Ward I — Etegbin">
+                        Ward I — Etegbin
+                    </option>
+
+                    <option value="Ward J — Idoluwo">
+                        Ward J — Idoluwo
+                    </option>
+
+                    <option value="Tafi Ward">
+                        Tafi Ward
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
 
                 </select>
 
@@ -351,18 +414,35 @@
                     How would you like to participate?
                 </label>
 
-                <select id="interest" required>
+                <select id="interest" name="interest" required>
 
                     <option value="">
                         Select an option
                     </option>
 
-                    <option>Join the Movement</option>
-                    <option>IMOLE BABES</option>
-                    <option>IMOLE ARMY</option>
-                    <option>Volunteer</option>
-                    <option>Media & Communication</option>
-                    <option>Community Mobilisation</option>
+                    <option value="Join the Movement">
+                        Join the Movement
+                    </option>
+
+                    <option value="IMOLE BABES">
+                        IMOLE BABES
+                    </option>
+
+                    <option value="IMOLE ARMY">
+                        IMOLE ARMY
+                    </option>
+
+                    <option value="Volunteer">
+                        Volunteer
+                    </option>
+
+                    <option value="Media & Communication">
+                        Media & Communication
+                    </option>
+
+                    <option value="Community Mobilisation">
+                        Community Mobilisation
+                    </option>
 
                 </select>
 
@@ -377,13 +457,15 @@
 
                 <textarea
                     id="message"
+                    name="message"
                     placeholder="Tell us how you would like to support the movement..."></textarea>
 
             </div>
 
 
-            <button type="submit"
-                    class="join-button">
+            <button
+                type="submit"
+                class="join-button">
 
                 📱 SEND REGISTRATION ON WHATSAPP
 
@@ -391,12 +473,16 @@
 
         </form>
 
+
         <p class="success-note">
-            Your registration details will open in WhatsApp for submission.
+            Your registration details will open in WhatsApp
+            for submission.
         </p>
 
     </section>
 
+
+    <!-- WHATSAPP CONTACT -->
 
     <section class="whatsapp-box">
 
@@ -407,152 +493,203 @@
             and receive campaign updates.
         </p>
 
-        <a href="https://wa.me/2348033002235"
-           class="whatsapp-button"
-           target="_blank"
-           rel="noopener">
+        <a
+            href="https://wa.me/2348033002235"
+            class="whatsapp-button"
+            target="_blank"
+            rel="noopener noreferrer">
 
             CHAT WITH US ON WHATSAPP
 
         </a>
-<section class="donation-box" id="donations">
 
-    <h2>❤️ SUPPORT IMOLE 2027</h2>
+    </section>
 
-    <p>
-        Support the IMOLE 2027 movement through
-        lawful, transparent and properly documented
-        contributions.
-    </p>
 
-    <div class="donation-details">
+    <!-- DONATIONS -->
+
+    <section class="donation-box" id="donations">
+
+        <h2>❤️ SUPPORT IMOLE 2027</h2>
 
         <p>
-            <strong>Bank:</strong><br>
-            Opay
+            Support the IMOLE 2027 movement through
+            lawful, transparent and properly documented
+            contributions.
         </p>
 
-        <p>
-            <strong>Account Name:</strong><br>
-            Nurudeen Abayomi Sadeeq
+
+        <div class="donation-details">
+
+            <p>
+
+                <strong>Bank:</strong><br>
+
+                Opay
+
+            </p>
+
+
+            <p>
+
+                <strong>Account Name:</strong><br>
+
+                Nurudeen Abayomi Sadeeq
+
+            </p>
+
+
+            <p>
+
+                <strong>Account Number:</strong><br>
+
+                <span id="accountNumber">
+                    8159461760
+                </span>
+
+            </p>
+
+
+            <button
+                type="button"
+                onclick="copyAccountNumber()"
+                class="join-button">
+
+                📋 COPY ACCOUNT NUMBER
+
+            </button>
+
+
+            <p
+                id="copyMessage"
+                class="success-note"
+                style="display:none;">
+
+                ✅ Account number copied successfully.
+
+            </p>
+
+        </div>
+
+
+        <p class="notice">
+
+            Please ensure all contributions are made voluntarily
+            and in accordance with applicable laws and electoral
+            regulations.
+
         </p>
 
-        <p>
-            <strong>Account Number:</strong><br>
-
-            <span id="accountNumber">
-                8159461760
-            </span>
-        </p>
-
-        <button
-            type="button"
-            onclick="copyAccountNumber()"
-            class="join-button">
-
-            📋 COPY ACCOUNT NUMBER
-
-        </button>
-
-        <p id="copyMessage"
-           class="success-note"
-           style="display:none;">
-
-            ✅ Account number copied successfully.
-
-        </p>
-
-    </div>
-
-    <p class="notice">
-        Please ensure all contributions are made voluntarily
-        and in accordance with applicable laws and electoral
-        regulations.
-    </p>
+    </section>
 
 </section>
+
+</main>
+
+
+<!-- JAVASCRIPT -->
 
 <script>
 
 function copyAccountNumber() {
 
     const accountNumber =
-        document.getElementById("accountNumber").textContent.trim();
+        document.getElementById("accountNumber")
+        .textContent
+        .trim();
 
-    navigator.clipboard.writeText(accountNumber)
-        .then(function() {
+    if (navigator.clipboard) {
 
-            document.getElementById("copyMessage").style.display = "block";
+        navigator.clipboard.writeText(accountNumber)
 
-            setTimeout(function() {
+            .then(function () {
 
-                document.getElementById("copyMessage").style.display = "none";
+                const copyMessage =
+                    document.getElementById("copyMessage");
 
-            }, 3000);
+                copyMessage.style.display = "block";
 
-        })
-        .catch(function() {
+                setTimeout(function () {
 
-            alert("Account Number: " + accountNumber);
+                    copyMessage.style.display = "none";
 
-        });
+                }, 3000);
+
+            })
+
+            .catch(function () {
+
+                alert(
+                    "Account Number: " +
+                    accountNumber
+                );
+
+            });
+
+    } else {
+
+        alert(
+            "Account Number: " +
+            accountNumber
+        );
+
+    }
 
 }
 
-</script>
-    
+
 function sendRegistrationToWhatsApp(event) {
 
     event.preventDefault();
 
+
     const name =
-        document.getElementById("name").value.trim();
+        document.getElementById("name")
+        .value
+        .trim();
+
 
     const phone =
-        document.getElementById("phone").value.trim();
+        document.getElementById("phone")
+        .value
+        .trim();
+
 
     const ward =
-        document.getElementById("ward").value;
+        document.getElementById("ward")
+        .value;
+
 
     const interest =
-        document.getElementById("interest").value;
+        document.getElementById("interest")
+        .value;
+
 
     const message =
-        document.getElementById("message").value.trim();
+        document.getElementById("message")
+        .value
+        .trim();
 
 
     const whatsappMessage =
-        "🔥 IMOLE 2027 MOVEMENT REGISTRATION%0A%0A" +
+        `🔥 IMOLE 2027 MOVEMENT REGISTRATION
 
-        "Full Name: " +
-        encodeURIComponent(name) +
-        "%0A" +
+Full Name: ${name}
 
-        "Phone Number: " +
-        encodeURIComponent(phone) +
-        "%0A" +
+Phone Number: ${phone}
 
-        "Ward: " +
-        encodeURIComponent(ward) +
-        "%0A" +
+Ward: ${ward}
 
-        "Area of Participation: " +
-        encodeURIComponent(interest) +
-        "%0A" +
+Area of Participation: ${interest}
 
-        "Message: " +
-        encodeURIComponent(
-            message || "No additional message"
-        ) +
+Message: ${message || "No additional message"}
 
-        "%0A%0A" +
-
-        "IMOLE 2027 — Service, Development and Accountability";
+IMOLE 2027 — Service, Development and Accountability`;
 
 
     const whatsappURL =
         "https://wa.me/2348033002235?text=" +
-        whatsappMessage;
+        encodeURIComponent(whatsappMessage);
 
 
     window.open(
@@ -563,6 +700,7 @@ function sendRegistrationToWhatsApp(event) {
 }
 
 </script>
+
 
 </body>
 </html>
