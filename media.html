@@ -1,1 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>IMOLE 2027 | Music & Videos</title>
+
+    <meta name="description"
+          content="IMOLE 2027 Media Hub — campaign music, videos and media for Hon. Nurudeen Abayomi Sadeeq, Ojo Constituency II.">
+
+    <meta name="theme-color" content="#071c16">
+
+    <link rel="icon" href="assets/ndc-logo.jpeg">
+
+    <style>
+        :root {
+            --green: #063b2b;
+            --green-2: #0b5d43;
+            --gold: #f4b942;
+            --gold-2: #ffd66b;
+            --cream: #fffaf0;
+            --white: #ffffff;
+            --dark: #071c16;
+            --muted: #64756f;
+            --border: rgba(6,59,43,.12);
+            --shadow: 0 18px 50px rgba(0,0,0,.10);
+            --radius: 22px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+            background: #f7faf8;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            display: block;
+        }
+
+        button,
+        input {
+            font: inherit;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7,28,22,.96);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .nav {
+            max-width: 1180px;
+            margin: auto;
+            min-height: 74px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            font-weight: 900;
+        }
+
+        .brand img {
+            width: 46px;
+            height: 46px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            background: white;
+        }
+
+        .brand-text {
+            line-height: 1.05;
+        }
+
+        .brand-text strong {
+            display: block;
+            color: var(--gold);
+            font-size: 19px;
+            letter-spacing: .5px;
+        }
+
+        .brand-text span {
+            display: block;
+            font-size: 11px;
+            opacity: .82;
+            margin-top: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,.88);
+            padding: 9px 11px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: .2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: rgba(244,185,66,.13);
+            color: var(--gold);
+        }
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: transparent;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(244,185,66,.20), transparent 28%),
+                radial-gradient(circle at 10% 90%, rgba(21,130,93,.25), transparent 32%),
+                linear-gradient(135deg, #031c14, #07543d 60%, #0b6a4d);
+            color: white;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: auto -10% -150px;
+            height: 280px;
+            background: #f7faf8;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 1180px;
+            margin: auto;
+            min-height: 480px;
+            padding: 75px 20px 115px;
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 13px;
+            border-radius: 999px;
+            background: rgba(244,185,66,.14);
+            border: 1px solid rgba(244,185,66,.35);
+            color: var(--gold-2);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: .98;
+            letter-spacing: -3px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: rgba(255,255,255,.83);
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            border: 0;
+            cursor: pointer;
+            padding: 13px 19px;
+            border-radius: 13px;
+            font-weight: 900;
+            transition: transform .2s, box-shadow .2s, background .2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #241a05;
+            box-shadow: 0 10px 28px rgba(244,185,66,.22);
+        }
+
+        .btn-outline {
+            color: white;
+            border: 1px solid rgba(255,255,255,.25);
+            background: rgba(255,255,255,.07);
+        }
+
+        .hero-card {
+            position: relative;
+            min-height: 300px;
+            border: 1px solid rgba(255,255,255,.14);
+            background: rgba(255,255,255,.08);
+            backdrop-filter: blur(14px);
+            border-radius: 30px;
+            padding: 28px;
+            box-shadow: 0 25px 70px rgba(0,0,0,.22);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-card .disc {
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 5px solid rgba(244,185,66,.65);
+            background:
+                radial-gradient(circle, #f4b942 0 9%, #063b2b 10% 18%, #f4b942 19% 22%, #063b2b 23% 100%);
+            box-shadow: 0 0 0 12px rgba(244,185,66,.06);
+            animation: spin 7s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-card h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .hero-card p {
+            font-size: 13px;
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main {
+            max-width: 1180px;
+            margin: auto;
+            padding: 10px 20px 70px;
+        }
+
+        .section {
+            margin-top: 55px;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 22px;
+        }
+
+        .section-head h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            letter-spacing: -1px;
+        }
+
+        .section-head p {
+            color: var(--muted);
+            font-size: 14px;
+            max-width: 500px;
+        }
+
+        /* =========================
+           FEATURED PLAYER
+        ========================= */
+
+        .featured {
+            background: linear-gradient(135deg, #063b2b, #0b6448);
+            border-radius: var(--radius);
+            padding: 26px;
+            color: white;
+            box-shadow: var(--shadow);
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .album-art {
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+            object-fit: cover;
+            background: #0a503b;
+            border: 2px solid rgba(244,185,66,.45);
+        }
+
+        .featured h3 {
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .featured small {
+            color: rgba(255,255,255,.68);
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 20px;
+            height: 45px;
+        }
+
+        .player-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 12px;
+        }
+
+        .small-btn {
+            border: 1px solid rgba(255,255,255,.16);
+            background: rgba(255,255,255,.08);
+            color: white;
+            border-radius: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .small-btn:hover {
+            background: rgba(244,185,66,.18);
+        }
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+        .search-box {
+            margin-bottom: 22px;
+        }
+
+        .search-box input {
+            width: 100%;
+            border: 1px solid var(--border);
+            background: white;
+            padding: 15px 18px;
+            border-radius: 14px;
+            outline: none;
+            box-shadow: 0 5px 20px rgba(0,0,0,.04);
+        }
+
+        .search-box input:focus {
+            border-color: rgba(11,93,67,.4);
+            box-shadow: 0 0 0 4px rgba(11,93,67,.07);
+        }
+
+        /* =========================
+           MUSIC GRID
+        ========================= */
+
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .music-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,.045);
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .music-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.08);
+        }
+
+        .music-top {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            margin-bottom: 12px;
+        }
+
+        .music-icon {
+            flex: 0 0 52px;
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            background: #e9f5ef;
+            font-size: 23px;
+        }
+
+        .music-info {
+            min-width: 0;
+        }
+
+        .music-info h3 {
+            font-size: 15px;
+            line-height: 1.25;
+        }
+
+        .music-info p {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 3px;
+        }
+
+        .music-card audio {
+            margin-top: 4px;
+            height: 40px;
+        }
+
+        .share-row {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 8px;
+        }
+
+        .share-btn {
+            border: 0;
+            background: #e9f7ef;
+            color: #075b3d;
+            padding: 7px 11px;
+            border-radius: 9px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 900;
+        }
+
+        /* =========================
+           VIDEO
+        ========================= */
+
+        .video-feature {
+            background: #071c16;
+            color: white;
+            padding: 16px;
+            border-radius: 22px;
+            box-shadow: var(--shadow);
+        }
+
+        .video-feature video {
+            width: 100%;
+            border-radius: 15px;
+            background: black;
+            max-height: 650px;
+        }
+
+        .video-info {
+            padding: 18px 5px 5px;
+        }
+
+        .video-info h3 {
+            font-size: 23px;
+            margin-bottom: 5px;
+        }
+
+        .video-info p {
+            color: rgba(255,255,255,.68);
+            font-size: 13px;
+        }
+
+        .video-share {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        /* =========================
+           SUPPORT BANNER
+        ========================= */
+
+        .support {
+            margin-top: 55px;
+            border-radius: 24px;
+            padding: 32px;
+            background:
+                radial-gradient(circle at 90% 10%, rgba(244,185,66,.24), transparent 30%),
+                #063b2b;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .support h2 {
+            font-size: 27px;
+            margin-bottom: 7px;
+        }
+
+        .support p {
+            color: rgba(255,255,255,.72);
+            font-size: 14px;
+            max-width: 680px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #03140f;
+            color: white;
+            padding: 45px 20px 25px;
+            margin-top: 30px;
+        }
+
+        .footer-inner {
+            max-width: 1180px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 35px;
+        }
+
+        footer h3 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        footer p,
+        footer a {
+            color: rgba(255,255,255,.65);
+            font-size: 13px;
+        }
+
+        footer a:hover {
+            color: var(--gold);
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 7px;
+        }
+
+        .copyright {
+            max-width: 1180px;
+            margin: 30px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,.08);
+            color: rgba(255,255,255,.45);
+            font-size: 12px;
+        }
+
+        /* =========================
+           TOAST
+        ========================= */
+
+        #toast {
+            position: fixed;
+            left: 50%;
+            bottom: 25px;
+            transform: translate(-50%, 100px);
+            background: #071c16;
+            color: white;
+            padding: 12px 17px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 700;
+            z-index: 2000;
+            opacity: 0;
+            transition: .3s;
+            box-shadow: 0 10px 35px rgba(0,0,0,.2);
+        }
+
+        #toast.show {
+            transform: translate(-50%, 0);
+            opacity: 1;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                left: 12px;
+                right: 12px;
+                top: 70px;
+                background: #071c16;
+                border: 1px solid rgba(255,255,255,.08);
+                border-radius: 16px;
+                padding: 10px;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                box-shadow: 0 20px 50px rgba(0,0,0,.25);
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 12px;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                padding-top: 55px;
+            }
+
+            .hero-card {
+                min-height: 230px;
+            }
+
+            .music-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .brand-text span {
+                display: none;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .featured {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .album-art {
+                margin: auto;
+            }
+
+            .support {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .section-head {
+                display: block;
+            }
+
+            .section-head p {
+                margin-top: 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="nav">
+
+        <a href="index.html" class="brand">
+            <img src="assets/ndc-logo.jpeg" alt="NDC Logo">
+            <div class="brand-text">
+                <strong>IMOLE 2027</strong>
+                <span>Hon. Nurudeen Abayomi Sadeeq</span>
+            </div>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+            ☰
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="manifesto.html">Manifesto</a>
+            <a href="events.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="media.html" class="active">Media</a>
+            <a href="join.html">Join Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+    </nav>
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div>
+            <div class="eyebrow">🎵 IMOLE 2027 MEDIA HUB</div>
+
+            <h1>
+                Our Voice.<br>
+                Our <span>Music.</span><br>
+                Our Story.
+            </h1>
+
+            <p>
+                Experience the music, campaign videos and inspiring moments
+                of the IMOLE 2027 movement supporting Hon. Nurudeen Abayomi
+                Sadeeq for Ojo Constituency II.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#music" class="btn btn-gold">
+                    🎵 Listen to Music
+                </a>
+
+                <a href="#videos" class="btn btn-outline">
+                    ▶ Watch Video
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+
+            <div class="disc"></div>
+
+            <h3>IMOLE 2027</h3>
+
+            <p>
+                Service • Development • Accountability
+            </p>
+
+            <p style="margin-top:15px;">
+                <strong style="color:#f4b942;">
+                    OJO GO BETTER
+                </strong>
+                <br>
+                One movement. One vision. One future.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<main>
+
+    <!-- FEATURED MUSIC -->
+
+    <section class="section" id="featured">
+
+        <div class="section-head">
+            <div>
+                <h2>Featured Campaign Song</h2>
+                <p>
+                    Start the IMOLE 2027 campaign sound right here.
+                </p>
+            </div>
+        </div>
+
+        <div class="featured">
+
+            <img
+                class="album-art"
+                src="assets/ndc-logo.jpeg"
+                alt="IMOLE 2027 Campaign">
+
+            <div>
+
+                <h3>Ojo Go Better — Progress Mix</h3>
+
+                <small>
+                    IMOLE 2027 Campaign Music
+                </small>
+
+                <audio controls preload="metadata" id="featuredAudio">
+                    <source
+                        src="assets/Ojo Go Better (Progress Mix).mp3"
+                        type="audio/mpeg">
+                    Your browser does not support audio playback.
+                </audio>
+
+                <div class="player-actions">
+
+                    <button class="small-btn"
+                            onclick="shareMedia(
+                                'Ojo Go Better — Progress Mix',
+                                'assets/Ojo Go Better (Progress Mix).mp3'
+                            )">
+                        📤 Share Song
+                    </button>
+
+                    <a
+                        class="small-btn"
+                        href="assets/Ojo Go Better (Progress Mix).mp3"
+                        download>
+                        ⬇ Download
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MUSIC -->
+
+    <section class="section" id="music">
+
+        <div class="section-head">
+
+            <div>
+                <h2>Campaign Music</h2>
+
+                <p>
+                    Listen to the songs and jingles created for the
+                    IMOLE 2027 movement.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="search"
+                id="musicSearch"
+                placeholder="🔎 Search campaign music..."
+                aria-label="Search campaign music">
+
+        </div>
+
+
+        <div class="music-grid" id="musicGrid">
+
+
+            <article class="music-card"
+                     data-title="Nuru L'okàn">
+
+                <div class="music-top">
+
+                    <div class="music-icon">🎵</div>
+
+                    <div class="music-info">
+
+                        <h3>Nuru L'ọkàn</h3>
+
+                        <p>IMOLE 2027 Campaign Song</p>
+
+                    </div>
+
+                </div>
+
+                <audio controls preload="none">
+                    <source
+                        src="assets/Nuru L'ọkàn.mp3"
+                        type="audio/mpeg">
+                </audio>
+
+                <div class="share-row">
+                    <button class="share-btn"
+                            onclick="shareMedia(
+                                'Nuru L\\'ọkàn',
+                                'assets/Nuru L\\'ọkàn.mp3'
+                            )">
+                        📤 Share
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="music-card"
+                     data-title="OJO DEY MOVE">
+
+                <div class="music-top">
+
+                    <div class="music-icon">🔥</div>
+
+                    <div class="music-info">
+
+                        <h3>OJO DEY MOVE</h3>
+
+                        <p>IMOLE 2027 Campaign Music</p>
+
+                    </div>
+
+                </div>
+
+                <audio controls preload="none">
+                    <source
+                        src="assets/OJO DEY MOVE.mp3"
+                        type="audio/mpeg">
+                </audio>
+
+                <div class="share-row">
+                    <button class="share-btn"
+                            onclick="shareMedia(
+                                'OJO DEY MOVE',
+                                'assets/OJO DEY MOVE.mp3'
+                            )">
+                        📤 Share
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="music-card"
+                     data-title="OJO ZAI FI KYAU">
+
+                <div class="music-top">
+
+                    <div class="music-icon">🎶</div>
+
+                    <div class="music-info">
+
+                        <h3>OJO ZAI FI KYAU</h3>
+
+                        <p>Campaign Song</p>
+
+                    </div>
+
+                </div>
+
+                <audio controls preload="none">
+                    <source
+                        src="assets/OJO ZAI FI KYAU.mp3"
+                        type="audio/mpeg">
+                </audio>
+
+                <div class="share-row">
+                    <button class="share-btn"
+                            onclick="shareMedia(
+                                'OJO ZAI FI KYAU',
+                                'assets/OJO ZAI FI KYAU.mp3'
+                            )">
+                        📤 Share
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="music-card"
+                     data-title="Ojo Ga Adi Mma Igbo Version">
+
+                <div class="music-top">
+
+                    <div class="music-icon">🗣️</div>
+
+                    <div class="music-info">
+
+                        <h3>Ojo Ga-adị Mma</h3>
+
+                        <p>Igbo Version</p>
+
+                    </div>
+
+                </div>
+
+                <audio controls preload="none">
+                    <source
+                        src="assets/Ojo Ga-adị Mma (Igbo Version).mp3"
+                        type="audio/mpeg">
+                </audio>
+
+                <div class="share-row">
+                    <button class="share-btn"
+                            onclick="shareMedia(
+                                'Ojo Ga-adị Mma — Igbo Version',
+                                'assets/Ojo Ga-adị Mma (Igbo Version).mp3'
+                            )">
+                        📤 Share
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="music-card"
+                     data-title="Ojo Go Better Progress Mix">
+
+                <div class="music-top">
+
+                    <div class="music-icon">🚀</div>
+
+                    <div class="music-info">
+
+                        <h3>Ojo Go Better</h3>
+
+                        <p>Progress Mix</p>
+
+                    </div>
+
+                </div>
+
+                <audio controls preload="none">
+                    <source
+                        src="assets/Ojo Go Better (Progress Mix).mp3"
+                        type="audio/mpeg">
+                </audio>
+
+                <div class="share-row">
+                    <button class="share-btn"
+                            onclick="shareMedia(
+                                'Ojo Go Better — Progress Mix',
+                                'assets/Ojo Go Better (Progress Mix).mp3'
+                            )">
+                        📤 Share
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="music-card"
+                     data-title="Ojo A Dara Fuji Percussion Heavy">
+
+                <div class="music-top">
+
+                    <div class="music-icon">🥁</div>
+
+                    <div class="music-info">
+
+                        <h3>Ojó Á Dára</h3>
+
+                        <p>Fuji Percussion Heavy</p>
+
+                    </div>
+
+                </div>
+
+                <audio controls preload="none">
+                    <source
+                        src="assets/Ojó Á Dára (Fuji Percussion Heavy).mp3"
+                        type="audio/mpeg">
+                </audio>
+
+                <div class="share-row">
+                    <button class="share-btn"
+                            onclick="shareMedia(
+                                'Ojó Á Dára — Fuji Percussion Heavy',
+                                'assets/Ojó Á Dára (Fuji Percussion Heavy).mp3'
+                            )">
+                        📤 Share
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="music-card"
+                     data-title="Sadeeq Campaign Jingle Option 1">
+
+                <div class="music-top">
+
+                    <div class="music-icon">📢</div>
+
+                    <div class="music-info">
+
+                        <h3>Sadeeq Campaign Jingle</h3>
+
+                        <p>Option 1</p>
+
+                    </div>
+
+                </div>
+
+                <audio controls preload="none">
+                    <source
+                        src="assets/Sadeeq Campaign Jingle (Option 1).mp3"
+                        type="audio/mpeg">
+                </audio>
+
+                <div class="share-row">
+                    <button class="share-btn"
+                            onclick="shareMedia(
+                                'Sadeeq Campaign Jingle — Option 1',
+                                'assets/Sadeeq Campaign Jingle (Option 1).mp3'
+                            )">
+                        📤 Share
+                    </button>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- VIDEO -->
+
+    <section class="section" id="videos">
+
+        <div class="section-head">
+
+            <div>
+                <h2>Campaign Video</h2>
+
+                <p>
+                    Watch the latest IMOLE 2027 campaign video.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="video-feature">
+
+            <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="assets/ndc-logo.jpeg">
+
+                <source
+                    src="assets/47ce1089-66a6-441d-850d-11cee3fb6cfc-watermark.mp4"
+                    type="video/mp4">
+
+                Your browser does not support video playback.
+            </video>
+
+            <div class="video-info">
+
+                <h3>IMOLE 2027 Campaign Video</h3>
+
+                <p>
+                    Hon. Nurudeen Abayomi Sadeeq — Ojo Constituency II.
+                </p>
+
+                <div class="video-share">
+
+                    <button
+                        class="small-btn"
+                        onclick="shareMedia(
+                            'IMOLE 2027 Campaign Video',
+                            'assets/47ce1089-66a6-441d-850d-11cee3fb6cfc-watermark.mp4'
+                        )">
+                        📤 Share Video
+                    </button>
+
+                    <a
+                        class="small-btn"
+                        href="assets/47ce1089-66a6-441d-850d-11cee3fb6cfc-watermark.mp4"
+                        download>
+                        ⬇ Download Video
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUPPORT -->
+
+    <section class="support">
+
+        <div>
+
+            <h2>Be Part of IMOLE 2027</h2>
+
+            <p>
+                Share the music. Share the message. Share the vision.
+                Help take the IMOLE 2027 movement across Ojo Constituency II.
+            </p>
+
+        </div>
+
+        <a href="join.html" class="btn btn-gold">
+            🤝 Join the Movement
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+
+            <h3>IMOLE 2027</h3>
+
+            <p>
+                Official campaign media hub for
+                Hon. Nurudeen Abayomi Sadeeq,
+                Ojo Constituency II.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="manifesto.html">Manifesto</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="events.html">Events</a>
+
+            </div>
+
+        </div>
+
+        <div>
+
+            <h3>Get Involved</h3>
+
+            <div class="footer-links">
+
+                <a href="join.html">Join IMOLE 2027</a>
+                <a href="volunteer.html">Volunteer</a>
+                <a href="donations.html">Support the Movement</a>
+                <a href="contact.html">Contact Us</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Hon. Nurudeen Abayomi Sadeeq Campaign.
+        All Rights Reserved.
+        <br>
+        Nigeria Democratic Congress (NDC) | Ojo Constituency II
+    </div>
+
+</footer>
+
+
+<div id="toast"></div>
+
+
+<script>
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("show");
+        });
+
+    });
+
+
+    /* =========================
+       MUSIC SEARCH
+    ========================= */
+
+    const searchInput = document.getElementById("musicSearch");
+    const musicCards = document.querySelectorAll(".music-card");
+
+    searchInput.addEventListener("input", () => {
+
+        const search = searchInput.value.toLowerCase().trim();
+
+        musicCards.forEach(card => {
+
+            const title =
+                card.dataset.title.toLowerCase();
+
+            card.style.display =
+                title.includes(search) ? "" : "none";
+
+        });
+
+    });
+
+
+    /* =========================
+       ONLY ONE SONG PLAYS
+    ========================= */
+
+    const allAudio =
+        document.querySelectorAll("audio");
+
+    allAudio.forEach(audio => {
+
+        audio.addEventListener("play", () => {
+
+            allAudio.forEach(other => {
+
+                if (other !== audio) {
+                    other.pause();
+                }
+
+            });
+
+        });
+
+    });
+
+
+    /* =========================
+       SHARE MEDIA
+    ========================= */
+
+    function shareMedia(title, relativePath) {
+
+        const url =
+            new URL(relativePath, window.location.href).href;
+
+        const text =
+            `🎵 ${title}\n\nIMOLE 2027 — Hon. Nurudeen Abayomi Sadeeq\nOjo Constituency II\n\n${url}`;
+
+        if (navigator.share) {
+
+            navigator.share({
+                title: title,
+                text: text,
+                url: url
+            }).catch(() => {});
+
+        } else {
+
+            const whatsapp =
+                "https://wa.me/?text=" +
+                encodeURIComponent(text);
+
+            window.open(
+                whatsapp,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+        }
+
+    }
+
+
+    /* =========================
+       TOAST
+    ========================= */
+
+    function showToast(message) {
+
+        const toast =
+            document.getElementById("toast");
+
+        toast.textContent = message;
+        toast.classList.add("show");
+
+        setTimeout(() => {
+            toast.classList.remove("show");
+        }, 2500);
+
+    }
+
+
+    /* =========================
+       SERVICE WORKER
+       OPTIONAL PWA SUPPORT
+    ========================= */
+
+    if ("serviceWorker" in navigator) {
+
+        window.addEventListener("load", () => {
+
+            navigator.serviceWorker.register(
+                "service-worker.js"
+            ).catch(() => {});
+
+        });
+
+    }
+
+</script>
+
+</body>
+</html>
