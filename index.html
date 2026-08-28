@@ -1,842 +1,1025 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Hon. Nurudeen Abayomi Sadeeq | IMOLE 2027</title>
 
-    <title>Hon. Nurudeen Abayomi Sadeeq | Ojo Constituency II</title>
+<meta name="description"
+      content="Official campaign information for Hon. Nurudeen Abayomi Sadeeq, Lagos State House of Assembly candidate for Ojo Constituency II under the Nigeria Democratic Congress (NDC).">
 
-    <meta name="description"
-          content="Official information website for Hon. Nurudeen Abayomi Sadeeq, Lagos State House of Assembly candidate for Ojo Constituency II.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="manifest" href="manifest.json">
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ffffff">
 
-    <meta name="theme-color" content="#ffffff">
+<style>
 
-    <style>
-        /* ==============================
-           CANDIDATE PHOTO
-        ============================== */
+    /* ==============================
+       HEADER
+    ============================== */
 
-        .candidate-photo {
-            display: block;
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
-            margin: 0 auto 20px;
-            border-radius: 50%;
-            border: 5px solid #ffffff;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.20);
-        }
+    .site-header {
+        padding: 25px 15px;
+        text-align: center;
+    }
 
+    .site-header h1 {
+        font-size: 28px;
+        line-height: 1.2;
+        margin: 10px 0;
+        font-weight: 800;
+    }
 
-        /* ==============================
-           NDC LOGO
-        ============================== */
-
-        .ndc-logo {
-            display: block;
-            width: 110px;
-            height: 110px;
-            object-fit: contain;
-            margin: 0 auto 15px;
-            border-radius: 50%;
-        }
+    .site-header p {
+        margin: 5px 0;
+        font-size: 15px;
+    }
 
 
-        /* ==============================
-           HERO SECTION
-        ============================== */
+    /* ==============================
+       NDC LOGO
+    ============================== */
 
-        .hero-tagline {
-            font-size: 22px;
-            font-weight: bold;
-            letter-spacing: 3px;
-            margin-bottom: 10px;
-        }
-
-        .hero h2 {
-            margin-bottom: 10px;
-        }
-
-        .hero h3 {
-            line-height: 1.5;
-        }
-
-        .hero p {
-            line-height: 1.7;
-        }
+    .ndc-logo {
+        display: block;
+        width: 110px;
+        height: 110px;
+        object-fit: contain;
+        margin: 0 auto 15px;
+        border-radius: 50%;
+    }
 
 
-        /* ==============================
-           CAMPAIGN HEADER
-        ============================== */
+    /* ==============================
+       MOBILE MENU
+    ============================== */
 
-        .site-header {
-            padding: 25px 15px;
-            text-align: center;
-        }
-
-        .site-header h1 {
-            font-size: 28px;
-            line-height: 1.2;
-            margin: 10px 0;
-            font-weight: 800;
-        }
-
-        .site-header p {
-            margin: 5px 0;
-            font-size: 15px;
-        }
+    .menu-toggle {
+        display: none;
+        background: #0645a5;
+        color: white;
+        border: none;
+        padding: 12px 16px;
+        font-size: 26px;
+        cursor: pointer;
+        width: 100%;
+    }
 
 
-        /* ==============================
-           MOVEMENT SECTION
-        ============================== */
+    /* ==============================
+       HERO
+    ============================== */
 
-        .movement-section {
-            padding: 60px 20px;
-            text-align: center;
-        }
+    .candidate-photo {
+        display: block;
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        border: 5px solid #ffffff;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.20);
+    }
 
-        .movement-section h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
+    .hero {
+        text-align: center;
+    }
 
-        .movement-section > .container > p {
-            max-width: 700px;
-            margin: 0 auto 35px;
-            line-height: 1.7;
-        }
+    .hero-tagline {
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+    }
 
-        .movement-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
+    .hero h2 {
+        margin-bottom: 10px;
+    }
 
-        .movement-card {
-            display: block;
-            padding: 28px 20px;
-            background: #fff;
-            border-radius: 16px;
-            text-decoration: none;
-            color: inherit;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
-            transition: transform 0.25s ease,
-                        box-shadow 0.25s ease;
-        }
+    .hero h3 {
+        line-height: 1.5;
+    }
 
-        .movement-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
-        }
+    .hero p {
+        line-height: 1.7;
+    }
 
-        .movement-card h3 {
-            margin-bottom: 10px;
-        }
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 25px;
+    }
 
-        .movement-card p {
-            margin: 0;
-            line-height: 1.6;
-        }
-
-
-        /* ==============================
-           ELECTION COUNTDOWN
-        ============================== */
-
-        .election-section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .election-container {
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .countdown-box {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .countdown-item {
-            background: #fff;
-            padding: 20px 10px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
-        }
-
-        .countdown-item strong {
-            display: block;
-            font-size: 30px;
-        }
-
-        .results-box {
-            margin-top: 30px;
-            padding: 25px;
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
-        }
-
-        .result-status {
-            font-weight: bold;
-            font-size: 20px;
-            line-height: 1.5;
-        }
+    .hero-buttons a {
+        display: inline-block;
+        padding: 13px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
 
-        /* ==============================
-           MOBILE MENU
-        ============================== */
+    /* ==============================
+       MOVEMENT SECTION
+    ============================== */
+
+    .movement-section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .movement-section h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .movement-section > .container > p {
+        max-width: 700px;
+        margin: 0 auto 35px;
+        line-height: 1.7;
+    }
+
+    .movement-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .movement-card {
+        display: block;
+        padding: 28px 20px;
+        background: #fff;
+        border-radius: 16px;
+        text-decoration: none;
+        color: inherit;
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+        transition: transform 0.25s ease,
+                    box-shadow 0.25s ease;
+    }
+
+    .movement-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+    }
+
+    .movement-card .movement-icon {
+        font-size: 42px;
+        margin-bottom: 10px;
+    }
+
+    .movement-card h3 {
+        margin-bottom: 10px;
+    }
+
+    .movement-card p {
+        margin: 0;
+        line-height: 1.6;
+    }
+
+
+    /* ==============================
+       JOIN CTA
+    ============================== */
+
+    .join-cta {
+        margin: 20px auto 50px;
+        max-width: 900px;
+        padding: 35px 20px;
+        text-align: center;
+        border-radius: 18px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .join-cta h2 {
+        margin-bottom: 10px;
+    }
+
+    .join-cta p {
+        max-width: 700px;
+        margin: 0 auto 20px;
+        line-height: 1.7;
+    }
+
+    .join-cta a {
+        display: inline-block;
+        padding: 14px 25px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+
+    /* ==============================
+       QUICK INFORMATION
+    ============================== */
+
+    .quick-info {
+        padding: 40px 20px;
+    }
+
+    .quick-info .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .info-card {
+        background: #fff;
+        padding: 25px 20px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    }
+
+    .info-card p {
+        line-height: 1.6;
+    }
+
+    .info-card a {
+        display: inline-block;
+        margin-top: 8px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+
+    /* ==============================
+       ELECTION COUNTDOWN
+    ============================== */
+
+    .election-section {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .election-container {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .countdown-box {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .countdown-item {
+        background: #fff;
+        padding: 20px 10px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    }
+
+    .countdown-item strong {
+        display: block;
+        font-size: 30px;
+    }
+
+
+    /* ==============================
+       RESULTS
+    ============================== */
+
+    .results-box {
+        margin-top: 30px;
+        padding: 25px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    }
+
+    .result-status {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .results-button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 13px 22px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+
+    /* ==============================
+       ABOUT PREVIEW
+    ============================== */
+
+    .about-preview {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .about-preview .container {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .about-preview p {
+        line-height: 1.7;
+    }
+
+    .about-preview a {
+        display: inline-block;
+        margin-top: 15px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+
+    /* ==============================
+       UPDATES
+    ============================== */
+
+    .updates {
+        padding: 50px 20px;
+    }
+
+    .updates .container {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .updates h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .updates article {
+        background: #fff;
+        padding: 25px 20px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    }
+
+    .updates article p {
+        line-height: 1.6;
+    }
+
+    .updates article a {
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+
+    /* ==============================
+       MOBILE RESPONSIVE
+    ============================== */
+
+    @media (max-width: 600px) {
 
         .menu-toggle {
+            display: block;
+        }
+
+        .main-nav {
             display: none;
-            background: #0645a5;
-            color: white;
-            border: none;
-            padding: 12px 16px;
-            font-size: 26px;
-            cursor: pointer;
+            flex-direction: column;
             width: 100%;
         }
 
-
-        /* ==============================
-           MOBILE RESPONSIVE
-        ============================== */
-
-        @media (max-width: 600px) {
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .main-nav {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .main-nav.show {
-                display: flex;
-            }
-
-            .main-nav a {
-                display: block;
-                text-align: center;
-                padding: 15px;
-                border-bottom: 1px solid #ddd;
-            }
-
-            .site-header {
-                padding: 20px 12px;
-            }
-
-            .site-header h1 {
-                font-size: 22px;
-            }
-
-            .site-header p {
-                font-size: 14px;
-            }
-
-            .site-header .ndc-logo {
-                width: 80px;
-                height: 80px;
-            }
-
-            .candidate-photo {
-                width: 170px;
-                height: 170px;
-                margin-bottom: 18px;
-            }
-
-            .hero {
-                padding: 45px 18px;
-            }
-
-            .hero .container {
-                width: 100%;
-            }
-
-            .hero h2 {
-                font-size: 30px;
-                line-height: 1.15;
-                margin: 12px 0;
-            }
-
-            .hero h3 {
-                font-size: 20px;
-                line-height: 1.4;
-                margin: 10px 0;
-            }
-
-            .hero p {
-                font-size: 16px;
-                line-height: 1.6;
-            }
-
-            .hero-tagline {
-                font-size: 18px;
-                letter-spacing: 3px;
-            }
-
-            .hero-buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-                margin-top: 20px;
-            }
-
-            .hero-buttons a {
-                width: 100%;
-                box-sizing: border-box;
-                text-align: center;
-            }
-
-            .countdown-box {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .movement-section {
-                padding: 45px 15px;
-            }
-
-            .movement-section h2 {
-                font-size: 28px;
-            }
+        .main-nav.show {
+            display: flex;
         }
-    </style>
-</head>
 
+        .main-nav a {
+            display: block;
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
 
-<body>
+        .site-header {
+            padding: 20px 12px;
+        }
 
+        .site-header h1 {
+            font-size: 22px;
+        }
 
-<!-- ==============================
+        .site-header p {
+            font-size: 14px;
+        }
+
+        .site-header .ndc-logo {
+            width: 80px;
+            height: 80px;
+        }
+
+        .candidate-photo {
+            width: 170px;
+            height: 170px;
+            margin-bottom: 18px;
+        }
+
+        .hero {
+            padding: 45px 18px;
+        }
+
+        .hero .container {
+            width: 100%;
+        }
+
+        .hero h2 {
+            font-size: 30px;
+            line-height: 1.15;
+            margin: 12px 0;
+        }
+
+        .hero h3 {
+            font-size: 20px;
+            line-height: 1.4;
+            margin: 10px 0;
+        }
+
+        .hero p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .hero-tagline {
+            font-size: 18px;
+            letter-spacing: 3px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .hero-buttons a {
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .countdown-box {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .movement-section {
+            padding: 45px 15px;
+        }
+
+        .movement-section h2 {
+            font-size: 28px;
+        }
+
+        .movement-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .join-cta {
+            margin: 10px 15px 40px;
+        }
+
+    }
+
+</style>
+
+</head><body><!-- ==============================
      HEADER
-============================== -->
-
-<header class="site-header">
-
-    <div class="container">
-
-        <img
-            src="assets/ndc-logo.jpeg"
-            alt="Nigeria Democratic Congress logo"
-            class="ndc-logo"
-        >
-
-        <h1>HON. NURUDEEN ABAYOMI SADEEQ</h1>
-
-        <p>
-            Lagos State House of Assembly — Ojo Constituency II
-        </p>
-
-        <p>
-            Nigeria Democratic Congress (NDC)
-        </p>
-
-    </div>
-
-</header>
-
-
-<!-- ==============================
-     MOBILE MENU BUTTON
-============================== -->
-
-<button
-    class="menu-toggle"
-    onclick="toggleMenu()"
-    aria-label="Open navigation menu"
-    aria-expanded="false"
-    id="menuButton"
->
-    ☰
-</button>
-
-
-<!-- ==============================
-     NAVIGATION
-============================== -->
-
-<nav class="main-nav" id="mainMenu">
-
-    <a href="index.html">Home</a>
-
-    <a href="about.html">About</a>
-
-    <a href="manifesto.html">Manifesto</a>
-
-    <a href="polling-units.html">Polling Units</a>
-
-    <a href="results.html">Results</a>
-
-    <a href="news.html">News</a>
-
-    <a href="events.html">Events</a>
-
-    <a href="gallery.html">Gallery</a>
-
-    <a href="contact.html">Contact</a>
-
-    <a href="join.html">
-        🔥 JOIN THE MOVEMENT
-    </a>
-
-</nav>
-
-
-<main>
-
-
-<!-- ==============================
-     JOIN THE MOVEMENT
-============================== -->
-
-<section class="movement-section">
-
-    <div class="container">
-
-        <h2>🔥 JOIN THE MOVEMENT</h2>
-
-        <p>
-            Be part of the IMOLE 2027 movement.
-            Together, we can build a stronger and better
-            Ojo Constituency II.
-        </p>
-
-        <div class="movement-grid">
-
-
-            <a href="join.html" class="movement-card">
-
-                <h3>🌟 JOIN THE MOVEMENT</h3>
-
-                <p>
-                    Become part of the IMOLE 2027 family.
-                </p>
-
-            </a>
-
-
-            <a href="imole-babes.html" class="movement-card">
-
-                <h3>💃 IMOLE BABES</h3>
-
-                <p>
-                    Join the women supporting the IMOLE movement.
-                </p>
-
-            </a>
-
-
-            <a href="imole-army.html" class="movement-card">
-
-                <h3>🔥 IMOLE ARMY</h3>
-
-                <p>
-                    Stand with the movement and support
-                    our campaign activities.
-                </p>
-
-            </a>
-
-
-            <a href="volunteer.html" class="movement-card">
-
-                <h3>🤝 VOLUNTEER</h3>
-
-                <p>
-                    Give your time, skills and energy
-                    to the movement.
-                </p>
-
-            </a>
-
-
-            <a href="donations.html" class="movement-card">
-
-                <h3>❤️ DONATIONS</h3>
-
-                <p>
-                    Support the movement through lawful
-                    and transparent contributions.
-                </p>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     HERO
-============================== -->
-
-<section class="hero">
-
-    <div class="container">
-
-        <img
-            src="assets/IMG-20260710-WA0004.jpg"
-            alt="Hon. Nurudeen Abayomi Sadeeq"
-            class="candidate-photo"
-        >
-
-        <p class="hero-tagline">
-            IMOLE 2027
-        </p>
-
-        <h2>
-            HON. NURUDEEN ABAYOMI SADEEQ
-        </h2>
-
-        <h3>
-            Lagos State House of Assembly<br>
-            Ojo Constituency II
-        </h3>
-
-        <p>
-            A voice for the people. A commitment to service.
-            Together, we can build a better Ojo Constituency II.
-        </p>
-
-        <p>
-            <strong>
-                Service • Development • Accountability
-            </strong>
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="about.html">
-                Meet the Candidate
-            </a>
-
-            <a href="manifesto.html">
-                Our Manifesto
-            </a>
-
-            <a href="polling-units.html">
-                Polling Units
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     QUICK INFORMATION
-============================== -->
-
-<section class="quick-info">
-
-    <div class="container">
-
-
-        <div class="info-card">
-
-            <h3>
-                Ojo Constituency II
-            </h3>
-
-            <p>
-                Lagos State House of Assembly constituency.
-            </p>
-
-        </div>
-
-
-        <div class="info-card">
-
-            <h3>
-                Polling Units
-            </h3>
-
-            <p>
-                <strong>170 Polling Units</strong>
-            </p>
-
-            <p>
-                Across 6 wards.
-            </p>
-
-            <a href="polling-units.html">
-                View Directory
-            </a>
-
-        </div>
-
-
-        <div class="info-card">
-
-            <h3>
-                Manifesto
-            </h3>
-
-            <p>
-                Read the candidate's published policy proposals.
-            </p>
-
-            <a href="manifesto.html">
-                Read More
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     ELECTION COUNTDOWN
-============================== -->
-
-<section class="election-section">
-
-    <div class="election-container">
-
-        <h2>
-            🗳️ 2027 ELECTION COUNTDOWN
-        </h2>
-
-        <p>
-            Lagos State House of Assembly Election
-        </p>
-
-        <h3>
-            6 February 2027
-        </h3>
-
-        <div class="countdown-box">
-
-
-            <div class="countdown-item">
-
-                <strong id="days">
-                    0
-                </strong>
-
-                Days
-
-            </div>
-
-
-            <div class="countdown-item">
-
-                <strong id="hours">
-                    0
-                </strong>
-
-                Hours
-
-            </div>
-
-
-            <div class="countdown-item">
-
-                <strong id="minutes">
-                    0
-                </strong>
-
-                Minutes
-
-            </div>
-
-
-            <div class="countdown-item">
-
-                <strong id="seconds">
-                    0
-                </strong>
-
-                Seconds
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     ELECTION RESULTS
-============================== -->
-
-<section class="election-section">
-
-    <div class="election-container">
-
-        <h2>
-            📊 ELECTION DAY RESULTS
-        </h2>
-
-        <div class="results-box">
-
-            <p class="result-status">
-                Official election results will appear here
-                after they have been announced and verified.
-            </p>
-
-            <p>
-                <strong>
-                    Ojo Constituency II
-                </strong>
-            </p>
-
-            <p>
-                Polling Units:
-                <strong>170</strong>
-            </p>
-
-            <p>
-                Wards:
-                <strong>6</strong>
-            </p>
-
-            <a href="results.html" class="hero-button">
-                View Election Results
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     ABOUT CANDIDATE
-============================== -->
-
-<section class="about-preview">
-
-    <div class="container">
-
-        <h2>
-            About the Candidate
-        </h2>
-
-        <p>
-            Learn about Hon. Nurudeen Abayomi Sadeeq,
-            his background, public-service experience
-            and information about his candidacy for
-            Ojo Constituency II.
-        </p>
-
-        <a href="about.html">
-            View Full Profile
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     LATEST UPDATES
-============================== -->
-
-<section class="updates">
-
-    <div class="container">
-
-        <h2>
-            Latest Updates
-        </h2>
-
-
-        <article>
-
-            <h3>
-                Campaign News
-            </h3>
-
-            <p>
-                Official campaign announcements
-                and constituency updates.
-            </p>
-
-            <a href="news.html">
-                View News
-            </a>
-
-        </article>
-
-
-        <article>
-
-            <h3>
-                Upcoming Events
-            </h3>
-
-            <p>
-                Information about scheduled campaign
-                and constituency events.
-            </p>
-
-            <a href="events.html">
-                View Events
-            </a>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-</main>
-
-
-<!-- ==============================
-     FOOTER
-============================== -->
-
-<footer>
+============================== --><header class="site-header"><div class="container">
+
+    <img
+        src="assets/ndc-logo.jpeg"
+        alt="Nigeria Democratic Congress logo"
+        class="ndc-logo"
+    >
+
+    <h1>
+        HON. NURUDEEN ABAYOMI SADEEQ
+    </h1>
 
     <p>
-        &copy; 2026 Hon. Nurudeen Abayomi Sadeeq
+        Lagos State House of Assembly — Ojo Constituency II
     </p>
 
     <p>
         Nigeria Democratic Congress (NDC)
-        | Ojo Constituency II
     </p>
 
-</footer>
+</div>
+
+</header><!-- ==============================
+     MOBILE MENU
+============================== --><button
+class="menu-toggle"
+onclick="toggleMenu()"
+aria-label="Open navigation menu"
+aria-expanded="false"
+id="menuButton"
+
+«»
+
+☰
+
+</button><!-- ==============================
+     NAVIGATION
+============================== --><nav class="main-nav" id="mainMenu"><a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="manifesto.html">Manifesto</a>
+
+<a href="polling-units.html">Polling Units</a>
+
+<a href="results.html">Results</a>
+
+<a href="news.html">News</a>
+
+<a href="events.html">Events</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="contact.html">Contact</a>
+
+<a href="join.html">
+    🔥 JOIN THE MOVEMENT
+</a>
+
+</nav><main><!-- ==============================
+     HERO
+============================== --><section class="hero"><div class="container">
+
+    <img
+        src="assets/IMG-20260710-WA0004.jpg"
+        alt="Hon. Nurudeen Abayomi Sadeeq"
+        class="candidate-photo"
+    >
+
+    <p class="hero-tagline">
+        IMOLE 2027
+    </p>
+
+    <h2>
+        HON. NURUDEEN ABAYOMI SADEEQ
+    </h2>
+
+    <h3>
+        Lagos State House of Assembly<br>
+        Ojo Constituency II
+    </h3>
+
+    <p>
+        A voice for the people. A commitment to service.
+        Together, we can build a better Ojo Constituency II.
+    </p>
+
+    <p>
+        <strong>
+            Service • Development • Accountability
+        </strong>
+    </p>
 
 
-<!-- ==============================
+    <div class="hero-buttons">
+
+        <a href="about.html">
+            Meet the Candidate
+        </a>
+
+        <a href="manifesto.html">
+            Our Manifesto
+        </a>
+
+        <a href="join.html">
+            🔥 Join IMOLE 2027
+        </a>
+
+    </div>
+
+</div>
+
+</section><!-- ==============================
+     JOIN THE MOVEMENT
+============================== --><section class="movement-section"><div class="container">
+
+    <h2>
+        🔥 JOIN THE MOVEMENT
+    </h2>
+
+    <p>
+        Be part of the IMOLE 2027 movement.
+        Join fellow supporters working together for
+        service, development and accountability in
+        Ojo Constituency II.
+    </p>
+
+
+    <div class="movement-grid">
+
+
+        <a
+            href="join.html#join-form"
+            class="movement-card"
+        >
+
+            <div class="movement-icon">
+                🌟
+            </div>
+
+            <h3>
+                JOIN THE MOVEMENT
+            </h3>
+
+            <p>
+                Become part of the IMOLE 2027 family.
+            </p>
+
+        </a>
+
+
+        <a
+            href="join.html#join-form"
+            class="movement-card"
+        >
+
+            <div class="movement-icon">
+                💃
+            </div>
+
+            <h3>
+                IMOLE BABES
+            </h3>
+
+            <p>
+                Join the women supporting and
+                mobilising for IMOLE 2027.
+            </p>
+
+        </a>
+
+
+        <a
+            href="join.html#join-form"
+            class="movement-card"
+        >
+
+            <div class="movement-icon">
+                🔥
+            </div>
+
+            <h3>
+                IMOLE ARMY
+            </h3>
+
+            <p>
+                Stand with the movement and participate
+                in grassroots mobilisation.
+            </p>
+
+        </a>
+
+
+        <a
+            href="join.html#join-form"
+            class="movement-card"
+        >
+
+            <div class="movement-icon">
+                🤝
+            </div>
+
+            <h3>
+                VOLUNTEER
+            </h3>
+
+            <p>
+                Give your time, skills and energy
+                to support the movement.
+            </p>
+
+        </a>
+
+
+        <a
+            href="join.html#donations"
+            class="movement-card"
+        >
+
+            <div class="movement-icon">
+                ❤️
+            </div>
+
+            <h3>
+                DONATIONS
+            </h3>
+
+            <p>
+                Support the movement through lawful
+                and transparent contributions.
+            </p>
+
+        </a>
+
+
+    </div>
+
+</div>
+
+</section><!-- ==============================
+     STRONG JOIN CTA
+============================== --><section class="join-cta"><h2>
+    🌟 YOUR SUPPORT MATTERS
+</h2>
+
+<p>
+    Whether you want to volunteer, join IMOLE BABES,
+    become part of the IMOLE ARMY, assist with media
+    and communication, or participate in community
+    mobilisation, there is a place for you in the movement.
+</p>
+
+<a href="join.html#join-form">
+    🔥 JOIN IMOLE 2027 NOW
+</a>
+
+</section><!-- ==============================
+     QUICK INFORMATION
+============================== --><section class="quick-info"><div class="container">
+
+
+    <div class="info-card">
+
+        <h3>
+            Ojo Constituency II
+        </h3>
+
+        <p>
+            Lagos State House of Assembly constituency.
+        </p>
+
+        <a href="about.html">
+            Learn More
+        </a>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <h3>
+            Polling Units
+        </h3>
+
+        <p>
+            View the polling-unit directory and
+            constituency information.
+        </p>
+
+        <a href="polling-units.html">
+            View Directory
+        </a>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <h3>
+            Manifesto
+        </h3>
+
+        <p>
+            Read the candidate's published policy
+            proposals and priorities.
+        </p>
+
+        <a href="manifesto.html">
+            Read Manifesto
+        </a>
+
+    </div>
+
+
+</div>
+
+</section><!-- ==============================
+     ELECTION COUNTDOWN
+============================== --><section class="election-section"><div class="election-container">
+
+    <h2>
+        🗳️ 2027 ELECTION COUNTDOWN
+    </h2>
+
+    <p>
+        Lagos State House of Assembly Election
+    </p>
+
+    <h3>
+        6 February 2027
+    </h3>
+
+
+    <div class="countdown-box">
+
+
+        <div class="countdown-item">
+
+            <strong id="days">
+                0
+            </strong>
+
+            Days
+
+        </div>
+
+
+        <div class="countdown-item">
+
+            <strong id="hours">
+                0
+            </strong>
+
+            Hours
+
+        </div>
+
+
+        <div class="countdown-item">
+
+            <strong id="minutes">
+                0
+            </strong>
+
+            Minutes
+
+        </div>
+
+
+        <div class="countdown-item">
+
+            <strong id="seconds">
+                0
+            </strong>
+
+            Seconds
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section><!-- ==============================
+     ELECTION RESULTS
+============================== --><section class="election-section"><div class="election-container">
+
+    <h2>
+        📊 ELECTION DAY RESULTS
+    </h2>
+
+
+    <div class="results-box">
+
+        <p class="result-status">
+            Official election results will appear here
+            after they have been announced and verified.
+        </p>
+
+        <p>
+            <strong>
+                Ojo Constituency II
+            </strong>
+        </p>
+
+        <p>
+            Results will be organised by ward and
+            polling unit when officially available.
+        </p>
+
+
+        <a
+            href="results.html"
+            class="results-button"
+        >
+            📊 VIEW ELECTION RESULTS
+        </a>
+
+    </div>
+
+</div>
+
+</section><!-- ==============================
+     ABOUT CANDIDATE
+============================== --><section class="about-preview"><div class="container">
+
+    <h2>
+        About the Candidate
+    </h2>
+
+    <p>
+        Learn about Hon. Nurudeen Abayomi Sadeeq,
+        his background, public-service experience
+        and information about his candidacy for
+        Ojo Constituency II.
+    </p>
+
+    <a href="about.html">
+        View Full Profile
+    </a>
+
+</div>
+
+</section><!-- ==============================
+     LATEST UPDATES
+============================== --><section class="updates"><div class="container">
+
+    <h2>
+        Latest Updates
+    </h2>
+
+
+    <article>
+
+        <h3>
+            📰 Campaign News
+        </h3>
+
+        <p>
+            Official campaign announcements,
+            constituency updates and IMOLE 2027 news.
+        </p>
+
+        <a href="news.html">
+            View News
+        </a>
+
+    </article>
+
+
+    <article>
+
+        <h3>
+            📅 Upcoming Events
+        </h3>
+
+        <p>
+            Information about scheduled campaign
+            and constituency events.
+        </p>
+
+        <a href="events.html">
+            View Events
+        </a>
+
+    </article>
+
+
+    <article>
+
+        <h3>
+            📸 Campaign Gallery
+        </h3>
+
+        <p>
+            View photographs and highlights from
+            IMOLE 2027 campaign activities.
+        </p>
+
+        <a href="gallery.html">
+            View Gallery
+        </a>
+
+    </article>
+
+
+</div>
+
+</section></main><!-- ==============================
+     FOOTER
+============================== --><footer><p>
+    &copy; 2026 Hon. Nurudeen Abayomi Sadeeq
+</p>
+
+<p>
+    Nigeria Democratic Congress (NDC)
+    | Ojo Constituency II
+</p>
+
+<p>
+    IMOLE 2027 — Service • Development • Accountability
+</p>
+
+</footer><!-- ==============================
      JAVASCRIPT
-============================== -->
+============================== --><script>
 
-<script>
-
-    /* Election Countdown */
+    /* ==============================
+       ELECTION COUNTDOWN
+    ============================== */
 
     const electionDate =
         new Date("2027-02-06T08:00:00+01:00").getTime();
@@ -904,15 +1087,21 @@
 
         document.getElementById("seconds").textContent =
             seconds;
+
     }
 
 
     updateCountdown();
 
-    setInterval(updateCountdown, 1000);
+    setInterval(
+        updateCountdown,
+        1000
+    );
 
 
-    /* Mobile Menu */
+    /* ==============================
+       MOBILE MENU
+    ============================== */
 
     function toggleMenu() {
 
@@ -922,20 +1111,52 @@
         const button =
             document.getElementById("menuButton");
 
+
         menu.classList.toggle("show");
+
 
         const isOpen =
             menu.classList.contains("show");
+
 
         button.setAttribute(
             "aria-expanded",
             isOpen
         );
+
     }
 
-</script>
+
+    /* ==============================
+       CLOSE MOBILE MENU AFTER CLICK
+    ============================== */
+
+    document
+        .querySelectorAll(".main-nav a")
+        .forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    const menu =
+                        document.getElementById("mainMenu");
+
+                    const button =
+                        document.getElementById("menuButton");
 
 
-</body>
+                    menu.classList.remove("show");
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+            );
+
+        });
+
+</script></body>
 </html>
-
