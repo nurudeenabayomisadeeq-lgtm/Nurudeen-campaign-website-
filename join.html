@@ -9,18 +9,16 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>
-        Join IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq
-    </title>
+    <title>Join the Movement | IMOLE 2027</title>
 
     <meta
         name="description"
-        content="Join the IMOLE 2027 movement supporting Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II, under the Nigeria Democratic Congress (NDC)."
+        content="Join the IMOLE 2027 movement of Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II."
     >
 
     <meta
         name="theme-color"
-        content="#0645a5"
+        content="#06449b"
     >
 
     <link
@@ -35,245 +33,147 @@
 
     <style>
 
-        /* =====================================
-           GENERAL
-        ===================================== */
+        /* =================================
+           JOIN PAGE
+        ================================= */
 
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            background: #f5f7fb;
-            color: #222;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .container {
-            width: 92%;
-            max-width: 1100px;
+        .join-page {
+            max-width: 1150px;
             margin: auto;
+            padding: 40px 15px 70px;
         }
 
 
-        /* =====================================
-           HEADER
-        ===================================== */
+        /* =================================
+           PAGE HEADER
+        ================================= */
 
         .join-header {
             text-align: center;
-            padding: 30px 15px;
-            background: #ffffff;
-        }
-
-        .ndc-logo {
-            width: 95px;
-            height: 95px;
-            object-fit: contain;
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto 15px;
+            margin-bottom: 40px;
         }
 
         .join-header h1 {
-            margin: 5px 0;
-            font-size: 28px;
-            font-weight: 800;
+            font-size: 38px;
+            margin-bottom: 12px;
         }
 
         .join-header p {
-            margin: 5px 0;
+            max-width: 780px;
+            margin: auto;
+            line-height: 1.8;
         }
 
 
-        /* =====================================
-           NAVIGATION
-        ===================================== */
-
-        .menu-toggle {
-            display: none;
-            width: 100%;
-            border: none;
-            padding: 14px;
-            background: #0645a5;
-            color: white;
-            font-size: 25px;
-            cursor: pointer;
-        }
-
-        .main-nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 5px;
-            background: #0645a5;
-            padding: 8px;
-        }
-
-        .main-nav a {
-            color: white;
-            padding: 11px 14px;
-            border-radius: 7px;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .main-nav a:hover {
-            background: rgba(255,255,255,0.18);
-        }
-
-        .main-nav .join-link {
-            background: #ffffff;
-            color: #0645a5;
-        }
-
-
-        /* =====================================
-           HERO
-        ===================================== */
+        /* =================================
+           HERO JOIN BOX
+        ================================= */
 
         .join-hero {
-            text-align: center;
-            padding: 65px 20px;
-            background: linear-gradient(
-                135deg,
-                #0645a5,
-                #0b66d1
-            );
+            background: #06449b;
             color: white;
-        }
-
-        .join-hero .icon {
-            font-size: 55px;
-            margin-bottom: 10px;
+            padding: 45px 25px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
         }
 
         .join-hero h2 {
-            font-size: 42px;
-            margin: 5px 0 15px;
-        }
-
-        .join-hero h3 {
-            font-size: 22px;
-            margin: 5px 0;
+            font-size: 32px;
+            margin-bottom: 12px;
         }
 
         .join-hero p {
             max-width: 750px;
-            margin: 15px auto 0;
-            font-size: 18px;
-        }
-
-
-        /* =====================================
-           MOVEMENT CARDS
-        ===================================== */
-
-        .movement-section {
-            padding: 50px 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .section-title h2 {
-            margin-bottom: 8px;
-            font-size: 30px;
-        }
-
-        .section-title p {
-            max-width: 700px;
             margin: auto;
+            line-height: 1.8;
         }
 
-        .movement-grid {
+
+        /* =================================
+           PARTICIPATION CARDS
+        ================================= */
+
+        .participation-grid {
             display: grid;
             grid-template-columns:
                 repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
+            gap: 20px;
+            margin-bottom: 45px;
         }
 
-        .movement-card {
+        .participation-card {
             background: white;
+            padding: 27px 20px;
             border-radius: 16px;
-            padding: 25px 18px;
             text-align: center;
-            box-shadow:
-                0 5px 18px rgba(0,0,0,0.10);
-            border: 2px solid transparent;
-            transition: 0.25s ease;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+            transition: transform 0.25s ease;
         }
 
-        .movement-card:hover {
+        .participation-card:hover {
             transform: translateY(-5px);
-            border-color: #0645a5;
         }
 
-        .movement-card .icon {
-            font-size: 40px;
-            margin-bottom: 8px;
+        .participation-icon {
+            font-size: 42px;
+            margin-bottom: 10px;
         }
 
-        .movement-card h3 {
-            margin: 5px 0 8px;
+        .participation-card h3 {
+            color: #06449b;
+            margin-bottom: 10px;
         }
 
-        .movement-card p {
-            margin: 0;
-            font-size: 14px;
+        .participation-card p {
+            line-height: 1.6;
         }
 
 
-        /* =====================================
-           FORM SECTION
-        ===================================== */
+        /* =================================
+           REGISTRATION SECTION
+        ================================= */
 
-        .form-section {
-            padding: 50px 0 70px;
+        .registration-section {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+            margin-bottom: 40px;
         }
 
-        .form-wrapper {
+        .registration-section h2 {
+            text-align: center;
+            color: #06449b;
+            margin-bottom: 10px;
+        }
+
+        .registration-intro {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+
+
+        /* =================================
+           FORM
+        ================================= */
+
+        .join-form {
             max-width: 850px;
             margin: auto;
-            background: white;
-            padding: 35px;
-            border-radius: 18px;
-            box-shadow:
-                0 6px 25px rgba(0,0,0,0.12);
-        }
-
-        .form-wrapper h2 {
-            text-align: center;
-            margin-top: 0;
-            font-size: 30px;
-        }
-
-        .form-intro {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #555;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 7px;
             font-weight: bold;
-        }
-
-        .required {
-            color: #d40000;
+            margin-bottom: 7px;
         }
 
         .form-group input,
@@ -281,20 +181,11 @@
         .form-group textarea {
             width: 100%;
             padding: 13px 14px;
-            border: 1px solid #ccc;
+            border: 1px solid #d5d5d5;
             border-radius: 8px;
-            font-size: 16px;
             font-family: inherit;
+            font-size: 15px;
             background: #fff;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #0645a5;
-            box-shadow:
-                0 0 0 3px rgba(6,69,165,0.10);
         }
 
         .form-group textarea {
@@ -302,10 +193,18 @@
             resize: vertical;
         }
 
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #06449b;
+            box-shadow: 0 0 0 2px rgba(6,68,155,0.10);
+        }
 
-        /* =====================================
+
+        /* =================================
            TWO COLUMN FORM
-        ===================================== */
+        ================================= */
 
         .form-row {
             display: grid;
@@ -314,25 +213,25 @@
         }
 
 
-        /* =====================================
+        /* =================================
            CHECKBOXES
-        ===================================== */
+        ================================= */
 
         .checkbox-group {
             display: grid;
             grid-template-columns:
-                repeat(2, 1fr);
+                repeat(auto-fit, minmax(220px, 1fr));
             gap: 10px;
+            margin-top: 8px;
         }
 
         .checkbox-item {
             display: flex;
             align-items: center;
-            gap: 9px;
-            padding: 12px;
-            background: #f5f7fb;
+            gap: 8px;
+            padding: 10px;
+            background: #f5f6f8;
             border-radius: 8px;
-            cursor: pointer;
         }
 
         .checkbox-item input {
@@ -340,208 +239,161 @@
         }
 
 
-        /* =====================================
+        /* =================================
            CONSENT
-        ===================================== */
+        ================================= */
 
-        .consent {
-            display: flex;
-            gap: 10px;
-            align-items: flex-start;
-            background: #f5f7fb;
+        .consent-box {
+            background: #f5f6f8;
             padding: 15px;
             border-radius: 10px;
             margin: 20px 0;
+            line-height: 1.6;
             font-size: 14px;
         }
 
-        .consent input {
-            margin-top: 5px;
+        .consent-box label {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .consent-box input {
+            margin-top: 4px;
         }
 
 
-        /* =====================================
+        /* =================================
            SUBMIT BUTTON
-        ===================================== */
+        ================================= */
 
         .submit-button {
+            display: block;
             width: 100%;
-            padding: 16px;
             border: none;
-            border-radius: 9px;
-            background: #0645a5;
+            background: #06449b;
             color: white;
-            font-size: 18px;
+            padding: 15px 20px;
+            border-radius: 9px;
+            font-size: 17px;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.25s ease;
         }
 
         .submit-button:hover {
-            background: #04377f;
-            transform: translateY(-1px);
+            opacity: 0.9;
         }
 
 
-        /* =====================================
-           SUCCESS MESSAGE
-        ===================================== */
+        /* =================================
+           WHATSAPP BOX
+        ================================= */
 
-        .success-message {
-            display: none;
-            margin-top: 25px;
-            padding: 20px;
-            background: #eaf7ea;
-            border: 1px solid #9bd39b;
-            border-radius: 10px;
+        .whatsapp-box {
+            margin-top: 35px;
+            background: #f5f6f8;
+            padding: 25px 20px;
+            border-radius: 15px;
             text-align: center;
         }
 
-        .success-message h3 {
-            margin-top: 0;
+        .whatsapp-box h3 {
+            margin-bottom: 10px;
         }
 
-
-        /* =====================================
-           WHATSAPP CTA
-        ===================================== */
-
-        .whatsapp-section {
-            max-width: 850px;
-            margin: 0 auto 60px;
-            padding: 30px 20px;
-            text-align: center;
-            background: white;
-            border-radius: 18px;
-            box-shadow:
-                0 5px 20px rgba(0,0,0,0.10);
-        }
-
-        .whatsapp-section h2 {
-            margin-top: 0;
+        .whatsapp-box p {
+            max-width: 650px;
+            margin: 0 auto 18px;
+            line-height: 1.7;
         }
 
         .whatsapp-button {
             display: inline-block;
-            margin-top: 12px;
-            padding: 14px 25px;
-            border-radius: 8px;
-            background: #128c7e;
+            background: #25D366;
             color: white;
+            padding: 13px 22px;
+            border-radius: 8px;
+            text-decoration: none;
             font-weight: bold;
         }
 
 
-        /* =====================================
-           DONATION SECTION
-        ===================================== */
+        /* =================================
+           DONATIONS
+        ================================= */
 
         .donation-section {
-            padding: 45px 20px;
-            background: #eef3fb;
-            text-align: center;
-        }
-
-        .donation-section .donation-box {
-            max-width: 800px;
-            margin: auto;
             background: white;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow:
-                0 5px 18px rgba(0,0,0,0.10);
+            padding: 35px 25px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+            margin-bottom: 40px;
+            text-align: center;
         }
 
         .donation-section h2 {
-            margin-top: 0;
+            color: #06449b;
+            margin-bottom: 12px;
+        }
+
+        .donation-section p {
+            max-width: 750px;
+            margin: 0 auto 15px;
+            line-height: 1.7;
         }
 
         .donation-note {
-            font-size: 14px;
-            color: #666;
+            background: #fff7e6;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            line-height: 1.6;
         }
 
 
-        /* =====================================
-           FOOTER
-        ===================================== */
+        /* =================================
+           INFORMATION BOX
+        ================================= */
 
-        footer {
+        .information-box {
+            background: #f5f6f8;
+            padding: 28px 22px;
+            border-radius: 18px;
             text-align: center;
-            padding: 30px 15px;
-            background: #111;
-            color: white;
-        }
-
-        footer p {
-            margin: 6px 0;
+            line-height: 1.8;
         }
 
 
-        /* =====================================
+        /* =================================
            MOBILE
-        ===================================== */
+        ================================= */
 
-        @media (max-width: 700px) {
+        @media (max-width: 600px) {
 
-            .menu-toggle {
-                display: block;
-            }
-
-            .main-nav {
-                display: none;
-                flex-direction: column;
-                padding: 0;
-            }
-
-            .main-nav.show {
-                display: flex;
-            }
-
-            .main-nav a {
-                width: 100%;
-                text-align: center;
-                border-radius: 0;
-                border-bottom:
-                    1px solid rgba(255,255,255,0.15);
-            }
-
-            .join-header {
-                padding: 22px 12px;
-            }
-
-            .ndc-logo {
-                width: 75px;
-                height: 75px;
+            .join-page {
+                padding:
+                    30px 12px 50px;
             }
 
             .join-header h1 {
-                font-size: 21px;
-            }
-
-            .join-header p {
-                font-size: 14px;
+                font-size: 29px;
             }
 
             .join-hero {
-                padding: 45px 18px;
+                padding: 35px 18px;
             }
 
             .join-hero h2 {
-                font-size: 32px;
+                font-size: 27px;
             }
 
-            .join-hero h3 {
-                font-size: 18px;
+            .participation-grid {
+                grid-template-columns: 1fr;
             }
 
-            .join-hero p {
-                font-size: 16px;
-            }
-
-            .form-wrapper {
-                width: 94%;
-                padding: 22px 17px;
+            .registration-section,
+            .donation-section {
+                padding: 25px 17px;
             }
 
             .form-row {
@@ -553,29 +405,20 @@
                 grid-template-columns: 1fr;
             }
 
-            .movement-section {
-                padding-top: 40px;
-            }
-
-            .section-title h2 {
-                font-size: 26px;
-            }
-
         }
 
     </style>
 
 </head>
 
-
 <body>
 
 
-<!-- =====================================
+<!-- =================================
      HEADER
-===================================== -->
+================================= -->
 
-<header class="join-header">
+<header class="site-header">
 
     <div class="container">
 
@@ -603,24 +446,24 @@
 </header>
 
 
-<!-- =====================================
+<!-- =================================
      MOBILE MENU
-===================================== -->
+================================= -->
 
 <button
     class="menu-toggle"
-    id="menuButton"
     onclick="toggleMenu()"
     aria-label="Open navigation menu"
     aria-expanded="false"
+    id="menuButton"
 >
     ☰
 </button>
 
 
-<!-- =====================================
+<!-- =================================
      NAVIGATION
-===================================== -->
+================================= -->
 
 <nav
     class="main-nav"
@@ -663,10 +506,7 @@
         Contact
     </a>
 
-    <a
-        href="join.html"
-        class="join-link"
-    >
+    <a href="join.html">
         🔥 JOIN THE MOVEMENT
     </a>
 
@@ -676,792 +516,637 @@
 <main>
 
 
-<!-- =====================================
+<section class="join-page">
+
+
+<!-- =================================
+     PAGE HEADER
+================================= -->
+
+<div class="join-header">
+
+    <h1>
+        🔥 JOIN IMOLE 2027
+    </h1>
+
+    <p>
+        Become part of the people-focused movement
+        supporting Hon. Nurudeen Abayomi Sadeeq for
+        Lagos State House of Assembly, Ojo Constituency II.
+    </p>
+
+</div>
+
+
+<!-- =================================
      HERO
-===================================== -->
+================================= -->
 
 <section class="join-hero">
 
-    <div class="container">
+    <h2>
+        🌟 YOUR VOICE. YOUR COMMUNITY. YOUR MOVEMENT.
+    </h2>
 
-        <div class="icon">
-            🔥
-        </div>
-
-        <h2>
-            JOIN IMOLE 2027
-        </h2>
-
-        <h3>
-            Together We Can Build A Better Ojo
-        </h3>
-
-        <p>
-            Be part of the movement supporting
-            Hon. Nurudeen Abayomi Sadeeq
-            for Lagos State House of Assembly,
-            Ojo Constituency II.
-        </p>
-
-        <p>
-            <strong>
-                Service • Development • Accountability
-            </strong>
-        </p>
-
-    </div>
+    <p>
+        Whether you want to volunteer, support
+        community engagement, assist with media,
+        join IMOLE BABES, join IMOLE ARMY or simply
+        receive campaign information, there is a
+        place for you in IMOLE 2027.
+    </p>
 
 </section>
 
 
-<!-- =====================================
-     MOVEMENT OPTIONS
-===================================== -->
+<!-- =================================
+     PARTICIPATION OPTIONS
+================================= -->
 
-<section class="movement-section">
+<section>
 
-    <div class="container">
+    <div class="participation-grid">
 
-        <div class="section-title">
 
-            <h2>
-                Find Your Place in the Movement
-            </h2>
+        <div class="participation-card">
+
+            <div class="participation-icon">
+                🌟
+            </div>
+
+            <h3>
+                Supporter
+            </h3>
 
             <p>
-                There is a place for everyone who wants
-                to contribute positively to the IMOLE 2027
-                movement.
+                Join the IMOLE 2027 family and stay
+                informed about campaign activities.
             </p>
 
         </div>
 
 
-        <div class="movement-grid">
+        <div class="participation-card">
 
-
-            <div class="movement-card">
-
-                <div class="icon">
-                    🌟
-                </div>
-
-                <h3>
-                    IMOLE SUPPORTER
-                </h3>
-
-                <p>
-                    Stand with the movement and support
-                    the campaign across Ojo Constituency II.
-                </p>
-
+            <div class="participation-icon">
+                💃
             </div>
 
+            <h3>
+                IMOLE BABES
+            </h3>
 
-            <div class="movement-card">
-
-                <div class="icon">
-                    💃
-                </div>
-
-                <h3>
-                    IMOLE BABES
-                </h3>
-
-                <p>
-                    Join the women supporting and
-                    mobilising for IMOLE 2027.
-                </p>
-
-            </div>
-
-
-            <div class="movement-card">
-
-                <div class="icon">
-                    🔥
-                </div>
-
-                <h3>
-                    IMOLE ARMY
-                </h3>
-
-                <p>
-                    Join grassroots mobilisation and
-                    community engagement activities.
-                </p>
-
-            </div>
-
-
-            <div class="movement-card">
-
-                <div class="icon">
-                    🤝
-                </div>
-
-                <h3>
-                    VOLUNTEER
-                </h3>
-
-                <p>
-                    Contribute your time, skills and
-                    energy to the campaign.
-                </p>
-
-            </div>
-
-
-            <div class="movement-card">
-
-                <div class="icon">
-                    📱
-                </div>
-
-                <h3>
-                    MEDIA TEAM
-                </h3>
-
-                <p>
-                    Help with photography, video,
-                    social media and communications.
-                </p>
-
-            </div>
-
-
-            <div class="movement-card">
-
-                <div class="icon">
-                    🗳️
-                </div>
-
-                <h3>
-                    COMMUNITY MOBILISER
-                </h3>
-
-                <p>
-                    Support community outreach and
-                    voter education activities.
-                </p>
-
-            </div>
+            <p>
+                Join women supporting community
+                engagement and the IMOLE 2027 movement.
+            </p>
 
         </div>
+
+
+        <div class="participation-card">
+
+            <div class="participation-icon">
+                🔥
+            </div>
+
+            <h3>
+                IMOLE ARMY
+            </h3>
+
+            <p>
+                Participate in lawful grassroots
+                mobilisation and community activities.
+            </p>
+
+        </div>
+
+
+        <div class="participation-card">
+
+            <div class="participation-icon">
+                🤝
+            </div>
+
+            <h3>
+                Volunteer
+            </h3>
+
+            <p>
+                Contribute your time, skills and
+                experience to the campaign.
+            </p>
+
+        </div>
+
+
+        <div class="participation-card">
+
+            <div class="participation-icon">
+                📱
+            </div>
+
+            <h3>
+                Media Team
+            </h3>
+
+            <p>
+                Help with photography, video,
+                social media and communication.
+            </p>
+
+        </div>
+
+
+        <div class="participation-card">
+
+            <div class="participation-icon">
+                🏘️
+            </div>
+
+            <h3>
+                Ward Activities
+            </h3>
+
+            <p>
+                Participate in community and ward-level
+                engagement activities.
+            </p>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- =====================================
-     JOIN FORM
-===================================== -->
+<!-- =================================
+     REGISTRATION
+================================= -->
 
 <section
-    class="form-section"
+    class="registration-section"
     id="join-form"
 >
 
-    <div class="container">
+    <h2>
+        📝 JOIN THE MOVEMENT
+    </h2>
 
-        <div class="form-wrapper">
-
-            <h2>
-                🔥 JOIN THE IMOLE 2027 MOVEMENT
-            </h2>
-
-            <p class="form-intro">
-                Complete the form below to indicate
-                your interest in joining the movement.
-            </p>
+    <p class="registration-intro">
+        Complete the form below. When you submit,
+        WhatsApp will open with your information
+        prepared for the campaign team.
+    </p>
 
 
-            <form
-                id="joinForm"
-                onsubmit="submitJoinForm(event)"
+    <form
+        class="join-form"
+        id="joinForm"
+    >
+
+
+        <!-- NAME -->
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="fullName">
+                    Full Name *
+                </label>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone Number *
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="e.g. 08012345678"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- EMAIL / AGE -->
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Optional"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="ageGroup">
+                    Age Group
+                </label>
+
+                <select
+                    id="ageGroup"
+                    name="ageGroup"
+                >
+
+                    <option value="">
+                        Select age group
+                    </option>
+
+                    <option>
+                        Under 18
+                    </option>
+
+                    <option>
+                        18–25
+                    </option>
+
+                    <option>
+                        26–35
+                    </option>
+
+                    <option>
+                        36–45
+                    </option>
+
+                    <option>
+                        46–60
+                    </option>
+
+                    <option>
+                        61+
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- WARD -->
+
+        <div class="form-group">
+
+            <label for="ward">
+                Ward / Area
+            </label>
+
+            <select
+                id="ward"
+                name="ward"
             >
 
+                <option value="">
+                    Select your ward / area
+                </option>
 
-                <!-- FULL NAME -->
+                <option>
+                    Ward D — Ijanikin
+                </option>
 
-                <div class="form-group">
+                <option>
+                    Ward F — Ilogbo
+                </option>
 
-                    <label for="fullName">
-                        Full Name
-                        <span class="required">*</span>
-                    </label>
+                <option>
+                    Ward G — Irewe
+                </option>
 
-                    <input
-                        type="text"
-                        id="fullName"
-                        name="fullName"
-                        placeholder="Enter your full name"
-                        required
-                    >
+                <option>
+                    Ward I — Etegbin
+                </option>
 
-                </div>
+                <option>
+                    Ward J — Idoluwo
+                </option>
 
+                <option>
+                    Other / Not Sure
+                </option>
 
-                <!-- PHONE -->
+            </select>
 
-                <div class="form-row">
+        </div>
 
-                    <div class="form-group">
 
-                        <label for="phone">
-                            Phone Number
-                            <span class="required">*</span>
-                        </label>
+        <!-- PARTICIPATION -->
 
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            placeholder="e.g. 08012345678"
-                            required
-                        >
+        <div class="form-group">
 
-                    </div>
+            <label>
+                How would you like to participate?
+            </label>
 
 
-                    <div class="form-group">
+            <div class="checkbox-group">
 
-                        <label for="whatsapp">
-                            WhatsApp Number
-                        </label>
 
-                        <input
-                            type="tel"
-                            id="whatsapp"
-                            name="whatsapp"
-                            placeholder="WhatsApp number"
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <!-- EMAIL -->
-
-                <div class="form-group">
-
-                    <label for="email">
-                        Email Address
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email address"
-                    >
-
-                </div>
-
-
-                <!-- WARD -->
-
-                <div class="form-row">
-
-                    <div class="form-group">
-
-                        <label for="ward">
-                            Ward
-                            <span class="required">*</span>
-                        </label>
-
-                        <select
-                            id="ward"
-                            name="ward"
-                            required
-                        >
-
-                            <option value="">
-                                Select your ward
-                            </option>
-
-                            <option value="Ward D - Ijanikin">
-                                Ward D — Ijanikin
-                            </option>
-
-                            <option value="Ward F - Ilogbo">
-                                Ward F — Ilogbo
-                            </option>
-
-                            <option value="Ward G - Irewe">
-                                Ward G — Irewe
-                            </option>
-
-                            <option value="Ward I - Etegbin">
-                                Ward I — Etegbin
-                            </option>
-
-                            <option value="Ward J - Idoluwo">
-                                Ward J — Idoluwo
-                            </option>
-
-                            <option value="Tafi Ward">
-                                Tafi Ward
-                            </option>
-
-                            <option value="Other">
-                                Other / Not Sure
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <!-- COMMUNITY -->
-
-                    <div class="form-group">
-
-                        <label for="community">
-                            Community
-                        </label>
-
-                        <input
-                            type="text"
-                            id="community"
-                            name="community"
-                            placeholder="Enter your community"
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <!-- POLLING UNIT -->
-
-                <div class="form-group">
-
-                    <label for="pollingUnit">
-                        Polling Unit
-                    </label>
-
-                    <input
-                        type="text"
-                        id="pollingUnit"
-                        name="pollingUnit"
-                        placeholder="Enter PU number/name if known"
-                    >
-
-                    <small>
-                        If you don't know your polling unit,
-                        leave this field blank.
-                    </small>
-
-                </div>
-
-
-                <!-- AGE -->
-
-                <div class="form-row">
-
-                    <div class="form-group">
-
-                        <label for="ageRange">
-                            Age Range
-                        </label>
-
-                        <select
-                            id="ageRange"
-                            name="ageRange"
-                        >
-
-                            <option value="">
-                                Select age range
-                            </option>
-
-                            <option>
-                                Under 18
-                            </option>
-
-                            <option>
-                                18–25
-                            </option>
-
-                            <option>
-                                26–35
-                            </option>
-
-                            <option>
-                                36–45
-                            </option>
-
-                            <option>
-                                46–55
-                            </option>
-
-                            <option>
-                                56–65
-                            </option>
-
-                            <option>
-                                66+
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <!-- GENDER -->
-
-                    <div class="form-group">
-
-                        <label for="gender">
-                            Gender
-                        </label>
-
-                        <select
-                            id="gender"
-                            name="gender"
-                        >
-
-                            <option value="">
-                                Select gender
-                            </option>
-
-                            <option>
-                                Male
-                            </option>
-
-                            <option>
-                                Female
-                            </option>
-
-                            <option>
-                                Prefer not to say
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-
-                <!-- AREA OF INTEREST -->
-
-                <div class="form-group">
-
-                    <label>
-                        How would you like to participate?
-                        <span class="required">*</span>
-                    </label>
-
-                    <div class="checkbox-group">
-
-
-                        <label class="checkbox-item">
-
-                            <input
-                                type="checkbox"
-                                name="interest"
-                                value="IMOLE Supporter"
-                            >
-
-                            IMOLE Supporter
-
-                        </label>
-
-
-                        <label class="checkbox-item">
-
-                            <input
-                                type="checkbox"
-                                name="interest"
-                                value="IMOLE Babes"
-                            >
-
-                            💃 IMOLE Babes
-
-                        </label>
-
-
-                        <label class="checkbox-item">
-
-                            <input
-                                type="checkbox"
-                                name="interest"
-                                value="IMOLE Army"
-                            >
-
-                            🔥 IMOLE Army
-
-                        </label>
-
-
-                        <label class="checkbox-item">
-
-                            <input
-                                type="checkbox"
-                                name="interest"
-                                value="Volunteer"
-                            >
-
-                            🤝 Volunteer
-
-                        </label>
-
-
-                        <label class="checkbox-item">
-
-                            <input
-                                type="checkbox"
-                                name="interest"
-                                value="Media Team"
-                            >
-
-                            📱 Media Team
-
-                        </label>
-
-
-                        <label class="checkbox-item">
-
-                            <input
-                                type="checkbox"
-                                name="interest"
-                                value="Youth Support"
-                            >
-
-                            👥 Youth Support
-
-                        </label>
-
-
-                        <label class="checkbox-item">
-
-                            <input
-                                type="checkbox"
-                                name="interest"
-                                value="Women Support"
-                            >
-
-                            👩 Women Support
-
-                        </label>
-
-
-                        <label class="checkbox-item">
-
-                            <input
-                                type="checkbox"
-                                name="interest"
-                                value="Community Mobilisation"
-                            >
-
-                            🏘️ Community Mobilisation
-
-                        </label>
-
-
-                        <label class="checkbox-item">
-
-                            <input
-                                type="checkbox"
-                                name="interest"
-                                value="Logistics"
-                            >
-
-                            🚚 Logistics
-
-                        </label>
-
-
-                        <label class="checkbox-item">
-
-                            <input
-                                type="checkbox"
-                                name="interest"
-                                value="Other"
-                            >
-
-                            Other
-
-                        </label>
-
-
-                    </div>
-
-                </div>
-
-
-                <!-- SKILLS -->
-
-                <div class="form-group">
-
-                    <label for="skills">
-                        Skills / Profession
-                    </label>
-
-                    <input
-                        type="text"
-                        id="skills"
-                        name="skills"
-                        placeholder="e.g. Media, IT, driving, organising, business..."
-                    >
-
-                </div>
-
-
-                <!-- MESSAGE -->
-
-                <div class="form-group">
-
-                    <label for="message">
-                        Message / Additional Information
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Tell us how you would like to contribute..."
-                    ></textarea>
-
-                </div>
-
-
-                <!-- CONSENT -->
-
-                <label class="consent">
+                <label class="checkbox-item">
 
                     <input
                         type="checkbox"
-                        id="consent"
-                        required
+                        name="interest"
+                        value="General Supporter"
                     >
 
-                    <span>
-                        I confirm that the information I have
-                        provided is accurate and I voluntarily
-                        indicate my interest in participating
-                        in the IMOLE 2027 movement.
-                    </span>
+                    General Supporter
 
                 </label>
 
 
-                <!-- SUBMIT -->
+                <label class="checkbox-item">
 
-                <button
-                    type="submit"
-                    class="submit-button"
-                >
-                    🔥 JOIN IMOLE 2027
-                </button>
+                    <input
+                        type="checkbox"
+                        name="interest"
+                        value="IMOLE BABES"
+                    >
 
+                    💃 IMOLE BABES
 
-                <!-- SUCCESS -->
-
-                <div
-                    class="success-message"
-                    id="successMessage"
-                >
-
-                    <h3>
-                        🎉 Thank You for Joining IMOLE 2027!
-                    </h3>
-
-                    <p>
-                        Your interest has been recorded on
-                        this device.
-                    </p>
-
-                    <p>
-                        Our team can contact you using the
-                        details you provided.
-                    </p>
-
-                </div>
+                </label>
 
 
-            </form>
+                <label class="checkbox-item">
+
+                    <input
+                        type="checkbox"
+                        name="interest"
+                        value="IMOLE ARMY"
+                    >
+
+                    🔥 IMOLE ARMY
+
+                </label>
+
+
+                <label class="checkbox-item">
+
+                    <input
+                        type="checkbox"
+                        name="interest"
+                        value="Volunteer"
+                    >
+
+                    🤝 Volunteer
+
+                </label>
+
+
+                <label class="checkbox-item">
+
+                    <input
+                        type="checkbox"
+                        name="interest"
+                        value="Media and Communication"
+                    >
+
+                    📱 Media & Communication
+
+                </label>
+
+
+                <label class="checkbox-item">
+
+                    <input
+                        type="checkbox"
+                        name="interest"
+                        value="Ward Activities"
+                    >
+
+                    🏘️ Ward Activities
+
+                </label>
+
+
+            </div>
 
         </div>
+
+
+        <!-- SKILLS -->
+
+        <div class="form-group">
+
+            <label for="skills">
+                Skills / Experience
+            </label>
+
+            <textarea
+                id="skills"
+                name="skills"
+                placeholder="Tell us about any skills you can contribute — media, photography, communication, organisation, community work, logistics, etc."
+            ></textarea>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="form-group">
+
+            <label for="message">
+                Additional Message
+            </label>
+
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Any additional information you would like the team to know?"
+            ></textarea>
+
+        </div>
+
+
+        <!-- CONSENT -->
+
+        <div class="consent-box">
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    id="consent"
+                    required
+                >
+
+                <span>
+                    I confirm that the information I am
+                    submitting is accurate to the best of
+                    my knowledge and I consent to the
+                    campaign team contacting me regarding
+                    IMOLE 2027 activities.
+                </span>
+
+            </label>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="submit-button"
+        >
+
+            🔥 SUBMIT & CONTINUE TO WHATSAPP
+
+        </button>
+
+
+    </form>
+
+
+    <!-- =================================
+         WHATSAPP
+    ================================= -->
+
+    <div class="whatsapp-box">
+
+        <h3>
+            📱 Prefer WhatsApp?
+        </h3>
+
+        <p>
+            You can also contact the IMOLE 2027 team
+            directly for information about joining,
+            volunteering and campaign activities.
+        </p>
+
+        <a
+            href="https://wa.me/2348033002235?text=Hello%20IMOLE%202027%20team%2C%20I%20would%20like%20to%20join%20the%20movement."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="whatsapp-button"
+        >
+
+            💬 CHAT ON WHATSAPP
+
+        </a>
 
     </div>
 
 </section>
 
 
-<!-- =====================================
-     WHATSAPP
-===================================== -->
-
-<section class="whatsapp-section">
-
-    <h2>
-        📱 Connect With the Movement
-    </h2>
-
-    <p>
-        You can also contact the IMOLE 2027 team
-        through WhatsApp for information about
-        meetings, volunteering and campaign activities.
-    </p>
-
-    <!--
-        IMPORTANT:
-        Replace the number below with the official
-        campaign WhatsApp number.
-    -->
-
-    <a
-        href="https://wa.me/2348033002235"
-        class="whatsapp-button"
-        target="_blank"
-        rel="noopener"
-    >
-        💬 CHAT WITH IMOLE 2027
-    </a>
-
-</section>
-
-
-<!-- =====================================
+<!-- =================================
      DONATIONS
-===================================== -->
+================================= -->
 
 <section
     class="donation-section"
     id="donations"
 >
 
-    <div class="donation-box">
+    <h2>
+        ❤️ SUPPORT THE MOVEMENT
+    </h2>
 
-        <h2>
-            ❤️ SUPPORT THE MOVEMENT
-        </h2>
+    <p>
+        People who wish to support IMOLE 2027 may
+        contact the campaign team for information
+        about approved and lawful ways to contribute.
+    </p>
 
-        <p>
-            Those who wish to support the campaign
-            financially can do so through lawful and
-            transparent contributions.
-        </p>
+    <p>
+        All campaign support should be handled
+        transparently and in accordance with applicable
+        electoral and financial laws.
+    </p>
 
-        <p class="donation-note">
-            Official donation/payment details will be
-            published here when available.
-        </p>
+
+    <div class="donation-note">
+
+        <strong>
+            📢 IMPORTANT
+        </strong>
+
+        <br>
+
+        Do not send money to unofficial individuals
+        claiming to represent the campaign. Please
+        verify any contribution instructions directly
+        with the authorised campaign team.
 
     </div>
+
+
+    <a
+        href="contact.html"
+        class="whatsapp-button"
+        style="margin-top:18px;"
+    >
+
+        📞 CONTACT CAMPAIGN TEAM
+
+    </a>
 
 </section>
 
 
+<!-- =================================
+     INFORMATION
+================================= -->
+
+<section class="information-box">
+
+    <h2>
+        🤝 TOGETHER WE CAN SERVE
+    </h2>
+
+    <p>
+        IMOLE 2027 is built around the values of
+        <strong>
+            Service, Development and Accountability.
+        </strong>
+    </p>
+
+    <p>
+        Join us in promoting peaceful, lawful and
+        meaningful participation in public affairs
+        across Ojo Constituency II.
+    </p>
+
+</section>
+
+
+</section>
+
 </main>
 
 
-<!-- =====================================
+<!-- =================================
      FOOTER
-===================================== -->
+================================= -->
 
 <footer>
 
@@ -1482,16 +1167,16 @@
 </footer>
 
 
-<!-- =====================================
+<!-- =================================
      JAVASCRIPT
-===================================== -->
+================================= -->
 
 <script>
 
 
-/* =====================================
+/* =================================
    MOBILE MENU
-===================================== */
+================================= */
 
 function toggleMenu() {
 
@@ -1501,10 +1186,13 @@ function toggleMenu() {
     const button =
         document.getElementById("menuButton");
 
+
     menu.classList.toggle("show");
+
 
     const isOpen =
         menu.classList.contains("show");
+
 
     button.setAttribute(
         "aria-expanded",
@@ -1514,9 +1202,9 @@ function toggleMenu() {
 }
 
 
-/* =====================================
-   CLOSE MENU AFTER LINK CLICK
-===================================== */
+/* =================================
+   CLOSE MOBILE MENU
+================================= */
 
 document
     .querySelectorAll(".main-nav a")
@@ -1532,6 +1220,7 @@ document
                 const button =
                     document.getElementById("menuButton");
 
+
                 menu.classList.remove("show");
 
                 button.setAttribute(
@@ -1545,145 +1234,193 @@ document
     });
 
 
-/* =====================================
-   JOIN FORM
-===================================== */
+/* =================================
+   JOIN FORM → WHATSAPP
+================================= */
 
-function submitJoinForm(event) {
+document
+    .getElementById("joinForm")
+    .addEventListener(
+        "submit",
+        function(event) {
 
-    event.preventDefault();
-
-
-    const form =
-        document.getElementById("joinForm");
-
-    const success =
-        document.getElementById("successMessage");
+            event.preventDefault();
 
 
-    /* CHECK PARTICIPATION */
-
-    const interests =
-        document.querySelectorAll(
-            'input[name="interest"]:checked'
-        );
-
-
-    if (interests.length === 0) {
-
-        alert(
-            "Please select at least one way you would like to participate."
-        );
-
-        return;
-
-    }
+            const fullName =
+                document
+                    .getElementById("fullName")
+                    .value
+                    .trim();
 
 
-    /* GET FORM DATA */
-
-    const formData = {
-
-        fullName:
-            document.getElementById("fullName").value,
-
-        phone:
-            document.getElementById("phone").value,
-
-        whatsapp:
-            document.getElementById("whatsapp").value,
-
-        email:
-            document.getElementById("email").value,
-
-        ward:
-            document.getElementById("ward").value,
-
-        community:
-            document.getElementById("community").value,
-
-        pollingUnit:
-            document.getElementById("pollingUnit").value,
-
-        ageRange:
-            document.getElementById("ageRange").value,
-
-        gender:
-            document.getElementById("gender").value,
-
-        skills:
-            document.getElementById("skills").value,
-
-        message:
-            document.getElementById("message").value,
-
-        interests:
-            Array.from(interests)
-                .map(function(item) {
-                    return item.value;
-                })
-
-    };
+            const phone =
+                document
+                    .getElementById("phone")
+                    .value
+                    .trim();
 
 
-    /*
-        SAVE TEMPORARILY ON THIS DEVICE
-
-        This allows the page to retain the
-        latest registration locally.
-
-        We will later connect this form to
-        a real online database/form service.
-    */
-
-    localStorage.setItem(
-        "imoleJoinApplication",
-        JSON.stringify(formData)
-    );
+            const email =
+                document
+                    .getElementById("email")
+                    .value
+                    .trim();
 
 
-    /* SHOW SUCCESS */
-
-    success.style.display = "block";
-
-
-    success.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-    });
+            const ageGroup =
+                document
+                    .getElementById("ageGroup")
+                    .value;
 
 
-    /* RESET FORM */
-
-    form.reset();
-
-}
-
-
-/* =====================================
-   LOAD SAVED DATA
-===================================== */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function() {
-
-        const saved =
-            localStorage.getItem(
-                "imoleJoinApplication"
-            );
+            const ward =
+                document
+                    .getElementById("ward")
+                    .value;
 
 
-        if (saved) {
+            const skills =
+                document
+                    .getElementById("skills")
+                    .value
+                    .trim();
 
-            console.log(
-                "IMOLE registration information is stored locally."
+
+            const message =
+                document
+                    .getElementById("message")
+                    .value
+                    .trim();
+
+
+            const interests =
+                Array
+                    .from(
+                        document.querySelectorAll(
+                            'input[name="interest"]:checked'
+                        )
+                    )
+                    .map(function(item) {
+                        return item.value;
+                    });
+
+
+            if (
+                interests.length === 0
+            ) {
+
+                alert(
+                    "Please select at least one way you would like to participate."
+                );
+
+                return;
+
+            }
+
+
+            const campaignWhatsApp =
+                "2348033002235";
+
+
+            let whatsappMessage =
+                "🔥 IMOLE 2027 — JOIN THE MOVEMENT\n\n";
+
+
+            whatsappMessage +=
+                "New Supporter Registration\n\n";
+
+
+            whatsappMessage +=
+                "Name: " +
+                fullName +
+                "\n";
+
+
+            whatsappMessage +=
+                "Phone: " +
+                phone +
+                "\n";
+
+
+            if (email) {
+
+                whatsappMessage +=
+                    "Email: " +
+                    email +
+                    "\n";
+
+            }
+
+
+            if (ageGroup) {
+
+                whatsappMessage +=
+                    "Age Group: " +
+                    ageGroup +
+                    "\n";
+
+            }
+
+
+            if (ward) {
+
+                whatsappMessage +=
+                    "Ward/Area: " +
+                    ward +
+                    "\n";
+
+            }
+
+
+            whatsappMessage +=
+                "Participation: " +
+                interests.join(", ") +
+                "\n";
+
+
+            if (skills) {
+
+                whatsappMessage +=
+                    "Skills/Experience: " +
+                    skills +
+                    "\n";
+
+            }
+
+
+            if (message) {
+
+                whatsappMessage +=
+                    "Additional Message: " +
+                    message +
+                    "\n";
+
+            }
+
+
+            whatsappMessage +=
+                "\nService • Development • Accountability";
+
+
+            const whatsappURL =
+                "https://wa.me/" +
+                campaignWhatsApp +
+                "?text=" +
+                encodeURIComponent(
+                    whatsappMessage
+                );
+
+
+            window.open(
+                whatsappURL,
+                "_blank",
+                "noopener,noreferrer"
             );
 
         }
+    );
 
-    }
-);
 
 </script>
 
