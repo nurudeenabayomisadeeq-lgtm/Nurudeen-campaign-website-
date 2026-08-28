@@ -1,125 +1,669 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Manifesto | Hon. Nurudeen Abayomi Sadeeq</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-          content="Published policy proposals and priorities of Hon. Nurudeen Abayomi Sadeeq for Ojo Constituency II.">
+    <title>
+        Manifesto | Hon. Nurudeen Abayomi Sadeeq | IMOLE 2027
+    </title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta
+        name="description"
+        content="The published manifesto and development priorities of Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II."
+    >
+
+    <meta
+        name="keywords"
+        content="Nurudeen Abayomi Sadeeq, Imole 2027, Ojo Constituency II, Lagos State House of Assembly, NDC, manifesto"
+    >
+
+    <meta
+        name="theme-color"
+        content="#06449b"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <style>
+
+        /* =========================================
+           MANIFESTO PAGE
+        ========================================= */
+
+        .manifesto-page {
+            max-width: 1150px;
+            margin: auto;
+            padding: 45px 15px 70px;
+        }
+
+
+        /* =========================================
+           PAGE HERO
+        ========================================= */
+
+        .manifesto-hero {
+            background:
+                linear-gradient(
+                    rgba(0, 52, 120, 0.94),
+                    rgba(6, 68, 155, 0.94)
+                );
+
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+
+            box-shadow:
+                0 7px 25px rgba(0,0,0,0.15);
+        }
+
+        .manifesto-hero .tagline {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+        }
+
+        .manifesto-hero h1 {
+            font-size: 40px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .manifesto-hero h2 {
+            font-size: 23px;
+            line-height: 1.5;
+            margin-bottom: 18px;
+        }
+
+        .manifesto-hero p {
+            max-width: 780px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+
+        /* =========================================
+           VALUES STRIP
+        ========================================= */
+
+        .values-strip {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 15px;
+            margin-bottom: 45px;
+        }
+
+        .value-box {
+            background: white;
+            padding: 22px 15px;
+            text-align: center;
+            border-radius: 14px;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.09);
+        }
+
+        .value-box h3 {
+            color: #06449b;
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================================
+           INTRODUCTION
+        ========================================= */
+
+        .manifesto-intro {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 18px;
+            margin-bottom: 40px;
+
+            box-shadow:
+                0 4px 18px rgba(0,0,0,0.09);
+        }
+
+        .manifesto-intro h2 {
+            color: #06449b;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .manifesto-intro p {
+            max-width: 850px;
+            margin: 0 auto 15px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           PRIORITIES
+        ========================================= */
+
+        .priorities-title {
+            text-align: center;
+            color: #06449b;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .priorities-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 22px;
+            margin-bottom: 45px;
+        }
+
+        .priority-card {
+            background: white;
+            padding: 28px 23px;
+            border-radius: 17px;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.10);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .priority-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 9px 25px rgba(0,0,0,0.15);
+        }
+
+        .priority-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .priority-card h3 {
+            color: #06449b;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .priority-card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .priority-card ul {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        .priority-card li {
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================================
+           COMMUNITY DEVELOPMENT
+        ========================================= */
+
+        .community-section {
+            background: #ffffff;
+            padding: 38px 25px;
+            border-radius: 18px;
+            margin-bottom: 40px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.09);
+        }
+
+        .community-section h2 {
+            color: #06449b;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .community-section > p {
+            max-width: 800px;
+            margin: 0 auto 25px;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .community-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(180px, 1fr));
+
+            gap: 15px;
+        }
+
+        .community-item {
+            background: #f5f6f8;
+            padding: 18px 12px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           REPRESENTATION
+        ========================================= */
+
+        .representation-section {
+            background: #f5f6f8;
+            padding: 40px 25px;
+            border-radius: 18px;
+            margin-bottom: 40px;
+        }
+
+        .representation-section h2 {
+            text-align: center;
+            color: #06449b;
+            margin-bottom: 20px;
+        }
+
+        .representation-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 18px;
+        }
+
+        .representation-card {
+            background: white;
+            padding: 23px 18px;
+            border-radius: 13px;
+            text-align: center;
+
+            box-shadow:
+                0 3px 12px rgba(0,0,0,0.07);
+        }
+
+        .representation-card h3 {
+            color: #06449b;
+            margin-bottom: 8px;
+        }
+
+        .representation-card p {
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           ACCOUNTABILITY
+        ========================================= */
+
+        .accountability-box {
+            background: #06449b;
+            color: white;
+            padding: 40px 25px;
+            border-radius: 18px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .accountability-box h2 {
+            margin-bottom: 12px;
+        }
+
+        .accountability-box p {
+            max-width: 800px;
+            margin: 0 auto 15px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           MANIFESTO NOTE
+        ========================================= */
+
+        .manifesto-note {
+            background: #fff7e6;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 35px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .manifesto-cta {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 18px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.10);
+        }
+
+        .manifesto-cta h2 {
+            color: #06449b;
+            margin-bottom: 12px;
+        }
+
+        .manifesto-cta p {
+            max-width: 750px;
+            margin: 0 auto 22px;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .cta-buttons a {
+            display: inline-block;
+            background: #06449b;
+            color: white;
+            padding: 13px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cta-buttons a.secondary {
+            background: #222;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            .manifesto-page {
+                padding:
+                    30px 12px 50px;
+            }
+
+            .manifesto-hero {
+                padding: 38px 17px;
+                border-radius: 15px;
+            }
+
+            .manifesto-hero .tagline {
+                font-size: 17px;
+                letter-spacing: 3px;
+            }
+
+            .manifesto-hero h1 {
+                font-size: 29px;
+            }
+
+            .manifesto-hero h2 {
+                font-size: 19px;
+            }
+
+            .values-strip {
+                grid-template-columns: 1fr;
+            }
+
+            .manifesto-intro,
+            .community-section,
+            .representation-section,
+            .accountability-box {
+                padding: 28px 17px;
+            }
+
+            .priorities-title {
+                font-size: 27px;
+            }
+
+            .priorities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .community-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons a {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
 <header class="site-header">
+
     <div class="container">
-        <h1>HON. NURUDEEN ABAYOMI SADEEQ</h1>
-        <p>Lagos State House of Assembly — Ojo Constituency II</p>
-        <p>Nigeria Democratic Congress (NDC)</p>
+
+        <img
+            src="assets/ndc-logo.jpeg"
+            alt="Nigeria Democratic Congress logo"
+            class="ndc-logo"
+        >
+
+        <h1>
+            HON. NURUDEEN ABAYOMI SADEEQ
+        </h1>
+
+        <p>
+            Lagos State House of Assembly —
+            Ojo Constituency II
+        </p>
+
+        <p>
+            Nigeria Democratic Congress (NDC)
+        </p>
+
     </div>
+
 </header>
 
-<nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="manifesto.html">Manifesto</a>
-    <a href="polling-units.html">Polling Units</a>
-    <a href="news.html">News</a>
-    <a href="events.html">Events</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
+
+<!-- =========================================
+     MOBILE MENU
+========================================= -->
+
+<button
+    class="menu-toggle"
+    onclick="toggleMenu()"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    id="menuButton"
+>
+    ☰
+</button>
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<nav
+    class="main-nav"
+    id="mainMenu"
+>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="about.html">
+        About
+    </a>
+
+    <a href="manifesto.html">
+        Manifesto
+    </a>
+
+    <a href="polling-units.html">
+        Polling Units
+    </a>
+
+    <a href="results.html">
+        Results
+    </a>
+
+    <a href="news.html">
+        News
+    </a>
+
+    <a href="events.html">
+        Events
+    </a>
+
+    <a href="gallery.html">
+        Gallery
+    </a>
+
+    <a href="contact.html">
+        Contact
+    </a>
+
+    <a href="join.html">
+        🔥 JOIN THE MOVEMENT
+    </a>
+
 </nav>
+
 
 <main>
 
-<section class="about-preview">
-    <div class="container">
 
-        <h2>Published Manifesto</h2>
+<section class="manifesto-page">
 
-        <p>
-            This page presents the published policy priorities and
-            development proposals associated with the candidacy of
-            Hon. Nurudeen Abayomi Sadeeq.
-        </p>
 
-        <div class="quick-info">
-            <div class="container">
+<!-- =========================================
+     MANIFESTO HERO
+========================================= -->
 
-                <div class="info-card">
-                    <h3>Infrastructure</h3>
-                    <p>
-                        Rehabilitation of roads, improved drainage systems
-                        and public infrastructure.
-                    </p>
-                </div>
+<section class="manifesto-hero">
 
-                <div class="info-card">
-                    <h3>Education</h3>
-                    <p>
-                        Education support, school improvements and
-                        vocational training initiatives.
-                    </p>
-                </div>
-
-                <div class="info-card">
-                    <h3>Healthcare</h3>
-                    <p>
-                        Improved access to healthcare services and
-                        stronger primary healthcare facilities.
-                    </p>
-                </div>
-
-                <div class="info-card">
-                    <h3>Youth & Women</h3>
-                    <p>
-                        Skills development, entrepreneurship support and
-                        employment-related initiatives.
-                    </p>
-                </div>
-
-                <div class="info-card">
-                    <h3>Accountability</h3>
-                    <p>
-                        Transparent and accountable representation and
-                        public-service responsibilities.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
-        <h2>Constituency Focus</h2>
-
-        <p>
-            The proposals are presented in relation to issues affecting
-            communities within Ojo Constituency II.
-        </p>
-
-        <br>
-
-        <a href="polling-units.html">
-            View Polling Unit Directory
-        </a>
-
-        <br><br>
-
-        <a href="about.html">
-            About the Candidate
-        </a>
-
+    <div class="tagline">
+        IMOLE 2027
     </div>
+
+    <h1>
+        HON. NURUDEEN ABAYOMI SADEEQ
+    </h1>
+
+    <h2>
+        Published Manifesto for
+        Ojo Constituency II
+    </h2>
+
+    <p>
+        A people-focused vision built around
+        <strong>
+            Service, Development and Accountability
+        </strong>
+        for communities across Ojo Constituency II.
+    </p>
+
 </section>
 
-</main>
 
-<footer>
-    <p>&copy; 2026 Hon. Nurudeen Abayomi Sadeeq</p>
-    <p>Nigeria Democratic Congress (NDC) | Ojo Constituency II</p>
-</footer>
+<!-- =========================================
+     CORE VALUES
+========================================= -->
 
-</body>
-</html>
+<section class="values-strip">
+
+    <div class="value-box">
+
+        <h3>
+            🤝 SERVICE
+        </h3>
+
+        <p>
+            Putting the interests of the people
+            at the centre of representation.
+        </p>
+
+    </div>
+
+
+    <div class="value-box">
+
+        <h3>
+            🏗️ DEVELOPMENT
+        </h3>
+
+        <p>
+            Supporting practical initiatives
+            that improve community life.
+        </p>
+
+    </div>
+
+
+    <div class="value-box">
+
+        <h3>
+            📊 ACCOUNTABILITY
+        </h3>
+
+        <p>
+            Promoting responsible, transparent
+            and accessible representation.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     INTRODUCTION
+========================================= -->
+
+<section class="manifesto-intro">
+
+    <h2>
+        Our Vision for Ojo Constituency II
+    </h2>
+
+    <p>
+        The IMOLE 2027 vision is centred on responsive
+        representation and practical development
+        priorities that address the needs of
