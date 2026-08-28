@@ -1,112 +1,961 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About | Hon. Nurudeen Abayomi Sadeeq</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-          content="Background and public information about Hon. Nurudeen Abayomi Sadeeq and his candidacy for Ojo Constituency II.">
+    <title>About Hon. Nurudeen Abayomi Sadeeq | IMOLE 2027</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta
+        name="description"
+        content="Learn about Hon. Nurudeen Abayomi Sadeeq, Lagos State House of Assembly candidate for Ojo Constituency II under the Nigeria Democratic Congress (NDC)."
+    >
+
+    <meta
+        name="keywords"
+        content="Nurudeen Abayomi Sadeeq, Imole 2027, Ojo Constituency II, Lagos State House of Assembly, NDC, Nigeria Democratic Congress"
+    >
+
+    <meta
+        name="theme-color"
+        content="#06449b"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <style>
+
+        /* =========================================
+           ABOUT PAGE
+        ========================================= */
+
+        .about-page {
+            max-width: 1150px;
+            margin: auto;
+            padding: 40px 15px 70px;
+        }
+
+
+        /* =========================================
+           PAGE HERO
+        ========================================= */
+
+        .about-hero {
+            background: linear-gradient(
+                rgba(0, 52, 120, 0.95),
+                rgba(6, 68, 155, 0.95)
+            );
+            color: white;
+            padding: 55px 25px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow:
+                0 7px 25px rgba(0,0,0,0.15);
+        }
+
+        .about-hero img {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 20px;
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.25);
+        }
+
+        .about-hero .tagline {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .about-hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .about-hero h2 {
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .about-hero p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           CONTENT CARDS
+        ========================================= */
+
+        .about-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 18px;
+            margin-bottom: 30px;
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.09);
+        }
+
+        .about-card h2 {
+            color: #06449b;
+            text-align: center;
+            margin-bottom: 18px;
+            font-size: 30px;
+        }
+
+        .about-card h3 {
+            color: #06449b;
+            margin-bottom: 8px;
+        }
+
+        .about-card p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================================
+           VALUES GRID
+        ========================================= */
+
+        .values-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(210px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .value-card {
+            background: #f5f7fa;
+            padding: 25px 18px;
+            border-radius: 15px;
+            text-align: center;
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 7px 20px rgba(0,0,0,0.12);
+        }
+
+        .value-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .value-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .value-card p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           SERVICE DEVELOPMENT ACCOUNTABILITY
+        ========================================= */
+
+        .priority-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .priority-card {
+            padding: 28px 20px;
+            border-radius: 15px;
+            background: #f5f7fa;
+            text-align: center;
+        }
+
+        .priority-card .icon {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .priority-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .priority-card p {
+            margin: 0;
+        }
+
+
+        /* =========================================
+           CONSTITUENCY
+        ========================================= */
+
+        .constituency-box {
+            background: #f5f7fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .constituency-box ul {
+            margin: 15px 0 0 20px;
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .about-cta {
+            background: #06449b;
+            color: white;
+            padding: 40px 25px;
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 40px;
+            box-shadow:
+                0 6px 22px rgba(0,0,0,0.15);
+        }
+
+        .about-cta h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .about-cta p {
+            max-width: 720px;
+            margin: 0 auto 22px;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .cta-buttons a {
+            display: inline-block;
+            background: white;
+            color: #06449b;
+            padding: 13px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            .about-page {
+                padding:
+                    25px 12px 50px;
+            }
+
+            .about-hero {
+                padding: 40px 18px;
+            }
+
+            .about-hero img {
+                width: 155px;
+                height: 155px;
+            }
+
+            .about-hero h1 {
+                font-size: 28px;
+            }
+
+            .about-hero h2 {
+                font-size: 19px;
+            }
+
+            .about-hero .tagline {
+                font-size: 17px;
+            }
+
+            .about-card {
+                padding: 27px 18px;
+            }
+
+            .about-card h2 {
+                font-size: 26px;
+            }
+
+            .values-grid,
+            .priority-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-cta {
+                padding: 35px 18px;
+            }
+
+            .about-cta h2 {
+                font-size: 26px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons a {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 <body>
 
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
 <header class="site-header">
+
     <div class="container">
-        <h1>HON. NURUDEEN ABAYOMI SADEEQ</h1>
-        <p>Lagos State House of Assembly — Ojo Constituency II</p>
-        <p>Nigeria Democratic Congress (NDC)</p>
+
+        <img
+            src="assets/ndc-logo.jpeg"
+            alt="Nigeria Democratic Congress logo"
+            class="ndc-logo"
+        >
+
+        <h1>
+            HON. NURUDEEN ABAYOMI SADEEQ
+        </h1>
+
+        <p>
+            Lagos State House of Assembly —
+            Ojo Constituency II
+        </p>
+
+        <p>
+            Nigeria Democratic Congress (NDC)
+        </p>
+
     </div>
+
 </header>
 
-<nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="manifesto.html">Manifesto</a>
-    <a href="polling-units.html">Polling Units</a>
-    <a href="news.html">News</a>
-    <a href="events.html">Events</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
+
+<!-- =========================================
+     MOBILE MENU
+========================================= -->
+
+<button
+    class="menu-toggle"
+    onclick="toggleMenu()"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    id="menuButton"
+>
+    ☰
+</button>
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<nav
+    class="main-nav"
+    id="mainMenu"
+>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="about.html">
+        About
+    </a>
+
+    <a href="manifesto.html">
+        Manifesto
+    </a>
+
+    <a href="polling-units.html">
+        Polling Units
+    </a>
+
+    <a href="results.html">
+        Results
+    </a>
+
+    <a href="news.html">
+        News
+    </a>
+
+    <a href="events.html">
+        Events
+    </a>
+
+    <a href="gallery.html">
+        Gallery
+    </a>
+
+    <a href="contact.html">
+        Contact
+    </a>
+
+    <a href="join.html">
+        🔥 JOIN THE MOVEMENT
+    </a>
+
 </nav>
+
+
+<!-- =========================================
+     MAIN
+========================================= -->
 
 <main>
 
-<section class="about-preview">
-    <div class="container">
+<section class="about-page">
 
-        <h2>About the Candidate</h2>
 
-        <img
-            src="assets/IMG-20260710-WA0004.jpg"
-            alt="Hon. Nurudeen Abayomi Sadeeq"
-            width="300"
-            style="max-width:100%; height:auto; border-radius:12px; margin:20px 0;"
-        >
+<!-- =========================================
+     ABOUT HERO
+========================================= -->
 
-        <p>
-            Hon. Nurudeen Abayomi Sadeeq is a candidate for the
-            Lagos State House of Assembly representing Ojo Constituency II.
-        </p>
+<section class="about-hero">
 
-        <p>
-            This page provides publicly available information about his
-            background, constituency interests, published priorities and
-            political candidacy.
-        </p>
+    <img
+        src="assets/IMG-20260710-WA0004.jpg"
+        alt="Hon. Nurudeen Abayomi Sadeeq"
+    >
 
-        <h2>Published Values</h2>
+    <div class="tagline">
+        IMOLE 2027
+    </div>
 
-        <div class="quick-info">
-            <div class="container">
+    <h1>
+        HON. NURUDEEN ABAYOMI SADEEQ
+    </h1>
 
-                <div class="info-card">
-                    <h3>Integrity</h3>
-                    <p>Commitment to responsible public service.</p>
-                </div>
+    <h2>
+        Candidate for Lagos State House of Assembly
+    </h2>
 
-                <div class="info-card">
-                    <h3>Accountability</h3>
-                    <p>Emphasis on transparency in public responsibilities.</p>
-                </div>
+    <p>
+        Ojo Constituency II
+        <br>
+        Nigeria Democratic Congress (NDC)
+    </p>
 
-                <div class="info-card">
-                    <h3>Community Development</h3>
-                    <p>Focus on issues affecting communities within the constituency.</p>
-                </div>
+</section>
 
+
+<!-- =========================================
+     PROFILE
+========================================= -->
+
+<section class="about-card">
+
+    <h2>
+        About the Candidate
+    </h2>
+
+    <p>
+        Hon. Nurudeen Abayomi Sadeeq is a candidate
+        for the Lagos State House of Assembly
+        representing Ojo Constituency II under the
+        Nigeria Democratic Congress (NDC).
+    </p>
+
+    <p>
+        His campaign is centred on meaningful
+        representation, community engagement and
+        responsible public service.
+    </p>
+
+    <p>
+        The IMOLE 2027 movement seeks to bring
+        together residents, volunteers, young people,
+        women, community stakeholders and supporters
+        who believe in constructive participation in
+        the development of Ojo Constituency II.
+    </p>
+
+</section>
+
+
+<!-- =========================================
+     VALUES
+========================================= -->
+
+<section class="about-card">
+
+    <h2>
+        Our Values
+    </h2>
+
+    <div class="values-grid">
+
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                🏛️
             </div>
+
+            <h3>
+                Integrity
+            </h3>
+
+            <p>
+                Promoting honesty, responsibility and
+                ethical conduct in public service.
+            </p>
+
         </div>
 
-        <h2>Constituency</h2>
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                🤝
+            </div>
+
+            <h3>
+                Accessibility
+            </h3>
+
+            <p>
+                Encouraging open communication and
+                meaningful engagement with constituents.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                🌟
+            </div>
+
+            <h3>
+                Humility
+            </h3>
+
+            <p>
+                Putting the interests of the people
+                above personal interests.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                📊
+            </div>
+
+            <h3>
+                Accountability
+            </h3>
+
+            <p>
+                Supporting transparency and responsible
+                stewardship of public responsibilities.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                ❤️
+            </div>
+
+            <h3>
+                Compassion
+            </h3>
+
+            <p>
+                Listening to community concerns and
+                promoting people-centred solutions.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     SERVICE DEVELOPMENT ACCOUNTABILITY
+========================================= -->
+
+<section class="about-card">
+
+    <h2>
+        Service • Development • Accountability
+    </h2>
+
+    <p style="text-align:center;">
+        The IMOLE 2027 campaign is built around
+        three central principles.
+    </p>
+
+
+    <div class="priority-grid">
+
+
+        <div class="priority-card">
+
+            <div class="icon">
+                🤝
+            </div>
+
+            <h3>
+                SERVICE
+            </h3>
+
+            <p>
+                Putting constituents at the centre
+                of representation and public service.
+            </p>
+
+        </div>
+
+
+        <div class="priority-card">
+
+            <div class="icon">
+                🏗️
+            </div>
+
+            <h3>
+                DEVELOPMENT
+            </h3>
+
+            <p>
+                Supporting practical community
+                development and improved public
+                infrastructure.
+            </p>
+
+        </div>
+
+
+        <div class="priority-card">
+
+            <div class="icon">
+                📊
+            </div>
+
+            <h3>
+                ACCOUNTABILITY
+            </h3>
+
+            <p>
+                Promoting transparency, responsibility
+                and communication with constituents.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CONSTITUENCY
+========================================= -->
+
+<section class="about-card">
+
+    <h2>
+        Ojo Constituency II
+    </h2>
+
+    <p>
+        The campaign is focused on engaging residents
+        and communities across Ojo Constituency II.
+    </p>
+
+    <div class="constituency-box">
+
+        <h3>
+            Constituency Engagement
+        </h3>
 
         <p>
-            Ojo Constituency II includes the wards and polling units
-            documented in the constituency polling-unit directory.
+            IMOLE 2027 is committed to grassroots
+            communication, peaceful participation and
+            community-focused engagement.
         </p>
 
-        <a href="polling-units.html">
-            View Polling Unit Directory
-        </a>
+        <ul>
 
-        <br><br>
+            <li>
+                Community engagement
+            </li>
 
-        <a href="manifesto.html">
-            View Published Manifesto
+            <li>
+                Ward-level mobilisation
+            </li>
+
+            <li>
+                Youth participation
+            </li>
+
+            <li>
+                Women participation
+            </li>
+
+            <li>
+                Volunteer activities
+            </li>
+
+            <li>
+                Public communication
+            </li>
+
+        </ul>
+
+    </div>
+
+    <br>
+
+    <a
+        href="polling-units.html"
+        style="
+            display:inline-block;
+            background:#06449b;
+            color:white;
+            padding:13px 20px;
+            border-radius:8px;
+            text-decoration:none;
+            font-weight:bold;
+        "
+    >
+        🗳️ VIEW POLLING UNITS
+    </a>
+
+</section>
+
+
+<!-- =========================================
+     MANIFESTO
+========================================= -->
+
+<section class="about-card">
+
+    <h2>
+        Published Priorities
+    </h2>
+
+    <p>
+        The campaign's published priorities focus on
+        issues that directly affect everyday life in
+        Ojo Constituency II, including community
+        infrastructure, education, healthcare,
+        drainage, roads and support for local
+        economic activity.
+    </p>
+
+    <p>
+        For the full published policy proposals,
+        please visit the manifesto page.
+    </p>
+
+    <div style="text-align:center;">
+
+        <a
+            href="manifesto.html"
+            style="
+                display:inline-block;
+                background:#06449b;
+                color:white;
+                padding:13px 22px;
+                border-radius:8px;
+                text-decoration:none;
+                font-weight:bold;
+            "
+        >
+            📖 READ THE MANIFESTO
         </a>
 
     </div>
+
+</section>
+
+
+<!-- =========================================
+     JOIN CTA
+========================================= -->
+
+<section class="about-cta">
+
+    <h2>
+        🔥 JOIN IMOLE 2027
+    </h2>
+
+    <p>
+        Be part of a peaceful and community-focused
+        movement for service, development and
+        accountability in Ojo Constituency II.
+    </p>
+
+    <div class="cta-buttons">
+
+        <a href="join.html#join-form">
+            🌟 JOIN THE MOVEMENT
+        </a>
+
+        <a href="join.html">
+            🤝 BECOME A VOLUNTEER
+        </a>
+
+        <a
+            href="https://wa.me/2348033002235?text=Hello%20IMOLE%202027%20team%2C%20I%20would%20like%20more%20information%20about%20the%20movement."
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            💬 CHAT ON WHATSAPP
+        </a>
+
+    </div>
+
+</section>
+
+
 </section>
 
 </main>
 
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
 <footer>
-    <p>&copy; 2026 Hon. Nurudeen Abayomi Sadeeq</p>
-    <p>Nigeria Democratic Congress (NDC)</p>
+
+    <p>
+        &copy; 2026 Hon. Nurudeen Abayomi Sadeeq
+    </p>
+
+    <p>
+        Nigeria Democratic Congress (NDC)
+        | Ojo Constituency II
+    </p>
+
+    <p>
+        IMOLE 2027 —
+        Service • Development • Accountability
+    </p>
+
 </footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+function toggleMenu() {
+
+    const menu =
+        document.getElementById("mainMenu");
+
+    const button =
+        document.getElementById("menuButton");
+
+    menu.classList.toggle("show");
+
+    const isOpen =
+        menu.classList.contains("show");
+
+    button.setAttribute(
+        "aria-expanded",
+        isOpen
+    );
+
+}
+
+
+/* =========================================
+   CLOSE MENU AFTER CLICK
+========================================= */
+
+document
+    .querySelectorAll(".main-nav a")
+    .forEach(function(link) {
+
+        link.addEventListener(
+            "click",
+            function() {
+
+                const menu =
+                    document.getElementById("mainMenu");
+
+                const button =
+                    document.getElementById("menuButton");
+
+                menu.classList.remove("show");
+
+                button.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+        );
+
+    });
+
+</script>
+
 
 </body>
 </html>
