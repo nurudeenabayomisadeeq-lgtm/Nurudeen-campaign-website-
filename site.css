@@ -1,0 +1,391 @@
+/* =========================================================
+   IMOLE 2027 — UNIVERSAL WEBSITE STYLE
+   ========================================================= */
+
+:root {
+  --imo-green-dark: #071b13;
+  --imo-green: #0b5d3b;
+  --imo-green-light: #138a55;
+  --imo-gold: #f4c542;
+  --imo-white: #ffffff;
+}
+
+
+/* Hide old navigation */
+
+.imo-legacy-hidden {
+  display: none !important;
+}
+
+
+/* TOP BAR */
+
+.imo-topbar {
+  background: var(--imo-gold);
+  color: #111;
+  text-align: center;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+
+/* HEADER */
+
+.imo-header {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  background: rgba(7,27,19,.98);
+  box-shadow: 0 5px 25px rgba(0,0,0,.18);
+}
+
+
+.imo-nav-container {
+  width: min(94%, 1200px);
+  min-height: 74px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+
+/* BRAND */
+
+.imo-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+
+.imo-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  background: white;
+  border-radius: 50%;
+  padding: 3px;
+  border: 2px solid var(--imo-gold);
+}
+
+
+.imo-brand-text strong {
+  display: block;
+  color: var(--imo-gold);
+  font-size: 18px;
+  line-height: 1;
+}
+
+
+.imo-brand-text small {
+  display: block;
+  color: rgba(255,255,255,.75);
+  font-size: 9px;
+  margin-top: 5px;
+}
+
+
+/* DESKTOP MENU */
+
+.imo-desktop-menu {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+
+.imo-desktop-menu a {
+  color: white;
+  padding: 9px 9px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 800;
+  transition: .2s ease;
+}
+
+
+.imo-desktop-menu a:hover,
+.imo-desktop-menu a.imo-active {
+  color: var(--imo-gold);
+  background: rgba(255,255,255,.08);
+}
+
+
+.imo-desktop-menu .imo-nav-join {
+  background: var(--imo-gold);
+  color: #111;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+
+.imo-desktop-menu .imo-nav-join:hover {
+  color: #111;
+  transform: translateY(-2px);
+}
+
+
+/* MOBILE BUTTON */
+
+.imo-menu-button {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  background: transparent;
+  color: white;
+
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 11px;
+
+  cursor: pointer;
+
+  font-size: 22px;
+}
+
+
+/* MOBILE MENU */
+
+.imo-mobile-menu {
+  display: none;
+  background: #06150f;
+}
+
+
+.imo-mobile-menu a {
+  display: block;
+  color: white;
+  padding: 13px 6%;
+  border-top: 1px solid rgba(255,255,255,.07);
+  font-weight: 800;
+}
+
+
+.imo-mobile-menu a.imo-active {
+  color: var(--imo-gold);
+}
+
+
+.imo-mobile-menu.imo-open {
+  display: block;
+}
+
+
+/* FOOTER */
+
+.imo-footer {
+  background: #04110b;
+  color: white;
+  padding: 55px 0 20px;
+}
+
+
+.imo-footer-container {
+  width: min(92%, 1100px);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.4fr .7fr .7fr;
+  gap: 40px;
+
+  padding-bottom: 35px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.1);
+}
+
+
+.imo-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+
+.imo-footer-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  background: white;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+
+.imo-footer-brand strong {
+  display: block;
+  color: var(--imo-gold);
+}
+
+
+.imo-footer-brand small {
+  color: #aaa;
+  font-size: 10px;
+}
+
+
+.imo-footer-column p {
+  color: rgba(255,255,255,.6);
+  font-size: 14px;
+}
+
+
+.imo-footer-column h3 {
+  color: var(--imo-gold);
+  margin-bottom: 12px;
+}
+
+
+.imo-footer-column a {
+  display: block;
+  color: rgba(255,255,255,.65);
+  margin: 7px 0;
+  font-size: 14px;
+}
+
+
+.imo-footer-column a:hover {
+  color: var(--imo-gold);
+}
+
+
+.imo-footer-motto {
+  color: var(--imo-gold) !important;
+  font-weight: 800;
+  margin-top: 12px;
+}
+
+
+.imo-copyright {
+  width: min(92%, 1100px);
+  margin: auto;
+
+  text-align: center;
+
+  padding-top: 20px;
+
+  color: rgba(255,255,255,.4);
+
+  font-size: 12px;
+}
+
+
+/* BACK TO TOP */
+
+.imo-scroll-top {
+  position: fixed;
+
+  right: 18px;
+  bottom: 88px;
+
+  width: 42px;
+  height: 42px;
+
+  border: 0;
+  border-radius: 12px;
+
+  background: var(--imo-green-dark);
+  color: var(--imo-gold);
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  display: none;
+
+  z-index: 9998;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.25);
+}
+
+
+.imo-scroll-top.imo-show {
+  display: block;
+}
+
+
+/* WHATSAPP */
+
+.imo-whatsapp {
+  position: fixed;
+
+  right: 18px;
+  bottom: 18px;
+
+  width: 56px;
+  height: 56px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #25D366;
+  color: white;
+
+  font-size: 23px;
+
+  z-index: 9998;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.25);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 1050px) {
+
+  .imo-desktop-menu {
+    display: none;
+  }
+
+  .imo-menu-button {
+    display: block;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .imo-nav-container {
+    min-height: 66px;
+  }
+
+
+  .imo-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .imo-brand-text strong {
+    font-size: 15px;
+  }
+
+
+  .imo-brand-text small {
+    font-size: 8px;
+  }
+
+
+  .imo-topbar {
+    font-size: 10px;
+  }
+
+
+  .imo-footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+}
