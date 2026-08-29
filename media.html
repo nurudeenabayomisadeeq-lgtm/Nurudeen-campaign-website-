@@ -4,31 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Media Centre | IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq</title>
+<title>Media Centre | IMOLE 2027</title>
 
-<meta name="description" content="Official IMOLE 2027 Media Centre of Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II.">
+<meta name="description"
+content="IMOLE 2027 Media Centre — Campaign music, videos, photos and media highlights of Hon. Nurudeen Abayomi Sadeeq.">
 
-<meta name="theme-color" content="#061b3a">
+<meta name="theme-color" content="#071f4d">
 
 <link rel="manifest" href="manifest.json">
 
 <style>
-:root{
-    --navy:#061b3a;
-    --navy2:#020d20;
-    --blue:#0a4da2;
-    --blue2:#0876d1;
-    --gold:#f5b800;
-    --gold2:#ffd84d;
-    --white:#fff;
-    --text:#17243a;
-    --muted:#68758a;
-    --light:#f4f7fb;
-    --border:#e1e8f0;
-    --shadow:0 18px 55px rgba(3,25,58,.14);
-    --radius:22px;
-}
-
 *{
     box-sizing:border-box;
     margin:0;
@@ -41,9 +26,14 @@ html{
 
 body{
     font-family:Arial,Helvetica,sans-serif;
-    background:var(--light);
-    color:var(--text);
+    background:#f4f7fb;
+    color:#172033;
     line-height:1.6;
+}
+
+img{
+    max-width:100%;
+    display:block;
 }
 
 a{
@@ -54,403 +44,303 @@ button{
     font-family:inherit;
 }
 
-img{
-    max-width:100%;
-    display:block;
-}
-
-
-/* =========================
-   TOP BAR
-========================= */
-
+/* TOP BAR */
 .topbar{
-    background:var(--navy2);
-    color:#dce7f7;
-    padding:9px 16px;
+    background:#031329;
+    color:#fff;
+    text-align:center;
+    padding:9px 12px;
     font-size:13px;
 }
 
-.topbar-inner{
-    max-width:1250px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    gap:15px;
-}
-
 .topbar strong{
-    color:var(--gold2);
+    color:#ffd84d;
 }
 
-
-/* =========================
-   HEADER
-========================= */
-
+/* HEADER */
 .header{
-    background:
-        radial-gradient(circle at 85% 20%,rgba(245,184,0,.18),transparent 25%),
-        linear-gradient(135deg,#031329,#061b3a 45%,#0a4da2);
-    color:white;
-    padding:20px 16px;
+    background:linear-gradient(135deg,#061b3a,#0a4da2);
+    color:#fff;
+    padding:18px 15px;
 }
 
 .header-inner{
-    max-width:1250px;
+    max-width:1150px;
     margin:auto;
     display:flex;
     align-items:center;
-    gap:18px;
+    gap:15px;
 }
 
 .logo{
-    width:78px;
-    height:78px;
+    width:70px;
+    height:70px;
+    border-radius:50%;
     object-fit:contain;
     background:#fff;
-    border-radius:50%;
-    padding:5px;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    padding:4px;
 }
 
 .header h1{
-    font-size:25px;
-    line-height:1.2;
-    margin-bottom:5px;
+    font-size:22px;
+    margin-bottom:3px;
 }
 
 .header p{
-    font-size:14px;
+    font-size:13px;
     opacity:.9;
 }
 
 .badge{
     display:inline-block;
-    margin-top:7px;
-    padding:5px 13px;
-    border-radius:30px;
-    background:var(--gold);
+    margin-top:5px;
+    background:#f5b800;
     color:#111;
-    font-size:12px;
-    font-weight:900;
+    padding:4px 11px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
 }
 
-
-/* =========================
-   MENU
-========================= */
-
+/* MOBILE MENU BUTTON */
 .menu-btn{
-    width:100%;
     display:none;
+    width:100%;
     border:0;
-    background:var(--navy);
+    background:#061b3a;
     color:#fff;
     padding:14px;
     font-size:16px;
-    font-weight:900;
+    font-weight:bold;
     cursor:pointer;
 }
 
-
-/* =========================
-   NAVIGATION
-========================= */
-
+/* NAVIGATION */
 .nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(255,255,255,.97);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--border);
-    box-shadow:0 5px 20px rgba(0,0,0,.06);
+    background:#fff;
     display:flex;
     justify-content:center;
+    align-items:center;
     flex-wrap:wrap;
     gap:4px;
     padding:8px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
 }
 
 .nav a{
-    color:var(--navy);
-    padding:9px 12px;
-    border-radius:8px;
+    color:#061b3a;
+    padding:9px 11px;
+    border-radius:7px;
     font-size:13px;
-    font-weight:800;
+    font-weight:bold;
 }
 
 .nav a:hover,
 .nav a.active{
-    background:var(--blue);
-    color:white;
+    background:#0a4da2;
+    color:#fff;
 }
 
 .nav a.donate{
-    background:var(--gold);
+    background:#f5b800;
     color:#111;
 }
 
 .nav a.join{
-    background:var(--navy);
-    color:white;
+    background:#061b3a;
+    color:#fff;
 }
 
-
-/* =========================
-   HERO
-========================= */
-
+/* HERO */
 .hero{
-    position:relative;
-    overflow:hidden;
-    padding:90px 20px 100px;
-    text-align:center;
-    color:white;
     background:
-        radial-gradient(circle at 85% 25%,rgba(245,184,0,.2),transparent 25%),
-        linear-gradient(135deg,#020d20,#061b3a 45%,#0a4da2);
-}
-
-.hero-inner{
-    max-width:1000px;
-    margin:auto;
+        radial-gradient(circle at 80% 20%,rgba(245,184,0,.2),transparent 25%),
+        linear-gradient(135deg,#031329,#061b3a,#0a4da2);
+    color:#fff;
+    text-align:center;
+    padding:75px 18px;
 }
 
 .hero-label{
     display:inline-block;
-    padding:8px 16px;
-    border:1px solid rgba(255,255,255,.25);
+    border:1px solid rgba(255,255,255,.3);
+    padding:7px 14px;
     border-radius:30px;
-    color:var(--gold2);
-    background:rgba(255,255,255,.08);
-    font-weight:900;
-    font-size:13px;
-    letter-spacing:1.5px;
+    color:#ffd84d;
+    font-weight:bold;
+    font-size:12px;
+    letter-spacing:1px;
 }
 
 .hero h2{
-    margin:20px 0 15px;
-    font-size:clamp(42px,7vw,78px);
+    font-size:clamp(40px,7vw,70px);
     line-height:1;
-    letter-spacing:-2px;
+    margin:20px 0 15px;
 }
 
 .hero h2 span{
-    color:var(--gold2);
+    color:#ffd84d;
 }
 
 .hero p{
-    max-width:760px;
+    max-width:720px;
     margin:auto;
-    color:rgba(255,255,255,.86);
-    font-size:17px;
+    color:rgba(255,255,255,.85);
+    font-size:16px;
 }
 
 .hero-buttons{
-    margin-top:30px;
+    margin-top:25px;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:12px;
+    gap:10px;
 }
 
-.hero-buttons a{
-    padding:14px 21px;
-    border-radius:10px;
-    font-weight:900;
+.btn{
+    display:inline-block;
+    padding:13px 19px;
+    border-radius:8px;
+    font-weight:bold;
 }
 
 .btn-gold{
-    background:var(--gold);
+    background:#f5b800;
     color:#111;
 }
 
 .btn-white{
     background:#fff;
-    color:var(--navy);
+    color:#061b3a;
 }
 
 .btn-outline{
+    border:1px solid rgba(255,255,255,.6);
     color:#fff;
-    border:2px solid rgba(255,255,255,.4);
 }
 
-
-/* =========================
-   SECTIONS
-========================= */
-
+/* GENERAL */
 .section{
-    padding:75px 20px;
+    padding:65px 15px;
 }
 
 .container{
-    max-width:1200px;
+    max-width:1150px;
     margin:auto;
 }
 
 .heading{
     text-align:center;
-    max-width:780px;
-    margin:0 auto 40px;
+    max-width:750px;
+    margin:0 auto 35px;
 }
 
-.eyebrow{
-    color:var(--blue);
-    font-weight:900;
-    letter-spacing:2px;
+.heading small{
+    color:#0a4da2;
+    font-weight:bold;
     text-transform:uppercase;
-    font-size:13px;
+    letter-spacing:1.5px;
 }
 
 .heading h2{
-    color:var(--navy);
-    font-size:36px;
-    margin:8px 0 12px;
+    color:#061b3a;
+    font-size:34px;
+    margin:6px 0 10px;
 }
 
 .heading p{
-    color:var(--muted);
+    color:#667085;
 }
 
-
-/* =========================
-   VIDEO
-========================= */
-
+/* VIDEO */
 .video-section{
     background:#fff;
 }
 
 .video-box{
-    max-width:1050px;
+    max-width:950px;
     margin:auto;
     background:#000;
-    border-radius:24px;
+    border-radius:18px;
     overflow:hidden;
-    box-shadow:0 25px 70px rgba(0,0,0,.2);
+    box-shadow:0 18px 45px rgba(0,0,0,.18);
 }
 
 .video-box video{
     width:100%;
     display:block;
-    max-height:650px;
     background:#000;
 }
 
-.video-placeholder{
-    min-height:430px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:30px;
-    color:#fff;
-    background:
-        radial-gradient(circle at center,rgba(10,77,162,.8),#020d20);
-}
-
-.video-placeholder div{
-    max-width:600px;
-}
-
-.video-placeholder .play{
-    width:85px;
-    height:85px;
-    margin:0 auto 20px;
-    border-radius:50%;
-    background:var(--gold);
-    color:#111;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:35px;
-}
-
-.video-placeholder h3{
-    font-size:28px;
-    margin-bottom:8px;
-}
-
-.video-placeholder p{
-    color:rgba(255,255,255,.75);
-}
-
 .video-info{
-    padding:24px;
-    color:#fff;
     background:linear-gradient(135deg,#061b3a,#0a4da2);
+    color:#fff;
+    padding:20px;
 }
 
-.video-tag{
+.video-info span{
     display:inline-block;
-    background:var(--gold);
+    background:#f5b800;
     color:#111;
-    padding:5px 11px;
-    border-radius:20px;
+    padding:4px 9px;
+    border-radius:15px;
     font-size:11px;
-    font-weight:900;
-    margin-bottom:8px;
+    font-weight:bold;
 }
 
 .video-info h3{
-    font-size:24px;
-    margin-bottom:5px;
+    margin:7px 0 3px;
+    font-size:23px;
 }
 
 .video-info p{
-    color:rgba(255,255,255,.78);
+    opacity:.8;
 }
 
-
-/* =========================
-   MUSIC
-========================= */
-
+/* MUSIC */
 .music-section{
-    background:#f7faff;
+    background:#eef4fb;
 }
 
 .player{
-    max-width:1000px;
+    max-width:950px;
     margin:auto;
-    padding:30px;
-    border-radius:28px;
+    background:linear-gradient(135deg,#061b3a,#0a4da2);
     color:#fff;
-    background:linear-gradient(145deg,#061b3a,#0a4da2);
-    box-shadow:var(--shadow);
+    border-radius:22px;
+    padding:25px;
+    box-shadow:0 18px 45px rgba(0,0,0,.15);
 }
 
 .player-top{
     display:flex;
     align-items:center;
-    gap:25px;
+    gap:20px;
 }
 
 .album{
-    width:150px;
-    height:150px;
+    width:140px;
+    height:140px;
+    border-radius:16px;
     object-fit:cover;
-    border-radius:22px;
-    border:5px solid rgba(255,255,255,.9);
-    box-shadow:0 15px 35px rgba(0,0,0,.3);
+    border:4px solid #fff;
 }
 
 .track small{
-    color:var(--gold2);
-    font-weight:900;
-    letter-spacing:1px;
+    color:#ffd84d;
+    font-weight:bold;
 }
 
 .track h3{
-    font-size:28px;
+    font-size:27px;
     margin:4px 0;
 }
 
 .track p{
-    color:rgba(255,255,255,.75);
+    opacity:.75;
 }
 
 audio{
@@ -458,42 +348,10 @@ audio{
     margin-top:25px;
 }
 
-.visualizer{
-    height:45px;
-    display:flex;
-    align-items:end;
-    justify-content:center;
-    gap:5px;
-    margin-top:20px;
-}
-
-.bar{
-    width:5px;
-    height:10px;
-    background:var(--gold);
-    border-radius:5px;
-}
-
-.player.playing .bar{
-    animation:bounce .8s infinite alternate;
-}
-
-.bar:nth-child(2){animation-delay:.1s}
-.bar:nth-child(3){animation-delay:.2s}
-.bar:nth-child(4){animation-delay:.3s}
-.bar:nth-child(5){animation-delay:.4s}
-.bar:nth-child(6){animation-delay:.5s}
-.bar:nth-child(7){animation-delay:.6s}
-.bar:nth-child(8){animation-delay:.7s}
-
-@keyframes bounce{
-    from{height:8px}
-    to{height:42px}
-}
-
 .controls{
     display:flex;
     justify-content:center;
+    align-items:center;
     gap:12px;
     margin-top:15px;
 }
@@ -503,69 +361,83 @@ audio{
     height:48px;
     border:0;
     border-radius:50%;
-    background:rgba(255,255,255,.13);
-    color:white;
-    cursor:pointer;
+    background:rgba(255,255,255,.12);
+    color:#fff;
     font-size:18px;
-}
-
-.control.main{
-    width:62px;
-    height:62px;
-    background:var(--gold);
-    color:#111;
-    font-size:24px;
+    cursor:pointer;
 }
 
 .control:hover{
-    background:var(--gold);
+    background:#f5b800;
     color:#111;
 }
 
+.control.main{
+    width:60px;
+    height:60px;
+    background:#f5b800;
+    color:#111;
+    font-size:22px;
+}
 
-/* =========================
-   SONG LIST
-========================= */
+.options{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    margin-top:18px;
+}
 
+.option{
+    border:1px solid rgba(255,255,255,.3);
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    padding:7px 13px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.option.active{
+    background:#f5b800;
+    color:#111;
+}
+
+/* SONG LIST */
 .song-list{
-    max-width:1000px;
-    margin:30px auto 0;
+    max-width:950px;
+    margin:25px auto 0;
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:14px;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
 }
 
 .song{
+    background:#fff;
+    border:1px solid #dfe5ec;
+    border-radius:12px;
+    padding:15px;
     display:flex;
     align-items:center;
-    gap:14px;
-    padding:16px;
-    border:1px solid var(--border);
-    background:#fff;
-    border-radius:16px;
+    gap:12px;
     cursor:pointer;
-    transition:.25s;
 }
 
-.song:hover{
-    transform:translateY(-3px);
-    box-shadow:var(--shadow);
-}
-
+.song:hover,
 .song.active{
-    border:2px solid var(--gold);
+    border-color:#f5b800;
+    box-shadow:0 7px 20px rgba(0,0,0,.07);
 }
 
 .song-number{
-    width:42px;
-    height:42px;
+    width:38px;
+    height:38px;
     border-radius:50%;
-    background:var(--navy);
+    background:#061b3a;
     color:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-weight:900;
+    font-weight:bold;
+    flex-shrink:0;
 }
 
 .song-info{
@@ -574,177 +446,116 @@ audio{
 
 .song-info strong{
     display:block;
-    color:var(--navy);
+    color:#061b3a;
 }
 
 .song-info span{
-    color:var(--muted);
     font-size:12px;
+    color:#737f91;
 }
 
 .song-play{
-    width:42px;
-    height:42px;
     border:0;
+    width:38px;
+    height:38px;
     border-radius:50%;
-    background:var(--blue);
+    background:#0a4da2;
     color:#fff;
     cursor:pointer;
 }
 
-
-/* =========================
-   MEDIA CARDS
-========================= */
-
+/* MEDIA CARDS */
 .media-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    gap:18px;
 }
 
-.card{
-    overflow:hidden;
-    border-radius:20px;
+.media-card{
     background:#fff;
-    border:1px solid var(--border);
-    box-shadow:0 7px 25px rgba(0,0,0,.05);
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,.07);
 }
 
-.card-image{
-    height:220px;
-    background:linear-gradient(135deg,#061b3a,#0a4da2);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-}
-
-.card-image img{
+.media-card img{
     width:100%;
-    height:100%;
+    height:220px;
     object-fit:cover;
 }
 
-.card-icon{
-    position:absolute;
-    width:62px;
-    height:62px;
-    border-radius:50%;
-    background:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:27px;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
+.media-card-content{
+    padding:18px;
 }
 
-.card-content{
-    padding:20px;
+.media-card-content h3{
+    color:#061b3a;
+    margin-bottom:6px;
 }
 
-.card-content h3{
-    color:var(--navy);
-    margin-bottom:7px;
-    font-size:19px;
-}
-
-.card-content p{
-    color:var(--muted);
+.media-card-content p{
+    color:#68758a;
     font-size:14px;
 }
 
-
-/* =========================
-   CTA
-========================= */
-
+/* CTA */
 .cta{
-    padding:80px 20px;
-    text-align:center;
+    background:linear-gradient(135deg,#031329,#0a4da2);
     color:#fff;
-    background:linear-gradient(135deg,#020d20,#0a4da2);
-}
-
-.cta-inner{
-    max-width:800px;
-    margin:auto;
+    text-align:center;
+    padding:70px 15px;
 }
 
 .cta h2{
-    font-size:40px;
+    font-size:38px;
     margin-bottom:10px;
 }
 
 .cta p{
-    color:rgba(255,255,255,.8);
+    opacity:.8;
 }
 
 .cta-buttons{
-    margin-top:25px;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:12px;
+    gap:10px;
+    margin-top:22px;
 }
 
-.cta-buttons a{
-    padding:13px 20px;
-    border-radius:10px;
-    font-weight:900;
-}
-
-.cta-buttons .gold{
-    background:var(--gold);
-    color:#111;
-}
-
-.cta-buttons .white{
-    background:#fff;
-    color:var(--navy);
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 footer{
-    background:var(--navy2);
+    background:#031329;
     color:rgba(255,255,255,.7);
     text-align:center;
-    padding:40px 20px;
+    padding:35px 15px;
+    font-size:13px;
 }
 
-.footer-title{
+footer strong{
     color:#fff;
-    font-size:18px;
-    font-weight:900;
+    font-size:16px;
 }
 
 .footer-slogan{
-    color:var(--gold2);
-    font-weight:900;
-    margin:8px 0;
+    color:#ffd84d;
+    font-weight:bold;
+    margin:7px 0;
 }
 
-
-/* =========================
-   BACK TOP
-========================= */
-
+/* BACK TOP */
 .back-top{
     position:fixed;
-    right:18px;
-    bottom:18px;
-    width:48px;
-    height:48px;
+    right:15px;
+    bottom:15px;
+    width:45px;
+    height:45px;
     border:0;
     border-radius:50%;
-    background:var(--gold);
+    background:#f5b800;
     color:#111;
-    font-size:22px;
-    font-weight:900;
+    font-size:21px;
+    font-weight:bold;
     cursor:pointer;
     display:none;
     z-index:2000;
@@ -754,40 +565,12 @@ footer{
     display:block;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:850px){
-
-    .song-list{
-        grid-template-columns:1fr;
-    }
-
-    .media-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media(max-width:700px){
-
-    .topbar-inner{
-        justify-content:center;
-        text-align:center;
-    }
-
-    .topbar-inner span:last-child{
-        display:none;
-    }
+/* MOBILE */
+@media(max-width:750px){
 
     .header-inner{
         flex-direction:column;
         text-align:center;
-    }
-
-    .header h1{
-        font-size:21px;
     }
 
     .menu-btn{
@@ -806,32 +589,28 @@ footer{
     }
 
     .nav a{
-        text-align:center;
         width:100%;
+        text-align:center;
     }
 
     .hero{
-        padding:65px 16px 75px;
+        padding:60px 15px;
     }
 
     .hero h2{
         font-size:43px;
     }
 
-    .hero p{
-        font-size:15px;
-    }
-
     .hero-buttons{
         flex-direction:column;
     }
 
-    .hero-buttons a{
+    .hero-buttons .btn{
         width:100%;
     }
 
     .section{
-        padding:55px 15px;
+        padding:50px 13px;
     }
 
     .heading h2{
@@ -839,8 +618,7 @@ footer{
     }
 
     .player{
-        padding:20px;
-        border-radius:20px;
+        padding:18px;
     }
 
     .player-top{
@@ -853,51 +631,39 @@ footer{
         height:170px;
     }
 
+    .song-list{
+        grid-template-columns:1fr;
+    }
+
     .media-grid{
         grid-template-columns:1fr;
     }
 
-    .video-placeholder{
-        min-height:300px;
+    .media-card img{
+        height:240px;
     }
 
     .cta h2{
         font-size:30px;
     }
 }
-
-:focus-visible{
-    outline:3px solid var(--gold);
-    outline-offset:3px;
-}
 </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
 <div class="topbar">
-    <div class="topbar-inner">
-        <span>
-            <strong>IMOLE 2027</strong>
-            • Service • Development • Accountability
-        </span>
-
-        <span>
-            Ojo Constituency II • Lagos State
-        </span>
-    </div>
+    <strong>IMOLE 2027</strong>
+    • Service • Development • Accountability
 </div>
 
-
-<!-- HEADER -->
 <header class="header">
     <div class="header-inner">
 
         <img
             src="assets/ndc-logo.jpeg"
             class="logo"
-            alt="Nigeria Democratic Congress logo"
+            alt="NDC Logo"
         >
 
         <div>
@@ -918,161 +684,128 @@ footer{
     </div>
 </header>
 
-
-<!-- MOBILE MENU -->
 <button
     class="menu-btn"
     id="menuBtn"
-    aria-expanded="false"
->
+    aria-expanded="false">
+
     ☰ MENU
+
 </button>
 
-
-<!-- NAVIGATION -->
 <nav class="nav" id="nav">
 
     <a href="index.html">🏠 Home</a>
+
     <a href="about.html">👤 About</a>
+
     <a href="manifesto.html">📖 Manifesto</a>
+
     <a href="polling-units.html">🗳️ Polling Units</a>
+
     <a href="results.html">📊 Results</a>
+
     <a href="news.html">📰 News</a>
+
     <a href="events.html">📅 Events</a>
+
     <a href="gallery.html">📸 Gallery</a>
 
-    <a href="media.html" class="active">
-        🎵 Media
-    </a>
+    <a href="media.html" class="active">🎵 Media</a>
 
     <a href="contact.html">📞 Contact</a>
 
-    <a href="donations.html" class="donate">
-        ❤️ DONATE
-    </a>
+    <a href="donations.html" class="donate">❤️ DONATE</a>
 
-    <a href="join.html" class="join">
-        🔥 JOIN IMOLE
-    </a>
+    <a href="join.html" class="join">🔥 JOIN IMOLE</a>
 
 </nav>
-
 
 <main>
 
 <!-- HERO -->
+
 <section class="hero">
 
-    <div class="hero-inner">
+    <span class="hero-label">
+        🎵 OFFICIAL IMOLE 2027 MEDIA CENTRE
+    </span>
 
-        <span class="hero-label">
-            🎵 OFFICIAL IMOLE 2027 MEDIA CENTRE
-        </span>
+    <h2>
+        HEAR THE <span>VOICE</span><br>
+        OF IMOLE
+    </h2>
 
-        <h2>
-            HEAR THE <span>VOICE</span><br>
-            OF IMOLE
-        </h2>
+    <p>
+        Welcome to the official IMOLE 2027 Media Centre.
+        Listen to campaign music, watch videos and
+        experience highlights from the movement.
+    </p>
 
-        <p>
-            Welcome to the official IMOLE 2027 Media Centre.
-            Listen to campaign music, watch campaign videos
-            and explore the stories behind the movement.
-        </p>
+    <div class="hero-buttons">
 
-        <div class="hero-buttons">
+        <a href="#music" class="btn btn-gold">
+            🎵 LISTEN TO MUSIC
+        </a>
 
-            <a href="#music" class="btn-gold">
-                🎵 LISTEN TO MUSIC
-            </a>
+        <a href="#video" class="btn btn-white">
+            ▶ WATCH VIDEO
+        </a>
 
-            <a href="#video" class="btn-white">
-                ▶️ WATCH VIDEO
-            </a>
-
-            <a href="gallery.html" class="btn-outline">
-                📸 VIEW GALLERY
-            </a>
-
-        </div>
+        <a href="gallery.html" class="btn btn-outline">
+            📸 VIEW GALLERY
+        </a>
 
     </div>
 
 </section>
 
-
 <!-- VIDEO -->
+
 <section class="section video-section" id="video">
 
     <div class="container">
 
         <div class="heading">
 
-            <div class="eyebrow">
-                Featured Video
-            </div>
+            <small>Featured Video</small>
 
             <h2>
                 🎬 IMOLE 2027 CAMPAIGN VIDEO
             </h2>
 
             <p>
-                Campaign messages, grassroots activities,
-                community engagement and the journey of
-                IMOLE 2027.
+                Watch campaign messages and highlights
+                from the IMOLE 2027 movement.
             </p>
 
         </div>
 
-
         <div class="video-box">
 
-            <!--
-            IMPORTANT:
-            This video will work only when this exact file
-            exists inside your assets folder.
+            <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="assets/IMG-20260710-WA0004.jpg">
 
-            If the file does not exist, the page will still
-            open because the video area below is used instead.
-            -->
+                <source
+                    src="assets/47ce1089-66a6-441d-850d-11cee3fb6cfc-watermark.mp4"
+                    type="video/mp4">
 
-            <div class="video-placeholder">
+                Your browser does not support video playback.
 
-                <div>
-
-                    <div class="play">
-                        ▶
-                    </div>
-
-                    <h3>
-                        IMOLE 2027
-                    </h3>
-
-                    <p>
-                        Campaign videos will appear here.
-                        Upload your MP4 video into the
-                        <strong>assets</strong> folder and
-                        connect it when ready.
-                    </p>
-
-                </div>
-
-            </div>
+            </video>
 
             <div class="video-info">
 
-                <span class="video-tag">
-                    IMOLE 2027
-                </span>
+                <span>IMOLE 2027</span>
 
-                <h3>
-                    LET IMOLE SHINE
-                </h3>
+                <h3>LET IMOLE SHINE</h3>
 
                 <p>
                     Hon. Nurudeen Abayomi Sadeeq —
                     Ojo Constituency II.
-                    Service • Development • Accountability.
                 </p>
 
             </div>
@@ -1083,52 +816,47 @@ footer{
 
 </section>
 
-
 <!-- MUSIC -->
+
 <section class="section music-section" id="music">
 
     <div class="container">
 
         <div class="heading">
 
-            <div class="eyebrow">
-                Official Campaign Sound
-            </div>
+            <small>Official Campaign Sound</small>
 
             <h2>
                 🎵 IMOLE 2027 CAMPAIGN MUSIC
             </h2>
 
             <p>
-                Select a campaign song below.
-                The player will automatically load the
-                selected track.
+                Listen, share and enjoy the sounds of
+                the IMOLE 2027 movement.
             </p>
 
         </div>
 
-
-        <div class="player" id="player">
+        <div class="player">
 
             <div class="player-top">
 
                 <img
                     src="assets/IMG-20260710-WA0004.jpg"
                     class="album"
-                    alt="IMOLE 2027 campaign"
+                    id="album"
+                    alt="IMOLE 2027"
                 >
 
                 <div class="track">
 
-                    <small>
-                        NOW PLAYING
-                    </small>
+                    <small>NOW PLAYING</small>
 
-                    <h3 id="trackTitle">
+                    <h3 id="title">
                         Ojo Go Better
                     </h3>
 
-                    <p id="trackArtist">
+                    <p id="artist">
                         Progress Mix
                     </p>
 
@@ -1136,60 +864,68 @@ footer{
 
             </div>
 
-
-            <div class="visualizer">
-
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-
-            </div>
-
-
             <audio
                 id="audio"
                 controls
-                preload="metadata"
-            ></audio>
+                preload="metadata">
 
+            </audio>
 
             <div class="controls">
 
                 <button
                     class="control"
                     id="prev"
-                    aria-label="Previous song"
-                >
+                    aria-label="Previous">
+
                     ⏮
+
                 </button>
 
                 <button
                     class="control main"
                     id="play"
-                    aria-label="Play or pause"
-                >
+                    aria-label="Play">
+
                     ▶
+
                 </button>
 
                 <button
                     class="control"
                     id="next"
-                    aria-label="Next song"
-                >
+                    aria-label="Next">
+
                     ⏭
+
+                </button>
+
+            </div>
+
+            <div class="options">
+
+                <button
+                    class="option"
+                    id="shuffle">
+
+                    🔀 Shuffle
+
+                </button>
+
+                <button
+                    class="option"
+                    id="repeat">
+
+                    🔁 Repeat
+
                 </button>
 
             </div>
 
         </div>
 
+        <!-- SONGS -->
 
-        <!-- SONG LIST -->
         <div class="song-list">
 
             <div class="song active" data-index="0">
@@ -1197,616 +933,43 @@ footer{
                 <div class="song-number">01</div>
 
                 <div class="song-info">
+
                     <strong>Ojo Go Better</strong>
+
                     <span>Progress Mix</span>
+
                 </div>
 
-                <button class="song-play">
-                    ▶
-                </button>
+                <button class="song-play">▶</button>
 
             </div>
-
 
             <div class="song" data-index="1">
 
                 <div class="song-number">02</div>
 
                 <div class="song-info">
+
                     <strong>Ojó Á Dára</strong>
+
                     <span>Fuji Percussion Heavy</span>
+
                 </div>
 
-                <button class="song-play">
-                    ▶
-                </button>
+                <button class="song-play">▶</button>
 
             </div>
-
 
             <div class="song" data-index="2">
 
                 <div class="song-number">03</div>
 
                 <div class="song-info">
+
                     <strong>Nuru L'ọkàn</strong>
+
                     <span>IMOLE Campaign Song</span>
-                </div>
-
-                <button class="song-play">
-                    ▶
-                </button>
-
-            </div>
-
-
-            <div class="song" data-index="3">
-
-                <div class="song-number">04</div>
-
-                <div class="song-info">
-                    <strong>OJO DEY MOVE</strong>
-                    <span>Campaign Movement Sound</span>
-                </div>
-
-                <button class="song-play">
-                    ▶
-                </button>
-
-            </div>
-
-
-            <div class="song" data-index="4">
-
-                <div class="song-number">05</div>
-
-                <div class="song-info">
-                    <strong>OJO ZAI FI KYAU</strong>
-                    <span>Campaign Music</span>
-                </div>
-
-                <button class="song-play">
-                    ▶
-                </button>
-
-            </div>
-
-
-            <div class="song" data-index="5">
-
-                <div class="song-number">06</div>
-
-                <div class="song-info">
-                    <strong>Ojo Ga-adị Mma</strong>
-                    <span>Igbo Version</span>
-                </div>
-
-                <button class="song-play">
-                    ▶
-                </button>
-
-            </div>
-
-
-            <div class="song" data-index="6">
-
-                <div class="song-number">07</div>
-
-                <div class="song-info">
-                    <strong>Sadeeq Campaign Jingle</strong>
-                    <span>Option 1</span>
-                </div>
-
-                <button class="song-play">
-                    ▶
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- MEDIA HIGHLIGHTS -->
-<section class="section">
-
-    <div class="container">
-
-        <div class="heading">
-
-            <div class="eyebrow">
-                Campaign Media
-            </div>
-
-            <h2>
-                IMOLE MEDIA HIGHLIGHTS
-            </h2>
-
-            <p>
-                Explore the candidate, campaign activities
-                and the people behind the IMOLE movement.
-            </p>
-
-        </div>
-
-
-        <div class="media-grid">
-
-            <article class="card">
-
-                <div class="card-image">
-
-                    <img
-                        src="assets/IMG-20260710-WA0004.jpg"
-                        alt="Hon. Nurudeen Abayomi Sadeeq"
-                    >
-
-                    <div class="card-icon">
-                        👤
-                    </div>
 
                 </div>
 
-                <div class="card-content">
-
-                    <h3>
-                        Meet the Candidate
-                    </h3>
-
-                    <p>
-                        Learn about Hon. Nurudeen Abayomi
-                        Sadeeq and the IMOLE 2027 vision.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article class="card">
-
-                <div class="card-image">
-
-                    <img
-                        src="assets/IMG-20260728-WA0032.jpg"
-                        alt="IMOLE 2027 campaign activities"
-                    >
-
-                    <div class="card-icon">
-                        📸
-                    </div>
-
-                </div>
-
-                <div class="card-content">
-
-                    <h3>
-                        Campaign Moments
-                    </h3>
-
-                    <p>
-                        Grassroots engagement, meetings,
-                        visits and community activities.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article class="card">
-
-                <div class="card-image">
-
-                    <img
-                        src="assets/IMG-20260710-WA0004.jpg"
-                        alt="IMOLE 2027 movement"
-                    >
-
-                    <div class="card-icon">
-                        🔥
-                    </div>
-
-                </div>
-
-                <div class="card-content">
-
-                    <h3>
-                        The IMOLE Movement
-                    </h3>
-
-                    <p>
-                        Service, development,
-                        accountability and grassroots
-                        participation.
-                    </p>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CTA -->
-<section class="cta">
-
-    <div class="cta-inner">
-
-        <h2>
-            🔥 LET IMOLE SHINE
-        </h2>
-
-        <p>
-            Listen to the message. Share the vision.
-            Join the movement.
-        </p>
-
-        <div class="cta-buttons">
-
-            <a href="join.html" class="gold">
-                🔥 JOIN IMOLE 2027
-            </a>
-
-            <a href="gallery.html" class="white">
-                📸 VIEW GALLERY
-            </a>
-
-            <a href="donations.html" class="gold">
-                ❤️ SUPPORT THE MOVEMENT
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-
-<!-- FOOTER -->
-<footer>
-
-    <p class="footer-title">
-        HON. NURUDEEN ABAYOMI SADEEQ
-    </p>
-
-    <p>
-        Lagos State House of Assembly —
-        Ojo Constituency II
-    </p>
-
-    <p>
-        Nigeria Democratic Congress (NDC)
-    </p>
-
-    <p class="footer-slogan">
-        IMOLE 2027 —
-        Service • Development • Accountability
-    </p>
-
-    <p>
-        © 2026 Hon. Nurudeen Abayomi Sadeeq Campaign.
-        All Rights Reserved.
-    </p>
-
-</footer>
-
-
-<!-- BACK TO TOP -->
-<button
-    class="back-top"
-    id="backTop"
-    aria-label="Back to top"
->
-    ↑
-</button>
-
-
-<script>
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-const menuBtn = document.getElementById("menuBtn");
-const nav = document.getElementById("nav");
-
-menuBtn.addEventListener("click", function(){
-
-    nav.classList.toggle("show");
-
-    const opened = nav.classList.contains("show");
-
-    menuBtn.setAttribute(
-        "aria-expanded",
-        opened ? "true" : "false"
-    );
-
-    menuBtn.textContent =
-        opened ? "✕ CLOSE MENU" : "☰ MENU";
-
-});
-
-
-/* CLOSE MOBILE MENU */
-
-document.querySelectorAll(".nav a").forEach(function(link){
-
-    link.addEventListener("click",function(){
-
-        nav.classList.remove("show");
-
-        menuBtn.textContent = "☰ MENU";
-
-        menuBtn.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-    });
-
-});
-
-
-/* =========================
-   MUSIC
-========================= */
-
-const songs = [
-
-    {
-        title:"Ojo Go Better",
-        artist:"Progress Mix",
-        file:"assets/Ojo Go Better (Progress Mix).mp3"
-    },
-
-    {
-        title:"Ojó Á Dára",
-        artist:"Fuji Percussion Heavy",
-        file:"assets/Ojó Á Dára (Fuji Percussion Heavy).mp3"
-    },
-
-    {
-        title:"Nuru L'ọkàn",
-        artist:"IMOLE 2027 Campaign Song",
-        file:"assets/Nuru L'ọkàn.mp3"
-    },
-
-    {
-        title:"OJO DEY MOVE",
-        artist:"Campaign Movement Sound",
-        file:"assets/OJO DEY MOVE.mp3"
-    },
-
-    {
-        title:"OJO ZAI FI KYAU",
-        artist:"Campaign Music",
-        file:"assets/OJO ZAI FI KYAU.mp3"
-    },
-
-    {
-        title:"Ojo Ga-adị Mma",
-        artist:"Igbo Version",
-        file:"assets/Ojo Ga-adị Mma (Igbo Version).mp3"
-    },
-
-    {
-        title:"Sadeeq Campaign Jingle",
-        artist:"Option 1",
-        file:"assets/Sadeeq Campaign Jingle (Option 1).mp3"
-    }
-
-];
-
-
-let current = 0;
-
-const audio =
-    document.getElementById("audio");
-
-const play =
-    document.getElementById("play");
-
-const prev =
-    document.getElementById("prev");
-
-const next =
-    document.getElementById("next");
-
-const title =
-    document.getElementById("trackTitle");
-
-const artist =
-    document.getElementById("trackArtist");
-
-const player =
-    document.getElementById("player");
-
-
-function loadSong(index, autoPlay){
-
-    current = index;
-
-    const song = songs[current];
-
-    title.textContent = song.title;
-
-    artist.textContent = song.artist;
-
-    /*
-       IMPORTANT:
-       encodeURI helps browsers handle spaces and
-       special characters in filenames.
-    */
-
-    audio.src = encodeURI(song.file);
-
-    document.querySelectorAll(".song").forEach(function(item,i){
-
-        item.classList.toggle(
-            "active",
-            i === current
-        );
-
-    });
-
-    if(autoPlay){
-
-        audio.play().catch(function(){});
-
-    }
-
-}
-
-
-/* PLAY / PAUSE */
-
-play.addEventListener("click",function(){
-
-    if(audio.paused){
-
-        audio.play().catch(function(){});
-
-    }else{
-
-        audio.pause();
-
-    }
-
-});
-
-
-/* AUDIO PLAY */
-
-audio.addEventListener("play",function(){
-
-    play.textContent = "❚❚";
-
-    player.classList.add("playing");
-
-});
-
-
-/* AUDIO PAUSE */
-
-audio.addEventListener("pause",function(){
-
-    play.textContent = "▶";
-
-    player.classList.remove("playing");
-
-});
-
-
-/* NEXT */
-
-next.addEventListener("click",function(){
-
-    current++;
-
-    if(current >= songs.length){
-        current = 0;
-    }
-
-    loadSong(current,true);
-
-});
-
-
-/* PREVIOUS */
-
-prev.addEventListener("click",function(){
-
-    current--;
-
-    if(current < 0){
-        current = songs.length - 1;
-    }
-
-    loadSong(current,true);
-
-});
-
-
-/* AUTO NEXT */
-
-audio.addEventListener("ended",function(){
-
-    current++;
-
-    if(current >= songs.length){
-        current = 0;
-    }
-
-    loadSong(current,true);
-
-});
-
-
-/* SONG LIST */
-
-document.querySelectorAll(".song").forEach(function(item){
-
-    item.addEventListener("click",function(){
-
-        const index =
-            Number(this.dataset.index);
-
-        loadSong(index,true);
-
-    });
-
-});
-
-
-/* =========================
-   BACK TO TOP
-========================= */
-
-const backTop =
-    document.getElementById("backTop");
-
-window.addEventListener("scroll",function(){
-
-    if(window.scrollY > 500){
-
-        backTop.classList.add("show");
-
-    }else{
-
-        backTop.classList.remove("show");
-
-    }
-
-});
-
-
-backTop.addEventListener("click",function(){
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-});
-
-
-/* =========================
-   INITIALISE
-========================= */
-
-loadSong(0,false);
-
-</script>
-
-</body>
-</html>
+                <button class="
