@@ -4,12 +4,13 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+      content="width=device-width, initial-scale=1.0,
+      viewport-fit=cover">
 
 <title>IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq</title>
 
 <meta name="description"
-      content="Official IMOLE 2027 campaign website of Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II, under the Nigeria Democratic Congress (NDC).">
+      content="IMOLE 2027 campaign website of Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II, Nigeria Democratic Congress (NDC).">
 
 <meta name="keywords"
       content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Ojo Constituency II, NDC, Lagos State House of Assembly, Nigeria Democratic Congress">
@@ -18,44 +19,63 @@
       content="Hon. Nurudeen Abayomi Sadeeq Campaign">
 
 <meta name="theme-color"
-      content="#063b7a">
+      content="#061b3a">
 
 <meta name="robots"
       content="index, follow">
 
-<link rel="canonical"
-      href="./index.html">
+<meta name="mobile-web-app-capable"
+      content="yes">
 
-<link rel="manifest"
-      href="./manifest.json">
+<meta name="apple-mobile-web-app-capable"
+      content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent">
+
+<link rel="canonical" href="./index.html">
+<link rel="manifest" href="./manifest.json">
 
 <style>
 
 /* =========================================================
-   IMOLE 2027
-   FINAL MASTER HOMEPAGE
-   VERSION: 2026.08.29-FINAL
-   SELF-CONTAINED / MOBILE-FIRST / GITHUB PAGES
+   IMOLE 2027 — MASTER HOMEPAGE
+   VERSION: 2026.08.30
+   MOBILE FIRST
+   GITHUB PAGES FRIENDLY
+   NO EXTERNAL ICON LIBRARY
 ========================================================= */
 
 :root{
-    --navy:#031b3d;
-    --navy2:#062d63;
+    --navy:#041a38;
+    --navy2:#062b5d;
     --blue:#0754a6;
-    --blue2:#0a72cf;
+    --blue2:#0878d1;
     --gold:#f7b900;
-    --gold2:#ffd84d;
-    --green:#12a85a;
+    --gold2:#ffda55;
+    --green:#18b85f;
     --white:#ffffff;
     --black:#111111;
     --text:#26364d;
-    --muted:#68778d;
+    --muted:#6c7b90;
     --light:#f4f7fb;
     --border:#e1e8f0;
-    --danger:#c62828;
-    --shadow:0 18px 55px rgba(3,26,59,.13);
+    --danger:#d32f2f;
+
+    --shadow:
+        0 18px 55px rgba(3,26,59,.13);
+
+    --shadow-soft:
+        0 8px 30px rgba(3,26,59,.08);
+
     --radius:22px;
+
+    --header-height:74px;
 }
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
     box-sizing:border-box;
@@ -65,7 +85,7 @@
 
 html{
     scroll-behavior:smooth;
-    scroll-padding-top:90px;
+    scroll-padding-top:95px;
 }
 
 body{
@@ -73,19 +93,29 @@ body{
         Arial,
         Helvetica,
         sans-serif;
-    color:var(--text);
+
     background:var(--light);
+    color:var(--text);
     line-height:1.65;
+
     overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+}
+
+body.menu-open{
+    overflow:hidden;
 }
 
 img{
     max-width:100%;
+    display:block;
 }
 
 a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
 }
 
 button,
@@ -100,12 +130,12 @@ button{
 }
 
 .container{
-    width:min(1200px, calc(100% - 32px));
+    width:min(1180px, calc(100% - 32px));
     margin:auto;
 }
 
 .section{
-    padding:85px 0;
+    padding:88px 0;
 }
 
 .section.white{
@@ -113,13 +143,19 @@ button{
 }
 
 .section.blue{
+    color:#fff;
+
     background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(247,185,0,.16),
+            transparent 25%
+        ),
         linear-gradient(
             135deg,
             var(--navy),
             var(--blue)
         );
-    color:#fff;
 }
 
 .section-heading{
@@ -130,7 +166,7 @@ button{
 
 .eyebrow{
     color:var(--blue2);
-    font-size:13px;
+    font-size:12px;
     font-weight:900;
     letter-spacing:2px;
     text-transform:uppercase;
@@ -139,9 +175,10 @@ button{
 .section-heading h2{
     color:var(--navy);
     font-size:clamp(30px,5vw,46px);
-    line-height:1.12;
-    margin:10px 0 14px;
+    line-height:1.1;
+    margin:10px 0 15px;
     font-weight:950;
+    letter-spacing:-1px;
 }
 
 .section-heading p{
@@ -158,22 +195,55 @@ button{
 }
 
 /* =========================================================
-   TOP STRIP
+   INLINE ICON SYSTEM
+========================================================= */
+
+.icon{
+    width:20px;
+    height:20px;
+    display:inline-block;
+    flex:none;
+    vertical-align:middle;
+}
+
+.icon-lg{
+    width:28px;
+    height:28px;
+}
+
+.icon-xl{
+    width:34px;
+    height:34px;
+}
+
+svg{
+    pointer-events:none;
+}
+
+/* =========================================================
+   TOP BAR
 ========================================================= */
 
 .top-strip{
-    background:var(--navy);
+    background:#020f23;
     color:#fff;
-    padding:8px 15px;
+    padding:
+        8px
+        max(15px, env(safe-area-inset-left))
+        8px
+        max(15px, env(safe-area-inset-right));
+
     font-size:12px;
 }
 
 .top-strip-inner{
     max-width:1250px;
     margin:auto;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     gap:12px;
 }
 
@@ -186,10 +256,15 @@ button{
 ========================================================= */
 
 .site-header{
+    position:relative;
+    overflow:hidden;
+
+    color:#fff;
+
     background:
         radial-gradient(
-            circle at 90% 10%,
-            rgba(255,216,77,.16),
+            circle at 85% 10%,
+            rgba(247,185,0,.18),
             transparent 25%
         ),
         linear-gradient(
@@ -197,17 +272,33 @@ button{
             var(--navy),
             var(--blue)
         );
-    color:#fff;
-    position:relative;
-    overflow:hidden;
+}
+
+.site-header::after{
+    content:"";
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;
+
+    right:-190px;
+    top:-180px;
 }
 
 .header-inner{
-    min-height:100px;
+    min-height:96px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:18px;
+
+    gap:20px;
+
+    position:relative;
+    z-index:2;
 }
 
 .brand{
@@ -217,13 +308,19 @@ button{
 }
 
 .brand-logo{
-    width:72px;
-    height:72px;
+    width:70px;
+    height:70px;
+
     border-radius:50%;
-    background:#fff;
+
     object-fit:contain;
+
     padding:5px;
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+    background:#fff;
+
+    box-shadow:
+        0 8px 28px rgba(0,0,0,.25);
 }
 
 .brand-text strong{
@@ -234,20 +331,29 @@ button{
 
 .brand-text span{
     display:block;
-    font-size:12px;
+
     color:rgba(255,255,255,.78);
+
+    font-size:12px;
+
     margin-top:4px;
 }
 
 .brand-badge{
-    display:inline-block;
+    display:inline-flex !important;
+    width:max-content;
+
     background:var(--gold);
-    color:#111;
+    color:#111 !important;
+
     padding:3px 9px;
+
     border-radius:30px;
-    font-size:10px;
+
+    font-size:10px !important;
     font-weight:900;
-    margin-top:6px;
+
+    margin-top:6px !important;
 }
 
 /* =========================================================
@@ -257,34 +363,63 @@ button{
 .main-nav{
     position:sticky;
     top:0;
+
     z-index:9999;
-    background:rgba(255,255,255,.97);
-    backdrop-filter:blur(14px);
+
+    background:
+        rgba(255,255,255,.97);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
     border-bottom:1px solid var(--border);
-    box-shadow:0 5px 25px rgba(0,0,0,.07);
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,.07);
 }
 
 .nav-inner{
-    min-height:60px;
+    min-height:62px;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:3px;
+
+    gap:4px;
+
     flex-wrap:wrap;
 }
 
 .nav-link{
-    padding:9px 11px;
-    border-radius:9px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:7px;
+
+    min-height:42px;
+
+    padding:8px 10px;
+
+    border-radius:10px;
+
     color:var(--navy);
-    font-size:13px;
-    font-weight:800;
-    transition:.2s ease;
+
+    font-size:12px;
+    font-weight:900;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
 }
 
-.nav-link:hover{
+.nav-link:hover,
+.nav-link:focus-visible{
     background:var(--blue);
     color:#fff;
+
+    transform:translateY(-1px);
 }
 
 .nav-link.home-link{
@@ -309,12 +444,26 @@ button{
 
 .menu-toggle{
     display:none;
+
     width:100%;
+
+    min-height:52px;
+
     border:0;
+
     background:var(--navy);
     color:#fff;
-    padding:15px;
-    font-weight:900;
+
+    font-weight:950;
+
+    letter-spacing:.5px;
+}
+
+.menu-toggle-content{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
 }
 
 /* =========================================================
@@ -323,16 +472,20 @@ button{
 
 .hero{
     min-height:650px;
+
     display:flex;
     align-items:center;
+
     position:relative;
     overflow:hidden;
+
     color:#fff;
+
     background:
         radial-gradient(
             circle at 80% 15%,
-            rgba(247,185,0,.20),
-            transparent 25%
+            rgba(247,185,0,.22),
+            transparent 24%
         ),
         radial-gradient(
             circle at 10% 90%,
@@ -347,43 +500,83 @@ button{
         );
 }
 
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    border-radius:50%;
+
+    right:-400px;
+    bottom:-430px;
+}
+
 .hero::after{
     content:"";
+
     position:absolute;
-    width:600px;
-    height:600px;
-    border:1px solid rgba(255,255,255,.08);
+
+    width:420px;
+    height:420px;
+
+    border:1px solid rgba(255,255,255,.05);
+
     border-radius:50%;
-    right:-330px;
-    bottom:-330px;
+
+    left:-280px;
+    top:-240px;
 }
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.15fr .85fr;
+
+    grid-template-columns:
+        minmax(0,1.12fr)
+        minmax(320px,.88fr);
+
     align-items:center;
+
     gap:55px;
+
     position:relative;
     z-index:2;
 }
 
 .hero-kicker{
     display:inline-flex;
+    align-items:center;
+    gap:8px;
+
     padding:8px 15px;
+
     border-radius:30px;
+
     background:rgba(255,255,255,.08);
+
     border:1px solid rgba(255,255,255,.18);
+
     color:var(--gold2);
-    font-size:13px;
+
+    font-size:12px;
     font-weight:900;
-    letter-spacing:1.4px;
+
+    letter-spacing:1.5px;
 }
 
 .hero h1{
-    font-size:clamp(52px,8vw,92px);
-    line-height:.95;
-    letter-spacing:-4px;
-    margin:22px 0 12px;
+    font-size:clamp(52px,8vw,94px);
+
+    line-height:.9;
+
+    letter-spacing:-5px;
+
+    margin:22px 0 15px;
+
     font-weight:950;
 }
 
@@ -393,13 +586,17 @@ button{
 
 .hero h2{
     font-size:clamp(21px,3vw,34px);
+
     line-height:1.18;
+
     margin-bottom:20px;
 }
 
 .hero-description{
-    max-width:700px;
+    max-width:690px;
+
     color:rgba(255,255,255,.84);
+
     font-size:18px;
 }
 
@@ -409,26 +606,51 @@ button{
 
 .hero-buttons{
     display:flex;
+
     flex-wrap:wrap;
+
     gap:12px;
+
     margin-top:30px;
 }
 
 .btn{
     display:inline-flex;
+
     justify-content:center;
     align-items:center;
+
     gap:8px;
+
     min-height:48px;
+
     padding:12px 20px;
-    border-radius:11px;
+
+    border-radius:12px;
+
     font-weight:900;
-    transition:.25s ease;
+
     border:2px solid transparent;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+
+    -webkit-tap-highlight-color:transparent;
 }
 
 .btn:hover{
     transform:translateY(-3px);
+}
+
+.btn:active{
+    transform:translateY(0);
+}
+
+.btn:focus-visible{
+    outline:3px solid rgba(247,185,0,.45);
+    outline-offset:2px;
 }
 
 .btn-gold{
@@ -463,19 +685,31 @@ button{
 
 .hero-photo-card{
     background:rgba(255,255,255,.09);
+
     border:1px solid rgba(255,255,255,.18);
+
     padding:16px;
+
     border-radius:28px;
-    box-shadow:0 30px 70px rgba(0,0,0,.28);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.28);
+
     backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
 }
 
 .candidate-photo{
     width:100%;
+
     aspect-ratio:4/5;
+
     object-fit:cover;
+
     object-position:center top;
+
     border-radius:20px;
+
     background:
         linear-gradient(
             135deg,
@@ -495,8 +729,11 @@ button{
 
 .photo-caption span{
     display:block;
+
     color:rgba(255,255,255,.72);
+
     font-size:12px;
+
     margin-top:3px;
 }
 
@@ -506,22 +743,33 @@ button{
 
 .stats-wrap{
     position:relative;
+
     z-index:10;
+
     margin-top:-55px;
 }
 
 .stats{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+        repeat(4,1fr);
+
     background:#fff;
+
     border-radius:20px;
+
     overflow:hidden;
-    box-shadow:0 20px 55px rgba(3,26,59,.15);
+
+    box-shadow:
+        0 20px 55px rgba(3,26,59,.15);
 }
 
 .stat{
     text-align:center;
+
     padding:25px 15px;
+
     border-right:1px solid var(--border);
 }
 
@@ -531,14 +779,19 @@ button{
 
 .stat strong{
     display:block;
+
     color:var(--blue);
+
     font-size:30px;
+
     font-weight:950;
 }
 
 .stat span{
     color:var(--muted);
+
     font-size:13px;
+
     font-weight:700;
 }
 
@@ -548,8 +801,13 @@ button{
 
 .about-grid{
     display:grid;
-    grid-template-columns:.9fr 1.1fr;
+
+    grid-template-columns:
+        .9fr
+        1.1fr;
+
     gap:55px;
+
     align-items:center;
 }
 
@@ -560,104 +818,151 @@ button{
 .about-image img{
     width:100%;
     height:520px;
+
     object-fit:cover;
     object-position:center top;
+
     border-radius:26px;
+
     box-shadow:var(--shadow);
+
     background:var(--navy);
 }
 
 .image-badge{
     position:absolute;
+
     bottom:18px;
     left:18px;
+
     background:var(--gold);
+
     color:#111;
+
     padding:10px 16px;
+
     border-radius:10px;
+
     font-weight:950;
 }
 
 .about-copy h2{
     color:var(--navy);
+
     font-size:38px;
+
     line-height:1.15;
+
     margin:8px 0 18px;
 }
 
 .about-copy p{
     color:var(--muted);
+
     margin-bottom:15px;
 }
 
 .values{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+
+    grid-template-columns:
+        repeat(2,1fr);
+
     gap:12px;
+
     margin-top:25px;
 }
 
 .value{
     padding:17px;
+
     border:1px solid var(--border);
+
     border-radius:14px;
+
     background:#f8fbff;
 }
 
 .value strong{
     display:block;
+
     color:var(--navy);
 }
 
 .value span{
     color:var(--muted);
+
     font-size:13px;
 }
 
 /* =========================================================
-   MANIFESTO
+   CARDS
 ========================================================= */
 
-.manifesto-grid{
+.manifesto-grid,
+.media-grid,
+.news-grid,
+.event-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:20px;
 }
 
 .card{
     background:#fff;
+
     border:1px solid var(--border);
+
     border-radius:20px;
+
     padding:28px 22px;
-    box-shadow:0 8px 28px rgba(3,26,59,.06);
-    transition:.25s ease;
+
+    box-shadow:
+        0 8px 28px rgba(3,26,59,.06);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
 }
 
 .card:hover{
     transform:translateY(-6px);
+
     box-shadow:var(--shadow);
 }
 
 .card-icon{
     width:58px;
     height:58px;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     border-radius:16px;
+
     background:#eaf3ff;
-    font-size:27px;
+
+    color:var(--blue);
+
     margin-bottom:17px;
 }
 
 .card h3{
     color:var(--navy);
+
     font-size:20px;
+
     margin-bottom:8px;
 }
 
 .card p{
     color:var(--muted);
+
     font-size:14px;
 }
 
@@ -676,32 +981,52 @@ button{
 
 .ward-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:18px;
 }
 
 .ward{
     background:#fff;
+
     border:1px solid var(--border);
+
     border-radius:18px;
+
     padding:24px;
-    box-shadow:0 8px 25px rgba(3,26,59,.06);
+
+    box-shadow:
+        0 8px 25px rgba(3,26,59,.06);
+
+    transition:
+        transform .2s ease;
+}
+
+.ward:hover{
+    transform:translateY(-4px);
 }
 
 .ward-number{
     color:var(--blue);
+
     font-size:12px;
+
     font-weight:950;
+
     letter-spacing:1px;
 }
 
 .ward h3{
     color:var(--navy);
+
     margin:8px 0 4px;
 }
 
 .ward p{
     color:var(--muted);
+
     font-size:13px;
 }
 
@@ -711,53 +1036,82 @@ button{
 
 .directory-box{
     background:#fff;
+
     border:1px solid var(--border);
+
     border-radius:22px;
+
     padding:25px;
+
     box-shadow:var(--shadow);
 }
 
 .directory-top{
     display:flex;
+
     align-items:center;
+
     gap:12px;
+
     flex-wrap:wrap;
 }
 
 .search{
     flex:1 1 300px;
+
     min-height:52px;
+
     border:1px solid var(--border);
+
     border-radius:12px;
+
     padding:12px 15px;
+
     outline:none;
+
+    color:var(--text);
+
+    background:#fff;
 }
 
 .search:focus{
     border-color:var(--blue);
-    box-shadow:0 0 0 3px rgba(7,84,166,.10);
+
+    box-shadow:
+        0 0 0 3px rgba(7,84,166,.10);
 }
 
 .counter{
     background:#f4f8ff;
+
     border-radius:12px;
+
     padding:12px 16px;
+
     color:var(--muted);
+
     font-size:13px;
 }
 
 .counter strong{
     color:var(--blue);
+
     font-size:20px;
+
     margin-right:4px;
 }
 
 .directory-message{
     margin-top:20px;
-    padding:25px;
+
+    padding:28px;
+
     border-radius:16px;
+
     background:#f8fbff;
+
     color:var(--muted);
+
     text-align:center;
 }
 
@@ -766,26 +1120,31 @@ button{
 ========================================================= */
 
 .media-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    grid-template-columns:
+        repeat(3,1fr);
 }
 
 .media-card{
     background:rgba(255,255,255,.08);
+
     border:1px solid rgba(255,255,255,.15);
+
     border-radius:20px;
+
     padding:20px;
 }
 
 .media-card h3{
     color:#fff;
+
     margin-bottom:7px;
 }
 
 .media-card p{
     color:rgba(255,255,255,.72);
+
     font-size:14px;
+
     margin-bottom:15px;
 }
 
@@ -795,48 +1154,57 @@ audio{
 
 .video-box{
     background:#000;
+
     border-radius:16px;
+
     overflow:hidden;
+
     margin-bottom:15px;
 }
 
 .video-box video{
     display:block;
+
     width:100%;
+
     max-height:420px;
+
+    background:#000;
 }
 
 /* =========================================================
    NEWS
 ========================================================= */
 
-.news-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
 .news-card{
     background:#fff;
+
     border:1px solid var(--border);
+
     border-radius:20px;
+
     overflow:hidden;
-    box-shadow:0 8px 25px rgba(3,26,59,.06);
+
+    box-shadow:
+        0 8px 25px rgba(3,26,59,.06);
 }
 
 .news-top{
     height:150px;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     background:
         linear-gradient(
             135deg,
             var(--navy),
             var(--blue)
         );
+
     color:var(--gold2);
-    font-size:45px;
 }
 
 .news-body{
@@ -845,16 +1213,19 @@ audio{
 
 .news-body small{
     color:var(--blue);
+
     font-weight:900;
 }
 
 .news-body h3{
     color:var(--navy);
+
     margin:7px 0;
 }
 
 .news-body p{
     color:var(--muted);
+
     font-size:14px;
 }
 
@@ -864,24 +1235,35 @@ audio{
 
 .results-card{
     max-width:800px;
+
     margin:auto;
+
     background:#fff;
+
     border-radius:24px;
+
     padding:45px 30px;
+
     text-align:center;
+
     box-shadow:var(--shadow);
 }
 
 .results-number{
     font-size:75px;
+
     line-height:1;
+
     font-weight:950;
+
     color:var(--blue);
 }
 
 .results-card p{
     color:var(--muted);
+
     max-width:600px;
+
     margin:15px auto 25px;
 }
 
@@ -889,34 +1271,99 @@ audio{
    EVENTS
 ========================================================= */
 
-.event-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
 .event-card{
     background:#fff;
+
     border:1px solid var(--border);
+
     border-radius:20px;
+
     padding:24px;
 }
 
 .event-date{
     color:var(--blue);
+
     font-size:13px;
+
     font-weight:950;
+
     text-transform:uppercase;
 }
 
 .event-card h3{
     color:var(--navy);
+
     margin:8px 0;
 }
 
 .event-card p{
     color:var(--muted);
+
     font-size:14px;
+}
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+}
+
+.gallery-item{
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--blue)
+        );
+
+    min-height:230px;
+}
+
+.gallery-item img{
+    width:100%;
+    height:230px;
+
+    object-fit:cover;
+
+    transition:
+        transform .4s ease;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.05);
+}
+
+.gallery-placeholder{
+    min-height:230px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    color:#fff;
+
+    font-size:20px;
+
+    font-weight:950;
+
+    padding:25px;
 }
 
 /* =========================================================
@@ -925,32 +1372,39 @@ audio{
 
 .join-box{
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
     gap:30px;
+
     align-items:stretch;
 }
 
 .join-card{
     background:#fff;
+
     border-radius:22px;
+
     padding:32px;
+
     box-shadow:var(--shadow);
 }
 
-.join-card h3{
+.join-card h3,
+.support-card h3{
     color:var(--navy);
+
     font-size:27px;
+
     margin-bottom:10px;
 }
 
 .join-card p{
     color:var(--muted);
-    margin-bottom:20px;
-}
 
-.whatsapp{
-    background:#25D366;
-    color:#fff;
+    margin-bottom:20px;
 }
 
 .support-card{
@@ -960,27 +1414,35 @@ audio{
             var(--navy),
             var(--blue)
         );
+
     color:#fff;
+
     border-radius:22px;
+
     padding:32px;
+
     box-shadow:var(--shadow);
 }
 
 .support-card h3{
-    font-size:27px;
-    margin-bottom:10px;
+    color:#fff;
 }
 
 .support-card p{
     color:rgba(255,255,255,.8);
+
     margin-bottom:20px;
 }
 
 .bank-box{
     background:rgba(255,255,255,.10);
+
     border:1px solid rgba(255,255,255,.18);
+
     border-radius:15px;
+
     padding:18px;
+
     margin:15px 0;
 }
 
@@ -998,21 +1460,44 @@ audio{
 
 .contact-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:20px;
 }
 
 .contact-card{
     background:#fff;
+
     border:1px solid var(--border);
+
     border-radius:18px;
+
     padding:25px;
+
     text-align:center;
+
+    box-shadow:
+        0 8px 25px rgba(3,26,59,.04);
 }
 
 .contact-icon{
-    font-size:32px;
-    margin-bottom:8px;
+    width:60px;
+    height:60px;
+
+    margin:0 auto 10px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#eaf3ff;
+
+    color:var(--blue);
 }
 
 .contact-card h3{
@@ -1021,6 +1506,7 @@ audio{
 
 .contact-card p{
     color:var(--muted);
+
     font-size:14px;
 }
 
@@ -1030,13 +1516,20 @@ audio{
 
 .footer{
     background:#020f23;
+
     color:#fff;
-    padding:55px 0 25px;
+
+    padding:60px 0 25px;
 }
 
 .footer-grid{
     display:grid;
-    grid-template-columns:1.3fr .7fr .7fr;
+
+    grid-template-columns:
+        1.3fr
+        .7fr
+        .7fr;
+
     gap:40px;
 }
 
@@ -1047,6 +1540,7 @@ audio{
 .footer p,
 .footer li{
     color:rgba(255,255,255,.68);
+
     font-size:14px;
 }
 
@@ -1063,54 +1557,89 @@ audio{
 }
 
 .footer-bottom{
-    border-top:1px solid rgba(255,255,255,.10);
+    border-top:
+        1px solid rgba(255,255,255,.10);
+
     margin-top:35px;
+
     padding-top:20px;
+
     text-align:center;
+
     color:rgba(255,255,255,.55);
+
     font-size:12px;
 }
 
 /* =========================================================
-   FLOATING WHATSAPP
+   FLOATING ACTIONS
 ========================================================= */
 
 .floating-whatsapp{
     position:fixed;
-    right:18px;
-    bottom:18px;
-    width:58px;
-    height:58px;
+
+    right:
+        max(16px, env(safe-area-inset-right));
+
+    bottom:
+        max(16px, env(safe-area-inset-bottom));
+
+    width:60px;
+    height:60px;
+
     border-radius:50%;
+
     background:#25D366;
+
     color:#fff;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
-    font-size:27px;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+    box-shadow:
+        0 12px 32px rgba(0,0,0,.25);
+
     z-index:9998;
+
+    transition:
+        transform .2s ease;
 }
 
-/* =========================================================
-   BACK TO TOP
-========================================================= */
+.floating-whatsapp:hover{
+    transform:scale(1.08);
+}
 
 .back-top{
     position:fixed;
-    left:18px;
-    bottom:18px;
-    width:45px;
-    height:45px;
+
+    left:
+        max(16px, env(safe-area-inset-left));
+
+    bottom:
+        max(16px, env(safe-area-inset-bottom));
+
+    width:46px;
+    height:46px;
+
     border:0;
+
     border-radius:50%;
+
     background:var(--navy);
+
     color:#fff;
+
     display:none;
+
     align-items:center;
     justify-content:center;
+
     z-index:9998;
-    box-shadow:0 8px 25px rgba(0,0,0,.2);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.2);
 }
 
 .back-top.show{
@@ -1118,22 +1647,156 @@ audio{
 }
 
 /* =========================================================
-   MOBILE
+   TOAST
 ========================================================= */
 
-@media(max-width:900px){
+.toast{
+    position:fixed;
+
+    left:50%;
+
+    bottom:25px;
+
+    transform:
+        translate(-50%,20px);
+
+    background:#111;
+
+    color:#fff;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    font-size:13px;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    z-index:10001;
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+}
+
+.toast.show{
+    opacity:1;
+
+    transform:
+        translate(-50%,0);
+}
+
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
+
+@media(max-width:1000px){
+
+    .nav-inner{
+        gap:2px;
+    }
+
+    .nav-link{
+        padding:8px 8px;
+
+        font-size:11px;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+
+        gap:40px;
+    }
+
+    .hero-copy{
+        text-align:center;
+    }
+
+    .hero-kicker{
+        margin:auto;
+    }
+
+    .hero-description{
+        margin:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-photo-wrap{
+        max-width:480px;
+
+        width:100%;
+
+        margin:auto;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-image{
+        max-width:650px;
+
+        margin:auto;
+
+        width:100%;
+    }
+
+    .manifesto-grid,
+    .media-grid,
+    .news-grid,
+    .event-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .ward-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .gallery-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .contact-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:
+            1fr 1fr;
+    }
+}
+
+/* =========================================================
+   PHONE NAVIGATION
+========================================================= */
+
+@media(max-width:760px){
 
     .container{
-        width:min(100% - 26px, 700px);
+        width:min(
+            100% - 26px,
+            700px
+        );
     }
 
     .header-inner{
-        padding:14px 0;
+        min-height:82px;
+
+        padding:10px 0;
     }
 
     .brand-logo{
-        width:60px;
-        height:60px;
+        width:58px;
+        height:58px;
     }
 
     .brand-text strong{
@@ -1144,15 +1807,32 @@ audio{
         font-size:10px;
     }
 
+    .brand-badge{
+        display:none !important;
+    }
+
     .menu-toggle{
         display:block;
     }
 
     .nav-inner{
         display:none;
+
         flex-direction:column;
+
         align-items:stretch;
-        padding:10px 12px 15px;
+
+        gap:3px;
+
+        padding:
+            10px
+            12px
+            16px;
+
+        max-height:
+            calc(100vh - 130px);
+
+        overflow-y:auto;
     }
 
     .nav-inner.open{
@@ -1161,22 +1841,33 @@ audio{
 
     .nav-link{
         width:100%;
-        text-align:left;
-        padding:13px 14px;
+
+        justify-content:flex-start;
+
+        min-height:48px;
+
+        padding:12px 14px;
+
+        font-size:13px;
     }
 
     .hero{
         min-height:auto;
-        padding:65px 0 95px;
+
+        padding:
+            65px 0
+            100px;
     }
 
-    .hero-grid{
-        grid-template-columns:1fr;
-        gap:35px;
+    .hero-copy{
+        text-align:center;
     }
 
     .hero h1{
-        font-size:clamp(50px,17vw,75px);
+        font-size:
+            clamp(50px,17vw,78px);
+
+        letter-spacing:-3px;
     }
 
     .hero h2{
@@ -1187,9 +1878,13 @@ audio{
         font-size:16px;
     }
 
-    .hero-photo-wrap{
-        max-width:480px;
-        margin:auto;
+    .hero-buttons{
+        flex-direction:column;
+
+        width:100%;
+    }
+
+    .hero-buttons .btn{
         width:100%;
     }
 
@@ -1198,73 +1893,8 @@ audio{
     }
 
     .stats{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .stat{
-        border-right:1px solid var(--border);
-        border-bottom:1px solid var(--border);
-    }
-
-    .stat:nth-child(2){
-        border-right:0;
-    }
-
-    .stat:nth-child(3),
-    .stat:nth-child(4){
-        border-bottom:0;
-    }
-
-    .about-grid,
-    .join-box{
-        grid-template-columns:1fr;
-    }
-
-    .manifesto-grid,
-    .media-grid,
-    .news-grid,
-    .event-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .ward-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .contact-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:600px){
-
-    .top-strip-inner{
-        justify-content:center;
-        text-align:center;
-    }
-
-    .top-strip-inner span:last-child{
-        display:none;
-    }
-
-    .section{
-        padding:65px 0;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-    }
-
-    .hero-buttons .btn{
-        width:100%;
-    }
-
-    .stats{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
     .stat{
@@ -1273,6 +1903,23 @@ audio{
 
     .stat strong{
         font-size:25px;
+    }
+
+    .stat:nth-child(2){
+        border-right:0;
+    }
+
+    .stat:nth-child(3){
+        border-bottom:0;
+    }
+
+    .stat:nth-child(4){
+        border-right:0;
+        border-bottom:0;
+    }
+
+    .section{
+        padding:65px 0;
     }
 
     .about-image img{
@@ -1288,6 +1935,7 @@ audio{
     .news-grid,
     .event-grid,
     .ward-grid,
+    .gallery-grid,
     .contact-grid,
     .footer-grid{
         grid-template-columns:1fr;
@@ -1295,6 +1943,7 @@ audio{
 
     .directory-top{
         flex-direction:column;
+
         align-items:stretch;
     }
 
@@ -1302,13 +1951,109 @@ audio{
         text-align:center;
     }
 
-    .brand-text .brand-badge{
-        display:none;
+    .join-box{
+        grid-template-columns:1fr;
     }
 
-    .floating-whatsapp{
-        right:14px;
-        bottom:14px;
+    .results-number{
+        font-size:58px;
+    }
+
+    .footer{
+        padding-bottom:90px;
+    }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media(max-width:380px){
+
+    .container{
+        width:
+            calc(100% - 20px);
+    }
+
+    .brand{
+        gap:9px;
+    }
+
+    .brand-logo{
+        width:52px;
+        height:52px;
+    }
+
+    .brand-text strong{
+        font-size:14px;
+    }
+
+    .brand-text span{
+        font-size:9px;
+    }
+
+    .hero{
+        padding-top:50px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    .stat strong{
+        font-size:22px;
+    }
+
+    .stat span{
+        font-size:11px;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        transition:none !important;
+        animation:none !important;
+    }
+}
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print{
+
+    .main-nav,
+    .floating-whatsapp,
+    .back-top,
+    .top-strip{
+        display:none !important;
+    }
+
+    .hero{
+        color:#000;
+
+        background:#fff;
+    }
+
+    .section.blue{
+        color:#000;
+
+        background:#fff;
     }
 }
 
@@ -1318,11 +2063,290 @@ audio{
 <body>
 
 <!-- =========================================================
+     SVG ICON DEFINITIONS
+========================================================= -->
+
+<svg
+    width="0"
+    height="0"
+    style="position:absolute">
+
+    <symbol id="i-home"
+            viewBox="0 0 24 24">
+        <path
+            d="M3 10.5 12 3l9 7.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 19.5z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linejoin="round"/>
+        <path
+            d="M9 21v-6h6v6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"/>
+    </symbol>
+
+    <symbol id="i-user"
+            viewBox="0 0 24 24">
+        <circle
+            cx="12"
+            cy="8"
+            r="4"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"/>
+        <path
+            d="M4 21c.7-4 3.3-6 8-6s7.3 2 8 6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="i-file"
+            viewBox="0 0 24 24">
+        <path
+            d="M6 3h9l4 4v14H6z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linejoin="round"/>
+        <path
+            d="M14 3v5h5M9 13h6M9 17h6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="i-pin"
+            viewBox="0 0 24 24">
+        <path
+            d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"/>
+        <circle
+            cx="12"
+            cy="10"
+            r="2.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"/>
+    </symbol>
+
+    <symbol id="i-chart"
+            viewBox="0 0 24 24">
+        <path
+            d="M4 19V5M4 19h17"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"/>
+        <rect x="7" y="12" width="3" height="5"
+              fill="currentColor"/>
+        <rect x="12" y="8" width="3" height="9"
+              fill="currentColor"/>
+        <rect x="17" y="5" width="3" height="12"
+              fill="currentColor"/>
+    </symbol>
+
+    <symbol id="i-news"
+            viewBox="0 0 24 24">
+        <path
+            d="M5 4h14v16H5z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"/>
+        <path
+            d="M8 8h8M8 12h8M8 16h5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="i-calendar"
+            viewBox="0 0 24 24">
+        <rect
+            x="4"
+            y="5"
+            width="16"
+            height="15"
+            rx="2"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"/>
+        <path
+            d="M8 3v4M16 3v4M4 9h16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="i-image"
+            viewBox="0 0 24 24">
+        <rect
+            x="3"
+            y="4"
+            width="18"
+            height="16"
+            rx="2"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"/>
+        <circle
+            cx="8.5"
+            cy="9"
+            r="1.5"
+            fill="currentColor"/>
+        <path
+            d="m4 17 5-5 4 4 2-2 5 5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="i-music"
+            viewBox="0 0 24 24">
+        <path
+            d="M9 18V5l10-2v13"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linejoin="round"/>
+        <circle
+            cx="6"
+            cy="18"
+            r="3"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"/>
+        <circle
+            cx="16"
+            cy="16"
+            r="3"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"/>
+    </symbol>
+
+    <symbol id="i-phone"
+            viewBox="0 0 24 24">
+        <path
+            d="M6 3h3l2 5-2 2c1.5 3 3 4.5 6 6l2-2 5 2v3c0 1-1 2-2 2C11 21 3 13 3 4c0-1 1-1 3-1z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="i-users"
+            viewBox="0 0 24 24">
+        <circle
+            cx="9"
+            cy="8"
+            r="3"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"/>
+        <path
+            d="M3 20c.5-3.5 2.5-5 6-5s5.5 1.5 6 5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"/>
+        <path
+            d="M16 5a3 3 0 0 1 0 6M17 15c2.5.3 3.8 1.8 4 4"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"/>
+    </symbol>
+
+    <symbol id="i-heart"
+            viewBox="0 0 24 24">
+        <path
+            d="M20.8 8.8c0 5-8.8 10.2-8.8 10.2S3.2 13.8 3.2 8.8A4.8 4.8 0 0 1 12 6.2a4.8 4.8 0 0 1 8.8 2.6z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="i-message"
+            viewBox="0 0 24 24">
+        <path
+            d="M4 5h16v11H8l-4 4z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="i-menu"
+            viewBox="0 0 24 24">
+        <path
+            d="M4 7h16M4 12h16M4 17h16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="i-close"
+            viewBox="0 0 24 24">
+        <path
+            d="m6 6 12 12M18 6 6 18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="i-arrow"
+            viewBox="0 0 24 24">
+        <path
+            d="M5 12h13M13 6l6 6-6 6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="i-check"
+            viewBox="0 0 24 24">
+        <path
+            d="m5 12 4 4L19 6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="i-light"
+            viewBox="0 0 24 24">
+        <path
+            d="M9 18h6M10 21h4M8 14c-1.2-1-2-2.5-2-4a6 6 0 1 1 12 0c0 1.5-.8 3-2 4-.7.6-1 1.2-1 2H9c0-.8-.3-1.4-1-2z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linejoin="round"/>
+    </symbol>
+
+</svg>
+
+
+<!-- =========================================================
      TOP STRIP
 ========================================================= -->
 
 <div class="top-strip">
+
     <div class="top-strip-inner">
+
         <span>
             <strong>IMOLE 2027</strong>
             • Service • Development • Accountability
@@ -1332,7 +2356,9 @@ audio{
             Nigeria Democratic Congress (NDC)
             • Ojo Constituency II
         </span>
+
     </div>
+
 </div>
 
 
@@ -1351,7 +2377,10 @@ audio{
             <img
                 id="headerLogo"
                 class="brand-logo"
-                alt="Nigeria Democratic Congress Logo">
+                alt="Nigeria Democratic Congress logo"
+                width="70"
+                height="70"
+                decoding="async">
 
             <div class="brand-text">
 
@@ -1378,82 +2407,163 @@ audio{
      NAVIGATION
 ========================================================= -->
 
-<nav class="main-nav">
+<nav class="main-nav"
+     aria-label="Main navigation">
 
     <button
         class="menu-toggle"
         id="menuToggle"
+        type="button"
         aria-expanded="false"
         aria-controls="mainMenu">
-        ☰ MENU
+
+        <span class="menu-toggle-content"
+              id="menuToggleContent">
+
+            <svg class="icon">
+                <use href="#i-menu"></use>
+            </svg>
+
+            <span>MENU</span>
+
+        </span>
+
     </button>
+
 
     <div class="nav-inner"
          id="mainMenu">
 
-        <!-- IMPORTANT:
-             Home deliberately points to ./index.html.
-             It does NOT use #home or goHome().
-        -->
-
         <a class="nav-link home-link"
            href="./index.html">
-            🏠 Home
+
+            <svg class="icon">
+                <use href="#i-home"></use>
+            </svg>
+
+            <span>Home</span>
+
         </a>
 
         <a class="nav-link"
            href="./about.html">
-            👤 About
+
+            <svg class="icon">
+                <use href="#i-user"></use>
+            </svg>
+
+            <span>About</span>
+
         </a>
 
         <a class="nav-link"
            href="./manifesto.html">
-            📜 Manifesto
+
+            <svg class="icon">
+                <use href="#i-file"></use>
+            </svg>
+
+            <span>Manifesto</span>
+
         </a>
 
         <a class="nav-link"
            href="./polling-units.html">
-            📍 Polling Units
+
+            <svg class="icon">
+                <use href="#i-pin"></use>
+            </svg>
+
+            <span>Polling Units</span>
+
         </a>
 
         <a class="nav-link"
            href="./results.html">
-            📊 Results
+
+            <svg class="icon">
+                <use href="#i-chart"></use>
+            </svg>
+
+            <span>Results</span>
+
         </a>
 
         <a class="nav-link"
            href="./news.html">
-            📰 News
+
+            <svg class="icon">
+                <use href="#i-news"></use>
+            </svg>
+
+            <span>News</span>
+
         </a>
 
         <a class="nav-link"
            href="./events.html">
-            📅 Events
+
+            <svg class="icon">
+                <use href="#i-calendar"></use>
+            </svg>
+
+            <span>Events</span>
+
         </a>
 
         <a class="nav-link"
            href="./gallery.html">
-            🖼️ Gallery
+
+            <svg class="icon">
+                <use href="#i-image"></use>
+            </svg>
+
+            <span>Gallery</span>
+
         </a>
 
         <a class="nav-link media"
            href="./media.html">
-            🎵 Media
+
+            <svg class="icon">
+                <use href="#i-music"></use>
+            </svg>
+
+            <span>Media</span>
+
         </a>
 
         <a class="nav-link"
            href="./contact.html">
-            📞 Contact
+
+            <svg class="icon">
+                <use href="#i-phone"></use>
+            </svg>
+
+            <span>Contact</span>
+
         </a>
 
         <a class="nav-link join"
            href="./join.html">
-            🤝 Join Us
+
+            <svg class="icon">
+                <use href="#i-users"></use>
+            </svg>
+
+            <span>Join Us</span>
+
         </a>
 
         <a class="nav-link support"
            href="./donations.html">
-            ❤️ Support
+
+            <svg class="icon">
+                <use href="#i-heart"></use>
+            </svg>
+
+            <span>Support</span>
+
         </a>
 
     </div>
@@ -1472,10 +2582,16 @@ audio{
 
     <div class="container hero-grid">
 
-        <div>
+        <div class="hero-copy">
 
             <div class="hero-kicker">
-                ✦ THE IMOLE MOVEMENT ✦
+
+                <svg class="icon">
+                    <use href="#i-light"></use>
+                </svg>
+
+                THE IMOLE MOVEMENT
+
             </div>
 
             <h1>
@@ -1490,29 +2606,52 @@ audio{
             </h2>
 
             <p class="hero-description">
-                Ojo Constituency II deserves leadership that
-                listens, serves and delivers.
+
+                Ojo Constituency II deserves leadership
+                that listens, serves and delivers.
                 Join the movement for
                 <strong>
                     Service, Development and Accountability.
                 </strong>
+
             </p>
+
 
             <div class="hero-buttons">
 
                 <a href="./manifesto.html"
                    class="btn btn-gold">
-                    📜 Read Our Manifesto
+
+                    <svg class="icon">
+                        <use href="#i-file"></use>
+                    </svg>
+
+                    Read Our Manifesto
+
                 </a>
+
 
                 <a href="./join.html"
                    class="btn btn-white">
-                    🤝 Join IMOLE 2027
+
+                    <svg class="icon">
+                        <use href="#i-users"></use>
+                    </svg>
+
+                    Join IMOLE 2027
+
                 </a>
+
 
                 <a href="./media.html"
                    class="btn btn-outline">
-                    🎵 Campaign Media
+
+                    <svg class="icon">
+                        <use href="#i-music"></use>
+                    </svg>
+
+                    Campaign Media
+
                 </a>
 
             </div>
@@ -1527,7 +2666,11 @@ audio{
                 <img
                     id="candidatePhoto"
                     class="candidate-photo"
-                    alt="Hon. Nurudeen Abayomi Sadeeq">
+                    alt="Hon. Nurudeen Abayomi Sadeeq"
+                    width="600"
+                    height="750"
+                    decoding="async"
+                    fetchpriority="high">
 
                 <div class="photo-caption">
 
@@ -1603,7 +2746,11 @@ audio{
 
                 <img
                     id="aboutPhoto"
-                    alt="Hon. Nurudeen Abayomi Sadeeq">
+                    alt="Hon. Nurudeen Abayomi Sadeeq"
+                    width="650"
+                    height="520"
+                    loading="lazy"
+                    decoding="async">
 
                 <div class="image-badge">
                     IMOLE • A NEW LIGHT
@@ -1637,45 +2784,83 @@ audio{
                     development.
                 </p>
 
+
                 <div class="values">
 
                     <div class="value">
-                        <strong>✓ Integrity</strong>
+                        <strong>
+                            <svg class="icon">
+                                <use href="#i-check"></use>
+                            </svg>
+                            Integrity
+                        </strong>
                         <span>Doing what is right.</span>
                     </div>
 
                     <div class="value">
-                        <strong>✓ Accessibility</strong>
+                        <strong>
+                            <svg class="icon">
+                                <use href="#i-check"></use>
+                            </svg>
+                            Accessibility
+                        </strong>
                         <span>Leadership within reach.</span>
                     </div>
 
                     <div class="value">
-                        <strong>✓ Humility</strong>
+                        <strong>
+                            <svg class="icon">
+                                <use href="#i-check"></use>
+                            </svg>
+                            Humility
+                        </strong>
                         <span>Serving with respect.</span>
                     </div>
 
                     <div class="value">
-                        <strong>✓ Accountability</strong>
+                        <strong>
+                            <svg class="icon">
+                                <use href="#i-check"></use>
+                            </svg>
+                            Accountability
+                        </strong>
                         <span>Answerable to the people.</span>
                     </div>
 
                     <div class="value">
-                        <strong>✓ Compassion</strong>
+                        <strong>
+                            <svg class="icon">
+                                <use href="#i-check"></use>
+                            </svg>
+                            Compassion
+                        </strong>
                         <span>Putting people first.</span>
                     </div>
 
                     <div class="value">
-                        <strong>✓ Service</strong>
+                        <strong>
+                            <svg class="icon">
+                                <use href="#i-check"></use>
+                            </svg>
+                            Service
+                        </strong>
                         <span>Results over promises.</span>
                     </div>
 
                 </div>
 
+
                 <div style="margin-top:25px">
 
                     <a href="./about.html"
                        class="btn btn-blue">
-                        Learn More About Nurudeen →
+
+                        Learn More About Nurudeen
+
+                        <svg class="icon">
+                            <use href="#i-arrow"></use>
+                        </svg>
+
                     </a>
 
                 </div>
@@ -1719,62 +2904,127 @@ audio{
         <div class="manifesto-grid">
 
             <article class="card">
-                <div class="card-icon">🛣️</div>
-                <h3>Roads & Drainage</h3>
+
+                <div class="card-icon">
+                    <svg class="icon-xl">
+                        <use href="#i-pin"></use>
+                    </svg>
+                </div>
+
+                <h3>
+                    Roads & Drainage
+                </h3>
+
                 <p>
                     Champion practical interventions for
                     roads, drainage and infrastructure that
                     improve movement, safety and local commerce.
                 </p>
+
             </article>
 
+
             <article class="card">
-                <div class="card-icon">🏥</div>
-                <h3>Healthcare</h3>
+
+                <div class="card-icon">
+                    <svg class="icon-xl">
+                        <use href="#i-heart"></use>
+                    </svg>
+                </div>
+
+                <h3>
+                    Healthcare
+                </h3>
+
                 <p>
                     Advocate for stronger health centres,
                     improved access to healthcare and support
                     for vulnerable residents.
                 </p>
+
             </article>
 
+
             <article class="card">
-                <div class="card-icon">🎓</div>
-                <h3>Education</h3>
+
+                <div class="card-icon">
+                    <svg class="icon-xl">
+                        <use href="#i-file"></use>
+                    </svg>
+                </div>
+
+                <h3>
+                    Education
+                </h3>
+
                 <p>
                     Support quality education, youth development
                     and opportunities that help young people
                     build productive futures.
                 </p>
+
             </article>
 
+
             <article class="card">
-                <div class="card-icon">🛍️</div>
-                <h3>Traders & Businesses</h3>
+
+                <div class="card-icon">
+                    <svg class="icon-xl">
+                        <use href="#i-users"></use>
+                    </svg>
+                </div>
+
+                <h3>
+                    Traders & Businesses
+                </h3>
+
                 <p>
                     Champion initiatives that recognise traders,
                     artisans, entrepreneurs and small businesses.
                 </p>
+
             </article>
 
+
             <article class="card">
-                <div class="card-icon">👩</div>
-                <h3>Women Empowerment</h3>
+
+                <div class="card-icon">
+                    <svg class="icon-xl">
+                        <use href="#i-user"></use>
+                    </svg>
+                </div>
+
+                <h3>
+                    Women Empowerment
+                </h3>
+
                 <p>
                     Promote stronger opportunities for women
                     through inclusion, representation and
                     community-focused initiatives.
                 </p>
+
             </article>
 
+
             <article class="card">
-                <div class="card-icon">👨‍💻</div>
-                <h3>Youth Development</h3>
+
+                <div class="card-icon">
+                    <svg class="icon-xl">
+                        <use href="#i-users"></use>
+                    </svg>
+                </div>
+
+                <h3>
+                    Youth Development
+                </h3>
+
                 <p>
                     Give young people a stronger voice and
                     promote skills, entrepreneurship,
                     participation and opportunity.
                 </p>
+
             </article>
 
         </div>
@@ -1784,7 +3034,13 @@ audio{
 
             <a href="./manifesto.html"
                class="btn btn-blue">
-                View Complete Manifesto →
+
+                View Complete Manifesto
+
+                <svg class="icon">
+                    <use href="#i-arrow"></use>
+                </svg>
+
             </a>
 
         </div>
@@ -1826,49 +3082,37 @@ audio{
             <div class="ward">
                 <div class="ward-number">WARD D</div>
                 <h3>Ijanikin</h3>
-                <p>
-                    Community • Mobilisation • Service
-                </p>
+                <p>Community • Mobilisation • Service</p>
             </div>
 
             <div class="ward">
                 <div class="ward-number">WARD F</div>
                 <h3>Ilogbo</h3>
-                <p>
-                    Community • Mobilisation • Service
-                </p>
+                <p>Community • Mobilisation • Service</p>
             </div>
 
             <div class="ward">
                 <div class="ward-number">WARD I</div>
                 <h3>Etegbin</h3>
-                <p>
-                    Community • Mobilisation • Service
-                </p>
+                <p>Community • Mobilisation • Service</p>
             </div>
 
             <div class="ward">
                 <div class="ward-number">WARD J</div>
                 <h3>Idolowu</h3>
-                <p>
-                    Community • Mobilisation • Service
-                </p>
+                <p>Community • Mobilisation • Service</p>
             </div>
 
             <div class="ward">
                 <div class="ward-number">WARD G</div>
                 <h3>Irewe</h3>
-                <p>
-                    Community • Mobilisation • Service
-                </p>
+                <p>Community • Mobilisation • Service</p>
             </div>
 
             <div class="ward">
                 <div class="ward-number">WARD H</div>
                 <h3>Ojo Constituency II</h3>
-                <p>
-                    Community • Mobilisation • Service
-                </p>
+                <p>Community • Mobilisation • Service</p>
             </div>
 
         </div>
@@ -1914,7 +3158,8 @@ audio{
                     class="search"
                     type="search"
                     placeholder="Search polling unit or ward..."
-                    aria-label="Search polling units">
+                    aria-label="Search polling units"
+                    autocomplete="off">
 
                 <div class="counter">
                     <strong>170</strong>
@@ -1929,7 +3174,8 @@ audio{
             </div>
 
 
-            <div class="directory-message">
+            <div class="directory-message"
+                 id="directoryMessage">
 
                 <p>
                     Search the complete polling-unit
@@ -1940,7 +3186,17 @@ audio{
 
                 <a href="./polling-units.html"
                    class="btn btn-blue">
-                    📍 Open Full Polling Unit Directory →
+
+                    <svg class="icon">
+                        <use href="#i-pin"></use>
+                    </svg>
+
+                    Open Full Polling Unit Directory
+
+                    <svg class="icon">
+                        <use href="#i-arrow"></use>
+                    </svg>
+
                 </a>
 
             </div>
@@ -1993,7 +3249,17 @@ audio{
 
             <a href="./results.html"
                class="btn btn-blue">
-                📊 Open Results Page →
+
+                <svg class="icon">
+                    <use href="#i-chart"></use>
+                </svg>
+
+                Open Results Page
+
+                <svg class="icon">
+                    <use href="#i-arrow"></use>
+                </svg>
+
             </a>
 
         </div>
@@ -2024,8 +3290,8 @@ audio{
             </h2>
 
             <p>
-                Listen to the IMOLE 2027 campaign sounds
-                and watch campaign media.
+                Listen to campaign sounds and watch
+                campaign media.
             </p>
 
         </div>
@@ -2036,7 +3302,10 @@ audio{
             <article class="media-card">
 
                 <h3>
-                    🎵 Ojo Go Better
+                    <svg class="icon">
+                        <use href="#i-music"></use>
+                    </svg>
+                    Ojo Go Better
                 </h3>
 
                 <p>
@@ -2044,9 +3313,13 @@ audio{
                 </p>
 
                 <audio controls preload="none">
+
                     <source
                         src="./assets/Ojo Go Better (Progress Mix).mp3"
                         type="audio/mpeg">
+
+                    Your browser does not support audio.
+
                 </audio>
 
             </article>
@@ -2055,7 +3328,10 @@ audio{
             <article class="media-card">
 
                 <h3>
-                    🎵 OJO DEY MOVE
+                    <svg class="icon">
+                        <use href="#i-music"></use>
+                    </svg>
+                    OJO DEY MOVE
                 </h3>
 
                 <p>
@@ -2063,9 +3339,13 @@ audio{
                 </p>
 
                 <audio controls preload="none">
+
                     <source
                         src="./assets/OJO DEY MOVE.mp3"
                         type="audio/mpeg">
+
+                    Your browser does not support audio.
+
                 </audio>
 
             </article>
@@ -2074,7 +3354,10 @@ audio{
             <article class="media-card">
 
                 <h3>
-                    🎵 Sadeeq Campaign Jingle
+                    <svg class="icon">
+                        <use href="#i-music"></use>
+                    </svg>
+                    Sadeeq Campaign Jingle
                 </h3>
 
                 <p>
@@ -2082,9 +3365,13 @@ audio{
                 </p>
 
                 <audio controls preload="none">
+
                     <source
                         src="./assets/Sadeeq Campaign Jingle (Option 1).mp3"
                         type="audio/mpeg">
+
+                    Your browser does not support audio.
+
                 </audio>
 
             </article>
@@ -2093,7 +3380,10 @@ audio{
             <article class="media-card">
 
                 <h3>
-                    🎵 Ojo Adara
+                    <svg class="icon">
+                        <use href="#i-music"></use>
+                    </svg>
+                    Ojo Adara
                 </h3>
 
                 <p>
@@ -2101,9 +3391,13 @@ audio{
                 </p>
 
                 <audio controls preload="none">
+
                     <source
                         src="./assets/Ojo adara (Fuji Percussion Heavy).mp3"
                         type="audio/mpeg">
+
+                    Your browser does not support audio.
+
                 </audio>
 
             </article>
@@ -2112,7 +3406,10 @@ audio{
             <article class="media-card">
 
                 <h3>
-                    🎵 Ojo Gadi Mma
+                    <svg class="icon">
+                        <use href="#i-music"></use>
+                    </svg>
+                    Ojo Gadi Mma
                 </h3>
 
                 <p>
@@ -2120,9 +3417,13 @@ audio{
                 </p>
 
                 <audio controls preload="none">
+
                     <source
                         src="./assets/Ojo Gadi Mma (Igbo Version).mp3"
                         type="audio/mpeg">
+
+                    Your browser does not support audio.
+
                 </audio>
 
             </article>
@@ -2131,7 +3432,10 @@ audio{
             <article class="media-card">
 
                 <h3>
-                    🎵 Nuru Lokan
+                    <svg class="icon">
+                        <use href="#i-music"></use>
+                    </svg>
+                    Nuru Lokan
                 </h3>
 
                 <p>
@@ -2139,9 +3443,13 @@ audio{
                 </p>
 
                 <audio controls preload="none">
+
                     <source
                         src="./assets/Nuru lokan.mp3"
                         type="audio/mpeg">
+
+                    Your browser does not support audio.
+
                 </audio>
 
             </article>
@@ -2153,7 +3461,7 @@ audio{
              style="margin-top:25px">
 
             <h3>
-                🎬 IMOLE Campaign Video
+                Campaign Video
             </h3>
 
             <p>
@@ -2162,9 +3470,10 @@ audio{
 
             <div class="video-box">
 
-                <video controls
-                       preload="metadata"
-                       playsinline>
+                <video
+                    controls
+                    preload="metadata"
+                    playsinline>
 
                     <source
                         src="./assets/47ce1089-66a6-441d-850d-11cee3fb6cfc-watermark.mp4"
@@ -2183,7 +3492,17 @@ audio{
 
             <a href="./media.html"
                class="btn btn-gold">
-                🎵 Open Complete Media Hub →
+
+                <svg class="icon">
+                    <use href="#i-music"></use>
+                </svg>
+
+                Open Complete Media Hub
+
+                <svg class="icon">
+                    <use href="#i-arrow"></use>
+                </svg>
+
             </a>
 
         </div>
@@ -2225,7 +3544,11 @@ audio{
             <article class="news-card">
 
                 <div class="news-top">
-                    📰
+
+                    <svg class="icon-xl">
+                        <use href="#i-news"></use>
+                    </svg>
+
                 </div>
 
                 <div class="news-body">
@@ -2253,7 +3576,11 @@ audio{
             <article class="news-card">
 
                 <div class="news-top">
-                    🤝
+
+                    <svg class="icon-xl">
+                        <use href="#i-users"></use>
+                    </svg>
+
                 </div>
 
                 <div class="news-body">
@@ -2280,7 +3607,11 @@ audio{
             <article class="news-card">
 
                 <div class="news-top">
-                    💡
+
+                    <svg class="icon-xl">
+                        <use href="#i-light"></use>
+                    </svg>
+
                 </div>
 
                 <div class="news-body">
@@ -2309,7 +3640,17 @@ audio{
 
             <a href="./news.html"
                class="btn btn-blue">
-                📰 View All Campaign News →
+
+                <svg class="icon">
+                    <use href="#i-news"></use>
+                </svg>
+
+                View All Campaign News
+
+                <svg class="icon">
+                    <use href="#i-arrow"></use>
+                </svg>
+
             </a>
 
         </div>
@@ -2410,7 +3751,17 @@ audio{
 
             <a href="./events.html"
                class="btn btn-blue">
-                📅 View All Events →
+
+                <svg class="icon">
+                    <use href="#i-calendar"></use>
+                </svg>
+
+                View All Events
+
+                <svg class="icon">
+                    <use href="#i-arrow"></use>
+                </svg>
+
             </a>
 
         </div>
@@ -2447,54 +3798,38 @@ audio{
         </div>
 
 
-        <div class="media-grid">
+        <div class="gallery-grid">
 
-            <div class="media-card">
+            <div class="gallery-item">
 
                 <img
                     src="./assets/IMG-20260710-WA0004.jpg"
                     alt="IMOLE campaign activity"
-                    style="
-                        width:100%;
-                        height:230px;
-                        object-fit:cover;
-                        border-radius:14px;
-                    "
-                    loading="lazy">
+                    loading="lazy"
+                    decoding="async">
 
             </div>
 
 
-            <div class="media-card">
+            <div class="gallery-item">
 
                 <img
                     src="./assets/IMG-20260728-WA0032.jpg"
                     alt="IMOLE community engagement"
-                    style="
-                        width:100%;
-                        height:230px;
-                        object-fit:cover;
-                        border-radius:14px;
-                    "
-                    loading="lazy">
+                    loading="lazy"
+                    decoding="async">
 
             </div>
 
 
-            <div class="media-card">
+            <div class="gallery-item">
 
-                <div style="
-                    height:230px;
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    text-align:center;
-                    color:#fff;
-                    font-size:20px;
-                    font-weight:900;
-                ">
-                    IMOLE 2027<br>
+                <div class="gallery-placeholder">
+
+                    IMOLE 2027
+                    <br>
                     WE SHINE • WE WIN
+
                 </div>
 
             </div>
@@ -2506,7 +3841,17 @@ audio{
 
             <a href="./gallery.html"
                class="btn btn-blue">
-                🖼️ Open Complete Gallery →
+
+                <svg class="icon">
+                    <use href="#i-image"></use>
+                </svg>
+
+                Open Complete Gallery
+
+                <svg class="icon">
+                    <use href="#i-arrow"></use>
+                </svg>
+
             </a>
 
         </div>
@@ -2548,7 +3893,13 @@ audio{
             <div class="join-card">
 
                 <h3>
-                    🤝 Join IMOLE 2027
+
+                    <svg class="icon-lg">
+                        <use href="#i-users"></use>
+                    </svg>
+
+                    Join IMOLE 2027
+
                 </h3>
 
                 <p>
@@ -2560,7 +3911,13 @@ audio{
 
                 <a href="./join.html"
                    class="btn btn-blue">
-                    Join Us →
+
+                    Join Us
+
+                    <svg class="icon">
+                        <use href="#i-arrow"></use>
+                    </svg>
+
                 </a>
 
             </div>
@@ -2569,7 +3926,13 @@ audio{
             <div class="support-card">
 
                 <h3>
-                    ❤️ Support The Movement
+
+                    <svg class="icon-lg">
+                        <use href="#i-heart"></use>
+                    </svg>
+
+                    Support The Movement
+
                 </h3>
 
                 <p>
@@ -2577,6 +3940,7 @@ audio{
                     organise community activities and reach
                     more residents.
                 </p>
+
 
                 <div class="bank-box">
 
@@ -2592,9 +3956,20 @@ audio{
 
                 </div>
 
+
                 <a href="./donations.html"
                    class="btn btn-gold">
-                    ❤️ Support IMOLE 2027 →
+
+                    <svg class="icon">
+                        <use href="#i-heart"></use>
+                    </svg>
+
+                    Support IMOLE 2027
+
+                    <svg class="icon">
+                        <use href="#i-arrow"></use>
+                    </svg>
+
                 </a>
 
             </div>
@@ -2638,7 +4013,11 @@ audio{
             <div class="contact-card">
 
                 <div class="contact-icon">
-                    💬
+
+                    <svg class="icon-lg">
+                        <use href="#i-message"></use>
+                    </svg>
+
                 </div>
 
                 <h3>
@@ -2654,8 +4033,14 @@ audio{
                 <a
                     id="whatsappContact"
                     href="#"
-                    class="btn whatsapp">
+                    class="btn btn-green">
+
+                    <svg class="icon">
+                        <use href="#i-message"></use>
+                    </svg>
+
                     Open WhatsApp
+
                 </a>
 
             </div>
@@ -2664,7 +4049,11 @@ audio{
             <div class="contact-card">
 
                 <div class="contact-icon">
-                    📍
+
+                    <svg class="icon-lg">
+                        <use href="#i-pin"></use>
+                    </svg>
+
                 </div>
 
                 <h3>
@@ -2682,7 +4071,11 @@ audio{
             <div class="contact-card">
 
                 <div class="contact-icon">
-                    🏛️
+
+                    <svg class="icon-lg">
+                        <use href="#i-file"></use>
+                    </svg>
+
                 </div>
 
                 <h3>
@@ -2702,7 +4095,17 @@ audio{
 
             <a href="./contact.html"
                class="btn btn-blue">
-                📞 Open Contact Page →
+
+                <svg class="icon">
+                    <use href="#i-phone"></use>
+                </svg>
+
+                Open Contact Page
+
+                <svg class="icon">
+                    <use href="#i-arrow"></use>
+                </svg>
+
             </a>
 
         </div>
@@ -2854,7 +4257,7 @@ audio{
 
             <br><br>
 
-            IMOLE 2027 • VERSION 2026.08.29-FINAL
+            IMOLE 2027 • VERSION 2026.08.30
 
         </div>
 
@@ -2864,7 +4267,7 @@ audio{
 
 
 <!-- =========================================================
-     FLOATING BUTTONS
+     FLOATING WHATSAPP
 ========================================================= -->
 
 <a
@@ -2872,15 +4275,39 @@ audio{
     class="floating-whatsapp"
     href="#"
     aria-label="Contact IMOLE 2027 on WhatsApp">
-    💬
+
+    <svg class="icon-lg">
+        <use href="#i-message"></use>
+    </svg>
+
 </a>
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
 
 <button
     id="backTop"
     class="back-top"
+    type="button"
     aria-label="Back to top">
+
     ↑
+
 </button>
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite">
+</div>
 
 
 <!-- =========================================================
@@ -2891,34 +4318,88 @@ audio{
 
 "use strict";
 
-/*
-=========================================================
-IMOLE 2027 FINAL HOMEPAGE ENGINE
-No external JavaScript required.
-No old goHome().
-No old section router.
-=========================================================
-*/
+/* =========================================================
+   IMOLE 2027 HOMEPAGE ENGINE
+   VERSION 2026.08.30
+========================================================= */
 
 
-/* -------------------------------------------------------
-   1. CONFIGURATION
-------------------------------------------------------- */
+/* =========================================================
+   CONFIGURATION
+========================================================= */
 
-const IMOLE_VERSION = "2026.08.29-FINAL";
+const IMOLE_VERSION = "2026.08.30";
 
 const ASSET_BASE = "./assets/";
 
-const WHATSAPP_NUMBER = "2340000000000";
+const WHATSAPP_NUMBER = "2348033002235";
 
 
-/* -------------------------------------------------------
-   2. SAFE IMAGE LOADER
-------------------------------------------------------- */
+/* =========================================================
+   SAFE ELEMENT HELPER
+========================================================= */
+
+function get(id){
+
+    return document.getElementById(id);
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+let toastTimer = null;
+
+function showToast(message){
+
+    const toast = get("toast");
+
+    if(!toast){
+        return;
+    }
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer = setTimeout(
+        function(){
+
+            toast.classList.remove("show");
+
+        },
+        2500
+    );
+}
+
+
+/* =========================================================
+   SAFE HTML
+========================================================= */
+
+function escapeHtml(value){
+
+    return String(value)
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================================================
+   IMAGE LOADER
+========================================================= */
 
 function tryImages(elementId, filenames){
 
-    const element = document.getElementById(elementId);
+    const element = get(elementId);
 
     if(!element){
         return;
@@ -2926,9 +4407,12 @@ function tryImages(elementId, filenames){
 
     let index = 0;
 
-    function tryNext(){
+
+    function next(){
 
         if(index >= filenames.length){
+
+            element.removeAttribute("src");
 
             element.style.background =
                 "linear-gradient(135deg,#0754a6,#031b3d)";
@@ -2936,36 +4420,56 @@ function tryImages(elementId, filenames){
             return;
         }
 
-        const filename = filenames[index++];
 
-        const image = new Image();
+        const filename =
+            filenames[index++];
 
-        image.onload = function(){
+        const image =
+            new Image();
 
-            element.src = ASSET_BASE + filename;
 
-            element.style.display = "block";
-        };
+        image.onload =
+            function(){
 
-        image.onerror = function(){
+                element.src =
+                    ASSET_BASE +
+                    filename +
+                    "?v=" +
+                    encodeURIComponent(
+                        IMOLE_VERSION
+                    );
 
-            tryNext();
-        };
+                element.style.background =
+                    "transparent";
+
+            };
+
+
+        image.onerror =
+            function(){
+
+                next();
+
+            };
+
 
         image.src =
             ASSET_BASE +
             filename +
-            "?v=" +
-            encodeURIComponent(IMOLE_VERSION);
+            "?check=" +
+            Date.now();
+
     }
 
-    tryNext();
+
+    next();
+
 }
 
 
-/* -------------------------------------------------------
-   3. LOAD LOGO
-------------------------------------------------------- */
+/* =========================================================
+   LOGO
+========================================================= */
 
 tryImages(
     "headerLogo",
@@ -2973,21 +4477,29 @@ tryImages(
         "ndc-logo.jpeg",
         "ndc-logo.jpg",
         "ndc-logo.png",
+
         "NDC-logo.jpeg",
         "NDC-logo.jpg",
         "NDC-logo.png",
+
+        "Ndc-logo.jpeg",
+        "Ndc-logo.jpg",
+        "Ndc-logo.png",
+
         "logo.jpeg",
         "logo.jpg",
-        "logo.png"
+        "logo.png",
+
+        "NDC.jpeg",
+        "NDC.jpg",
+        "NDC.png"
     ]
 );
 
 
-/* -------------------------------------------------------
-   4. LOAD CANDIDATE PHOTO
-   The loader checks several possible names so that
-   one filename mistake does not break the website.
-------------------------------------------------------- */
+/* =========================================================
+   CANDIDATE PHOTO
+========================================================= */
 
 const candidatePhotoNames = [
 
@@ -3003,6 +4515,10 @@ const candidatePhotoNames = [
     "nurudeen-abayomi-sadeeq.jpeg",
     "nurudeen-abayomi-sadeeq.png",
 
+    "Nurudeen_Abayomi_Sadeeq.jpg",
+    "Nurudeen_Abayomi_Sadeeq.jpeg",
+    "Nurudeen_Abayomi_Sadeeq.png",
+
     "nurudeen.jpg",
     "nurudeen.jpeg",
     "nurudeen.png",
@@ -3014,6 +4530,10 @@ const candidatePhotoNames = [
     "candidate.jpg",
     "candidate.jpeg",
     "candidate.png",
+
+    "candidate-photo.jpg",
+    "candidate-photo.jpeg",
+    "candidate-photo.png",
 
     "IMG-20260710-WA0004.jpg",
     "IMG-20260728-WA0032.jpg"
@@ -3031,15 +4551,68 @@ tryImages(
 );
 
 
-/* -------------------------------------------------------
-   5. MOBILE MENU
-------------------------------------------------------- */
+/* =========================================================
+   MOBILE MENU
+========================================================= */
 
 const menuToggle =
-    document.getElementById("menuToggle");
+    get("menuToggle");
 
 const mainMenu =
-    document.getElementById("mainMenu");
+    get("mainMenu");
+
+const menuToggleContent =
+    get("menuToggleContent");
+
+
+function setMenu(open){
+
+    if(!menuToggle || !mainMenu){
+        return;
+    }
+
+
+    mainMenu.classList.toggle(
+        "open",
+        open
+    );
+
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        open ? "true" : "false"
+    );
+
+
+    document.body.classList.toggle(
+        "menu-open",
+        open
+    );
+
+
+    if(menuToggleContent){
+
+        menuToggleContent.innerHTML =
+            open
+
+            ? `
+                <svg class="icon">
+                    <use href="#i-close"></use>
+                </svg>
+                <span>CLOSE MENU</span>
+              `
+
+            : `
+                <svg class="icon">
+                    <use href="#i-menu"></use>
+                </svg>
+                <span>MENU</span>
+              `;
+
+    }
+
+}
+
 
 if(menuToggle && mainMenu){
 
@@ -3047,49 +4620,66 @@ if(menuToggle && mainMenu){
         "click",
         function(){
 
-            const open =
-                mainMenu.classList.toggle("open");
+            const isOpen =
+                mainMenu.classList.contains("open");
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                open ? "true" : "false"
-            );
+            setMenu(!isOpen);
 
-            menuToggle.textContent =
-                open
-                ? "✕ CLOSE MENU"
-                : "☰ MENU";
         }
     );
 
 
-    document
-        .querySelectorAll("#mainMenu a")
-        .forEach(function(link){
+    mainMenu
+        .querySelectorAll("a")
+        .forEach(
+            function(link){
 
-            link.addEventListener(
-                "click",
-                function(){
+                link.addEventListener(
+                    "click",
+                    function(){
 
-                    mainMenu.classList.remove("open");
+                        setMenu(false);
 
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
+                    }
+                );
 
-                    menuToggle.textContent =
-                        "☰ MENU";
-                }
-            );
+            }
+        );
 
-        });
+
+    document.addEventListener(
+        "keydown",
+        function(event){
+
+            if(event.key === "Escape"){
+
+                setMenu(false);
+
+            }
+
+        }
+    );
+
+
+    window.addEventListener(
+        "resize",
+        function(){
+
+            if(window.innerWidth > 760){
+
+                setMenu(false);
+
+            }
+
+        }
+    );
+
 }
 
 
-/* -------------------------------------------------------
-   6. WHATSAPP
-------------------------------------------------------- */
+/* =========================================================
+   WHATSAPP
+========================================================= */
 
 function setupWhatsApp(){
 
@@ -3097,43 +4687,55 @@ function setupWhatsApp(){
         "Hello IMOLE 2027, I would like to connect with the campaign team.";
 
     const url =
-        "https://wa.me/2348033002235
+        "https://wa.me/" +
         WHATSAPP_NUMBER +
         "?text=" +
         encodeURIComponent(message);
 
+
     const buttons = [
 
-        document.getElementById("whatsappContact"),
+        get("whatsappContact"),
 
-        document.getElementById("floatingWhatsApp")
+        get("floatingWhatsApp")
 
     ];
 
-    buttons.forEach(function(button){
 
-        if(button){
+    buttons.forEach(
+        function(button){
+
+            if(!button){
+                return;
+            }
+
 
             button.href = url;
 
             button.target = "_blank";
 
-            button.rel = "noopener noreferrer";
+            button.rel =
+                "noopener noreferrer";
 
         }
+    );
 
-    });
 }
+
 
 setupWhatsApp();
 
 
-/* -------------------------------------------------------
-   7. POLLING UNIT SEARCH
-------------------------------------------------------- */
+/* =========================================================
+   POLLING UNIT SEARCH
+========================================================= */
 
 const puSearch =
-    document.getElementById("puSearch");
+    get("puSearch");
+
+const directoryMessage =
+    get("directoryMessage");
+
 
 if(puSearch){
 
@@ -3146,91 +4748,120 @@ if(puSearch){
                     .trim()
                     .toLowerCase();
 
-            if(value.length > 0){
 
-                /*
-                 The complete directory is preserved
-                 on polling-units.html.
-                 This homepage search directs the user
-                 there without pretending that the
-                 homepage contains all 170 records.
-                */
-
-                const target =
-                    "./polling-units.html?search=" +
-                    encodeURIComponent(value);
-
-                const message =
-                    document.querySelector(
-                        ".directory-message"
-                    );
-
-                if(message){
-
-                    message.innerHTML =
-                        `
-                        <p>
-                            Searching for:
-                            <strong>${escapeHtml(value)}</strong>
-                        </p>
-
-                        <br>
-
-                        <a
-                            href="${target}"
-                            class="btn btn-blue">
-                            📍 Search Full Polling Unit Directory →
-                        </a>
-                        `;
-                }
-
+            if(!directoryMessage){
+                return;
             }
+
+
+            if(!value){
+
+                directoryMessage.innerHTML =
+                    `
+                    <p>
+                        Search the complete polling-unit
+                        directory on the dedicated page.
+                    </p>
+
+                    <br>
+
+                    <a
+                        href="./polling-units.html"
+                        class="btn btn-blue">
+
+                        <svg class="icon">
+                            <use href="#i-pin"></use>
+                        </svg>
+
+                        Open Full Polling Unit Directory
+
+                        <svg class="icon">
+                            <use href="#i-arrow"></use>
+                        </svg>
+
+                    </a>
+                    `;
+
+                return;
+            }
+
+
+            const safe =
+                escapeHtml(value);
+
+
+            const target =
+                "./polling-units.html?search=" +
+                encodeURIComponent(value);
+
+
+            directoryMessage.innerHTML =
+                `
+                <p>
+                    Searching for:
+                    <strong>${safe}</strong>
+                </p>
+
+                <br>
+
+                <a
+                    href="${target}"
+                    class="btn btn-blue">
+
+                    <svg class="icon">
+                        <use href="#i-pin"></use>
+                    </svg>
+
+                    Search Full Directory
+
+                    <svg class="icon">
+                        <use href="#i-arrow"></use>
+                    </svg>
+
+                </a>
+                `;
 
         }
     );
+
 }
 
 
-/* -------------------------------------------------------
-   8. ESCAPE HTML
-------------------------------------------------------- */
-
-function escapeHtml(value){
-
-    return value
-        .replace(/&/g,"&amp;")
-        .replace(/</g,"&lt;")
-        .replace(/>/g,"&gt;")
-        .replace(/"/g,"&quot;")
-        .replace(/'/g,"&#039;");
-}
-
-
-/* -------------------------------------------------------
-   9. BACK TO TOP
-------------------------------------------------------- */
+/* =========================================================
+   BACK TO TOP
+========================================================= */
 
 const backTop =
-    document.getElementById("backTop");
+    get("backTop");
+
 
 if(backTop){
 
-    window.addEventListener(
-        "scroll",
-        function(){
+    function updateBackTop(){
 
-            if(window.scrollY > 500){
+        if(window.scrollY > 500){
 
-                backTop.classList.add("show");
+            backTop.classList.add("show");
 
-            }else{
+        }else{
 
-                backTop.classList.remove("show");
-
-            }
+            backTop.classList.remove("show");
 
         }
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        updateBackTop,
+        {
+            passive:true
+        }
     );
+
+
+    updateBackTop();
 
 
     backTop.addEventListener(
@@ -3238,8 +4869,17 @@ if(backTop){
         function(){
 
             window.scrollTo({
+
                 top:0,
-                behavior:"smooth"
+
+                behavior:
+                    window.matchMedia(
+                        "(prefers-reduced-motion: reduce)"
+                    ).matches
+
+                    ? "auto"
+                    : "smooth"
+
             });
 
         }
@@ -3248,79 +4888,85 @@ if(backTop){
 }
 
 
-/* -------------------------------------------------------
-   10. PREVENT OLD HASH ROUTING
-------------------------------------------------------- */
+/* =========================================================
+   ACTIVE PAGE PROTECTION
+========================================================= */
 
-/*
-   If an old link/bookmark opens:
+(function(){
 
-       index.html#home
-
-   we simply show the current homepage.
-
-   We DO NOT rewrite the page to an old pathname.
-*/
-
-if(
-    window.location.pathname.endsWith(
-        "/index.html"
-    )
-){
-
-    /*
-       Nothing is redirected.
-       This is intentional.
-    */
-
-}
+    const current =
+        window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase();
 
 
-/* -------------------------------------------------------
-   11. SERVICE WORKER
-------------------------------------------------------- */
+    if(
+        current === "" ||
+        current === "index.html"
+    ){
 
-if(
-    "serviceWorker" in navigator
-){
+        document
+            .querySelectorAll(
+                '#mainMenu a[href="./index.html"]'
+            )
+            .forEach(
+                function(link){
+
+                    link.setAttribute(
+                        "aria-current",
+                        "page"
+                    );
+
+                }
+            );
+
+    }
+
+})();
+
+
+/* =========================================================
+   SERVICE WORKER
+========================================================= */
+
+if("serviceWorker" in navigator){
 
     window.addEventListener(
         "load",
         function(){
 
-            /*
-               Only register if a service-worker file
-               actually exists.
-
-               This prevents console errors when the
-               file has not yet been uploaded.
-            */
-
             fetch(
-                "./sw.js",
+                "./sw.js?v=" +
+                encodeURIComponent(
+                    IMOLE_VERSION
+                ),
                 {
                     method:"HEAD",
                     cache:"no-store"
                 }
             )
-            .then(function(response){
+            .then(
+                function(response){
 
-                if(response.ok){
+                    if(response.ok){
 
-                    navigator.serviceWorker
-                        .register(
-                            "./sw.js?v=" +
-                            encodeURIComponent(
-                                IMOLE_VERSION
+                        navigator
+                            .serviceWorker
+                            .register(
+                                "./sw.js?v=" +
+                                encodeURIComponent(
+                                    IMOLE_VERSION
+                                )
                             )
-                        )
-                        .catch(
-                            function(){}
-                        );
+                            .catch(
+                                function(){}
+                            );
+
+                    }
 
                 }
-
-            })
+            )
             .catch(
                 function(){}
             );
@@ -3331,9 +4977,9 @@ if(
 }
 
 
-/* -------------------------------------------------------
-   12. CACHE-BUSTING META
-------------------------------------------------------- */
+/* =========================================================
+   CACHE / VERSION MARK
+========================================================= */
 
 const versionMeta =
     document.createElement("meta");
@@ -3349,41 +4995,41 @@ document.head.appendChild(
 );
 
 
-/* -------------------------------------------------------
-   13. FINAL HOME PROTECTION
-------------------------------------------------------- */
-
-/*
-   This is the important part.
-
-   Any Home link in THIS page points directly to:
-
-       ./index.html
-
-   There is no:
-
-       goHome()
-       location.pathname
-       old homepage redirect
-       #home-only routing
-
-   Therefore the Home button always targets
-   the root index.html currently deployed.
-*/
-
-
-/* -------------------------------------------------------
-   14. PAGE READY
-------------------------------------------------------- */
-
 document.documentElement
     .setAttribute(
         "data-imole-version",
         IMOLE_VERSION
     );
 
+
+/* =========================================================
+   HANDLE OLD #home LINKS
+========================================================= */
+
+if(
+    window.location.hash === "#home"
+){
+
+    /*
+       Keep the current homepage.
+
+       We deliberately do NOT redirect to an old
+       pathname or old homepage.
+    */
+
+}
+
+
+/* =========================================================
+   PAGE READY
+========================================================= */
+
+document.body
+    .classList.add("imole-ready");
+
+
 console.log(
-    "IMOLE 2027 homepage loaded:",
+    "IMOLE 2027 homepage loaded successfully:",
     IMOLE_VERSION
 );
 
