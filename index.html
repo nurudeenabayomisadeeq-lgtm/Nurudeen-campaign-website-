@@ -4,3688 +4,3387 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      content="width=device-width, initial-scale=1.0">
 
 <title>IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq</title>
 
 <meta name="description"
-      content="Official IMOLE 2027 campaign website of Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II.">
+      content="Official IMOLE 2027 campaign website of Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II, under the Nigeria Democratic Congress (NDC).">
 
-<meta name="theme-color" content="#071b13">
+<meta name="keywords"
+      content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Ojo Constituency II, NDC, Lagos State House of Assembly, Nigeria Democratic Congress">
+
+<meta name="author"
+      content="Hon. Nurudeen Abayomi Sadeeq Campaign">
+
+<meta name="theme-color"
+      content="#063b7a">
+
+<meta name="robots"
+      content="index, follow">
+
+<link rel="canonical"
+      href="./index.html">
+
+<link rel="manifest"
+      href="./manifest.json">
 
 <style>
+
 /* =========================================================
-   IMOLE 2027 — SINGLE FILE WEBSITE
-   VERSION 2026.08.29
-   No external CSS required
-   ========================================================= */
+   IMOLE 2027
+   FINAL MASTER HOMEPAGE
+   VERSION: 2026.08.29-FINAL
+   SELF-CONTAINED / MOBILE-FIRST / GITHUB PAGES
+========================================================= */
 
 :root{
-  --green:#087443;
-  --dark:#041b11;
-  --dark2:#071f15;
-  --gold:#f5c542;
-  --gold2:#ffd967;
-  --white:#fff;
-  --cream:#fffaf0;
-  --light:#f5f8f6;
-  --text:#18241e;
-  --muted:#68756e;
-  --border:rgba(8,116,67,.14);
-  --shadow:0 20px 55px rgba(0,0,0,.10);
-  --radius:22px;
-  --max:1180px;
+    --navy:#031b3d;
+    --navy2:#062d63;
+    --blue:#0754a6;
+    --blue2:#0a72cf;
+    --gold:#f7b900;
+    --gold2:#ffd84d;
+    --green:#12a85a;
+    --white:#ffffff;
+    --black:#111111;
+    --text:#26364d;
+    --muted:#68778d;
+    --light:#f4f7fb;
+    --border:#e1e8f0;
+    --danger:#c62828;
+    --shadow:0 18px 55px rgba(3,26,59,.13);
+    --radius:22px;
 }
 
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
+    scroll-padding-top:90px;
 }
 
 body{
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Arial,
-    sans-serif;
-  color:var(--text);
-  background:#fff;
-  line-height:1.6;
-  overflow-x:hidden;
-}
-
-body.menu-open{
-  overflow:hidden;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-button{
-  font:inherit;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+    color:var(--text);
+    background:var(--light);
+    line-height:1.65;
+    overflow-x:hidden;
 }
 
 img{
-  max-width:100%;
-  display:block;
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+textarea,
+select{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
 }
 
 .container{
-  width:min(92%,var(--max));
-  margin:auto;
+    width:min(1200px, calc(100% - 32px));
+    margin:auto;
+}
+
+.section{
+    padding:85px 0;
+}
+
+.section.white{
+    background:#fff;
+}
+
+.section.blue{
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--blue)
+        );
+    color:#fff;
+}
+
+.section-heading{
+    max-width:800px;
+    margin:0 auto 45px;
+    text-align:center;
+}
+
+.eyebrow{
+    color:var(--blue2);
+    font-size:13px;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.section-heading h2{
+    color:var(--navy);
+    font-size:clamp(30px,5vw,46px);
+    line-height:1.12;
+    margin:10px 0 14px;
+    font-weight:950;
+}
+
+.section-heading p{
+    color:var(--muted);
+    font-size:16px;
+}
+
+.section.blue .section-heading h2{
+    color:#fff;
+}
+
+.section.blue .section-heading p{
+    color:rgba(255,255,255,.78);
 }
 
 /* =========================================================
-   TOP BAR
-   ========================================================= */
+   TOP STRIP
+========================================================= */
 
-.topbar{
-  background:var(--gold);
-  color:#111;
-  text-align:center;
-  padding:7px 12px;
-  font-size:.76rem;
-  font-weight:900;
-  letter-spacing:.4px;
+.top-strip{
+    background:var(--navy);
+    color:#fff;
+    padding:8px 15px;
+    font-size:12px;
+}
+
+.top-strip-inner{
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+}
+
+.top-strip strong{
+    color:var(--gold2);
 }
 
 /* =========================================================
    HEADER
-   ========================================================= */
+========================================================= */
 
-header{
-  position:sticky;
-  top:0;
-  z-index:9999;
-  background:rgba(4,27,17,.97);
-  backdrop-filter:blur(15px);
-  box-shadow:0 6px 28px rgba(0,0,0,.18);
+.site-header{
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255,216,77,.16),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--blue)
+        );
+    color:#fff;
+    position:relative;
+    overflow:hidden;
 }
 
-.nav{
-  min-height:74px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
+.header-inner{
+    min-height:100px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
 }
 
 .brand{
-  display:flex;
-  align-items:center;
-  gap:11px;
-  min-width:0;
+    display:flex;
+    align-items:center;
+    gap:14px;
 }
 
-.logo{
-  width:48px;
-  height:48px;
-  border-radius:50%;
-  object-fit:contain;
-  background:#fff;
-  padding:3px;
-  border:2px solid var(--gold);
-  flex-shrink:0;
+.brand-logo{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    background:#fff;
+    object-fit:contain;
+    padding:5px;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
 .brand-text strong{
-  display:block;
-  color:var(--gold);
-  font-size:1.05rem;
-  line-height:1;
-  letter-spacing:.7px;
+    display:block;
+    font-size:20px;
+    line-height:1.1;
 }
 
-.brand-text small{
-  display:block;
-  color:rgba(255,255,255,.72);
-  font-size:.61rem;
-  margin-top:5px;
+.brand-text span{
+    display:block;
+    font-size:12px;
+    color:rgba(255,255,255,.78);
+    margin-top:4px;
 }
 
-.desktop-menu{
-  display:flex;
-  align-items:center;
-  gap:2px;
+.brand-badge{
+    display:inline-block;
+    background:var(--gold);
+    color:#111;
+    padding:3px 9px;
+    border-radius:30px;
+    font-size:10px;
+    font-weight:900;
+    margin-top:6px;
 }
 
-.desktop-menu a{
-  color:#fff;
-  font-size:.78rem;
-  font-weight:800;
-  padding:9px 8px;
-  border-radius:9px;
-  transition:.2s ease;
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.main-nav{
+    position:sticky;
+    top:0;
+    z-index:9999;
+    background:rgba(255,255,255,.97);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+    box-shadow:0 5px 25px rgba(0,0,0,.07);
 }
 
-.desktop-menu a:hover,
-.desktop-menu a.active{
-  color:var(--gold);
-  background:rgba(255,255,255,.08);
+.nav-inner{
+    min-height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+    flex-wrap:wrap;
 }
 
-.desktop-menu .join-link{
-  color:#111;
-  background:var(--gold);
-  padding-left:13px;
-  padding-right:13px;
+.nav-link{
+    padding:9px 11px;
+    border-radius:9px;
+    color:var(--navy);
+    font-size:13px;
+    font-weight:800;
+    transition:.2s ease;
 }
 
-.desktop-menu .join-link:hover{
-  color:#111;
-  transform:translateY(-2px);
+.nav-link:hover{
+    background:var(--blue);
+    color:#fff;
 }
 
-.menu-btn{
-  display:none;
-  width:44px;
-  height:44px;
-  border:1px solid rgba(255,255,255,.25);
-  border-radius:11px;
-  background:transparent;
-  color:#fff;
-  cursor:pointer;
-  font-size:1.4rem;
+.nav-link.home-link{
+    background:var(--blue);
+    color:#fff;
 }
 
-.mobile-menu{
-  display:none;
-  background:#03130c;
-  max-height:calc(100vh - 74px);
-  overflow-y:auto;
+.nav-link.media{
+    background:#eaf3ff;
+    color:var(--blue);
 }
 
-.mobile-menu.open{
-  display:block;
+.nav-link.join{
+    background:var(--navy);
+    color:#fff;
 }
 
-.mobile-menu a{
-  display:block;
-  color:#fff;
-  padding:14px 6%;
-  border-top:1px solid rgba(255,255,255,.07);
-  font-weight:800;
+.nav-link.support{
+    background:var(--gold);
+    color:#111;
 }
 
-.mobile-menu a:hover,
-.mobile-menu a.active{
-  color:var(--gold);
+.menu-toggle{
+    display:none;
+    width:100%;
+    border:0;
+    background:var(--navy);
+    color:#fff;
+    padding:15px;
+    font-weight:900;
 }
 
 /* =========================================================
    HERO
-   ========================================================= */
+========================================================= */
 
 .hero{
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 90% 10%,
-      rgba(245,197,66,.16),
-      transparent 30%),
-    linear-gradient(125deg,
-      #03150c 0%,
-      #075331 50%,
-      #041b11 100%);
-  color:#fff;
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    color:#fff;
+    background:
+        radial-gradient(
+            circle at 80% 15%,
+            rgba(247,185,0,.20),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(10,114,207,.25),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #021329,
+            #06275d 52%,
+            #0754a6
+        );
 }
 
-.hero::before{
-  content:"";
-  position:absolute;
-  width:500px;
-  height:500px;
-  border-radius:50%;
-  right:-220px;
-  bottom:-250px;
-  background:rgba(245,197,66,.08);
+.hero::after{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;
+    right:-330px;
+    bottom:-330px;
 }
 
-.hero-content{
-  min-height:670px;
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  align-items:center;
-  gap:50px;
-  padding:70px 0;
-  position:relative;
-  z-index:1;
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    align-items:center;
+    gap:55px;
+    position:relative;
+    z-index:2;
 }
 
-.hero-copy{
-  animation:fadeUp .8s ease both;
-}
-
-.eyebrow{
-  display:inline-flex;
-  background:rgba(245,197,66,.13);
-  border:1px solid rgba(245,197,66,.4);
-  color:var(--gold2);
-  padding:8px 14px;
-  border-radius:50px;
-  font-size:.72rem;
-  font-weight:900;
-  letter-spacing:1.2px;
-  margin-bottom:20px;
+.hero-kicker{
+    display:inline-flex;
+    padding:8px 15px;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.18);
+    color:var(--gold2);
+    font-size:13px;
+    font-weight:900;
+    letter-spacing:1.4px;
 }
 
 .hero h1{
-  font-size:clamp(3.5rem,8vw,7rem);
-  line-height:.86;
-  letter-spacing:-5px;
-  margin-bottom:20px;
+    font-size:clamp(52px,8vw,92px);
+    line-height:.95;
+    letter-spacing:-4px;
+    margin:22px 0 12px;
+    font-weight:950;
 }
 
 .hero h1 span{
-  color:var(--gold);
+    color:var(--gold2);
 }
 
 .hero h2{
-  font-size:clamp(1.2rem,2.7vw,2rem);
-  line-height:1.25;
-  margin-bottom:17px;
-}
-
-.hero h2 strong{
-  color:var(--gold);
+    font-size:clamp(21px,3vw,34px);
+    line-height:1.18;
+    margin-bottom:20px;
 }
 
 .hero-description{
-  max-width:640px;
-  color:rgba(255,255,255,.8);
-  font-size:1rem;
-  margin-bottom:28px;
+    max-width:700px;
+    color:rgba(255,255,255,.84);
+    font-size:18px;
 }
 
-.buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
+.hero-description strong{
+    color:#fff;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:30px;
 }
 
 .btn{
-  min-height:48px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  padding:12px 20px;
-  border-radius:12px;
-  font-weight:900;
-  border:2px solid transparent;
-  transition:.25s ease;
-  cursor:pointer;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    min-height:48px;
+    padding:12px 20px;
+    border-radius:11px;
+    font-weight:900;
+    transition:.25s ease;
+    border:2px solid transparent;
 }
 
-.btn-primary{
-  background:var(--gold);
-  color:#111;
+.btn:hover{
+    transform:translateY(-3px);
 }
 
-.btn-primary:hover{
-  transform:translateY(-3px);
-  box-shadow:0 12px 25px rgba(245,197,66,.2);
+.btn-gold{
+    background:var(--gold);
+    color:#111;
+}
+
+.btn-white{
+    background:#fff;
+    color:var(--navy);
 }
 
 .btn-outline{
-  color:#fff;
-  border-color:rgba(255,255,255,.45);
-  background:rgba(255,255,255,.04);
+    border-color:rgba(255,255,255,.45);
+    color:#fff;
+    background:transparent;
 }
 
-.btn-outline:hover{
-  color:var(--gold);
-  border-color:var(--gold);
+.btn-blue{
+    background:var(--blue);
+    color:#fff;
 }
 
-.hero-photo-area{
-  display:flex;
-  justify-content:center;
-  animation:fadeIn 1s ease both;
+.btn-green{
+    background:var(--green);
+    color:#fff;
 }
 
-.photo-frame{
-  width:min(390px,100%);
-  position:relative;
+.hero-photo-wrap{
+    position:relative;
 }
 
-.photo-frame::before{
-  content:"IMOLE 2027";
-  position:absolute;
-  top:25px;
-  right:-10px;
-  z-index:3;
-  background:var(--gold);
-  color:#111;
-  padding:9px 14px;
-  border-radius:8px;
-  font-size:.75rem;
-  font-weight:1000;
-  transform:rotate(4deg);
-  box-shadow:var(--shadow);
+.hero-photo-card{
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.18);
+    padding:16px;
+    border-radius:28px;
+    box-shadow:0 30px 70px rgba(0,0,0,.28);
+    backdrop-filter:blur(10px);
 }
 
 .candidate-photo{
-  width:100%;
-  height:500px;
-  object-fit:cover;
-  object-position:center top;
-  border:5px solid #fff;
-  border-radius:28px;
-  background:#eee;
-  box-shadow:0 30px 70px rgba(0,0,0,.42);
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    object-position:center top;
+    border-radius:20px;
+    background:
+        linear-gradient(
+            135deg,
+            #0a72cf,
+            #031a3b
+        );
 }
 
 .photo-caption{
-  position:absolute;
-  bottom:17px;
-  left:17px;
-  right:17px;
-  background:rgba(4,27,17,.9);
-  border:1px solid rgba(255,255,255,.15);
-  border-radius:14px;
-  padding:12px;
-  text-align:center;
-  backdrop-filter:blur(8px);
+    padding:16px 6px 4px;
 }
 
 .photo-caption strong{
-  display:block;
-  color:var(--gold);
-  font-size:1rem;
+    display:block;
+    font-size:18px;
 }
 
 .photo-caption span{
-  color:rgba(255,255,255,.78);
-  font-size:.72rem;
+    display:block;
+    color:rgba(255,255,255,.72);
+    font-size:12px;
+    margin-top:3px;
 }
 
 /* =========================================================
    STATS
-   ========================================================= */
+========================================================= */
 
 .stats-wrap{
-  position:relative;
-  z-index:5;
-  margin-top:-40px;
+    position:relative;
+    z-index:10;
+    margin-top:-55px;
 }
 
 .stats{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  background:#fff;
-  border-radius:22px;
-  box-shadow:var(--shadow);
-  overflow:hidden;
-  border:1px solid var(--border);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 55px rgba(3,26,59,.15);
 }
 
 .stat{
-  text-align:center;
-  padding:25px 12px;
-  border-right:1px solid var(--border);
+    text-align:center;
+    padding:25px 15px;
+    border-right:1px solid var(--border);
 }
 
 .stat:last-child{
-  border-right:0;
+    border-right:0;
 }
 
 .stat strong{
-  display:block;
-  color:var(--green);
-  font-size:1.9rem;
-  line-height:1;
-  margin-bottom:7px;
+    display:block;
+    color:var(--blue);
+    font-size:30px;
+    font-weight:950;
 }
 
 .stat span{
-  color:var(--muted);
-  font-size:.73rem;
-  font-weight:900;
-  text-transform:uppercase;
-}
-
-/* =========================================================
-   GENERAL SECTIONS
-   ========================================================= */
-
-section{
-  padding:88px 0;
-}
-
-.section-title{
-  text-align:center;
-  max-width:750px;
-  margin:0 auto 42px;
-}
-
-.section-title .mini{
-  color:var(--green);
-  font-size:.75rem;
-  font-weight:900;
-  letter-spacing:1.4px;
-  text-transform:uppercase;
-  margin-bottom:8px;
-}
-
-.section-title h2{
-  color:var(--dark);
-  font-size:clamp(2rem,4vw,3.1rem);
-  line-height:1.08;
-  margin-bottom:13px;
-}
-
-.section-title p{
-  color:var(--muted);
+    color:var(--muted);
+    font-size:13px;
+    font-weight:700;
 }
 
 /* =========================================================
    ABOUT
-   ========================================================= */
-
-.about{
-  background:var(--cream);
-}
+========================================================= */
 
 .about-grid{
-  display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:55px;
-  align-items:center;
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:55px;
+    align-items:center;
 }
 
-.about-card{
-  min-height:370px;
-  border-radius:28px;
-  padding:42px;
-  background:
-    radial-gradient(circle at 90% 10%,
-      rgba(245,197,66,.18),
-      transparent 30%),
-    linear-gradient(135deg,#087443,#041b11);
-  color:#fff;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  box-shadow:var(--shadow);
+.about-image{
+    position:relative;
 }
 
-.about-card .big{
-  color:var(--gold);
-  font-size:5rem;
-  font-weight:1000;
-  line-height:.9;
-  margin-bottom:15px;
+.about-image img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    object-position:center top;
+    border-radius:26px;
+    box-shadow:var(--shadow);
+    background:var(--navy);
 }
 
-.about-card h3{
-  font-size:1.65rem;
-  margin-bottom:10px;
-}
-
-.about-card p{
-  color:rgba(255,255,255,.75);
+.image-badge{
+    position:absolute;
+    bottom:18px;
+    left:18px;
+    background:var(--gold);
+    color:#111;
+    padding:10px 16px;
+    border-radius:10px;
+    font-weight:950;
 }
 
 .about-copy h2{
-  color:var(--dark);
-  font-size:clamp(2rem,4vw,3rem);
-  line-height:1.08;
-  margin-bottom:18px;
+    color:var(--navy);
+    font-size:38px;
+    line-height:1.15;
+    margin:8px 0 18px;
 }
 
 .about-copy p{
-  color:var(--muted);
-  margin-bottom:15px;
+    color:var(--muted);
+    margin-bottom:15px;
 }
 
-.qualities{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:11px;
-  margin:25px 0;
+.values{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:25px;
 }
 
-.quality{
-  padding:13px;
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:12px;
-  font-weight:800;
+.value{
+    padding:17px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:#f8fbff;
 }
 
-.quality i{
-  font-style:normal;
-  display:inline-grid;
-  place-items:center;
-  width:23px;
-  height:23px;
-  background:var(--green);
-  color:var(--gold);
-  border-radius:50%;
-  margin-right:7px;
-  font-size:.7rem;
+.value strong{
+    display:block;
+    color:var(--navy);
+}
+
+.value span{
+    color:var(--muted);
+    font-size:13px;
 }
 
 /* =========================================================
    MANIFESTO
-   ========================================================= */
+========================================================= */
 
 .manifesto-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
 .card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:28px;
-  transition:.25s ease;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:28px 22px;
+    box-shadow:0 8px 28px rgba(3,26,59,.06);
+    transition:.25s ease;
 }
 
 .card:hover{
-  transform:translateY(-6px);
-  box-shadow:var(--shadow);
+    transform:translateY(-6px);
+    box-shadow:var(--shadow);
 }
 
-.icon{
-  width:53px;
-  height:53px;
-  border-radius:15px;
-  display:grid;
-  place-items:center;
-  background:var(--green);
-  color:var(--gold);
-  font-size:1.5rem;
-  margin-bottom:17px;
+.card-icon{
+    width:58px;
+    height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:16px;
+    background:#eaf3ff;
+    font-size:27px;
+    margin-bottom:17px;
 }
 
 .card h3{
-  color:var(--dark);
-  margin-bottom:9px;
+    color:var(--navy);
+    font-size:20px;
+    margin-bottom:8px;
 }
 
 .card p{
-  color:var(--muted);
-  font-size:.9rem;
+    color:var(--muted);
+    font-size:14px;
 }
 
 /* =========================================================
    WARDS
-   ========================================================= */
+========================================================= */
 
 .wards{
-  background:var(--dark);
-  color:#fff;
-}
-
-.wards .section-title h2{
-  color:#fff;
-}
-
-.wards .section-title p{
-  color:rgba(255,255,255,.68);
+    background:
+        linear-gradient(
+            135deg,
+            #f8fbff,
+            #eef5ff
+        );
 }
 
 .ward-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
 }
 
 .ward{
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:18px;
-  padding:22px;
-  transition:.25s ease;
-}
-
-.ward:hover{
-  transform:translateY(-5px);
-  border-color:rgba(245,197,66,.45);
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:24px;
+    box-shadow:0 8px 25px rgba(3,26,59,.06);
 }
 
 .ward-number{
-  color:var(--gold);
-  font-size:.72rem;
-  font-weight:1000;
-  letter-spacing:1px;
+    color:var(--blue);
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:1px;
 }
 
 .ward h3{
-  margin:5px 0;
+    color:var(--navy);
+    margin:8px 0 4px;
 }
 
 .ward p{
-  color:rgba(255,255,255,.6);
-  font-size:.8rem;
+    color:var(--muted);
+    font-size:13px;
 }
 
 /* =========================================================
-   DIRECTORY / RESULTS
-   ========================================================= */
-
-.directory{
-  background:var(--light);
-}
+   DIRECTORY
+========================================================= */
 
 .directory-box{
-  background:#fff;
-  border-radius:25px;
-  padding:30px;
-  border:1px solid var(--border);
-  box-shadow:0 10px 35px rgba(0,0,0,.05);
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:25px;
+    box-shadow:var(--shadow);
 }
 
 .directory-top{
-  display:grid;
-  grid-template-columns:1fr auto auto;
-  gap:12px;
-  align-items:center;
-  margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
 .search{
-  width:100%;
-  min-height:48px;
-  padding:12px 15px;
-  border:1px solid var(--border);
-  border-radius:12px;
-  outline:none;
-  font:inherit;
+    flex:1 1 300px;
+    min-height:52px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px 15px;
+    outline:none;
 }
 
 .search:focus{
-  border-color:var(--green);
-  box-shadow:0 0 0 3px rgba(8,116,67,.08);
+    border-color:var(--blue);
+    box-shadow:0 0 0 3px rgba(7,84,166,.10);
 }
 
 .counter{
-  padding:11px 15px;
-  background:var(--cream);
-  border-radius:12px;
-  font-weight:900;
-  white-space:nowrap;
+    background:#f4f8ff;
+    border-radius:12px;
+    padding:12px 16px;
+    color:var(--muted);
+    font-size:13px;
 }
 
 .counter strong{
-  color:var(--green);
+    color:var(--blue);
+    font-size:20px;
+    margin-right:4px;
 }
 
 .directory-message{
-  padding:20px;
-  border-radius:15px;
-  background:var(--light);
-  color:var(--muted);
-  text-align:center;
-}
-
-.results-card{
-  text-align:center;
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:22px;
-  padding:40px;
-}
-
-.results-card .big-number{
-  font-size:4rem;
-  line-height:1;
-  font-weight:1000;
-  color:var(--green);
-}
-
-.results-card p{
-  color:var(--muted);
-  margin:15px auto 25px;
-  max-width:650px;
-}
-
-/* =========================================================
-   NEWS / EVENTS
-   ========================================================= */
-
-.news-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.news-card{
-  overflow:hidden;
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:20px;
-  box-shadow:0 7px 25px rgba(0,0,0,.04);
-}
-
-.news-placeholder{
-  height:190px;
-  display:grid;
-  place-items:center;
-  background:
-    linear-gradient(135deg,#087443,#041b11);
-  color:var(--gold);
-  font-size:3rem;
-}
-
-.news-body{
-  padding:22px;
-}
-
-.news-body small{
-  color:var(--green);
-  font-weight:900;
-}
-
-.news-body h3{
-  margin:7px 0;
-}
-
-.news-body p{
-  color:var(--muted);
-  font-size:.87rem;
+    margin-top:20px;
+    padding:25px;
+    border-radius:16px;
+    background:#f8fbff;
+    color:var(--muted);
+    text-align:center;
 }
 
 /* =========================================================
    MEDIA
-   ========================================================= */
-
-.media{
-  background:var(--cream);
-}
+========================================================= */
 
 .media-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
 .media-card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:25px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:20px;
 }
 
 .media-card h3{
-  margin-bottom:7px;
-  color:var(--dark);
+    color:#fff;
+    margin-bottom:7px;
 }
 
 .media-card p{
-  color:var(--muted);
-  margin-bottom:15px;
+    color:rgba(255,255,255,.72);
+    font-size:14px;
+    margin-bottom:15px;
 }
 
-.audio-box{
-  width:100%;
-  margin-top:12px;
+audio{
+    width:100%;
 }
 
 .video-box{
-  width:100%;
-  min-height:220px;
-  background:#06150e;
-  border-radius:15px;
-  display:grid;
-  place-items:center;
-  color:var(--gold);
-  font-size:3rem;
+    background:#000;
+    border-radius:16px;
+    overflow:hidden;
+    margin-bottom:15px;
+}
+
+.video-box video{
+    display:block;
+    width:100%;
+    max-height:420px;
 }
 
 /* =========================================================
-   GALLERY
-   ========================================================= */
+   NEWS
+========================================================= */
 
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.gallery-item{
-  min-height:190px;
-  border-radius:18px;
-  background:
-    linear-gradient(135deg,#087443,#041b11);
-  display:grid;
-  place-items:center;
-  color:var(--gold);
-  font-size:2.5rem;
-  border:1px solid var(--border);
+.news-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(3,26,59,.06);
+}
+
+.news-top{
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--blue)
+        );
+    color:var(--gold2);
+    font-size:45px;
+}
+
+.news-body{
+    padding:22px;
+}
+
+.news-body small{
+    color:var(--blue);
+    font-weight:900;
+}
+
+.news-body h3{
+    color:var(--navy);
+    margin:7px 0;
+}
+
+.news-body p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* =========================================================
+   RESULTS
+========================================================= */
+
+.results-card{
+    max-width:800px;
+    margin:auto;
+    background:#fff;
+    border-radius:24px;
+    padding:45px 30px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.results-number{
+    font-size:75px;
+    line-height:1;
+    font-weight:950;
+    color:var(--blue);
+}
+
+.results-card p{
+    color:var(--muted);
+    max-width:600px;
+    margin:15px auto 25px;
+}
+
+/* =========================================================
+   EVENTS
+========================================================= */
+
+.event-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.event-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:24px;
+}
+
+.event-date{
+    color:var(--blue);
+    font-size:13px;
+    font-weight:950;
+    text-transform:uppercase;
+}
+
+.event-card h3{
+    color:var(--navy);
+    margin:8px 0;
+}
+
+.event-card p{
+    color:var(--muted);
+    font-size:14px;
 }
 
 /* =========================================================
    JOIN / SUPPORT
-   ========================================================= */
+========================================================= */
 
-.cta{
-  background:
-    linear-gradient(135deg,#087443,#041b11);
-  color:#fff;
-  text-align:center;
+.join-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:stretch;
 }
 
-.cta-inner{
-  max-width:850px;
-  margin:auto;
+.join-card{
+    background:#fff;
+    border-radius:22px;
+    padding:32px;
+    box-shadow:var(--shadow);
 }
 
-.cta h2{
-  font-size:clamp(2.2rem,5vw,4rem);
-  line-height:1;
-  margin-bottom:17px;
+.join-card h3{
+    color:var(--navy);
+    font-size:27px;
+    margin-bottom:10px;
 }
 
-.cta h2 span{
-  color:var(--gold);
+.join-card p{
+    color:var(--muted);
+    margin-bottom:20px;
 }
 
-.cta p{
-  color:rgba(255,255,255,.75);
-  margin-bottom:28px;
+.whatsapp{
+    background:#25D366;
+    color:#fff;
 }
 
-.form-card{
-  max-width:700px;
-  margin:auto;
-  background:#fff;
-  color:var(--text);
-  padding:30px;
-  border-radius:22px;
-  box-shadow:var(--shadow);
+.support-card{
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--blue)
+        );
+    color:#fff;
+    border-radius:22px;
+    padding:32px;
+    box-shadow:var(--shadow);
 }
 
-.form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
+.support-card h3{
+    font-size:27px;
+    margin-bottom:10px;
 }
 
-.form-card input,
-.form-card textarea,
-.form-card select{
-  width:100%;
-  padding:13px;
-  border:1px solid var(--border);
-  border-radius:11px;
-  outline:none;
-  font:inherit;
+.support-card p{
+    color:rgba(255,255,255,.8);
+    margin-bottom:20px;
 }
 
-.form-card textarea{
-  min-height:120px;
-  resize:vertical;
+.bank-box{
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:15px;
+    padding:18px;
+    margin:15px 0;
 }
 
-.full{
-  grid-column:1/-1;
+.bank-box div{
+    margin:5px 0;
+}
+
+.bank-box strong{
+    color:var(--gold2);
 }
 
 /* =========================================================
    CONTACT
-   ========================================================= */
-
-.contact{
-  background:var(--light);
-}
+========================================================= */
 
 .contact-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
 .contact-card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:28px;
-  text-align:center;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
 }
 
-.contact-card .contact-icon{
-  font-size:2rem;
-  margin-bottom:10px;
+.contact-icon{
+    font-size:32px;
+    margin-bottom:8px;
 }
 
 .contact-card h3{
-  margin-bottom:5px;
+    color:var(--navy);
 }
 
 .contact-card p{
-  color:var(--muted);
-  font-size:.9rem;
+    color:var(--muted);
+    font-size:14px;
 }
 
 /* =========================================================
    FOOTER
-   ========================================================= */
+========================================================= */
 
-footer{
-  background:#020e08;
-  color:#fff;
-  padding:55px 0 22px;
+.footer{
+    background:#020f23;
+    color:#fff;
+    padding:55px 0 25px;
 }
 
 .footer-grid{
-  display:grid;
-  grid-template-columns:1.3fr .8fr .8fr;
-  gap:45px;
-  padding-bottom:35px;
-  border-bottom:1px solid rgba(255,255,255,.1);
+    display:grid;
+    grid-template-columns:1.3fr .7fr .7fr;
+    gap:40px;
 }
 
-.footer-brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:15px;
+.footer h3{
+    margin-bottom:13px;
 }
 
-.footer-brand img{
-  width:52px;
-  height:52px;
-  object-fit:contain;
-  background:#fff;
-  border-radius:50%;
-  padding:3px;
+.footer p,
+.footer li{
+    color:rgba(255,255,255,.68);
+    font-size:14px;
 }
 
-.footer-brand strong{
-  display:block;
-  color:var(--gold);
+.footer ul{
+    list-style:none;
 }
 
-.footer-brand small{
-  color:#aaa;
-  font-size:.65rem;
+.footer li{
+    margin:7px 0;
 }
 
-.footer-column h3{
-  color:var(--gold);
-  margin-bottom:13px;
-  font-size:1rem;
+.footer a:hover{
+    color:var(--gold2);
 }
 
-.footer-column a{
-  display:block;
-  color:rgba(255,255,255,.63);
-  margin:7px 0;
-  font-size:.86rem;
-}
-
-.footer-column a:hover{
-  color:var(--gold);
-}
-
-.footer-column p{
-  color:rgba(255,255,255,.6);
-  font-size:.88rem;
-}
-
-.copyright{
-  text-align:center;
-  color:rgba(255,255,255,.4);
-  font-size:.75rem;
-  padding-top:20px;
-}
-
-/* =========================================================
-   FLOATING BUTTONS
-   ========================================================= */
-
-.whatsapp{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  width:57px;
-  height:57px;
-  display:grid;
-  place-items:center;
-  border-radius:50%;
-  background:#25D366;
-  color:#fff;
-  z-index:9998;
-  font-size:1.45rem;
-  box-shadow:0 10px 30px rgba(0,0,0,.25);
-}
-
-.top-button{
-  position:fixed;
-  right:20px;
-  bottom:88px;
-  width:42px;
-  height:42px;
-  border:0;
-  border-radius:12px;
-  background:var(--dark);
-  color:var(--gold);
-  cursor:pointer;
-  display:none;
-  z-index:9998;
-}
-
-.top-button.show{
-  display:block;
-}
-
-/* =========================================================
-   HIDDEN SECTIONS
-   ========================================================= */
-
-.page-section{
-  scroll-margin-top:95px;
-}
-
-/* =========================================================
-   ANIMATIONS
-   ========================================================= */
-
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(25px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-@keyframes fadeIn{
-  from{opacity:0}
-  to{opacity:1}
-}
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media(max-width:1050px){
-
-  .desktop-menu{
-    display:none;
-  }
-
-  .menu-btn{
-    display:block;
-  }
-
-  .hero-content{
-    grid-template-columns:1fr;
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.10);
+    margin-top:35px;
+    padding-top:20px;
     text-align:center;
-  }
+    color:rgba(255,255,255,.55);
+    font-size:12px;
+}
 
-  .hero-description{
-    margin-left:auto;
-    margin-right:auto;
-  }
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
 
-  .buttons{
+.floating-whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    align-items:center;
     justify-content:center;
-  }
+    font-size:27px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    z-index:9998;
+}
 
-  .hero-photo-area{
-    order:-1;
-  }
+/* =========================================================
+   BACK TO TOP
+========================================================= */
 
-  .photo-frame{
-    width:min(330px,90%);
-  }
+.back-top{
+    position:fixed;
+    left:18px;
+    bottom:18px;
+    width:45px;
+    height:45px;
+    border:0;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:9998;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
 
-  .candidate-photo{
-    height:420px;
-  }
-
-  .manifesto-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .news-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .gallery-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .contact-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
+.back-top.show{
+    display:flex;
 }
 
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
-@media(max-width:700px){
+@media(max-width:900px){
 
-  .topbar{
-    font-size:.62rem;
-  }
+    .container{
+        width:min(100% - 26px, 700px);
+    }
 
-  .nav{
-    min-height:67px;
-  }
+    .header-inner{
+        padding:14px 0;
+    }
 
-  .logo{
-    width:42px;
-    height:42px;
-  }
+    .brand-logo{
+        width:60px;
+        height:60px;
+    }
 
-  .brand-text strong{
-    font-size:.92rem;
-  }
+    .brand-text strong{
+        font-size:16px;
+    }
 
-  .brand-text small{
-    font-size:.52rem;
-  }
+    .brand-text span{
+        font-size:10px;
+    }
 
-  .hero-content{
-    min-height:auto;
-    padding:55px 0 75px;
-    gap:30px;
-  }
+    .menu-toggle{
+        display:block;
+    }
 
-  .hero h1{
-    font-size:clamp(3.5rem,19vw,5rem);
-    letter-spacing:-4px;
-  }
+    .nav-inner{
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        padding:10px 12px 15px;
+    }
 
-  .hero h2{
-    font-size:1.25rem;
-  }
+    .nav-inner.open{
+        display:flex;
+    }
 
-  .hero-description{
-    font-size:.9rem;
-  }
+    .nav-link{
+        width:100%;
+        text-align:left;
+        padding:13px 14px;
+    }
 
-  .buttons .btn{
-    width:100%;
-  }
+    .hero{
+        min-height:auto;
+        padding:65px 0 95px;
+    }
 
-  .photo-frame{
-    width:280px;
-  }
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
 
-  .candidate-photo{
-    height:350px;
-  }
+    .hero h1{
+        font-size:clamp(50px,17vw,75px);
+    }
 
-  .stats-wrap{
-    margin-top:-28px;
-  }
+    .hero h2{
+        font-size:22px;
+    }
 
-  .stats{
-    grid-template-columns:1fr 1fr;
-  }
+    .hero-description{
+        font-size:16px;
+    }
 
-  .stat{
-    padding:19px 7px;
-  }
+    .hero-photo-wrap{
+        max-width:480px;
+        margin:auto;
+        width:100%;
+    }
 
-  .stat:nth-child(2){
-    border-right:0;
-  }
+    .stats-wrap{
+        margin-top:-45px;
+    }
 
-  .stat:nth-child(-n+2){
-    border-bottom:1px solid var(--border);
-  }
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-  section{
-    padding:65px 0;
-  }
+    .stat{
+        border-right:1px solid var(--border);
+        border-bottom:1px solid var(--border);
+    }
 
-  .about-grid{
-    grid-template-columns:1fr;
-    gap:30px;
-  }
+    .stat:nth-child(2){
+        border-right:0;
+    }
 
-  .about-card{
-    min-height:280px;
-    padding:30px;
-  }
+    .stat:nth-child(3),
+    .stat:nth-child(4){
+        border-bottom:0;
+    }
 
-  .about-card .big{
-    font-size:4rem;
-  }
+    .about-grid,
+    .join-box{
+        grid-template-columns:1fr;
+    }
 
-  .qualities{
-    grid-template-columns:1fr;
-  }
+    .manifesto-grid,
+    .media-grid,
+    .news-grid,
+    .event-grid{
+        grid-template-columns:1fr 1fr;
+    }
 
-  .manifesto-grid,
-  .news-grid,
-  .media-grid{
-    grid-template-columns:1fr;
-  }
+    .ward-grid{
+        grid-template-columns:1fr 1fr;
+    }
 
-  .ward-grid{
-    grid-template-columns:1fr 1fr;
-  }
+    .contact-grid{
+        grid-template-columns:1fr 1fr;
+    }
 
-  .gallery-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .directory-top{
-    grid-template-columns:1fr;
-  }
-
-  .counter{
-    text-align:center;
-  }
-
-  .form-grid{
-    grid-template-columns:1fr;
-  }
-
-  .full{
-    grid-column:auto;
-  }
-
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-    gap:28px;
-  }
-
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
 }
 
-@media(max-width:420px){
+@media(max-width:600px){
 
-  .container{
-    width:91%;
-  }
+    .top-strip-inner{
+        justify-content:center;
+        text-align:center;
+    }
 
-  .ward-grid{
-    grid-template-columns:1fr;
-  }
+    .top-strip-inner span:last-child{
+        display:none;
+    }
 
-  .gallery-grid{
-    grid-template-columns:1fr;
-  }
+    .section{
+        padding:65px 0;
+    }
 
-  .photo-frame{
-    width:250px;
-  }
+    .hero-buttons{
+        flex-direction:column;
+    }
 
-  .candidate-photo{
-    height:315px;
-  }
+    .hero-buttons .btn{
+        width:100%;
+    }
 
-  .form-card{
-    padding:22px 17px;
-  }
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
 
+    .stat{
+        padding:20px 8px;
+    }
+
+    .stat strong{
+        font-size:25px;
+    }
+
+    .about-image img{
+        height:420px;
+    }
+
+    .values{
+        grid-template-columns:1fr;
+    }
+
+    .manifesto-grid,
+    .media-grid,
+    .news-grid,
+    .event-grid,
+    .ward-grid,
+    .contact-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .directory-top{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .counter{
+        text-align:center;
+    }
+
+    .brand-text .brand-badge{
+        display:none;
+    }
+
+    .floating-whatsapp{
+        right:14px;
+        bottom:14px;
+    }
 }
 
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-@media(prefers-reduced-motion:reduce){
-
-  html{
-    scroll-behavior:auto;
-  }
-
-  *{
-    animation:none !important;
-    transition:none !important;
-  }
-
-}
 </style>
 </head>
 
 <body>
 
-<!-- =======================================================
-     TOP BAR
-     ======================================================= -->
+<!-- =========================================================
+     TOP STRIP
+========================================================= -->
 
-<div class="topbar">
-  IMOLE 2027 • SERVICE • DEVELOPMENT • ACCOUNTABILITY • OJO CONSTITUENCY II
+<div class="top-strip">
+    <div class="top-strip-inner">
+        <span>
+            <strong>IMOLE 2027</strong>
+            • Service • Development • Accountability
+        </span>
+
+        <span>
+            Nigeria Democratic Congress (NDC)
+            • Ojo Constituency II
+        </span>
+    </div>
 </div>
 
 
-<!-- =======================================================
-     HEADER / UNIVERSAL NAVIGATION
-     ======================================================= -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-<header>
+<header class="site-header">
 
-  <div class="container nav">
+    <div class="container header-inner">
 
-    <a href="#home"
-       class="brand"
-       onclick="goHome(event)">
+        <a href="./index.html"
+           class="brand"
+           aria-label="IMOLE 2027 Home">
 
-      <img
-        id="navLogo"
-        class="logo"
-        alt="NDC Logo">
+            <img
+                id="headerLogo"
+                class="brand-logo"
+                alt="Nigeria Democratic Congress Logo">
 
-      <div class="brand-text">
-        <strong>IMOLE 2027</strong>
-        <small>NURUDEEN ABAYOMI SADEEQ</small>
-      </div>
+            <div class="brand-text">
 
-    </a>
+                <strong>IMOLE 2027</strong>
 
+                <span>
+                    Hon. Nurudeen Abayomi Sadeeq
+                </span>
 
-    <nav class="desktop-menu">
+                <span class="brand-badge">
+                    NDC • OJO CONSTITUENCY II
+                </span>
 
-      <a href="#home"
-         data-section="home"
-         onclick="goSection(event,'home')">
-        Home
-      </a>
+            </div>
 
-      <a href="#about"
-         data-section="about"
-         onclick="goSection(event,'about')">
-        About
-      </a>
+        </a>
 
-      <a href="#manifesto"
-         data-section="manifesto"
-         onclick="goSection(event,'manifesto')">
-        Manifesto
-      </a>
-
-      <a href="#polling"
-         data-section="polling"
-         onclick="goSection(event,'polling')">
-        Polling Units
-      </a>
-
-      <a href="#results"
-         data-section="results"
-         onclick="goSection(event,'results')">
-        Results
-      </a>
-
-      <a href="#news"
-         data-section="news"
-         onclick="goSection(event,'news')">
-        News
-      </a>
-
-      <a href="#events"
-         data-section="events"
-         onclick="goSection(event,'events')">
-        Events
-      </a>
-
-      <a href="#gallery"
-         data-section="gallery"
-         onclick="goSection(event,'gallery')">
-        Gallery
-      </a>
-
-      <a href="#media"
-         data-section="media"
-         onclick="goSection(event,'media')">
-        Media
-      </a>
-
-      <a href="#contact"
-         data-section="contact"
-         onclick="goSection(event,'contact')">
-        Contact
-      </a>
-
-      <a href="#join"
-         data-section="join"
-         class="join-link"
-         onclick="goSection(event,'join')">
-        Join Us
-      </a>
-
-    </nav>
-
-
-    <button
-      class="menu-btn"
-      id="menuBtn"
-      aria-label="Open menu"
-      aria-expanded="false">
-      ☰
-    </button>
-
-  </div>
-
-
-  <!-- MOBILE MENU -->
-
-  <nav class="mobile-menu" id="mobileMenu">
-
-    <a href="#home"
-       data-section="home"
-       onclick="goSection(event,'home')">
-      🏠 Home
-    </a>
-
-    <a href="#about"
-       data-section="about"
-       onclick="goSection(event,'about')">
-      👤 About
-    </a>
-
-    <a href="#manifesto"
-       data-section="manifesto"
-       onclick="goSection(event,'manifesto')">
-      📜 Manifesto
-    </a>
-
-    <a href="#polling"
-       data-section="polling"
-       onclick="goSection(event,'polling')">
-      📍 Polling Units
-    </a>
-
-    <a href="#results"
-       data-section="results"
-       onclick="goSection(event,'results')">
-      📊 Results
-    </a>
-
-    <a href="#news"
-       data-section="news"
-       onclick="goSection(event,'news')">
-      📰 News
-    </a>
-
-    <a href="#events"
-       data-section="events"
-       onclick="goSection(event,'events')">
-      📅 Events
-    </a>
-
-    <a href="#gallery"
-       data-section="gallery"
-       onclick="goSection(event,'gallery')">
-      📸 Gallery
-    </a>
-
-    <a href="#media"
-       data-section="media"
-       onclick="goSection(event,'media')">
-      🎵 Media
-    </a>
-
-    <a href="#contact"
-       data-section="contact"
-       onclick="goSection(event,'contact')">
-      📞 Contact
-    </a>
-
-    <a href="#join"
-       data-section="join"
-       onclick="goSection(event,'join')">
-      🤝 Join Us
-    </a>
-
-    <a href="#support"
-       data-section="support"
-       onclick="goSection(event,'support')">
-      ❤️ Support
-    </a>
-
-  </nav>
+    </div>
 
 </header>
 
 
-<!-- =======================================================
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav class="main-nav">
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-expanded="false"
+        aria-controls="mainMenu">
+        ☰ MENU
+    </button>
+
+    <div class="nav-inner"
+         id="mainMenu">
+
+        <!-- IMPORTANT:
+             Home deliberately points to ./index.html.
+             It does NOT use #home or goHome().
+        -->
+
+        <a class="nav-link home-link"
+           href="./index.html">
+            🏠 Home
+        </a>
+
+        <a class="nav-link"
+           href="./about.html">
+            👤 About
+        </a>
+
+        <a class="nav-link"
+           href="./manifesto.html">
+            📜 Manifesto
+        </a>
+
+        <a class="nav-link"
+           href="./polling-units.html">
+            📍 Polling Units
+        </a>
+
+        <a class="nav-link"
+           href="./results.html">
+            📊 Results
+        </a>
+
+        <a class="nav-link"
+           href="./news.html">
+            📰 News
+        </a>
+
+        <a class="nav-link"
+           href="./events.html">
+            📅 Events
+        </a>
+
+        <a class="nav-link"
+           href="./gallery.html">
+            🖼️ Gallery
+        </a>
+
+        <a class="nav-link media"
+           href="./media.html">
+            🎵 Media
+        </a>
+
+        <a class="nav-link"
+           href="./contact.html">
+            📞 Contact
+        </a>
+
+        <a class="nav-link join"
+           href="./join.html">
+            🤝 Join Us
+        </a>
+
+        <a class="nav-link support"
+           href="./donations.html">
+            ❤️ Support
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
      HERO
-     ======================================================= -->
+========================================================= -->
 
 <main>
 
-<section id="home"
-         class="hero page-section">
+<section class="hero"
+         id="home">
 
-  <div class="container hero-content">
+    <div class="container hero-grid">
 
-    <div class="hero-copy">
+        <div>
 
-      <div class="eyebrow">
-        ✦ THE IMOLE MOVEMENT ✦
-      </div>
+            <div class="hero-kicker">
+                ✦ THE IMOLE MOVEMENT ✦
+            </div>
 
-      <h1>
-        IMOLE <span>2027</span>
-      </h1>
+            <h1>
+                IMOLE
+                <span>2027</span>
+            </h1>
 
-      <h2>
-        Hon. <strong>Nurudeen Abayomi Sadeeq</strong><br>
-        for Lagos State House of Assembly
-      </h2>
+            <h2>
+                Hon. Nurudeen Abayomi Sadeeq
+                <br>
+                for Lagos State House of Assembly
+            </h2>
 
-      <p class="hero-description">
-        Ojo Constituency II deserves leadership that listens,
-        serves and delivers. Join the movement for
-        <strong>Service, Development and Accountability.</strong>
-      </p>
+            <p class="hero-description">
+                Ojo Constituency II deserves leadership that
+                listens, serves and delivers.
+                Join the movement for
+                <strong>
+                    Service, Development and Accountability.
+                </strong>
+            </p>
 
-      <div class="buttons">
+            <div class="hero-buttons">
 
-        <a href="#manifesto"
-           class="btn btn-primary"
-           onclick="goSection(event,'manifesto')">
-          📜 Read Our Manifesto
-        </a>
+                <a href="./manifesto.html"
+                   class="btn btn-gold">
+                    📜 Read Our Manifesto
+                </a>
 
-        <a href="#join"
-           class="btn btn-outline"
-           onclick="goSection(event,'join')">
-          🤝 Join IMOLE 2027
-        </a>
+                <a href="./join.html"
+                   class="btn btn-white">
+                    🤝 Join IMOLE 2027
+                </a>
 
-      </div>
+                <a href="./media.html"
+                   class="btn btn-outline">
+                    🎵 Campaign Media
+                </a>
 
-    </div>
-
-
-    <div class="hero-photo-area">
-
-      <div class="photo-frame">
-
-        <img
-          id="candidatePhoto"
-          class="candidate-photo"
-          alt="Hon. Nurudeen Abayomi Sadeeq">
-
-        <div class="photo-caption">
-
-          <strong>
-            HON. NURUDEEN ABAYOMI SADEEQ
-          </strong>
-
-          <span>
-            NDC • OJO CONSTITUENCY II
-          </span>
+            </div>
 
         </div>
 
-      </div>
+
+        <div class="hero-photo-wrap">
+
+            <div class="hero-photo-card">
+
+                <img
+                    id="candidatePhoto"
+                    class="candidate-photo"
+                    alt="Hon. Nurudeen Abayomi Sadeeq">
+
+                <div class="photo-caption">
+
+                    <strong>
+                        HON. NURUDEEN ABAYOMI SADEEQ
+                    </strong>
+
+                    <span>
+                        Nigeria Democratic Congress (NDC)
+                        • Ojo Constituency II
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
-
-  </div>
 
 </section>
 
 
-<!-- =======================================================
+<!-- =========================================================
      STATS
-     ======================================================= -->
+========================================================= -->
 
-<div class="container stats-wrap">
+<div class="stats-wrap">
 
-  <div class="stats">
+    <div class="container">
 
-    <div class="stat">
-      <strong>170</strong>
-      <span>Polling Units</span>
+        <div class="stats">
+
+            <div class="stat">
+                <strong>170</strong>
+                <span>Polling Units</span>
+            </div>
+
+            <div class="stat">
+                <strong>6</strong>
+                <span>Wards</span>
+            </div>
+
+            <div class="stat">
+                <strong>2027</strong>
+                <span>Election</span>
+            </div>
+
+            <div class="stat">
+                <strong>1</strong>
+                <span>Shared Vision</span>
+            </div>
+
+        </div>
+
     </div>
-
-    <div class="stat">
-      <strong>6</strong>
-      <span>Wards</span>
-    </div>
-
-    <div class="stat">
-      <strong>2027</strong>
-      <span>Election</span>
-    </div>
-
-    <div class="stat">
-      <strong>1</strong>
-      <span>Shared Vision</span>
-    </div>
-
-  </div>
 
 </div>
 
 
-<!-- =======================================================
+<!-- =========================================================
      ABOUT
-     ======================================================= -->
+========================================================= -->
 
-<section id="about"
-         class="about page-section">
+<section class="section white"
+         id="about">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="about-grid">
+        <div class="about-grid">
 
-      <div class="about-card">
+            <div class="about-image">
 
-        <div class="big">
-          IMOLE
+                <img
+                    id="aboutPhoto"
+                    alt="Hon. Nurudeen Abayomi Sadeeq">
+
+                <div class="image-badge">
+                    IMOLE • A NEW LIGHT
+                </div>
+
+            </div>
+
+
+            <div class="about-copy">
+
+                <div class="eyebrow">
+                    WHO IS NURUDEEN?
+                </div>
+
+                <h2>
+                    Leadership That Lives
+                    Among The People
+                </h2>
+
+                <p>
+                    Hon. Nurudeen Abayomi Sadeeq is a son
+                    of Ojo Constituency II who understands
+                    the people, communities and everyday
+                    challenges of the constituency.
+                </p>
+
+                <p>
+                    The IMOLE 2027 vision is built on a simple
+                    principle: public office must be about
+                    service to the people and measurable
+                    development.
+                </p>
+
+                <div class="values">
+
+                    <div class="value">
+                        <strong>✓ Integrity</strong>
+                        <span>Doing what is right.</span>
+                    </div>
+
+                    <div class="value">
+                        <strong>✓ Accessibility</strong>
+                        <span>Leadership within reach.</span>
+                    </div>
+
+                    <div class="value">
+                        <strong>✓ Humility</strong>
+                        <span>Serving with respect.</span>
+                    </div>
+
+                    <div class="value">
+                        <strong>✓ Accountability</strong>
+                        <span>Answerable to the people.</span>
+                    </div>
+
+                    <div class="value">
+                        <strong>✓ Compassion</strong>
+                        <span>Putting people first.</span>
+                    </div>
+
+                    <div class="value">
+                        <strong>✓ Service</strong>
+                        <span>Results over promises.</span>
+                    </div>
+
+                </div>
+
+                <div style="margin-top:25px">
+
+                    <a href="./about.html"
+                       class="btn btn-blue">
+                        Learn More About Nurudeen →
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
-
-        <h3>
-          A New Light for Ojo Constituency II
-        </h3>
-
-        <p>
-          A people-focused movement built around
-          accessibility, integrity, accountability,
-          compassion and practical development.
-        </p>
-
-      </div>
-
-
-      <div class="about-copy">
-
-        <div class="section-title"
-             style="text-align:left;margin:0 0 20px;">
-
-          <div class="mini">
-            WHO IS NURUDEEN?
-          </div>
-
-          <h2>
-            Leadership That Lives Among The People
-          </h2>
-
-        </div>
-
-        <p>
-          Hon. Nurudeen Abayomi Sadeeq is a son of
-          Ojo Constituency II who understands the people,
-          communities and everyday challenges of the
-          constituency.
-        </p>
-
-        <p>
-          The IMOLE 2027 vision is built on a simple
-          principle: public office must be about service
-          to the people and measurable development.
-        </p>
-
-        <div class="qualities">
-
-          <div class="quality">
-            <i>✓</i> Integrity
-          </div>
-
-          <div class="quality">
-            <i>✓</i> Accessibility
-          </div>
-
-          <div class="quality">
-            <i>✓</i> Humility
-          </div>
-
-          <div class="quality">
-            <i>✓</i> Accountability
-          </div>
-
-          <div class="quality">
-            <i>✓</i> Compassion
-          </div>
-
-          <div class="quality">
-            <i>✓</i> Service
-          </div>
-
-        </div>
-
-      </div>
 
     </div>
-
-  </div>
 
 </section>
 
 
-<!-- =======================================================
+<!-- =========================================================
      MANIFESTO
-     ======================================================= -->
+========================================================= -->
 
-<section id="manifesto"
-         class="page-section">
+<section class="section"
+         id="manifesto">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-title">
+        <div class="section-heading">
 
-      <div class="mini">
-        OUR VISION
-      </div>
+            <div class="eyebrow">
+                OUR VISION
+            </div>
 
-      <h2>
-        Service. Development. Accountability.
-      </h2>
+            <h2>
+                Service. Development. Accountability.
+            </h2>
 
-      <p>
-        A practical agenda focused on the real needs
-        of the people of Ojo Constituency II.
-      </p>
+            <p>
+                A practical agenda focused on the real needs
+                of the people of Ojo Constituency II.
+            </p>
+
+        </div>
+
+
+        <div class="manifesto-grid">
+
+            <article class="card">
+                <div class="card-icon">🛣️</div>
+                <h3>Roads & Drainage</h3>
+                <p>
+                    Champion practical interventions for
+                    roads, drainage and infrastructure that
+                    improve movement, safety and local commerce.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">🏥</div>
+                <h3>Healthcare</h3>
+                <p>
+                    Advocate for stronger health centres,
+                    improved access to healthcare and support
+                    for vulnerable residents.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">🎓</div>
+                <h3>Education</h3>
+                <p>
+                    Support quality education, youth development
+                    and opportunities that help young people
+                    build productive futures.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">🛍️</div>
+                <h3>Traders & Businesses</h3>
+                <p>
+                    Champion initiatives that recognise traders,
+                    artisans, entrepreneurs and small businesses.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">👩</div>
+                <h3>Women Empowerment</h3>
+                <p>
+                    Promote stronger opportunities for women
+                    through inclusion, representation and
+                    community-focused initiatives.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">👨‍💻</div>
+                <h3>Youth Development</h3>
+                <p>
+                    Give young people a stronger voice and
+                    promote skills, entrepreneurship,
+                    participation and opportunity.
+                </p>
+            </article>
+
+        </div>
+
+
+        <div style="text-align:center;margin-top:30px">
+
+            <a href="./manifesto.html"
+               class="btn btn-blue">
+                View Complete Manifesto →
+            </a>
+
+        </div>
 
     </div>
-
-
-    <div class="manifesto-grid">
-
-      <article class="card">
-        <div class="icon">🛣️</div>
-        <h3>Roads & Drainage</h3>
-        <p>
-          Champion practical interventions for roads,
-          drainage and infrastructure that improve
-          movement, safety and local commerce.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">🏥</div>
-        <h3>Healthcare</h3>
-        <p>
-          Advocate for stronger health centres,
-          improved access to healthcare and support
-          for vulnerable residents.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">🎓</div>
-        <h3>Education</h3>
-        <p>
-          Support quality education, youth development
-          and opportunities that help young people
-          build productive futures.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">🛍️</div>
-        <h3>Traders & Businesses</h3>
-        <p>
-          Champion initiatives that recognise traders,
-          artisans, entrepreneurs and small businesses.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">👩</div>
-        <h3>Women Empowerment</h3>
-        <p>
-          Promote stronger opportunities for women
-          through inclusion, representation and
-          community-focused initiatives.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="icon">👨‍💻</div>
-        <h3>Youth Development</h3>
-        <p>
-          Give young people a stronger voice and
-          promote skills, entrepreneurship,
-          participation and opportunity.
-        </p>
-      </article>
-
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =======================================================
+<!-- =========================================================
      WARDS
-     ======================================================= -->
+========================================================= -->
 
-<section id="wards"
-         class="wards page-section">
+<section class="section wards"
+         id="wards">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-title">
+        <div class="section-heading">
 
-      <div class="mini">
-        OJO CONSTITUENCY II
-      </div>
+            <div class="eyebrow">
+                OJO CONSTITUENCY II
+            </div>
 
-      <h2>
-        Six Wards. One Constituency. One Vision.
-      </h2>
+            <h2>
+                Six Wards. One Constituency. One Vision.
+            </h2>
 
-      <p>
-        The IMOLE 2027 movement is committed to
-        reaching communities across Ojo Constituency II.
-      </p>
+            <p>
+                The IMOLE 2027 movement is committed to
+                reaching communities across Ojo Constituency II.
+            </p>
+
+        </div>
+
+
+        <div class="ward-grid">
+
+            <div class="ward">
+                <div class="ward-number">WARD D</div>
+                <h3>Ijanikin</h3>
+                <p>
+                    Community • Mobilisation • Service
+                </p>
+            </div>
+
+            <div class="ward">
+                <div class="ward-number">WARD F</div>
+                <h3>Ilogbo</h3>
+                <p>
+                    Community • Mobilisation • Service
+                </p>
+            </div>
+
+            <div class="ward">
+                <div class="ward-number">WARD I</div>
+                <h3>Etegbin</h3>
+                <p>
+                    Community • Mobilisation • Service
+                </p>
+            </div>
+
+            <div class="ward">
+                <div class="ward-number">WARD J</div>
+                <h3>Idolowu</h3>
+                <p>
+                    Community • Mobilisation • Service
+                </p>
+            </div>
+
+            <div class="ward">
+                <div class="ward-number">WARD G</div>
+                <h3>Irewe</h3>
+                <p>
+                    Community • Mobilisation • Service
+                </p>
+            </div>
+
+            <div class="ward">
+                <div class="ward-number">WARD H</div>
+                <h3>Ojo Constituency II</h3>
+                <p>
+                    Community • Mobilisation • Service
+                </p>
+            </div>
+
+        </div>
 
     </div>
-
-
-    <div class="ward-grid">
-
-      <div class="ward">
-        <div class="ward-number">WARD D</div>
-        <h3>Ijanikin</h3>
-        <p>Community • Mobilisation • Service</p>
-      </div>
-
-      <div class="ward">
-        <div class="ward-number">WARD F</div>
-        <h3>Ilogbo</h3>
-        <p>Community • Mobilisation • Service</p>
-      </div>
-
-      <div class="ward">
-        <div class="ward-number">WARD I</div>
-        <h3>Etegbin</h3>
-        <p>Community • Mobilisation • Service</p>
-      </div>
-
-      <div class="ward">
-        <div class="ward-number">WARD J</div>
-        <h3>Idolowu</h3>
-        <p>Community • Mobilisation • Service</p>
-      </div>
-
-      <div class="ward">
-        <div class="ward-number">WARD G</div>
-        <h3>Irewe</h3>
-        <p>Community • Mobilisation • Service</p>
-      </div>
-
-      <div class="ward">
-        <div class="ward-number">WARD H</div>
-        <h3>Ojo Constituency II</h3>
-        <p>Community • Mobilisation • Service</p>
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =======================================================
-     POLLING UNIT DIRECTORY
-     ======================================================= -->
+<!-- =========================================================
+     POLLING UNITS
+========================================================= -->
 
-<section id="polling"
-         class="directory page-section">
+<section class="section white"
+         id="polling">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-title">
+        <div class="section-heading">
 
-      <div class="mini">
-        POLLING UNIT DIRECTORY
-      </div>
+            <div class="eyebrow">
+                POLLING UNIT DIRECTORY
+            </div>
 
-      <h2>
-        Find Your Polling Unit
-      </h2>
+            <h2>
+                Find Your Polling Unit
+            </h2>
 
-      <p>
-        Search the IMOLE 2027 polling-unit directory
-        by name, ward or location.
-      </p>
+            <p>
+                Access the complete IMOLE 2027
+                polling-unit directory.
+            </p>
 
-    </div>
-
-
-    <div class="directory-box">
-
-      <div class="directory-top">
-
-        <input
-          id="puSearch"
-          class="search"
-          type="search"
-          placeholder="Search polling unit or ward..."
-          aria-label="Search polling units">
-
-        <div class="counter">
-          <strong>170</strong> Total PUs
         </div>
 
-        <div class="counter">
-          <strong>6</strong> Wards
+
+        <div class="directory-box">
+
+            <div class="directory-top">
+
+                <input
+                    id="puSearch"
+                    class="search"
+                    type="search"
+                    placeholder="Search polling unit or ward..."
+                    aria-label="Search polling units">
+
+                <div class="counter">
+                    <strong>170</strong>
+                    Total PUs
+                </div>
+
+                <div class="counter">
+                    <strong>6</strong>
+                    Wards
+                </div>
+
+            </div>
+
+
+            <div class="directory-message">
+
+                <p>
+                    Search the complete polling-unit
+                    directory on the dedicated page.
+                </p>
+
+                <br>
+
+                <a href="./polling-units.html"
+                   class="btn btn-blue">
+                    📍 Open Full Polling Unit Directory →
+                </a>
+
+            </div>
+
         </div>
 
-      </div>
-
-
-      <div id="puMessage"
-           class="directory-message">
-
-        The complete polling-unit directory is available
-        through the dedicated Polling Units page.
-
-        <br><br>
-
-        <a href="./polling-units.html"
-           class="btn btn-primary">
-          Open Full Polling Unit Directory →
-        </a>
-
-      </div>
-
     </div>
-
-  </div>
 
 </section>
 
 
-<!-- =======================================================
+<!-- =========================================================
      RESULTS
-     ======================================================= -->
+========================================================= -->
 
-<section id="results"
-         class="page-section">
+<section class="section"
+         id="results">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-title">
+        <div class="section-heading">
 
-      <div class="mini">
-        ELECTION RESULTS
-      </div>
+            <div class="eyebrow">
+                ELECTION RESULTS
+            </div>
 
-      <h2>
-        IMOLE 2027 Results Centre
-      </h2>
+            <h2>
+                IMOLE 2027 Results Centre
+            </h2>
 
-      <p>
-        Official ward and polling-unit result updates
-        can be published here during the election period.
-      </p>
+            <p>
+                Verified ward and polling-unit result
+                updates will be published through the
+                dedicated Results Centre.
+            </p>
+
+        </div>
+
+
+        <div class="results-card">
+
+            <div class="results-number">
+                2027
+            </div>
+
+            <p>
+                Results can be updated by ward and polling
+                unit as verified information becomes available.
+            </p>
+
+            <a href="./results.html"
+               class="btn btn-blue">
+                📊 Open Results Page →
+            </a>
+
+        </div>
 
     </div>
-
-
-    <div class="results-card">
-
-      <div class="big-number">
-        2027
-      </div>
-
-      <p>
-        Results will be updated by ward and polling unit
-        as verified information becomes available.
-      </p>
-
-      <a href="./results.html"
-         class="btn btn-primary">
-        Open Results Page →
-      </a>
-
-    </div>
-
-  </div>
 
 </section>
 
 
-<!-- =======================================================
-     NEWS
-     ======================================================= -->
-
-<section id="news"
-         class="page-section"
-         style="background:var(--light);">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <div class="mini">
-        CAMPAIGN NEWS
-      </div>
-
-      <h2>
-        Latest From IMOLE 2027
-      </h2>
-
-      <p>
-        Follow campaign activities, community engagements
-        and important announcements.
-      </p>
-
-    </div>
-
-
-    <div class="news-grid">
-
-      <article class="news-card">
-
-        <div class="news-placeholder">
-          📰
-        </div>
-
-        <div class="news-body">
-
-          <small>CAMPAIGN UPDATE</small>
-
-          <h3>
-            Taking the Message to the People
-          </h3>
-
-          <p>
-            IMOLE 2027 continues to engage residents,
-            community leaders, women and young people
-            across Ojo Constituency II.
-          </p>
-
-        </div>
-
-      </article>
-
-
-      <article class="news-card">
-
-        <div class="news-placeholder">
-          🤝
-        </div>
-
-        <div class="news-body">
-
-          <small>COMMUNITY</small>
-
-          <h3>
-            Listening. Connecting. Serving.
-          </h3>
-
-          <p>
-            The movement remains focused on listening
-            to the needs and aspirations of the people.
-          </p>
-
-        </div>
-
-      </article>
-
-
-      <article class="news-card">
-
-        <div class="news-placeholder">
-          💡
-        </div>
-
-        <div class="news-body">
-
-          <small>VISION</small>
-
-          <h3>
-            A New Light for Ojo
-          </h3>
-
-          <p>
-            Service, development and accountability remain
-            at the centre of the IMOLE 2027 vision.
-          </p>
-
-        </div>
-
-      </article>
-
-    </div>
-
-
-    <div style="text-align:center;margin-top:28px;">
-
-      <a href="./news.html"
-         class="btn btn-primary">
-        View All Campaign News →
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =======================================================
-     EVENTS
-     ======================================================= -->
-
-<section id="events"
-         class="page-section">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <div class="mini">
-        CAMPAIGN EVENTS
-      </div>
-
-      <h2>
-        Connect With The Movement
-      </h2>
-
-      <p>
-        Stay informed about meetings, community visits,
-        stakeholder engagements and campaign activities.
-      </p>
-
-    </div>
-
-
-    <div class="news-grid">
-
-      <article class="news-card">
-
-        <div class="news-placeholder">
-          📅
-        </div>
-
-        <div class="news-body">
-
-          <small>IMOLE 2027</small>
-
-          <h3>
-            Community Engagement
-          </h3>
-
-          <p>
-            Follow the campaign's schedule for upcoming
-            community and stakeholder activities.
-          </p>
-
-        </div>
-
-      </article>
-
-
-      <article class="news-card">
-
-        <div class="news-placeholder">
-          👥
-        </div>
-
-        <div class="news-body">
-
-          <small>STAKEHOLDERS</small>
-
-          <h3>
-            Stakeholder Meetings
-          </h3>
-
-          <p>
-            Building relationships and listening to
-            community voices across Ojo Constituency II.
-          </p>
-
-        </div>
-
-      </article>
-
-
-      <article class="news-card">
-
-        <div class="news-placeholder">
-          🎤
-        </div>
-
-        <div class="news-body">
-
-          <small>CAMPAIGN</small>
-
-          <h3>
-            Ward-to-Ward Mobilisation
-          </h3>
-
-          <p>
-            Bringing the IMOLE message closer to
-            communities throughout the constituency.
-          </p>
-
-        </div>
-
-      </article>
-
-    </div>
-
-
-    <div style="text-align:center;margin-top:28px;">
-
-      <a href="./events.html"
-         class="btn btn-primary">
-        View Full Events Page →
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =======================================================
-     GALLERY
-     ======================================================= -->
-
-<section id="gallery"
-         class="page-section"
-         style="background:var(--cream);">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <div class="mini">
-        CAMPAIGN GALLERY
-      </div>
-
-      <h2>
-        IMOLE 2027 In Pictures
-      </h2>
-
-      <p>
-        Campaign moments, community engagements and
-        activities will appear here.
-      </p>
-
-    </div>
-
-
-    <div class="gallery-grid">
-
-      <div class="gallery-item">📸</div>
-      <div class="gallery-item">🤝</div>
-      <div class="gallery-item">👥</div>
-      <div class="gallery-item">🎤</div>
-      <div class="gallery-item">🏘️</div>
-      <div class="gallery-item">💚</div>
-
-    </div>
-
-
-    <div style="text-align:center;margin-top:28px;">
-
-      <a href="./gallery.html"
-         class="btn btn-primary">
-        Open Full Gallery →
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =======================================================
+<!-- =========================================================
      MEDIA
-     ======================================================= -->
+========================================================= -->
 
-<section id="media"
-         class="media page-section">
+<section class="section blue"
+         id="media">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-title">
+        <div class="section-heading">
 
-      <div class="mini">
-        IMOLE MEDIA HUB
-      </div>
+            <div class="eyebrow"
+                 style="color:var(--gold2)">
+                IMOLE MEDIA HUB
+            </div>
 
-      <h2>
-        Music, Videos & Campaign Media
-      </h2>
+            <h2>
+                Music, Video & Campaign Media
+            </h2>
 
-      <p>
-        Keep the movement alive with campaign music,
-        videos, speeches and media updates.
-      </p>
-
-    </div>
-
-
-    <div class="media-grid">
-
-      <div class="media-card">
-
-        <h3>
-          🎵 Campaign Music
-        </h3>
-
-        <p>
-          Your campaign anthem and other IMOLE 2027
-          audio content can be accessed from the Media page.
-        </p>
-
-        <a href="./media.html"
-           class="btn btn-primary">
-          Open Media →
-        </a>
-
-      </div>
-
-
-      <div class="media-card">
-
-        <h3>
-          🎬 Campaign Videos
-        </h3>
-
-        <p>
-          Watch campaign activities, messages,
-          community engagements and events.
-        </p>
-
-        <a href="./media.html"
-           class="btn btn-primary">
-          Watch Videos →
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =======================================================
-     JOIN
-     ======================================================= -->
-
-<section id="join"
-         class="cta page-section">
-
-  <div class="container">
-
-    <div class="cta-inner">
-
-      <div class="eyebrow">
-        IMOLE BABES • WE SHINE • WE WIN
-      </div>
-
-      <h2>
-        Be Part of the <span>IMOLE 2027</span> Movement
-      </h2>
-
-      <p>
-        Whether you are a youth, woman, community leader,
-        volunteer, supporter or concerned resident,
-        there is a place for you in this movement.
-      </p>
-
-      <div class="buttons"
-           style="justify-content:center;">
-
-        <a href="#join-form"
-           class="btn btn-primary">
-          🤝 Join The Movement
-        </a>
-
-        <a href="#support"
-           class="btn btn-outline"
-           onclick="goSection(event,'support')">
-          ❤️ Support IMOLE 2027
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =======================================================
-     JOIN FORM
-     ======================================================= -->
-
-<section id="join-form"
-         class="page-section"
-         style="background:var(--cream);">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <div class="mini">
-        GET INVOLVED
-      </div>
-
-      <h2>
-        Join IMOLE 2027
-      </h2>
-
-      <p>
-        Submit your details to become part of the movement.
-      </p>
-
-    </div>
-
-
-    <div class="form-card">
-
-      <form id="joinForm">
-
-        <div class="form-grid">
-
-          <input
-            type="text"
-            id="joinName"
-            placeholder="Full Name"
-            required>
-
-          <input
-            type="tel"
-            id="joinPhone"
-            placeholder="Phone Number"
-            required>
-
-          <input
-            type="text"
-            id="joinArea"
-            placeholder="Community / Area"
-            required>
-
-          <select id="joinRole" required>
-
-            <option value="">
-              Select Your Interest
-            </option>
-
-            <option>Volunteer</option>
-            <option>Youth Support</option>
-            <option>Women Support</option>
-            <option>Media Team</option>
-            <option>Mobilisation</option>
-            <option>Financial Support</option>
-            <option>General Support</option>
-
-          </select>
-
-          <textarea
-            id="joinMessage"
-            class="full"
-            placeholder="Message (optional)"></textarea>
-
-          <button
-            type="submit"
-            class="btn btn-primary full">
-            Submit Via WhatsApp →
-          </button>
+            <p>
+                Listen to the IMOLE 2027 campaign sounds
+                and watch campaign media.
+            </p>
 
         </div>
 
-      </form>
+
+        <div class="media-grid">
+
+            <article class="media-card">
+
+                <h3>
+                    🎵 Ojo Go Better
+                </h3>
+
+                <p>
+                    Progress Mix
+                </p>
+
+                <audio controls preload="none">
+                    <source
+                        src="./assets/Ojo Go Better (Progress Mix).mp3"
+                        type="audio/mpeg">
+                </audio>
+
+            </article>
+
+
+            <article class="media-card">
+
+                <h3>
+                    🎵 OJO DEY MOVE
+                </h3>
+
+                <p>
+                    IMOLE 2027 campaign music
+                </p>
+
+                <audio controls preload="none">
+                    <source
+                        src="./assets/OJO DEY MOVE.mp3"
+                        type="audio/mpeg">
+                </audio>
+
+            </article>
+
+
+            <article class="media-card">
+
+                <h3>
+                    🎵 Sadeeq Campaign Jingle
+                </h3>
+
+                <p>
+                    Option 1
+                </p>
+
+                <audio controls preload="none">
+                    <source
+                        src="./assets/Sadeeq Campaign Jingle (Option 1).mp3"
+                        type="audio/mpeg">
+                </audio>
+
+            </article>
+
+
+            <article class="media-card">
+
+                <h3>
+                    🎵 Ojo Adara
+                </h3>
+
+                <p>
+                    Fuji Percussion Heavy
+                </p>
+
+                <audio controls preload="none">
+                    <source
+                        src="./assets/Ojo adara (Fuji Percussion Heavy).mp3"
+                        type="audio/mpeg">
+                </audio>
+
+            </article>
+
+
+            <article class="media-card">
+
+                <h3>
+                    🎵 Ojo Gadi Mma
+                </h3>
+
+                <p>
+                    Igbo Version
+                </p>
+
+                <audio controls preload="none">
+                    <source
+                        src="./assets/Ojo Gadi Mma (Igbo Version).mp3"
+                        type="audio/mpeg">
+                </audio>
+
+            </article>
+
+
+            <article class="media-card">
+
+                <h3>
+                    🎵 Nuru Lokan
+                </h3>
+
+                <p>
+                    IMOLE campaign sound
+                </p>
+
+                <audio controls preload="none">
+                    <source
+                        src="./assets/Nuru lokan.mp3"
+                        type="audio/mpeg">
+                </audio>
+
+            </article>
+
+        </div>
+
+
+        <div class="media-card"
+             style="margin-top:25px">
+
+            <h3>
+                🎬 IMOLE Campaign Video
+            </h3>
+
+            <p>
+                Campaign media from the official repository.
+            </p>
+
+            <div class="video-box">
+
+                <video controls
+                       preload="metadata"
+                       playsinline>
+
+                    <source
+                        src="./assets/47ce1089-66a6-441d-850d-11cee3fb6cfc-watermark.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support video playback.
+
+                </video>
+
+            </div>
+
+        </div>
+
+
+        <div style="text-align:center;margin-top:30px">
+
+            <a href="./media.html"
+               class="btn btn-gold">
+                🎵 Open Complete Media Hub →
+            </a>
+
+        </div>
 
     </div>
-
-  </div>
 
 </section>
 
 
-<!-- =======================================================
-     SUPPORT
-     ======================================================= -->
+<!-- =========================================================
+     NEWS
+========================================================= -->
 
-<section id="support"
-         class="cta page-section">
+<section class="section"
+         id="news">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="cta-inner">
+        <div class="section-heading">
 
-      <div class="eyebrow">
-        SUPPORT THE VISION
-      </div>
+            <div class="eyebrow">
+                CAMPAIGN NEWS
+            </div>
 
-      <h2>
-        Together, We Can Make <span>Ojo Better.</span>
-      </h2>
+            <h2>
+                Latest From IMOLE 2027
+            </h2>
 
-      <p>
-        Every contribution of time, ideas, resources and
-        encouragement helps strengthen the IMOLE 2027 movement.
-      </p>
+            <p>
+                Follow campaign activities, community
+                engagements and important announcements.
+            </p>
 
-      <div class="buttons"
-           style="justify-content:center;">
+        </div>
 
-        <a href="#contact"
-           class="btn btn-primary"
-           onclick="goSection(event,'contact')">
-          📞 Contact Campaign Team
-        </a>
 
-      </div>
+        <div class="news-grid">
+
+            <article class="news-card">
+
+                <div class="news-top">
+                    📰
+                </div>
+
+                <div class="news-body">
+
+                    <small>
+                        CAMPAIGN UPDATE
+                    </small>
+
+                    <h3>
+                        Taking the Message to the People
+                    </h3>
+
+                    <p>
+                        IMOLE 2027 continues to engage
+                        residents, community leaders,
+                        women and young people across
+                        Ojo Constituency II.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="news-card">
+
+                <div class="news-top">
+                    🤝
+                </div>
+
+                <div class="news-body">
+
+                    <small>
+                        COMMUNITY
+                    </small>
+
+                    <h3>
+                        Listening. Connecting. Serving.
+                    </h3>
+
+                    <p>
+                        The movement remains focused on
+                        listening to the needs and aspirations
+                        of the people.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="news-card">
+
+                <div class="news-top">
+                    💡
+                </div>
+
+                <div class="news-body">
+
+                    <small>
+                        VISION
+                    </small>
+
+                    <h3>
+                        A New Light for Ojo
+                    </h3>
+
+                    <p>
+                        Service, development and accountability
+                        remain at the centre of the IMOLE 2027 vision.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div style="text-align:center;margin-top:30px">
+
+            <a href="./news.html"
+               class="btn btn-blue">
+                📰 View All Campaign News →
+            </a>
+
+        </div>
 
     </div>
-
-  </div>
 
 </section>
 
 
-<!-- =======================================================
+<!-- =========================================================
+     EVENTS
+========================================================= -->
+
+<section class="section white"
+         id="events">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                CAMPAIGN EVENTS
+            </div>
+
+            <h2>
+                Connect With The Movement
+            </h2>
+
+            <p>
+                Stay informed about meetings, community
+                visits, stakeholder engagements and activities.
+            </p>
+
+        </div>
+
+
+        <div class="event-grid">
+
+            <article class="event-card">
+
+                <div class="event-date">
+                    COMMUNITY ENGAGEMENT
+                </div>
+
+                <h3>
+                    Ward-to-Ward Engagement
+                </h3>
+
+                <p>
+                    IMOLE 2027 continues to engage
+                    communities and stakeholders across
+                    Ojo Constituency II.
+                </p>
+
+            </article>
+
+
+            <article class="event-card">
+
+                <div class="event-date">
+                    STAKEHOLDERS
+                </div>
+
+                <h3>
+                    Stakeholder Meetings
+                </h3>
+
+                <p>
+                    Building partnerships and listening
+                    to community leaders, women and youth.
+                </p>
+
+            </article>
+
+
+            <article class="event-card">
+
+                <div class="event-date">
+                    MOBILISATION
+                </div>
+
+                <h3>
+                    IMOLE 2027 Mobilisation
+                </h3>
+
+                <p>
+                    Bringing the message of service,
+                    development and accountability
+                    directly to the people.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <div style="text-align:center;margin-top:30px">
+
+            <a href="./events.html"
+               class="btn btn-blue">
+                📅 View All Events →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GALLERY
+========================================================= -->
+
+<section class="section"
+         id="gallery">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                CAMPAIGN GALLERY
+            </div>
+
+            <h2>
+                IMOLE 2027 In Pictures
+            </h2>
+
+            <p>
+                Community engagement, campaign activities
+                and moments from the movement.
+            </p>
+
+        </div>
+
+
+        <div class="media-grid">
+
+            <div class="media-card">
+
+                <img
+                    src="./assets/IMG-20260710-WA0004.jpg"
+                    alt="IMOLE campaign activity"
+                    style="
+                        width:100%;
+                        height:230px;
+                        object-fit:cover;
+                        border-radius:14px;
+                    "
+                    loading="lazy">
+
+            </div>
+
+
+            <div class="media-card">
+
+                <img
+                    src="./assets/IMG-20260728-WA0032.jpg"
+                    alt="IMOLE community engagement"
+                    style="
+                        width:100%;
+                        height:230px;
+                        object-fit:cover;
+                        border-radius:14px;
+                    "
+                    loading="lazy">
+
+            </div>
+
+
+            <div class="media-card">
+
+                <div style="
+                    height:230px;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    text-align:center;
+                    color:#fff;
+                    font-size:20px;
+                    font-weight:900;
+                ">
+                    IMOLE 2027<br>
+                    WE SHINE • WE WIN
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div style="text-align:center;margin-top:30px">
+
+            <a href="./gallery.html"
+               class="btn btn-blue">
+                🖼️ Open Complete Gallery →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     JOIN / SUPPORT
+========================================================= -->
+
+<section class="section white"
+         id="join">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                JOIN THE MOVEMENT
+            </div>
+
+            <h2>
+                Be Part of IMOLE 2027
+            </h2>
+
+            <p>
+                The movement belongs to everyone who believes
+                Ojo Constituency II deserves responsive leadership.
+            </p>
+
+        </div>
+
+
+        <div class="join-box">
+
+            <div class="join-card">
+
+                <h3>
+                    🤝 Join IMOLE 2027
+                </h3>
+
+                <p>
+                    Join the campaign team, support mobilisation,
+                    participate in community activities and help
+                    spread the message of Service, Development
+                    and Accountability.
+                </p>
+
+                <a href="./join.html"
+                   class="btn btn-blue">
+                    Join Us →
+                </a>
+
+            </div>
+
+
+            <div class="support-card">
+
+                <h3>
+                    ❤️ Support The Movement
+                </h3>
+
+                <p>
+                    Your support helps the campaign communicate,
+                    organise community activities and reach
+                    more residents.
+                </p>
+
+                <div class="bank-box">
+
+                    <div>
+                        <strong>Account Name:</strong><br>
+                        Nurudeen Abayomi Sadeeq
+                    </div>
+
+                    <div>
+                        <strong>Bank:</strong><br>
+                        Opay
+                    </div>
+
+                </div>
+
+                <a href="./donations.html"
+                   class="btn btn-gold">
+                    ❤️ Support IMOLE 2027 →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
      CONTACT
-     ======================================================= -->
+========================================================= -->
 
-<section id="contact"
-         class="contact page-section">
+<section class="section"
+         id="contact">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="section-title">
+        <div class="section-heading">
 
-      <div class="mini">
-        CONTACT IMOLE 2027
-      </div>
+            <div class="eyebrow">
+                CONTACT IMOLE
+            </div>
 
-      <h2>
-        Let's Stay Connected
-      </h2>
+            <h2>
+                Stay Connected
+            </h2>
 
-      <p>
-        Reach the campaign team for information,
-        volunteering and community engagement.
-      </p>
+            <p>
+                Connect with the campaign team for information,
+                participation and enquiries.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    💬
+                </div>
+
+                <h3>
+                    WhatsApp
+                </h3>
+
+                <p>
+                    Contact the campaign team directly.
+                </p>
+
+                <br>
+
+                <a
+                    id="whatsappContact"
+                    href="#"
+                    class="btn whatsapp">
+                    Open WhatsApp
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    📍
+                </div>
+
+                <h3>
+                    Constituency
+                </h3>
+
+                <p>
+                    Ojo Constituency II,
+                    Lagos State, Nigeria.
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    🏛️
+                </div>
+
+                <h3>
+                    Political Platform
+                </h3>
+
+                <p>
+                    Nigeria Democratic Congress (NDC)
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div style="text-align:center;margin-top:30px">
+
+            <a href="./contact.html"
+               class="btn btn-blue">
+                📞 Open Contact Page →
+            </a>
+
+        </div>
 
     </div>
-
-
-    <div class="contact-grid">
-
-      <div class="contact-card">
-
-        <div class="contact-icon">
-          📱
-        </div>
-
-        <h3>
-          WhatsApp
-        </h3>
-
-        <p>
-          Send a message to the campaign team.
-        </p>
-
-        <br>
-
-        <a
-          href="https://wa.me/"
-          target="_blank"
-          rel="noopener"
-          class="btn btn-primary">
-          Open WhatsApp
-        </a>
-
-      </div>
-
-
-      <div class="contact-card">
-
-        <div class="contact-icon">
-          🤝
-        </div>
-
-        <h3>
-          Join Us
-        </h3>
-
-        <p>
-          Become a volunteer or campaign supporter.
-        </p>
-
-        <br>
-
-        <a
-          href="#join"
-          onclick="goSection(event,'join')"
-          class="btn btn-primary">
-          Join IMOLE
-        </a>
-
-      </div>
-
-
-      <div class="contact-card">
-
-        <div class="contact-icon">
-          📍
-        </div>
-
-        <h3>
-          Constituency
-        </h3>
-
-        <p>
-          Ojo Constituency II<br>
-          Lagos State, Nigeria
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
 
 </section>
 
 </main>
 
 
-<!-- =======================================================
+<!-- =========================================================
      FOOTER
-     ======================================================= -->
+========================================================= -->
 
-<footer>
+<footer class="footer">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="footer-grid">
+        <div class="footer-grid">
 
-      <div class="footer-column">
+            <div>
 
-        <div class="footer-brand">
+                <h3>
+                    IMOLE 2027
+                </h3>
 
-          <img
-            id="footerLogo"
-            alt="NDC Logo">
+                <p>
+                    Official campaign website of
+                    Hon. Nurudeen Abayomi Sadeeq
+                    for Lagos State House of Assembly,
+                    Ojo Constituency II.
+                </p>
 
-          <div>
+                <br>
 
-            <strong>
-              IMOLE 2027
-            </strong>
+                <p>
+                    <strong>
+                        Service • Development • Accountability
+                    </strong>
+                </p>
 
-            <small>
-              NURUDEEN ABAYOMI SADEEQ
-            </small>
+            </div>
 
-          </div>
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="./index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./manifesto.html">
+                            Manifesto
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./polling-units.html">
+                            Polling Units
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./results.html">
+                            Results
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    More
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="./news.html">
+                            News
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./events.html">
+                            Events
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./media.html">
+                            Media
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./join.html">
+                            Join Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./donations.html">
+                            Support
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
 
         </div>
 
-        <p>
-          Official campaign website of Hon. Nurudeen
-          Abayomi Sadeeq for Lagos State House of Assembly,
-          Ojo Constituency II.
-        </p>
 
-        <p style="margin-top:12px;color:#f5c542;font-weight:800;">
-          Service • Development • Accountability
-        </p>
+        <div class="footer-bottom">
 
-      </div>
+            © 2026 Hon. Nurudeen Abayomi Sadeeq Campaign.
+            All Rights Reserved.
 
+            <br>
 
-      <div class="footer-column">
+            Nigeria Democratic Congress (NDC)
+            | Ojo Constituency II
 
-        <h3>
-          Campaign
-        </h3>
+            <br><br>
 
-        <a href="#home"
-           onclick="goHome(event)">
-          Home
-        </a>
+            IMOLE 2027 • VERSION 2026.08.29-FINAL
 
-        <a href="#about"
-           onclick="goSection(event,'about')">
-          About
-        </a>
-
-        <a href="#manifesto"
-           onclick="goSection(event,'manifesto')">
-          Manifesto
-        </a>
-
-        <a href="#news"
-           onclick="goSection(event,'news')">
-          News
-        </a>
-
-        <a href="#events"
-           onclick="goSection(event,'events')">
-          Events
-        </a>
-
-        <a href="#gallery"
-           onclick="goSection(event,'gallery')">
-          Gallery
-        </a>
-
-      </div>
-
-
-      <div class="footer-column">
-
-        <h3>
-          Connect
-        </h3>
-
-        <a href="#polling"
-           onclick="goSection(event,'polling')">
-          Polling Units
-        </a>
-
-        <a href="#results"
-           onclick="goSection(event,'results')">
-          Results
-        </a>
-
-        <a href="#media"
-           onclick="goSection(event,'media')">
-          Media
-        </a>
-
-        <a href="#contact"
-           onclick="goSection(event,'contact')">
-          Contact
-        </a>
-
-        <a href="#join"
-           onclick="goSection(event,'join')">
-          Join Us
-        </a>
-
-        <a href="#support"
-           onclick="goSection(event,'support')">
-          Support
-        </a>
-
-      </div>
+        </div>
 
     </div>
-
-
-    <div class="copyright">
-
-      © <span id="year"></span>
-      Hon. Nurudeen Abayomi Sadeeq Campaign.
-      All Rights Reserved.
-
-      <br>
-
-      Nigeria Democratic Congress (NDC) |
-      Ojo Constituency II
-
-    </div>
-
-  </div>
 
 </footer>
 
 
-<!-- =======================================================
+<!-- =========================================================
      FLOATING BUTTONS
-     ======================================================= -->
+========================================================= -->
 
 <a
-  href="https://wa.me/"
-  target="_blank"
-  rel="noopener"
-  class="whatsapp"
-  aria-label="WhatsApp">
-  ☎
+    id="floatingWhatsApp"
+    class="floating-whatsapp"
+    href="#"
+    aria-label="Contact IMOLE 2027 on WhatsApp">
+    💬
 </a>
 
-
 <button
-  id="topButton"
-  class="top-button"
-  aria-label="Back to top">
-  ↑
+    id="backTop"
+    class="back-top"
+    aria-label="Back to top">
+    ↑
 </button>
 
 
-<!-- =======================================================
+<!-- =========================================================
      JAVASCRIPT
-     ======================================================= -->
+========================================================= -->
 
 <script>
 
-/* =========================================================
-   IMOLE 2027 SINGLE FILE ENGINE
-   ========================================================= */
-
 "use strict";
 
-
-/* ---------------------------------------------------------
-   VERSION
-   --------------------------------------------------------- */
-
-const IMOLE_VERSION = "2026.08.29";
-
-
-/* ---------------------------------------------------------
-   MOBILE MENU
-   --------------------------------------------------------- */
-
-const menuBtn =
-  document.getElementById("menuBtn");
-
-const mobileMenu =
-  document.getElementById("mobileMenu");
+/*
+=========================================================
+IMOLE 2027 FINAL HOMEPAGE ENGINE
+No external JavaScript required.
+No old goHome().
+No old section router.
+=========================================================
+*/
 
 
-if(menuBtn){
+/* -------------------------------------------------------
+   1. CONFIGURATION
+------------------------------------------------------- */
 
-  menuBtn.addEventListener("click",function(){
+const IMOLE_VERSION = "2026.08.29-FINAL";
 
-    const open =
-      mobileMenu.classList.toggle("open");
+const ASSET_BASE = "./assets/";
 
-    document.body.classList.toggle(
-      "menu-open",
-      open
-    );
-
-    menuBtn.setAttribute(
-      "aria-expanded",
-      open ? "true" : "false"
-    );
-
-    menuBtn.innerHTML =
-      open ? "✕" : "☰";
-
-  });
-
-}
+const WHATSAPP_NUMBER = "2340000000000";
 
 
-/* ---------------------------------------------------------
-   CLOSE MENU
-   --------------------------------------------------------- */
+/* -------------------------------------------------------
+   2. SAFE IMAGE LOADER
+------------------------------------------------------- */
 
-function closeMenu(){
+function tryImages(elementId, filenames){
 
-  if(!mobileMenu) return;
+    const element = document.getElementById(elementId);
 
-  mobileMenu.classList.remove("open");
-
-  document.body.classList.remove(
-    "menu-open"
-  );
-
-  if(menuBtn){
-
-    menuBtn.setAttribute(
-      "aria-expanded",
-      "false"
-    );
-
-    menuBtn.innerHTML = "☰";
-
-  }
-
-}
-
-
-/* ---------------------------------------------------------
-   UNIVERSAL SECTION NAVIGATION
-   --------------------------------------------------------- */
-
-function goSection(event,id){
-
-  if(event){
-    event.preventDefault();
-  }
-
-  const target =
-    document.getElementById(id);
-
-  if(!target) return;
-
-  closeMenu();
-
-  history.replaceState(
-    null,
-    "",
-    "#" + id
-  );
-
-  target.scrollIntoView({
-    behavior:"smooth",
-    block:"start"
-  });
-
-  updateActiveMenu(id);
-
-}
-
-
-/* ---------------------------------------------------------
-   UNIVERSAL HOME
-   --------------------------------------------------------- */
-
-function goHome(event){
-
-  if(event){
-    event.preventDefault();
-  }
-
-  closeMenu();
-
-  history.replaceState(
-    null,
-    "",
-    location.pathname
-  );
-
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
-
-  updateActiveMenu("home");
-
-}
-
-
-/* ---------------------------------------------------------
-   ACTIVE MENU
-   --------------------------------------------------------- */
-
-function updateActiveMenu(id){
-
-  document.querySelectorAll(
-    "[data-section]"
-  ).forEach(function(link){
-
-    link.classList.remove("active");
-
-    if(
-      link.getAttribute("data-section")
-      === id
-    ){
-
-      link.classList.add("active");
-
+    if(!element){
+        return;
     }
 
-  });
+    let index = 0;
 
-}
+    function tryNext(){
 
+        if(index >= filenames.length){
 
-/* ---------------------------------------------------------
-   HASH ROUTING
-   --------------------------------------------------------- */
+            element.style.background =
+                "linear-gradient(135deg,#0754a6,#031b3d)";
 
-function loadHash(){
-
-  const hash =
-    location.hash.replace("#","");
-
-  if(!hash){
-
-    updateActiveMenu("home");
-
-    return;
-
-  }
-
-  const target =
-    document.getElementById(hash);
-
-  if(target){
-
-    setTimeout(function(){
-
-      target.scrollIntoView({
-        behavior:"smooth",
-        block:"start"
-      });
-
-    },100);
-
-    updateActiveMenu(hash);
-
-  }
-
-}
-
-
-window.addEventListener(
-  "hashchange",
-  loadHash
-);
-
-
-/* ---------------------------------------------------------
-   ACTIVE SECTION WHILE SCROLLING
-   --------------------------------------------------------- */
-
-const sections =
-  document.querySelectorAll(
-    ".page-section"
-  );
-
-
-const observer =
-  new IntersectionObserver(
-    function(entries){
-
-      entries.forEach(function(entry){
-
-        if(entry.isIntersecting){
-
-          updateActiveMenu(
-            entry.target.id
-          );
-
+            return;
         }
 
-      });
+        const filename = filenames[index++];
 
-    },
-    {
-      rootMargin:"-25% 0px -65% 0px"
-    }
-  );
+        const image = new Image();
 
+        image.onload = function(){
 
-sections.forEach(function(section){
+            element.src = ASSET_BASE + filename;
 
-  observer.observe(section);
+            element.style.display = "block";
+        };
 
-});
+        image.onerror = function(){
 
+            tryNext();
+        };
 
-/* ---------------------------------------------------------
-   BACK TO TOP
-   --------------------------------------------------------- */
-
-const topButton =
-  document.getElementById("topButton");
-
-
-window.addEventListener(
-  "scroll",
-  function(){
-
-    if(window.scrollY > 500){
-
-      topButton.classList.add("show");
-
-    }else{
-
-      topButton.classList.remove("show");
-
+        image.src =
+            ASSET_BASE +
+            filename +
+            "?v=" +
+            encodeURIComponent(IMOLE_VERSION);
     }
 
-  }
-);
-
-
-topButton.addEventListener(
-  "click",
-  function(){
-
-    window.scrollTo({
-      top:0,
-      behavior:"smooth"
-    });
-
-    history.replaceState(
-      null,
-      "",
-      location.pathname
-    );
-
-    updateActiveMenu("home");
-
-  }
-);
-
-
-/* ---------------------------------------------------------
-   IMAGE FALLBACK SYSTEM
-   --------------------------------------------------------- */
-
-function findWorkingImage(
-  element,
-  paths
-){
-
-  let index = 0;
-
-
-  function tryNext(){
-
-    if(index >= paths.length){
-
-      return;
-
-    }
-
-
-    const test =
-      new Image();
-
-
-    test.onload =
-      function(){
-
-        element.src =
-          paths[index];
-
-      };
-
-
-    test.onerror =
-      function(){
-
-        index++;
-
-        tryNext();
-
-      };
-
-
-    test.src =
-      paths[index];
-
-  }
-
-
-  tryNext();
-
+    tryNext();
 }
 
 
-/* ---------------------------------------------------------
-   CANDIDATE PHOTO
-   --------------------------------------------------------- */
+/* -------------------------------------------------------
+   3. LOAD LOGO
+------------------------------------------------------- */
 
-const candidatePhoto =
-  document.getElementById(
-    "candidatePhoto"
-  );
-
-
-if(candidatePhoto){
-
-  findWorkingImage(
-    candidatePhoto,
+tryImages(
+    "headerLogo",
     [
-
-      "assets/nurudeen-abayomi-sadeeq.jpg",
-      "assets/nurudeen-abayomi-sadeeq.jpeg",
-      "assets/nurudeen-abayomi-sadeeq.png",
-
-      "assets/Nurudeen-Abayomi-Sadeeq.jpg",
-      "assets/Nurudeen-Abayomi-Sadeeq.jpeg",
-      "assets/Nurudeen-Abayomi-Sadeeq.png",
-
-      "assets/Nurudeen-Abayomi-Sadeeq.JPG",
-      "assets/Nurudeen-Abayomi-Sadeeq.JPEG",
-      "assets/Nurudeen-Abayomi-Sadeeq.PNG",
-
-      "assets/nurudeen.jpg",
-      "assets/nurudeen.jpeg",
-      "assets/nurudeen.png",
-
-      "assets/candidate.jpg",
-      "assets/candidate.jpeg",
-      "assets/candidate.png",
-
-      "assets/candidate-photo.jpg",
-      "assets/candidate-photo.jpeg",
-      "assets/candidate-photo.png",
-
-      "nurudeen.jpg",
-      "nurudeen.jpeg",
-      "nurudeen.png",
-
-      "candidate.jpg",
-      "candidate.jpeg",
-      "candidate.png"
-
+        "ndc-logo.jpeg",
+        "ndc-logo.jpg",
+        "ndc-logo.png",
+        "NDC-logo.jpeg",
+        "NDC-logo.jpg",
+        "NDC-logo.png",
+        "logo.jpeg",
+        "logo.jpg",
+        "logo.png"
     ]
-  );
-
-}
+);
 
 
-/* ---------------------------------------------------------
-   LOGO
-   --------------------------------------------------------- */
+/* -------------------------------------------------------
+   4. LOAD CANDIDATE PHOTO
+   The loader checks several possible names so that
+   one filename mistake does not break the website.
+------------------------------------------------------- */
 
-const logoPaths = [
+const candidatePhotoNames = [
 
-  "assets/ndc-logo.png",
-  "assets/ndc-logo.jpg",
-  "assets/ndc-logo.jpeg",
+    "Nurudeen Abayomi Sadeeq.jpg",
+    "Nurudeen Abayomi Sadeeq.jpeg",
+    "Nurudeen Abayomi Sadeeq.png",
 
-  "assets/NDC-logo.png",
-  "assets/NDC-logo.jpg",
-  "assets/NDC-logo.jpeg",
+    "Nurudeen-Abayomi-Sadeeq.jpg",
+    "Nurudeen-Abayomi-Sadeeq.jpeg",
+    "Nurudeen-Abayomi-Sadeeq.png",
 
-  "assets/NDC-logo.PNG",
+    "nurudeen-abayomi-sadeeq.jpg",
+    "nurudeen-abayomi-sadeeq.jpeg",
+    "nurudeen-abayomi-sadeeq.png",
 
-  "assets/ndc.png",
-  "assets/ndc.jpg",
-  "assets/ndc.jpeg",
+    "nurudeen.jpg",
+    "nurudeen.jpeg",
+    "nurudeen.png",
 
-  "assets/NDC.png",
-  "assets/NDC.jpg",
-  "assets/NDC.jpeg",
+    "sadeeq.jpg",
+    "sadeeq.jpeg",
+    "sadeeq.png",
 
-  "ndc-logo.png",
-  "ndc-logo.jpg",
-  "ndc-logo.jpeg",
+    "candidate.jpg",
+    "candidate.jpeg",
+    "candidate.png",
 
-  "ndc.png",
-  "ndc.jpg",
-  "ndc.jpeg"
-
+    "IMG-20260710-WA0004.jpg",
+    "IMG-20260728-WA0032.jpg"
 ];
 
 
-const navLogo =
-  document.getElementById(
-    "navLogo"
-  );
+tryImages(
+    "candidatePhoto",
+    candidatePhotoNames
+);
+
+tryImages(
+    "aboutPhoto",
+    candidatePhotoNames
+);
 
 
-const footerLogo =
-  document.getElementById(
-    "footerLogo"
-  );
+/* -------------------------------------------------------
+   5. MOBILE MENU
+------------------------------------------------------- */
 
+const menuToggle =
+    document.getElementById("menuToggle");
 
-function findLogo(){
+const mainMenu =
+    document.getElementById("mainMenu");
 
-  let index = 0;
+if(menuToggle && mainMenu){
 
+    menuToggle.addEventListener(
+        "click",
+        function(){
 
-  function tryNext(){
+            const open =
+                mainMenu.classList.toggle("open");
 
-    if(index >= logoPaths.length){
+            menuToggle.setAttribute(
+                "aria-expanded",
+                open ? "true" : "false"
+            );
 
-      return;
-
-    }
-
-
-    const test =
-      new Image();
-
-
-    test.onload =
-      function(){
-
-        if(navLogo){
-          navLogo.src =
-            logoPaths[index];
+            menuToggle.textContent =
+                open
+                ? "✕ CLOSE MENU"
+                : "☰ MENU";
         }
-
-        if(footerLogo){
-          footerLogo.src =
-            logoPaths[index];
-        }
-
-      };
+    );
 
 
-    test.onerror =
-      function(){
+    document
+        .querySelectorAll("#mainMenu a")
+        .forEach(function(link){
 
-        index++;
+            link.addEventListener(
+                "click",
+                function(){
 
-        tryNext();
+                    mainMenu.classList.remove("open");
 
-      };
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
 
+                    menuToggle.textContent =
+                        "☰ MENU";
+                }
+            );
 
-    test.src =
-      logoPaths[index];
-
-  }
-
-
-  tryNext();
-
+        });
 }
 
 
-findLogo();
+/* -------------------------------------------------------
+   6. WHATSAPP
+------------------------------------------------------- */
 
+function setupWhatsApp(){
 
-/* ---------------------------------------------------------
-   JOIN FORM
-   --------------------------------------------------------- */
+    const message =
+        "Hello IMOLE 2027, I would like to connect with the campaign team.";
 
-const joinForm =
-  document.getElementById(
-    "joinForm"
-  );
-
-
-if(joinForm){
-
-  joinForm.addEventListener(
-    "submit",
-    function(event){
-
-      event.preventDefault();
-
-
-      const name =
-        document.getElementById(
-          "joinName"
-        ).value.trim();
-
-
-      const phone =
-        document.getElementById(
-          "joinPhone"
-        ).value.trim();
-
-
-      const area =
-        document.getElementById(
-          "joinArea"
-        ).value.trim();
-
-
-      const role =
-        document.getElementById(
-          "joinRole"
-        ).value;
-
-
-      const message =
-        document.getElementById(
-          "joinMessage"
-        ).value.trim();
-
-
-      const whatsappMessage =
-        "IMOLE 2027 JOIN REQUEST%0A%0A" +
-        "Name: " +
-        encodeURIComponent(name) +
-        "%0A" +
-        "Phone: " +
-        encodeURIComponent(phone) +
-        "%0A" +
-        "Community: " +
-        encodeURIComponent(area) +
-        "%0A" +
-        "Interest: " +
-        encodeURIComponent(role) +
-        "%0A" +
-        "Message: " +
+    const url =
+        "https://wa.me/2348033002235
+        WHATSAPP_NUMBER +
+        "?text=" +
         encodeURIComponent(message);
 
+    const buttons = [
 
-      /*
-        IMPORTANT:
-        Replace the empty WhatsApp number below
-        with the campaign's WhatsApp number.
-      */
+        document.getElementById("whatsappContact"),
 
-      const campaignWhatsApp = "";
+        document.getElementById("floatingWhatsApp")
 
+    ];
 
-      if(!campaignWhatsApp){
+    buttons.forEach(function(button){
 
-        alert(
-          "Your form is ready. Please add the campaign WhatsApp number in the website code before using this form."
-        );
+        if(button){
 
-        return;
+            button.href = url;
 
-      }
+            button.target = "_blank";
 
+            button.rel = "noopener noreferrer";
 
-      window.open(
-        "https://wa.me/" +
-        campaignWhatsApp +
-        "?text=" +
-        whatsappMessage,
-        "_blank"
-      );
+        }
 
-    }
-  );
-
+    });
 }
 
+setupWhatsApp();
 
-/* ---------------------------------------------------------
-   POLLING UNIT SEARCH
-   --------------------------------------------------------- */
+
+/* -------------------------------------------------------
+   7. POLLING UNIT SEARCH
+------------------------------------------------------- */
 
 const puSearch =
-  document.getElementById(
-    "puSearch"
-  );
-
+    document.getElementById("puSearch");
 
 if(puSearch){
 
-  puSearch.addEventListener(
-    "input",
-    function(){
+    puSearch.addEventListener(
+        "input",
+        function(){
 
-      const query =
-        this.value.trim();
+            const value =
+                puSearch.value
+                    .trim()
+                    .toLowerCase();
 
-      const message =
-        document.getElementById(
-          "puMessage"
-        );
+            if(value.length > 0){
 
+                /*
+                 The complete directory is preserved
+                 on polling-units.html.
+                 This homepage search directs the user
+                 there without pretending that the
+                 homepage contains all 170 records.
+                */
 
-      if(!query){
+                const target =
+                    "./polling-units.html?search=" +
+                    encodeURIComponent(value);
 
-        message.innerHTML = `
-          The complete polling-unit directory is available
-          through the dedicated Polling Units page.
-          <br><br>
-          <a href="./polling-units.html"
-             class="btn btn-primary">
-            Open Full Polling Unit Directory →
-          </a>
-        `;
+                const message =
+                    document.querySelector(
+                        ".directory-message"
+                    );
 
-        return;
+                if(message){
 
-      }
+                    message.innerHTML =
+                        `
+                        <p>
+                            Searching for:
+                            <strong>${escapeHtml(value)}</strong>
+                        </p>
 
+                        <br>
 
-      message.innerHTML = `
-        <strong>
-          Search request: "${escapeHTML(query)}"
-        </strong>
-        <br><br>
-        For the complete 170-entry directory and ward filters,
-        open the dedicated Polling Units page.
-        <br><br>
-        <a href="./polling-units.html"
-           class="btn btn-primary">
-          Open Polling Unit Directory →
-        </a>
-      `;
-
-    }
-  );
-
-}
-
-
-/* ---------------------------------------------------------
-   ESCAPE HTML
-   --------------------------------------------------------- */
-
-function escapeHTML(value){
-
-  return value
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
-
-}
-
-
-/* ---------------------------------------------------------
-   CURRENT YEAR
-   --------------------------------------------------------- */
-
-document.getElementById(
-  "year"
-).textContent =
-  new Date().getFullYear();
-
-
-/* ---------------------------------------------------------
-   WEBSITE VERSION
-   --------------------------------------------------------- */
-
-document.documentElement.setAttribute(
-  "data-imole-version",
-  IMOLE_VERSION
-);
-
-
-/* ---------------------------------------------------------
-   SERVICE WORKER:
-   We deliberately DO NOT register an old service worker
-   here. This prevents an outdated cached homepage from
-   taking control of the new website.
-   --------------------------------------------------------- */
-
-
-/* ---------------------------------------------------------
-   REMOVE OLD SERVICE WORKERS
-   --------------------------------------------------------- */
-
-if("serviceWorker" in navigator){
-
-  window.addEventListener(
-    "load",
-    function(){
-
-      navigator.serviceWorker
-        .getRegistrations()
-        .then(function(registrations){
-
-          registrations.forEach(
-            function(registration){
-
-              /*
-                Unregistering existing workers helps prevent
-                an old IMOLE website version from being served.
-              */
-
-              registration.unregister();
+                        <a
+                            href="${target}"
+                            class="btn btn-blue">
+                            📍 Search Full Polling Unit Directory →
+                        </a>
+                        `;
+                }
 
             }
-          );
 
-        })
-        .catch(function(){
+        }
+    );
+}
 
-          console.log(
-            "Service worker cleanup unavailable."
-          );
 
-        });
+/* -------------------------------------------------------
+   8. ESCAPE HTML
+------------------------------------------------------- */
 
-    }
-  );
+function escapeHtml(value){
+
+    return value
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+}
+
+
+/* -------------------------------------------------------
+   9. BACK TO TOP
+------------------------------------------------------- */
+
+const backTop =
+    document.getElementById("backTop");
+
+if(backTop){
+
+    window.addEventListener(
+        "scroll",
+        function(){
+
+            if(window.scrollY > 500){
+
+                backTop.classList.add("show");
+
+            }else{
+
+                backTop.classList.remove("show");
+
+            }
+
+        }
+    );
+
+
+    backTop.addEventListener(
+        "click",
+        function(){
+
+            window.scrollTo({
+                top:0,
+                behavior:"smooth"
+            });
+
+        }
+    );
 
 }
 
 
-/* ---------------------------------------------------------
-   CACHE CLEANUP
-   --------------------------------------------------------- */
+/* -------------------------------------------------------
+   10. PREVENT OLD HASH ROUTING
+------------------------------------------------------- */
 
-if("caches" in window){
+/*
+   If an old link/bookmark opens:
 
-  window.addEventListener(
-    "load",
-    function(){
+       index.html#home
 
-      caches.keys()
-        .then(function(names){
+   we simply show the current homepage.
 
-          names.forEach(function(name){
+   We DO NOT rewrite the page to an old pathname.
+*/
 
-            caches.delete(name);
+if(
+    window.location.pathname.endsWith(
+        "/index.html"
+    )
+){
 
-          });
-
-        })
-        .catch(function(){
-
-          console.log(
-            "Cache cleanup unavailable."
-          );
-
-        });
-
-    }
-  );
+    /*
+       Nothing is redirected.
+       This is intentional.
+    */
 
 }
 
 
-/* ---------------------------------------------------------
-   INITIALIZE
-   --------------------------------------------------------- */
+/* -------------------------------------------------------
+   11. SERVICE WORKER
+------------------------------------------------------- */
 
-loadHash();
+if(
+    "serviceWorker" in navigator
+){
 
-updateActiveMenu(
-  location.hash
-    ? location.hash.replace("#","")
-    : "home"
+    window.addEventListener(
+        "load",
+        function(){
+
+            /*
+               Only register if a service-worker file
+               actually exists.
+
+               This prevents console errors when the
+               file has not yet been uploaded.
+            */
+
+            fetch(
+                "./sw.js",
+                {
+                    method:"HEAD",
+                    cache:"no-store"
+                }
+            )
+            .then(function(response){
+
+                if(response.ok){
+
+                    navigator.serviceWorker
+                        .register(
+                            "./sw.js?v=" +
+                            encodeURIComponent(
+                                IMOLE_VERSION
+                            )
+                        )
+                        .catch(
+                            function(){}
+                        );
+
+                }
+
+            })
+            .catch(
+                function(){}
+            );
+
+        }
+    );
+
+}
+
+
+/* -------------------------------------------------------
+   12. CACHE-BUSTING META
+------------------------------------------------------- */
+
+const versionMeta =
+    document.createElement("meta");
+
+versionMeta.name =
+    "imoile-version";
+
+versionMeta.content =
+    IMOLE_VERSION;
+
+document.head.appendChild(
+    versionMeta
 );
 
 
+/* -------------------------------------------------------
+   13. FINAL HOME PROTECTION
+------------------------------------------------------- */
+
+/*
+   This is the important part.
+
+   Any Home link in THIS page points directly to:
+
+       ./index.html
+
+   There is no:
+
+       goHome()
+       location.pathname
+       old homepage redirect
+       #home-only routing
+
+   Therefore the Home button always targets
+   the root index.html currently deployed.
+*/
+
+
+/* -------------------------------------------------------
+   14. PAGE READY
+------------------------------------------------------- */
+
+document.documentElement
+    .setAttribute(
+        "data-imole-version",
+        IMOLE_VERSION
+    );
+
 console.log(
-  "IMOLE 2027 Website Version " +
-  IMOLE_VERSION +
-  " loaded successfully."
+    "IMOLE 2027 homepage loaded:",
+    IMOLE_VERSION
 );
 
 </script>
