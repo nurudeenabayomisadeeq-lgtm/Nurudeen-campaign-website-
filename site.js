@@ -1,58 +1,99 @@
 /* =========================================================
    IMOLE 2027 — UNIVERSAL WEBSITE SYSTEM
-   Version: 2026.08.29
-   GitHub Pages compatible
+   GitHub Pages Edition
+   Version: 2026.08.31
    ========================================================= */
 
 (function () {
   "use strict";
 
-  const SITE_VERSION = "2026.08.29";
+  /* =======================================================
+     SITE CONFIGURATION
+     ======================================================= */
+
+  const SITE_VERSION = "2026.08.31";
 
   /*
-   IMPORTANT:
-   This is the ONLY homepage destination used by the
-   universal navigation system.
+     IMPORTANT:
+     This is the permanent GitHub Pages homepage.
   */
-  const HOME = "./index.html";
+  const SITE_ROOT =
+    "/Nurudeen-campaign-website-/";
+
+  const HOME =
+    SITE_ROOT;
 
   const PAGES = {
     home: HOME,
-    about: "./about.html",
-    manifesto: "./manifesto.html",
-    polling: "./polling-units.html",
-    results: "./results.html",
-    news: "./news.html",
-    events: "./events.html",
-    gallery: "./gallery.html",
-    media: "./media.html",
-    contact: "./contact.html",
-    join: "./join.html",
-    support: "./support.html"
+    about: SITE_ROOT + "about.html",
+    manifesto: SITE_ROOT + "manifesto.html",
+    polling: SITE_ROOT + "polling-units.html",
+    results: SITE_ROOT + "results.html",
+    news: SITE_ROOT + "news.html",
+    events: SITE_ROOT + "events.html",
+    gallery: SITE_ROOT + "gallery.html",
+    media: SITE_ROOT + "media.html",
+    contact: SITE_ROOT + "contact.html",
+    join: SITE_ROOT + "join.html",
+    support: SITE_ROOT + "support.html"
   };
 
-  /* ======================================================
+  /*
+     Your confirmed GitHub asset filenames.
+  */
+  const CANDIDATE_IMAGE =
+    SITE_ROOT + "assets/IMG-20260710-WA0004.jpg";
+
+  const NDC_LOGO =
+    SITE_ROOT + "assets/IMG-20260728-WA0032.jpg";
+
+  /*
+     Campaign WhatsApp number.
+  */
+  const WHATSAPP_NUMBER =
+    "2348033002235";
+
+  const WHATSAPP_URL =
+    "https://wa.me/" +
+    WHATSAPP_NUMBER +
+    "?text=" +
+    encodeURIComponent(
+      "Hello IMOLE 2027 Campaign Team. I would like to know more about the movement."
+    );
+
+
+  /* =======================================================
      UNIVERSAL NAVIGATION
-     ====================================================== */
+     ======================================================= */
 
   const navigationHTML = `
     <div class="imo-topbar">
-      IMOLE 2027 • SERVICE • DEVELOPMENT • ACCOUNTABILITY
+      <span>IMOLE 2027</span>
+      <span>•</span>
+      <span>SERVICE</span>
+      <span>•</span>
+      <span>DEVELOPMENT</span>
+      <span>•</span>
+      <span>ACCOUNTABILITY</span>
     </div>
 
     <header class="imo-header">
 
       <div class="imo-nav-container">
 
-        <a href="${PAGES.home}"
-           class="imo-brand"
-           data-home-link
-           aria-label="IMOLE 2027 Home">
+        <a
+          href="${HOME}"
+          class="imo-brand"
+          data-home-link
+          aria-label="IMOLE 2027 Home">
 
           <img
             class="imo-logo"
             data-logo
-            alt="NDC Logo"
+            src="${NDC_LOGO}"
+            alt="Nigeria Democratic Congress Logo"
+            loading="eager"
+            decoding="async"
           >
 
           <span class="imo-brand-text">
@@ -63,9 +104,11 @@
         </a>
 
 
-        <nav class="imo-desktop-menu">
+        <nav
+          class="imo-desktop-menu"
+          aria-label="Main navigation">
 
-          <a href="${PAGES.home}" data-home-link>Home</a>
+          <a href="${HOME}" data-home-link>Home</a>
           <a href="${PAGES.about}">About</a>
           <a href="${PAGES.manifesto}">Manifesto</a>
           <a href="${PAGES.polling}">Polling Units</a>
@@ -75,7 +118,12 @@
           <a href="${PAGES.gallery}">Gallery</a>
           <a href="${PAGES.media}">Media</a>
           <a href="${PAGES.contact}">Contact</a>
-          <a href="${PAGES.join}" class="imo-nav-join">Join Us</a>
+
+          <a
+            href="${PAGES.join}"
+            class="imo-nav-join">
+            Join IMOLE
+          </a>
 
         </nav>
 
@@ -83,8 +131,10 @@
         <button
           class="imo-menu-button"
           id="imoMenuButton"
+          type="button"
           aria-label="Open menu"
-          aria-expanded="false">
+          aria-expanded="false"
+          aria-controls="imoMobileMenu">
           ☰
         </button>
 
@@ -93,20 +143,56 @@
 
       <nav
         class="imo-mobile-menu"
-        id="imoMobileMenu">
+        id="imoMobileMenu"
+        aria-label="Mobile navigation">
 
-        <a href="${PAGES.home}" data-home-link>🏠 Home</a>
-        <a href="${PAGES.about}">👤 About</a>
-        <a href="${PAGES.manifesto}">📜 Manifesto</a>
-        <a href="${PAGES.polling}">📍 Polling Units</a>
-        <a href="${PAGES.results}">📊 Results</a>
-        <a href="${PAGES.news}">📰 News</a>
-        <a href="${PAGES.events}">📅 Events</a>
-        <a href="${PAGES.gallery}">📸 Gallery</a>
-        <a href="${PAGES.media}">🎵 Media</a>
-        <a href="${PAGES.contact}">📞 Contact</a>
-        <a href="${PAGES.join}">🤝 Join Us</a>
-        <a href="${PAGES.support}">❤️ Support</a>
+        <a href="${HOME}" data-home-link>
+          🏠 Home
+        </a>
+
+        <a href="${PAGES.about}">
+          👤 About
+        </a>
+
+        <a href="${PAGES.manifesto}">
+          📜 Manifesto
+        </a>
+
+        <a href="${PAGES.polling}">
+          📍 Polling Units
+        </a>
+
+        <a href="${PAGES.results}">
+          📊 Results
+        </a>
+
+        <a href="${PAGES.news}">
+          📰 News
+        </a>
+
+        <a href="${PAGES.events}">
+          📅 Events
+        </a>
+
+        <a href="${PAGES.gallery}">
+          📸 Gallery
+        </a>
+
+        <a href="${PAGES.media}">
+          🎵 Media
+        </a>
+
+        <a href="${PAGES.contact}">
+          📞 Contact
+        </a>
+
+        <a href="${PAGES.join}">
+          🤝 Join IMOLE
+        </a>
+
+        <a href="${PAGES.support}">
+          ❤️ Support / Donations
+        </a>
 
       </nav>
 
@@ -114,9 +200,9 @@
   `;
 
 
-  /* ======================================================
+  /* =======================================================
      UNIVERSAL FOOTER
-     ====================================================== */
+     ======================================================= */
 
   const footerHTML = `
     <footer class="imo-footer">
@@ -129,8 +215,10 @@
 
             <img
               data-logo
-              alt="NDC Logo"
+              src="${NDC_LOGO}"
+              alt="Nigeria Democratic Congress Logo"
               class="imo-footer-logo"
+              loading="lazy"
             >
 
             <div>
@@ -159,7 +247,7 @@
 
           <h3>Campaign</h3>
 
-          <a href="${PAGES.home}" data-home-link>Home</a>
+          <a href="${HOME}" data-home-link>Home</a>
           <a href="${PAGES.about}">About</a>
           <a href="${PAGES.manifesto}">Manifesto</a>
           <a href="${PAGES.news}">News</a>
@@ -177,8 +265,8 @@
           <a href="${PAGES.results}">Results</a>
           <a href="${PAGES.media}">Media</a>
           <a href="${PAGES.contact}">Contact</a>
-          <a href="${PAGES.join}">Join Us</a>
-          <a href="${PAGES.support}">Support</a>
+          <a href="${PAGES.join}">Join IMOLE</a>
+          <a href="${PAGES.support}">Support / Donations</a>
 
         </div>
 
@@ -202,33 +290,40 @@
   `;
 
 
-  /* ======================================================
-     INSERT NAVIGATION
-     ====================================================== */
+  /* =======================================================
+     INSTALL NAVIGATION
+     ======================================================= */
 
   function installNavigation() {
 
-    /*
-      If a page already contains an old header/navigation,
-      we hide it instead of allowing two menus to appear.
-    */
+    if (!document.body) return;
 
+    /*
+       Hide old navigation systems.
+    */
     document.querySelectorAll(
       "body > header:not(.imo-header), " +
       "body > nav:not(.imo-mobile-menu), " +
-      ".old-navigation, .old-header, .site-header"
+      ".old-navigation, " +
+      ".old-header, " +
+      ".site-header"
     ).forEach(function (element) {
 
-      element.classList.add("imo-legacy-hidden");
+      element.classList.add(
+        "imo-legacy-hidden"
+      );
 
     });
 
 
     /*
-      Prevent duplicate universal headers.
+       Install only one universal header.
     */
-
-    if (!document.querySelector(".imo-header")) {
+    if (
+      !document.querySelector(
+        ".imo-header"
+      )
+    ) {
 
       document.body.insertAdjacentHTML(
         "afterbegin",
@@ -240,15 +335,15 @@
   }
 
 
-  /* ======================================================
-     INSERT FOOTER
-     ====================================================== */
+  /* =======================================================
+     INSTALL FOOTER
+     ======================================================= */
 
   function installFooter() {
 
     if (
-      !document.querySelector(".imo-footer") &&
-      document.body
+      document.body &&
+      !document.querySelector(".imo-footer")
     ) {
 
       document.body.insertAdjacentHTML(
@@ -261,105 +356,141 @@
   }
 
 
-  /* ======================================================
+  /* =======================================================
      MOBILE MENU
-     ====================================================== */
+     ======================================================= */
 
   function setupMobileMenu() {
 
     const button =
-      document.getElementById("imoMenuButton");
+      document.getElementById(
+        "imoMenuButton"
+      );
 
     const menu =
-      document.getElementById("imoMobileMenu");
+      document.getElementById(
+        "imoMobileMenu"
+      );
 
     if (!button || !menu) return;
 
-    button.addEventListener("click", function () {
 
-      const open =
-        menu.classList.toggle("imo-open");
+    button.addEventListener(
+      "click",
+      function () {
 
-      button.setAttribute(
-        "aria-expanded",
-        open ? "true" : "false"
-      );
-
-      button.innerHTML =
-        open ? "✕" : "☰";
-
-    });
-
-
-    menu.querySelectorAll("a").forEach(function (link) {
-
-      link.addEventListener("click", function () {
-
-        menu.classList.remove("imo-open");
+        const open =
+          menu.classList.toggle(
+            "imo-open"
+          );
 
         button.setAttribute(
           "aria-expanded",
-          "false"
+          open ? "true" : "false"
         );
 
-        button.innerHTML = "☰";
+        button.setAttribute(
+          "aria-label",
+          open
+            ? "Close menu"
+            : "Open menu"
+        );
+
+        button.innerHTML =
+          open ? "✕" : "☰";
+
+      }
+    );
+
+
+    menu.querySelectorAll("a")
+      .forEach(function (link) {
+
+        link.addEventListener(
+          "click",
+          function () {
+
+            menu.classList.remove(
+              "imo-open"
+            );
+
+            button.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            button.setAttribute(
+              "aria-label",
+              "Open menu"
+            );
+
+            button.innerHTML = "☰";
+
+          }
+        );
 
       });
-
-    });
 
   }
 
 
-  /* ======================================================
-     FORCE HOME LINKS
-     ====================================================== */
+  /* =======================================================
+     REPAIR ALL HOME LINKS
+     ======================================================= */
 
   function repairHomeLinks() {
 
+    /*
+       Known old/broken Home patterns.
+    */
+    const selectors = [
+      'a[data-home-link]',
+      'a[href="#home"]',
+      'a[href="home.html"]',
+      'a[href="Home.html"]',
+      'a[href="/"]',
+      'a[href="../"]',
+      'a[href="./"]'
+    ];
+
+
     document.querySelectorAll(
-      'a[data-home-link], ' +
-      'a[href="#home"], ' +
-      'a[href="home.html"], ' +
-      'a[href="Home.html"], ' +
-      'a[href="/"], ' +
-      'a[href="../"]'
+      selectors.join(",")
     ).forEach(function (link) {
 
-      link.setAttribute("href", HOME);
+      link.setAttribute(
+        "href",
+        HOME
+      );
 
     });
 
 
     /*
-      Catch old campaign-site URLs that may have survived
-      in older navigation code.
+       Repair buttons and links whose visible
+       text clearly says Home.
     */
+    document.querySelectorAll(
+      "a, button"
+    ).forEach(function (element) {
 
-    document.querySelectorAll("a").forEach(function (link) {
-
-      const href =
-        link.getAttribute("href");
-
-      if (!href) return;
-
-      const lower = href.toLowerCase();
+      const text =
+        element.textContent
+          .trim()
+          .toLowerCase();
 
       if (
-        lower.includes("nurudeen-campaign-website") &&
-        !lower.endsWith("index.html")
+        text === "home" ||
+        text === "🏠 home" ||
+        text === "home 🏠"
       ) {
 
-        /*
-          Only repair links labelled Home.
-        */
+        if (
+          element.tagName
+            .toLowerCase() === "a"
+        ) {
 
-        const text =
-          link.textContent.trim().toLowerCase();
-
-        if (text === "home" || text.includes("home")) {
-
-          link.setAttribute(
+          element.setAttribute(
             "href",
             HOME
           );
@@ -373,91 +504,36 @@
   }
 
 
-  /* ======================================================
-     LOGO FALLBACK
-     ====================================================== */
+  /* =======================================================
+     LOGO SYSTEM
+     ======================================================= */
 
   function setupLogos() {
 
-    const logoPaths = [
+    document.querySelectorAll(
+      "[data-logo]"
+    ).forEach(function (image) {
 
-      "assets/ndc-logo.png",
-      "assets/ndc-logo.jpg",
-      "assets/ndc-logo.jpeg",
+      image.src = NDC_LOGO;
 
-      "assets/NDC-logo.png",
-      "assets/NDC-logo.jpg",
-      "assets/NDC-logo.jpeg",
+      image.onerror = function () {
 
-      "assets/ndc.png",
-      "assets/ndc.jpg",
-      "assets/ndc.jpeg",
-
-      "assets/NDC.png",
-      "assets/NDC.jpg",
-      "assets/NDC.jpeg",
-
-      "ndc-logo.png",
-      "ndc-logo.jpg",
-      "ndc-logo.jpeg",
-
-      "ndc.png",
-      "ndc.jpg",
-      "ndc.jpeg"
-
-    ];
-
-
-    const images =
-      document.querySelectorAll("[data-logo]");
-
-    if (!images.length) return;
-
-
-    let current = 0;
-
-
-    function findLogo() {
-
-      if (current >= logoPaths.length) return;
-
-      const test =
-        new Image();
-
-      test.onload = function () {
-
-        images.forEach(function (img) {
-
-          img.src = logoPaths[current];
-
-        });
+        /*
+           Hide broken image icon rather than
+           displaying a broken image.
+        */
+        image.style.display = "none";
 
       };
 
-
-      test.onerror = function () {
-
-        current++;
-
-        findLogo();
-
-      };
-
-
-      test.src =
-        logoPaths[current];
-
-    }
-
-
-    findLogo();
+    });
 
   }
 
 
-  /* ======================================================
-     CANDIDATE IMAGE FALLBACK
-     ====================================================== */
+  /* =======================================================
+     CANDIDATE IMAGE SYSTEM
+     ======================================================= */
 
   function setupCandidateImages() {
 
@@ -469,108 +545,272 @@
     if (!images.length) return;
 
 
-    const paths = [
+    images.forEach(function (image) {
 
-      "assets/nurudeen-abayomi-sadeeq.jpg",
-      "assets/nurudeen-abayomi-sadeeq.jpeg",
-      "assets/nurudeen-abayomi-sadeeq.png",
+      image.src =
+        CANDIDATE_IMAGE;
 
-      "assets/Nurudeen-Abayomi-Sadeeq.jpg",
-      "assets/Nurudeen-Abayomi-Sadeeq.jpeg",
-      "assets/Nurudeen-Abayomi-Sadeeq.png",
-
-      "assets/nurudeen.jpg",
-      "assets/nurudeen.jpeg",
-      "assets/nurudeen.png",
-
-      "assets/candidate.jpg",
-      "assets/candidate.jpeg",
-      "assets/candidate.png",
-
-      "assets/candidate-photo.jpg",
-      "assets/candidate-photo.jpeg",
-      "assets/candidate-photo.png",
-
-      "nurudeen.jpg",
-      "nurudeen.jpeg",
-      "nurudeen.png"
-
-    ];
+      image.alt =
+        image.alt ||
+        "Hon. Nurudeen Abayomi Sadeeq";
 
 
-    let index = 0;
+      image.loading =
+        image.loading ||
+        "eager";
 
 
-    function findCandidateImage() {
-
-      if (index >= paths.length) return;
-
-
-      const test =
-        new Image();
+      image.decoding =
+        "async";
 
 
-      test.onload = function () {
+      image.onerror =
+        function () {
 
-        images.forEach(function (image) {
+          /*
+             Keep the layout clean if the image
+             cannot be loaded.
+          */
+          image.classList.add(
+            "imo-image-error"
+          );
 
-          image.src = paths[index];
-
-        });
-
-      };
-
-
-      test.onerror = function () {
-
-        index++;
-
-        findCandidateImage();
-
-      };
-
-
-      test.src = paths[index];
-
-    }
-
-
-    findCandidateImage();
-
-  }
-
-
-  /* ======================================================
-     CURRENT YEAR
-     ====================================================== */
-
-  function setupYear() {
-
-    const year =
-      new Date().getFullYear();
-
-    document.querySelectorAll(
-      "[data-current-year]"
-    ).forEach(function (element) {
-
-      element.textContent = year;
+        };
 
     });
 
   }
 
 
-  /* ======================================================
+  /* =======================================================
+     COUNTDOWN SYSTEM
+     ======================================================= */
+
+  function setupCountdown() {
+
+    /*
+       Election date:
+       6 February 2027
+    */
+    const electionDate =
+      new Date(
+        "2027-02-06T00:00:00+01:00"
+      ).getTime();
+
+
+    const selectors = [
+      "[data-countdown]",
+      "#countdown",
+      ".countdown"
+    ];
+
+
+    let elements = [];
+
+
+    selectors.forEach(function (selector) {
+
+      document.querySelectorAll(
+        selector
+      ).forEach(function (element) {
+
+        if (
+          !elements.includes(element)
+        ) {
+
+          elements.push(element);
+
+        }
+
+      });
+
+    });
+
+
+    /*
+       Also support individual counters.
+    */
+    const days =
+      document.querySelector(
+        "[data-days]"
+      );
+
+    const hours =
+      document.querySelector(
+        "[data-hours]"
+      );
+
+    const minutes =
+      document.querySelector(
+        "[data-minutes]"
+      );
+
+    const seconds =
+      document.querySelector(
+        "[data-seconds]"
+      );
+
+
+    function updateCountdown() {
+
+      const now =
+        new Date().getTime();
+
+      const distance =
+        electionDate - now;
+
+
+      if (distance <= 0) {
+
+        elements.forEach(
+          function (element) {
+
+            element.innerHTML =
+              "ELECTION DAY";
+
+          }
+        );
+
+        if (days) days.textContent = "0";
+        if (hours) hours.textContent = "0";
+        if (minutes) minutes.textContent = "0";
+        if (seconds) seconds.textContent = "0";
+
+        return;
+
+      }
+
+
+      const d =
+        Math.floor(
+          distance /
+          (1000 * 60 * 60 * 24)
+        );
+
+      const h =
+        Math.floor(
+          (distance %
+            (1000 * 60 * 60 * 24)) /
+          (1000 * 60 * 60)
+        );
+
+      const m =
+        Math.floor(
+          (distance %
+            (1000 * 60 * 60)) /
+          (1000 * 60)
+        );
+
+      const s =
+        Math.floor(
+          (distance %
+            (1000 * 60)) /
+          1000
+        );
+
+
+      const formatted =
+        `
+          <span>${d}</span>
+          <small>Days</small>
+
+          <span>${String(h).padStart(2, "0")}</span>
+          <small>Hours</small>
+
+          <span>${String(m).padStart(2, "0")}</span>
+          <small>Minutes</small>
+
+          <span>${String(s).padStart(2, "0")}</span>
+          <small>Seconds</small>
+        `;
+
+
+      elements.forEach(
+        function (element) {
+
+          element.innerHTML =
+            formatted;
+
+        }
+      );
+
+
+      if (days) days.textContent = d;
+      if (hours) hours.textContent =
+        String(h).padStart(2, "0");
+
+      if (minutes) minutes.textContent =
+        String(m).padStart(2, "0");
+
+      if (seconds) seconds.textContent =
+        String(s).padStart(2, "0");
+
+    }
+
+
+    if (
+      elements.length ||
+      days ||
+      hours ||
+      minutes ||
+      seconds
+    ) {
+
+      updateCountdown();
+
+      setInterval(
+        updateCountdown,
+        1000
+      );
+
+    }
+
+  }
+
+
+  /* =======================================================
+     CURRENT YEAR
+     ======================================================= */
+
+  function setupYear() {
+
+    const year =
+      new Date().getFullYear();
+
+
+    document.querySelectorAll(
+      "[data-current-year]"
+    ).forEach(function (element) {
+
+      element.textContent =
+        year;
+
+    });
+
+  }
+
+
+  /* =======================================================
      ACTIVE PAGE
-     ====================================================== */
+     ======================================================= */
 
   function setActivePage() {
 
-    const current =
+    let current =
       location.pathname
         .split("/")
         .pop()
         .toLowerCase();
+
+
+    if (
+      current === ""
+    ) {
+
+      current =
+        "index.html";
+
+    }
 
 
     document.querySelectorAll(
@@ -588,14 +828,16 @@
         href
           .split("/")
           .pop()
+          .split("?")[0]
+          .split("#")[0]
           .toLowerCase();
 
 
       if (
         target === current ||
         (
-          current === "" &&
-          target === "index.html"
+          current === "index.html" &&
+          target === ""
         )
       ) {
 
@@ -610,33 +852,55 @@
   }
 
 
-  /* ======================================================
+  /* =======================================================
      SCROLL TOP BUTTON
-     ====================================================== */
+     ======================================================= */
 
   function setupScrollButton() {
 
+    if (
+      document.querySelector(
+        ".imo-scroll-top"
+      )
+    ) return;
+
+
     const button =
-      document.createElement("button");
+      document.createElement(
+        "button"
+      );
+
 
     button.className =
       "imo-scroll-top";
 
-    button.innerHTML = "↑";
+
+    button.innerHTML =
+      "↑";
+
 
     button.setAttribute(
       "aria-label",
       "Back to top"
     );
 
-    document.body.appendChild(button);
+
+    button.type =
+      "button";
+
+
+    document.body.appendChild(
+      button
+    );
 
 
     window.addEventListener(
       "scroll",
       function () {
 
-        if (window.scrollY > 500) {
+        if (
+          window.scrollY > 500
+        ) {
 
           button.classList.add(
             "imo-show"
@@ -650,6 +914,9 @@
 
         }
 
+      },
+      {
+        passive: true
       }
     );
 
@@ -669,9 +936,9 @@
   }
 
 
-  /* ======================================================
+  /* =======================================================
      WHATSAPP BUTTON
-     ====================================================== */
+     ======================================================= */
 
   function setupWhatsAppButton() {
 
@@ -683,30 +950,36 @@
 
 
     const button =
-      document.createElement("a");
+      document.createElement(
+        "a"
+      );
+
 
     button.className =
       "imo-whatsapp";
 
-    /*
-      Add your official campaign WhatsApp number
-      later in one place.
-    */
 
     button.href =
-      "https://wa.me/";
+      WHATSAPP_URL;
 
-    button.target = "_blank";
+
+    button.target =
+      "_blank";
+
 
     button.rel =
       "noopener noreferrer";
 
+
     button.setAttribute(
       "aria-label",
-      "WhatsApp"
+      "Chat with IMOLE 2027 on WhatsApp"
     );
 
-    button.innerHTML = "☎";
+
+    button.innerHTML =
+      "💬";
+
 
     document.body.appendChild(
       button
@@ -715,9 +988,33 @@
   }
 
 
-  /* ======================================================
-     CACHE VERSION
-     ====================================================== */
+  /* =======================================================
+     EXTERNAL LINK SAFETY
+     ======================================================= */
+
+  function secureExternalLinks() {
+
+    document.querySelectorAll(
+      'a[target="_blank"]'
+    ).forEach(function (link) {
+
+      if (
+        !link.rel.includes("noopener")
+      ) {
+
+        link.rel =
+          "noopener noreferrer";
+
+      }
+
+    });
+
+  }
+
+
+  /* =======================================================
+     VERSION
+     ======================================================= */
 
   function exposeVersion() {
 
@@ -727,17 +1024,18 @@
         SITE_VERSION
       );
 
+
     console.log(
-      "IMOLE 2027 Website Version:",
+      "IMOLE 2027 Website:",
       SITE_VERSION
     );
 
   }
 
 
-  /* ======================================================
-     INITIALIZE EVERYTHING
-     ====================================================== */
+  /* =======================================================
+     INITIALIZE
+     ======================================================= */
 
   function initialize() {
 
@@ -753,6 +1051,8 @@
 
     setupCandidateImages();
 
+    setupCountdown();
+
     setupYear();
 
     setActivePage();
@@ -761,13 +1061,20 @@
 
     setupWhatsAppButton();
 
+    secureExternalLinks();
+
     exposeVersion();
 
   }
 
 
+  /* =======================================================
+     START
+     ======================================================= */
+
   if (
-    document.readyState === "loading"
+    document.readyState ===
+    "loading"
   ) {
 
     document.addEventListener(
