@@ -1,1091 +1,2062 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>
-        Contact | Hon. Nurudeen Abayomi Sadeeq | IMOLE 2027
-    </title>
-
-    <meta
-        name="description"
-        content="Contact the campaign team of Hon. Nurudeen Abayomi Sadeeq, Lagos State House of Assembly candidate for Ojo Constituency II under the Nigeria Democratic Congress (NDC)."
-    >
-
-    <meta
-        name="theme-color"
-        content="#06449b"
-    >
-
-    <link
-        rel="stylesheet"
-        href="assets/css/style.css"
-    >
-
-    <link
-        rel="manifest"
-        href="manifest.json"
-    >
-
-    <style>
-
-        /* =================================
-           CONTACT PAGE
-        ================================= */
-
-        .contact-page {
-            max-width: 1150px;
-            margin: auto;
-            padding: 40px 15px 70px;
-        }
-
-
-        /* =================================
-           PAGE HEADER
-        ================================= */
-
-        .contact-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .contact-header h1 {
-            font-size: 38px;
-            color: #06449b;
-            margin-bottom: 12px;
-        }
-
-        .contact-header p {
-            max-width: 780px;
-            margin: auto;
-            line-height: 1.8;
-        }
-
-
-        /* =================================
-           CONTACT HERO
-        ================================= */
-
-        .contact-hero {
-            background: linear-gradient(
-                135deg,
-                #06449b,
-                #002d70
-            );
-            color: white;
-            text-align: center;
-            padding: 45px 20px;
-            border-radius: 20px;
-            margin-bottom: 40px;
-            box-shadow:
-                0 6px 25px rgba(0,0,0,0.15);
-        }
-
-        .contact-hero h2 {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
-
-        .contact-hero p {
-            max-width: 750px;
-            margin: auto;
-            line-height: 1.8;
-        }
-
-
-        /* =================================
-           CONTACT CARDS
-        ================================= */
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(230px, 1fr));
-            gap: 20px;
-            margin-bottom: 45px;
-        }
-
-        .contact-card {
-            background: white;
-            padding: 28px 20px;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow:
-                0 5px 18px rgba(0,0,0,0.10);
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .contact-icon {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        .contact-card h3 {
-            color: #06449b;
-            margin-bottom: 12px;
-        }
-
-        .contact-card p {
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
-
-        .contact-card a {
-            display: inline-block;
-            margin-top: 5px;
-            padding: 11px 16px;
-            background: #06449b;
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .contact-card a:hover {
-            opacity: 0.9;
-        }
-
-
-        /* =================================
-           WHATSAPP BUTTON
-        ================================= */
-
-        .whatsapp-link {
-            background: #25D366 !important;
-        }
-
-
-        /* =================================
-           MAP SECTION
-        ================================= */
-
-        .map-section {
-            background: white;
-            padding: 30px 20px;
-            border-radius: 18px;
-            box-shadow:
-                0 5px 20px rgba(0,0,0,0.10);
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .map-section h2 {
-            color: #06449b;
-            margin-bottom: 10px;
-        }
-
-        .map-section p {
-            max-width: 750px;
-            margin: 0 auto 20px;
-            line-height: 1.7;
-        }
-
-        .map-container {
-            width: 100%;
-            overflow: hidden;
-            border-radius: 14px;
-            margin-top: 20px;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 350px;
-            border: 0;
-        }
-
-        .map-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 13px 22px;
-            background: #06449b;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-
-        /* =================================
-           ENQUIRY SECTION
-        ================================= */
-
-        .enquiry-section {
-            background: white;
-            padding: 35px 25px;
-            border-radius: 18px;
-            box-shadow:
-                0 5px 20px rgba(0,0,0,0.10);
-            margin-bottom: 40px;
-        }
-
-        .enquiry-section h2 {
-            text-align: center;
-            color: #06449b;
-            margin-bottom: 10px;
-        }
-
-        .enquiry-intro {
-            text-align: center;
-            max-width: 720px;
-            margin: 0 auto 30px;
-            line-height: 1.7;
-        }
-
-        .contact-form {
-            max-width: 850px;
-            margin: auto;
-        }
-
-        .form-group {
-            margin-bottom: 18px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 7px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 13px 14px;
-            border: 1px solid #d5d5d5;
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 15px;
-            background: white;
-        }
-
-        .form-group textarea {
-            min-height: 140px;
-            resize: vertical;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #06449b;
-            box-shadow:
-                0 0 0 2px rgba(6,68,155,0.10);
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 18px;
-        }
-
-        .submit-button {
-            width: 100%;
-            border: none;
-            background: #06449b;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 9px;
-            font-size: 17px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .submit-button:hover {
-            opacity: 0.9;
-        }
-
-
-        /* =================================
-           SOCIAL MEDIA
-        ================================= */
-
-        .social-section {
-            background: #f5f6f8;
-            padding: 30px 20px;
-            border-radius: 18px;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .social-section h2 {
-            color: #06449b;
-            margin-bottom: 10px;
-        }
-
-        .social-section p {
-            max-width: 700px;
-            margin: 0 auto 20px;
-            line-height: 1.7;
-        }
-
-        .social-buttons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .social-buttons a {
-            display: inline-block;
-            padding: 12px 20px;
-            border-radius: 8px;
-            background: #06449b;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-
-        /* =================================
-           FINAL CTA
-        ================================= */
-
-        .contact-cta {
-            text-align: center;
-            background: white;
-            padding: 35px 20px;
-            border-radius: 18px;
-            box-shadow:
-                0 5px 20px rgba(0,0,0,0.10);
-        }
-
-        .contact-cta h2 {
-            color: #06449b;
-            margin-bottom: 10px;
-        }
-
-        .contact-cta p {
-            max-width: 700px;
-            margin: 0 auto 20px;
-            line-height: 1.7;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 14px 23px;
-            background: #06449b;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            margin: 5px;
-        }
-
-        .cta-whatsapp {
-            background: #25D366;
-        }
-
-
-        /* =================================
-           MOBILE NAVIGATION
-        ================================= */
-
-        .menu-toggle {
-            display: none;
-            background: #06449b;
-            color: white;
-            border: none;
-            padding: 12px 16px;
-            font-size: 26px;
-            cursor: pointer;
-            width: 100%;
-        }
-
-
-        /* =================================
-           MOBILE
-        ================================= */
-
-        @media (max-width: 600px) {
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .main-nav {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .main-nav.show {
-                display: flex;
-            }
-
-            .main-nav a {
-                display: block;
-                width: 100%;
-                text-align: center;
-                padding: 14px;
-                border-bottom: 1px solid #ddd;
-            }
-
-            .contact-page {
-                padding:
-                    30px 12px 50px;
-            }
-
-            .contact-header h1 {
-                font-size: 29px;
-            }
-
-            .contact-hero {
-                padding: 35px 18px;
-            }
-
-            .contact-hero h2 {
-                font-size: 27px;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .enquiry-section {
-                padding: 25px 17px;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-
-            .map-container iframe {
-                height: 280px;
-            }
-
-            .social-buttons {
-                flex-direction: column;
-            }
-
-            .social-buttons a {
-                width: 100%;
-            }
-
-        }
-
-    </style>
-
-</head>
-
-
-<body>
-
-
-<!-- =================================
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>Contact IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq</title><meta name="description"
+content="Contact IMOLE 2027 and Hon. Nurudeen Abayomi Sadeeq, candidate for Lagos State House of Assembly, Ojo Constituency II.">
+
+<meta name="keywords"
+content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Contact, Ojo Constituency II, NDC, Lagos Assembly">
+
+<meta name="theme-color" content="#075c32"><meta property="og:title"
+content="Contact IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq">
+
+<meta property="og:description"
+content="Connect with the IMOLE 2027 campaign movement in Ojo Constituency II.">
+
+<meta property="og:type" content="website"><link rel="manifest" href="./manifest.json"><style>
+
+:root{
+    --green:#075c32;
+    --dark:#043d21;
+    --gold:#d7a63a;
+    --gold-light:#f7e6b2;
+    --white:#ffffff;
+    --black:#111111;
+    --text:#26332c;
+    --muted:#68766e;
+    --bg:#f5f8f6;
+    --border:#dce7e0;
+    --light:#edf8f2;
+    --cream:#fff8e7;
+    --shadow:0 12px 35px rgba(0,0,0,.09);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font:inherit;
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.topbar{
+    background:var(--dark);
+    color:#fff;
+    text-align:center;
+    padding:8px 15px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.4px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.98);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+    box-shadow:0 3px 18px rgba(0,0,0,.06);
+}
+
+.nav-container{
+    width:min(1200px,94%);
+    min-height:74px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-link{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-width:245px;
+}
+
+.logo{
+    width:50px;
+    height:50px;
+    object-fit:contain;
+    border-radius:50%;
+    border:2px solid var(--gold);
+    background:#fff;
+}
+
+.brand{
+    display:flex;
+    flex-direction:column;
+}
+
+.brand strong{
+    color:var(--green);
+    font-size:18px;
+    line-height:1.1;
+}
+
+.brand small{
+    color:var(--muted);
+    font-size:9px;
+    font-weight:700;
+    margin-top:4px;
+}
+
+.desktop-nav{
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+    gap:2px;
+}
+
+.desktop-nav a{
+    padding:9px 9px;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.desktop-nav a:hover{
+    background:var(--light);
+    color:var(--green);
+}
+
+.join-link{
+    background:var(--green);
+    color:#fff!important;
+}
+
+.donation-link{
+    background:#fff7df;
+    color:#705000!important;
+    border:1px solid #ead08b;
+}
+
+.contact-link{
+    background:var(--light);
+    color:var(--green)!important;
+}
+
+.menu-btn{
+    display:none;
+    margin-left:auto;
+    width:44px;
+    height:44px;
+    border:0;
+    border-radius:9px;
+    background:var(--green);
+    color:#fff;
+    font-size:24px;
+    cursor:pointer;
+}
+
+.mobile-nav{
+    display:none;
+    background:#fff;
+    border-top:1px solid var(--border);
+    padding:8px 4%;
+}
+
+.mobile-nav.open{
+    display:flex;
+    flex-direction:column;
+}
+
+.mobile-nav a{
+    padding:13px 10px;
+    border-bottom:1px solid var(--border);
+    font-weight:700;
+}
+
+.mobile-nav a:last-child{
+    border-bottom:0;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.contact-hero{
+    background:
+    radial-gradient(
+        circle at 80% 20%,
+        rgba(215,166,58,.18),
+        transparent 32%
+    ),
+    linear-gradient(135deg,var(--dark),var(--green));
+    color:#fff;
+}
+
+.hero-inner{
+    width:min(1150px,94%);
+    margin:auto;
+    padding:70px 0;
+    text-align:center;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:8px 16px;
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    font-size:12px;
+    font-weight:800;
+    margin-bottom:18px;
+}
+
+.hero-inner h1{
+    font-size:clamp(35px,6vw,62px);
+    line-height:1.05;
+    margin-bottom:15px;
+}
+
+.hero-inner h1 span{
+    color:var(--gold-light);
+}
+
+.hero-inner p{
+    max-width:760px;
+    margin:auto;
+    color:rgba(255,255,255,.86);
+    font-size:16px;
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+.section{
+    width:min(1150px,94%);
+    margin:auto;
+    padding:70px 0;
+}
+
+.heading{
+    max-width:760px;
+    margin:0 auto 35px;
+    text-align:center;
+}
+
+.eyebrow{
+    color:var(--green);
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.heading h2{
+    color:var(--dark);
+    font-size:clamp(28px,4vw,40px);
+    margin:7px 0 10px;
+}
+
+.heading p{
+    color:var(--muted);
+}
+
+
+/* =====================================================
+   CONTACT GRID
+===================================================== */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.contact-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:28px;
+    box-shadow:var(--shadow);
+    transition:.25s ease;
+}
+
+.contact-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 16px 38px rgba(0,0,0,.12);
+}
+
+.contact-icon{
+    width:58px;
+    height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:var(--light);
+    font-size:27px;
+    margin-bottom:15px;
+}
+
+.contact-card h2{
+    color:var(--dark);
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.contact-card p{
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.contact-action{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:44px;
+    padding:10px 17px;
+    border-radius:9px;
+    font-size:13px;
+    font-weight:800;
+    background:var(--green);
+    color:#fff;
+    transition:.2s ease;
+}
+
+.contact-action:hover{
+    transform:translateY(-2px);
+}
+
+.contact-action.gold{
+    background:var(--gold);
+    color:#172016;
+}
+
+.contact-action.light{
+    background:var(--light);
+    color:var(--green);
+}
+
+
+/* =====================================================
+   WHATSAPP FEATURE
+===================================================== */
+
+.whatsapp-feature{
+    margin-top:30px;
+    background:
+        linear-gradient(
+            135deg,
+            #f1fff6,
+            #ffffff
+        );
+    border:1px solid #cce5d5;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+}
+
+.whatsapp-feature h2{
+    color:var(--dark);
+    margin-bottom:7px;
+}
+
+.whatsapp-feature p{
+    color:var(--muted);
+    max-width:680px;
+    margin:0 auto 18px;
+}
+
+.whatsapp-number{
+    font-size:22px;
+    font-weight:900;
+    color:var(--green);
+    margin-bottom:17px;
+}
+
+
+/* =====================================================
+   CONTACT INFORMATION
+===================================================== */
+
+.info-section{
+    background:#fff;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:stretch;
+}
+
+.info-box{
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:28px;
+    background:var(--bg);
+}
+
+.info-box h2{
+    color:var(--dark);
+    margin-bottom:18px;
+    font-size:25px;
+}
+
+.info-row{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+    padding:14px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.info-row:last-child{
+    border-bottom:0;
+}
+
+.info-row-icon{
+    width:40px;
+    height:40px;
+    flex:0 0 40px;
+    border-radius:10px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+}
+
+.info-row strong{
+    display:block;
+    color:var(--dark);
+    font-size:14px;
+}
+
+.info-row span{
+    color:var(--muted);
+    font-size:13px;
+}
+
+
+/* =====================================================
+   SIX WARDS
+===================================================== */
+
+.wards-section{
+    background:var(--bg);
+}
+
+.ward-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.ward-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:22px;
+    box-shadow:0 7px 22px rgba(0,0,0,.05);
+    text-align:center;
+}
+
+.ward-number{
+    color:var(--gold);
+    font-weight:900;
+    font-size:12px;
+    letter-spacing:.7px;
+}
+
+.ward-card h3{
+    color:var(--dark);
+    margin:4px 0;
+    font-size:18px;
+}
+
+.ward-card p{
+    color:var(--muted);
+    font-size:12px;
+}
+
+
+/* =====================================================
+   QUICK LINKS
+===================================================== */
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.quick-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:20px 15px;
+    text-align:center;
+    transition:.2s ease;
+}
+
+.quick-card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow);
+}
+
+.quick-icon{
+    width:48px;
+    height:48px;
+    margin:0 auto 10px;
+    border-radius:50%;
+    background:var(--light);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+}
+
+.quick-card h3{
+    color:var(--dark);
+    font-size:15px;
+    margin-bottom:4px;
+}
+
+.quick-card p{
+    color:var(--muted);
+    font-size:11px;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta{
+    width:min(1050px,94%);
+    margin:0 auto 70px;
+    padding:45px 25px;
+    text-align:center;
+    border-radius:22px;
+    background:linear-gradient(135deg,var(--green),var(--dark));
+    color:#fff;
+}
+
+.cta h2{
+    font-size:clamp(28px,4vw,40px);
+    margin-bottom:8px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 22px;
+    color:rgba(255,255,255,.84);
+}
+
+.cta-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+}
+
+.btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    min-height:48px;
+    padding:12px 20px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:800;
+    transition:.2s ease;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-white{
+    background:#fff;
+    color:var(--green);
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:#182016;
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.5);
+    color:#fff;
+    background:rgba(255,255,255,.06);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+    background:#061b10;
+    color:#fff;
+}
+
+.footer-inner{
+    width:min(1150px,94%);
+    margin:auto;
+    padding:50px 0 35px;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.footer-logo{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+    border-radius:50%;
+    border:2px solid var(--gold);
+    background:#fff;
+}
+
+.footer-brand strong{
+    display:block;
+}
+
+.footer-brand small{
+    display:block;
+    color:#aebfb4;
+    font-size:9px;
+    margin-top:3px;
+}
+
+.footer-column p{
+    color:#aebfb4;
+    font-size:13px;
+    margin-top:15px;
+}
+
+.footer-column h3{
+    margin-bottom:13px;
+}
+
+.footer-column a{
+    display:block;
+    color:#c5d1ca;
+    font-size:13px;
+    margin:8px 0;
+}
+
+.footer-column a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    padding:20px 15px;
+    text-align:center;
+    color:#8fa198;
+    font-size:11px;
+}
+
+
+/* =====================================================
+   FLOATING WHATSAPP
+===================================================== */
+
+.whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:20px;
+    z-index:1200;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#25d366;
+    color:#fff;
+    font-size:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.whatsapp:hover{
+    transform:scale(1.06);
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+.back-top{
+    position:fixed;
+    right:20px;
+    bottom:88px;
+    z-index:1190;
+    width:42px;
+    height:42px;
+    border:0;
+    border-radius:50%;
+    background:var(--green);
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    opacity:0;
+    pointer-events:none;
+    transition:.2s;
+}
+
+.back-top.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1080px){
+
+    .desktop-nav{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+}
+
+@media(max-width:800px){
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .ward-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .quick-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:560px){
+
+    .nav-container{
+        min-height:66px;
+    }
+
+    .logo-link{
+        min-width:0;
+    }
+
+    .logo{
+        width:44px;
+        height:44px;
+    }
+
+    .brand strong{
+        font-size:15px;
+    }
+
+    .brand small{
+        font-size:8px;
+    }
+
+    .hero-inner{
+        padding:55px 0;
+    }
+
+    .hero-inner h1{
+        font-size:42px;
+    }
+
+    .section{
+        padding:55px 0;
+    }
+
+    .ward-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quick-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-card,
+    .info-box,
+    .whatsapp-feature{
+        padding:22px;
+    }
+
+    .whatsapp-number{
+        font-size:19px;
+    }
+
+    .cta{
+        margin-bottom:50px;
+    }
+}
+
+</style></head><body><!-- =====================================================
+     TOP BAR
+===================================================== --><div class="topbar">
+    IMOLE 2027 • SERVICE • DEVELOPMENT • ACCOUNTABILITY
+</div><!-- =====================================================
      HEADER
-================================= -->
+===================================================== --><header class="header"><div class="nav-container">
 
-<header class="site-header">
-
-    <div class="container">
+    <a
+        class="logo-link"
+        href="./index.html"
+        aria-label="IMOLE 2027 Home">
 
         <img
-            src="assets/ndc-logo.jpeg"
-            alt="Nigeria Democratic Congress logo"
-            class="ndc-logo"
+            class="logo"
+            src="./assets/IMG-20260728-WA0032.jpg"
+            alt="NDC Logo"
+            loading="eager"
         >
 
-        <h1>
-            HON. NURUDEEN ABAYOMI SADEEQ
-        </h1>
+        <div class="brand">
 
-        <p>
-            Lagos State House of Assembly —
-            Ojo Constituency II
-        </p>
+            <strong>
+                IMOLE 2027
+            </strong>
 
-        <p>
-            Nigeria Democratic Congress (NDC)
-        </p>
+            <small>
+                NURUDEEN ABAYOMI SADEEQ
+            </small>
 
-    </div>
+        </div>
 
-</header>
+    </a>
 
 
-<!-- =================================
-     MOBILE MENU
-================================= -->
+    <nav class="desktop-nav">
 
-<button
-    class="menu-toggle"
-    onclick="toggleMenu()"
-    aria-label="Open navigation menu"
-    aria-expanded="false"
-    id="menuButton"
->
-    ☰
-</button>
+        <a href="./index.html">Home</a>
+
+        <a href="./about.html">About</a>
+
+        <a href="./manifesto.html">Manifesto</a>
+
+        <a href="./polling-units.html">Polling Units</a>
+
+        <a href="./results.html">Results</a>
+
+        <a href="./news.html">News</a>
+
+        <a href="./events.html">Events</a>
+
+        <a href="./gallery.html">Gallery</a>
+
+        <a href="./media.html">Media</a>
+
+        <a
+            class="contact-link"
+            href="./contact.html">
+            Contact
+        </a>
+
+        <a
+            class="join-link"
+            href="./join.html">
+            Join Us
+        </a>
+
+        <a
+            class="donation-link"
+            href="./donations.html">
+            ❤️ Donations
+        </a>
+
+    </nav>
 
 
-<!-- =================================
-     NAVIGATION
-================================= -->
+    <button
+        class="menu-btn"
+        id="menuButton"
+        aria-label="Open menu"
+        aria-expanded="false">
+
+        ☰
+
+    </button>
+
+</div>
+
+
+<!-- MOBILE NAV -->
 
 <nav
-    class="main-nav"
-    id="mainMenu"
->
+    class="mobile-nav"
+    id="mobileNav">
 
-    <a href="index.html">
-        Home
-    </a>
+    <a href="./index.html">🏠 Home</a>
 
-    <a href="about.html">
-        About
-    </a>
+    <a href="./about.html">👤 About</a>
 
-    <a href="manifesto.html">
-        Manifesto
-    </a>
+    <a href="./manifesto.html">📜 Manifesto</a>
 
-    <a href="polling-units.html">
-        Polling Units
-    </a>
+    <a href="./polling-units.html">📍 Polling Units</a>
 
-    <a href="results.html">
-        Results
-    </a>
+    <a href="./results.html">📊 Results</a>
 
-    <a href="news.html">
-        News
-    </a>
+    <a href="./news.html">📰 News</a>
 
-    <a href="events.html">
-        Events
-    </a>
+    <a href="./events.html">📅 Events</a>
 
-    <a href="gallery.html">
-        Gallery
-    </a>
+    <a href="./gallery.html">📸 Gallery</a>
 
-    <a href="contact.html">
-        Contact
-    </a>
+    <a href="./media.html">🎵 Media</a>
 
-    <a href="join.html">
-        🔥 JOIN THE MOVEMENT
-    </a>
+    <a href="./contact.html">📞 Contact</a>
+
+    <a href="./join.html">🤝 Join IMOLE</a>
+
+    <a href="./donations.html">❤️ Donations</a>
 
 </nav>
 
+</header><!-- =====================================================
+     HERO
+===================================================== --><section class="contact-hero"><div class="hero-inner">
 
-<main>
-
-<section class="contact-page">
-
-
-<!-- =================================
-     PAGE HEADER
-================================= -->
-
-<div class="contact-header">
+    <div class="hero-badge">
+        📞 IMOLE 2027
+    </div>
 
     <h1>
-        📞 CONTACT IMOLE 2027
+        Contact <span>IMOLE</span> 2027
     </h1>
 
     <p>
-        Connect with the campaign team of
-        Hon. Nurudeen Abayomi Sadeeq for
-        enquiries, campaign information,
-        volunteering and community engagement.
+        Connect with the campaign movement of
+        Hon. Nurudeen Abayomi Sadeeq,
+        Lagos State House of Assembly,
+        Ojo Constituency II.
+    </p>
+
+</div>
+
+</section><!-- =====================================================
+     CONTACT OPTIONS
+===================================================== --><section class="section"><div class="heading">
+
+    <div class="eyebrow">
+        Get In Touch
+    </div>
+
+    <h2>
+        We Are Ready To Hear From You
+    </h2>
+
+    <p>
+        For campaign enquiries, volunteer information,
+        community engagement, events and general enquiries,
+        use any of the contact options below.
     </p>
 
 </div>
 
 
-<!-- =================================
-     CONTACT HERO
-================================= -->
+<div class="contact-grid">
 
-<section class="contact-hero">
+
+    <!-- WHATSAPP -->
+
+    <article class="contact-card">
+
+        <div class="contact-icon">
+            💬
+        </div>
+
+        <h2>
+            WhatsApp
+        </h2>
+
+        <p>
+            Send a direct WhatsApp message to the
+            IMOLE 2027 campaign contact.
+        </p>
+
+        <a
+            class="contact-action"
+            href="https://wa.me/2348033002235?text=Hello%20IMOLE%202027%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+            target="_blank"
+            rel="noopener noreferrer">
+
+            💬 Message on WhatsApp
+
+        </a>
+
+    </article>
+
+
+    <!-- PHONE -->
+
+    <article class="contact-card">
+
+        <div class="contact-icon">
+            📞
+        </div>
+
+        <h2>
+            Phone Contact
+        </h2>
+
+        <p>
+            You can contact the campaign team directly
+            using the campaign WhatsApp/phone number.
+        </p>
+
+        <a
+            class="contact-action gold"
+            href="tel:+2348033002235">
+
+            📞 Call +234 803 300 2235
+
+        </a>
+
+    </article>
+
+
+    <!-- JOIN -->
+
+    <article class="contact-card">
+
+        <div class="contact-icon">
+            🤝
+        </div>
+
+        <h2>
+            Join IMOLE
+        </h2>
+
+        <p>
+            Become part of the IMOLE 2027 movement
+            and participate in campaign activities.
+        </p>
+
+        <a
+            class="contact-action"
+            href="./join.html">
+
+            🤝 Join The Movement
+
+        </a>
+
+    </article>
+
+
+    <!-- DONATIONS -->
+
+    <article class="contact-card">
+
+        <div class="contact-icon">
+            ❤️
+        </div>
+
+        <h2>
+            Support IMOLE
+        </h2>
+
+        <p>
+            Visit the official campaign donations page
+            for information about supporting the movement.
+        </p>
+
+        <a
+            class="contact-action gold"
+            href="./donations.html">
+
+            ❤️ Donations
+
+        </a>
+
+    </article>
+
+</div>
+
+
+<!-- WHATSAPP FEATURE -->
+
+<div class="whatsapp-feature">
 
     <h2>
-        🤝 WE ARE HERE TO HEAR FROM YOU
+        💬 Connect With IMOLE 2027
     </h2>
 
     <p>
-        Whether you have an enquiry, want to join
-        the IMOLE 2027 movement, volunteer,
-        participate in ward activities or simply
-        receive campaign updates, please reach out.
+        The fastest way to reach the campaign team
+        is through WhatsApp.
     </p>
 
-</section>
-
-
-<!-- =================================
-     CONTACT INFORMATION
-================================= -->
-
-<section>
-
-    <div class="contact-grid">
-
-
-        <!-- OFFICE -->
-
-        <div class="contact-card">
-
-            <div class="contact-icon">
-                🏢
-            </div>
-
-            <h3>
-                Campaign Office
-            </h3>
-
-            <p>
-                1 Sibe Sibe Bus Stop,<br>
-                Etegbin Odo Road,<br>
-                Etegbin Town,<br>
-                Ojo, Lagos.
-            </p>
-
-            <a
-                href="https://www.google.com/maps/search/?api=1&query=1+Sibe+Sibe+Bus+Stop%2C+Etegbin+Odo+Road%2C+Etegbin+Town%2C+Ojo%2C+Lagos"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                📍 View Location
-            </a>
-
-        </div>
-
-
-        <!-- PHONE -->
-
-        <div class="contact-card">
-
-            <div class="contact-icon">
-                📞
-            </div>
-
-            <h3>
-                Phone
-            </h3>
-
-            <p>
-                08029877808
-            </p>
-
-            <p>
-                08033002235
-            </p>
-
-            <a href="tel:+2348029877808">
-                📞 Call Campaign Team
-            </a>
-
-        </div>
-
-
-        <!-- WHATSAPP -->
-
-        <div class="contact-card">
-
-            <div class="contact-icon">
-                💬
-            </div>
-
-            <h3>
-                WhatsApp
-            </h3>
-
-            <p>
-                Chat directly with the
-                IMOLE 2027 campaign team.
-            </p>
-
-            <a
-                href="https://wa.me/2348159461760"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="whatsapp-link"
-            >
-                💬 Chat on WhatsApp
-            </a>
-
-        </div>
-
-
-        <!-- EMAIL -->
-
-        <div class="contact-card">
-
-            <div class="contact-icon">
-                ✉️
-            </div>
-
-            <h3>
-                Email
-            </h3>
-
-            <p>
-                Send us an enquiry by email.
-            </p>
-
-            <a
-                href="mailto:nurudeenabayomisadeeq@gmail.com"
-            >
-                ✉️ Send Email
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =================================
-     MAP
-================================= -->
-
-<section class="map-section">
-
-    <h2>
-        📍 FIND THE CAMPAIGN OFFICE
-    </h2>
-
-    <p>
-        Visit the IMOLE 2027 campaign office at
-        Sibe Sibe Bus Stop, Etegbin Odo Road,
-        Etegbin Town, Ojo, Lagos.
-    </p>
-
-    <div class="map-container">
-
-        <iframe
-            src="https://www.google.com/maps?q=1+Sibe+Sibe+Bus+Stop,+Etegbin+Odo+Road,+Etegbin+Town,+Ojo,+Lagos&output=embed"
-            loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            title="IMOLE 2027 Campaign Office Location"
-        >
-        </iframe>
-
+    <div class="whatsapp-number">
+        +234 803 300 2235
     </div>
 
     <a
-        href="https://www.google.com/maps/search/?api=1&query=1+Sibe+Sibe+Bus+Stop%2C+Etegbin+Odo+Road%2C+Etegbin+Town%2C+Ojo%2C+Lagos"
+        class="contact-action"
+        href="https://wa.me/2348033002235?text=Hello%20IMOLE%202027"
         target="_blank"
-        rel="noopener noreferrer"
-        class="map-button"
-    >
-        🗺️ OPEN IN GOOGLE MAPS
+        rel="noopener noreferrer">
+
+        Open WhatsApp Chat →
+
     </a>
 
-</section>
+</div>
+
+</section><!-- =====================================================
+     CAMPAIGN INFORMATION
+===================================================== --><section class="info-section"><div class="section">
+
+    <div class="heading">
+
+        <div class="eyebrow">
+            Campaign Information
+        </div>
+
+        <h2>
+            IMOLE 2027
+        </h2>
+
+        <p>
+            Official campaign information for
+            Hon. Nurudeen Abayomi Sadeeq.
+        </p>
+
+    </div>
 
 
-<!-- =================================
-     ENQUIRY FORM
-================================= -->
-
-<section class="enquiry-section">
-
-    <h2>
-        📝 SEND AN ENQUIRY
-    </h2>
-
-    <p class="enquiry-intro">
-        Complete the form below and WhatsApp will
-        open with your enquiry prepared for the
-        campaign team.
-    </p>
+    <div class="info-grid">
 
 
-    <form
-        class="contact-form"
-        id="contactForm"
-    >
+        <!-- CAMPAIGN -->
+
+        <div class="info-box">
+
+            <h2>
+                🗳️ Campaign Details
+            </h2>
 
 
-        <div class="form-row">
+            <div class="info-row">
 
-            <div class="form-group">
+                <div class="info-row-icon">
+                    👤
+                </div>
 
-                <label for="contactName">
-                    Full Name *
-                </label>
+                <div>
 
-                <input
-                    type="text"
-                    id="contactName"
-                    required
-                    placeholder="Enter your full name"
-                >
+                    <strong>
+                        Candidate
+                    </strong>
+
+                    <span>
+                        Hon. Nurudeen Abayomi Sadeeq
+                    </span>
+
+                </div>
 
             </div>
 
 
-            <div class="form-group">
+            <div class="info-row">
 
-                <label for="contactPhone">
-                    Phone Number *
-                </label>
+                <div class="info-row-icon">
+                    🏛️
+                </div>
 
-                <input
-                    type="tel"
-                    id="contactPhone"
-                    required
-                    placeholder="e.g. 08012345678"
-                >
+                <div>
+
+                    <strong>
+                        Position
+                    </strong>
+
+                    <span>
+                        Lagos State House of Assembly
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-row-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <strong>
+                        Constituency
+                    </strong>
+
+                    <span>
+                        Ojo Constituency II
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-row-icon">
+                    🏛️
+                </div>
+
+                <div>
+
+                    <strong>
+                        Political Platform
+                    </strong>
+
+                    <span>
+                        Nigeria Democratic Congress (NDC)
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-row-icon">
+                    🎯
+                </div>
+
+                <div>
+
+                    <strong>
+                        Campaign Theme
+                    </strong>
+
+                    <span>
+                        Service • Development • Accountability
+                    </span>
+
+                </div>
 
             </div>
 
         </div>
 
 
-        <div class="form-group">
+        <!-- ELECTION -->
 
-            <label for="contactSubject">
-                Enquiry Type
-            </label>
+        <div class="info-box">
 
-            <select id="contactSubject">
+            <h2>
+                🗓️ Election Information
+            </h2>
 
-                <option value="">
-                    Select an option
-                </option>
 
-                <option>
-                    General Enquiry
-                </option>
+            <div class="info-row">
 
-                <option>
-                    Join the Movement
-                </option>
+                <div class="info-row-icon">
+                    🗳️
+                </div>
 
-                <option>
-                    Volunteer
-                </option>
+                <div>
 
-                <option>
-                    IMOLE BABES
-                </option>
+                    <strong>
+                        Election Date
+                    </strong>
 
-                <option>
-                    IMOLE ARMY
-                </option>
+                    <span>
+                        February 6, 2027
+                    </span>
 
-                <option>
-                    Media & Communication
-                </option>
+                </div>
 
-                <option>
-                    Ward Activities
-                </option>
+            </div>
 
-                <option>
-                    Campaign Event
-                </option>
 
-                <option>
-                    Other
-                </option>
+            <div class="info-row">
 
-            </select>
+                <div class="info-row-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <strong>
+                        Area
+                    </strong>
+
+                    <span>
+                        Ojo Constituency II
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-row-icon">
+                    🧭
+                </div>
+
+                <div>
+
+                    <strong>
+                        Wards
+                    </strong>
+
+                    <span>
+                        Six wards
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-row-icon">
+                    📊
+                </div>
+
+                <div>
+
+                    <strong>
+                        Results
+                    </strong>
+
+                    <span>
+                        Results dashboard available on this website.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <div class="info-row-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <strong>
+                        Polling Units
+                    </strong>
+
+                    <span>
+                        Visit the polling-unit directory for details.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section><!-- =====================================================
+     SIX WARDS
+===================================================== --><section class="wards-section"><div class="section">
+
+    <div class="heading">
+
+        <div class="eyebrow">
+            Constituency
+        </div>
+
+        <h2>
+            Ojo Constituency II
+        </h2>
+
+        <p>
+            The six wards represented on the
+            IMOLE 2027 campaign website.
+        </p>
+
+    </div>
+
+
+    <div class="ward-grid">
+
+
+        <div class="ward-card">
+
+            <div class="ward-number">
+                WARD 01
+            </div>
+
+            <h3>
+                Ilogbo Ward
+            </h3>
+
+            <p>
+                Ojo Constituency II
+            </p>
 
         </div>
 
 
-        <div class="form-group">
+        <div class="ward-card">
 
-            <label for="contactMessage">
-                Your Message *
-            </label>
+            <div class="ward-number">
+                WARD 02
+            </div>
 
-            <textarea
-                id="contactMessage"
-                required
-                placeholder="Write your message or enquiry here..."
-            ></textarea>
+            <h3>
+                Irewe Ward
+            </h3>
+
+            <p>
+                Ojo Constituency II
+            </p>
 
         </div>
 
 
-        <button
-            type="submit"
-            class="submit-button"
-        >
-            💬 SEND ENQUIRY VIA WHATSAPP
-        </button>
+        <div class="ward-card">
 
-    </form>
+            <div class="ward-number">
+                WARD 03
+            </div>
 
-</section>
+            <h3>
+                Ijanikin Ward
+            </h3>
+
+            <p>
+                Ojo Constituency II
+            </p>
+
+        </div>
 
 
-<!-- =================================
-     SOCIAL MEDIA
-================================= -->
+        <div class="ward-card">
 
-<section class="social-section">
+            <div class="ward-number">
+                WARD 04
+            </div>
+
+            <h3>
+                Etegbin Ward
+            </h3>
+
+            <p>
+                Ojo Constituency II
+            </p>
+
+        </div>
+
+
+        <div class="ward-card">
+
+            <div class="ward-number">
+                WARD 05
+            </div>
+
+            <h3>
+                Idolowu Ward
+            </h3>
+
+            <p>
+                Ojo Constituency II
+            </p>
+
+        </div>
+
+
+        <div class="ward-card">
+
+            <div class="ward-number">
+                WARD 06
+            </div>
+
+            <h3>
+                Tafi Ward
+            </h3>
+
+            <p>
+                Ojo Constituency II
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section><!-- =====================================================
+     QUICK LINKS
+===================================================== --><section class="section"><div class="heading">
+
+    <div class="eyebrow">
+        Explore
+    </div>
 
     <h2>
-        📱 FOLLOW IMOLE 2027
+        IMOLE 2027 Information Centre
     </h2>
 
     <p>
-        Follow the published campaign social-media
-        channels for announcements, activities,
-        photographs and updates.
+        Quickly access the most important sections
+        of the campaign website.
     </p>
 
+</div>
 
-    <div class="social-buttons">
 
-        <a
-            href="https://www.facebook.com/share/1BfTYeyYXr/"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            📘 Facebook
+<div class="quick-grid">
+
+
+    <a
+        class="quick-card"
+        href="./about.html">
+
+        <div class="quick-icon">
+            👤
+        </div>
+
+        <h3>
+            About
+        </h3>
+
+        <p>
+            Candidate profile
+        </p>
+
+    </a>
+
+
+    <a
+        class="quick-card"
+        href="./manifesto.html">
+
+        <div class="quick-icon">
+            📜
+        </div>
+
+        <h3>
+            Manifesto
+        </h3>
+
+        <p>
+            Our vision and agenda
+        </p>
+
+    </a>
+
+
+    <a
+        class="quick-card"
+        href="./polling-units.html">
+
+        <div class="quick-icon">
+            📍
+        </div>
+
+        <h3>
+            Polling Units
+        </h3>
+
+        <p>
+            Constituency directory
+        </p>
+
+    </a>
+
+
+    <a
+        class="quick-card"
+        href="./results.html">
+
+        <div class="quick-icon">
+            📊
+        </div>
+
+        <h3>
+            Results
+        </h3>
+
+        <p>
+            Election results
+        </p>
+
+    </a>
+
+
+    <a
+        class="quick-card"
+        href="./news.html">
+
+        <div class="quick-icon">
+            📰
+        </div>
+
+        <h3>
+            News
+        </h3>
+
+        <p>
+            Campaign updates
+        </p>
+
+    </a>
+
+
+    <a
+        class="quick-card"
+        href="./events.html">
+
+        <div class="quick-icon">
+            📅
+        </div>
+
+        <h3>
+            Events
+        </h3>
+
+        <p>
+            Meetings and activities
+        </p>
+
+    </a>
+
+
+    <a
+        class="quick-card"
+        href="./gallery.html">
+
+        <div class="quick-icon">
+            📸
+        </div>
+
+        <h3>
+            Gallery
+        </h3>
+
+        <p>
+            Campaign photographs
+        </p>
+
+    </a>
+
+
+    <a
+        class="quick-card"
+        href="./media.html">
+
+        <div class="quick-icon">
+            🎵
+        </div>
+
+        <h3>
+            Media
+        </h3>
+
+        <p>
+            Campaign media
+        </p>
+
+    </a>
+
+</div>
+
+</section><!-- =====================================================
+     FINAL CTA
+===================================================== --><section class="cta"><h2>
+    Be Part Of IMOLE 2027
+</h2>
+
+<p>
+    Connect with the movement, join campaign activities,
+    stay informed and support the vision of
+    Hon. Nurudeen Abayomi Sadeeq for Ojo Constituency II.
+</p>
+
+
+<div class="cta-buttons">
+
+    <a
+        class="btn btn-white"
+        href="./join.html">
+
+        🤝 Join IMOLE
+
+    </a>
+
+
+    <a
+        class="btn btn-gold"
+        href="./donations.html">
+
+        ❤️ Donations
+
+    </a>
+
+
+    <a
+        class="btn btn-outline"
+        href="https://wa.me/2348033002235?text=Hello%20IMOLE%202027"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        💬 WhatsApp
+
+    </a>
+
+</div>
+
+</section><!-- =====================================================
+     FOOTER
+===================================================== --><footer class="footer"><div class="footer-inner">
+
+
+    <div class="footer-column">
+
+        <div class="footer-brand">
+
+            <img
+                class="footer-logo"
+                src="./assets/IMG-20260728-WA0032.jpg"
+                alt="NDC Logo"
+                loading="lazy"
+            >
+
+            <div>
+
+                <strong>
+                    IMOLE 2027
+                </strong>
+
+                <small>
+                    NURUDEEN ABAYOMI SADEEQ
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <p>
+            Official campaign website of Hon. Nurudeen
+            Abayomi Sadeeq for Lagos State House of
+            Assembly, Ojo Constituency II.
+        </p>
+
+
+        <p>
+            Service • Development • Accountability
+        </p>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h3>
+            Campaign
+        </h3>
+
+        <a href="./index.html">Home</a>
+
+        <a href="./about.html">About</a>
+
+        <a href="./manifesto.html">Manifesto</a>
+
+        <a href="./news.html">News</a>
+
+        <a href="./events.html">Events</a>
+
+        <a href="./join.html">Join IMOLE</a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h3>
+            Information
+        </h3>
+
+        <a href="./polling-units.html">
+            Polling Units
+        </a>
+
+        <a href="./results.html">
+            Results
+        </a>
+
+        <a href="./media.html">
+            Media
+        </a>
+
+        <a href="./gallery.html">
+            Gallery
+        </a>
+
+        <a href="./contact.html">
+            Contact
+        </a>
+
+        <a href="./donations.html">
+            Donations
         </a>
 
     </div>
 
-</section>
+</div>
 
 
-<!-- =================================
-     FINAL CTA
-================================= -->
+<div class="footer-bottom">
 
-<section class="contact-cta">
+    © <span id="footerYear"></span>
+    Hon. Nurudeen Abayomi Sadeeq Campaign.
+    All Rights Reserved.
 
-    <h2>
-        🔥 READY TO JOIN THE MOVEMENT?
-    </h2>
+    <br><br>
 
-    <p>
-        Become part of IMOLE 2027 and contribute
-        to a movement focused on Service,
-        Development and Accountability.
-    </p>
+    Nigeria Democratic Congress (NDC) |
+    Ojo Constituency II
 
-    <a
-        href="join.html"
-        class="cta-button"
-    >
-        🔥 JOIN IMOLE 2027
-    </a>
+</div>
 
-    <a
-        href="https://wa.me/2348159461760?text=Hello%20IMOLE%202027%20team%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="cta-button cta-whatsapp"
-    >
-        💬 WHATSAPP US
-    </a>
+</footer><!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== --><a
+class="whatsapp"
+href="https://wa.me/2348033002235?text=Hello%20IMOLE%202027"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Contact IMOLE 2027 on WhatsApp">
 
-</section>
+☎
 
+</a><!-- =====================================================
+     BACK TO TOP
+===================================================== --><button
+class="back-top"
+id="backTop"
+aria-label="Back to top">
 
-</section>
+↑
 
-</main>
-
-
-<!-- =================================
-     FOOTER
-================================= -->
-
-<footer>
-
-    <p>
-        &copy; 2026 Hon. Nurudeen Abayomi Sadeeq
-    </p>
-
-    <p>
-        Nigeria Democratic Congress (NDC)
-        | Ojo Constituency II
-    </p>
-
-    <p>
-        IMOLE 2027 —
-        Service • Development • Accountability
-    </p>
-
-</footer>
-
-
-<!-- =================================
+</button><!-- =====================================================
      JAVASCRIPT
-================================= -->
+===================================================== --><script>
 
-<script>
-
-
-/* =================================
+/* =====================================================
    MOBILE MENU
-================================= */
+===================================================== */
 
-function toggleMenu() {
+const menuButton =
+    document.getElementById("menuButton");
 
-    const menu =
-        document.getElementById("mainMenu");
+const mobileNav =
+    document.getElementById("mobileNav");
 
-    const button =
-        document.getElementById("menuButton");
 
-    menu.classList.toggle("show");
+if(menuButton && mobileNav){
 
-    const isOpen =
-        menu.classList.contains("show");
+    menuButton.addEventListener(
+        "click",
+        function(){
 
-    button.setAttribute(
-        "aria-expanded",
-        isOpen
+            const open =
+                mobileNav.classList.toggle("open");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                open ? "true" : "false"
+            );
+
+            menuButton.textContent =
+                open ? "✕" : "☰";
+
+        }
+    );
+
+
+    mobileNav
+        .querySelectorAll("a")
+        .forEach(function(link){
+
+            link.addEventListener(
+                "click",
+                function(){
+
+                    mobileNav.classList.remove("open");
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuButton.textContent =
+                        "☰";
+
+                }
+            );
+
+        });
+
+}
+
+
+/* =====================================================
+   FOOTER YEAR
+===================================================== */
+
+const footerYear =
+    document.getElementById("footerYear");
+
+if(footerYear){
+
+    footerYear.textContent =
+        new Date().getFullYear();
+
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+const backTop =
+    document.getElementById("backTop");
+
+
+window.addEventListener(
+    "scroll",
+    function(){
+
+        if(window.scrollY > 500){
+
+            backTop.classList.add("show");
+
+        }else{
+
+            backTop.classList.remove("show");
+
+        }
+
+    }
+);
+
+
+if(backTop){
+
+    backTop.addEventListener(
+        "click",
+        function(){
+
+            window.scrollTo({
+                top:0,
+                behavior:"smooth"
+            });
+
+        }
     );
 
 }
 
 
-/* =================================
-   CLOSE MENU AFTER CLICK
-================================= */
+/* =====================================================
+   HOME LINK SAFETY
+===================================================== */
 
 document
-    .querySelectorAll(".main-nav a")
-    .forEach(function(link) {
+    .querySelectorAll('a[href="/"], a[href="../"]')
+    .forEach(function(link){
 
-        link.addEventListener(
-            "click",
-            function() {
+        link.setAttribute(
+            "href",
+            "./index.html"
+        );
 
-                const menu =
-                    document.getElementById("mainMenu");
+    });
 
-                const button =
-                    document.getElementById("menuButton");
 
-                menu.classList.remove("show");
+/* =====================================================
+   IMAGE SAFETY
+===================================================== */
 
-                button.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+document
+    .querySelectorAll("img")
+    .forEach(function(image){
+
+        image.addEventListener(
+            "error",
+            function(){
+
+                this.style.backgroundColor =
+                    "#ffffff";
 
             }
         );
@@ -1093,108 +2064,18 @@ document
     });
 
 
-/* =================================
-   CONTACT FORM → WHATSAPP
-================================= */
+/* =====================================================
+   SITE VERSION
+===================================================== */
 
-document
-    .getElementById("contactForm")
-    .addEventListener(
-        "submit",
-        function(event) {
+document.documentElement.setAttribute(
+    "data-site-version",
+    "2026.08.31"
+);
 
-            event.preventDefault();
+console.log(
+    "IMOLE 2027 — Contact Page Version 2026.08.31"
+);
 
-
-            const name =
-                document
-                    .getElementById("contactName")
-                    .value
-                    .trim();
-
-
-            const phone =
-                document
-                    .getElementById("contactPhone")
-                    .value
-                    .trim();
-
-
-            const subject =
-                document
-                    .getElementById("contactSubject")
-                    .value
-                    .trim();
-
-
-            const message =
-                document
-                    .getElementById("contactMessage")
-                    .value
-                    .trim();
-
-
-            const campaignWhatsApp =
-                "2348159461760";
-
-
-            let whatsappMessage =
-                "📩 IMOLE 2027 — CONTACT ENQUIRY\n\n";
-
-
-            whatsappMessage +=
-                "Name: " +
-                name +
-                "\n";
-
-
-            whatsappMessage +=
-                "Phone: " +
-                phone +
-                "\n";
-
-
-            if (subject) {
-
-                whatsappMessage +=
-                    "Enquiry Type: " +
-                    subject +
-                    "\n";
-
-            }
-
-
-            whatsappMessage +=
-                "Message: " +
-                message +
-                "\n\n";
-
-
-            whatsappMessage +=
-                "IMOLE 2027 — Service • Development • Accountability";
-
-
-            const whatsappURL =
-                "https://wa.me/" +
-                campaignWhatsApp +
-                "?text=" +
-                encodeURIComponent(
-                    whatsappMessage
-                );
-
-
-            window.open(
-                whatsappURL,
-                "_blank",
-                "noopener,noreferrer"
-            );
-
-        }
-    );
-
-
-</script>
-
-
-</body>
+</script></body>
 </html>
