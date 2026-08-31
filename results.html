@@ -7,15 +7,21 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>Election Centre | IMOLE 2027</title>
+<title>Election Results Centre | IMOLE 2027</title>
 
 <meta name="description"
-      content="IMOLE 2027 Election Centre — election countdown, Ojo Constituency II results and official campaign updates.">
+      content="IMOLE 2027 Election Results Centre for Hon. Nurudeen Abayomi Sadeeq, Lagos State House of Assembly, Ojo Constituency II.">
 
 <meta name="theme-color"
       content="#075b2a">
 
 <style>
+
+/* =========================================================
+   IMOLE 2027 — RESULTS CENTRE
+   GitHub Pages / Chrome / Mobile Friendly
+   Updated: 31 August 2026
+   ========================================================= */
 
 *{
     box-sizing:border-box;
@@ -40,19 +46,20 @@ a{
 }
 
 button,
-input,
-select{
+input{
     font:inherit;
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO
-===================================================== */
+   ========================================================= */
 
 .results-hero{
 
-    min-height:500px;
+    position:relative;
+
+    min-height:470px;
 
     display:flex;
     align-items:center;
@@ -60,20 +67,20 @@ select{
 
     text-align:center;
 
-    padding:80px 18px;
+    padding:
+        80px 18px;
 
-    position:relative;
     overflow:hidden;
+
+    color:white;
 
     background:
         linear-gradient(
             135deg,
-            #032713,
+            #021c0d 0%,
             #075b2a 55%,
-            #0b7b3a
+            #0b7b3a 100%
         );
-
-    color:white;
 }
 
 .results-hero::before{
@@ -87,11 +94,11 @@ select{
 
     border-radius:50%;
 
+    right:-140px;
+    top:-190px;
+
     background:
         rgba(244,197,66,.10);
-
-    top:-190px;
-    right:-100px;
 }
 
 .results-hero::after{
@@ -100,31 +107,37 @@ select{
 
     position:absolute;
 
-    width:330px;
-    height:330px;
+    width:340px;
+    height:340px;
 
     border-radius:50%;
 
+    left:-150px;
+    bottom:-190px;
+
     background:
         rgba(255,255,255,.05);
-
-    bottom:-180px;
-    left:-100px;
 }
 
 .results-hero-content{
 
     position:relative;
+
     z-index:2;
 
     max-width:900px;
+
+    margin:auto;
 }
 
 .hero-badge{
 
     display:inline-block;
 
-    padding:9px 16px;
+    padding:
+        9px 17px;
+
+    margin-bottom:20px;
 
     border-radius:50px;
 
@@ -132,13 +145,13 @@ select{
 
     color:#111;
 
-    font-size:12px;
+    font-size:11px;
 
-    font-weight:900;
+    font-weight:1000;
 
-    letter-spacing:.7px;
+    letter-spacing:.8px;
 
-    margin-bottom:20px;
+    text-transform:uppercase;
 }
 
 .results-hero h1{
@@ -146,9 +159,9 @@ select{
     margin:0 0 18px;
 
     font-size:
-        clamp(40px,8vw,76px);
+        clamp(38px,8vw,72px);
 
-    line-height:.98;
+    line-height:1;
 
     font-weight:1000;
 
@@ -164,43 +177,45 @@ select{
 
     max-width:730px;
 
-    margin:0 auto;
+    margin:auto;
 
     color:
         rgba(255,255,255,.84);
 
-    line-height:1.7;
+    font-size:15px;
 
-    font-size:16px;
+    line-height:1.75;
 }
 
 
-/* =====================================================
-   ELECTION DATE CARD
-===================================================== */
+/* =========================================================
+   ELECTION DATE
+   ========================================================= */
 
-.election-date-card{
-
-    max-width:900px;
-
-    margin:-55px auto 0;
+.election-card{
 
     position:relative;
+
     z-index:5;
 
-    background:#fff;
+    max-width:920px;
 
-    border-radius:24px;
+    margin:
+        -55px auto 0;
 
     padding:30px;
 
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.13);
+    background:white;
 
     border:
-        1px solid #e2ebe5;
+        1px solid #e1e9e3;
+
+    border-radius:25px;
 
     text-align:center;
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,.13);
 }
 
 .election-label{
@@ -218,31 +233,34 @@ select{
 
 .election-date{
 
-    margin:8px 0;
+    margin:
+        8px 0 6px;
 
     color:#07391c;
 
     font-size:
-        clamp(28px,6vw,48px);
+        clamp(27px,6vw,47px);
 
     font-weight:1000;
+
+    line-height:1.1;
 }
 
-.election-subtitle{
+.election-description{
 
     margin:0;
 
     color:#6d786f;
 
-    font-size:14px;
+    font-size:13px;
 
     line-height:1.6;
 }
 
 
-/* =====================================================
+/* =========================================================
    COUNTDOWN
-===================================================== */
+   ========================================================= */
 
 .countdown{
 
@@ -255,59 +273,68 @@ select{
 
     max-width:760px;
 
-    margin:28px auto 0;
+    margin:
+        28px auto 0;
 }
 
 .count-box{
 
-    background:#f0f7f2;
+    padding:
+        18px 10px;
 
     border:
         1px solid #dce9df;
 
     border-radius:16px;
 
-    padding:20px 10px;
+    background:#f1f7f3;
 }
 
-.count-box strong{
+.count-number{
 
     display:block;
 
     color:#075b2a;
 
     font-size:
-        clamp(28px,5vw,42px);
+        clamp(27px,5vw,42px);
 
     font-weight:1000;
+
+    line-height:1;
 }
 
-.count-box span{
+.count-label{
 
     display:block;
 
-    margin-top:4px;
+    margin-top:7px;
 
-    color:#69766d;
+    color:#6b766f;
 
-    font-size:11px;
+    font-size:10px;
 
     font-weight:900;
+
+    letter-spacing:.5px;
 
     text-transform:uppercase;
 }
 
 
-/* =====================================================
-   GENERAL SECTIONS
-===================================================== */
+/* =========================================================
+   SECTIONS
+   ========================================================= */
 
 .section{
 
-    padding:75px 5%;
+    padding:
+        75px 5%;
 }
 
 .container{
+
+    width:100%;
 
     max-width:1150px;
 
@@ -316,17 +343,19 @@ select{
 
 .heading{
 
-    text-align:center;
-
-    max-width:750px;
+    max-width:760px;
 
     margin:
-        0 auto 40px;
+        0 auto 38px;
+
+    text-align:center;
 }
 
 .heading small{
 
     display:block;
+
+    margin-bottom:8px;
 
     color:#075b2a;
 
@@ -337,35 +366,36 @@ select{
     letter-spacing:1px;
 
     text-transform:uppercase;
-
-    margin-bottom:8px;
 }
 
 .heading h2{
 
-    margin:0 0 12px;
+    margin:
+        0 0 12px;
 
     color:#07391c;
 
     font-size:
-        clamp(28px,5vw,44px);
+        clamp(28px,5vw,43px);
 
     font-weight:1000;
 }
 
 .heading p{
 
+    margin:0;
+
     color:#68766e;
 
-    line-height:1.7;
+    font-size:14px;
 
-    font-size:15px;
+    line-height:1.75;
 }
 
 
-/* =====================================================
+/* =========================================================
    STATUS
-===================================================== */
+   ========================================================= */
 
 .status-card{
 
@@ -375,19 +405,19 @@ select{
 
     gap:18px;
 
-    background:white;
-
-    border-radius:20px;
-
     padding:25px;
+
+    margin-bottom:50px;
+
+    background:white;
 
     border:
         1px solid #e0e9e3;
 
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.06);
+    border-radius:20px;
 
-    margin-bottom:35px;
+    box-shadow:
+        0 9px 28px rgba(0,0,0,.06);
 }
 
 .status-icon{
@@ -395,23 +425,22 @@ select{
     width:58px;
     height:58px;
 
-    border-radius:50%;
+    flex-shrink:0;
 
     display:grid;
     place-items:center;
 
-    flex-shrink:0;
+    border-radius:50%;
 
     background:#edf7f0;
-
-    color:#075b2a;
 
     font-size:25px;
 }
 
 .status-card h3{
 
-    margin:0 0 5px;
+    margin:
+        0 0 6px;
 
     color:#07391c;
 
@@ -422,193 +451,214 @@ select{
 
     margin:0;
 
-    color:#69766e;
-
-    line-height:1.6;
+    color:#68756d;
 
     font-size:13px;
+
+    line-height:1.65;
 }
 
 
-/* =====================================================
-   WARDS
-===================================================== */
+/* =========================================================
+   WARD GRID
+   ========================================================= */
 
 .ward-grid{
 
     display:grid;
 
     grid-template-columns:
-        repeat(2,minmax(0,1fr));
+        repeat(3,minmax(0,1fr));
 
     gap:18px;
 }
 
 .ward-card{
 
+    position:relative;
+
+    padding:24px;
+
     background:white;
 
     border:
-        1px solid #e1e9e3;
+        1px solid #e0e9e3;
 
     border-radius:20px;
-
-    padding:24px;
 
     box-shadow:
         0 8px 25px rgba(0,0,0,.05);
 
-    transition:.2s ease;
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
 }
 
 .ward-card:hover{
 
-    transform:translateY(-3px);
+    transform:
+        translateY(-4px);
 
     box-shadow:
-        0 14px 32px rgba(0,0,0,.08);
+        0 14px 34px rgba(0,0,0,.09);
 }
 
-.ward-top{
+.ward-number{
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:15px;
-
-    margin-bottom:15px;
-}
-
-.ward-code{
-
-    width:48px;
-    height:48px;
+    width:52px;
+    height:52px;
 
     display:grid;
     place-items:center;
 
-    border-radius:14px;
+    margin-bottom:18px;
+
+    border-radius:15px;
 
     background:#edf7f0;
 
     color:#075b2a;
+
+    font-size:17px;
 
     font-weight:1000;
 }
 
 .ward-card h3{
 
-    margin:0;
+    margin:
+        0 0 7px;
 
     color:#07391c;
 
-    font-size:18px;
+    font-size:19px;
+
+    font-weight:1000;
 }
 
 .ward-card p{
 
-    margin:4px 0 0;
+    margin:0;
 
-    color:#78837c;
+    color:#758078;
 
     font-size:12px;
+
+    line-height:1.6;
 }
 
 .ward-status{
 
     display:inline-block;
 
-    padding:7px 10px;
+    margin-top:17px;
+
+    padding:
+        7px 10px;
 
     border-radius:50px;
 
-    background:#f3f5f3;
+    background:#f2f4f2;
 
-    color:#68736b;
+    color:#6b756e;
 
-    font-size:10px;
+    font-size:9px;
 
-    font-weight:900;
+    font-weight:1000;
+
+    letter-spacing:.4px;
 
     text-transform:uppercase;
 }
 
 
-/* =====================================================
+/* =========================================================
    SEARCH
-===================================================== */
+   ========================================================= */
 
-.search-box{
+.search-area{
 
-    background:white;
+    background:#edf5ef;
+}
+
+.search-card{
+
+    max-width:900px;
+
+    margin:auto;
 
     padding:25px;
 
-    border-radius:20px;
+    background:white;
 
     border:
-        1px solid #e1e9e3;
+        1px solid #e0e9e3;
+
+    border-radius:20px;
 
     box-shadow:
         0 8px 25px rgba(0,0,0,.05);
-
-    margin-bottom:25px;
 }
 
-.search-box label{
+.search-card label{
 
     display:block;
+
+    margin-bottom:9px;
 
     color:#07391c;
 
     font-size:13px;
 
     font-weight:900;
-
-    margin-bottom:8px;
 }
 
 .search-input{
 
     width:100%;
 
+    padding:
+        14px 15px;
+
     border:
         2px solid #dce7df;
 
     border-radius:12px;
 
-    padding:14px 15px;
-
     outline:none;
 
-    color:#15251b;
-
     background:#fbfdfb;
+
+    color:#17241b;
+
+    transition:.2s ease;
 }
 
 .search-input:focus{
 
     border-color:#075b2a;
+
+    box-shadow:
+        0 0 0 3px rgba(7,91,42,.08);
 }
 
 
-/* =====================================================
+/* =========================================================
    RESULT TABLE
-===================================================== */
+   ========================================================= */
 
 .table-wrap{
+
+    margin-top:25px;
 
     overflow-x:auto;
 
     background:white;
 
-    border-radius:20px;
-
     border:
         1px solid #e0e9e3;
+
+    border-radius:20px;
 
     box-shadow:
         0 8px 25px rgba(0,0,0,.05);
@@ -618,38 +668,40 @@ select{
 
     width:100%;
 
-    min-width:650px;
+    min-width:700px;
 
     border-collapse:collapse;
 }
 
 .results-table th{
 
+    padding:16px;
+
     background:#07391c;
 
     color:white;
 
-    padding:15px;
-
     text-align:left;
 
-    font-size:11px;
+    font-size:10px;
+
+    font-weight:1000;
+
+    letter-spacing:.5px;
 
     text-transform:uppercase;
-
-    letter-spacing:.4px;
 }
 
 .results-table td{
 
-    padding:16px 15px;
+    padding:16px;
 
     border-bottom:
         1px solid #edf1ee;
 
-    font-size:13px;
+    color:#5f6c64;
 
-    color:#59665e;
+    font-size:13px;
 }
 
 .results-table tr:last-child td{
@@ -657,17 +709,39 @@ select{
     border-bottom:0;
 }
 
-.pending{
+.awaiting{
 
-    color:#8a6510;
+    display:inline-block;
 
-    font-weight:900;
+    padding:
+        6px 9px;
+
+    border-radius:50px;
+
+    background:#fff6da;
+
+    color:#80620c;
+
+    font-size:10px;
+
+    font-weight:1000;
+}
+
+.no-results{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#78837c;
+
+    display:none;
 }
 
 
-/* =====================================================
-   OFFICIAL INFORMATION
-===================================================== */
+/* =========================================================
+   INFORMATION CARDS
+   ========================================================= */
 
 .info-grid{
 
@@ -681,62 +755,64 @@ select{
 
 .info-card{
 
-    background:white;
-
-    border-radius:20px;
-
     padding:25px;
 
+    background:white;
+
     border:
-        1px solid #e1e9e3;
+        1px solid #e0e9e3;
+
+    border-radius:20px;
 }
 
-.info-card .icon{
+.info-icon{
 
-    font-size:30px;
+    font-size:29px;
 
     margin-bottom:15px;
 }
 
 .info-card h3{
 
-    color:#07391c;
+    margin:
+        0 0 9px;
 
-    margin:0 0 8px;
+    color:#07391c;
 
     font-size:17px;
 }
 
 .info-card p{
 
-    color:#69766e;
+    margin:0;
 
-    line-height:1.7;
+    color:#68756d;
 
     font-size:13px;
 
-    margin:0;
+    line-height:1.7;
 }
 
 
-/* =====================================================
+/* =========================================================
    CTA
-===================================================== */
+   ========================================================= */
 
 .cta{
 
-    padding:75px 5%;
-
-    text-align:center;
-
-    color:white;
+    padding:
+        75px 5%;
 
     background:
         linear-gradient(
             135deg,
-            #032713,
+            #021c0d,
             #075b2a
         );
+
+    color:white;
+
+    text-align:center;
 }
 
 .cta-inner{
@@ -748,7 +824,8 @@ select{
 
 .cta h2{
 
-    margin:0 0 14px;
+    margin:
+        0 0 14px;
 
     font-size:
         clamp(30px,5vw,48px);
@@ -763,8 +840,12 @@ select{
 
 .cta p{
 
+    margin:0;
+
     color:
         rgba(255,255,255,.78);
+
+    font-size:14px;
 
     line-height:1.7;
 }
@@ -782,15 +863,32 @@ select{
     margin-top:25px;
 }
 
-.cta-buttons a{
+.cta-button{
 
-    padding:13px 20px;
+    display:inline-flex;
 
-    border-radius:10px;
+    align-items:center;
 
-    font-weight:900;
+    justify-content:center;
 
-    font-size:13px;
+    min-height:46px;
+
+    padding:
+        0 19px;
+
+    border-radius:11px;
+
+    font-size:12px;
+
+    font-weight:1000;
+
+    transition:.2s ease;
+}
+
+.cta-button:hover{
+
+    transform:
+        translateY(-2px);
 }
 
 .cta-primary{
@@ -808,18 +906,34 @@ select{
 }
 
 
-/* =====================================================
+/* =========================================================
    MOBILE
-===================================================== */
+   ========================================================= */
 
-@media(max-width:800px){
+@media(max-width:850px){
+
+    .ward-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+    .info-grid{
+
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+@media(max-width:600px){
 
     .results-hero{
 
-        min-height:450px;
+        min-height:430px;
 
         padding:
-            65px 18px;
+            65px 16px;
     }
 
     .results-hero h1{
@@ -827,47 +941,74 @@ select{
         letter-spacing:-1px;
     }
 
-    .election-date-card{
+    .election-card{
 
         margin:
-            -45px 15px 0;
+            -45px 14px 0;
 
-        padding:25px 18px;
+        padding:
+            24px 15px;
     }
 
     .countdown{
 
         grid-template-columns:
             repeat(2,1fr);
+
+        gap:10px;
     }
 
     .section{
 
         padding:
-            55px 15px;
+            55px 14px;
     }
 
     .ward-grid{
 
-        grid-template-columns:1fr;
-    }
-
-    .info-grid{
-
-        grid-template-columns:1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .status-card{
 
         align-items:flex-start;
+
+        padding:20px;
+    }
+
+    .status-icon{
+
+        width:48px;
+        height:48px;
+
+        font-size:20px;
+    }
+
+    .cta{
+
+        padding:
+            60px 15px;
+    }
+
+    .cta-buttons{
+
+        flex-direction:column;
+
+        align-items:stretch;
+    }
+
+    .cta-button{
+
+        width:100%;
     }
 
 }
 
 
-/* =====================================================
+/* =========================================================
    ACCESSIBILITY
-===================================================== */
+   ========================================================= */
 
 :focus-visible{
 
@@ -885,27 +1026,27 @@ select{
 <body>
 
 
-<!-- =====================================================
+<!-- =========================================================
      HERO
-===================================================== -->
+     ========================================================= -->
 
 <section class="results-hero">
 
     <div class="results-hero-content">
 
-        <span class="hero-badge">
+        <div class="hero-badge">
             🗳️ IMOLE 2027 ELECTION CENTRE
-        </span>
+        </div>
 
         <h1>
             OJO CONSTITUENCY II
-            <span>2027</span>
+            <span>RESULTS</span>
         </h1>
 
         <p>
-            Follow the IMOLE 2027 Election Centre for
-            election-day information, constituency updates
-            and results when they are officially available.
+            Follow this page for election information,
+            ward updates and results when official
+            information becomes available.
         </p>
 
     </div>
@@ -913,55 +1054,98 @@ select{
 </section>
 
 
-<!-- =====================================================
-     ELECTION DATE
-===================================================== -->
+<!-- =========================================================
+     ELECTION DATE + COUNTDOWN
+     ========================================================= -->
 
-<div class="election-date-card">
+<section>
 
-    <div class="election-label">
-        Scheduled Election Day
+    <div class="election-card">
+
+        <div class="election-label">
+            Scheduled Election Day
+        </div>
+
+        <div class="election-date">
+            Saturday, February 6, 2027
+        </div>
+
+        <p class="election-description">
+            Governorship / State House of Assembly Election
+        </p>
+
+
+        <div class="countdown">
+
+            <div class="count-box">
+
+                <span
+                    class="count-number"
+                    id="days">
+                    --
+                </span>
+
+                <span class="count-label">
+                    Days
+                </span>
+
+            </div>
+
+
+            <div class="count-box">
+
+                <span
+                    class="count-number"
+                    id="hours">
+                    --
+                </span>
+
+                <span class="count-label">
+                    Hours
+                </span>
+
+            </div>
+
+
+            <div class="count-box">
+
+                <span
+                    class="count-number"
+                    id="minutes">
+                    --
+                </span>
+
+                <span class="count-label">
+                    Minutes
+                </span>
+
+            </div>
+
+
+            <div class="count-box">
+
+                <span
+                    class="count-number"
+                    id="seconds">
+                    --
+                </span>
+
+                <span class="count-label">
+                    Seconds
+                </span>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="election-date">
-        Saturday, February 6, 2027
-    </div>
-
-    <p class="election-subtitle">
-        Governorship / State House of Assembly Election
-    </p>
+</section>
 
 
-    <div class="countdown">
-
-        <div class="count-box">
-            <strong id="days">--</strong>
-            <span>Days</span>
-        </div>
-
-        <div class="count-box">
-            <strong id="hours">--</strong>
-            <span>Hours</span>
-        </div>
-
-        <div class="count-box">
-            <strong id="minutes">--</strong>
-            <span>Minutes</span>
-        </div>
-
-        <div class="count-box">
-            <strong id="seconds">--</strong>
-            <span>Seconds</span>
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
+<!-- =========================================================
      RESULTS STATUS
-===================================================== -->
+     ========================================================= -->
 
 <section class="section">
 
@@ -970,17 +1154,17 @@ select{
         <div class="heading">
 
             <small>
-                Election Updates
+                Official Updates
             </small>
 
             <h2>
-                Results Centre
+                Election Results Centre
             </h2>
 
             <p>
-                This page is prepared for official result
-                updates. No unofficial or fabricated result
-                figures will be displayed.
+                Results will be displayed here when they
+                are officially available. This website will
+                not publish fabricated or unverified figures.
             </p>
 
         </div>
@@ -1000,8 +1184,8 @@ select{
 
                 <p id="statusMessage">
                     The election has not yet taken place.
-                    Official results will be published here
-                    when they become available.
+                    Official result information can be added
+                    to this page after the election.
                 </p>
 
             </div>
@@ -1010,8 +1194,8 @@ select{
 
 
         <!-- =================================================
-             WARDS
-        ================================================== -->
+             SIX WARDS
+             ================================================= -->
 
         <div class="heading">
 
@@ -1020,12 +1204,12 @@ select{
             </small>
 
             <h2>
-                Constituency Wards
+                Six Wards
             </h2>
 
             <p>
-                Election information will be organized
-                by ward as results become available.
+                Results and election updates will be
+                organized according to these six wards.
             </p>
 
         </div>
@@ -1034,157 +1218,158 @@ select{
         <div class="ward-grid">
 
 
-            <article
-                class="ward-card"
-                data-ward="Ijanikin">
-
-                <div class="ward-top">
-
-                    <div>
-
-                        <div class="ward-code">
-                            D
-                        </div>
-
-                    </div>
-
-                    <span class="ward-status">
-                        Awaiting Results
-                    </span>
-
-                </div>
-
-                <h3>
-                    Ijanikin
-                </h3>
-
-                <p>
-                    Ward D
-                </p>
-
-            </article>
-
+            <!-- 1 -->
 
             <article
                 class="ward-card"
                 data-ward="Ilogbo">
 
-                <div class="ward-top">
-
-                    <div>
-
-                        <div class="ward-code">
-                            F
-                        </div>
-
-                    </div>
-
-                    <span class="ward-status">
-                        Awaiting Results
-                    </span>
-
+                <div class="ward-number">
+                    01
                 </div>
 
                 <h3>
-                    Ilogbo
+                    Ilogbo Ward
                 </h3>
 
                 <p>
-                    Ward F
+                    Election information and official
+                    results for Ilogbo Ward.
                 </p>
+
+                <span class="ward-status">
+                    Awaiting Results
+                </span>
 
             </article>
 
+
+            <!-- 2 -->
 
             <article
                 class="ward-card"
                 data-ward="Irewe">
 
-                <div class="ward-top">
-
-                    <div>
-
-                        <div class="ward-code">
-                            G
-                        </div>
-
-                    </div>
-
-                    <span class="ward-status">
-                        Awaiting Results
-                    </span>
-
+                <div class="ward-number">
+                    02
                 </div>
 
                 <h3>
-                    Irewe
+                    Irewe Ward
                 </h3>
 
                 <p>
-                    Ward G
+                    Election information and official
+                    results for Irewe Ward.
                 </p>
+
+                <span class="ward-status">
+                    Awaiting Results
+                </span>
 
             </article>
 
+
+            <!-- 3 -->
+
+            <article
+                class="ward-card"
+                data-ward="Ijanikin">
+
+                <div class="ward-number">
+                    03
+                </div>
+
+                <h3>
+                    Ijanikin Ward
+                </h3>
+
+                <p>
+                    Election information and official
+                    results for Ijanikin Ward.
+                </p>
+
+                <span class="ward-status">
+                    Awaiting Results
+                </span>
+
+            </article>
+
+
+            <!-- 4 -->
 
             <article
                 class="ward-card"
                 data-ward="Etegbin">
 
-                <div class="ward-top">
-
-                    <div>
-
-                        <div class="ward-code">
-                            I
-                        </div>
-
-                    </div>
-
-                    <span class="ward-status">
-                        Awaiting Results
-                    </span>
-
+                <div class="ward-number">
+                    04
                 </div>
 
                 <h3>
-                    Etegbin
+                    Etegbin Ward
                 </h3>
 
                 <p>
-                    Ward I
+                    Election information and official
+                    results for Etegbin Ward.
                 </p>
+
+                <span class="ward-status">
+                    Awaiting Results
+                </span>
 
             </article>
 
 
+            <!-- 5 -->
+
             <article
                 class="ward-card"
-                data-ward="Idoluwo">
+                data-ward="Idolowu">
 
-                <div class="ward-top">
-
-                    <div>
-
-                        <div class="ward-code">
-                            J
-                        </div>
-
-                    </div>
-
-                    <span class="ward-status">
-                        Awaiting Results
-                    </span>
-
+                <div class="ward-number">
+                    05
                 </div>
 
                 <h3>
-                    Idoluwo
+                    Idolowu Ward
                 </h3>
 
                 <p>
-                    Ward J
+                    Election information and official
+                    results for Idolowu Ward.
                 </p>
+
+                <span class="ward-status">
+                    Awaiting Results
+                </span>
+
+            </article>
+
+
+            <!-- 6 -->
+
+            <article
+                class="ward-card"
+                data-ward="Tafi">
+
+                <div class="ward-number">
+                    06
+                </div>
+
+                <h3>
+                    Tafi Ward
+                </h3>
+
+                <p>
+                    Election information and official
+                    results for Tafi Ward.
+                </p>
+
+                <span class="ward-status">
+                    Awaiting Results
+                </span>
 
             </article>
 
@@ -1196,12 +1381,11 @@ select{
 </section>
 
 
-<!-- =====================================================
-     RESULT SEARCH
-===================================================== -->
+<!-- =========================================================
+     SEARCHABLE RESULTS
+     ========================================================= -->
 
-<section class="section"
-         style="background:#edf5ef;">
+<section class="section search-area">
 
     <div class="container">
 
@@ -1212,29 +1396,30 @@ select{
             </small>
 
             <h2>
-                Search Result Updates
+                Search Election Updates
             </h2>
 
             <p>
-                Search by ward or polling unit when official
-                results are published.
+                Search the six wards below. Polling-unit
+                results can be added as they become official.
             </p>
 
         </div>
 
 
-        <div class="search-box">
+        <div class="search-card">
 
             <label for="resultSearch">
-                Search Ward / Polling Unit
+                Search Ward
             </label>
 
             <input
+                type="search"
                 id="resultSearch"
                 class="search-input"
-                type="search"
-                placeholder="Example: Ijanikin, Ilogbo, PU 001..."
+                placeholder="Search Ilogbo, Irewe, Ijanikin..."
                 autocomplete="off"
+                aria-label="Search election results"
             >
 
         </div>
@@ -1253,15 +1438,11 @@ select{
                         </th>
 
                         <th>
-                            Polling Unit
+                            Election Status
                         </th>
 
                         <th>
-                            Status
-                        </th>
-
-                        <th>
-                            Result
+                            Official Result
                         </th>
 
                     </tr>
@@ -1269,24 +1450,24 @@ select{
                 </thead>
 
 
-                <tbody id="resultTableBody">
+                <tbody
+                    id="resultTableBody">
 
 
-                    <tr
-                        data-search="Ijanikin Ward D">
+                    <tr data-search="Ilogbo">
 
                         <td>
-                            Ijanikin
+                            <strong>
+                                Ilogbo Ward
+                            </strong>
                         </td>
 
                         <td>
-                            Ward D — Polling Units
-                        </td>
 
-                        <td>
-                            <span class="pending">
+                            <span class="awaiting">
                                 Awaiting
                             </span>
+
                         </td>
 
                         <td>
@@ -1296,21 +1477,20 @@ select{
                     </tr>
 
 
-                    <tr
-                        data-search="Ilogbo Ward F">
+                    <tr data-search="Irewe">
 
                         <td>
-                            Ilogbo
+                            <strong>
+                                Irewe Ward
+                            </strong>
                         </td>
 
                         <td>
-                            Ward F — Polling Units
-                        </td>
 
-                        <td>
-                            <span class="pending">
+                            <span class="awaiting">
                                 Awaiting
                             </span>
+
                         </td>
 
                         <td>
@@ -1320,21 +1500,20 @@ select{
                     </tr>
 
 
-                    <tr
-                        data-search="Irewe Ward G">
+                    <tr data-search="Ijanikin">
 
                         <td>
-                            Irewe
+                            <strong>
+                                Ijanikin Ward
+                            </strong>
                         </td>
 
                         <td>
-                            Ward G — Polling Units
-                        </td>
 
-                        <td>
-                            <span class="pending">
+                            <span class="awaiting">
                                 Awaiting
                             </span>
+
                         </td>
 
                         <td>
@@ -1344,21 +1523,20 @@ select{
                     </tr>
 
 
-                    <tr
-                        data-search="Etegbin Ward I">
+                    <tr data-search="Etegbin">
 
                         <td>
-                            Etegbin
+                            <strong>
+                                Etegbin Ward
+                            </strong>
                         </td>
 
                         <td>
-                            Ward I — Polling Units
-                        </td>
 
-                        <td>
-                            <span class="pending">
+                            <span class="awaiting">
                                 Awaiting
                             </span>
+
                         </td>
 
                         <td>
@@ -1368,21 +1546,43 @@ select{
                     </tr>
 
 
-                    <tr
-                        data-search="Idoluwo Ward J">
+                    <tr data-search="Idolowu">
 
                         <td>
-                            Idoluwo
+                            <strong>
+                                Idolowu Ward
+                            </strong>
                         </td>
 
                         <td>
-                            Ward J — Polling Units
-                        </td>
 
-                        <td>
-                            <span class="pending">
+                            <span class="awaiting">
                                 Awaiting
                             </span>
+
+                        </td>
+
+                        <td>
+                            —
+                        </td>
+
+                    </tr>
+
+
+                    <tr data-search="Tafi">
+
+                        <td>
+                            <strong>
+                                Tafi Ward
+                            </strong>
+                        </td>
+
+                        <td>
+
+                            <span class="awaiting">
+                                Awaiting
+                            </span>
+
                         </td>
 
                         <td>
@@ -1396,6 +1596,15 @@ select{
 
             </table>
 
+
+            <div
+                class="no-results"
+                id="noResults">
+
+                No matching ward found.
+
+            </div>
+
         </div>
 
     </div>
@@ -1403,9 +1612,9 @@ select{
 </section>
 
 
-<!-- =====================================================
-     OFFICIAL INFORMATION
-===================================================== -->
+<!-- =========================================================
+     ELECTION INFORMATION
+     ========================================================= -->
 
 <section class="section">
 
@@ -1414,16 +1623,16 @@ select{
         <div class="heading">
 
             <small>
-                Voter Information
+                Election Day
             </small>
 
             <h2>
-                Election Day Information
+                Important Information
             </h2>
 
             <p>
-                Always verify election information through
-                official INEC channels.
+                Stay informed and follow official election
+                instructions.
             </p>
 
         </div>
@@ -1434,18 +1643,18 @@ select{
 
             <article class="info-card">
 
-                <div class="icon">
+                <div class="info-icon">
                     🪪
                 </div>
 
                 <h3>
-                    PVC
+                    Permanent Voter's Card
                 </h3>
 
                 <p>
-                    Ensure you have your Permanent Voter's
-                    Card and follow official INEC instructions
-                    before election day.
+                    Voters should keep their PVC and follow
+                    official INEC guidance regarding voting
+                    arrangements.
                 </p>
 
             </article>
@@ -1453,17 +1662,17 @@ select{
 
             <article class="info-card">
 
-                <div class="icon">
+                <div class="info-icon">
                     🗳️
                 </div>
 
                 <h3>
-                    Your Vote
+                    Vote Peacefully
                 </h3>
 
                 <p>
-                    Vote peacefully and independently.
-                    Follow instructions from authorized
+                    Exercise your democratic right peacefully
+                    and follow instructions from authorized
                     election officials.
                 </p>
 
@@ -1472,7 +1681,7 @@ select{
 
             <article class="info-card">
 
-                <div class="icon">
+                <div class="info-icon">
                     📊
                 </div>
 
@@ -1481,10 +1690,9 @@ select{
                 </h3>
 
                 <p>
-                    Results published on this page should be
-                    treated as campaign information and should
-                    be cross-checked against official INEC
-                    result channels.
+                    Result figures published on this campaign
+                    website should be cross-checked with
+                    official election authorities.
                 </p>
 
             </article>
@@ -1497,30 +1705,32 @@ select{
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      CTA
-===================================================== -->
+     ========================================================= -->
 
 <section class="cta">
 
     <div class="cta-inner">
 
         <h2>
-            FOLLOW THE
+            JOIN THE
             <span>IMOLE MOVEMENT</span>
         </h2>
 
         <p>
-            Stay connected with campaign news, events,
-            media updates and election information.
+            Stay connected with Hon. Nurudeen Abayomi Sadeeq's
+            campaign, upcoming events, news, media and
+            constituency activities.
         </p>
 
 
         <div class="cta-buttons">
 
+
             <a
                 href="join.html"
-                class="cta-primary">
+                class="cta-button cta-primary">
 
                 🤝 Join IMOLE
 
@@ -1529,7 +1739,7 @@ select{
 
             <a
                 href="support.html"
-                class="cta-secondary">
+                class="cta-button cta-secondary">
 
                 ❤️ Support IMOLE
 
@@ -1538,11 +1748,21 @@ select{
 
             <a
                 href="polling-units.html"
-                class="cta-secondary">
+                class="cta-button cta-secondary">
 
                 📍 Polling Units
 
             </a>
+
+
+            <a
+                href="index.html"
+                class="cta-button cta-secondary">
+
+                🏠 Home
+
+            </a>
+
 
         </div>
 
@@ -1551,16 +1771,16 @@ select{
 </section>
 
 
-<!-- =====================================================
-     UNIVERSAL WEBSITE SYSTEM
-===================================================== -->
+<!-- =========================================================
+     UNIVERSAL SITE.JS
+     ========================================================= -->
 
 <script src="site.js?v=20260831"></script>
 
 
-<!-- =====================================================
+<!-- =========================================================
      COUNTDOWN
-===================================================== -->
+     ========================================================= -->
 
 <script>
 
@@ -1570,10 +1790,12 @@ select{
 
 
     /*
-      INEC scheduled election date:
-      February 6, 2027.
+       IMOLE 2027
+       Election Day:
+       Saturday, February 6, 2027
 
-      Using local time for the visitor's browser.
+       08:30 is used as the countdown reference time.
+       The date itself remains February 6, 2027.
     */
 
     const electionDate =
@@ -1583,16 +1805,24 @@ select{
 
 
     const days =
-        document.getElementById("days");
+        document.getElementById(
+            "days"
+        );
 
     const hours =
-        document.getElementById("hours");
+        document.getElementById(
+            "hours"
+        );
 
     const minutes =
-        document.getElementById("minutes");
+        document.getElementById(
+            "minutes"
+        );
 
     const seconds =
-        document.getElementById("seconds");
+        document.getElementById(
+            "seconds"
+        );
 
 
     function updateCountdown(){
@@ -1600,23 +1830,35 @@ select{
         const now =
             new Date();
 
+
         const difference =
             electionDate.getTime()
             -
             now.getTime();
 
 
-        if(difference <= 0){
+        if(
+            difference <= 0
+        ){
 
-            days.textContent = "0";
-            hours.textContent = "0";
-            minutes.textContent = "0";
-            seconds.textContent = "0";
+            days.textContent =
+                "0";
+
+            hours.textContent =
+                "0";
+
+            minutes.textContent =
+                "0";
+
+            seconds.textContent =
+                "0";
+
 
             const status =
                 document.getElementById(
                     "resultStatus"
                 );
+
 
             const message =
                 document.getElementById(
@@ -1627,7 +1869,7 @@ select{
             if(status){
 
                 status.textContent =
-                    "Election Day Has Arrived";
+                    "Election Day";
 
             }
 
@@ -1635,9 +1877,10 @@ select{
             if(message){
 
                 message.textContent =
-                    "Election-day updates can now be published here as official information becomes available.";
+                    "Election-day information and official result updates can now be published here.";
 
             }
+
 
             return;
 
@@ -1658,15 +1901,17 @@ select{
 
         const h =
             Math.floor(
-                (totalSeconds % 86400)
-                / 3600
+                (
+                    totalSeconds % 86400
+                ) / 3600
             );
 
 
         const m =
             Math.floor(
-                (totalSeconds % 3600)
-                / 60
+                (
+                    totalSeconds % 3600
+                ) / 60
             );
 
 
@@ -1678,18 +1923,22 @@ select{
             String(d);
 
         hours.textContent =
-            String(h).padStart(2,"0");
+            String(h)
+                .padStart(2,"0");
 
         minutes.textContent =
-            String(m).padStart(2,"0");
+            String(m)
+                .padStart(2,"0");
 
         seconds.textContent =
-            String(s).padStart(2,"0");
+            String(s)
+                .padStart(2,"0");
 
     }
 
 
     updateCountdown();
+
 
     setInterval(
         updateCountdown,
@@ -1699,16 +1948,20 @@ select{
 })();
 
 
-/* =====================================================
-   RESULT SEARCH
-===================================================== */
+/* =========================================================
+   WARD SEARCH
+   ========================================================= */
 
 (function(){
+
+    "use strict";
+
 
     const input =
         document.getElementById(
             "resultSearch"
         );
+
 
     const rows =
         document.querySelectorAll(
@@ -1716,7 +1969,15 @@ select{
         );
 
 
-    if(!input) return;
+    const noResults =
+        document.getElementById(
+            "noResults"
+        );
+
+
+    if(!input){
+        return;
+    }
 
 
     input.addEventListener(
@@ -1729,10 +1990,14 @@ select{
                     .toLowerCase();
 
 
+            let visible =
+                0;
+
+
             rows.forEach(
                 function(row){
 
-                    const text =
+                    const searchable =
                         (
                             row.dataset.search
                             ||
@@ -1741,14 +2006,35 @@ select{
                         .toLowerCase();
 
 
-                    row.style.display =
+                    if(
                         !query ||
-                        text.includes(query)
-                            ? ""
-                            : "none";
+                        searchable.includes(query)
+                    ){
+
+                        row.style.display =
+                            "";
+
+                        visible++;
+
+                    }else{
+
+                        row.style.display =
+                            "none";
+
+                    }
 
                 }
             );
+
+
+            if(noResults){
+
+                noResults.style.display =
+                    visible === 0
+                        ? "block"
+                        : "none";
+
+            }
 
         }
     );
