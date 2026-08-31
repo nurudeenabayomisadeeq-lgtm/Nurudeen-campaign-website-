@@ -1,1236 +1,383 @@
 /* =========================================================
-   IMOLE 2027 — UNIVERSAL WEBSITE SYSTEM
-   Version: 2026.08.31
-   GitHub Pages compatible
+   IMOLE 2027 - SITE.JS
+   GitHub Pages / Static Website Version
+   Cache-safe navigation and service-worker cleanup
    ========================================================= */
 
 (function () {
     "use strict";
 
-    const SITE_VERSION = "2026.08.31";
-
-    /* =====================================================
-       GITHUB PAGES SAFE PATH SYSTEM
-       ===================================================== */
-
-    /*
-       IMPORTANT:
-       Your website is hosted inside this repository:
-
-       /Nurudeen-campaign-website-/
-
-       We therefore use RELATIVE paths.
-
-       Do NOT use:
-       /
-       ../
-       Netlify URLs
-       old campaign URLs
-
-       The homepage is always:
-       ./index.html
-    */
-
-    const PAGES = {
-        home: "./index.html",
-        about: "./about.html",
-        manifesto: "./manifesto.html",
-        polling: "./polling-units.html",
-        results: "./results.html",
-        news: "./news.html",
-        events: "./events.html",
-        gallery: "./gallery.html",
-        media: "./media.html",
-        contact: "./contact.html",
-        join: "./join.html",
-        support: "./support.html"
-    };
-
-
-    /* =====================================================
-       EXACT ASSET PATHS
-       ===================================================== */
-
-    const ASSETS = {
-
-        logo:
-            "./assets/IMG-20260728-WA0032.jpg",
-
-        candidate:
-            "./assets/IMG-20260710-WA0004.jpg"
-
-    };
-
-
-    /* =====================================================
-       CAMPAIGN INFORMATION
-       ===================================================== */
-
-    const CAMPAIGN = {
-
-        candidate:
-            "Hon. Nurudeen Abayomi Sadeeq",
-
-        party:
-            "Nigeria Democratic Congress (NDC)",
-
-        constituency:
-            "Lagos State House of Assembly — Ojo Constituency II",
-
-        electionDate:
-            "February 6, 2027",
-
-        whatsapp:
-            "2348033002235",
-
-        wards: [
-            "Ilogbo Ward",
-            "Irewe Ward",
-            "Ijanikin Ward",
-            "Etegbin Ward",
-            "Idolowu Ward",
-            "Tafi Ward"
-        ]
-
-    };
-
-
-    /* =====================================================
-       UNIVERSAL HEADER
-       ===================================================== */
-
-    const navigationHTML = `
-
-        <div class="imo-topbar">
-            IMOLE 2027
-            •
-            SERVICE
-            •
-            DEVELOPMENT
-            •
-            ACCOUNTABILITY
-        </div>
-
-
-        <header class="imo-header">
-
-            <div class="imo-nav-container">
-
-                <a
-                    href="${PAGES.home}"
-                    class="imo-brand"
-                    data-home-link
-                    aria-label="IMOLE 2027 Home"
-                >
-
-                    <img
-                        class="imo-logo"
-                        data-logo
-                        src="${ASSETS.logo}"
-                        alt="Nigeria Democratic Congress Logo"
-                    >
-
-                    <span class="imo-brand-text">
-
-                        <strong>
-                            IMOLE 2027
-                        </strong>
-
-                        <small>
-                            NURUDEEN ABAYOMI SADEEQ
-                        </small>
-
-                    </span>
-
-                </a>
-
-
-                <nav class="imo-desktop-menu">
-
-                    <a
-                        href="${PAGES.home}"
-                        data-home-link
-                    >
-                        Home
-                    </a>
-
-                    <a href="${PAGES.about}">
-                        About
-                    </a>
-
-                    <a href="${PAGES.manifesto}">
-                        Manifesto
-                    </a>
-
-                    <a href="${PAGES.polling}">
-                        Polling Units
-                    </a>
-
-                    <a href="${PAGES.results}">
-                        Results
-                    </a>
-
-                    <a href="${PAGES.news}">
-                        News
-                    </a>
-
-                    <a href="${PAGES.events}">
-                        Events
-                    </a>
-
-                    <a href="${PAGES.gallery}">
-                        Gallery
-                    </a>
-
-                    <a href="${PAGES.media}">
-                        Media
-                    </a>
-
-                    <a href="${PAGES.contact}">
-                        Contact
-                    </a>
-
-                    <a
-                        href="${PAGES.join}"
-                        class="imo-nav-join"
-                    >
-                        Join Us
-                    </a>
-
-                    <a
-                        href="${PAGES.support}"
-                        class="imo-nav-support"
-                    >
-                        Support
-                    </a>
-
-                </nav>
-
-
-                <button
-                    class="imo-menu-button"
-                    id="imoMenuButton"
-                    type="button"
-                    aria-label="Open menu"
-                    aria-expanded="false"
-                >
-                    ☰
-                </button>
-
-            </div>
-
-
-            <nav
-                class="imo-mobile-menu"
-                id="imoMobileMenu"
-                aria-label="Mobile navigation"
-            >
-
-                <a
-                    href="${PAGES.home}"
-                    data-home-link
-                >
-                    🏠 Home
-                </a>
-
-                <a href="${PAGES.about}">
-                    👤 About
-                </a>
-
-                <a href="${PAGES.manifesto}">
-                    📜 Manifesto
-                </a>
-
-                <a href="${PAGES.polling}">
-                    📍 Polling Units
-                </a>
-
-                <a href="${PAGES.results}">
-                    📊 Results
-                </a>
-
-                <a href="${PAGES.news}">
-                    📰 News
-                </a>
-
-                <a href="${PAGES.events}">
-                    📅 Events
-                </a>
-
-                <a href="${PAGES.gallery}">
-                    📸 Gallery
-                </a>
-
-                <a href="${PAGES.media}">
-                    🎵 Media
-                </a>
-
-                <a href="${PAGES.contact}">
-                    📞 Contact
-                </a>
-
-                <a href="${PAGES.join}">
-                    🤝 Join IMOLE
-                </a>
-
-                <a href="${PAGES.support}">
-                    ❤️ Support
-                </a>
-
-            </nav>
-
-        </header>
-    `;
-
-
-    /* =====================================================
-       UNIVERSAL FOOTER
-       ===================================================== */
-
-    const footerHTML = `
-
-        <footer class="imo-footer">
-
-            <div class="imo-footer-container">
-
-
-                <div class="imo-footer-column">
-
-                    <div class="imo-footer-brand">
-
-                        <img
-                            data-logo
-                            src="${ASSETS.logo}"
-                            alt="Nigeria Democratic Congress Logo"
-                            class="imo-footer-logo"
-                        >
-
-                        <div>
-
-                            <strong>
-                                IMOLE 2027
-                            </strong>
-
-                            <small>
-                                NURUDEEN ABAYOMI SADEEQ
-                            </small>
-
-                        </div>
-
-                    </div>
-
-
-                    <p>
-                        Official campaign website of
-                        Hon. Nurudeen Abayomi Sadeeq for
-                        Lagos State House of Assembly,
-                        Ojo Constituency II.
-                    </p>
-
-
-                    <p class="imo-footer-motto">
-                        Service • Development • Accountability
-                    </p>
-
-                </div>
-
-
-                <div class="imo-footer-column">
-
-                    <h3>
-                        Campaign
-                    </h3>
-
-                    <a
-                        href="${PAGES.home}"
-                        data-home-link
-                    >
-                        Home
-                    </a>
-
-                    <a href="${PAGES.about}">
-                        About
-                    </a>
-
-                    <a href="${PAGES.manifesto}">
-                        Manifesto
-                    </a>
-
-                    <a href="${PAGES.news}">
-                        News
-                    </a>
-
-                    <a href="${PAGES.events}">
-                        Events
-                    </a>
-
-                    <a href="${PAGES.gallery}">
-                        Gallery
-                    </a>
-
-                </div>
-
-
-                <div class="imo-footer-column">
-
-                    <h3>
-                        Information
-                    </h3>
-
-                    <a href="${PAGES.polling}">
-                        Polling Units
-                    </a>
-
-                    <a href="${PAGES.results}">
-                        Results
-                    </a>
-
-                    <a href="${PAGES.media}">
-                        Media
-                    </a>
-
-                    <a href="${PAGES.contact}">
-                        Contact
-                    </a>
-
-                    <a href="${PAGES.join}">
-                        Join IMOLE
-                    </a>
-
-                    <a href="${PAGES.support}">
-                        Support
-                    </a>
-
-                </div>
-
-
-            </div>
-
-
-            <div class="imo-copyright">
-
-                ©
-                <span data-current-year></span>
-                Hon. Nurudeen Abayomi Sadeeq Campaign.
-                All Rights Reserved.
-
-                <br>
-
-                Nigeria Democratic Congress (NDC)
-                |
-                Ojo Constituency II
-
-            </div>
-
-        </footer>
-    `;
-
-
-    /* =====================================================
-       INSTALL HEADER
-       ===================================================== */
-
-    function installNavigation() {
-
-        if (!document.body) {
-            return;
-        }
-
-
-        /*
-           Remove/hide old navigation systems.
-
-           This prevents an older header from appearing
-           above the new universal header.
-        */
-
-        document.querySelectorAll(
-            "body > header:not(.imo-header), " +
-            "body > nav:not(.imo-mobile-menu), " +
-            ".old-navigation, " +
-            ".old-header, " +
-            ".site-header"
-        ).forEach(function (element) {
-
-            element.classList.add(
-                "imo-legacy-hidden"
+    const CURRENT_VERSION = "imole-2027-v8";
+
+    /* ---------------------------------------------------------
+       1. Remove old cached website versions
+       --------------------------------------------------------- */
+    async function clearOldCaches() {
+        if (!("caches" in window)) return;
+
+        try {
+            const cacheNames = await caches.keys();
+
+            await Promise.all(
+                cacheNames
+                    .filter(name => name !== CURRENT_VERSION)
+                    .map(name => caches.delete(name))
             );
-
-        });
-
-
-        /*
-           Do not install twice.
-        */
-
-        if (
-            !document.querySelector(
-                ".imo-header"
-            )
-        ) {
-
-            document.body.insertAdjacentHTML(
-                "afterbegin",
-                navigationHTML
-            );
-
+        } catch (error) {
+            console.warn("Cache cleanup failed:", error);
         }
-
     }
 
 
-    /* =====================================================
-       INSTALL FOOTER
-       ===================================================== */
+    /* ---------------------------------------------------------
+       2. Remove old service workers
+       --------------------------------------------------------- */
+    async function removeOldServiceWorkers() {
+        if (!("serviceWorker" in navigator)) return;
 
-    function installFooter() {
+        try {
+            const registrations =
+                await navigator.serviceWorker.getRegistrations();
 
-        if (!document.body) {
-            return;
-        }
+            for (const registration of registrations) {
+                /*
+                 * Do not immediately unregister the newly installed
+                 * service worker if it belongs to the current version.
+                 */
+                const scriptURL =
+                    registration.active?.scriptURL ||
+                    registration.waiting?.scriptURL ||
+                    registration.installing?.scriptURL ||
+                    "";
 
-
-        if (
-            !document.querySelector(
-                ".imo-footer"
-            )
-        ) {
-
-            document.body.insertAdjacentHTML(
-                "beforeend",
-                footerHTML
-            );
-
-        }
-
-    }
-
-
-    /* =====================================================
-       MOBILE MENU
-       ===================================================== */
-
-    function setupMobileMenu() {
-
-        const button =
-            document.getElementById(
-                "imoMenuButton"
-            );
-
-        const menu =
-            document.getElementById(
-                "imoMobileMenu"
-            );
-
-
-        if (!button || !menu) {
-            return;
-        }
-
-
-        button.addEventListener(
-            "click",
-            function () {
-
-                const isOpen =
-                    menu.classList.toggle(
-                        "imo-open"
-                    );
-
-
-                button.setAttribute(
-                    "aria-expanded",
-                    isOpen
-                        ? "true"
-                        : "false"
-                );
-
-
-                button.setAttribute(
-                    "aria-label",
-                    isOpen
-                        ? "Close menu"
-                        : "Open menu"
-                );
-
-
-                button.innerHTML =
-                    isOpen
-                        ? "✕"
-                        : "☰";
-
-            }
-        );
-
-
-        menu.querySelectorAll(
-            "a"
-        ).forEach(function (link) {
-
-            link.addEventListener(
-                "click",
-                function () {
-
-                    menu.classList.remove(
-                        "imo-open"
-                    );
-
-
-                    button.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-
-                    button.setAttribute(
-                        "aria-label",
-                        "Open menu"
-                    );
-
-
-                    button.innerHTML =
-                        "☰";
-
+                if (!scriptURL.includes("service-worker.js")) {
+                    continue;
                 }
-            );
 
-        });
-
+                /*
+                 * The new service worker will take control itself.
+                 * Old registrations are removed if they are not
+                 * the current controller.
+                 */
+                if (
+                    navigator.serviceWorker.controller &&
+                    navigator.serviceWorker.controller.scriptURL !== scriptURL
+                ) {
+                    await registration.unregister();
+                }
+            }
+        } catch (error) {
+            console.warn("Service worker cleanup failed:", error);
+        }
     }
 
 
-    /* =====================================================
-       ROBUST HOME LINK REPAIR
-       ===================================================== */
+    /* ---------------------------------------------------------
+       3. Register the CURRENT service worker
+       --------------------------------------------------------- */
+    async function registerCurrentServiceWorker() {
+        if (!("serviceWorker" in navigator)) return;
 
-    function repairHomeLinks() {
+        try {
+            const registration =
+                await navigator.serviceWorker.register(
+                    "./service-worker.js?v=8",
+                    {
+                        scope: "./"
+                    }
+                );
 
-        /*
-           The ONLY valid homepage path is:
-
-           ./index.html
-        */
-
-        document.querySelectorAll(
-            "a[data-home-link]"
-        ).forEach(function (link) {
-
-            link.setAttribute(
-                "href",
-                PAGES.home
+            console.log(
+                "IMOLE 2027 Service Worker registered:",
+                registration.scope
             );
-
-        });
-
-
-        /*
-           Repair common old homepage links.
-        */
-
-        document.querySelectorAll(
-            "a"
-        ).forEach(function (link) {
-
-            const href =
-                link.getAttribute("href");
-
-            if (!href) {
-                return;
-            }
-
-
-            const text =
-                (
-                    link.textContent || ""
-                )
-                .trim()
-                .toLowerCase();
-
-
-            const normalized =
-                href
-                    .trim()
-                    .toLowerCase();
-
 
             /*
-               Only change obvious HOME links.
-
-               We deliberately do NOT rewrite every
-               repository URL because that could break
-               legitimate links.
-            */
-
-            const isHomeText =
-                text === "home" ||
-                text === "🏠 home" ||
-                text.includes("back home");
-
-
-            const isBadHome =
-                normalized === "/" ||
-                normalized === "../" ||
-                normalized === "./" ||
-                normalized === "home.html" ||
-                normalized === "home" ||
-                normalized.includes(
-                    "netlify.app"
-                );
-
-
-            if (
-                isHomeText &&
-                isBadHome
-            ) {
-
-                link.setAttribute(
-                    "href",
-                    PAGES.home
-                );
-
+             * Ask an updated service worker to activate immediately.
+             */
+            if (registration.waiting) {
+                registration.waiting.postMessage({
+                    type: "SKIP_WAITING"
+                });
             }
 
-        });
+            registration.addEventListener("updatefound", function () {
+                const newWorker = registration.installing;
 
-    }
+                if (!newWorker) return;
 
+                newWorker.addEventListener("statechange", function () {
+                    if (
+                        newWorker.state === "installed" &&
+                        navigator.serviceWorker.controller
+                    ) {
+                        newWorker.postMessage({
+                            type: "SKIP_WAITING"
+                        });
+                    }
+                });
+            });
 
-    /* =====================================================
-       EXACT LOGO
-       ===================================================== */
-
-    function setupLogos() {
-
-        document.querySelectorAll(
-            "[data-logo]"
-        ).forEach(function (image) {
-
-            image.src =
-                ASSETS.logo;
-
-
-            image.alt =
-                "Nigeria Democratic Congress Logo";
-
-
-            image.addEventListener(
-                "error",
-                function () {
-
-                    console.warn(
-                        "NDC logo could not be loaded:",
-                        ASSETS.logo
-                    );
-
-                }
+        } catch (error) {
+            console.warn(
+                "Current service worker could not be registered:",
+                error
             );
-
-        });
-
+        }
     }
 
 
-    /* =====================================================
-       EXACT CANDIDATE PHOTO
-       ===================================================== */
+    /* ---------------------------------------------------------
+       4. GitHub Pages-safe URL helper
+       --------------------------------------------------------- */
 
-    function setupCandidateImages() {
+    function getSiteBase() {
+        /*
+         * GitHub Pages can host either:
+         *
+         * https://username.github.io/
+         *
+         * OR
+         *
+         * https://username.github.io/repository-name/
+         *
+         * This detects the current base automatically.
+         */
 
-        document.querySelectorAll(
-            "[data-candidate-image]"
-        ).forEach(function (image) {
-
-            image.src =
-                ASSETS.candidate;
-
-
-            image.alt =
-                CAMPAIGN.candidate;
-
-
-            image.addEventListener(
-                "error",
-                function () {
-
-                    console.warn(
-                        "Candidate photo could not be loaded:",
-                        ASSETS.candidate
-                    );
-
-                }
-            );
-
-        });
-
-    }
-
-
-    /* =====================================================
-       CURRENT YEAR
-       ===================================================== */
-
-    function setupYear() {
-
-        const year =
-            new Date().getFullYear();
-
-
-        document.querySelectorAll(
-            "[data-current-year]"
-        ).forEach(function (element) {
-
-            element.textContent =
-                year;
-
-        });
-
-    }
-
-
-    /* =====================================================
-       ACTIVE PAGE
-       ===================================================== */
-
-    function setActivePage() {
-
-        let current =
-            location.pathname
-                .split("/")
-                .pop()
-                .toLowerCase();
-
+        const path = window.location.pathname;
 
         /*
-           GitHub Pages can sometimes show the
-           directory itself as the homepage.
-
-           Treat empty pathname as index.html.
-        */
-
-        if (
-            !current ||
-            current === "/"
-        ) {
-
-            current =
-                "index.html";
-
+         * If index.html is directly visible, remove it.
+         */
+        if (path.endsWith("/index.html")) {
+            return path.substring(
+                0,
+                path.lastIndexOf("/") + 1
+            );
         }
 
+        /*
+         * If another HTML file is being displayed,
+         * use its directory.
+         */
+        if (path.endsWith(".html")) {
+            return path.substring(
+                0,
+                path.lastIndexOf("/") + 1
+            );
+        }
 
-        document.querySelectorAll(
-            ".imo-desktop-menu a, " +
-            ".imo-mobile-menu a"
-        ).forEach(function (link) {
-
-            const href =
-                link.getAttribute(
-                    "href"
-                );
+        /*
+         * Normal directory URL.
+         */
+        return path.endsWith("/")
+            ? path
+            : path + "/";
+    }
 
 
-            if (!href) {
+    /* ---------------------------------------------------------
+       5. Fix Home navigation
+       --------------------------------------------------------- */
+
+    function fixHomeLinks() {
+        const links = document.querySelectorAll(
+            'a[href="index.html"], ' +
+            'a[href="./index.html"], ' +
+            'a[href="/index.html"], ' +
+            'a[href="/"], ' +
+            'a[href="#home"], ' +
+            'a[data-home]'
+        );
+
+        links.forEach(function (link) {
+
+            /*
+             * Remove old onclick handlers that may redirect
+             * visitors to an obsolete page.
+             */
+            link.removeAttribute("onclick");
+
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                const base = getSiteBase();
+
+                /*
+                 * Always go directly to the CURRENT index.html.
+                 */
+                const homeURL =
+                    window.location.origin +
+                    base +
+                    "index.html?v=" +
+                    Date.now();
+
+                window.location.replace(homeURL);
+            });
+        });
+    }
+
+
+    /* ---------------------------------------------------------
+       6. Fix normal internal HTML links
+       --------------------------------------------------------- */
+
+    function fixInternalLinks() {
+
+        const links = document.querySelectorAll(
+            'a[href$=".html"], a[href^="./"], a[href^="/"]'
+        );
+
+        links.forEach(function (link) {
+
+            const href = link.getAttribute("href");
+
+            if (!href) return;
+
+            /*
+             * Ignore:
+             * external URLs
+             * WhatsApp
+             * Facebook
+             * telephone
+             * mail
+             * anchors
+             */
+            if (
+                href.startsWith("http://") ||
+                href.startsWith("https://") ||
+                href.startsWith("mailto:") ||
+                href.startsWith("tel:") ||
+                href.startsWith("javascript:") ||
+                href.startsWith("#")
+            ) {
                 return;
             }
 
-
-            const target =
-                href
-                    .split("/")
-                    .pop()
-                    .split("?")[0]
-                    .split("#")[0]
-                    .toLowerCase();
-
-
+            /*
+             * Home is handled separately.
+             */
             if (
-                target === current
+                href === "index.html" ||
+                href === "./index.html" ||
+                href === "/index.html" ||
+                href === "/"
             ) {
-
-                link.classList.add(
-                    "imo-active"
-                );
-
-            } else {
-
-                link.classList.remove(
-                    "imo-active"
-                );
-
+                return;
             }
 
-        });
-
-    }
-
-
-    /* =====================================================
-       SCROLL TO TOP
-       ===================================================== */
-
-    function setupScrollButton() {
-
-        if (
-            document.querySelector(
-                ".imo-scroll-top"
-            )
-        ) {
-            return;
-        }
-
-
-        const button =
-            document.createElement(
-                "button"
-            );
-
-
-        button.className =
-            "imo-scroll-top";
-
-
-        button.type =
-            "button";
-
-
-        button.innerHTML =
-            "↑";
-
-
-        button.setAttribute(
-            "aria-label",
-            "Back to top"
-        );
-
-
-        document.body.appendChild(
-            button
-        );
-
-
-        window.addEventListener(
-            "scroll",
-            function () {
-
-                if (
-                    window.scrollY > 450
-                ) {
-
-                    button.classList.add(
-                        "imo-show"
-                    );
-
-                } else {
-
-                    button.classList.remove(
-                        "imo-show"
-                    );
-
-                }
-
-            },
-            {
-                passive: true
+            /*
+             * Do not interfere with assets.
+             */
+            if (
+                href.startsWith("assets/") ||
+                href.startsWith("./assets/")
+            ) {
+                return;
             }
-        );
 
+            /*
+             * Keep GitHub Pages repository paths intact.
+             */
+            if (href.endsWith(".html")) {
 
-        button.addEventListener(
-            "click",
-            function () {
+                link.addEventListener("click", function () {
 
-                window.scrollTo({
+                    const base = getSiteBase();
 
-                    top: 0,
-
-                    behavior:
-                        "smooth"
-
-                });
-
-            }
-        );
-
-    }
-
-
-    /* =====================================================
-       WHATSAPP BUTTON
-       ===================================================== */
-
-    function setupWhatsAppButton() {
-
-        if (
-            document.querySelector(
-                ".imo-whatsapp"
-            )
-        ) {
-            return;
-        }
-
-
-        const button =
-            document.createElement(
-                "a"
-            );
-
-
-        button.className =
-            "imo-whatsapp";
-
-
-        button.href =
-            "https://wa.me/" +
-            CAMPAIGN.whatsapp;
-
-
-        button.target =
-            "_blank";
-
-
-        button.rel =
-            "noopener noreferrer";
-
-
-        button.setAttribute(
-            "aria-label",
-            "Contact IMOLE 2027 on WhatsApp"
-        );
-
-
-        button.title =
-            "WhatsApp IMOLE 2027";
-
-
-        button.innerHTML =
-            "☎";
-
-
-        document.body.appendChild(
-            button
-        );
-
-    }
-
-
-    /* =====================================================
-       CAMPAIGN DATA AVAILABLE TO OTHER PAGES
-       ===================================================== */
-
-    function exposeCampaignData() {
-
-        window.IMOLE2027 = {
-
-            version:
-                SITE_VERSION,
-
-            pages:
-                PAGES,
-
-            assets:
-                ASSETS,
-
-            campaign:
-                CAMPAIGN
-
-        };
-
-    }
-
-
-    /* =====================================================
-       PAGE LINKS SAFETY CHECK
-       ===================================================== */
-
-    function protectNavigation() {
-
-        document.querySelectorAll(
-            "a"
-        ).forEach(function (link) {
-
-            link.addEventListener(
-                "click",
-                function () {
-
-                    const href =
-                        link.getAttribute(
-                            "href"
-                        );
-
-
-                    if (!href) {
-                        return;
-                    }
-
+                    const filename =
+                        href
+                            .replace("./", "")
+                            .replace(/^\//, "");
 
                     /*
-                       Never allow javascript:
-                       URLs from old page code.
-                    */
+                     * Add cache-busting query.
+                     */
+                    const destination =
+                        base +
+                        filename +
+                        "?v=" +
+                        Date.now();
 
-                    if (
-                        href
-                            .trim()
-                            .toLowerCase()
-                            .startsWith(
-                                "javascript:"
-                            )
-                    ) {
-
-                        link.removeAttribute(
-                            "href"
-                        );
-
-                    }
-
-                }
-            );
-
+                    link.href = destination;
+                });
+            }
         });
-
     }
 
 
-    /* =====================================================
-       PREVENT HASH HOME PROBLEM
-       ===================================================== */
+    /* ---------------------------------------------------------
+       7. Prevent browser from restoring an old page
+       --------------------------------------------------------- */
 
-    function repairHashHome() {
+    window.addEventListener("pageshow", function () {
 
-        if (
-            location.hash === "#home"
-        ) {
+        /*
+         * If the browser restored an old bfcache version,
+         * force a fresh reload.
+         */
+        if (performance.getEntriesByType) {
 
-            /*
-               If an old page sends visitors to
-               #home, move them to the real homepage.
-            */
+            const navigation =
+                performance.getEntriesByType("navigation")[0];
 
-            location.replace(
-                PAGES.home
-            );
+            if (
+                navigation &&
+                navigation.type === "back_forward"
+            ) {
+                /*
+                 * Do not create an endless reload loop.
+                 */
+                if (!sessionStorage.getItem("imole_bfcache_fixed")) {
 
+                    sessionStorage.setItem(
+                        "imole_bfcache_fixed",
+                        "yes"
+                    );
+
+                    window.location.reload();
+                }
+            }
         }
-
-    }
-
-
-    /* =====================================================
-       GITHUB PAGES CACHE HELPER
-       ===================================================== */
-
-    function exposeCacheVersion() {
-
-        document.documentElement
-            .setAttribute(
-                "data-site-version",
-                SITE_VERSION
-            );
+    });
 
 
-        console.log(
-            "===================================="
-        );
+    /* ---------------------------------------------------------
+       8. Clear the temporary bfcache flag
+       --------------------------------------------------------- */
+
+    window.addEventListener("load", function () {
+
+        setTimeout(function () {
+
+            try {
+                sessionStorage.removeItem(
+                    "imole_bfcache_fixed"
+                );
+            } catch (error) {}
+
+        }, 3000);
+    });
 
 
-        console.log(
-            "IMOLE 2027 WEBSITE"
-        );
+    /* ---------------------------------------------------------
+       9. Start everything
+       --------------------------------------------------------- */
 
+    document.addEventListener("DOMContentLoaded", function () {
 
-        console.log(
-            "Version:",
-            SITE_VERSION
-        );
+        fixHomeLinks();
+        fixInternalLinks();
 
+        clearOldCaches();
+        removeOldServiceWorkers();
 
-        console.log(
-            "Candidate:",
-            CAMPAIGN.candidate
-        );
-
-
-        console.log(
-            "Election:",
-            CAMPAIGN.electionDate
-        );
-
-
-        console.log(
-            "Wards:",
-            CAMPAIGN.wards.length
-        );
-
-
-        console.log(
-            "Homepage:",
-            PAGES.home
-        );
-
-
-        console.log(
-            "===================================="
-        );
-
-    }
-
-
-    /* =====================================================
-       INITIALIZE
-       ===================================================== */
-
-    function initialize() {
-
-        repairHashHome();
-
-        installNavigation();
-
-        installFooter();
-
-        setupMobileMenu();
-
-        repairHomeLinks();
-
-        setupLogos();
-
-        setupCandidateImages();
-
-        setupYear();
-
-        setActivePage();
-
-        setupScrollButton();
-
-        setupWhatsAppButton();
-
-        exposeCampaignData();
-
-        protectNavigation();
-
-        exposeCacheVersion();
-
-    }
-
-
-    /* =====================================================
-       START
-       ===================================================== */
-
-    if (
-        document.readyState ===
-        "loading"
-    ) {
-
-        document.addEventListener(
-            "DOMContentLoaded",
-            initialize
-        );
-
-    } else {
-
-        initialize();
-
-    }
-
+        /*
+         * Register the new service worker AFTER cleanup.
+         */
+        setTimeout(function () {
+            registerCurrentServiceWorker();
+        }, 500);
+    });
 
 })();
