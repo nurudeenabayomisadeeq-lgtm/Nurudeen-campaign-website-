@@ -1,1410 +1,518 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!-- =========================
+     IMOLE 2027 MEDIA HUB
+     ========================= -->
 
-<meta charset="UTF-8">
+<!-- POLLING UNIT NAVIGATION FIX: use the dedicated page from every polling-unit icon/button. -->
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<section class="media-section" id="media">
+  <div class="media-wrap">
+    <div class="media-heading">
+      <span class="media-label">IMOLE 2027 MEDIA HUB</span>
+      <h2>Campaign Music &amp; Video</h2>
+      <p>Listen to all official IMOLE 2027 campaign sounds and watch campaign media.</p>
+    </div>
 
-<title>Polling Units | IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq</title>
+    <div class="music-grid">
+      <article class="music-card"><h3>Ojo Go Better</h3><p>Progress Mix</p><audio controls preload="metadata" playsinline><source src="assets/Ojo%20Go%20Better%20(Progress%20Mix).mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
+      <article class="music-card"><h3>OJO DEY MOVE</h3><p>IMOLE 2027 campaign music</p><audio controls preload="metadata" playsinline><source src="assets/OJO%20DEY%20MOVE.mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
+      <article class="music-card"><h3>OJO ZAI FI KYAU</h3><p>IMOLE 2027 campaign music</p><audio controls preload="metadata" playsinline><source src="assets/OJO%20ZAI%20FI%20KYAU.mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
+      <article class="music-card"><h3>Ojo Gadi Mma</h3><p>Igbo Version</p><audio controls preload="metadata" playsinline><source src="./assets/Ojo%20Gadi%20Mma%20%28Igbo%20Version%29.mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
+      <article class="music-card"><h3>Nuru Lokan</h3><p>IMOLE campaign sound</p><audio controls preload="metadata" playsinline><source src="./assets/Nuru%20lokan.mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
+      <article class="music-card"><h3>Ojo Adara</h3><p>Fuji Percussion Heavy</p><audio controls preload="metadata" playsinline><source src="./assets/Ojo%20adara%20%28Fuji%20Percussion%20Heavy%29.mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
+      <article class="music-card"><h3>Sadeeq Campaign Jingle</h3><p>Option 1</p><audio controls preload="metadata" playsinline><source src="assets/Sadeeq%20Campaign%20Jingle%20(Option%201).mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
+    </div>
 
-<meta name="description"
-      content="IMOLE 2027 Polling Unit Directory for Ojo Constituency II. Search polling units by ward, polling-unit number or location.">
-
-<meta name="keywords"
-      content="IMOLE 2027, Polling Units, Ojo Constituency II, Ilogbo, Ijanikin, Irewe, Etegbin, Idolowu, Tafi, NDC">
-
-<meta name="theme-color"
-      content="#075c32">
-
-<meta name="robots"
-      content="index,follow">
+    <div class="video-card">
+      <h3>Campaign Video</h3>
+      <p>Campaign media from the official repository.</p>
+      <video controls preload="metadata" playsinline>
+        <source src="./assets/47ce1089-66a6-441d-850d-11cee3fb6cfc-watermark.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+      <div class="media-status video-status" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
 
 <style>
-
-/* =========================================================
-   IMOLE 2027 — POLLING UNIT DIRECTORY
-   VERSION: 2026.08.31
-========================================================= */
-
-:root{
-    --green:#075c32;
-    --dark:#043d21;
-    --deep:#061b10;
-    --gold:#d7a63a;
-    --gold-light:#f7e6b2;
-
-    --white:#ffffff;
-    --black:#111111;
-
-    --text:#24332b;
-    --muted:#68766e;
-
-    --bg:#f4f8f5;
-    --light:#edf8f2;
-    --border:#dce8e0;
-
-    --danger:#b42318;
-    --warning:#8a6500;
-
-    --shadow:
-        0 12px 35px rgba(0,0,0,.08);
-
-    --shadow-small:
-        0 5px 18px rgba(0,0,0,.07);
-}
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    background:var(--bg);
-    color:var(--text);
-
-    line-height:1.6;
-
-    overflow-x:hidden;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-button,
-input,
-select{
-    font:inherit;
-}
-
-button{
-    cursor:pointer;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-
-/* =========================================================
-   TOP BAR
-========================================================= */
-
-.topbar{
-    background:var(--dark);
-    color:#fff;
-
-    text-align:center;
-
-    padding:
-        8px
-        15px;
-
-    font-size:11px;
-    font-weight:800;
-
-    letter-spacing:.5px;
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.header{
-    position:sticky;
-    top:0;
-
-    z-index:1000;
-
-    background:
-        rgba(255,255,255,.98);
-
-    backdrop-filter:
-        blur(12px);
-
-    border-bottom:
-        1px solid var(--border);
-
-    box-shadow:
-        0 3px 20px rgba(0,0,0,.06);
-}
-
-.nav-container{
-    width:min(1200px,94%);
-
-    min-height:72px;
-
-    margin:auto;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-}
-
-.logo-link{
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    min-width:245px;
-}
-
-.logo{
-    width:48px;
-    height:48px;
-
-    object-fit:contain;
-
-    border-radius:50%;
-
-    border:
-        2px solid var(--gold);
-
-    background:#fff;
-}
-
-.brand{
-    display:flex;
-    flex-direction:column;
-}
-
-.brand strong{
-    color:var(--green);
-
-    font-size:18px;
-
-    line-height:1.1;
-}
-
-.brand small{
-    color:var(--muted);
-
-    font-size:9px;
-
-    font-weight:800;
-
-    margin-top:4px;
-}
-
-.desktop-nav{
-    margin-left:auto;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:2px;
-}
-
-.desktop-nav a{
-    padding:
-        9px 8px;
-
-    border-radius:8px;
-
-    font-size:11px;
-
-    font-weight:800;
-
-    white-space:nowrap;
-}
-
-.desktop-nav a:hover{
-    background:var(--light);
-
-    color:var(--green);
-}
-
-.desktop-nav .active{
-    background:var(--green);
-
-    color:#fff;
-}
-
-.join-link{
-    background:var(--green);
-
-    color:#fff!important;
-}
-
-.donation-link{
-    background:#fff7df;
-
-    color:#705000!important;
-
-    border:
-        1px solid #ead08b;
-}
-
-.menu-btn{
-    display:none;
-
-    margin-left:auto;
-
-    width:44px;
-    height:44px;
-
-    border:0;
-
-    border-radius:9px;
-
-    background:var(--green);
-
-    color:#fff;
-
-    font-size:23px;
-}
-
-.mobile-nav{
-    display:none;
-
-    background:#fff;
-
-    border-top:
-        1px solid var(--border);
-
-    padding:
-        7px 4%;
-}
-
-.mobile-nav.open{
-    display:flex;
-
-    flex-direction:column;
-}
-
-.mobile-nav a{
-    padding:13px 10px;
-
-    border-bottom:
-        1px solid var(--border);
-
-    font-weight:800;
-}
-
-.mobile-nav a:last-child{
-    border-bottom:0;
-}
-
-.mobile-nav .active{
-    color:var(--green);
-
-    background:var(--light);
-
-    border-radius:8px;
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.page-hero{
-    position:relative;
-
-    overflow:hidden;
-
-    background:
-        radial-gradient(
-            circle at 85% 15%,
-            rgba(215,166,58,.18),
-            transparent 30%
-        ),
-
-        linear-gradient(
-            135deg,
-            var(--dark),
-            var(--green)
-        );
-
-    color:#fff;
-}
-
-.page-hero::after{
-    content:"";
-
-    position:absolute;
-
-    width:280px;
-    height:280px;
-
-    right:-100px;
-    bottom:-150px;
-
-    border-radius:50%;
-
-    border:
-        35px solid rgba(255,255,255,.05);
-}
-
-.hero-inner{
-    width:min(1150px,94%);
-
-    margin:auto;
-
-    padding:
-        65px 0
-        60px;
-
-    text-align:center;
-
-    position:relative;
-
-    z-index:2;
-}
-
-.hero-badge{
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:7px;
-
-    padding:
-        8px 15px;
-
-    border:
-        1px solid rgba(255,255,255,.3);
-
-    border-radius:30px;
-
-    background:
-        rgba(255,255,255,.08);
-
-    font-size:11px;
-
-    font-weight:800;
-
-    margin-bottom:16px;
-}
-
-.hero-inner h1{
-    font-size:
-        clamp(34px,6vw,58px);
-
-    line-height:1.05;
-
-    margin-bottom:12px;
-}
-
-.hero-inner h1 span{
-    color:var(--gold-light);
-}
-
-.hero-inner p{
-    max-width:750px;
-
-    margin:
-        0 auto;
-
-    color:
-        rgba(255,255,255,.84);
-
-    font-size:
-        clamp(14px,2vw,17px);
-}
-
-
-/* =========================================================
-   MAIN CONTAINER
-========================================================= */
-
-.page{
-    width:min(1150px,94%);
-
-    margin:auto;
-
-    padding:
-        50px 0
-        80px;
-}
-
-
-/* =========================================================
-   SUMMARY CARDS
-========================================================= */
-
-.summary-grid{
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap:15px;
-
-    margin-bottom:30px;
-}
-
-.summary-card{
-    background:#fff;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:17px;
-
-    padding:
-        23px 15px;
-
-    text-align:center;
-
-    box-shadow:var(--shadow-small);
-
-    position:relative;
-
-    overflow:hidden;
-}
-
-.summary-card::before{
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:4px;
-
-    background:var(--green);
-}
-
-.summary-card:nth-child(2)::before{
-    background:var(--gold);
-}
-
-.summary-card:nth-child(3)::before{
-    background:#4b8f69;
-}
-
-.summary-card:nth-child(4)::before{
-    background:#8c7334;
-}
-
-.summary-icon{
-    font-size:25px;
-
-    margin-bottom:5px;
-}
-
-.summary-card strong{
-    display:block;
-
-    color:var(--dark);
-
-    font-size:32px;
-
-    line-height:1.1;
-
-    margin-bottom:4px;
-}
-
-.summary-card span{
-    color:var(--muted);
-
-    font-size:11px;
-
-    font-weight:800;
-
-    text-transform:uppercase;
-
-    letter-spacing:.5px;
-}
-
-
-/* =========================================================
-   SEARCH PANEL
-========================================================= */
-
-.search-panel{
-    background:#fff;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:20px;
-
-    padding:24px;
-
-    margin-bottom:30px;
-
-    box-shadow:var(--shadow);
-}
-
-.search-heading{
-    margin-bottom:17px;
-}
-
-.search-heading h2{
-    color:var(--dark);
-
-    font-size:23px;
-
-    margin-bottom:4px;
-}
-
-.search-heading p{
-    color:var(--muted);
-
-    font-size:13px;
-}
-
-.search-controls{
-    display:grid;
-
-    grid-template-columns:
-        1fr 220px;
-
-    gap:12px;
-}
-
-.search-box{
-    position:relative;
-}
-
-.search-box span{
-    position:absolute;
-
-    left:15px;
-    top:50%;
-
-    transform:
-        translateY(-50%);
-
-    font-size:18px;
-
-    pointer-events:none;
-}
-
-.search-input{
-    width:100%;
-
-    min-height:52px;
-
-    padding:
-        13px
-        15px
-        13px
-        45px;
-
-    border:
-        1px solid #cfdcd4;
-
-    border-radius:11px;
-
-    outline:none;
-
-    background:#fbfdfc;
-
-    color:var(--text);
-
-    font-size:15px;
-
-    transition:.2s;
-}
-
-.search-input:focus{
-    border-color:var(--green);
-
-    box-shadow:
-        0 0 0 3px
-        rgba(7,92,50,.08);
-
-    background:#fff;
-}
-
-.ward-select{
-    width:100%;
-
-    min-height:52px;
-
-    padding:
-        13px;
-
-    border:
-        1px solid #cfdcd4;
-
-    border-radius:11px;
-
-    outline:none;
-
-    background:#fbfdfc;
-
-    color:var(--text);
-
-    font-size:14px;
-
-    font-weight:700;
-}
-
-.ward-select:focus{
-    border-color:var(--green);
-}
-
-.search-status{
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:15px;
-
-    margin-top:14px;
-
-    padding-top:14px;
-
-    border-top:
-        1px solid var(--border);
-
-    color:var(--muted);
-
-    font-size:12px;
-}
-
-.clear-btn{
-    border:0;
-
-    background:var(--light);
-
-    color:var(--green);
-
-    padding:
-        7px 12px;
-
-    border-radius:7px;
-
-    font-weight:800;
-
-    font-size:12px;
-}
-
-.clear-btn:hover{
-    background:#dff1e7;
-}
-
-
-/* =========================================================
-   WARD QUICK FILTER
-========================================================= */
-
-.quick-wards{
-    margin-bottom:35px;
-}
-
-.quick-wards h2{
-    text-align:center;
-
-    color:var(--dark);
-
-    font-size:25px;
-
-    margin-bottom:5px;
-}
-
-.quick-wards > p{
-    text-align:center;
-
-    color:var(--muted);
-
-    font-size:13px;
-
-    margin-bottom:18px;
-}
-
-.ward-buttons{
-    display:flex;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:9px;
-}
-
-.ward-filter{
-    border:
-        1px solid var(--border);
-
-    background:#fff;
-
-    color:var(--text);
-
-    padding:
-        10px 15px;
-
-    border-radius:25px;
-
-    font-size:12px;
-
-    font-weight:800;
-
-    transition:.2s;
-}
-
-.ward-filter:hover{
-    transform:
-        translateY(-2px);
-
-    border-color:var(--green);
-
-    color:var(--green);
-}
-
-.ward-filter.active{
-    background:var(--green);
-
-    color:#fff;
-
-    border-color:var(--green);
-
-    box-shadow:
-        0 5px 15px
-        rgba(7,92,50,.2);
-}
-
-
-/* =========================================================
-   DIRECTORY HEADING
-========================================================= */
-
-.directory-heading{
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:end;
-
-    gap:20px;
-
-    margin:
-        20px 0
-        20px;
-}
-
-.directory-heading h2{
-    color:var(--dark);
-
-    font-size:30px;
-}
-
-.directory-heading p{
-    color:var(--muted);
-
-    font-size:13px;
-}
-
-.result-count{
-    flex-shrink:0;
-
-    padding:
-        9px 13px;
-
-    border-radius:9px;
-
-    background:var(--light);
-
-    color:var(--green);
-
-    font-size:12px;
-
-    font-weight:800;
-}
-
-
-/* =========================================================
-   WARD CARDS
-========================================================= */
-
-.ward-list{
-    display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap:22px;
-}
-
-.ward-card{
-    background:#fff;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:20px;
-
-    overflow:hidden;
-
-    box-shadow:var(--shadow-small);
-
-    transition:.2s;
-}
-
-.ward-card:hover{
-    box-shadow:var(--shadow);
-
-    transform:
-        translateY(-2px);
-}
-
-.ward-card.hidden{
-    display:none;
-}
-
-.ward-header{
-    background:
-        linear-gradient(
-            135deg,
-            var(--dark),
-            var(--green)
-        );
-
-    color:#fff;
-
-    padding:
-        21px 20px;
-
-    position:relative;
-}
-
-.ward-label{
-    color:var(--gold-light);
-
-    font-size:11px;
-
-    font-weight:900;
-
-    letter-spacing:1px;
-}
-
-.ward-header h3{
-    font-size:24px;
-
-    margin:
-        2px 0
-        3px;
-}
-
-.ward-header p{
-    color:
-        rgba(255,255,255,.75);
-
-    font-size:12px;
-}
-
-.ward-total{
-    position:absolute;
-
-    top:20px;
-    right:18px;
-
-    padding:
-        7px 10px;
-
-    border-radius:8px;
-
-    background:
-        rgba(255,255,255,.12);
-
-    border:
-        1px solid
-        rgba(255,255,255,.18);
-
-    font-size:11px;
-
-    font-weight:800;
-}
-
-
-/* =========================================================
-   POLLING UNIT LIST
-========================================================= */
-
-.polling-unit-list{
-    padding:14px;
-}
-
-.polling-unit{
-    display:grid;
-
-    grid-template-columns:
-        105px 1fr;
-
-    gap:12px;
-
-    padding:
-        14px 10px;
-
-    border-bottom:
-        1px solid #edf1ee;
-
-    transition:.15s;
-}
-
-.polling-unit:last-child{
-    border-bottom:0;
-}
-
-.polling-unit:hover{
-    background:#f8fbf9;
-
-    border-radius:9px;
-}
-
-.polling-unit.hidden{
-    display:none;
-}
-
-.pu-number{
-    color:var(--green);
-
-    font-size:12px;
-
-    font-weight:900;
-
-    word-break:break-word;
-}
-
-.pu-location{
-    color:var(--text);
-
-    font-size:12px;
-
-    line-height:1.55;
-
-    font-weight:700;
-}
-
-.pu-status{
-    display:inline-block;
-
-    margin-top:6px;
-
-    padding:
-        3px 7px;
-
-    border-radius:10px;
-
-    font-size:8px;
-
-    font-weight:900;
-
-    letter-spacing:.3px;
-}
-
-.pu-status.existing{
-    background:#e8f5ed;
-
-    color:#17653c;
-}
-
-.pu-status.new{
-    background:#fff3d6;
-
-    color:#765600;
-}
-
-
-/* =========================================================
-   NO RESULTS
-========================================================= */
-
-.no-results{
-    display:none;
-
-    padding:
-        45px 20px;
-
-    margin-top:20px;
-
-    text-align:center;
-
-    background:#fff;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:17px;
-
-    box-shadow:var(--shadow-small);
-}
-
-.no-results.show{
-    display:block;
-}
-
-.no-results-icon{
-    font-size:42px;
-
-    margin-bottom:8px;
+.media-section{width:100%;padding:56px 16px;box-sizing:border-box;background:#071f14;color:#fff}
+.media-wrap{width:100%;max-width:1100px;margin:auto}
+.media-heading{text-align:center;max-width:720px;margin:0 auto 30px}
+.media-label{font-size:12px;font-weight:800;letter-spacing:1.6px;color:#d9b44a}
+.media-heading h2{margin:8px 0 10px;font-size:clamp(28px,5vw,42px);line-height:1.1}
+.media-heading p,.music-card p,.video-card p{color:#b8c7bf;line-height:1.6}
+.music-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.music-card,.video-card{background:#fff;color:#17231c;border-radius:18px;padding:20px;box-sizing:border-box;box-shadow:0 12px 30px rgba(0,0,0,.16)}
+.music-card h3,.video-card h3{margin:0 0 5px;font-size:19px}
+.music-card p,.video-card p{margin:0 0 14px;color:#66746c;font-size:14px}
+.music-card audio{display:block;width:100%;height:46px}
+.media-status{min-height:18px;margin-top:9px;font-size:12px;font-weight:700;color:#b3261e}
+.video-card{margin-top:22px}
+.video-card video{display:block;width:100%;max-height:600px;border-radius:12px;background:#000}
+@media(max-width:650px){.media-section{padding:42px 12px}.music-grid{grid-template-columns:1fr}.music-card,.video-card{padding:17px;border-radius:16px}.music-card h3,.video-card h3{font-size:17px}.music-card audio{height:44px}}
+</style>
+
+<script>
+(function(){
+  const players=document.querySelectorAll('.music-card audio');
+  players.forEach(function(audio){
+    const status=audio.parentElement.querySelector('.media-status');
+    audio.addEventListener('error',function(){
+      status.textContent='This audio file could not be loaded. Please check the file in the assets folder.';
+    });
+    audio.addEventListener('loadedmetadata',function(){status.textContent='';});
+  });
+  const video=document.querySelector('.video-card video');
+  if(video){
+    const status=video.parentElement.querySelector('.video-status');
+    video.addEventListener('error',function(){status.textContent='The campaign video could not be loaded. Please check the MP4 file in the assets folder.';});
+    video.addEventListener('loadedmetadata',function(){status.textContent='';});
+  }
+})();
+</script>
+
+<!-- =========================
+     IMOLE 2027 DONATION CARD
+     ========================= -->
+
+<section class="donation-section" id="donate">
+  <div class="donation-card">
+
+    <div class="donation-icon" aria-hidden="true">❤️</div>
+
+    <span class="donation-label">SUPPORT IMOLE 2027</span>
+
+    <h2>Support the Movement</h2>
+
+    <p class="donation-text">
+      Your support helps strengthen the IMOLE 2027 campaign and our
+      commitment to service, development and accountability in
+      Ojo Constituency II.
+    </p>
+
+    <div class="account-box">
+
+      <div class="account-row">
+        <span class="account-label">Account Name</span>
+        <strong>Nurudeen Abayomi Sadeeq</strong>
+      </div>
+
+      <div class="account-row">
+        <span class="account-label">Bank</span>
+        <strong>OPay</strong>
+      </div>
+
+      <div class="account-row account-number-row">
+        <div>
+          <span class="account-label">Account Number</span>
+          <strong id="donationAccountNumber">8159461760</strong>
+        </div>
+
+        <button
+          type="button"
+          class="copy-account-btn"
+          id="copyAccountBtn"
+          onclick="copyDonationAccount()"
+          aria-label="Copy donation account number">
+          <span id="copyIcon">📋</span>
+          <span id="copyText">Copy</span>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="donation-note">
+      <span>🔒</span>
+      <p>
+        Please verify the account name
+        <strong>Nurudeen Abayomi Sadeeq</strong>
+        before making your transfer.
+      </p>
+    </div>
+
+    <div
+      class="copy-success"
+      id="copySuccess"
+      role="status"
+      aria-live="polite">
+      ✓ Account number copied successfully!
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+/* =========================
+   DONATION CARD
+   ========================= */
+
+.donation-section {
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  background: #f6f8f7;
+}
+
+.donation-card {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 35px 28px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.10);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.donation-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eef8f1;
+  font-size: 30px;
+}
+
+.donation-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #087f3e;
+}
+
+.donation-card h2 {
+  margin: 0 0 12px;
+  font-size: clamp(26px, 5vw, 36px);
+  line-height: 1.15;
+  color: #14231a;
+}
+
+.donation-text {
+  max-width: 530px;
+  margin: 0 auto 25px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #5d6862;
 }
 
-.no-results h3{
-    color:var(--dark);
 
-    margin-bottom:5px;
+/* =========================
+   ACCOUNT BOX
+   ========================= */
+
+.account-box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 18px;
+  background: #f7faf8;
+  border: 1px solid #e1ebe4;
+  border-radius: 18px;
+  text-align: left;
 }
 
-.no-results p{
-    color:var(--muted);
-
-    font-size:13px;
-}
-
-
-/* =========================================================
-   INFORMATION BOX
-========================================================= */
-
-.info-box{
-    margin-top:35px;
-
-    padding:
-        24px;
-
-    border-radius:17px;
-
-    background:
-        #fff8e5;
-
-    border:
-        1px solid #ecd99e;
-
-    color:#634f12;
-}
-
-.info-box h3{
-    margin-bottom:7px;
-
-    font-size:17px;
-}
-
-.info-box p{
-    font-size:12px;
-
-    line-height:1.7;
+.account-row {
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 13px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e2e9e5;
 }
 
-
-/* =========================================================
-   CTA
-========================================================= */
-
-.cta{
-    margin-top:35px;
-
-    padding:
-        40px 25px;
-
-    text-align:center;
-
-    border-radius:21px;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--green),
-            var(--dark)
-        );
-
-    color:#fff;
+.account-row:last-child {
+  border-bottom: none;
 }
-
-.cta h2{
-    font-size:
-        clamp(26px,4vw,38px);
 
-    margin-bottom:7px;
+.account-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: #748079;
 }
 
-.cta p{
-    max-width:650px;
-
-    margin:
-        0 auto
-        20px;
-
-    color:
-        rgba(255,255,255,.8);
-
-    font-size:13px;
+.account-row strong {
+  display: block;
+  font-size: 16px;
+  color: #17231c;
+  word-break: break-word;
 }
-
-.cta-buttons{
-    display:flex;
 
-    flex-wrap:wrap;
 
-    justify-content:center;
+/* =========================
+   COPY BUTTON
+   ========================= */
 
-    gap:10px;
+.account-number-row {
+  align-items: center;
 }
-
-.btn{
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-height:45px;
 
-    padding:
-        11px 18px;
-
-    border-radius:9px;
-
-    font-size:12px;
-
-    font-weight:900;
-
-    transition:.2s;
+.copy-account-btn {
+  flex-shrink: 0;
+  min-width: 90px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  background: #087f3e;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.btn:hover{
-    transform:
-        translateY(-2px);
+.copy-account-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
 }
 
-.btn-white{
-    background:#fff;
-
-    color:var(--green);
+.copy-account-btn:active {
+  transform: scale(0.96);
 }
-
-.btn-gold{
-    background:var(--gold);
 
-    color:#182016;
+.copy-account-btn.copied {
+  background: #145c36;
 }
 
-.btn-outline{
-    border:
-        1px solid
-        rgba(255,255,255,.4);
 
-    background:
-        rgba(255,255,255,.06);
+/* =========================
+   SECURITY / NOTE
+   ========================= */
 
-    color:#fff;
+.donation-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 14px;
+  background: #fff9e8;
+  text-align: left;
 }
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
 
-.footer{
-    background:var(--deep);
-
-    color:#fff;
+.donation-note span {
+  font-size: 18px;
+  line-height: 1.4;
 }
-
-.footer-inner{
-    width:min(1150px,94%);
-
-    margin:auto;
-
-    padding:
-        45px 0
-        30px;
 
-    display:grid;
-
-    grid-template-columns:
-        2fr 1fr 1fr;
-
-    gap:35px;
+.donation-note p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #665b3b;
 }
-
-.footer-brand{
-    display:flex;
-
-    align-items:center;
 
-    gap:11px;
+.donation-note strong {
+  color: #443b24;
 }
 
-.footer-logo{
-    width:50px;
-    height:50px;
 
-    border-radius:50%;
+/* =========================
+   COPY SUCCESS MESSAGE
+   ========================= */
 
-    object-fit:contain;
-
-    border:
-        2px solid var(--gold);
-
-    background:#fff;
+.copy-success {
+  display: none;
+  margin-top: 14px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  background: #e9f8ee;
+  color: #087f3e;
+  font-size: 13px;
+  font-weight: 700;
 }
 
-.footer-brand strong{
-    display:block;
-
-    font-size:16px;
+.copy-success.show {
+  display: block;
 }
-
-.footer-brand small{
-    display:block;
 
-    color:#9fb1a7;
 
-    font-size:8px;
+/* =========================
+   MOBILE
+   ========================= */
 
-    margin-top:2px;
-}
-
-.footer-column p{
-    color:#aebfb4;
+@media (max-width: 600px) {
 
-    font-size:12px;
+  .donation-section {
+    padding: 40px 14px;
+  }
 
-    line-height:1.7;
+  .donation-card {
+    padding: 28px 16px;
+    border-radius: 20px;
+  }
 
-    margin-top:13px;
-}
+  .donation-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 26px;
+  }
 
-.footer-column h3{
-    margin-bottom:12px;
+  .donation-text {
+    font-size: 14px;
+    line-height: 1.65;
+  }
 
-    font-size:15px;
-}
+  .account-box {
+    padding: 6px 14px;
+    border-radius: 15px;
+  }
 
-.footer-column a{
-    display:block;
+  .account-row {
+    min-height: 62px;
+    gap: 10px;
+  }
 
-    color:#c6d1ca;
+  .account-row strong {
+    font-size: 14px;
+  }
 
-    font-size:12px;
+  .account-number-row {
+    align-items: center;
+  }
 
-    margin:7px 0;
-}
+  .copy-account-btn {
+    min-width: 78px;
+    min-height: 42px;
+    padding: 9px 10px;
+    font-size: 13px;
+  }
 
-.footer-column a:hover{
-    color:#fff;
+  .donation-note p {
+    font-size: 12px;
+  }
 }
 
-.footer-bottom{
-    border-top:
-        1px solid
-        rgba(255,255,255,.1);
 
-    padding:
-        18px 15px;
+/* Very small phones */
+@media (max-width: 380px) {
 
-    text-align:center;
+  .donation-card {
+    padding: 24px 12px;
+  }
 
-    color:#899d92;
+  .account-box {
+    padding: 4px 11px;
+  }
 
-    font-size:10px;
+  .account-row strong {
+    font-size: 13px;
+  }
 
-    line-height:1.7;
+  .copy-account-btn {
+    min-width: 70px;
+    padding: 8px 7px;
+  }
 }
-
-
-/* =========================================================
-   WHATSAPP
-========================================================= */
-
-.whatsapp{
-    position:fixed;
+</style>
 
-    right:18px;
-    bottom:20px;
 
-    z-index:1200;
+<script>
+/* =========================
+   COPY DONATION ACCOUNT
+   ========================= */
 
-    width:55px;
-    height:55px;
+function copyDonationAccount() {
 
-    border-radius:50%;
+  const accountNumber =
+    document.getElementById("donationAccountNumber").textContent.trim();
 
-    display:flex;
+  const copyButton =
+    document.getElementById("copyAccountBtn");
 
-    align-items:center;
-    justify-content:center;
+  const copyText =
+    document.getElementById("copyText");
 
-    background:#25d366;
+  const copyIcon =
+    document.getElementById("copyIcon");
 
-    color:#fff;
+  const successMessage =
+    document.getElementById("copySuccess");
 
-    font-size:25px;
 
-    box-shadow:
-        0 10px 25px
-        rgba(0,0,0,.25);
+  function showCopied() {
 
-    transition:.2s;
-}
+    copyText.textContent = "Copied!";
+    copyIcon.textContent = "✓";
 
-.whatsapp:hover{
-    transform:
-        scale(1.08);
-}
+    copyButton.classList.add("copied");
+    successMessage.classList.add("show");
 
+    setTimeout(function () {
+      copyText.textContent = "Copy";
+      copyIcon.textContent = "📋";
 
-/* =========================================================
-   BACK TO TOP
-========================================================= */
+      copyButton.classList.remove("copied");
+      successMessage.classList.remove("show");
+    }, 2500);
+  }
 
-.back-top{
-    position:fixed;
 
-    right:20px;
-    bottom:88px;
+  /* Modern clipboard API */
+  if (navigator.clipboard &&
+      window.isSecureContext) {
 
-    z-index:1190;
+    navigator.clipboard.writeText(accountNumber)
+      .then(showCopied)
+      .catch(function () {
+        fallbackCopy(accountNumber);
+      });
 
-    width:42px;
-    height:42px;
+  } else {
 
-    border:0;
+    fallbackCopy(accountNumber);
 
-    border-radius:50%;
+  }
 
-    background:var(--green);
 
-    color:#fff;
+  /* Fallback for older browsers */
+  function fallbackCopy(text) {
 
-    font-size:20px;
+    const textarea =
+      document.createElement("textarea");
 
-    opacity:0;
+    textarea.value = text;
+    textarea.style.position = "fixed";
+    textarea.style.left = "-9999px";
 
-    pointer-events:none;
+    document.body.appendChild(textarea);
 
-    transition:.2s;
+    textarea.focus();
+    textarea.select();
 
-    box-shadow:
-        0 7px 20px
-        rgba(0,0,0,.2);
-}
+    try {
+      document.execCommand("copy");
+      showCopied();
+    } catch (error) {
+      alert(
+        "Please copy the account number manually: " +
+        text
+      );
+    }
 
-.back-top.show{
-    opacity:1;
+    document.body.removeChild(textarea);
+  }
 
-    pointer-events:auto;
 }
-
-
-/* =========================================================
-   RESPONSIVE
+</script>
