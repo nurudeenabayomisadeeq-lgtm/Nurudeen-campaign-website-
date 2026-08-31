@@ -1,1191 +1,516 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
-
-<title>
-  IMOLE 2027 | Media Centre
-</title>
-
-<meta
-  name="description"
-  content="Official IMOLE 2027 Media Centre — campaign music, videos and media highlights of Hon. Nurudeen Abayomi Sadeeq."
->
-
-<meta
-  name="theme-color"
-  content="#075b2a"
->
-
-<style>
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-  background:#f6f8f7;
-  color:#12251a;
-}
-
-img,
-video{
-  max-width:100%;
-}
-
-a{
-  text-decoration:none;
-}
-
-.media-hero{
-  min-height:470px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:80px 20px;
-  position:relative;
-  overflow:hidden;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(2,54,25,.96),
-      rgba(7,91,42,.90)
-    );
-}
-
-.media-hero::before{
-  content:"";
-  position:absolute;
-  width:420px;
-  height:420px;
-  border-radius:50%;
-  background:rgba(244,197,66,.12);
-  top:-170px;
-  right:-100px;
-}
-
-.media-hero::after{
-  content:"";
-  position:absolute;
-  width:320px;
-  height:320px;
-  border-radius:50%;
-  background:rgba(255,255,255,.06);
-  bottom:-180px;
-  left:-80px;
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:850px;
-}
-
-.hero-badge{
-  display:inline-block;
-  background:#f4c542;
-  color:#111;
-  padding:9px 16px;
-  border-radius:50px;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.7px;
-  margin-bottom:20px;
-}
-
-.hero-content h1{
-  color:#ffffff;
-  font-size:clamp(42px,8vw,82px);
-  line-height:.95;
-  margin:0 0 20px;
-  font-weight:1000;
-  letter-spacing:-2px;
-}
-
-.hero-content h1 span{
-  color:#f4c542;
-}
-
-.hero-content p{
-  color:rgba(255,255,255,.86);
-  font-size:17px;
-  line-height:1.7;
-  max-width:700px;
-  margin:0 auto;
-}
-
-.hero-buttons{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:12px;
-  margin-top:28px;
-}
-
-.hero-buttons a{
-  padding:13px 20px;
-  border-radius:10px;
-  font-weight:900;
-  font-size:13px;
-}
-
-.btn-gold{
-  background:#f4c542;
-  color:#111;
-}
-
-.btn-white{
-  background:#ffffff;
-  color:#075b2a;
-}
-
-.btn-outline{
-  border:2px solid rgba(255,255,255,.7);
-  color:#ffffff;
-}
-
-.media-section{
-  padding:75px 5%;
-}
-
-.media-container{
-  width:100%;
-  max-width:1150px;
-  margin:auto;
-}
-
-.section-heading{
-  text-align:center;
-  max-width:750px;
-  margin:0 auto 40px;
-}
-
-.section-heading small{
-  display:block;
-  color:#075b2a;
-  font-size:12px;
-  font-weight:950;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  margin-bottom:8px;
-}
-
-.section-heading h2{
-  margin:0 0 12px;
-  color:#07391c;
-  font-size:clamp(28px,5vw,45px);
-  font-weight:1000;
-}
-
-.section-heading p{
-  color:#66756b;
-  line-height:1.7;
-  font-size:15px;
-}
-
-
-/* FEATURED MUSIC */
-
-.featured-music{
-  background:#ffffff;
-  border-radius:24px;
-  padding:30px;
-  box-shadow:
-    0 15px 45px rgba(0,0,0,.08);
-  border:1px solid #e8eee9;
-  margin-bottom:35px;
-}
-
-.music-top{
-  display:flex;
-  align-items:center;
-  gap:25px;
-  margin-bottom:25px;
-}
-
-.album-cover{
-  width:170px;
-  height:170px;
-  border-radius:18px;
-  object-fit:cover;
-  flex-shrink:0;
-  border:4px solid #f4c542;
-  box-shadow:0 10px 30px rgba(0,0,0,.12);
-}
-
-.music-info small{
-  color:#075b2a;
-  font-size:11px;
-  font-weight:950;
-  letter-spacing:.8px;
-}
-
-.music-info h3{
-  margin:8px 0;
-  color:#07391c;
-  font-size:30px;
-}
-
-.music-info p{
-  color:#68766d;
-  margin:0;
-}
-
-audio{
-  width:100%;
-  margin-top:8px;
-}
-
-
-/* SONG GRID */
-
-.song-grid{
-  display:grid;
-  grid-template-columns:
-    repeat(2,minmax(0,1fr));
-  gap:18px;
-}
-
-.song-card{
-  background:#ffffff;
-  border:1px solid #e3ebe5;
-  border-radius:18px;
-  padding:22px;
-  box-shadow:
-    0 8px 25px rgba(0,0,0,.05);
-  transition:.2s ease;
-}
-
-.song-card:hover{
-  transform:translateY(-3px);
-  box-shadow:
-    0 14px 30px rgba(0,0,0,.09);
-}
-
-.song-number{
-  width:38px;
-  height:38px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:#edf7f0;
-  color:#075b2a;
-  font-weight:1000;
-  margin-bottom:13px;
-}
-
-.song-card h3{
-  margin:0 0 6px;
-  color:#07391c;
-  font-size:17px;
-}
-
-.song-card p{
-  margin:0 0 14px;
-  color:#738077;
-  font-size:13px;
-}
-
-.song-card audio{
-  margin-top:0;
-}
-
-
-/* VIDEO */
-
-.video-section{
-  background:#edf5ef;
-}
-
-.video-card{
-  background:#ffffff;
-  border-radius:24px;
-  overflow:hidden;
-  box-shadow:
-    0 15px 45px rgba(0,0,0,.10);
-}
-
-.video-wrapper{
-  background:#07150d;
-  aspect-ratio:16 / 9;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.video-wrapper video{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block;
-}
-
-.video-info{
-  padding:25px;
-}
-
-.video-info h3{
-  color:#07391c;
-  margin:0 0 8px;
-  font-size:24px;
-}
-
-.video-info p{
-  color:#68766d;
-  line-height:1.7;
-  margin:0;
-}
-
-
-/* MEDIA STATS */
-
-.media-stats{
-  display:grid;
-  grid-template-columns:
-    repeat(3,1fr);
-  gap:16px;
-  margin-top:35px;
-}
-
-.media-stat{
-  background:#ffffff;
-  padding:24px;
-  border-radius:18px;
-  text-align:center;
-  border:1px solid #e2eae4;
-}
-
-.media-stat strong{
-  display:block;
-  color:#075b2a;
-  font-size:32px;
-  font-weight:1000;
-}
-
-.media-stat span{
-  color:#6b786f;
-  font-size:12px;
-  font-weight:800;
-}
-
-
-/* CTA */
-
-.media-cta{
-  padding:75px 5%;
-  background:
-    linear-gradient(
-      135deg,
-      #032713,
-      #075b2a
-    );
-  color:#ffffff;
-  text-align:center;
-}
-
-.media-cta-inner{
-  max-width:800px;
-  margin:auto;
-}
-
-.media-cta h2{
-  font-size:clamp(30px,5vw,48px);
-  margin:0 0 14px;
-  font-weight:1000;
-}
-
-.media-cta h2 span{
-  color:#f4c542;
-}
-
-.media-cta p{
-  color:rgba(255,255,255,.78);
-  line-height:1.7;
-}
-
-.cta-buttons{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:25px;
-}
-
-.cta-buttons a{
-  padding:13px 20px;
-  border-radius:10px;
-  font-weight:900;
-  font-size:13px;
-}
-
-.cta-primary{
-  background:#f4c542;
-  color:#111;
-}
-
-.cta-secondary{
-  background:#ffffff;
-  color:#075b2a;
-}
-
-
-/* FILE STATUS */
-
-.file-status{
-  margin-top:12px;
-  font-size:11px;
-  font-weight:700;
-  color:#718078;
-}
-
-.file-status.success{
-  color:#087a35;
-}
-
-.file-status.error{
-  color:#b42318;
-}
-
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-  .media-hero{
-    min-height:440px;
-    padding:65px 18px;
-  }
-
-  .hero-content h1{
-    letter-spacing:-1px;
-  }
-
-  .hero-content p{
-    font-size:15px;
-  }
-
-  .hero-buttons{
-    flex-direction:column;
-  }
-
-  .hero-buttons a{
-    width:100%;
-  }
-
-  .media-section{
-    padding:55px 15px;
-  }
-
-  .music-top{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .album-cover{
-    width:180px;
-    height:180px;
-  }
-
-  .song-grid{
-    grid-template-columns:1fr;
-  }
-
-  .media-stats{
-    grid-template-columns:1fr;
-  }
-
-  .video-info{
-    padding:20px;
-  }
-
-  .media-cta{
-    padding:60px 18px;
-  }
-
-}
-
-
-/* ACCESSIBILITY */
-
-:focus-visible{
-  outline:3px solid #f4c542;
-  outline-offset:3px;
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<!-- ======================================================
-     HERO
-     ====================================================== -->
-
-<section class="media-hero">
-
-  <div class="hero-content">
-
-    <span class="hero-badge">
-      🎵 OFFICIAL IMOLE 2027 MEDIA CENTRE
-    </span>
-
-    <h1>
-      HEAR THE
-      <span>VOICE</span>
-      OF IMOLE
-    </h1>
-
-    <p>
-      Listen to the campaign music, watch campaign
-      videos and experience the moments behind the
-      IMOLE 2027 movement.
-    </p>
-
-    <div class="hero-buttons">
-
-      <a
-        href="#music"
-        class="btn-gold">
-        🎵 Listen to Music
-      </a>
-
-      <a
-        href="#video"
-        class="btn-white">
-        ▶ Watch Video
-      </a>
-
-      <a
-        href="gallery.html"
-        class="btn-outline">
-        📸 Gallery
-      </a>
-
+<!-- =========================
+     IMOLE 2027 MEDIA HUB
+     ========================= -->
+
+<section class="media-section" id="media">
+  <div class="media-wrap">
+    <div class="media-heading">
+      <span class="media-label">IMOLE 2027 MEDIA HUB</span>
+      <h2>Campaign Music &amp; Video</h2>
+      <p>Listen to all official IMOLE 2027 campaign sounds and watch campaign media.</p>
     </div>
 
-  </div>
-
-</section>
-
-
-
-<!-- ======================================================
-     MUSIC
-     ====================================================== -->
-
-<section
-  class="media-section"
-  id="music">
-
-  <div class="media-container">
-
-    <div class="section-heading">
-
-      <small>
-        Official Campaign Sound
-      </small>
-
-      <h2>
-        🎵 IMOLE 2027 CAMPAIGN MUSIC
-      </h2>
-
-      <p>
-        Enjoy the official campaign songs and
-        sounds of the IMOLE 2027 movement.
-      </p>
-
+    <div class="music-grid">
+      <article class="music-card"><h3>Ojo Go Better</h3><p>Progress Mix</p><audio controls preload="metadata" playsinline><source src="./assets/Ojo Go Better (Progress Mix).mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
+      <article class="music-card"><h3>OJO DEY MOVE</h3><p>IMOLE 2027 campaign music</p><audio controls preload="metadata" playsinline><source src="./assets/OJO DEY MOVE.mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
+      <article class="music-card"><h3>OJO ZAI FI KYAU</h3><p>IMOLE 2027 campaign music</p><audio controls preload="metadata" playsinline><source src="./assets/OJO ZAI FI KYAU.mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
+      <article class="music-card"><h3>Ojo Gadi Mma</h3><p>Igbo Version</p><audio controls preload="metadata" playsinline><source src="./assets/Ojo Gadi Mma (Igbo Version).mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
+      <article class="music-card"><h3>Nuru Lokan</h3><p>IMOLE campaign sound</p><audio controls preload="metadata" playsinline><source src="./assets/Nuru lokan.mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
+      <article class="music-card"><h3>Ojo Adara</h3><p>Fuji Percussion Heavy</p><audio controls preload="metadata" playsinline><source src="./assets/Ojo adara (Fuji Percussion Heavy).mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
+      <article class="music-card"><h3>Sadeeq Campaign Jingle</h3><p>Option 1</p><audio controls preload="metadata" playsinline><source src="./assets/Sadeeq Campaign Jingle (Option 1).mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
     </div>
-
-
-    <!-- FEATURED SONG -->
-
-    <div class="featured-music">
-
-      <div class="music-top">
-
-        <img
-          class="album-cover"
-          src="assets/IMG-20260710-WA0004.jpg"
-          alt="Hon. Nurudeen Abayomi Sadeeq"
-          loading="lazy"
-        >
-
-        <div class="music-info">
-
-          <small>
-            FEATURED CAMPAIGN SONG
-          </small>
-
-          <h3>
-            Ojo Go Better
-          </h3>
-
-          <p>
-            IMOLE 2027 Campaign Music —
-            Progress Mix
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <audio
-        controls
-        preload="metadata">
-
-        <source
-          src="assets/Ojo%20Go%20Better%20(Progress%20Mix).mp3"
-          type="audio/mpeg"
-        >
-
-        Your browser does not support audio.
-
-      </audio>
-
-      <div
-        class="file-status"
-        data-audio-status>
-        Checking audio file...
-      </div>
-
-    </div>
-
-
-
-    <!-- SONG LIST -->
-
-    <div class="song-grid">
-
-
-      <!-- 01 -->
-
-      <article class="song-card">
-
-        <div class="song-number">
-          01
-        </div>
-
-        <h3>
-          🎵 Ojo Go Better
-        </h3>
-
-        <p>
-          Progress Mix
-        </p>
-
-        <audio
-          controls
-          preload="none">
-
-          <source
-            src="assets/Ojo%20Go%20Better%20(Progress%20Mix).mp3"
-            type="audio/mpeg"
-          >
-
-        </audio>
-
-      </article>
-
-
-
-      <!-- 02 -->
-
-      <article class="song-card">
-
-        <div class="song-number">
-          02
-        </div>
-
-        <h3>
-          🎵 Ojo Á Dára
-        </h3>
-
-        <p>
-          Fuji Percussion Heavy
-        </p>
-
-        <audio
-          controls
-          preload="none">
-
-          <source
-            src="assets/Ojo%20adara%20(Fuji%20Percussion%20Heavy).mp3"
-            type="audio/mpeg"
-          >
-
-        </audio>
-
-      </article>
-
-
-
-      <!-- 03 -->
-
-      <article class="song-card">
-
-        <div class="song-number">
-          03
-        </div>
-
-        <h3>
-          🎵 Nuru L'okan
-        </h3>
-
-        <p>
-          IMOLE Campaign Song
-        </p>
-
-        <audio
-          controls
-          preload="none">
-
-          <source
-            src="assets/Nuru%20lokan.mp3"
-            type="audio/mpeg"
-          >
-
-        </audio>
-
-      </article>
-
-
-
-      <!-- 04 -->
-
-      <article class="song-card">
-
-        <div class="song-number">
-          04
-        </div>
-
-        <h3>
-          🎵 OJO DEY MOVE
-        </h3>
-
-        <p>
-          Campaign Movement Sound
-        </p>
-
-        <audio
-          controls
-          preload="none">
-
-          <source
-            src="assets/OJO%20DEY%20MOVE.mp3"
-            type="audio/mpeg"
-          >
-
-        </audio>
-
-      </article>
-
-
-
-      <!-- 05 -->
-
-      <article class="song-card">
-
-        <div class="song-number">
-          05
-        </div>
-
-        <h3>
-          🎵 OJO ZAI FI KYAU
-        </h3>
-
-        <p>
-          Campaign Music
-        </p>
-
-        <audio
-          controls
-          preload="none">
-
-          <source
-            src="assets/OJO%20ZAI%20FI%20KYAU.mp3"
-            type="audio/mpeg"
-          >
-
-        </audio>
-
-      </article>
-
-
-
-      <!-- 06 -->
-
-      <article class="song-card">
-
-        <div class="song-number">
-          06
-        </div>
-
-        <h3>
-          🎵 Ojo Ga-ɗi Mma
-        </h3>
-
-        <p>
-          Igbo Version
-        </p>
-
-        <audio
-          controls
-          preload="none">
-
-          <source
-            src="assets/Ojo%20Gadi%20Mma%20(Igbo%20Version).mp3"
-            type="audio/mpeg"
-          >
-
-        </audio>
-
-      </article>
-
-
-
-      <!-- 07 -->
-
-      <article class="song-card">
-
-        <div class="song-number">
-          07
-        </div>
-
-        <h3>
-          🎵 Sadeeq Campaign Jingle
-        </h3>
-
-        <p>
-          Option 1
-        </p>
-
-        <audio
-          controls
-          preload="none">
-
-          <source
-            src="assets/Sadeeq%20Campaign%20Jingle%20(Option%201).mp3"
-            type="audio/mpeg"
-          >
-
-        </audio>
-
-      </article>
-
-
-    </div>
-
-
-
-    <!-- MUSIC STATS -->
-
-    <div class="media-stats">
-
-      <div class="media-stat">
-
-        <strong>
-          7
-        </strong>
-
-        <span>
-          Campaign Tracks
-        </span>
-
-      </div>
-
-
-      <div class="media-stat">
-
-        <strong>
-          1
-        </strong>
-
-        <span>
-          Campaign Video
-        </span>
-
-      </div>
-
-
-      <div class="media-stat">
-
-        <strong>
-          24/7
-        </strong>
-
-        <span>
-          Media Access
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ======================================================
-     VIDEO
-     ====================================================== -->
-
-<section
-  class="media-section video-section"
-  id="video">
-
-  <div class="media-container">
-
-    <div class="section-heading">
-
-      <small>
-        Campaign Video
-      </small>
-
-      <h2>
-        🎬 IMOLE 2027 VIDEO
-      </h2>
-
-      <p>
-        Watch campaign messages and highlights
-        from the IMOLE 2027 movement.
-      </p>
-
-    </div>
-
 
     <div class="video-card">
-
-      <div class="video-wrapper">
-
-        <video
-          controls
-          playsinline
-          preload="metadata"
-          poster="assets/IMG-20260710-WA0004.jpg">
-
-          <source
-            src="assets/47ce1089-66a6-441d-850d-11cee3fb6cfc-watermark.mp4"
-            type="video/mp4"
-          >
-
-          Your browser does not support video.
-
-        </video>
-
-      </div>
-
-
-      <div class="video-info">
-
-        <h3>
-          🔥 LET IMOLE SHINE
-        </h3>
-
-        <p>
-          Official IMOLE 2027 campaign media
-          featuring the movement for Service,
-          Development and Accountability in
-          Ojo Constituency II.
-        </p>
-
-      </div>
-
+      <h3>Campaign Video</h3>
+      <p>Campaign media from the official repository.</p>
+      <video controls preload="metadata" playsinline>
+        <source src="./assets/47ce1089-66a6-441d-850d-11cee3fb6cfc-watermark.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+      <div class="media-status video-status" aria-live="polite"></div>
     </div>
-
   </div>
-
 </section>
 
-
-
-<!-- ======================================================
-     CTA
-     ====================================================== -->
-
-<section class="media-cta">
-
-  <div class="media-cta-inner">
-
-    <h2>
-      BE PART OF THE
-      <span>IMOLE MOVEMENT</span>
-    </h2>
-
-    <p>
-      Share the message. Join the movement.
-      Support the campaign and help us spread
-      the vision of a better Ojo Constituency II.
-    </p>
-
-    <div class="cta-buttons">
-
-      <a
-        href="join.html"
-        class="cta-primary">
-        🤝 Join IMOLE
-      </a>
-
-      <a
-        href="donations.html"
-        class="cta-secondary">
-        ❤️ Support the Movement
-      </a>
-
-      <a
-        href="gallery.html"
-        class="cta-secondary">
-        📸 View Gallery
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ======================================================
-     UNIVERSAL WEBSITE SYSTEM
-     ====================================================== -->
-
-<script src="site.js?v=20260831"></script>
-
-
-<!-- ======================================================
-     MEDIA FILE CHECKER
-     ====================================================== -->
+<style>
+.media-section{width:100%;padding:56px 16px;box-sizing:border-box;background:#071f14;color:#fff}
+.media-wrap{width:100%;max-width:1100px;margin:auto}
+.media-heading{text-align:center;max-width:720px;margin:0 auto 30px}
+.media-label{font-size:12px;font-weight:800;letter-spacing:1.6px;color:#d9b44a}
+.media-heading h2{margin:8px 0 10px;font-size:clamp(28px,5vw,42px);line-height:1.1}
+.media-heading p,.music-card p,.video-card p{color:#b8c7bf;line-height:1.6}
+.music-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.music-card,.video-card{background:#fff;color:#17231c;border-radius:18px;padding:20px;box-sizing:border-box;box-shadow:0 12px 30px rgba(0,0,0,.16)}
+.music-card h3,.video-card h3{margin:0 0 5px;font-size:19px}
+.music-card p,.video-card p{margin:0 0 14px;color:#66746c;font-size:14px}
+.music-card audio{display:block;width:100%;height:46px}
+.media-status{min-height:18px;margin-top:9px;font-size:12px;font-weight:700;color:#b3261e}
+.video-card{margin-top:22px}
+.video-card video{display:block;width:100%;max-height:600px;border-radius:12px;background:#000}
+@media(max-width:650px){.media-section{padding:42px 12px}.music-grid{grid-template-columns:1fr}.music-card,.video-card{padding:17px;border-radius:16px}.music-card h3,.video-card h3{font-size:17px}.music-card audio{height:44px}}
+</style>
 
 <script>
-
-document.addEventListener(
-  "DOMContentLoaded",
-  function(){
-
-    const audioSources =
-      document.querySelectorAll(
-        "audio source"
-      );
-
-
-    audioSources.forEach(
-      function(source){
-
-        const audio =
-          source.parentElement;
-
-        const status =
-          audio
-            .closest(".featured-music")
-            ?.querySelector(
-              "[data-audio-status]"
-            );
-
-
-        audio.addEventListener(
-          "error",
-          function(){
-
-            if(status){
-
-              status.textContent =
-                "The audio file could not be loaded.";
-
-              status.classList.add(
-                "error"
-              );
-
-            }
-
-          }
-        );
-
-
-        audio.addEventListener(
-          "loadedmetadata",
-          function(){
-
-            if(status){
-
-              status.textContent =
-                "✓ Audio ready — tap play to listen.";
-
-              status.classList.add(
-                "success"
-              );
-
-            }
-
-          }
-        );
-
-      }
-    );
-
-
-    const video =
-      document.querySelector(
-        "video"
-      );
-
-
-    if(video){
-
-      video.addEventListener(
-        "loadedmetadata",
-        function(){
-
-          console.log(
-            "IMOLE 2027 video loaded successfully."
-          );
-
-        }
-      );
-
-
-      video.addEventListener(
-        "error",
-        function(){
-
-          console.warn(
-            "IMOLE 2027 video could not be loaded."
-          );
-
-        }
-      );
-
-    }
-
+(function(){
+  const players=document.querySelectorAll('.music-card audio');
+  players.forEach(function(audio){
+    const status=audio.parentElement.querySelector('.media-status');
+    audio.addEventListener('error',function(){
+      status.textContent='This audio file could not be loaded. Please check the file in the assets folder.';
+    });
+    audio.addEventListener('loadedmetadata',function(){status.textContent='';});
+  });
+  const video=document.querySelector('.video-card video');
+  if(video){
+    const status=video.parentElement.querySelector('.video-status');
+    video.addEventListener('error',function(){status.textContent='The campaign video could not be loaded. Please check the MP4 file in the assets folder.';});
+    video.addEventListener('loadedmetadata',function(){status.textContent='';});
   }
-);
-
+})();
 </script>
 
+<!-- =========================
+     IMOLE 2027 DONATION CARD
+     ========================= -->
 
-</body>
+<section class="donation-section" id="donate">
+  <div class="donation-card">
 
-</html>
+    <div class="donation-icon" aria-hidden="true">❤️</div>
+
+    <span class="donation-label">SUPPORT IMOLE 2027</span>
+
+    <h2>Support the Movement</h2>
+
+    <p class="donation-text">
+      Your support helps strengthen the IMOLE 2027 campaign and our
+      commitment to service, development and accountability in
+      Ojo Constituency II.
+    </p>
+
+    <div class="account-box">
+
+      <div class="account-row">
+        <span class="account-label">Account Name</span>
+        <strong>Nurudeen Abayomi Sadeeq</strong>
+      </div>
+
+      <div class="account-row">
+        <span class="account-label">Bank</span>
+        <strong>OPay</strong>
+      </div>
+
+      <div class="account-row account-number-row">
+        <div>
+          <span class="account-label">Account Number</span>
+          <strong id="donationAccountNumber">8159461760</strong>
+        </div>
+
+        <button
+          type="button"
+          class="copy-account-btn"
+          id="copyAccountBtn"
+          onclick="copyDonationAccount()"
+          aria-label="Copy donation account number">
+          <span id="copyIcon">📋</span>
+          <span id="copyText">Copy</span>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="donation-note">
+      <span>🔒</span>
+      <p>
+        Please verify the account name
+        <strong>Nurudeen Abayomi Sadeeq</strong>
+        before making your transfer.
+      </p>
+    </div>
+
+    <div
+      class="copy-success"
+      id="copySuccess"
+      role="status"
+      aria-live="polite">
+      ✓ Account number copied successfully!
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+/* =========================
+   DONATION CARD
+   ========================= */
+
+.donation-section {
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  background: #f6f8f7;
+}
+
+.donation-card {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 35px 28px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.10);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.donation-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eef8f1;
+  font-size: 30px;
+}
+
+.donation-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #087f3e;
+}
+
+.donation-card h2 {
+  margin: 0 0 12px;
+  font-size: clamp(26px, 5vw, 36px);
+  line-height: 1.15;
+  color: #14231a;
+}
+
+.donation-text {
+  max-width: 530px;
+  margin: 0 auto 25px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #5d6862;
+}
+
+
+/* =========================
+   ACCOUNT BOX
+   ========================= */
+
+.account-box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 18px;
+  background: #f7faf8;
+  border: 1px solid #e1ebe4;
+  border-radius: 18px;
+  text-align: left;
+}
+
+.account-row {
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 13px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e2e9e5;
+}
+
+.account-row:last-child {
+  border-bottom: none;
+}
+
+.account-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: #748079;
+}
+
+.account-row strong {
+  display: block;
+  font-size: 16px;
+  color: #17231c;
+  word-break: break-word;
+}
+
+
+/* =========================
+   COPY BUTTON
+   ========================= */
+
+.account-number-row {
+  align-items: center;
+}
+
+.copy-account-btn {
+  flex-shrink: 0;
+  min-width: 90px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  background: #087f3e;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.copy-account-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.copy-account-btn:active {
+  transform: scale(0.96);
+}
+
+.copy-account-btn.copied {
+  background: #145c36;
+}
+
+
+/* =========================
+   SECURITY / NOTE
+   ========================= */
+
+.donation-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 14px;
+  background: #fff9e8;
+  text-align: left;
+}
+
+.donation-note span {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.donation-note p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #665b3b;
+}
+
+.donation-note strong {
+  color: #443b24;
+}
+
+
+/* =========================
+   COPY SUCCESS MESSAGE
+   ========================= */
+
+.copy-success {
+  display: none;
+  margin-top: 14px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  background: #e9f8ee;
+  color: #087f3e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.copy-success.show {
+  display: block;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+  .donation-section {
+    padding: 40px 14px;
+  }
+
+  .donation-card {
+    padding: 28px 16px;
+    border-radius: 20px;
+  }
+
+  .donation-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 26px;
+  }
+
+  .donation-text {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .account-box {
+    padding: 6px 14px;
+    border-radius: 15px;
+  }
+
+  .account-row {
+    min-height: 62px;
+    gap: 10px;
+  }
+
+  .account-row strong {
+    font-size: 14px;
+  }
+
+  .account-number-row {
+    align-items: center;
+  }
+
+  .copy-account-btn {
+    min-width: 78px;
+    min-height: 42px;
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+
+  .donation-note p {
+    font-size: 12px;
+  }
+}
+
+
+/* Very small phones */
+@media (max-width: 380px) {
+
+  .donation-card {
+    padding: 24px 12px;
+  }
+
+  .account-box {
+    padding: 4px 11px;
+  }
+
+  .account-row strong {
+    font-size: 13px;
+  }
+
+  .copy-account-btn {
+    min-width: 70px;
+    padding: 8px 7px;
+  }
+}
+</style>
+
+
+<script>
+/* =========================
+   COPY DONATION ACCOUNT
+   ========================= */
+
+function copyDonationAccount() {
+
+  const accountNumber =
+    document.getElementById("donationAccountNumber").textContent.trim();
+
+  const copyButton =
+    document.getElementById("copyAccountBtn");
+
+  const copyText =
+    document.getElementById("copyText");
+
+  const copyIcon =
+    document.getElementById("copyIcon");
+
+  const successMessage =
+    document.getElementById("copySuccess");
+
+
+  function showCopied() {
+
+    copyText.textContent = "Copied!";
+    copyIcon.textContent = "✓";
+
+    copyButton.classList.add("copied");
+    successMessage.classList.add("show");
+
+    setTimeout(function () {
+      copyText.textContent = "Copy";
+      copyIcon.textContent = "📋";
+
+      copyButton.classList.remove("copied");
+      successMessage.classList.remove("show");
+    }, 2500);
+  }
+
+
+  /* Modern clipboard API */
+  if (navigator.clipboard &&
+      window.isSecureContext) {
+
+    navigator.clipboard.writeText(accountNumber)
+      .then(showCopied)
+      .catch(function () {
+        fallbackCopy(accountNumber);
+      });
+
+  } else {
+
+    fallbackCopy(accountNumber);
+
+  }
+
+
+  /* Fallback for older browsers */
+  function fallbackCopy(text) {
+
+    const textarea =
+      document.createElement("textarea");
+
+    textarea.value = text;
+    textarea.style.position = "fixed";
+    textarea.style.left = "-9999px";
+
+    document.body.appendChild(textarea);
+
+    textarea.focus();
+    textarea.select();
+
+    try {
+      document.execCommand("copy");
+      showCopied();
+    } catch (error) {
+      alert(
+        "Please copy the account number manually: " +
+        text
+      );
+    }
+
+    document.body.removeChild(textarea);
+  }
+
+}
+</script>
