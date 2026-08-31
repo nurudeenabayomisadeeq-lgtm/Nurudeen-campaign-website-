@@ -1,1298 +1,1191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
-<title>Media | IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq</title>
+<title>
+  IMOLE 2027 | Media Centre
+</title>
 
-<meta name="description"
-      content="Official IMOLE 2027 Media Centre featuring campaign music, videos and campaign highlights of Hon. Nurudeen Abayomi Sadeeq.">
+<meta
+  name="description"
+  content="Official IMOLE 2027 Media Centre — campaign music, videos and media highlights of Hon. Nurudeen Abayomi Sadeeq."
+>
 
-<meta name="theme-color"
-      content="#061b3a">
-
-<link rel="manifest" href="./manifest.json">
+<meta
+  name="theme-color"
+  content="#075b2a"
+>
 
 <style>
 
-:root{
-    --navy:#031329;
-    --navy2:#061b3a;
-    --blue:#0a4da2;
-    --gold:#f5b800;
-    --gold2:#ffd84d;
-    --white:#fff;
-    --text:#243247;
-    --muted:#68758a;
-    --light:#f4f7fb;
-    --border:#e1e7ef;
-    --shadow:0 18px 45px rgba(0,0,0,.13);
-}
-
 *{
-    box-sizing:border-box;
+  box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--light);
-    color:var(--text);
-    line-height:1.6;
+  margin:0;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  background:#f6f8f7;
+  color:#12251a;
 }
 
-img{
-    max-width:100%;
-    display:block;
+img,
+video{
+  max-width:100%;
 }
 
 a{
-    text-decoration:none;
+  text-decoration:none;
 }
 
-/* TOP */
-.topbar{
-    background:var(--navy);
-    color:white;
-    text-align:center;
-    padding:9px 15px;
-    font-size:13px;
+.media-hero{
+  min-height:470px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:80px 20px;
+  position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(2,54,25,.96),
+      rgba(7,91,42,.90)
+    );
 }
 
-.topbar strong{
-    color:var(--gold2);
+.media-hero::before{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  background:rgba(244,197,66,.12);
+  top:-170px;
+  right:-100px;
 }
 
-/* HEADER */
-.header{
-    background:linear-gradient(135deg,var(--navy2),var(--blue));
-    color:white;
-    padding:22px 15px;
+.media-hero::after{
+  content:"";
+  position:absolute;
+  width:320px;
+  height:320px;
+  border-radius:50%;
+  background:rgba(255,255,255,.06);
+  bottom:-180px;
+  left:-80px;
 }
 
-.header-inner{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    gap:18px;
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:850px;
 }
 
-.logo{
-    width:75px;
-    height:75px;
-    border-radius:50%;
-    object-fit:contain;
-    background:white;
-    padding:5px;
+.hero-badge{
+  display:inline-block;
+  background:#f4c542;
+  color:#111;
+  padding:9px 16px;
+  border-radius:50px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.7px;
+  margin-bottom:20px;
 }
 
-.header h1{
-    margin:0;
-    font-size:25px;
+.hero-content h1{
+  color:#ffffff;
+  font-size:clamp(42px,8vw,82px);
+  line-height:.95;
+  margin:0 0 20px;
+  font-weight:1000;
+  letter-spacing:-2px;
 }
 
-.header p{
-    margin:3px 0;
-    font-size:14px;
+.hero-content h1 span{
+  color:#f4c542;
 }
 
-.badge{
-    display:inline-block;
-    margin-top:7px;
-    background:var(--gold);
-    color:#111;
-    padding:5px 13px;
-    border-radius:20px;
-    font-size:12px;
-    font-weight:bold;
-}
-
-/* MENU */
-.menu-button{
-    display:none;
-    width:100%;
-    border:0;
-    background:var(--navy2);
-    color:white;
-    padding:14px;
-    font-size:16px;
-    font-weight:bold;
-}
-
-/* NAV */
-.nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:5px;
-    padding:8px;
-    background:white;
-    border-bottom:1px solid var(--border);
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-}
-
-.nav a{
-    color:var(--navy2);
-    font-weight:bold;
-    font-size:13px;
-    padding:9px 12px;
-    border-radius:8px;
-}
-
-.nav a:hover,
-.nav a.active{
-    background:var(--blue);
-    color:white;
-}
-
-.nav a.donate{
-    background:var(--gold);
-    color:#111;
-}
-
-.nav a.join{
-    background:var(--navy2);
-    color:white;
-}
-
-/* HERO */
-.hero{
-    background:
-        radial-gradient(circle at 85% 20%,rgba(245,184,0,.2),transparent 30%),
-        linear-gradient(135deg,#031329,#061b3a,#0a4da2);
-    color:white;
-    text-align:center;
-    padding:80px 20px;
-}
-
-.hero-inner{
-    max-width:900px;
-    margin:auto;
-}
-
-.hero-label{
-    display:inline-block;
-    border:1px solid rgba(255,255,255,.3);
-    background:rgba(255,255,255,.08);
-    padding:8px 15px;
-    border-radius:30px;
-    color:var(--gold2);
-    font-weight:bold;
-    font-size:13px;
-    letter-spacing:1px;
-}
-
-.hero h2{
-    font-size:clamp(40px,7vw,75px);
-    line-height:1;
-    margin:20px 0 15px;
-}
-
-.hero h2 span{
-    color:var(--gold2);
-}
-
-.hero p{
-    max-width:720px;
-    margin:auto;
-    color:rgba(255,255,255,.85);
-    font-size:17px;
+.hero-content p{
+  color:rgba(255,255,255,.86);
+  font-size:17px;
+  line-height:1.7;
+  max-width:700px;
+  margin:0 auto;
 }
 
 .hero-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-top:28px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin-top:28px;
 }
 
 .hero-buttons a{
-    padding:13px 20px;
-    border-radius:9px;
-    font-weight:bold;
+  padding:13px 20px;
+  border-radius:10px;
+  font-weight:900;
+  font-size:13px;
 }
 
-.gold{
-    background:var(--gold);
-    color:#111;
+.btn-gold{
+  background:#f4c542;
+  color:#111;
 }
 
-.white{
-    background:white;
-    color:var(--navy2);
+.btn-white{
+  background:#ffffff;
+  color:#075b2a;
 }
 
-.outline{
-    border:2px solid rgba(255,255,255,.5);
-    color:white;
+.btn-outline{
+  border:2px solid rgba(255,255,255,.7);
+  color:#ffffff;
 }
 
-/* SECTION */
-.section{
-    padding:70px 20px;
+.media-section{
+  padding:75px 5%;
 }
 
-.container{
-    max-width:1150px;
-    margin:auto;
+.media-container{
+  width:100%;
+  max-width:1150px;
+  margin:auto;
 }
 
-.heading{
-    text-align:center;
-    max-width:750px;
-    margin:0 auto 35px;
+.section-heading{
+  text-align:center;
+  max-width:750px;
+  margin:0 auto 40px;
 }
 
-.heading small{
-    color:var(--blue);
-    font-weight:bold;
-    letter-spacing:2px;
-    text-transform:uppercase;
+.section-heading small{
+  display:block;
+  color:#075b2a;
+  font-size:12px;
+  font-weight:950;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:8px;
 }
 
-.heading h2{
-    color:var(--navy2);
-    font-size:35px;
-    margin:7px 0 10px;
+.section-heading h2{
+  margin:0 0 12px;
+  color:#07391c;
+  font-size:clamp(28px,5vw,45px);
+  font-weight:1000;
 }
 
-.heading p{
-    color:var(--muted);
+.section-heading p{
+  color:#66756b;
+  line-height:1.7;
+  font-size:15px;
 }
 
-/* MUSIC */
-.music-section{
-    background:white;
-}
 
-.music-box{
-    max-width:950px;
-    margin:auto;
-    background:linear-gradient(135deg,var(--navy2),var(--blue));
-    color:white;
-    padding:30px;
-    border-radius:22px;
-    box-shadow:var(--shadow);
+/* FEATURED MUSIC */
+
+.featured-music{
+  background:#ffffff;
+  border-radius:24px;
+  padding:30px;
+  box-shadow:
+    0 15px 45px rgba(0,0,0,.08);
+  border:1px solid #e8eee9;
+  margin-bottom:35px;
 }
 
 .music-top{
-    display:flex;
-    align-items:center;
-    gap:25px;
-    margin-bottom:25px;
+  display:flex;
+  align-items:center;
+  gap:25px;
+  margin-bottom:25px;
 }
 
-.album{
-    width:145px;
-    height:145px;
-    object-fit:cover;
-    border-radius:18px;
-    border:4px solid white;
+.album-cover{
+  width:170px;
+  height:170px;
+  border-radius:18px;
+  object-fit:cover;
+  flex-shrink:0;
+  border:4px solid #f4c542;
+  box-shadow:0 10px 30px rgba(0,0,0,.12);
 }
 
 .music-info small{
-    color:var(--gold2);
-    font-weight:bold;
+  color:#075b2a;
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:.8px;
 }
 
 .music-info h3{
-    font-size:28px;
-    margin:5px 0;
+  margin:8px 0;
+  color:#07391c;
+  font-size:30px;
 }
 
 .music-info p{
-    color:rgba(255,255,255,.75);
+  color:#68766d;
+  margin:0;
 }
 
 audio{
-    width:100%;
-    margin-top:15px;
+  width:100%;
+  margin-top:8px;
 }
 
-/* SONG LIST */
-.song-list{
-    margin-top:25px;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
+
+/* SONG GRID */
+
+.song-grid{
+  display:grid;
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+  gap:18px;
 }
 
-.song{
-    background:white;
-    color:var(--text);
-    border-radius:13px;
-    padding:16px;
-    border:1px solid var(--border);
+.song-card{
+  background:#ffffff;
+  border:1px solid #e3ebe5;
+  border-radius:18px;
+  padding:22px;
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.05);
+  transition:.2s ease;
 }
 
-.song strong{
-    display:block;
-    color:var(--navy2);
+.song-card:hover{
+  transform:translateY(-3px);
+  box-shadow:
+    0 14px 30px rgba(0,0,0,.09);
 }
 
-.song span{
-    display:block;
-    font-size:13px;
-    color:var(--muted);
+.song-number{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#edf7f0;
+  color:#075b2a;
+  font-weight:1000;
+  margin-bottom:13px;
 }
+
+.song-card h3{
+  margin:0 0 6px;
+  color:#07391c;
+  font-size:17px;
+}
+
+.song-card p{
+  margin:0 0 14px;
+  color:#738077;
+  font-size:13px;
+}
+
+.song-card audio{
+  margin-top:0;
+}
+
 
 /* VIDEO */
+
 .video-section{
-    background:var(--light);
+  background:#edf5ef;
 }
 
-.video-box{
-    max-width:950px;
-    margin:auto;
-    background:#000;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:var(--shadow);
+.video-card{
+  background:#ffffff;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:
+    0 15px 45px rgba(0,0,0,.10);
 }
 
-.video-box video{
-    width:100%;
-    display:block;
-    background:#000;
+.video-wrapper{
+  background:#07150d;
+  aspect-ratio:16 / 9;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-.video-description{
-    background:linear-gradient(135deg,var(--navy2),var(--blue));
-    color:white;
-    padding:22px;
+.video-wrapper video{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
 }
 
-.video-description h3{
-    margin:0 0 5px;
+.video-info{
+  padding:25px;
 }
 
-.video-description p{
-    color:rgba(255,255,255,.78);
+.video-info h3{
+  color:#07391c;
+  margin:0 0 8px;
+  font-size:24px;
 }
 
-/* HIGHLIGHTS */
-.media-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+.video-info p{
+  color:#68766d;
+  line-height:1.7;
+  margin:0;
 }
 
-.card{
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    border:1px solid var(--border);
-    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+/* MEDIA STATS */
+
+.media-stats{
+  display:grid;
+  grid-template-columns:
+    repeat(3,1fr);
+  gap:16px;
+  margin-top:35px;
 }
 
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
+.media-stat{
+  background:#ffffff;
+  padding:24px;
+  border-radius:18px;
+  text-align:center;
+  border:1px solid #e2eae4;
 }
 
-.card-content{
-    padding:20px;
+.media-stat strong{
+  display:block;
+  color:#075b2a;
+  font-size:32px;
+  font-weight:1000;
 }
 
-.card h3{
-    color:var(--navy2);
-    margin:0 0 7px;
+.media-stat span{
+  color:#6b786f;
+  font-size:12px;
+  font-weight:800;
 }
 
-.card p{
-    color:var(--muted);
-    font-size:14px;
-}
 
 /* CTA */
-.cta{
-    background:linear-gradient(135deg,#031329,#0a4da2);
-    color:white;
-    text-align:center;
-    padding:75px 20px;
+
+.media-cta{
+  padding:75px 5%;
+  background:
+    linear-gradient(
+      135deg,
+      #032713,
+      #075b2a
+    );
+  color:#ffffff;
+  text-align:center;
 }
 
-.cta h2{
-    font-size:40px;
-    margin-bottom:10px;
+.media-cta-inner{
+  max-width:800px;
+  margin:auto;
 }
 
-.cta p{
-    color:rgba(255,255,255,.82);
+.media-cta h2{
+  font-size:clamp(30px,5vw,48px);
+  margin:0 0 14px;
+  font-weight:1000;
+}
+
+.media-cta h2 span{
+  color:#f4c542;
+}
+
+.media-cta p{
+  color:rgba(255,255,255,.78);
+  line-height:1.7;
 }
 
 .cta-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-top:25px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:25px;
 }
 
 .cta-buttons a{
-    padding:13px 20px;
-    border-radius:9px;
-    font-weight:bold;
+  padding:13px 20px;
+  border-radius:10px;
+  font-weight:900;
+  font-size:13px;
 }
 
-/* FOOTER */
-footer{
-    background:var(--navy);
-    color:rgba(255,255,255,.75);
-    text-align:center;
-    padding:35px 20px;
+.cta-primary{
+  background:#f4c542;
+  color:#111;
 }
 
-.footer-title{
-    color:white;
-    font-weight:bold;
-    font-size:17px;
+.cta-secondary{
+  background:#ffffff;
+  color:#075b2a;
 }
 
-.footer-slogan{
-    color:var(--gold2);
-    font-weight:bold;
+
+/* FILE STATUS */
+
+.file-status{
+  margin-top:12px;
+  font-size:11px;
+  font-weight:700;
+  color:#718078;
 }
 
-.footer-links{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:8px 18px;
-    margin:20px 0;
+.file-status.success{
+  color:#087a35;
 }
 
-.footer-links a{
-    color:rgba(255,255,255,.75);
-    font-size:13px;
+.file-status.error{
+  color:#b42318;
 }
 
-.back-top{
-    position:fixed;
-    right:18px;
-    bottom:18px;
-    width:48px;
-    height:48px;
-    border:0;
-    border-radius:50%;
-    background:var(--gold);
-    color:#111;
-    font-size:22px;
-    font-weight:bold;
-    cursor:pointer;
-    display:none;
-    z-index:10000;
-}
-
-.back-top.show{
-    display:block;
-}
 
 /* MOBILE */
+
 @media(max-width:800px){
 
-    .header-inner{
-        flex-direction:column;
-        text-align:center;
-    }
+  .media-hero{
+    min-height:440px;
+    padding:65px 18px;
+  }
 
-    .header h1{
-        font-size:21px;
-    }
+  .hero-content h1{
+    letter-spacing:-1px;
+  }
 
-    .menu-button{
-        display:block;
-    }
+  .hero-content p{
+    font-size:15px;
+  }
 
-    .nav{
-        display:none;
-        position:relative;
-        flex-direction:column;
-        align-items:stretch;
-    }
+  .hero-buttons{
+    flex-direction:column;
+  }
 
-    .nav.show{
-        display:flex;
-    }
+  .hero-buttons a{
+    width:100%;
+  }
 
-    .nav a{
-        text-align:center;
-        width:100%;
-    }
+  .media-section{
+    padding:55px 15px;
+  }
 
-    .hero{
-        padding:65px 16px;
-    }
+  .music-top{
+    flex-direction:column;
+    text-align:center;
+  }
 
-    .hero h2{
-        font-size:43px;
-    }
+  .album-cover{
+    width:180px;
+    height:180px;
+  }
 
-    .hero p{
-        font-size:15px;
-    }
+  .song-grid{
+    grid-template-columns:1fr;
+  }
 
-    .hero-buttons{
-        flex-direction:column;
-    }
+  .media-stats{
+    grid-template-columns:1fr;
+  }
 
-    .hero-buttons a{
-        width:100%;
-    }
+  .video-info{
+    padding:20px;
+  }
 
-    .section{
-        padding:55px 15px;
-    }
-
-    .heading h2{
-        font-size:29px;
-    }
-
-    .music-box{
-        padding:20px;
-    }
-
-    .music-top{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .album{
-        width:170px;
-        height:170px;
-    }
-
-    .song-list,
-    .media-grid{
-        grid-template-columns:1fr;
-    }
-
-    .cta h2{
-        font-size:31px;
-    }
+  .media-cta{
+    padding:60px 18px;
+  }
 
 }
 
+
+/* ACCESSIBILITY */
+
 :focus-visible{
-    outline:3px solid var(--gold);
-    outline-offset:3px;
+  outline:3px solid #f4c542;
+  outline-offset:3px;
 }
 
 </style>
 
 </head>
 
+
 <body>
 
-<div class="topbar">
-    <strong>IMOLE 2027</strong>
-    • Service • Development • Accountability
-    • Ojo Constituency II
-</div>
 
-<header class="header">
+<!-- ======================================================
+     HERO
+     ====================================================== -->
 
-    <div class="header-inner">
+<section class="media-hero">
+
+  <div class="hero-content">
+
+    <span class="hero-badge">
+      🎵 OFFICIAL IMOLE 2027 MEDIA CENTRE
+    </span>
+
+    <h1>
+      HEAR THE
+      <span>VOICE</span>
+      OF IMOLE
+    </h1>
+
+    <p>
+      Listen to the campaign music, watch campaign
+      videos and experience the moments behind the
+      IMOLE 2027 movement.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a
+        href="#music"
+        class="btn-gold">
+        🎵 Listen to Music
+      </a>
+
+      <a
+        href="#video"
+        class="btn-white">
+        ▶ Watch Video
+      </a>
+
+      <a
+        href="gallery.html"
+        class="btn-outline">
+        📸 Gallery
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     MUSIC
+     ====================================================== -->
+
+<section
+  class="media-section"
+  id="music">
+
+  <div class="media-container">
+
+    <div class="section-heading">
+
+      <small>
+        Official Campaign Sound
+      </small>
+
+      <h2>
+        🎵 IMOLE 2027 CAMPAIGN MUSIC
+      </h2>
+
+      <p>
+        Enjoy the official campaign songs and
+        sounds of the IMOLE 2027 movement.
+      </p>
+
+    </div>
+
+
+    <!-- FEATURED SONG -->
+
+    <div class="featured-music">
+
+      <div class="music-top">
 
         <img
-            src="./assets/ndc-logo.jpeg"
-            alt="Nigeria Democratic Congress logo"
-            class="logo"
+          class="album-cover"
+          src="assets/IMG-20260710-WA0004.jpg"
+          alt="Hon. Nurudeen Abayomi Sadeeq"
+          loading="lazy"
         >
 
-        <div>
+        <div class="music-info">
 
-            <h1>
-                HON. NURUDEEN ABAYOMI SADEEQ
-            </h1>
+          <small>
+            FEATURED CAMPAIGN SONG
+          </small>
 
-            <p>
-                Lagos State House of Assembly —
-                Ojo Constituency II
-            </p>
+          <h3>
+            Ojo Go Better
+          </h3>
 
-            <p>
-                Nigeria Democratic Congress (NDC)
-            </p>
-
-            <span class="badge">
-                IMOLE 2027
-            </span>
+          <p>
+            IMOLE 2027 Campaign Music —
+            Progress Mix
+          </p>
 
         </div>
 
+      </div>
+
+
+      <audio
+        controls
+        preload="metadata">
+
+        <source
+          src="assets/Ojo%20Go%20Better%20(Progress%20Mix).mp3"
+          type="audio/mpeg"
+        >
+
+        Your browser does not support audio.
+
+      </audio>
+
+      <div
+        class="file-status"
+        data-audio-status>
+        Checking audio file...
+      </div>
+
     </div>
 
-</header>
 
-<button
-    class="menu-button"
-    id="menuButton"
-    aria-expanded="false">
 
-    ☰ MENU
+    <!-- SONG LIST -->
 
-</button>
+    <div class="song-grid">
 
-<nav class="nav" id="mainNav">
 
-    <a href="./index.html">
-        🏠 Home
-    </a>
+      <!-- 01 -->
 
-    <a href="./about.html">
-        👤 About
-    </a>
+      <article class="song-card">
 
-    <a href="./manifesto.html">
-        📖 Manifesto
-    </a>
+        <div class="song-number">
+          01
+        </div>
 
-    <a href="./polling-units.html">
-        🗳️ Polling Units
-    </a>
-
-    <a href="./results.html">
-        📊 Results
-    </a>
-
-    <a href="./news.html">
-        📰 News
-    </a>
-
-    <a href="./events.html">
-        📅 Events
-    </a>
-
-    <a href="./gallery.html">
-        📸 Gallery
-    </a>
-
-    <!-- THIS IS THE IMPORTANT MEDIA LINK -->
-    <a href="./media.html" class="active">
-        🎵 Media
-    </a>
-
-    <a href="./contact.html">
-        📞 Contact
-    </a>
-
-    <a href="./donations.html" class="donate">
-        ❤️ Donate
-    </a>
-
-    <a href="./join.html" class="join">
-        🔥 Join IMOLE
-    </a>
-
-</nav>
-
-<main>
-
-<section class="hero">
-
-    <div class="hero-inner">
-
-        <span class="hero-label">
-            🎵 OFFICIAL IMOLE 2027 MEDIA CENTRE
-        </span>
-
-        <h2>
-            HEAR THE
-            <span>VOICE</span>
-            OF IMOLE
-        </h2>
+        <h3>
+          🎵 Ojo Go Better
+        </h3>
 
         <p>
-            Listen to campaign music, watch campaign videos
-            and experience the moments behind the IMOLE 2027 movement.
+          Progress Mix
         </p>
 
-        <div class="hero-buttons">
+        <audio
+          controls
+          preload="none">
 
-            <a href="#music" class="gold">
-                🎵 Listen to Music
-            </a>
+          <source
+            src="assets/Ojo%20Go%20Better%20(Progress%20Mix).mp3"
+            type="audio/mpeg"
+          >
 
-            <a href="#video" class="white">
-                ▶ Watch Video
-            </a>
+        </audio>
 
-            <a href="./gallery.html" class="outline">
-                📸 Gallery
-            </a>
+      </article>
 
+
+
+      <!-- 02 -->
+
+      <article class="song-card">
+
+        <div class="song-number">
+          02
         </div>
+
+        <h3>
+          🎵 Ojo Á Dára
+        </h3>
+
+        <p>
+          Fuji Percussion Heavy
+        </p>
+
+        <audio
+          controls
+          preload="none">
+
+          <source
+            src="assets/Ojo%20adara%20(Fuji%20Percussion%20Heavy).mp3"
+            type="audio/mpeg"
+          >
+
+        </audio>
+
+      </article>
+
+
+
+      <!-- 03 -->
+
+      <article class="song-card">
+
+        <div class="song-number">
+          03
+        </div>
+
+        <h3>
+          🎵 Nuru L'okan
+        </h3>
+
+        <p>
+          IMOLE Campaign Song
+        </p>
+
+        <audio
+          controls
+          preload="none">
+
+          <source
+            src="assets/Nuru%20lokan.mp3"
+            type="audio/mpeg"
+          >
+
+        </audio>
+
+      </article>
+
+
+
+      <!-- 04 -->
+
+      <article class="song-card">
+
+        <div class="song-number">
+          04
+        </div>
+
+        <h3>
+          🎵 OJO DEY MOVE
+        </h3>
+
+        <p>
+          Campaign Movement Sound
+        </p>
+
+        <audio
+          controls
+          preload="none">
+
+          <source
+            src="assets/OJO%20DEY%20MOVE.mp3"
+            type="audio/mpeg"
+          >
+
+        </audio>
+
+      </article>
+
+
+
+      <!-- 05 -->
+
+      <article class="song-card">
+
+        <div class="song-number">
+          05
+        </div>
+
+        <h3>
+          🎵 OJO ZAI FI KYAU
+        </h3>
+
+        <p>
+          Campaign Music
+        </p>
+
+        <audio
+          controls
+          preload="none">
+
+          <source
+            src="assets/OJO%20ZAI%20FI%20KYAU.mp3"
+            type="audio/mpeg"
+          >
+
+        </audio>
+
+      </article>
+
+
+
+      <!-- 06 -->
+
+      <article class="song-card">
+
+        <div class="song-number">
+          06
+        </div>
+
+        <h3>
+          🎵 Ojo Ga-ɗi Mma
+        </h3>
+
+        <p>
+          Igbo Version
+        </p>
+
+        <audio
+          controls
+          preload="none">
+
+          <source
+            src="assets/Ojo%20Gadi%20Mma%20(Igbo%20Version).mp3"
+            type="audio/mpeg"
+          >
+
+        </audio>
+
+      </article>
+
+
+
+      <!-- 07 -->
+
+      <article class="song-card">
+
+        <div class="song-number">
+          07
+        </div>
+
+        <h3>
+          🎵 Sadeeq Campaign Jingle
+        </h3>
+
+        <p>
+          Option 1
+        </p>
+
+        <audio
+          controls
+          preload="none">
+
+          <source
+            src="assets/Sadeeq%20Campaign%20Jingle%20(Option%201).mp3"
+            type="audio/mpeg"
+          >
+
+        </audio>
+
+      </article>
+
 
     </div>
 
+
+
+    <!-- MUSIC STATS -->
+
+    <div class="media-stats">
+
+      <div class="media-stat">
+
+        <strong>
+          7
+        </strong>
+
+        <span>
+          Campaign Tracks
+        </span>
+
+      </div>
+
+
+      <div class="media-stat">
+
+        <strong>
+          1
+        </strong>
+
+        <span>
+          Campaign Video
+        </span>
+
+      </div>
+
+
+      <div class="media-stat">
+
+        <strong>
+          24/7
+        </strong>
+
+        <span>
+          Media Access
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
+
+
+
+<!-- ======================================================
+     VIDEO
+     ====================================================== -->
 
 <section
-    class="section music-section"
-    id="music">
+  class="media-section video-section"
+  id="video">
 
-    <div class="container">
+  <div class="media-container">
 
-        <div class="heading">
+    <div class="section-heading">
 
-            <small>
-                Official Campaign Sound
-            </small>
+      <small>
+        Campaign Video
+      </small>
 
-            <h2>
-                🎵 IMOLE 2027 CAMPAIGN MUSIC
-            </h2>
+      <h2>
+        🎬 IMOLE 2027 VIDEO
+      </h2>
 
-            <p>
-                Listen to the official campaign songs
-                and sounds of the IMOLE 2027 movement.
-            </p>
-
-        </div>
-
-        <div class="music-box">
-
-            <div class="music-top">
-
-                <img
-                    src="./assets/IMG-20260710-WA0004.jpg"
-                    alt="IMOLE 2027 Campaign"
-                    class="album"
-                >
-
-                <div class="music-info">
-
-                    <small>
-                        FEATURED CAMPAIGN SONG
-                    </small>
-
-                    <h3>
-                        Ojo Go Better
-                    </h3>
-
-                    <p>
-                        IMOLE 2027 Campaign Music —
-                        Progress Mix
-                    </p>
-
-                </div>
-
-            </div>
-
-            <audio controls preload="metadata">
-
-                <source
-                    src="./assets/Ojo Go Better (Progress Mix).mp3"
-                    type="audio/mpeg">
-
-                Your browser does not support audio.
-
-            </audio>
-
-        </div>
-
-        <div class="song-list">
-
-            <div class="song">
-
-                <strong>
-                    🎵 Ojo Go Better
-                </strong>
-
-                <span>
-                    Progress Mix
-                </span>
-
-                <audio controls preload="none">
-
-                    <source
-                        src="./assets/Ojo Go Better (Progress Mix).mp3"
-                        type="audio/mpeg">
-
-                </audio>
-
-            </div>
-
-            <div class="song">
-
-                <strong>
-                    🎵 Ojó Á Dára
-                </strong>
-
-                <span>
-                    Fuji Percussion Heavy
-                </span>
-
-                <audio controls preload="none">
-
-                    <source
-                        src="./assets/Ojó Á Dára (Fuji Percussion Heavy).mp3"
-                        type="audio/mpeg">
-
-                </audio>
-
-            </div>
-
-            <div class="song">
-
-                <strong>
-                    🎵 Nuru L'ọkàn
-                </strong>
-
-                <span>
-                    IMOLE Campaign Song
-                </span>
-
-                <audio controls preload="none">
-
-                    <source
-                        src="./assets/Nuru L'ọkàn.mp3"
-                        type="audio/mpeg">
-
-                </audio>
-
-            </div>
-
-            <div class="song">
-
-                <strong>
-                    🎵 OJO DEY MOVE
-                </strong>
-
-                <span>
-                    Campaign Movement Sound
-                </span>
-
-                <audio controls preload="none">
-
-                    <source
-                        src="./assets/OJO DEY MOVE.mp3"
-                        type="audio/mpeg">
-
-                </audio>
-
-            </div>
-
-            <div class="song">
-
-                <strong>
-                    🎵 OJO ZAI FI KYAU
-                </strong>
-
-                <span>
-                    Campaign Music
-                </span>
-
-                <audio controls preload="none">
-
-                    <source
-                        src="./assets/OJO ZAI FI KYAU.mp3"
-                        type="audio/mpeg">
-
-                </audio>
-
-            </div>
-
-            <div class="song">
-
-                <strong>
-                    🎵 Ojo Ga-adị Mma
-                </strong>
-
-                <span>
-                    Igbo Version
-                </span>
-
-                <audio controls preload="none">
-
-                    <source
-                        src="./assets/Ojo Ga-adị Mma (Igbo Version).mp3"
-                        type="audio/mpeg">
-
-                </audio>
-
-            </div>
-
-            <div class="song">
-
-                <strong>
-                    🎵 Sadeeq Campaign Jingle
-                </strong>
-
-                <span>
-                    Option 1
-                </span>
-
-                <audio controls preload="none">
-
-                    <source
-                        src="./assets/Sadeeq Campaign Jingle (Option 1).mp3"
-                        type="audio/mpeg">
-
-                </audio>
-
-            </div>
-
-        </div>
+      <p>
+        Watch campaign messages and highlights
+        from the IMOLE 2027 movement.
+      </p>
 
     </div>
 
-</section>
 
-<section
-    class="section video-section"
-    id="video">
+    <div class="video-card">
 
-    <div class="container">
+      <div class="video-wrapper">
 
-        <div class="heading">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+          poster="assets/IMG-20260710-WA0004.jpg">
 
-            <small>
-                Campaign Video
-            </small>
+          <source
+            src="assets/47ce1089-66a6-441d-850d-11cee3fb6cfc-watermark.mp4"
+            type="video/mp4"
+          >
 
-            <h2>
-                🎬 IMOLE 2027 VIDEO
-            </h2>
+          Your browser does not support video.
 
-            <p>
-                Watch campaign messages and highlights
-                from the IMOLE 2027 movement.
-            </p>
+        </video>
 
-        </div>
+      </div>
 
-        <div class="video-box">
 
-            <video
-                controls
-                playsinline
-                preload="metadata"
-                poster="./assets/IMG-20260710-WA0004.jpg">
+      <div class="video-info">
 
-                <source
-                    src="./assets/47ce1089-66a6-441d-850d-11cee3fb6cfc-watermark.mp4"
-                    type="video/mp4">
+        <h3>
+          🔥 LET IMOLE SHINE
+        </h3>
 
-                Your browser does not support video.
+        <p>
+          Official IMOLE 2027 campaign media
+          featuring the movement for Service,
+          Development and Accountability in
+          Ojo Constituency II.
+        </p>
 
-            </video>
-
-            <div class="video-description">
-
-                <h3>
-                    🔥 LET IMOLE SHINE
-                </h3>
-
-                <p>
-                    Hon. Nurudeen Abayomi Sadeeq —
-                    Ojo Constituency II.
-                    Service • Development • Accountability.
-                </p>
-
-            </div>
-
-        </div>
+      </div>
 
     </div>
 
-</section>
-
-<section class="section">
-
-    <div class="container">
-
-        <div class="heading">
-
-            <small>
-                Campaign Media
-            </small>
-
-            <h2>
-                📸 IMOLE MEDIA HIGHLIGHTS
-            </h2>
-
-            <p>
-                Explore the people, activities and grassroots
-                movement behind IMOLE 2027.
-            </p>
-
-        </div>
-
-        <div class="media-grid">
-
-            <article class="card">
-
-                <img
-                    src="./assets/IMG-20260710-WA0004.jpg"
-                    alt="Hon. Nurudeen Abayomi Sadeeq">
-
-                <div class="card-content">
-
-                    <h3>
-                        👤 Meet the Candidate
-                    </h3>
-
-                    <p>
-                        Learn about Hon. Nurudeen Abayomi
-                        Sadeeq and his vision for Ojo Constituency II.
-                    </p>
-
-                </div>
-
-            </article>
-
-            <article class="card">
-
-                <img
-                    src="./assets/IMG-20260728-WA0032.jpg"
-                    alt="IMOLE 2027 Campaign">
-
-                <div class="card-content">
-
-                    <h3>
-                        📸 Campaign Moments
-                    </h3>
-
-                    <p>
-                        Grassroots engagement, community meetings
-                        and campaign activities.
-                    </p>
-
-                </div>
-
-            </article>
-
-            <article class="card">
-
-                <img
-                    src="./assets/IMG-20260710-WA0004.jpg"
-                    alt="IMOLE Movement">
-
-                <div class="card-content">
-
-                    <h3>
-                        🔥 IMOLE Movement
-                    </h3>
-
-                    <p>
-                        Service, development, accountability
-                        and grassroots participation.
-                    </p>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
+  </div>
 
 </section>
 
-<section class="cta">
+
+
+<!-- ======================================================
+     CTA
+     ====================================================== -->
+
+<section class="media-cta">
+
+  <div class="media-cta-inner">
 
     <h2>
-        🔥 LET IMOLE SHINE
+      BE PART OF THE
+      <span>IMOLE MOVEMENT</span>
     </h2>
 
     <p>
-        Listen to the message.
-        Share the vision.
-        Join the movement.
+      Share the message. Join the movement.
+      Support the campaign and help us spread
+      the vision of a better Ojo Constituency II.
     </p>
 
     <div class="cta-buttons">
 
-        <a
-            href="./join.html"
-            class="gold">
-            🔥 JOIN IMOLE 2027
-        </a>
+      <a
+        href="join.html"
+        class="cta-primary">
+        🤝 Join IMOLE
+      </a>
 
-        <a
-            href="./gallery.html"
-            class="white">
-            📸 VIEW GALLERY
-        </a>
+      <a
+        href="donations.html"
+        class="cta-secondary">
+        ❤️ Support the Movement
+      </a>
 
-        <a
-            href="./donations.html"
-            class="gold">
-            ❤️ SUPPORT IMOLE
-        </a>
+      <a
+        href="gallery.html"
+        class="cta-secondary">
+        📸 View Gallery
+      </a>
 
     </div>
+
+  </div>
 
 </section>
 
-</main>
 
-<footer>
 
-    <p class="footer-title">
-        HON. NURUDEEN ABAYOMI SADEEQ
-    </p>
+<!-- ======================================================
+     UNIVERSAL WEBSITE SYSTEM
+     ====================================================== -->
 
-    <p>
-        Lagos State House of Assembly —
-        Ojo Constituency II
-    </p>
+<script src="site.js?v=20260831"></script>
 
-    <p>
-        Nigeria Democratic Congress (NDC)
-    </p>
 
-    <p class="footer-slogan">
-        IMOLE 2027 —
-        Service • Development • Accountability
-    </p>
-
-    <div class="footer-links">
-
-        <a href="./index.html">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./manifesto.html">Manifesto</a>
-        <a href="./news.html">News</a>
-        <a href="./events.html">Events</a>
-        <a href="./gallery.html">Gallery</a>
-        <a href="./media.html">🎵 Media</a>
-        <a href="./contact.html">Contact</a>
-        <a href="./join.html">Join</a>
-        <a href="./donations.html">Donate</a>
-
-    </div>
-
-    <p>
-        &copy; 2026 Hon. Nurudeen Abayomi Sadeeq Campaign.
-        All Rights Reserved.
-    </p>
-
-</footer>
-
-<button
-    class="back-top"
-    id="backTop">
-    ↑
-</button>
+<!-- ======================================================
+     MEDIA FILE CHECKER
+     ====================================================== -->
 
 <script>
 
-/* MOBILE MENU */
+document.addEventListener(
+  "DOMContentLoaded",
+  function(){
 
-const menuButton =
-    document.getElementById("menuButton");
+    const audioSources =
+      document.querySelectorAll(
+        "audio source"
+      );
 
-const mainNav =
-    document.getElementById("mainNav");
 
-menuButton.addEventListener("click",function(){
+    audioSources.forEach(
+      function(source){
 
-    mainNav.classList.toggle("show");
+        const audio =
+          source.parentElement;
 
-    const open =
-        mainNav.classList.contains("show");
-
-    menuButton.setAttribute(
-        "aria-expanded",
-        open
-    );
-
-    menuButton.innerHTML =
-        open ? "✕ CLOSE MENU" : "☰ MENU";
-
-});
-
-/* CLOSE MENU AFTER LINK */
-
-document.querySelectorAll("#mainNav a")
-.forEach(function(link){
-
-    link.addEventListener("click",function(){
-
-        if(window.innerWidth <= 800){
-
-            mainNav.classList.remove("show");
-
-            menuButton.setAttribute(
-                "aria-expanded",
-                "false"
+        const status =
+          audio
+            .closest(".featured-music")
+            ?.querySelector(
+              "[data-audio-status]"
             );
 
-            menuButton.innerHTML =
-                "☰ MENU";
+
+        audio.addEventListener(
+          "error",
+          function(){
+
+            if(status){
+
+              status.textContent =
+                "The audio file could not be loaded.";
+
+              status.classList.add(
+                "error"
+              );
+
+            }
+
+          }
+        );
+
+
+        audio.addEventListener(
+          "loadedmetadata",
+          function(){
+
+            if(status){
+
+              status.textContent =
+                "✓ Audio ready — tap play to listen.";
+
+              status.classList.add(
+                "success"
+              );
+
+            }
+
+          }
+        );
+
+      }
+    );
+
+
+    const video =
+      document.querySelector(
+        "video"
+      );
+
+
+    if(video){
+
+      video.addEventListener(
+        "loadedmetadata",
+        function(){
+
+          console.log(
+            "IMOLE 2027 video loaded successfully."
+          );
 
         }
+      );
 
-    });
 
-});
+      video.addEventListener(
+        "error",
+        function(){
 
-/* BACK TO TOP */
+          console.warn(
+            "IMOLE 2027 video could not be loaded."
+          );
 
-const backTop =
-    document.getElementById("backTop");
-
-window.addEventListener("scroll",function(){
-
-    if(window.scrollY > 500){
-
-        backTop.classList.add("show");
-
-    }else{
-
-        backTop.classList.remove("show");
+        }
+      );
 
     }
 
-});
-
-backTop.addEventListener("click",function(){
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-});
-
-/* SERVICE WORKER */
-
-if("serviceWorker" in navigator){
-
-    window.addEventListener("load",function(){
-
-        navigator.serviceWorker.register(
-            "./service-worker.js"
-        ).catch(function(error){
-
-            console.log(
-                "Service Worker error:",
-                error
-            );
-
-        });
-
-    });
-
-}
+  }
+);
 
 </script>
 
+
 </body>
+
 </html>
