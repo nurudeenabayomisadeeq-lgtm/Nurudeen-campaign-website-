@@ -1,518 +1,789 @@
-<!-- =========================
-     IMOLE 2027 MEDIA HUB
-     ========================= -->
+<!-- =========================================================
+     IMOLE 2027 — CORRECTED WEBSITE NAVIGATION
+     Hon. Nurudeen Abayomi Sadeeq
+     Nigeria Democratic Congress (NDC)
+     Ojo Constituency II
+     ========================================================= -->
 
-<!-- POLLING UNIT NAVIGATION FIX: use the dedicated page from every polling-unit icon/button. -->
+<header class="site-header" id="siteHeader">
 
-<section class="media-section" id="media">
-  <div class="media-wrap">
-    <div class="media-heading">
-      <span class="media-label">IMOLE 2027 MEDIA HUB</span>
-      <h2>Campaign Music &amp; Video</h2>
-      <p>Listen to all official IMOLE 2027 campaign sounds and watch campaign media.</p>
-    </div>
+  <div class="nav-container">
 
-    <div class="music-grid">
-      <article class="music-card"><h3>Ojo Go Better</h3><p>Progress Mix</p><audio controls preload="metadata" playsinline><source src="assets/Ojo%20Go%20Better%20(Progress%20Mix).mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
-      <article class="music-card"><h3>OJO DEY MOVE</h3><p>IMOLE 2027 campaign music</p><audio controls preload="metadata" playsinline><source src="assets/OJO%20DEY%20MOVE.mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
-      <article class="music-card"><h3>OJO ZAI FI KYAU</h3><p>IMOLE 2027 campaign music</p><audio controls preload="metadata" playsinline><source src="assets/OJO%20ZAI%20FI%20KYAU.mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
-      <article class="music-card"><h3>Ojo Gadi Mma</h3><p>Igbo Version</p><audio controls preload="metadata" playsinline><source src="./assets/Ojo%20Gadi%20Mma%20%28Igbo%20Version%29.mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
-      <article class="music-card"><h3>Nuru Lokan</h3><p>IMOLE campaign sound</p><audio controls preload="metadata" playsinline><source src="./assets/Nuru%20lokan.mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
-      <article class="music-card"><h3>Ojo Adara</h3><p>Fuji Percussion Heavy</p><audio controls preload="metadata" playsinline><source src="./assets/Ojo%20adara%20%28Fuji%20Percussion%20Heavy%29.mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
-      <article class="music-card"><h3>Sadeeq Campaign Jingle</h3><p>Option 1</p><audio controls preload="metadata" playsinline><source src="assets/Sadeeq%20Campaign%20Jingle%20(Option%201).mp3" type="audio/mpeg">Your browser does not support audio.</audio><div class="media-status" aria-live="polite"></div></article>
-    </div>
+    <!-- LOGO / BRAND -->
+    <a href="index.html" class="site-brand" aria-label="IMOLE 2027 Home">
+      <div class="brand-mark">IMOLE</div>
 
-    <div class="video-card">
-      <h3>Campaign Video</h3>
-      <p>Campaign media from the official repository.</p>
-      <video controls preload="metadata" playsinline>
-        <source src="./assets/47ce1089-66a6-441d-850d-11cee3fb6cfc-watermark.mp4" type="video/mp4">
-        Your browser does not support video playback.
-      </video>
-      <div class="media-status video-status" aria-live="polite"></div>
-    </div>
-  </div>
-</section>
-
-<style>
-.media-section{width:100%;padding:56px 16px;box-sizing:border-box;background:#071f14;color:#fff}
-.media-wrap{width:100%;max-width:1100px;margin:auto}
-.media-heading{text-align:center;max-width:720px;margin:0 auto 30px}
-.media-label{font-size:12px;font-weight:800;letter-spacing:1.6px;color:#d9b44a}
-.media-heading h2{margin:8px 0 10px;font-size:clamp(28px,5vw,42px);line-height:1.1}
-.media-heading p,.music-card p,.video-card p{color:#b8c7bf;line-height:1.6}
-.music-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.music-card,.video-card{background:#fff;color:#17231c;border-radius:18px;padding:20px;box-sizing:border-box;box-shadow:0 12px 30px rgba(0,0,0,.16)}
-.music-card h3,.video-card h3{margin:0 0 5px;font-size:19px}
-.music-card p,.video-card p{margin:0 0 14px;color:#66746c;font-size:14px}
-.music-card audio{display:block;width:100%;height:46px}
-.media-status{min-height:18px;margin-top:9px;font-size:12px;font-weight:700;color:#b3261e}
-.video-card{margin-top:22px}
-.video-card video{display:block;width:100%;max-height:600px;border-radius:12px;background:#000}
-@media(max-width:650px){.media-section{padding:42px 12px}.music-grid{grid-template-columns:1fr}.music-card,.video-card{padding:17px;border-radius:16px}.music-card h3,.video-card h3{font-size:17px}.music-card audio{height:44px}}
-</style>
-
-<script>
-(function(){
-  const players=document.querySelectorAll('.music-card audio');
-  players.forEach(function(audio){
-    const status=audio.parentElement.querySelector('.media-status');
-    audio.addEventListener('error',function(){
-      status.textContent='This audio file could not be loaded. Please check the file in the assets folder.';
-    });
-    audio.addEventListener('loadedmetadata',function(){status.textContent='';});
-  });
-  const video=document.querySelector('.video-card video');
-  if(video){
-    const status=video.parentElement.querySelector('.video-status');
-    video.addEventListener('error',function(){status.textContent='The campaign video could not be loaded. Please check the MP4 file in the assets folder.';});
-    video.addEventListener('loadedmetadata',function(){status.textContent='';});
-  }
-})();
-</script>
-
-<!-- =========================
-     IMOLE 2027 DONATION CARD
-     ========================= -->
-
-<section class="donation-section" id="donate">
-  <div class="donation-card">
-
-    <div class="donation-icon" aria-hidden="true">❤️</div>
-
-    <span class="donation-label">SUPPORT IMOLE 2027</span>
-
-    <h2>Support the Movement</h2>
-
-    <p class="donation-text">
-      Your support helps strengthen the IMOLE 2027 campaign and our
-      commitment to service, development and accountability in
-      Ojo Constituency II.
-    </p>
-
-    <div class="account-box">
-
-      <div class="account-row">
-        <span class="account-label">Account Name</span>
-        <strong>Nurudeen Abayomi Sadeeq</strong>
+      <div class="brand-text">
+        <strong>IMOLE 2027</strong>
+        <span>Nurudeen Abayomi Sadeeq</span>
       </div>
+    </a>
 
-      <div class="account-row">
-        <span class="account-label">Bank</span>
-        <strong>OPay</strong>
-      </div>
 
-      <div class="account-row account-number-row">
-        <div>
-          <span class="account-label">Account Number</span>
-          <strong id="donationAccountNumber">8159461760</strong>
-        </div>
+    <!-- MOBILE MENU BUTTON -->
+    <button
+      type="button"
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mainNavigation">
 
-        <button
-          type="button"
-          class="copy-account-btn"
-          id="copyAccountBtn"
-          onclick="copyDonationAccount()"
-          aria-label="Copy donation account number">
-          <span id="copyIcon">📋</span>
-          <span id="copyText">Copy</span>
-        </button>
-      </div>
+      <span></span>
+      <span></span>
+      <span></span>
 
-    </div>
+    </button>
 
-    <div class="donation-note">
-      <span>🔒</span>
-      <p>
-        Please verify the account name
-        <strong>Nurudeen Abayomi Sadeeq</strong>
-        before making your transfer.
-      </p>
-    </div>
 
-    <div
-      class="copy-success"
-      id="copySuccess"
-      role="status"
-      aria-live="polite">
-      ✓ Account number copied successfully!
-    </div>
+    <!-- MAIN NAVIGATION -->
+    <nav
+      class="main-navigation"
+      id="mainNavigation"
+      aria-label="Main navigation">
+
+      <a href="index.html" class="nav-link">
+        <span>🏠</span>
+        <span>Home</span>
+      </a>
+
+      <a href="about.html" class="nav-link">
+        <span>👤</span>
+        <span>About</span>
+      </a>
+
+      <a href="manifesto.html" class="nav-link">
+        <span>📖</span>
+        <span>Manifesto</span>
+      </a>
+
+
+      <!-- =====================================================
+           IMPORTANT POLLING UNIT FIX
+           DO NOT CHANGE THIS TO #media OR media.html
+           ===================================================== -->
+
+      <a href="polling-units.html"
+         class="nav-link polling-link"
+         id="pollingUnitsNav">
+
+        <span>🗳️</span>
+        <span>Polling Units</span>
+
+      </a>
+
+
+      <a href="results.html" class="nav-link">
+        <span>📊</span>
+        <span>Results</span>
+      </a>
+
+      <a href="news.html" class="nav-link">
+        <span>📰</span>
+        <span>News</span>
+      </a>
+
+      <a href="events.html" class="nav-link">
+        <span>📅</span>
+        <span>Events</span>
+      </a>
+
+      <a href="gallery.html" class="nav-link">
+        <span>🖼️</span>
+        <span>Gallery</span>
+      </a>
+
+      <a href="contact.html" class="nav-link">
+        <span>📞</span>
+        <span>Contact</span>
+      </a>
+
+      <a href="join.html" class="nav-link">
+        <span>🤝</span>
+        <span>Join Us</span>
+      </a>
+
+
+      <!-- MEDIA IS SEPARATE FROM POLLING UNITS -->
+      <a href="media.html" class="nav-link media-link">
+        <span>🎵</span>
+        <span>Media</span>
+      </a>
+
+
+      <a href="support.html" class="nav-link support-link">
+        <span>❤️</span>
+        <span>Support</span>
+      </a>
+
+    </nav>
 
   </div>
+
+</header>
+
+
+<!-- =========================================================
+     QUICK ACCESS BUTTONS
+     These also use the correct dedicated pages.
+     ========================================================= -->
+
+<section class="quick-access" aria-label="Quick access">
+
+  <div class="quick-access-grid">
+
+
+    <!-- POLLING UNITS -->
+    <a
+      href="polling-units.html"
+      class="quick-card polling-card">
+
+      <div class="quick-icon">🗳️</div>
+
+      <div class="quick-content">
+        <strong>Polling Units</strong>
+        <span>Find your polling unit</span>
+      </div>
+
+      <span class="quick-arrow">→</span>
+
+    </a>
+
+
+    <!-- RESULTS -->
+    <a
+      href="results.html"
+      class="quick-card">
+
+      <div class="quick-icon">📊</div>
+
+      <div class="quick-content">
+        <strong>Election Results</strong>
+        <span>View constituency results</span>
+      </div>
+
+      <span class="quick-arrow">→</span>
+
+    </a>
+
+
+    <!-- NEWS -->
+    <a
+      href="news.html"
+      class="quick-card">
+
+      <div class="quick-icon">📰</div>
+
+      <div class="quick-content">
+        <strong>Campaign News</strong>
+        <span>Latest IMOLE updates</span>
+      </div>
+
+      <span class="quick-arrow">→</span>
+
+    </a>
+
+
+    <!-- MEDIA -->
+    <a
+      href="media.html"
+      class="quick-card">
+
+      <div class="quick-icon">🎵</div>
+
+      <div class="quick-content">
+        <strong>Campaign Media</strong>
+        <span>Music &amp; campaign videos</span>
+      </div>
+
+      <span class="quick-arrow">→</span>
+
+    </a>
+
+
+    <!-- JOIN -->
+    <a
+      href="join.html"
+      class="quick-card">
+
+      <div class="quick-icon">🤝</div>
+
+      <div class="quick-content">
+        <strong>Join IMOLE 2027</strong>
+        <span>Become part of the movement</span>
+      </div>
+
+      <span class="quick-arrow">→</span>
+
+    </a>
+
+
+    <!-- SUPPORT -->
+    <a
+      href="support.html"
+      class="quick-card">
+
+      <div class="quick-icon">❤️</div>
+
+      <div class="quick-content">
+        <strong>Support the Movement</strong>
+        <span>Support IMOLE 2027</span>
+      </div>
+
+      <span class="quick-arrow">→</span>
+
+    </a>
+
+  </div>
+
 </section>
 
 
-<style>
-/* =========================
-   DONATION CARD
-   ========================= */
+<!-- =========================================================
+     NAVIGATION CSS
+     ========================================================= -->
 
-.donation-section {
+<style>
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
   width: 100%;
-  padding: 60px 20px;
-  box-sizing: border-box;
-  background: #f6f8f7;
+  background: rgba(255,255,255,0.97);
+  border-bottom: 1px solid #e4ebe6;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  backdrop-filter: blur(12px);
 }
 
-.donation-card {
+.nav-container {
   width: 100%;
-  max-width: 650px;
+  max-width: 1200px;
+  min-height: 72px;
   margin: 0 auto;
-  padding: 35px 28px;
+  padding: 0 18px;
   box-sizing: border-box;
-  background: #ffffff;
-  border-radius: 24px;
-  text-align: center;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.10);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
 
-.donation-icon {
-  width: 65px;
-  height: 65px;
-  margin: 0 auto 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #eef8f1;
-  font-size: 30px;
-}
-
-.donation-label {
-  display: inline-block;
-  margin-bottom: 8px;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  color: #087f3e;
-}
-
-.donation-card h2 {
-  margin: 0 0 12px;
-  font-size: clamp(26px, 5vw, 36px);
-  line-height: 1.15;
-  color: #14231a;
-}
-
-.donation-text {
-  max-width: 530px;
-  margin: 0 auto 25px;
-  font-size: 15px;
-  line-height: 1.7;
-  color: #5d6862;
-}
-
-
-/* =========================
-   ACCOUNT BOX
-   ========================= */
-
-.account-box {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 8px 18px;
-  background: #f7faf8;
-  border: 1px solid #e1ebe4;
-  border-radius: 18px;
-  text-align: left;
-}
-
-.account-row {
-  min-height: 65px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
-  padding: 13px 0;
-  box-sizing: border-box;
-  border-bottom: 1px solid #e2e9e5;
-}
-
-.account-row:last-child {
-  border-bottom: none;
-}
-
-.account-label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.7px;
-  color: #748079;
-}
-
-.account-row strong {
-  display: block;
-  font-size: 16px;
-  color: #17231c;
-  word-break: break-word;
+  gap: 20px;
 }
 
 
-/* =========================
-   COPY BUTTON
-   ========================= */
+/* BRAND */
 
-.account-number-row {
+.site-brand {
+  display: flex;
   align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  color: #13251b;
+
+  flex-shrink: 0;
 }
 
-.copy-account-btn {
-  flex-shrink: 0;
-  min-width: 90px;
-  min-height: 44px;
-  padding: 10px 14px;
-  border: none;
+.brand-mark {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border-radius: 12px;
+
   background: #087f3e;
   color: #ffffff;
-  font-size: 14px;
-  font-weight: 800;
-  cursor: pointer;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text strong {
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.brand-text span {
+  margin-top: 3px;
+  font-size: 10px;
+  color: #68756e;
+  line-height: 1.2;
+}
+
+
+/* NAVIGATION */
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+}
+
+.nav-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  gap: 5px;
+
+  min-height: 42px;
+  padding: 8px 9px;
+
+  border-radius: 10px;
+
+  color: #26372d;
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 800;
+
   transition:
-    transform 0.2s ease,
-    opacity 0.2s ease,
-    background 0.2s ease;
-  -webkit-tap-highlight-color: transparent;
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.copy-account-btn:hover {
-  opacity: 0.92;
+.nav-link:hover {
+  background: #edf7f1;
+  color: #087f3e;
   transform: translateY(-1px);
 }
 
-.copy-account-btn:active {
-  transform: scale(0.96);
+.nav-link span:first-child {
+  font-size: 15px;
 }
 
-.copy-account-btn.copied {
-  background: #145c36;
+.nav-link.polling-link {
+  background: #087f3e;
+  color: #ffffff;
 }
 
-
-/* =========================
-   SECURITY / NOTE
-   ========================= */
-
-.donation-note {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: 18px;
-  padding: 14px;
-  border-radius: 14px;
-  background: #fff9e8;
-  text-align: left;
+.nav-link.polling-link:hover {
+  background: #076c35;
+  color: #ffffff;
 }
 
-.donation-note span {
-  font-size: 18px;
-  line-height: 1.4;
-}
-
-.donation-note p {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.55;
-  color: #665b3b;
-}
-
-.donation-note strong {
-  color: #443b24;
-}
-
-
-/* =========================
-   COPY SUCCESS MESSAGE
-   ========================= */
-
-.copy-success {
-  display: none;
-  margin-top: 14px;
-  padding: 11px 14px;
-  border-radius: 10px;
-  background: #e9f8ee;
+.nav-link.media-link {
   color: #087f3e;
-  font-size: 13px;
-  font-weight: 700;
 }
 
-.copy-success.show {
+.nav-link.support-link {
+  background: #fff7df;
+  color: #8a6811;
+}
+
+
+/* MOBILE MENU BUTTON */
+
+.menu-toggle {
+  display: none;
+
+  width: 46px;
+  height: 46px;
+
+  padding: 10px;
+
+  border: 1px solid #dce6df;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+}
+
+.menu-toggle span {
   display: block;
+
+  width: 100%;
+  height: 3px;
+
+  margin: 5px 0;
+
+  border-radius: 10px;
+
+  background: #087f3e;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 
-/* =========================
+/* QUICK ACCESS */
+
+.quick-access {
+  width: 100%;
+  padding: 25px 15px;
+  box-sizing: border-box;
+
+  background: #f5f8f6;
+}
+
+.quick-access-grid {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.quick-card {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e3ebe6;
+  border-radius: 16px;
+
+  color: #18251e;
+  text-decoration: none;
+
+  box-shadow: 0 7px 20px rgba(0,0,0,0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.quick-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 28px rgba(0,0,0,0.09);
+
+  border-color: #b8d8c5;
+}
+
+.quick-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 13px;
+
+  background: #edf7f1;
+
+  font-size: 22px;
+}
+
+.quick-content {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-content strong {
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.quick-content span {
+  margin-top: 3px;
+
+  color: #6c7771;
+
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.quick-arrow {
+  color: #087f3e;
+
+  font-size: 20px;
+  font-weight: 900;
+}
+
+
+/* POLLING UNIT HIGHLIGHT */
+
+.polling-card {
+  border: 2px solid #087f3e;
+}
+
+.polling-card .quick-icon {
+  background: #087f3e;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .main-navigation {
+    gap: 1px;
+  }
+
+  .nav-link {
+    padding: 8px 6px;
+    font-size: 11px;
+  }
+
+  .nav-link span:first-child {
+    font-size: 14px;
+  }
+
+  .quick-access-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
    MOBILE
-   ========================= */
+   ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
-  .donation-section {
-    padding: 40px 14px;
+  .nav-container {
+    min-height: 65px;
   }
 
-  .donation-card {
-    padding: 28px 16px;
-    border-radius: 20px;
+  .menu-toggle {
+    display: block;
   }
 
-  .donation-icon {
-    width: 58px;
-    height: 58px;
-    font-size: 26px;
+  .main-navigation {
+    position: absolute;
+
+    top: 65px;
+    left: 0;
+    right: 0;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border-top: 1px solid #e5ebe7;
+
+    box-shadow: 0 12px 25px rgba(0,0,0,0.10);
   }
 
-  .donation-text {
+  .main-navigation.open {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+
+    min-height: 48px;
+
+    justify-content: flex-start;
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
     font-size: 14px;
-    line-height: 1.65;
   }
 
-  .account-box {
-    padding: 6px 14px;
-    border-radius: 15px;
+  .nav-link span:first-child {
+    width: 25px;
+    text-align: center;
   }
 
-  .account-row {
-    min-height: 62px;
-    gap: 10px;
+  .quick-access-grid {
+    grid-template-columns: 1fr;
   }
 
-  .account-row strong {
-    font-size: 14px;
-  }
-
-  .account-number-row {
-    align-items: center;
-  }
-
-  .copy-account-btn {
-    min-width: 78px;
-    min-height: 42px;
-    padding: 9px 10px;
-    font-size: 13px;
-  }
-
-  .donation-note p {
-    font-size: 12px;
-  }
 }
 
 
-/* Very small phones */
-@media (max-width: 380px) {
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
 
-  .donation-card {
-    padding: 24px 12px;
+@media (max-width: 420px) {
+
+  .nav-container {
+    padding: 0 12px;
   }
 
-  .account-box {
-    padding: 4px 11px;
+  .brand-mark {
+    width: 39px;
+    height: 39px;
+    font-size: 10px;
   }
 
-  .account-row strong {
-    font-size: 13px;
+  .brand-text strong {
+    font-size: 14px;
   }
 
-  .copy-account-btn {
-    min-width: 70px;
-    padding: 8px 7px;
+  .brand-text span {
+    font-size: 9px;
   }
+
+  .quick-access {
+    padding: 18px 10px;
+  }
+
+  .quick-card {
+    padding: 14px;
+  }
+
 }
+
 </style>
 
 
+<!-- =========================================================
+     NAVIGATION JAVASCRIPT
+     ========================================================= -->
+
 <script>
-/* =========================
-   COPY DONATION ACCOUNT
-   ========================= */
 
-function copyDonationAccount() {
+(function () {
 
-  const accountNumber =
-    document.getElementById("donationAccountNumber").textContent.trim();
+  const menuToggle =
+    document.getElementById("menuToggle");
 
-  const copyButton =
-    document.getElementById("copyAccountBtn");
-
-  const copyText =
-    document.getElementById("copyText");
-
-  const copyIcon =
-    document.getElementById("copyIcon");
-
-  const successMessage =
-    document.getElementById("copySuccess");
+  const mainNavigation =
+    document.getElementById("mainNavigation");
 
 
-  function showCopied() {
-
-    copyText.textContent = "Copied!";
-    copyIcon.textContent = "✓";
-
-    copyButton.classList.add("copied");
-    successMessage.classList.add("show");
-
-    setTimeout(function () {
-      copyText.textContent = "Copy";
-      copyIcon.textContent = "📋";
-
-      copyButton.classList.remove("copied");
-      successMessage.classList.remove("show");
-    }, 2500);
+  if (!menuToggle || !mainNavigation) {
+    return;
   }
 
 
-  /* Modern clipboard API */
-  if (navigator.clipboard &&
-      window.isSecureContext) {
+  /* OPEN / CLOSE MOBILE MENU */
 
-    navigator.clipboard.writeText(accountNumber)
-      .then(showCopied)
-      .catch(function () {
-        fallbackCopy(accountNumber);
-      });
+  menuToggle.addEventListener("click", function () {
 
-  } else {
+    const isOpen =
+      mainNavigation.classList.toggle("open");
 
-    fallbackCopy(accountNumber);
+    menuToggle.setAttribute(
+      "aria-expanded",
+      isOpen ? "true" : "false"
+    );
 
-  }
+  });
 
 
-  /* Fallback for older browsers */
-  function fallbackCopy(text) {
+  /* CLOSE MENU AFTER CLICKING A LINK */
 
-    const textarea =
-      document.createElement("textarea");
+  const navigationLinks =
+    mainNavigation.querySelectorAll("a");
 
-    textarea.value = text;
-    textarea.style.position = "fixed";
-    textarea.style.left = "-9999px";
+  navigationLinks.forEach(function (link) {
 
-    document.body.appendChild(textarea);
+    link.addEventListener("click", function () {
 
-    textarea.focus();
-    textarea.select();
+      mainNavigation.classList.remove("open");
 
-    try {
-      document.execCommand("copy");
-      showCopied();
-    } catch (error) {
-      alert(
-        "Please copy the account number manually: " +
-        text
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
       );
+
+    });
+
+  });
+
+
+  /* CLOSE MENU WHEN CLICKING OUTSIDE */
+
+  document.addEventListener("click", function (event) {
+
+    if (
+      !mainNavigation.contains(event.target) &&
+      !menuToggle.contains(event.target)
+    ) {
+
+      mainNavigation.classList.remove("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
     }
 
-    document.body.removeChild(textarea);
+  });
+
+
+  /* ESC KEY */
+
+  document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+
+      mainNavigation.classList.remove("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    }
+
+  });
+
+
+  /* =======================================================
+     EXTRA PROTECTION FOR POLLING UNIT NAVIGATION
+     Prevents accidental connection to #media.
+     ======================================================= */
+
+  const pollingLink =
+    document.getElementById("pollingUnitsNav");
+
+  if (pollingLink) {
+
+    pollingLink.addEventListener("click", function (event) {
+
+      event.preventDefault();
+
+      window.location.href =
+        "polling-units.html";
+
+    });
+
   }
 
-}
+})();
+
 </script>
