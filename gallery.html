@@ -1,948 +1,2093 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>Gallery | IMOLE 2027 — Hon. Nurudeen Abayomi Sadeeq</title><meta name="description"
+content="IMOLE 2027 campaign gallery — photos, community engagements, ward activities, meetings and events of Hon. Nurudeen Abayomi Sadeeq, Ojo Constituency II.">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="keywords"
+content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Ojo Constituency II, NDC, campaign gallery, Lagos Assembly">
 
-    <title>Gallery | IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq</title>
+<meta name="theme-color" content="#075c32"><meta property="og:title"
+content="Gallery | IMOLE 2027">
 
-    <meta name="description"
-          content="Official IMOLE 2027 photo gallery featuring Hon. Nurudeen Abayomi Sadeeq, campaign activities, community engagements, ward meetings and constituency activities in Ojo Constituency II.">
+<meta property="og:description"
+content="Official IMOLE 2027 campaign photo gallery.">
 
-    <meta name="theme-color" content="#ffffff">
+<meta property="og:type"
+content="website">
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="manifest" href="manifest.json">
+<link rel="manifest" href="./manifest.json"><style>
 
-    <style>
-        /* =========================================
-           IMOLE 2027 - UPGRADED GALLERY
-        ========================================= */
+:root{
+    --green:#075c32;
+    --dark:#043d21;
+    --gold:#d7a63a;
+    --gold-light:#f7e6b2;
+    --white:#fff;
+    --black:#111;
+    --text:#26332c;
+    --muted:#68766e;
+    --bg:#f5f8f6;
+    --border:#dce7e0;
+    --light:#edf8f2;
+    --shadow:0 12px 35px rgba(0,0,0,.09);
+}
 
-        .gallery-page {
-            max-width: 1200px;
-            margin: auto;
-            padding: 40px 15px 70px;
-        }
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-        .gallery-header {
-            text-align: center;
-            margin-bottom: 35px;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        .gallery-header h1 {
-            font-size: 38px;
-            margin-bottom: 12px;
-        }
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+}
 
-        .gallery-header p {
-            max-width: 800px;
-            margin: auto;
-            line-height: 1.8;
-        }
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
-        .gallery-badge {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 8px 15px;
-            border-radius: 25px;
-            background: #f1f1f1;
-            font-size: 13px;
-            font-weight: bold;
-        }
+img{
+    max-width:100%;
+    display:block;
+}
 
-        /* FILTERS */
+button{
+    font:inherit;
+}
 
-        .gallery-filters {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 35px;
-        }
 
-        .filter-button {
-            border: none;
-            padding: 11px 17px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: bold;
-            background: #eeeeee;
-            transition: 0.2s ease;
-        }
+/* =========================
+   TOP BAR
+========================= */
 
-        .filter-button:hover {
-            transform: translateY(-2px);
-        }
+.topbar{
+    background:var(--dark);
+    color:#fff;
+    text-align:center;
+    padding:8px 15px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.4px;
+}
 
-        .filter-button.active {
-            background: #0645a5;
-            color: #ffffff;
-        }
 
-        /* GALLERY */
+/* =========================
+   HEADER
+========================= */
 
-        .gallery-grid {
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(270px, 1fr));
-            gap: 22px;
-        }
+.header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.98);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+    box-shadow:0 3px 18px rgba(0,0,0,.06);
+}
 
-        .gallery-card {
-            background: #ffffff;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow:
-                0 5px 20px rgba(0,0,0,0.11);
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-        }
+.nav-container{
+    width:min(1200px,94%);
+    min-height:74px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
 
-        .gallery-card:hover {
-            transform: translateY(-5px);
-            box-shadow:
-                0 10px 28px rgba(0,0,0,0.17);
-        }
+.logo-link{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-width:245px;
+}
 
-        .gallery-card.hidden {
-            display: none;
-        }
+.logo{
+    width:50px;
+    height:50px;
+    object-fit:contain;
+    border-radius:50%;
+    border:2px solid var(--gold);
+    background:#fff;
+}
 
-        .gallery-image-wrap {
-            position: relative;
-            overflow: hidden;
-        }
+.brand{
+    display:flex;
+    flex-direction:column;
+}
 
-        .gallery-image {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            display: block;
-            cursor: pointer;
-            transition: transform 0.35s ease;
-        }
+.brand strong{
+    color:var(--green);
+    font-size:18px;
+    line-height:1.1;
+}
 
-        .gallery-card:hover .gallery-image {
-            transform: scale(1.04);
-        }
+.brand small{
+    color:var(--muted);
+    font-size:9px;
+    font-weight:700;
+    margin-top:4px;
+}
 
-        .photo-overlay {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            padding: 35px 15px 12px;
-            background:
-                linear-gradient(
-                    transparent,
-                    rgba(0,0,0,0.75)
-                );
-            color: #ffffff;
-            pointer-events: none;
-        }
+.desktop-nav{
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+    gap:2px;
+}
 
-        .photo-overlay span {
-            font-size: 12px;
-            font-weight: bold;
-        }
+.desktop-nav a{
+    padding:9px;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:700;
+    white-space:nowrap;
+}
 
-        .gallery-caption {
-            padding: 18px;
-        }
+.desktop-nav a:hover{
+    background:var(--light);
+    color:var(--green);
+}
 
-        .gallery-tag {
-            display: inline-block;
-            margin-bottom: 9px;
-            padding: 5px 9px;
-            border-radius: 15px;
-            background: #f1f1f1;
-            font-size: 11px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
+.join-link{
+    background:var(--green);
+    color:#fff!important;
+}
 
-        .gallery-caption h3 {
-            margin: 0 0 8px;
-            font-size: 19px;
-        }
+.donation-link{
+    background:#fff7df;
+    color:#705000!important;
+    border:1px solid #ead08b;
+}
 
-        .gallery-caption p {
-            margin: 0;
-            line-height: 1.65;
-            font-size: 14px;
-        }
+.menu-btn{
+    display:none;
+    margin-left:auto;
+    width:44px;
+    height:44px;
+    border:0;
+    border-radius:9px;
+    background:var(--green);
+    color:#fff;
+    font-size:24px;
+    cursor:pointer;
+}
 
-        .view-photo {
-            display: inline-block;
-            margin-top: 14px;
-            padding: 9px 14px;
-            border-radius: 7px;
-            background: #0645a5;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
+.mobile-nav{
+    display:none;
+    background:#fff;
+    border-top:1px solid var(--border);
+    padding:8px 4%;
+}
 
-        /* LIGHTBOX */
+.mobile-nav.open{
+    display:flex;
+    flex-direction:column;
+}
 
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 99999;
-            inset: 0;
-            background: rgba(0,0,0,0.94);
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+.mobile-nav a{
+    padding:13px 10px;
+    border-bottom:1px solid var(--border);
+    font-weight:700;
+}
 
-        .lightbox.show {
-            display: flex;
-        }
+.mobile-nav a:last-child{
+    border-bottom:0;
+}
 
-        .lightbox-content {
-            width: 100%;
-            max-width: 1100px;
-            text-align: center;
-            position: relative;
-        }
 
-        .lightbox-image {
-            max-width: 90%;
-            max-height: 75vh;
-            object-fit: contain;
-            border-radius: 8px;
-            display: block;
-            margin: auto;
-        }
+/* =========================
+   HERO
+========================= */
 
-        .lightbox-caption {
-            color: #ffffff;
-            margin-top: 15px;
-            line-height: 1.5;
-            font-size: 16px;
-        }
+.gallery-hero{
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(215,166,58,.20),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            var(--dark),
+            var(--green)
+        );
 
-        .lightbox-close {
-            position: fixed;
-            top: 15px;
-            right: 22px;
-            width: 45px;
-            height: 45px;
-            border: none;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.15);
-            color: #ffffff;
-            font-size: 32px;
-            cursor: pointer;
-            z-index: 100001;
-        }
+    color:#fff;
+    padding:75px 20px;
+    text-align:center;
+}
 
-        .lightbox-nav {
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 48px;
-            height: 48px;
-            border: none;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.16);
-            color: #ffffff;
-            font-size: 28px;
-            cursor: pointer;
-            z-index: 100001;
-        }
+.gallery-hero-inner{
+    width:min(900px,94%);
+    margin:auto;
+}
 
-        .lightbox-prev {
-            left: 20px;
-        }
+.gallery-badge{
+    display:inline-block;
+    padding:8px 15px;
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,.3);
+    background:rgba(255,255,255,.08);
+    font-size:12px;
+    font-weight:800;
+    margin-bottom:15px;
+}
 
-        .lightbox-next {
-            right: 20px;
-        }
+.gallery-hero h1{
+    font-size:clamp(40px,7vw,68px);
+    line-height:1.05;
+    margin-bottom:12px;
+}
 
-        .lightbox-share {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 9px 16px;
-            border-radius: 7px;
-            border: none;
-            background: #ffffff;
-            cursor: pointer;
-            font-weight: bold;
-        }
+.gallery-hero h1 span{
+    color:var(--gold-light);
+}
 
-        /* NOTICE */
+.gallery-hero p{
+    max-width:700px;
+    margin:auto;
+    color:rgba(255,255,255,.86);
+    font-size:16px;
+}
 
-        .gallery-notice {
-            margin-top: 45px;
-            padding: 28px 20px;
-            text-align: center;
-            border-radius: 18px;
-            background: #f5f5f5;
-            line-height: 1.8;
-        }
 
-        /* CTA */
+/* =========================
+   MAIN
+========================= */
 
-        .gallery-cta {
-            margin-top: 40px;
-            padding: 35px 20px;
-            text-align: center;
-            background: #ffffff;
-            border-radius: 18px;
-            box-shadow:
-                0 5px 20px rgba(0,0,0,0.10);
-        }
+.gallery-page{
+    width:min(1150px,94%);
+    margin:auto;
+    padding:65px 0 80px;
+}
 
-        .gallery-cta p {
-            max-width: 720px;
-            margin: 10px auto 20px;
-            line-height: 1.7;
-        }
 
-        .cta-button {
-            display: inline-block;
-            padding: 13px 22px;
-            margin: 5px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* =========================
+   INTRO
+========================= */
 
-        /* MOBILE */
+.gallery-intro{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 35px;
+}
 
-        @media (max-width: 600px) {
+.gallery-intro h2{
+    color:var(--dark);
+    font-size:32px;
+    margin-bottom:8px;
+}
 
-            .gallery-page {
-                padding: 30px 12px 50px;
-            }
+.gallery-intro p{
+    color:var(--muted);
+}
 
-            .gallery-header h1 {
-                font-size: 29px;
-            }
 
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
+/* =========================
+   FILTERS
+========================= */
 
-            .gallery-image {
-                height: 250px;
-            }
+.gallery-tools{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:18px;
+    margin-bottom:30px;
+    box-shadow:var(--shadow);
+}
 
-            .gallery-filters {
-                flex-direction: column;
-            }
+.gallery-search{
+    width:100%;
+    padding:14px 16px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+}
 
-            .filter-button {
-                width: 100%;
-            }
+.gallery-search:focus{
+    border-color:var(--green);
+}
 
-            .lightbox-image {
-                max-width: 100%;
-                max-height: 68vh;
-            }
+.gallery-filters{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:9px;
+    margin-top:15px;
+}
 
-            .lightbox-prev {
-                left: 8px;
-            }
+.gallery-filter{
+    border:0;
+    background:#edf0ee;
+    color:var(--text);
+    padding:9px 15px;
+    border-radius:25px;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:800;
+}
 
-            .lightbox-next {
-                right: 8px;
-            }
+.gallery-filter:hover,
+.gallery-filter.active{
+    background:var(--green);
+    color:#fff;
+}
 
-            .lightbox-nav {
-                width: 42px;
-                height: 42px;
-            }
-        }
-    </style>
-</head>
 
-<body>
+/* =========================
+   GALLERY GRID
+========================= */
 
-<!-- =========================================
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.gallery-item{
+    position:relative;
+    min-height:270px;
+    border-radius:18px;
+    overflow:hidden;
+    background:#fff;
+    border:1px solid var(--border);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    cursor:pointer;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.gallery-item:hover{
+    transform:translateY(-5px);
+    box-shadow:0 14px 35px rgba(0,0,0,.14);
+}
+
+.gallery-item.hidden{
+    display:none;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    min-height:270px;
+    object-fit:cover;
+    transition:transform .35s ease;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.04);
+}
+
+.gallery-overlay{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:45px 18px 18px;
+    color:#fff;
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.82)
+        );
+}
+
+.gallery-overlay strong{
+    display:block;
+    font-size:16px;
+}
+
+.gallery-overlay span{
+    display:block;
+    margin-top:3px;
+    font-size:11px;
+    opacity:.85;
+}
+
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.image-placeholder{
+    width:100%;
+    height:100%;
+    min-height:270px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:25px;
+    background:
+        linear-gradient(
+            135deg,
+            #edf8f2,
+            #fff7df
+        );
+    color:var(--green);
+}
+
+.image-placeholder div{
+    max-width:250px;
+}
+
+.image-placeholder strong{
+    display:block;
+    font-size:19px;
+    margin-bottom:7px;
+}
+
+.image-placeholder span{
+    display:block;
+    font-size:12px;
+    color:var(--muted);
+}
+
+
+/* =========================
+   NO RESULTS
+========================= */
+
+.no-results{
+    display:none;
+    text-align:center;
+    background:#fff;
+    padding:35px 20px;
+    border-radius:16px;
+    border:1px solid var(--border);
+}
+
+.no-results.show{
+    display:block;
+}
+
+.no-results h3{
+    color:var(--dark);
+    margin-bottom:6px;
+}
+
+.no-results p{
+    color:var(--muted);
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:25px;
+    background:rgba(0,0,0,.93);
+}
+
+.lightbox.open{
+    display:flex;
+}
+
+.lightbox-content{
+    position:relative;
+    width:min(1000px,100%);
+    max-height:92vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.lightbox-image{
+    max-width:100%;
+    max-height:78vh;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    border-radius:10px;
+    box-shadow:0 20px 70px rgba(0,0,0,.45);
+}
+
+.lightbox-caption{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-48px;
+    color:#fff;
+    text-align:center;
+}
+
+.lightbox-caption strong{
+    display:block;
+    font-size:15px;
+}
+
+.lightbox-caption span{
+    font-size:11px;
+    opacity:.75;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next{
+    position:fixed;
+    z-index:3010;
+    border:0;
+    color:#fff;
+    background:rgba(255,255,255,.12);
+    cursor:pointer;
+    backdrop-filter:blur(8px);
+}
+
+.lightbox-close{
+    top:18px;
+    right:18px;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    font-size:24px;
+}
+
+.lightbox-prev,
+.lightbox-next{
+    top:50%;
+    transform:translateY(-50%);
+    width:48px;
+    height:58px;
+    border-radius:12px;
+    font-size:28px;
+}
+
+.lightbox-prev{
+    left:18px;
+}
+
+.lightbox-next{
+    right:18px;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover{
+    background:rgba(255,255,255,.25);
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.gallery-cta{
+    margin-top:60px;
+    padding:45px 25px;
+    border-radius:22px;
+    text-align:center;
+    color:#fff;
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--dark)
+        );
+}
+
+.gallery-cta h2{
+    font-size:clamp(28px,5vw,40px);
+    margin-bottom:8px;
+}
+
+.gallery-cta p{
+    max-width:680px;
+    margin:0 auto 20px;
+    color:rgba(255,255,255,.84);
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:46px;
+    padding:11px 18px;
+    border-radius:9px;
+    font-size:13px;
+    font-weight:800;
+}
+
+.btn-white{
+    background:#fff;
+    color:var(--green);
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:#182016;
+}
+
+.btn-outline{
+    color:#fff;
+    border:1px solid rgba(255,255,255,.5);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background:#061b10;
+    color:#fff;
+}
+
+.footer-inner{
+    width:min(1150px,94%);
+    margin:auto;
+    padding:50px 0 35px;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.footer-logo{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+    border-radius:50%;
+    border:2px solid var(--gold);
+    background:#fff;
+}
+
+.footer-brand strong{
+    display:block;
+}
+
+.footer-brand small{
+    display:block;
+    color:#aebfb4;
+    font-size:9px;
+    margin-top:3px;
+}
+
+.footer-column p{
+    color:#aebfb4;
+    font-size:13px;
+    margin-top:15px;
+}
+
+.footer-column h3{
+    margin-bottom:13px;
+}
+
+.footer-column a{
+    display:block;
+    color:#c5d1ca;
+    font-size:13px;
+    margin:8px 0;
+}
+
+.footer-column a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    padding:20px 15px;
+    text-align:center;
+    color:#8fa198;
+    font-size:11px;
+}
+
+
+/* =========================
+   FLOATING BUTTONS
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:20px;
+    z-index:2500;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#25d366;
+    color:#fff;
+    font-size:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.back-top{
+    position:fixed;
+    right:20px;
+    bottom:88px;
+    z-index:2400;
+    width:42px;
+    height:42px;
+    border:0;
+    border-radius:50%;
+    background:var(--green);
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    opacity:0;
+    pointer-events:none;
+    transition:.2s;
+}
+
+.back-top.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1080px){
+
+    .desktop-nav{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+}
+
+@media(max-width:850px){
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:560px){
+
+    .nav-container{
+        min-height:66px;
+    }
+
+    .logo-link{
+        min-width:0;
+    }
+
+    .logo{
+        width:44px;
+        height:44px;
+    }
+
+    .brand strong{
+        font-size:15px;
+    }
+
+    .brand small{
+        font-size:8px;
+    }
+
+    .gallery-hero{
+        padding:55px 15px;
+    }
+
+    .gallery-page{
+        padding:50px 0 65px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .gallery-item,
+    .gallery-item img,
+    .image-placeholder{
+        min-height:280px;
+    }
+
+    .lightbox{
+        padding:12px;
+    }
+
+    .lightbox-image{
+        max-height:72vh;
+    }
+
+    .lightbox-prev{
+        left:8px;
+    }
+
+    .lightbox-next{
+        right:8px;
+    }
+
+    .lightbox-prev,
+    .lightbox-next{
+        width:42px;
+        height:50px;
+    }
+
+    .lightbox-caption{
+        bottom:-55px;
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        transition:none!important;
+        animation:none!important;
+    }
+
+}
+
+</style></head><body><!-- =========================
+     TOP BAR
+========================= --><div class="topbar">
+    IMOLE 2027 • SERVICE • DEVELOPMENT • ACCOUNTABILITY
+</div><!-- =========================
      HEADER
-========================================= -->
-
-<header class="site-header">
-
-    <div class="container">
-
-        <h1>IMOLE 2027</h1>
-
-        <p>
-            HON. NURUDEEN ABAYOMI SADEEQ
-        </p>
-
-        <p>
-            Lagos State House of Assembly —
-            Ojo Constituency II
-        </p>
-
-        <p>
-            Nigeria Democratic Congress (NDC)
-        </p>
-
-    </div>
-
-</header>
-
-
-<!-- =========================================
-     NAVIGATION
-========================================= -->
-
-<nav class="main-nav">
-
-    <a href="index.html">Home</a>
-
-    <a href="about.html">About</a>
-
-    <a href="manifesto.html">Manifesto</a>
-
-    <a href="polling-units.html">Polling Units</a>
-
-    <a href="results.html">Results</a>
-
-    <a href="news.html">News</a>
-
-    <a href="events.html">Events</a>
-
-    <a href="gallery.html">Gallery</a>
-
-    <a href="contact.html">Contact</a>
-
-    <a href="join.html">🔥 Join the Movement</a>
-
-</nav>
-
-
-<main>
-
-<section class="gallery-page">
-
-    <!-- =====================================
-         GALLERY HEADER
-    ====================================== -->
-
-    <div class="gallery-header">
-
-        <h1>
-            📸 IMOLE 2027 GALLERY
-        </h1>
-
-        <p>
-            Explore photographs and visual highlights
-            from campaign activities, community
-            engagements, ward meetings and constituency
-            outreach associated with Hon. Nurudeen
-            Abayomi Sadeeq and the IMOLE 2027 movement.
-        </p>
-
-        <span class="gallery-badge">
-            📷 OFFICIAL CAMPAIGN PHOTO GALLERY
-        </span>
-
-    </div>
-
-
-    <!-- =====================================
-         FILTER BUTTONS
-    ====================================== -->
-
-    <div class="gallery-filters">
-
-        <button
-            class="filter-button active"
-            onclick="filterGallery('all', this)">
-            All Photos
-        </button>
-
-        <button
-            class="filter-button"
-            onclick="filterGallery('candidate', this)">
-            Candidate
-        </button>
-
-        <button
-            class="filter-button"
-            onclick="filterGallery('community', this)">
-            Community
-        </button>
-
-        <button
-            class="filter-button"
-            onclick="filterGallery('party', this)">
-            NDC
-        </button>
-
-        <button
-            class="filter-button"
-            onclick="filterGallery('movement', this)">
-            IMOLE Movement
-        </button>
-
-        <button
-            class="filter-button"
-            onclick="filterGallery('ward', this)">
-            Ward Activities
-        </button>
-
-    </div>
-
-
-    <!-- =====================================
-         PHOTO GRID
-    ====================================== -->
-
-    <div class="gallery-grid" id="galleryGrid">
-
-
-        <!-- CANDIDATE -->
-
-        <article
-            class="gallery-card"
-            data-category="candidate">
-
-            <div class="gallery-image-wrap">
-
-                <img
-                    src="assets/IMG-20260710-WA0004.jpg"
-                    alt="Hon. Nurudeen Abayomi Sadeeq"
-                    class="gallery-image"
-                    loading="lazy"
-                    onclick="openLightbox(
-                        0
-                    )"
-                >
-
-                <div class="photo-overlay">
-                    <span>HON. NURUDEEN ABAYOMI SADEEQ</span>
-                </div>
-
-            </div>
-
-            <div class="gallery-caption">
-
-                <span class="gallery-tag">
-                    Candidate
-                </span>
-
-                <h3>
-                    Hon. Nurudeen Abayomi Sadeeq
-                </h3>
-
-                <p>
-                    Candidate for Lagos State House of
-                    Assembly, Ojo Constituency II.
-                </p>
-
-                <button
-                    class="view-photo"
-                    onclick="openLightbox(0)">
-                    🖼️ View Photo
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- COMMUNITY -->
-
-        <article
-            class="gallery-card"
-            data-category="community">
-
-            <div class="gallery-image-wrap">
-
-                <img
-                    src="assets/IMG-20260710-WA0006.jpg"
-                    alt="IMOLE 2027 public activity"
-                    class="gallery-image"
-                    loading="lazy"
-                    onclick="openLightbox(1)"
-                >
-
-                <div class="photo-overlay">
-                    <span>COMMUNITY ENGAGEMENT</span>
-                </div>
-
-            </div>
-
-            <div class="gallery-caption">
-
-                <span class="gallery-tag">
-                    Community
-                </span>
-
-                <h3>
-                    Public Activity
-                </h3>
-
-                <p>
-                    Visual highlight from an IMOLE 2027
-                    public and community activity.
-                </p>
-
-                <button
-                    class="view-photo"
-                    onclick="openLightbox(1)">
-                    🖼️ View Photo
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- NDC -->
-
-        <article
-            class="gallery-card"
-            data-category="party">
-
-            <div class="gallery-image-wrap">
-
-                <img
-                    src="assets/IMG-20260728-WA0032.jpg"
-                    alt="Nigeria Democratic Congress NDC"
-                    class="gallery-image"
-                    loading="lazy"
-                    onclick="openLightbox(2)"
-                >
-
-                <div class="photo-overlay">
-                    <span>NIGERIA DEMOCRATIC CONGRESS</span>
-                </div>
-
-            </div>
-
-            <div class="gallery-caption">
-
-                <span class="gallery-tag">
-                    NDC
-                </span>
-
-                <h3>
-                    Party Information
-                </h3>
-
-                <p>
-                    Party-related visual material
-                    associated with the campaign.
-                </p>
-
-                <button
-                    class="view-photo"
-                    onclick="openLightbox(2)">
-                    🖼️ View Photo
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- COMMUNITY ENGAGEMENT -->
-
-        <article
-            class="gallery-card"
-            data-category="community">
-
-            <div class="gallery-image-wrap">
-
-                <img
-                    src="assets/IMG-20260710-WA0006.jpg"
-                    alt="Community engagement"
-                    class="gallery-image"
-                    loading="lazy"
-                    onclick="openLightbox(3)"
-                >
-
-                <div class="photo-overlay">
-                    <span>OJO CONSTITUENCY II</span>
-                </div>
-
-            </div>
-
-            <div class="gallery-caption">
-
-                <span class="gallery-tag">
-                    Community
-                </span>
-
-                <h3>
-                    Community Engagement
-                </h3>
-
-                <p>
-                    Visual highlight from constituency
-                    engagement activities.
-                </p>
-
-                <button
-                    class="view-photo"
-                    onclick="openLightbox(3)">
-                    🖼️ View Photo
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- IMOLE MOVEMENT -->
-
-        <article
-            class="gallery-card"
-            data-category="movement">
-
-            <div class="gallery-image-wrap">
-
-                <img
-                    src="assets/IMG-20260710-WA0004.jpg"
-                    alt="IMOLE 2027 movement"
-                    class="gallery-image"
-                    loading="lazy"
-                    onclick="openLightbox(4)"
-                >
-
-                <div class="photo-overlay">
-                    <span>IMOLE 2027 MOVEMENT</span>
-                </div>
-
-            </div>
-
-            <div class="gallery-caption">
-
-                <span class="gallery-tag">
-                    IMOLE Movement
-                </span>
-
-                <h3>
-                    IMOLE 2027
-                </h3>
-
-                <p>
-                    The movement for service, development
-                    and accountability.
-                </p>
-
-                <button
-                    class="view-photo"
-                    onclick="openLightbox(4)">
-                    🖼️ View Photo
-                </button>
-
-            </div>
-
-        </article>
-
-
-    </div>
-
-
-    <!-- =====================================
-         NOTICE
-    ====================================== -->
-
-    <div class="gallery-notice">
-
-        <strong>
-            📸 MORE PHOTOS COMING
-        </strong>
-
-        <p>
-            New photographs from officially confirmed
-            campaign activities, ward engagements,
-            community visits and other IMOLE 2027
-            activities can be added as they become
-            available.
-        </p>
-
-        <p>
-            Upload new photographs into the
-            <strong>assets</strong> folder and add
-            corresponding gallery cards to this page.
-        </p>
-
-    </div>
-
-
-    <!-- =====================================
-         NEWS CTA
-    ====================================== -->
-
-    <section class="gallery-cta">
-
-        <h2>
-            📰 STAY UPDATED
-        </h2>
-
-        <p>
-            Read the latest IMOLE 2027 campaign news,
-            announcements and constituency updates.
-        </p>
-
-        <a
-            href="news.html"
-            class="cta-button">
-            📰 NEWS & UPDATES
-        </a>
-
-        <a
-            href="events.html"
-            class="cta-button">
-            📅 EVENTS
-        </a>
-
-    </section>
-
-
-    <!-- =====================================
-         JOIN CTA
-    ====================================== -->
-
-    <section class="gallery-cta">
-
-        <h2>
-            🔥 JOIN IMOLE 2027
-        </h2>
-
-        <p>
-            Become part of the movement through
-            volunteering, IMOLE BABES, IMOLE ARMY,
-            media, communication and community
-            mobilisation.
-        </p>
-
-        <a
-            href="join.html"
-            class="cta-button">
-            🌟 JOIN THE MOVEMENT
-        </a>
-
-    </section>
-
-</section>
-
-</main>
-
-
-<!-- =========================================
-     LIGHTBOX
-========================================= -->
-
-<div
-    class="lightbox"
-    id="lightbox"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Photo viewer">
-
-    <button
-        class="lightbox-close"
-        onclick="closeLightbox()"
-        aria-label="Close photo viewer">
-        &times;
-    </button>
-
-    <button
-        class="lightbox-nav lightbox-prev"
-        onclick="previousPhoto()"
-        aria-label="Previous photo">
-        &#10094;
-    </button>
-
-    <div class="lightbox-content">
+========================= --><header class="header"><div class="nav-container">
+
+    <a
+        class="logo-link"
+        href="./index.html"
+        aria-label="IMOLE 2027 Home">
 
         <img
-            id="lightboxImage"
-            class="lightbox-image"
-            src=""
-            alt=""
+            class="logo"
+            src="./assets/IMG-20260728-WA0032.jpg"
+            alt="NDC Logo"
+            loading="eager"
         >
 
-        <div
-            id="lightboxCaption"
-            class="lightbox-caption">
+        <div class="brand">
+
+            <strong>
+                IMOLE 2027
+            </strong>
+
+            <small>
+                NURUDEEN ABAYOMI SADEEQ
+            </small>
+
         </div>
 
-        <button
-            class="lightbox-share"
-            onclick="sharePhoto()">
-            📤 Share Photo
-        </button>
+    </a>
 
-    </div>
+
+    <nav class="desktop-nav">
+
+        <a href="./index.html">Home</a>
+
+        <a href="./about.html">About</a>
+
+        <a href="./manifesto.html">Manifesto</a>
+
+        <a href="./polling-units.html">Polling Units</a>
+
+        <a href="./results.html">Results</a>
+
+        <a href="./news.html">News</a>
+
+        <a href="./events.html">Events</a>
+
+        <a href="./gallery.html">Gallery</a>
+
+        <a href="./media.html">Media</a>
+
+        <a href="./contact.html">Contact</a>
+
+        <a
+            class="join-link"
+            href="./join.html">
+            Join Us
+        </a>
+
+        <a
+            class="donation-link"
+            href="./donations.html">
+            ❤️ Donations
+        </a>
+
+    </nav>
+
 
     <button
-        class="lightbox-nav lightbox-next"
-        onclick="nextPhoto()"
-        aria-label="Next photo">
-        &#10095;
+        class="menu-btn"
+        id="menuButton"
+        aria-label="Open menu"
+        aria-expanded="false">
+        ☰
     </button>
 
 </div>
 
 
-<!-- =========================================
+<nav
+    class="mobile-nav"
+    id="mobileNav">
+
+    <a href="./index.html">🏠 Home</a>
+
+    <a href="./about.html">👤 About</a>
+
+    <a href="./manifesto.html">📜 Manifesto</a>
+
+    <a href="./polling-units.html">📍 Polling Units</a>
+
+    <a href="./results.html">📊 Results</a>
+
+    <a href="./news.html">📰 News</a>
+
+    <a href="./events.html">📅 Events</a>
+
+    <a href="./gallery.html">📸 Gallery</a>
+
+    <a href="./media.html">🎵 Media</a>
+
+    <a href="./contact.html">📞 Contact</a>
+
+    <a href="./join.html">🤝 Join IMOLE</a>
+
+    <a href="./donations.html">❤️ Donations</a>
+
+</nav>
+
+</header><!-- =========================
+     HERO
+========================= --><section class="gallery-hero"><div class="gallery-hero-inner">
+
+    <div class="gallery-badge">
+        📸 IMOLE 2027
+    </div>
+
+    <h1>
+        Campaign <span>Gallery</span>
+    </h1>
+
+    <p>
+        Moments from the IMOLE 2027 movement —
+        community engagements, ward activities,
+        meetings, consultations and campaign events
+        across Ojo Constituency II.
+    </p>
+
+</div>
+
+</section><!-- =========================
+     GALLERY
+========================= --><main class="gallery-page"><div class="gallery-intro">
+
+    <h2>
+        Moments That Matter
+    </h2>
+
+    <p>
+        Explore campaign photographs and memorable
+        moments of Hon. Nurudeen Abayomi Sadeeq and
+        the IMOLE 2027 movement.
+    </p>
+
+</div>
+
+
+<!-- =========================
+     SEARCH / FILTER
+========================= -->
+
+<div class="gallery-tools">
+
+    <input
+        type="search"
+        id="gallerySearch"
+        class="gallery-search"
+        placeholder="🔍 Search gallery..."
+        aria-label="Search gallery"
+    >
+
+
+    <div class="gallery-filters">
+
+        <button
+            class="gallery-filter active"
+            data-filter="all">
+            All
+        </button>
+
+        <button
+            class="gallery-filter"
+            data-filter="candidate">
+            Candidate
+        </button>
+
+        <button
+            class="gallery-filter"
+            data-filter="community">
+            Community
+        </button>
+
+        <button
+            class="gallery-filter"
+            data-filter="ward">
+            Ward Activities
+        </button>
+
+        <button
+            class="gallery-filter"
+            data-filter="events">
+            Events
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     PHOTO GRID
+========================= -->
+
+<div
+    class="gallery-grid"
+    id="galleryGrid">
+
+
+    <!-- CANDIDATE PHOTO -->
+
+    <article
+        class="gallery-item"
+        data-category="candidate"
+        data-title="Hon. Nurudeen Abayomi Sadeeq">
+
+        <img
+            src="./assets/IMG-20260710-WA0004.jpg"
+            alt="Hon. Nurudeen Abayomi Sadeeq"
+            loading="lazy"
+        >
+
+        <div class="gallery-overlay">
+
+            <strong>
+                Hon. Nurudeen Abayomi Sadeeq
+            </strong>
+
+            <span>
+                IMOLE 2027 Candidate
+            </span>
+
+        </div>
+
+    </article>
+
+
+    <!-- LOGO / CAMPAIGN BRANDING -->
+
+    <article
+        class="gallery-item"
+        data-category="candidate"
+        data-title="IMOLE 2027 Campaign">
+
+        <div class="image-placeholder">
+
+            <div>
+
+                <strong>
+                    IMOLE 2027
+                </strong>
+
+                <span>
+                    Nigeria Democratic Congress (NDC)
+                    • Ojo Constituency II
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="gallery-overlay">
+
+            <strong>
+                IMOLE 2027
+            </strong>
+
+            <span>
+                Campaign Movement
+            </span>
+
+        </div>
+
+    </article>
+
+
+    <!-- COMMUNITY PLACEHOLDER -->
+
+    <article
+        class="gallery-item"
+        data-category="community"
+        data-title="Community Engagement">
+
+        <div class="image-placeholder">
+
+            <div>
+
+                <strong>
+                    🤝 Community Engagement
+                </strong>
+
+                <span>
+                    Add campaign community photographs
+                    to your assets folder.
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="gallery-overlay">
+
+            <strong>
+                Community Engagement
+            </strong>
+
+            <span>
+                IMOLE 2027
+            </span>
+
+        </div>
+
+    </article>
+
+
+    <!-- WARD PLACEHOLDER -->
+
+    <article
+        class="gallery-item"
+        data-category="ward"
+        data-title="Ward Activities">
+
+        <div class="image-placeholder">
+
+            <div>
+
+                <strong>
+                    📍 Ward Activities
+                </strong>
+
+                <span>
+                    Ilogbo • Irewe • Ijanikin
+                    • Etegbin • Idolowu • Tafi
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="gallery-overlay">
+
+            <strong>
+                Ward Activities
+            </strong>
+
+            <span>
+                Six Wards • Ojo Constituency II
+            </span>
+
+        </div>
+
+    </article>
+
+
+    <!-- EVENTS PLACEHOLDER -->
+
+    <article
+        class="gallery-item"
+        data-category="events"
+        data-title="Campaign Events">
+
+        <div class="image-placeholder">
+
+            <div>
+
+                <strong>
+                    📅 Campaign Events
+                </strong>
+
+                <span>
+                    Add photographs from meetings,
+                    rallies and campaign events.
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="gallery-overlay">
+
+            <strong>
+                Campaign Events
+            </strong>
+
+            <span>
+                IMOLE 2027
+            </span>
+
+        </div>
+
+    </article>
+
+
+</div>
+
+
+<div
+    class="no-results"
+    id="noResults">
+
+    <h3>
+        No gallery items found
+    </h3>
+
+    <p>
+        Try another search term or select
+        another category.
+    </p>
+
+</div>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="gallery-cta">
+
+    <h2>
+        Be Part of the IMOLE Story
+    </h2>
+
+    <p>
+        Follow the campaign, join the movement,
+        attend our events and stay connected with
+        IMOLE 2027.
+    </p>
+
+
+    <div class="cta-buttons">
+
+        <a
+            class="btn btn-white"
+            href="./join.html">
+            🤝 Join IMOLE
+        </a>
+
+        <a
+            class="btn btn-gold"
+            href="./events.html">
+            📅 View Events
+        </a>
+
+        <a
+            class="btn btn-outline"
+            href="./contact.html">
+            📞 Contact
+        </a>
+
+    </div>
+
+</section>
+
+</main><!-- =========================
+     LIGHTBOX
+========================= --><div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Gallery image viewer"><button
+    class="lightbox-close"
+    id="lightboxClose"
+    aria-label="Close image viewer">
+    ✕
+</button>
+
+
+<button
+    class="lightbox-prev"
+    id="lightboxPrev"
+    aria-label="Previous image">
+    ‹
+</button>
+
+
+<div class="lightbox-content">
+
+    <img
+        class="lightbox-image"
+        id="lightboxImage"
+        src=""
+        alt=""
+    >
+
+    <div class="lightbox-caption">
+
+        <strong id="lightboxTitle">
+        </strong>
+
+        <span id="lightboxCategory">
+        </span>
+
+    </div>
+
+</div>
+
+
+<button
+    class="lightbox-next"
+    id="lightboxNext"
+    aria-label="Next image">
+    ›
+</button>
+
+</div><!-- =========================
      FOOTER
-========================================= -->
-
-<footer>
-
-    <p>
-        &copy; 2026 Hon. Nurudeen Abayomi Sadeeq
-    </p>
-
-    <p>
-        Nigeria Democratic Congress (NDC)
-        | Ojo Constituency II
-    </p>
-
-    <p>
-        IMOLE 2027 —
-        Service • Development • Accountability
-    </p>
-
-</footer>
+========================= --><footer class="footer"><div class="footer-inner">
 
 
-<!-- =========================================
-     JAVASCRIPT
-========================================= -->
+    <div class="footer-column">
 
-<script>
+        <div class="footer-brand">
 
-    /* =====================================
-       PHOTO DATA
-    ===================================== */
+            <img
+                class="footer-logo"
+                src="./assets/IMG-20260728-WA0032.jpg"
+                alt="NDC Logo"
+                loading="lazy"
+            >
 
-    const galleryPhotos = [
+            <div>
 
-        {
-            src: "assets/IMG-20260710-WA0004.jpg",
-            caption:
-                "Hon. Nurudeen Abayomi Sadeeq — IMOLE 2027"
-        },
+                <strong>
+                    IMOLE 2027
+                </strong>
 
-        {
-            src: "assets/IMG-20260710-WA0006.jpg",
-            caption:
-                "IMOLE 2027 Public Activity"
-        },
+                <small>
+                    NURUDEEN ABAYOMI SADEEQ
+                </small>
 
-        {
-            src:
+            </div>
+
+        </div>
+
+
+        <p>
+            Official campaign website of Hon. Nurudeen
+            Abayomi Sadeeq for Lagos State House of
+            Assembly, Ojo Constituency II.
+        </p>
+
+
+        <p>
+            Service • Development • Accountability
+        </p>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h3>
+            Campaign
+        </h3>
+
+        <a href="./index.html">Home</a>
+
+        <a href="./about.html">About</a>
+
+        <a href="./manifesto.html">Manifesto</a>
+
+        <a href="./news.html">News</a>
+
+        <a href="./events.html">Events</a>
+
+        <a href="./join.html">Join IMOLE</a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h3>
+            Information
+        </h3>
+
+        <a href="./polling-units.html">
+            Polling Units
+        </a>
+
+        <a href="./results.html">
+            Results
+        </a>
+
+        <a href="./media.html">
+            Media
+        </a>
+
+        <a href="./gallery.html">
+            Gallery
+        </a>
+
+        <a href="./contact.html">
+            Contact
+        </a>
+
+        <a href="./donations.html">
+            Donations
+        </a>
+
+    </div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+    © <span id="footerYear"></span>
+    Hon. Nurudeen Abayomi Sadeeq Campaign.
+    All Rights Reserved.
+
+    <br><br>
+
+    Nigeria Democratic Congress (NDC) |
+    Ojo Constituency II
+
+</div>
+
+</footer><!-- =========================
+     WHATSAPP
+========================= --><a
+class="whatsapp"
+href="https://wa.me/2348033002235"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Contact IMOLE 2027 on WhatsApp">
+
+☎
+
+</a><!-- =========================
+     BACK TO TOP
+========================= --><button
+class="back-top"
+id="backTop"
+aria-label="Back to top">
+
+↑
+
+</button><script>
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const mobileNav =
+    document.getElementById("mobileNav");
+
+if(menuButton && mobileNav){
+
+    menuButton.addEventListener(
+        "click",
+        function(){
+
+            const isOpen =
+                mobileNav.classList.toggle("open");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+            menuButton.textContent =
+                isOpen ? "✕" : "☰";
+
+        }
+    );
+
+
+    mobileNav
+        .querySelectorAll("a")
+        .forEach(function(link){
+
+            link.addEventListener(
+                "click",
+                function(){
+
+                    mobileNav.classList.remove("open");
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuButton.textContent =
+                        "☰";
+
+                }
+            );
+
+        });
+
+}
+
+
+/* =========================
+   GALLERY FILTER
+========================= */
+
+const filterButtons =
+    document.querySelectorAll(".gallery-filter");
+
+const galleryItems =
+    Array.from(
+        document.querySelectorAll(".gallery-item")
+    );
+
+const searchInput =
+    document.getElementById("gallerySearch");
+
+const noResults =
+    document.getElementById("noResults");
+
+let currentFilter = "all";
+
+
+function filterGallery(){
+
+    const search =
+        searchInput
+        ? searchInput.value
+            .toLowerCase()
+            .trim()
+        : "";
+
+
+    let visibleCount = 0;
+
+
+    galleryItems.forEach(function(item){
+
+        const category =
+            item.dataset.category || "";
+
+        const title =
+            item.dataset.title || "";
+
+        const matchesFilter =
+            currentFilter === "all" ||
+            category === currentFilter;
+
+        const matchesSearch =
+            !search ||
+            title.toLowerCase().includes(search) ||
+            category.toLowerCase().includes(search);
+
+
+        if(
+            matchesFilter &&
+            matchesSearch
+        ){
+
+            item.classList.remove("hidden");
+
+            visibleCount++;
+
+        }else{
+
+            item.classList.add("hidden");
+
+        }
+
+    });
+
+
+    if(noResults){
+
+        noResults.classList.toggle(
+            "show",
+            visibleCount === 0
+        );
+
+    }
+
+}
+
+
+filterButtons.forEach(function(button){
+
+    button.addEventListener(
+        "click",
+        function(){
+
+            filterButtons.forEach(function(btn){
+
+                btn.classList.remove("active");
+
+            });
+
+
+            button.classList.add("active");
+
+            currentFilter =
+                button.dataset.filter;
+
+            filterGallery();
+
+        }
+    );
+
+});
+
+
+if(searchInput){
+
+    searchInput.addEventListener(
+        "input",
+        filterGallery
+    );
+
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+const lightbox =
+    document.getElementById("lightbox");
+
+const lightboxImage =
+    document.getElementById("lightboxImage");
+
+const lightboxTitle =
+    document.getElementById("lightboxTitle");
+
+const lightboxCategory =
+    document.getElementById("lightboxCategory");
+
+const lightboxClose =
+    document.getElementById("lightboxClose");
+
+const lightboxPrev =
+    document.getElementById("lightboxPrev");
+
+const lightboxNext =
+    document.getElementById("lightboxNext");
+
+
+let currentImageIndex = 0;
+
+
+/*
+   Only real image elements are placed
+   into the lightbox.
+*/
+
+function getVisibleImages(){
+
+    return galleryItems.filter(function(item){
+
+        return !item.classList.contains("hidden")
+            && item.querySelector("img");
+
+    });
+
+}
+
+
+function openLightbox(item){
+
+    const visibleImages =
+        getVisibleImages();
+
+    const index =
+        visibleImages.indexOf(item);
+
+    if(index < 0){
+        return;
+    }
+
+    currentImageIndex = index;
+
+    showLightboxImage();
+
+    lightbox.classList.add("open");
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+function showLightboxImage(){
+
+    const visibleImages =
+        getVisibleImages();
+
+    if(!visibleImages.length){
+        return;
+    }
+
+
+    if(
+        currentImageIndex < 0
+    ){
+        currentImageIndex =
+            visibleImages.length - 1;
+    }
+
+
+    if(
+        currentImageIndex >=
+        visibleImages.length
+    ){
+        currentImageIndex = 0;
+    }
+
+
+    const item =
+        visibleImages[currentImageIndex];
+
+    const image =
+        item.querySelector("img");
+
+
+    if(!image){
+        return;
+    }
+
+
+    lightboxImage.src =
+        image.src;
+
+    lightboxImage.alt =
+        image.alt || "IMOLE 2027 Gallery";
+
+
+    lightboxTitle.textContent =
+        item.dataset.title ||
+        image.alt ||
+        "IMOLE 2027";
+
+
+    lightboxCategory.textContent =
+        item.dataset.category
+            ? item.dataset.category.toUpperCase()
+            : "IMOLE 2027";
+
+}
+
+
+function closeLightbox(){
+
+    lightbox.classList.remove("open");
+
+    document.body.style.overflow = "";
+
+    lightboxImage.src = "";
+
+}
+
+
+galleryItems.forEach(function(item){
+
+    item.addEventListener(
+        "click",
+        function(){
+
+            if(
+                item.querySelector("img")
+            ){
+
+                openLightbox(item);
+
+            }
+
+        }
+    );
+
+});
+
+
+if(lightboxClose){
+
+    lightboxClose.addEventListener(
+        "click",
+        closeLightbox
+    );
+
+}
+
+
+if(lightboxPrev){
+
+    lightboxPrev.addEventListener(
+        "click",
+        function(){
+
+            currentImageIndex--;
+
+            showLightboxImage();
+
+        }
+    );
+
+}
+
+
+if(lightboxNext){
+
+    lightboxNext.addEventListener(
+        "click",
+        function(){
+
+            currentImageIndex++;
+
+            showLightboxImage();
+
+        }
+    );
+
+}
+
+
+/* Close when clicking the dark background */
+
+if(lightbox){
+
+    lightbox.addEventListener(
+        "click",
+        function(event){
+
+            if(
+                event.target === lightbox
+            ){
+
+                closeLightbox();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================
+   KEYBOARD CONTROLS
+========================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(
+            !lightbox.classList.contains("open")
+        ){
+
+            return;
+
+        }
+
+
+        if(event.key === "Escape"){
+
+            closeLightbox();
+
+        }
+
+
+        if(event.key === "ArrowLeft"){
+
+            currentImageIndex--;
+
+            showLightboxImage();
+
+        }
+
+
+        if(event.key === "ArrowRight"){
+
+            currentImageIndex++;
+
+            showLightboxImage();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   FOOTER YEAR
+========================= */
+
+const footerYear =
+    document.getElementById("footerYear");
+
+if(footerYear){
+
+    footerYear.textContent =
+        new Date().getFullYear();
+
+}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+const backTop =
+    document.getElementById("backTop");
+
+
+window.addEventListener(
+    "scroll",
+    function(){
+
+        if(
+            window.scrollY > 500
+        ){
+
+            backTop.classList.add("show");
+
+        }else{
+
+            backTop.classList.remove("show");
+
+        }
+
+    }
+);
+
+
+if(backTop){
+
+    backTop.addEventListener(
+        "click",
+        function(){
+
+            window.scrollTo({
+                top:0,
+                behavior:"smooth"
+            });
+
+        }
+    );
+
+}
+
+
+/* =========================
+   HOME LINK SAFETY
+========================= */
+
+document
+    .querySelectorAll(
+        'a[href="/"], a[href="../"]'
+    )
+    .forEach(function(link){
+
+        link.setAttribute(
+            "href",
+            "./index.html"
+        );
+
+    });
+
+
+/* =========================
+   IMAGE ERROR HANDLING
+========================= */
+
+document
+    .querySelectorAll("img")
+    .forEach(function(image){
+
+        image.addEventListener(
+            "error",
+            function(){
+
+                this.style.backgroundColor =
+                    "#ffffff";
+
+                this.style.minHeight =
+                    "120px";
+
+            }
+        );
+
+    });
+
+
+/* =========================
+   VERSION
+========================= */
+
+document.documentElement.setAttribute(
+    "data-site-version",
+    "2026.08.31-gallery"
+);
+
+console.log(
+    "IMOLE 2027 — Gallery Version 2026.08.31"
+);
+
+</script></body>
+</html>
