@@ -1,53 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<title>Share Your Community Need | IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq</title>
+<title>Community Need | IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq</title>
 
 <meta name="description"
-      content="Share your community needs, challenges and suggestions with Hon. Nurudeen Abayomi Sadeeq — IMOLE 2027, Nigeria Democratic Congress, Ojo Constituency II.">
+      content="Share your community need with IMOLE 2027. Tell Hon. Nurudeen Abayomi Sadeeq and the campaign team about issues affecting your community in Ojo Constituency II.">
 
-<meta name="theme-color" content="#008751">
+<meta name="theme-color" content="#0b7a3b">
 
-<meta name="author"
-      content="Hon. Nurudeen Abayomi Sadeeq Campaign">
-
-<link rel="manifest" href="manifest.json">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <style>
-
 :root{
-    --green:#008751;
-    --dark-green:#006b40;
-    --light-green:#e9f8f0;
-    --gold:#f4b400;
-    --red:#d90429;
-    --dark:#102018;
-    --text:#25332b;
-    --muted:#6b7770;
+    --green:#087a3b;
+    --green-dark:#045426;
+    --green-light:#eaf8ef;
+    --gold:#f5c542;
+    --gold-dark:#c89b14;
     --white:#ffffff;
-    --light:#f5f8f6;
-    --border:#dce7e0;
-    --shadow:0 12px 35px rgba(0,0,0,.09);
-    --radius:18px;
+    --black:#111111;
+    --muted:#667085;
+    --light:#f5f7f6;
+    --border:#dce5df;
+    --danger:#c62828;
+    --shadow:0 12px 35px rgba(0,0,0,.10);
+    --radius:20px;
 }
 
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 html{
@@ -55,82 +44,68 @@ html{
 }
 
 body{
-    font-family:"Inter",Arial,sans-serif;
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
     background:var(--light);
-    color:var(--text);
+    color:var(--black);
     line-height:1.6;
-    overflow-x:hidden;
 }
 
 a{
-    color:inherit;
     text-decoration:none;
+    color:inherit;
 }
 
 button,
 input,
 select,
 textarea{
-    font-family:inherit;
-}
-
-/* =========================
-   TOP BAR
-========================= */
-
-.topbar{
-    background:var(--dark);
-    color:#fff;
-    padding:8px 15px;
-    text-align:center;
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:.3px;
-}
-
-.topbar span{
-    color:#ffd166;
+    font:inherit;
 }
 
 /* =========================
    HEADER
 ========================= */
 
-header{
+.header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(255,255,255,.97);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid var(--border);
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(0,0,0,.08);
 }
 
-.nav{
-    max-width:1200px;
+.header-inner{
+    width:min(1180px,94%);
     margin:auto;
-    min-height:72px;
-    padding:8px 18px;
+    min-height:74px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:15px;
+    gap:20px;
 }
 
 .brand{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:12px;
     min-width:0;
 }
 
-.logo{
-    width:48px;
-    height:48px;
+.brand-logo{
+    width:52px;
+    height:52px;
     border-radius:50%;
     object-fit:cover;
-    border:3px solid var(--green);
+    border:3px solid var(--gold);
     background:#eee;
-    flex-shrink:0;
 }
 
 .brand-text{
@@ -138,60 +113,48 @@ header{
 }
 
 .brand-title{
-    font-size:15px;
     font-weight:900;
-    color:var(--dark-green);
+    color:var(--green);
+    font-size:17px;
     line-height:1.1;
 }
 
 .brand-subtitle{
-    font-size:10px;
-    font-weight:700;
+    font-size:11px;
     color:var(--muted);
     margin-top:3px;
 }
 
-.menu-toggle{
-    width:44px;
-    height:44px;
-    border:0;
-    border-radius:12px;
-    background:var(--green);
-    color:#fff;
-    font-size:23px;
-    cursor:pointer;
+.nav{
     display:flex;
     align-items:center;
-    justify-content:center;
+    gap:4px;
 }
 
-nav{
-    display:none;
-}
-
-nav.active{
-    display:block;
-    position:absolute;
-    top:72px;
-    left:0;
-    width:100%;
-    background:#fff;
-    border-bottom:1px solid var(--border);
-    box-shadow:0 15px 30px rgba(0,0,0,.08);
-}
-
-nav a{
-    display:block;
-    padding:14px 20px;
-    border-bottom:1px solid #edf2ee;
-    font-size:14px;
+.nav a{
+    padding:9px 11px;
+    border-radius:10px;
+    font-size:13px;
     font-weight:700;
+    transition:.2s;
 }
 
-nav a:hover,
-nav a.active{
+.nav a:hover,
+.nav a.active{
+    background:var(--green-light);
     color:var(--green);
-    background:var(--light-green);
+}
+
+.menu-btn{
+    display:none;
+    width:45px;
+    height:45px;
+    border:0;
+    background:var(--green);
+    color:#fff;
+    border-radius:12px;
+    font-size:22px;
+    cursor:pointer;
 }
 
 /* =========================
@@ -200,14 +163,26 @@ nav a.active{
 
 .hero{
     position:relative;
-    background:
-        linear-gradient(135deg,rgba(0,103,61,.97),rgba(0,135,81,.91)),
-        url("assets/community-bg.jpg");
-    background-size:cover;
-    background-position:center;
-    color:#fff;
-    padding:55px 18px 70px;
     overflow:hidden;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(4,84,38,.98),
+            rgba(8,122,59,.94)
+        );
+    color:#fff;
+    padding:70px 20px 85px;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:330px;
+    height:330px;
+    border-radius:50%;
+    background:rgba(245,197,66,.10);
+    top:-150px;
+    right:-90px;
 }
 
 .hero::after{
@@ -215,190 +190,144 @@ nav a.active{
     position:absolute;
     width:250px;
     height:250px;
-    border:35px solid rgba(255,255,255,.06);
     border-radius:50%;
-    right:-80px;
-    top:-90px;
+    background:rgba(255,255,255,.05);
+    bottom:-140px;
+    left:-80px;
 }
 
 .hero-inner{
     position:relative;
     z-index:2;
-    max-width:1000px;
+    width:min(1100px,94%);
     margin:auto;
     text-align:center;
 }
 
-.hero-photo{
-    width:105px;
-    height:105px;
-    object-fit:cover;
-    object-position:center top;
-    border-radius:50%;
-    border:5px solid #fff;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
-    background:#ddd;
-    margin-bottom:16px;
-}
-
-.badge{
+.hero-badge{
     display:inline-flex;
     align-items:center;
-    gap:6px;
-    background:rgba(255,255,255,.15);
-    border:1px solid rgba(255,255,255,.3);
-    border-radius:50px;
-    padding:7px 13px;
-    font-size:11px;
+    gap:8px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.20);
+    padding:8px 15px;
+    border-radius:999px;
+    font-size:12px;
     font-weight:800;
-    margin-bottom:13px;
+    margin-bottom:18px;
 }
 
 .hero h1{
-    font-size:clamp(28px,7vw,52px);
+    font-size:clamp(34px,7vw,64px);
     line-height:1.05;
-    font-weight:900;
-    margin-bottom:14px;
+    font-weight:950;
+    letter-spacing:-1.5px;
 }
 
 .hero h1 span{
-    color:#ffd166;
+    color:var(--gold);
 }
 
 .hero p{
-    max-width:700px;
-    margin:auto;
-    font-size:15px;
-    opacity:.94;
+    max-width:760px;
+    margin:20px auto 0;
+    color:rgba(255,255,255,.90);
+    font-size:17px;
 }
 
-.hero-buttons{
-    margin-top:25px;
+.hero-actions{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:10px;
+    gap:12px;
+    margin-top:28px;
 }
 
-.hero-btn{
+.btn{
+    border:0;
+    border-radius:13px;
+    padding:13px 20px;
+    font-weight:800;
+    cursor:pointer;
     display:inline-flex;
     align-items:center;
     justify-content:center;
     gap:8px;
-    min-height:46px;
-    padding:11px 18px;
-    border-radius:12px;
-    font-size:13px;
-    font-weight:800;
-    border:1px solid rgba(255,255,255,.3);
+    transition:transform .2s,box-shadow .2s;
 }
 
-.hero-btn.primary{
-    background:#fff;
-    color:var(--green);
+.btn:hover{
+    transform:translateY(-2px);
 }
 
-.hero-btn.secondary{
-    background:rgba(255,255,255,.12);
+.btn-gold{
+    background:var(--gold);
+    color:#111;
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.35);
     color:#fff;
+    background:rgba(255,255,255,.08);
 }
 
 /* =========================
    MAIN
 ========================= */
 
-main{
-    max-width:1000px;
-    margin:-35px auto 60px;
-    padding:0 15px;
+.main{
+    width:min(1100px,94%);
+    margin:-40px auto 70px;
     position:relative;
     z-index:5;
 }
 
-/* =========================
-   INTRO CARD
-========================= */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 350px;
+    gap:24px;
+}
 
-.intro-card{
+.card{
     background:#fff;
+    border:1px solid var(--border);
     border-radius:var(--radius);
     box-shadow:var(--shadow);
-    padding:25px 20px;
-    margin-bottom:20px;
-    text-align:center;
 }
-
-.intro-icon{
-    width:60px;
-    height:60px;
-    margin:0 auto 12px;
-    border-radius:18px;
-    background:var(--light-green);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:30px;
-}
-
-.intro-card h2{
-    font-size:23px;
-    color:var(--dark-green);
-    margin-bottom:7px;
-}
-
-.intro-card p{
-    color:var(--muted);
-    font-size:14px;
-    max-width:700px;
-    margin:auto;
-}
-
-/* =========================
-   FORM CARD
-========================= */
 
 .form-card{
-    background:#fff;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    padding:25px 18px;
+    padding:30px;
+}
+
+.info-card{
+    padding:25px;
+    align-self:start;
+    position:sticky;
+    top:95px;
 }
 
 .section-title{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:18px;
-    padding-bottom:13px;
-    border-bottom:1px solid var(--border);
-}
-
-.section-number{
-    width:32px;
-    height:32px;
-    border-radius:10px;
-    background:var(--green);
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    font-size:25px;
     font-weight:900;
+    color:var(--green-dark);
+    margin-bottom:7px;
+}
+
+.section-intro{
+    color:var(--muted);
     font-size:14px;
+    margin-bottom:25px;
 }
 
-.section-title h3{
-    font-size:17px;
-    color:var(--dark);
-}
+/* =========================
+   FORM
+========================= */
 
-.form-section{
-    margin-bottom:30px;
-}
-
-.grid{
+.form-grid{
     display:grid;
-    grid-template-columns:1fr;
-    gap:16px;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
 }
 
 .field{
@@ -407,254 +336,212 @@ main{
     gap:7px;
 }
 
+.field.full{
+    grid-column:1/-1;
+}
+
 label{
     font-size:13px;
     font-weight:800;
-    color:var(--dark);
+    color:#27332c;
 }
 
 .required{
-    color:var(--red);
+    color:var(--danger);
 }
 
 input,
 select,
 textarea{
     width:100%;
-    border:1.5px solid var(--border);
+    border:1px solid var(--border);
     background:#fbfdfc;
     border-radius:12px;
     padding:13px 14px;
-    font-size:14px;
-    color:var(--text);
     outline:none;
-    transition:.2s ease;
+    color:#17211b;
+    transition:border-color .2s,box-shadow .2s;
 }
 
 input:focus,
 select:focus,
 textarea:focus{
     border-color:var(--green);
+    box-shadow:0 0 0 4px rgba(8,122,59,.10);
     background:#fff;
-    box-shadow:0 0 0 4px rgba(0,135,81,.08);
 }
 
 textarea{
-    min-height:145px;
+    min-height:135px;
     resize:vertical;
 }
 
 .help{
+    color:#7a857e;
     font-size:11px;
-    color:var(--muted);
 }
 
-/* =========================
-   CATEGORY CARDS
-========================= */
-
-.category-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:9px;
-}
-
-.category-option{
-    position:relative;
-}
-
-.category-option input{
-    position:absolute;
-    opacity:0;
-    pointer-events:none;
-}
-
-.category-label{
-    min-height:75px;
-    padding:10px 8px;
-    border:1.5px solid var(--border);
-    border-radius:12px;
-    background:#fff;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    gap:4px;
-    cursor:pointer;
-    font-size:11px;
-    font-weight:800;
-    transition:.2s ease;
-}
-
-.category-label .icon{
-    font-size:23px;
-}
-
-.category-option input:checked + .category-label{
-    border-color:var(--green);
-    background:var(--light-green);
-    color:var(--dark-green);
-    box-shadow:0 0 0 2px rgba(0,135,81,.08);
-}
-
-/* =========================
-   PHOTO UPLOAD
-========================= */
-
-.upload-box{
-    border:2px dashed #cbdacf;
-    border-radius:15px;
-    padding:20px 15px;
-    text-align:center;
-    background:#fafdfb;
-    cursor:pointer;
-    transition:.2s ease;
-}
-
-.upload-box:hover{
-    border-color:var(--green);
-    background:var(--light-green);
-}
-
-.upload-icon{
-    font-size:32px;
-    margin-bottom:5px;
-}
-
-.upload-box strong{
-    display:block;
-    font-size:13px;
-    color:var(--dark-green);
-}
-
-.upload-box span{
-    display:block;
-    font-size:11px;
-    color:var(--muted);
-    margin-top:3px;
-}
-
-#photo{
-    display:none;
-}
-
-.preview{
-    display:none;
-    margin-top:12px;
-}
-
-.preview img{
-    max-width:100%;
-    max-height:240px;
-    border-radius:12px;
-    border:1px solid var(--border);
-}
-
-/* =========================
-   LOCATION
-========================= */
-
-.location-row{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:10px;
-}
-
-.location-btn{
-    border:0;
-    background:var(--dark-green);
-    color:#fff;
-    min-height:46px;
-    border-radius:11px;
-    padding:10px 15px;
-    font-size:13px;
-    font-weight:800;
-    cursor:pointer;
-}
-
-.location-btn:disabled{
-    opacity:.6;
-    cursor:not-allowed;
-}
-
-.location-status{
-    font-size:11px;
-    color:var(--muted);
-    margin-top:5px;
-}
-
-/* =========================
-   CHARACTER COUNT
-========================= */
-
-.textarea-wrap{
-    position:relative;
-}
-
-.counter{
-    position:absolute;
-    right:11px;
-    bottom:9px;
-    font-size:10px;
-    color:var(--muted);
-    background:#fff;
-    padding:2px 5px;
-    border-radius:5px;
-}
-
-/* =========================
-   PRIVACY
-========================= */
-
-.privacy{
-    background:#f4faf6;
-    border:1px solid #d8ebdf;
-    border-radius:12px;
-    padding:13px;
+.checkbox-row{
     display:flex;
     gap:10px;
     align-items:flex-start;
-    font-size:11px;
-    color:#59655e;
-    margin-bottom:18px;
+    margin-top:20px;
+    padding:14px;
+    background:var(--green-light);
+    border-radius:12px;
 }
 
-.privacy input{
-    width:auto;
+.checkbox-row input{
+    width:18px;
+    height:18px;
     margin-top:3px;
+    accent-color:var(--green);
+}
+
+.checkbox-row label{
+    font-size:12px;
+    font-weight:600;
+    color:#355140;
+}
+
+.form-actions{
+    margin-top:23px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.submit-btn{
+    flex:1;
+    min-width:220px;
+    background:var(--green);
+    color:#fff;
+    padding:15px 20px;
+    box-shadow:0 9px 22px rgba(8,122,59,.20);
+}
+
+.reset-btn{
+    background:#eef2ef;
+    color:#34423a;
 }
 
 /* =========================
-   SUBMIT
+   INFO
 ========================= */
 
-.submit-btn{
-    width:100%;
-    min-height:55px;
-    border:0;
-    border-radius:14px;
-    background:linear-gradient(135deg,var(--green),var(--dark-green));
-    color:#fff;
-    font-size:15px;
+.info-heading{
+    color:var(--green-dark);
     font-weight:900;
-    cursor:pointer;
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.info-text{
+    font-size:13px;
+    color:var(--muted);
+    margin-bottom:20px;
+}
+
+.info-item{
     display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:9px;
-    box-shadow:0 9px 20px rgba(0,135,81,.2);
-    transition:.2s ease;
+    gap:12px;
+    padding:14px 0;
+    border-bottom:1px solid #edf0ee;
 }
 
-.submit-btn:hover{
-    transform:translateY(-1px);
+.info-item:last-child{
+    border-bottom:0;
 }
 
-.submit-btn:disabled{
-    opacity:.65;
-    cursor:not-allowed;
-    transform:none;
+.info-icon{
+    width:40px;
+    height:40px;
+    flex:0 0 40px;
+    border-radius:11px;
+    display:grid;
+    place-items:center;
+    background:var(--green-light);
+    font-size:19px;
+}
+
+.info-item strong{
+    display:block;
+    font-size:13px;
+    color:#26332b;
+}
+
+.info-item span{
+    display:block;
+    color:var(--muted);
+    font-size:12px;
+    margin-top:2px;
+}
+
+.whatsapp-box{
+    margin-top:18px;
+    padding:17px;
+    background:#f1fbf4;
+    border:1px solid #d8efdf;
+    border-radius:14px;
+}
+
+.whatsapp-box strong{
+    display:block;
+    color:var(--green-dark);
+}
+
+.whatsapp-number{
+    font-size:18px;
+    font-weight:950;
+    margin:4px 0 10px;
+}
+
+/* =========================
+   TRUST SECTION
+========================= */
+
+.trust{
+    margin-top:24px;
+    padding:24px;
+    background:#fff;
+    border-radius:var(--radius);
+    border:1px solid var(--border);
+    box-shadow:var(--shadow);
+}
+
+.trust h2{
+    text-align:center;
+    color:var(--green-dark);
+    font-size:23px;
+    margin-bottom:17px;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.trust-item{
+    padding:17px;
+    background:#f8faf9;
+    border-radius:14px;
+    text-align:center;
+}
+
+.trust-item .icon{
+    font-size:25px;
+}
+
+.trust-item strong{
+    display:block;
+    margin-top:5px;
+    font-size:14px;
+}
+
+.trust-item span{
+    color:var(--muted);
+    font-size:12px;
 }
 
 /* =========================
@@ -662,982 +549,931 @@ textarea{
 ========================= */
 
 .modal{
-    display:none;
     position:fixed;
     inset:0;
     z-index:3000;
-    background:rgba(0,0,0,.65);
-    padding:20px;
+    display:none;
     align-items:center;
     justify-content:center;
+    padding:20px;
+    background:rgba(0,0,0,.62);
 }
 
 .modal.show{
     display:flex;
 }
 
-.modal-card{
+.modal-box{
+    width:min(480px,100%);
     background:#fff;
-    width:100%;
-    max-width:430px;
-    border-radius:22px;
-    padding:28px 20px;
+    border-radius:24px;
+    padding:30px;
     text-align:center;
-    box-shadow:0 25px 70px rgba(0,0,0,.25);
+    box-shadow:0 25px 80px rgba(0,0,0,.28);
     animation:pop .25s ease;
 }
 
 @keyframes pop{
     from{
-        transform:scale(.9);
         opacity:0;
+        transform:scale(.94);
     }
     to{
-        transform:scale(1);
         opacity:1;
+        transform:scale(1);
     }
 }
 
 .success-icon{
     width:75px;
     height:75px;
-    border-radius:50%;
     margin:0 auto 15px;
-    background:var(--light-green);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:40px;
+    border-radius:50%;
+    background:var(--green-light);
+    display:grid;
+    place-items:center;
+    font-size:38px;
 }
 
-.modal-card h2{
-    color:var(--dark-green);
+.modal-box h2{
+    color:var(--green-dark);
     margin-bottom:8px;
 }
 
-.modal-card p{
+.modal-box p{
     color:var(--muted);
-    font-size:13px;
+    font-size:14px;
 }
 
-.modal-buttons{
-    display:grid;
-    gap:9px;
-    margin-top:20px;
-}
-
-.modal-btn{
-    min-height:45px;
-    border:0;
-    border-radius:11px;
-    font-size:13px;
-    font-weight:800;
-    cursor:pointer;
-}
-
-.whatsapp-btn{
-    background:#25D366;
-    color:#fff;
-}
-
-.close-btn{
-    background:#edf3ef;
-    color:var(--dark);
-}
-
-/* =========================
-   BOTTOM CTA
-========================= */
-
-.bottom-cta{
-    margin-top:20px;
-    background:linear-gradient(135deg,#102018,#006b40);
-    color:#fff;
-    border-radius:var(--radius);
-    padding:28px 18px;
-    text-align:center;
-}
-
-.bottom-cta h2{
-    font-size:22px;
-    margin-bottom:7px;
-}
-
-.bottom-cta p{
-    font-size:13px;
-    opacity:.9;
-    margin-bottom:18px;
-}
-
-.cta-buttons{
+.modal-actions{
     display:flex;
+    gap:10px;
     justify-content:center;
     flex-wrap:wrap;
-    gap:9px;
-}
-
-.cta-btn{
-    min-height:43px;
-    padding:10px 15px;
-    border-radius:10px;
-    font-size:12px;
-    font-weight:800;
-    background:#fff;
-    color:var(--green);
+    margin-top:22px;
 }
 
 /* =========================
    FOOTER
 ========================= */
 
-footer{
-    background:#0d1812;
-    color:#fff;
+.footer{
+    background:#062d19;
+    color:#dbece2;
+    padding:45px 20px 25px;
+}
+
+.footer-inner{
+    width:min(1100px,94%);
+    margin:auto;
     text-align:center;
-    padding:35px 15px 85px;
 }
 
 .footer-logo{
     width:65px;
     height:65px;
-    object-fit:cover;
     border-radius:50%;
-    border:3px solid var(--green);
+    border:3px solid var(--gold);
+    object-fit:cover;
     margin-bottom:10px;
 }
 
-footer h3{
-    font-size:17px;
+.footer-title{
+    color:#fff;
+    font-size:18px;
+    font-weight:900;
 }
 
-footer p{
-    font-size:11px;
-    color:#aebbb3;
-    margin-top:4px;
+.footer p{
+    max-width:700px;
+    margin:8px auto;
+    color:#b8cec0;
+    font-size:13px;
 }
 
 .footer-links{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:14px;
-    margin:18px 0;
+    gap:10px;
+    margin:22px 0;
 }
 
 .footer-links a{
-    font-size:11px;
-    color:#dce9e1;
+    color:#dbece2;
+    font-size:12px;
+    padding:7px 10px;
 }
 
-.copyright{
-    padding-top:15px;
-    border-top:1px solid rgba(255,255,255,.1);
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:20px;
+    padding-top:20px;
+    font-size:11px;
+    color:#9eb5a7;
 }
 
 /* =========================
    FLOATING WHATSAPP
 ========================= */
 
-.floating-whatsapp{
+.whatsapp-float{
     position:fixed;
-    right:16px;
-    bottom:75px;
-    width:55px;
-    height:55px;
+    right:18px;
+    bottom:18px;
+    z-index:1500;
+    width:58px;
+    height:58px;
     border-radius:50%;
+    display:grid;
+    place-items:center;
     background:#25D366;
     color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:27px;
-    z-index:2000;
-    box-shadow:0 8px 25px rgba(0,0,0,.2);
-    border:3px solid #fff;
+    font-size:28px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    transition:.2s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.07);
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media(min-width:650px){
+@media(max-width:900px){
+
+    .nav{
+        position:absolute;
+        top:74px;
+        left:0;
+        right:0;
+        background:#fff;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        padding:12px;
+        box-shadow:0 12px 30px rgba(0,0,0,.12);
+    }
+
+    .nav.show{
+        display:flex;
+    }
+
+    .nav a{
+        padding:13px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
 
     .grid{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:1fr;
     }
 
-    .grid .full{
-        grid-column:1 / -1;
+    .info-card{
+        position:static;
     }
-
-    .category-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .location-row{
-        grid-template-columns:1fr auto;
-        align-items:start;
-    }
-
-    .form-card{
-        padding:35px;
-    }
-
 }
 
-@media(min-width:900px){
+@media(max-width:650px){
 
-    .menu-toggle{
-        display:none;
+    .header-inner{
+        min-height:68px;
     }
 
-    nav{
-        display:flex;
-        align-items:center;
-        gap:3px;
+    .brand-logo{
+        width:45px;
+        height:45px;
     }
 
-    nav a{
-        border:0;
-        padding:9px 10px;
-        border-radius:8px;
-        font-size:11px;
+    .brand-title{
+        font-size:14px;
     }
 
-    nav.active{
-        position:static;
-        width:auto;
-        background:transparent;
-        border:0;
-        box-shadow:none;
+    .brand-subtitle{
+        font-size:9px;
     }
 
     .hero{
-        padding:75px 20px 90px;
+        padding:55px 15px 75px;
     }
 
-    main{
-        margin-top:-45px;
+    .hero p{
+        font-size:14px;
     }
 
-    .category-grid{
-        grid-template-columns:repeat(5,1fr);
+    .main{
+        width:94%;
+        margin-top:-30px;
     }
 
+    .form-card,
+    .info-card{
+        padding:20px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+
+    .trust-grid{
+        grid-template-columns:1fr;
+    }
+
+    .submit-btn{
+        width:100%;
+    }
+
+    .form-actions{
+        flex-direction:column;
+    }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
+<!-- =========================
+     HEADER
+========================= -->
 
-<div class="topbar">
-    IMOLE 2027 • <span>WE SHINE • WE SERVE • WE WIN</span> • OJO CONSTITUENCY II
-</div>
+<header class="header">
 
+    <div class="header-inner">
 
-<!-- HEADER -->
+        <a href="index.html" class="brand">
 
-<header>
+            <!--
+              IMPORTANT:
+              Change these image paths if your project
+              uses a different candidate-photo filename.
+            -->
 
-<div class="nav">
+            <img
+                src="assets/candidate.jpg"
+                alt="Hon. Nurudeen Abayomi Sadeeq"
+                class="brand-logo"
+                onerror="this.style.display='none';">
 
-<a href="index.html" class="brand">
+            <div class="brand-text">
 
-<img
-    id="navCandidatePhoto"
-    class="logo"
-    src="assets/candidate.jpg"
-    alt="Hon. Nurudeen Abayomi Sadeeq"
-    onerror="tryNextImage(this)"
->
+                <div class="brand-title">
+                    IMOLE 2027
+                </div>
 
-<div class="brand-text">
-    <div class="brand-title">IMOLE 2027</div>
-    <div class="brand-subtitle">Hon. Nurudeen Abayomi Sadeeq</div>
-</div>
+                <div class="brand-subtitle">
+                    Hon. Nurudeen Abayomi Sadeeq
+                </div>
 
-</a>
+            </div>
 
-<button
-    class="menu-toggle"
-    id="menuToggle"
-    aria-label="Open navigation"
-    aria-expanded="false">
-    ☰
-</button>
+        </a>
 
-<nav id="mainNav">
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open navigation">
+            ☰
+        </button>
 
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="manifesto.html">Manifesto</a>
-<a href="polling.html">Polling Units</a>
-<a href="results.html">Results</a>
-<a href="news.html">News</a>
-<a href="events.html">Events</a>
-<a href="gallery.html">Gallery</a>
-<a href="media.html">Media</a>
-<a href="contact.html">Contact</a>
-<a href="join.html">Join Us</a>
-<a href="community.html" class="active">Community Need</a>
+        <nav class="nav" id="mainNav">
 
-</nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="manifesto.html">Manifesto</a>
+            <a href="polling-units.html">Polling Units</a>
+            <a href="results.html">Results</a>
+            <a href="news.html">News</a>
+            <a href="events.html">Events</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="media.html">Media</a>
+            <a href="community.html" class="active">Community Need</a>
+            <a href="contact.html">Contact</a>
+            <a href="join.html">Join Us</a>
 
-</div>
+        </nav>
+
+    </div>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
-<div class="hero-inner">
+    <div class="hero-inner">
 
-<img
-    id="heroCandidatePhoto"
-    class="hero-photo"
-    src="assets/candidate.jpg"
-    alt="Hon. Nurudeen Abayomi Sadeeq"
-    onerror="tryNextImage(this)"
->
+        <div class="hero-badge">
+            🏘️ COMMUNITY ENGAGEMENT
+        </div>
 
-<div class="badge">
-    🏘️ YOUR VOICE MATTERS
-</div>
+        <h1>
+            Share Your
+            <span>Community Need</span>
+        </h1>
 
-<h1>
-    Share Your <span>Community Need</span>
-</h1>
+        <p>
+            Your voice matters. Tell IMOLE 2027 about the issues
+            affecting your community, so our team can listen,
+            document your concern and engage with you.
+        </p>
 
-<p>
-    Tell Hon. Nurudeen Abayomi Sadeeq about the challenges
-    affecting your community. Your voice can help shape the
-    priorities of IMOLE 2027.
-</p>
+        <div class="hero-actions">
 
-<div class="hero-buttons">
+            <a
+                href="#community-form"
+                class="btn btn-gold">
+                📢 Report a Community Need
+            </a>
 
-<a href="#communityForm" class="hero-btn primary">
-    📝 Submit a Community Need
-</a>
+            <a
+                href="https://wa.me/2348033002235"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-outline">
+                💬 WhatsApp Us
+            </a>
 
-<a href="join.html" class="hero-btn secondary">
-    🤝 Join IMOLE 2027
-</a>
+        </div>
 
-</div>
-
-</div>
-
-</section>
-
-
-<!-- MAIN -->
-
-<main>
-
-<!-- INTRO -->
-
-<section class="intro-card">
-
-<div class="intro-icon">
-    🏘️
-</div>
-
-<h2>Your Community. Your Voice.</h2>
-
-<p>
-    Every community deserves to be heard. Use this platform to
-    tell us about roads, drainage, healthcare, education,
-    electricity, water, security, youth opportunities and other
-    issues that matter to you.
-</p>
+    </div>
 
 </section>
 
 
-<!-- FORM -->
+<!-- =========================
+     MAIN
+========================= -->
 
-<section class="form-card" id="communityForm">
+<main class="main">
 
-<form id="communityNeedForm">
+    <div class="grid">
 
+        <!-- FORM -->
 
-<!-- PERSONAL INFORMATION -->
+        <section class="card form-card" id="community-form">
 
-<div class="form-section">
+            <h2 class="section-title">
+                Tell Us What Your Community Needs
+            </h2>
 
-<div class="section-title">
-    <div class="section-number">1</div>
-    <h3>Your Information</h3>
-</div>
+            <p class="section-intro">
+                Please provide accurate information. Your report
+                will be prepared and sent to the IMOLE 2027
+                community engagement WhatsApp channel.
+            </p>
 
-<div class="grid">
 
-<div class="field">
+            <form id="communityForm">
 
-<label for="fullName">
-    Full Name <span class="required">*</span>
-</label>
+                <div class="form-grid">
 
-<input
-    type="text"
-    id="fullName"
-    name="fullName"
-    placeholder="Enter your full name"
-    autocomplete="name"
-    required
->
+                    <!-- NAME -->
 
-</div>
+                    <div class="field">
 
+                        <label for="name">
+                            Full Name <span class="required">*</span>
+                        </label>
 
-<div class="field">
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required>
 
-<label for="phone">
-    Phone / WhatsApp Number <span class="required">*</span>
-</label>
+                    </div>
 
-<input
-    type="tel"
-    id="phone"
-    name="phone"
-    placeholder="e.g. 08012345678"
-    autocomplete="tel"
-    required
->
 
-</div>
+                    <!-- PHONE -->
 
-</div>
+                    <div class="field">
 
-</div>
+                        <label for="phone">
+                            Phone Number <span class="required">*</span>
+                        </label>
 
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="e.g. 08012345678"
+                            autocomplete="tel"
+                            required>
 
-<!-- LOCATION -->
+                        <span class="help">
+                            Please provide a number the team can use to contact you.
+                        </span>
 
-<div class="form-section">
+                    </div>
 
-<div class="section-title">
-    <div class="section-number">2</div>
-    <h3>Where Is The Issue?</h3>
-</div>
 
-<div class="grid">
+                    <!-- WARD -->
 
-<div class="field">
+                    <div class="field">
 
-<label for="ward">
-    Ward <span class="required">*</span>
-</label>
+                        <label for="ward">
+                            Ward <span class="required">*</span>
+                        </label>
 
-<select id="ward" name="ward" required>
+                        <select
+                            id="ward"
+                            name="ward"
+                            required>
 
-<option value="">Select your ward</option>
+                            <option value="">
+                                Select your ward
+                            </option>
 
-<option value="Ward D — Ijanikin">
-    Ward D — Ijanikin
-</option>
+                            <option value="Ward D – Ijanikin">
+                                Ward D – Ijanikin
+                            </option>
 
-<option value="Ward F — Ilogbo">
-    Ward F — Ilogbo
-</option>
+                            <option value="Ward F – Ilogbo">
+                                Ward F – Ilogbo
+                            </option>
 
-<option value="Ward G — Irewe">
-    Ward G — Irewe
-</option>
+                            <option value="Ward G – Irewe">
+                                Ward G – Irewe
+                            </option>
 
-<option value="Ward I — Etegbin">
-    Ward I — Etegbin
-</option>
+                            <option value="Ward H">
+                                Ward H
+                            </option>
 
-<option value="Ward J — Idoluwo">
-    Ward J — Idoluwo
-</option>
+                            <option value="Ward I – Etegbin">
+                                Ward I – Etegbin
+                            </option>
 
-<option value="Other / Not Sure">
-    Other / Not Sure
-</option>
+                            <option value="Ward J – Idoluwo">
+                                Ward J – Idoluwo
+                            </option>
 
-</select>
+                            <option value="Other / Not Sure">
+                                Other / Not Sure
+                            </option>
 
-</div>
+                        </select>
 
+                    </div>
 
-<div class="field">
 
-<label for="community">
-    Community / Area <span class="required">*</span>
-</label>
+                    <!-- COMMUNITY -->
 
-<input
-    type="text"
-    id="community"
-    name="community"
-    placeholder="e.g. Ilogbo, Shibiri, Igbede"
-    required
->
+                    <div class="field">
 
-</div>
+                        <label for="community">
+                            Community <span class="required">*</span>
+                        </label>
 
+                        <input
+                            type="text"
+                            id="community"
+                            name="community"
+                            placeholder="e.g. Ilogbo, Igbede, Shibiri"
+                            required>
 
-<div class="field">
+                    </div>
 
-<label for="pollingUnit">
-    Polling Unit
-</label>
 
-<input
-    type="text"
-    id="pollingUnit"
-    name="pollingUnit"
-    placeholder="Enter polling unit if known"
->
+                    <!-- POLLING UNIT -->
 
-<span class="help">
-    Optional — you can leave this blank if you do not know it.
-</span>
+                    <div class="field">
 
-</div>
+                        <label for="pollingUnit">
+                            Polling Unit
+                        </label>
 
-</div>
+                        <input
+                            type="text"
+                            id="pollingUnit"
+                            name="pollingUnit"
+                            placeholder="Optional polling unit">
 
-</div>
+                    </div>
 
 
-<!-- ISSUE CATEGORY -->
+                    <!-- CATEGORY -->
 
-<div class="form-section">
+                    <div class="field">
 
-<div class="section-title">
-    <div class="section-number">3</div>
-    <h3>What Is The Main Problem?</h3>
-</div>
+                        <label for="category">
+                            Issue Category <span class="required">*</span>
+                        </label>
 
-<div class="category-grid">
+                        <select
+                            id="category"
+                            name="category"
+                            required>
 
+                            <option value="">
+                                Select issue category
+                            </option>
 
-<div class="category-option">
+                            <option value="Roads">
+                                🛣️ Roads
+                            </option>
 
-<input
-    type="radio"
-    id="roads"
-    name="category"
-    value="Roads"
-    required
->
+                            <option value="Drainage / Flooding">
+                                🌧️ Drainage / Flooding
+                            </option>
 
-<label class="category-label" for="roads">
-    <span class="icon">🛣️</span>
-    Roads
-</label>
+                            <option value="Electricity">
+                                💡 Electricity
+                            </option>
 
-</div>
+                            <option value="Water">
+                                💧 Water
+                            </option>
 
+                            <option value="Healthcare">
+                                🏥 Healthcare
+                            </option>
 
-<div class="category-option">
+                            <option value="Education">
+                                🏫 Education
+                            </option>
 
-<input
-    type="radio"
-    id="drainage"
-    name="category"
-    value="Drainage / Flooding"
->
+                            <option value="Security">
+                                🛡️ Security
+                            </option>
 
-<label class="category-label" for="drainage">
-    <span class="icon">🌧️</span>
-    Drainage / Flooding
-</label>
+                            <option value="Environment / Waste">
+                                ♻️ Environment / Waste
+                            </option>
 
-</div>
+                            <option value="Youth / Employment">
+                                👥 Youth / Employment
+                            </option>
 
+                            <option value="Market / Traders">
+                                🛍️ Market / Traders
+                            </option>
 
-<div class="category-option">
+                            <option value="Other">
+                                📌 Other
+                            </option>
 
-<input
-    type="radio"
-    id="electricity"
-    name="category"
-    value="Electricity"
->
+                        </select>
 
-<label class="category-label" for="electricity">
-    <span class="icon">💡</span>
-    Electricity
-</label>
+                    </div>
 
-</div>
 
+                    <!-- LOCATION -->
 
-<div class="category-option">
+                    <div class="field full">
 
-<input
-    type="radio"
-    id="water"
-    name="category"
-    value="Water"
->
+                        <label for="location">
+                            Specific Location
+                        </label>
 
-<label class="category-label" for="water">
-    <span class="icon">💧</span>
-    Water
-</label>
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="Street, landmark or specific area">
 
-</div>
+                    </div>
 
 
-<div class="category-option">
+                    <!-- DESCRIPTION -->
 
-<input
-    type="radio"
-    id="healthcare"
-    name="category"
-    value="Healthcare"
->
+                    <div class="field full">
 
-<label class="category-label" for="healthcare">
-    <span class="icon">🏥</span>
-    Healthcare
-</label>
+                        <label for="description">
+                            Describe the Community Need
+                            <span class="required">*</span>
+                        </label>
 
-</div>
+                        <textarea
+                            id="description"
+                            name="description"
+                            placeholder="Please explain the problem, how it affects residents and what you believe should be done."
+                            minlength="10"
+                            maxlength="1500"
+                            required></textarea>
 
+                        <span class="help">
+                            Maximum 1,500 characters.
+                        </span>
 
-<div class="category-option">
+                    </div>
 
-<input
-    type="radio"
-    id="education"
-    name="category"
-    value="Education"
->
+                </div>
 
-<label class="category-label" for="education">
-    <span class="icon">🎓</span>
-    Education
-</label>
 
-</div>
+                <!-- CONSENT -->
 
+                <div class="checkbox-row">
 
-<div class="category-option">
+                    <input
+                        type="checkbox"
+                        id="consent"
+                        required>
 
-<input
-    type="radio"
-    id="youth"
-    name="category"
-    value="Youth Empowerment"
->
+                    <label for="consent">
 
-<label class="category-label" for="youth">
-    <span class="icon">👨‍👩‍👧‍👦</span>
-    Youth
-</label>
+                        I confirm that the information I have provided
+                        is accurate to the best of my knowledge and I
+                        understand that my report will be shared with
+                        the IMOLE 2027 community engagement team.
 
-</div>
+                    </label>
 
+                </div>
 
-<div class="category-option">
 
-<input
-    type="radio"
-    id="security"
-    name="category"
-    value="Security"
->
+                <!-- ACTIONS -->
 
-<label class="category-label" for="security">
-    <span class="icon">🛡️</span>
-    Security
-</label>
+                <div class="form-actions">
 
-</div>
+                    <button
+                        type="submit"
+                        class="btn submit-btn">
 
+                        💬 Submit & Send via WhatsApp
 
-<div class="category-option">
+                    </button>
 
-<input
-    type="radio"
-    id="traders"
-    name="category"
-    value="Market / Traders"
->
+                    <button
+                        type="reset"
+                        class="btn reset-btn">
 
-<label class="category-label" for="traders">
-    <span class="icon">🛒</span>
-    Traders
-</label>
+                        Clear Form
 
-</div>
+                    </button>
 
+                </div>
 
-<div class="category-option">
+            </form>
 
-<input
-    type="radio"
-    id="other"
-    name="category"
-    value="Other"
->
+        </section>
 
-<label class="category-label" for="other">
-    <span class="icon">💬</span>
-    Other
-</label>
 
-</div>
+        <!-- INFO -->
 
-</div>
+        <aside class="card info-card">
 
-</div>
+            <h3 class="info-heading">
+                Your Voice Matters
+            </h3>
 
+            <p class="info-text">
+                IMOLE 2027 believes that development begins by
+                listening to the people and understanding the
+                needs of our communities.
+            </p>
 
-<!-- DESCRIPTION -->
 
-<div class="form-section">
+            <div class="info-item">
 
-<div class="section-title">
-    <div class="section-number">4</div>
-    <h3>Describe The Issue</h3>
-</div>
+                <div class="info-icon">👂</div>
 
-<div class="field">
+                <div>
+                    <strong>We Listen</strong>
+                    <span>
+                        Tell us what residents are experiencing.
+                    </span>
+                </div>
 
-<label for="description">
-    Tell Us What Is Happening <span class="required">*</span>
-</label>
+            </div>
 
-<div class="textarea-wrap">
 
-<textarea
-    id="description"
-    name="description"
-    maxlength="1000"
-    placeholder="Please describe the problem, where it is located, how long it has affected the community and how it affects residents..."
-    required
-></textarea>
+            <div class="info-item">
 
-<div class="counter">
-    <span id="charCount">0</span>/1000
-</div>
+                <div class="info-icon">📝</div>
 
-</div>
+                <div>
+                    <strong>We Document</strong>
+                    <span>
+                        Your concern is organized into a clear report.
+                    </span>
+                </div>
 
-</div>
+            </div>
 
-</div>
 
+            <div class="info-item">
 
-<!-- PHOTO -->
+                <div class="info-icon">🤝</div>
 
-<div class="form-section">
+                <div>
+                    <strong>We Engage</strong>
+                    <span>
+                        Our team can follow up through WhatsApp.
+                    </span>
+                </div>
 
-<div class="section-title">
-    <div class="section-number">5</div>
-    <h3>Add A Photo</h3>
-</div>
+            </div>
 
-<label
-    class="upload-box"
-    for="photo">
 
-<div class="upload-icon">
-    📷
-</div>
+            <div class="info-item">
 
-<strong>
-    Tap here to upload a photo
-</strong>
+                <div class="info-icon">🏘️</div>
 
-<span>
-    A photo can help us understand the problem better.
-</span>
+                <div>
+                    <strong>Community First</strong>
+                    <span>
+                        Local concerns should have a voice.
+                    </span>
+                </div>
 
-<span>
-    JPG, PNG or WEBP • Maximum 5MB
-</span>
+            </div>
 
-</label>
 
-<input
-    type="file"
-    id="photo"
-    name="photo"
-    accept="image/jpeg,image/png,image/webp"
->
+            <div class="whatsapp-box">
 
-<div
-    class="preview"
-    id="photoPreview">
+                <strong>
+                    Official Community WhatsApp
+                </strong>
 
-<img
-    id="previewImage"
-    alt="Selected community issue photo"
->
+                <div class="whatsapp-number">
+                    +234 803 300 2235
+                </div>
 
-</div>
+                <a
+                    href="https://wa.me/2348033002235"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-gold"
+                    style="width:100%;">
 
-</div>
+                    💬 Chat on WhatsApp
 
+                </a>
 
-<!-- LOCATION -->
+            </div>
 
-<div class="form-section">
+        </aside>
 
-<div class="section-title">
-    <div class="section-number">6</div>
-    <h3>Optional Location</h3>
-</div>
+    </div>
 
-<div class="location-row">
 
-<div class="field">
+    <!-- TRUST -->
 
-<input
-    type="text"
-    id="location"
-    name="location"
-    placeholder="Location coordinates will appear here"
-    readonly
->
+    <section class="trust">
 
-<div
-    class="location-status"
-    id="locationStatus">
-    You may optionally share your approximate location.
-</div>
+        <h2>
+            How Community Reports Work
+        </h2>
 
-</div>
+        <div class="trust-grid">
 
-<button
-    type="button"
-    class="location-btn"
-    id="locationBtn">
+            <div class="trust-item">
 
-    📍 Get My Location
+                <div class="icon">📝</div>
 
-</button>
+                <strong>1. Submit</strong>
 
-</div>
+                <span>
+                    Fill out the community need form.
+                </span>
 
-</div>
+            </div>
 
 
-<!-- PRIVACY -->
+            <div class="trust-item">
 
-<div class="privacy">
+                <div class="icon">💬</div>
 
-<input
-    type="checkbox"
-    id="consent"
-    required
->
+                <strong>2. WhatsApp</strong>
 
-<label for="consent">
-    I understand that the information I provide may be used by the
-    IMOLE 2027 campaign team to understand community concerns and
-    improve engagement with residents. I agree to submit this report.
-</label>
+                <span>
+                    Your report is prepared for WhatsApp.
+                </span>
 
-</div>
+            </div>
 
 
-<!-- SUBMIT -->
+            <div class="trust-item">
 
-<button
-    type="submit"
-    class="submit-btn"
-    id="submitBtn">
+                <div class="icon">🤝</div>
 
-    <span>📲</span>
-    <span>SUBMIT COMMUNITY NEED VIA WHATSAPP</span>
+                <strong>3. Engagement</strong>
 
-</button>
+                <span>
+                    The campaign team can follow up with you.
+                </span>
 
-</form>
+            </div>
 
-</section>
+        </div>
 
-
-<!-- CTA -->
-
-<section class="bottom-cta">
-
-<h2>Let's Build A Better Ojo Together</h2>
-
-<p>
-    Your voice matters. Your community matters.
-    Together, we can identify the issues that deserve attention.
-</p>
-
-<div class="cta-buttons">
-
-<a
-    href="join.html"
-    class="cta-btn">
-    🤝 Join IMOLE 2027
-</a>
-
-<a
-    href="manifesto.html"
-    class="cta-btn">
-    📜 Read Our Manifesto
-</a>
-
-<a
-    href="contact.html"
-    class="cta-btn">
-    📞 Contact Us
-</a>
-
-</div>
-
-</section>
+    </section>
 
 </main>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     SUCCESS MODAL
+========================= -->
 
-<footer>
+<div
+    class="modal"
+    id="successModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="successTitle">
 
-<img
-    id="footerCandidatePhoto"
-    class="footer-logo"
-    src="assets/candidate.jpg"
-    alt="Hon. Nurudeen Abayomi Sadeeq"
-    onerror="tryNextImage(this)"
->
+    <div class="modal-box">
 
-<h3>Hon. Nurudeen Abayomi Sadeeq</h3>
+        <div class="success-icon">
+            ✓
+        </div>
 
-<p>
-    IMOLE 2027 • Nigeria Democratic Congress (NDC)
-</p>
+        <h2 id="successTitle">
+            Report Prepared Successfully
+        </h2>
 
-<p>
-    Ojo Constituency II • Lagos State House of Assembly
-</p>
+        <p>
+            WhatsApp should now open with your community report
+            already prepared. Please tap <strong>Send</strong>
+            in WhatsApp to deliver it to the IMOLE 2027 team.
+        </p>
 
-<div class="footer-links">
+        <div class="modal-actions">
 
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="manifesto.html">Manifesto</a>
-<a href="join.html">Join Us</a>
-<a href="community.html">Community Need</a>
-<a href="contact.html">Contact</a>
+            <button
+                class="btn btn-gold"
+                id="closeModal">
+                Continue
+            </button>
+
+            <a
+                href="https://wa.me/2348033002235"
+                target="_blank"
+                rel="noopener"
+                class="btn"
+                style="background:#25D366;color:#fff;">
+                Open WhatsApp
+            </a>
+
+        </div>
+
+    </div>
 
 </div>
 
-<p class="copyright">
-    © 2026 Hon. Nurudeen Abayomi Sadeeq Campaign.
-    All Rights Reserved.
-</p>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <img
+            src="assets/candidate.jpg"
+            alt="Hon. Nurudeen Abayomi Sadeeq"
+            class="footer-logo"
+            onerror="this.style.display='none';">
+
+        <div class="footer-title">
+            IMOLE 2027
+        </div>
+
+        <p>
+            Hon. Nurudeen Abayomi Sadeeq
+            <br>
+            Candidate for Lagos State House of Assembly,
+            Ojo Constituency II
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="manifesto.html">Manifesto</a>
+            <a href="community.html">Community Need</a>
+            <a href="join.html">Join Us</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2026 Hon. Nurudeen Abayomi Sadeeq Campaign.
+            All Rights Reserved.
+            <br>
+            Nigeria Democratic Congress (NDC) |
+            Ojo Constituency II
+
+        </div>
+
+    </div>
 
 </footer>
 
@@ -1645,617 +1481,272 @@ footer p{
 <!-- FLOATING WHATSAPP -->
 
 <a
-    class="floating-whatsapp"
-    href="https://wa.me/2348033002235?text=Hello%20IMOLE%202027%2C%20I%20would%20like%20to%20share%20a%20community%20need."
+    href="https://wa.me/2348033002235"
+    class="whatsapp-float"
     target="_blank"
-    rel="noopener noreferrer"
+    rel="noopener"
     aria-label="Chat with IMOLE 2027 on WhatsApp">
 
-    ☎
+    💬
 
 </a>
-
-
-<!-- SUCCESS MODAL -->
-
-<div
-    class="modal"
-    id="successModal">
-
-<div class="modal-card">
-
-<div class="success-icon">
-    ✅
-</div>
-
-<h2>Report Prepared Successfully</h2>
-
-<p>
-    Your community report has been prepared.
-    Tap the WhatsApp button below to send it directly
-    to the IMOLE 2027 campaign team.
-</p>
-
-<div class="modal-buttons">
-
-<a
-    href="#"
-    id="modalWhatsApp"
-    class="modal-btn whatsapp-btn"
-    target="_blank"
-    rel="noopener noreferrer">
-
-    💬 Send Report on WhatsApp
-
-</a>
-
-<button
-    type="button"
-    class="modal-btn close-btn"
-    id="closeModal">
-
-    Close
-
-</button>
-
-</div>
-
-</div>
-
-</div>
 
 
 <script>
 
-/* =====================================================
-   CANDIDATE PHOTO FALLBACK SYSTEM
-===================================================== */
+/* =========================
+   CONFIGURATION
+========================= */
 
-function tryNextImage(img){
-
-    const paths = [
-        "assets/candidate.jpg",
-        "assets/candidate.jpeg",
-        "assets/candidate.png",
-        "assets/candidate-photo.jpg",
-        "assets/candidate-photo.jpeg",
-        "assets/candidate-photo.png",
-        "assets/nurudeen.jpg",
-        "assets/nurudeen.jpeg",
-        "assets/nurudeen.png",
-        "images/candidate.jpg",
-        "images/candidate.jpeg",
-        "images/candidate.png",
-        "images/candidate-photo.jpg",
-        "images/candidate-photo.jpeg",
-        "images/candidate-photo.png",
-        "images/nurudeen.jpg",
-        "images/nurudeen.jpeg",
-        "images/nurudeen.png"
-    ];
-
-    let current = parseInt(
-        img.dataset.photoIndex || "0",
-        10
-    );
-
-    current++;
-
-    if(current < paths.length){
-
-        img.dataset.photoIndex = current;
-        img.src = paths[current];
-
-    }else{
-
-        img.onerror = null;
-
-        /*
-          Final fallback.
-          This prevents a broken-image icon.
-        */
-
-        img.src =
-        "data:image/svg+xml;charset=UTF-8," +
-        encodeURIComponent(`
-        <svg xmlns="http://www.w3.org/2000/svg"
-             width="500"
-             height="500"
-             viewBox="0 0 500 500">
-
-            <rect width="500"
-                  height="500"
-                  fill="#e9f8f0"/>
-
-            <circle cx="250"
-                    cy="185"
-                    r="90"
-                    fill="#008751"/>
-
-            <circle cx="250"
-                    cy="165"
-                    r="55"
-                    fill="#ffffff"/>
-
-            <path d="M100 450
-                     C115 330 185 285 250 285
-                     C315 285 385 330 400 450Z"
-                  fill="#008751"/>
-
-            <text x="250"
-                  y="475"
-                  text-anchor="middle"
-                  font-family="Arial"
-                  font-size="24"
-                  font-weight="bold"
-                  fill="#006b40">
-                IMOLE 2027
-            </text>
-
-        </svg>
-        `);
-
-    }
-
-}
+const WHATSAPP_NUMBER = "2348033002235";
 
 
-/* =====================================================
+/* =========================
    MOBILE MENU
-===================================================== */
+========================= */
 
-const menuToggle =
-    document.getElementById("menuToggle");
+const menuBtn = document.getElementById("menuBtn");
+const mainNav = document.getElementById("mainNav");
 
-const mainNav =
-    document.getElementById("mainNav");
+menuBtn.addEventListener("click", () => {
 
-menuToggle.addEventListener("click",function(){
-
-    const active =
-        mainNav.classList.toggle("active");
-
-    menuToggle.setAttribute(
-        "aria-expanded",
-        active ? "true" : "false"
-    );
-
-    menuToggle.textContent =
-        active ? "✕" : "☰";
+    mainNav.classList.toggle("show");
 
 });
 
 
-/* Close menu after clicking a link */
+document.querySelectorAll(".nav a").forEach(link => {
 
-document.querySelectorAll("#mainNav a")
-.forEach(link => {
+    link.addEventListener("click", () => {
 
-    link.addEventListener("click",function(){
-
-        mainNav.classList.remove("active");
-
-        menuToggle.textContent = "☰";
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
+        mainNav.classList.remove("show");
 
     });
 
 });
 
 
-/* =====================================================
-   CHARACTER COUNTER
-===================================================== */
+/* =========================
+   FORM
+========================= */
 
-const description =
-    document.getElementById("description");
+const form = document.getElementById("communityForm");
+const modal = document.getElementById("successModal");
+const closeModal = document.getElementById("closeModal");
 
-const charCount =
-    document.getElementById("charCount");
 
-description.addEventListener("input",function(){
-
-    charCount.textContent =
-        description.value.length;
-
-});
-
-
-/* =====================================================
-   PHOTO PREVIEW
-===================================================== */
-
-const photo =
-    document.getElementById("photo");
-
-const preview =
-    document.getElementById("photoPreview");
-
-const previewImage =
-    document.getElementById("previewImage");
-
-photo.addEventListener("change",function(){
-
-    const file = this.files[0];
-
-    if(!file){
-
-        preview.style.display = "none";
-
-        return;
-    }
-
-
-    /* File size validation */
-
-    if(file.size > 5 * 1024 * 1024){
-
-        alert(
-            "The selected photo is larger than 5MB. " +
-            "Please choose a smaller image."
-        );
-
-        this.value = "";
-
-        preview.style.display = "none";
-
-        return;
-    }
-
-
-    /* File type validation */
-
-    if(![
-        "image/jpeg",
-        "image/png",
-        "image/webp"
-    ].includes(file.type)){
-
-        alert(
-            "Please select a JPG, PNG or WEBP image."
-        );
-
-        this.value = "";
-
-        preview.style.display = "none";
-
-        return;
-    }
-
-
-    const reader =
-        new FileReader();
-
-    reader.onload = function(e){
-
-        previewImage.src = e.target.result;
-
-        preview.style.display = "block";
-
-    };
-
-    reader.readAsDataURL(file);
-
-});
-
-
-/* =====================================================
-   GET LOCATION
-===================================================== */
-
-const locationBtn =
-    document.getElementById("locationBtn");
-
-const locationInput =
-    document.getElementById("location");
-
-const locationStatus =
-    document.getElementById("locationStatus");
-
-
-locationBtn.addEventListener("click",function(){
-
-    if(!navigator.geolocation){
-
-        locationStatus.textContent =
-            "Location services are not supported by this browser.";
-
-        return;
-    }
-
-
-    locationBtn.disabled = true;
-
-    locationBtn.textContent =
-        "📍 Getting Location...";
-
-    locationStatus.textContent =
-        "Please allow location access if your browser asks."
-
-
-    navigator.geolocation.getCurrentPosition(
-
-        function(position){
-
-            const lat =
-                position.coords.latitude.toFixed(6);
-
-            const lng =
-                position.coords.longitude.toFixed(6);
-
-            locationInput.value =
-                lat + ", " + lng;
-
-            locationStatus.textContent =
-                "Location captured successfully.";
-
-            locationBtn.disabled = false;
-
-            locationBtn.textContent =
-                "✅ Location Added";
-
-        },
-
-        function(error){
-
-            let message =
-                "Unable to get your location.";
-
-            if(error.code === 1){
-
-                message =
-                    "Location permission was denied.";
-
-            }else if(error.code === 2){
-
-                message =
-                    "Your location could not be determined.";
-
-            }else if(error.code === 3){
-
-                message =
-                    "Location request timed out.";
-
-            }
-
-            locationStatus.textContent =
-                message;
-
-            locationBtn.disabled = false;
-
-            locationBtn.textContent =
-                "📍 Try Again";
-
-        },
-
-        {
-            enableHighAccuracy:true,
-            timeout:10000,
-            maximumAge:60000
-        }
-
-    );
-
-});
-
-
-/* =====================================================
-   WHATSAPP REPORT
-===================================================== */
-
-const form =
-    document.getElementById("communityNeedForm");
-
-const submitBtn =
-    document.getElementById("submitBtn");
-
-const successModal =
-    document.getElementById("successModal");
-
-const modalWhatsApp =
-    document.getElementById("modalWhatsApp");
-
-const closeModal =
-    document.getElementById("closeModal");
-
-
-const WHATSAPP_NUMBER =
-    "2348033002235";
-
-
-form.addEventListener("submit",function(event){
+form.addEventListener("submit", function(event){
 
     event.preventDefault();
 
 
-    /* Browser validation */
+    /* GET VALUES */
 
-    if(!form.checkValidity()){
+    const name =
+        document.getElementById("name").value.trim();
 
-        form.reportValidity();
+    const phone =
+        document.getElementById("phone").value.trim();
+
+    const ward =
+        document.getElementById("ward").value;
+
+    const community =
+        document.getElementById("community").value.trim();
+
+    const pollingUnit =
+        document.getElementById("pollingUnit").value.trim();
+
+    const category =
+        document.getElementById("category").value;
+
+    const location =
+        document.getElementById("location").value.trim();
+
+    const description =
+        document.getElementById("description").value.trim();
+
+
+    /* BASIC VALIDATION */
+
+    if(
+        !name ||
+        !phone ||
+        !ward ||
+        !community ||
+        !category ||
+        !description
+    ){
+
+        alert(
+            "Please complete all required fields before submitting."
+        );
 
         return;
+
     }
 
 
-    const fullName =
-        document.getElementById("fullName")
-        .value.trim();
+    if(description.length < 10){
 
-    const phone =
-        document.getElementById("phone")
-        .value.trim();
+        alert(
+            "Please provide a little more detail about the community need."
+        );
 
-    const ward =
-        document.getElementById("ward")
-        .value;
+        return;
 
-    const community =
-        document.getElementById("community")
-        .value.trim();
-
-    const pollingUnit =
-        document.getElementById("pollingUnit")
-        .value.trim() || "Not provided";
-
-    const category =
-        document.querySelector(
-            'input[name="category"]:checked'
-        ).value;
-
-    const issue =
-        description.value.trim();
-
-    const location =
-        locationInput.value.trim() ||
-        "Not provided";
+    }
 
 
-    /* Change button */
+    /* DATE */
 
-    submitBtn.disabled = true;
+    const now = new Date();
 
-    submitBtn.innerHTML =
-        "⏳ Preparing Your Report...";
+    const dateString =
+        now.toLocaleString(
+            "en-NG",
+            {
+                dateStyle:"medium",
+                timeStyle:"short"
+            }
+        );
+
+
+    /* WHATSAPP MESSAGE */
+
+    const message =
+
+`🏘️ *IMOLE 2027 COMMUNITY NEED REPORT*
+
+━━━━━━━━━━━━━━━━━━
+
+👤 *Name:*
+${name}
+
+📞 *Phone:*
+${phone}
+
+🏘️ *Ward:*
+${ward}
+
+📍 *Community:*
+${community}
+
+🗳️ *Polling Unit:*
+${pollingUnit || "Not provided"}
+
+🛠️ *Issue Category:*
+${category}
+
+📌 *Specific Location:*
+${location || "Not provided"}
+
+📝 *Community Need:*
+${description}
+
+📅 *Submitted:*
+${dateString}
+
+━━━━━━━━━━━━━━━━━━
+
+🙏 *Message to IMOLE 2027:*
+Please acknowledge this report and engage with the community where appropriate.
+
+*IMOLE 2027*
+*WE SHINE • WE SERVE • WE WIN*`;
+
+
+    /* WHATSAPP URL */
+
+    const whatsappURL =
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        encodeURIComponent(message);
 
 
     /*
-      Give the browser a short moment
-      to update the UI before creating
-      the WhatsApp message.
+      OPEN WHATSAPP
     */
 
-    setTimeout(function(){
-
-        let message =
-
-`*IMOLE 2027 — COMMUNITY NEED REPORT*
-
-Hello IMOLE 2027 Campaign Team,
-
-I would like to share a community need with the campaign.
-
-*PERSONAL INFORMATION*
-Name: ${fullName}
-Phone/WhatsApp: ${phone}
-
-*LOCATION*
-Ward: ${ward}
-Community/Area: ${community}
-Polling Unit: ${pollingUnit}
-Coordinates: ${location}
-
-*MAIN COMMUNITY ISSUE*
-Category: ${category}
-
-*DESCRIPTION*
-${issue}
-
-Thank you.
-
-— Submitted through the IMOLE 2027 Community Need Portal`;
+    window.open(
+        whatsappURL,
+        "_blank",
+        "noopener,noreferrer"
+    );
 
 
-        const whatsappURL =
-            "https://wa.me/" +
-            WHATSAPP_NUMBER +
-            "?text=" +
-            encodeURIComponent(message);
+    /*
+      SHOW SUCCESS MESSAGE
+    */
 
+    setTimeout(() => {
 
-        modalWhatsApp.href =
-            whatsappURL;
+        modal.classList.add("show");
 
+    }, 350);
 
-        successModal.classList.add("show");
-
-
-        submitBtn.disabled = false;
-
-        submitBtn.innerHTML =
-            "<span>📲</span><span>SUBMIT COMMUNITY NEED VIA WHATSAPP</span>";
-
-
-    },500);
 
 });
 
 
-/* =====================================================
+/* =========================
    CLOSE MODAL
-===================================================== */
+========================= */
 
-closeModal.addEventListener("click",function(){
+closeModal.addEventListener("click", () => {
 
-    successModal.classList.remove("show");
+    modal.classList.remove("show");
 
 });
 
 
-/* Close when clicking outside */
+modal.addEventListener("click", event => {
 
-successModal.addEventListener("click",function(event){
+    if(event.target === modal){
 
-    if(event.target === successModal){
-
-        successModal.classList.remove("show");
+        modal.classList.remove("show");
 
     }
 
 });
 
 
-/* =====================================================
-   ESCAPE KEY
-===================================================== */
+/* =========================
+   ESC KEY
+========================= */
 
-document.addEventListener("keydown",function(event){
+document.addEventListener("keydown", event => {
 
     if(event.key === "Escape"){
 
-        successModal.classList.remove("show");
-
-        mainNav.classList.remove("active");
-
-        menuToggle.textContent = "☰";
+        modal.classList.remove("show");
 
     }
 
 });
 
 
-/* =====================================================
-   PWA SERVICE WORKER
-===================================================== */
+/* =========================
+   PREVENT DOUBLE SUBMISSION
+========================= */
 
-if("serviceWorker" in navigator){
+form.addEventListener("submit", () => {
 
-    window.addEventListener("load",function(){
+    const button =
+        form.querySelector(".submit-btn");
 
-        navigator.serviceWorker.register("service-worker.js")
-        .then(function(){
+    button.innerHTML =
+        "💬 Opening WhatsApp...";
 
-            console.log(
-                "IMOLE 2027 service worker registered."
-            );
+    setTimeout(() => {
 
-        })
-        .catch(function(error){
+        button.innerHTML =
+            "💬 Submit & Send via WhatsApp";
 
-            console.log(
-                "Service worker registration failed:",
-                error
-            );
+    }, 2500);
 
-        });
-
-    });
-
-}
+});
 
 </script>
 
