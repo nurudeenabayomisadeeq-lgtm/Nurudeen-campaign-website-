@@ -1,666 +1,582 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport"
-content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<title>Today in History | IMOLE 2027</title><meta name="description"
-content="Discover important historical events, notable births and deaths that happened on this day in history.">
+<meta charset="UTF-8">
 
-<meta name="theme-color" content="#0b7a3b"><style>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Today in History | IMOLE 2027</title>
+
+<meta name="description"
+      content="Discover historical events, notable births and notable deaths from today's date. IMOLE 2027.">
+
+<meta name="theme-color"
+      content="#063b2d">
+
+<link rel="icon"
+      type="image/jpeg"
+      href="assets/IMG-20260728-WA0032.jpg">
+
+<style>
+
+:root{
+  --green:#063b2d;
+  --green2:#0a5942;
+  --green3:#0d7254;
+  --gold:#d6a62e;
+  --gold2:#f1c84b;
+  --light:#f4f8f6;
+  --white:#fff;
+  --dark:#10231d;
+  --text:#30433c;
+  --muted:#6b7d75;
+  --shadow:0 12px 35px rgba(0,0,0,.10);
+  --shadow2:0 20px 55px rgba(0,0,0,.15);
+}
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f7f5;
-    color:#222;
-    line-height:1.6;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--light);
+  color:var(--text);
+  line-height:1.6;
 }
 
-header{
-    background:linear-gradient(135deg,#064d28,#0b7a3b);
-    color:white;
-    padding:18px 15px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.18);
-}
-
-.header-inner{
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-}
-
-.brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.brand img{
-    width:48px;
-    height:48px;
-    object-fit:contain;
-    border-radius:50%;
-    background:white;
-    padding:3px;
-}
-
-.brand-text h1{
-    font-size:18px;
-    margin-bottom:2px;
-}
-
-.brand-text span{
-    font-size:12px;
-    opacity:.9;
-}
-
-.back-btn{
-    color:white;
-    text-decoration:none;
-    border:1px solid rgba(255,255,255,.5);
-    padding:8px 13px;
-    border-radius:25px;
-    font-size:13px;
-}
-
-.hero{
-    background:white;
-    text-align:center;
-    padding:45px 20px 35px;
-    border-bottom:1px solid #e4e4e4;
-}
-
-.hero .calendar{
-    font-size:48px;
-    margin-bottom:8px;
-}
-
-.hero h2{
-    color:#064d28;
-    font-size:32px;
-    margin-bottom:7px;
-}
-
-#todayDate{
-    color:#666;
-    font-size:16px;
+a{
+  text-decoration:none;
+  color:inherit;
 }
 
 .container{
-    max-width:1100px;
-    margin:30px auto;
-    padding:0 15px;
+  width:min(1150px,92%);
+  margin:auto;
 }
 
-.intro{
-    background:#e9f6ee;
-    border-left:5px solid #0b7a3b;
-    padding:16px;
-    margin-bottom:25px;
-    border-radius:8px;
+/* HEADER */
+
+header{
+  background:var(--green);
+  color:#fff;
+  box-shadow:0 5px 20px rgba(0,0,0,.15);
 }
 
-.intro strong{
-    color:#064d28;
+.nav{
+  min-height:75px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.brand img{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid var(--gold);
+}
+
+.brand strong{
+  display:block;
+  font-size:17px;
+}
+
+.brand small{
+  display:block;
+  color:#cde0d8;
+  font-size:10px;
+  font-weight:700;
+}
+
+.back{
+  background:var(--gold);
+  color:var(--dark);
+  padding:10px 15px;
+  border-radius:9px;
+  font-weight:900;
+  font-size:13px;
+}
+
+/* HERO */
+
+.hero{
+  background:
+    linear-gradient(135deg,
+      rgba(6,59,45,.98),
+      rgba(10,89,66,.94));
+  color:#fff;
+  padding:75px 0;
+  text-align:center;
+}
+
+.hero .badge{
+  display:inline-block;
+  color:var(--gold2);
+  border:1px solid rgba(241,200,75,.6);
+  padding:7px 15px;
+  border-radius:50px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1px;
+  margin-bottom:15px;
+}
+
+.hero h1{
+  font-size:clamp(38px,7vw,70px);
+  line-height:1.05;
+  margin-bottom:15px;
+}
+
+.hero p{
+  color:#dcece5;
+  max-width:700px;
+  margin:auto;
+}
+
+.today-date{
+  margin:22px auto 0;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.18);
+  padding:12px 18px;
+  border-radius:12px;
+  width:max-content;
+  max-width:95%;
+  font-weight:900;
+}
+
+/* MAIN */
+
+main{
+  padding:60px 0;
+}
+
+.section{
+  margin-bottom:60px;
 }
 
 .section-title{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin:35px 0 15px;
-    color:#064d28;
-    font-size:23px;
+  text-align:center;
+  margin-bottom:25px;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-    gap:18px;
+.section-title span{
+  color:var(--green3);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:11px;
+  font-weight:900;
+}
+
+.section-title h2{
+  color:var(--green);
+  font-size:32px;
+  margin-top:5px;
+}
+
+/* CARDS */
+
+.history-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 
 .history-card{
-    background:white;
-    border-radius:12px;
-    padding:20px;
-    box-shadow:0 5px 18px rgba(0,0,0,.07);
-    border:1px solid #e8e8e8;
-    transition:.25s;
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid #e2ebe7;
+  transition:.2s;
 }
 
 .history-card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 8px 22px rgba(0,0,0,.12);
+  transform:translateY(-5px);
+  box-shadow:var(--shadow2);
+}
+
+.history-image{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  background:#dfe9e4;
+}
+
+.history-body{
+  padding:18px;
 }
 
 .year{
-    display:inline-block;
-    background:#0b7a3b;
-    color:white;
-    padding:4px 10px;
-    border-radius:20px;
-    font-weight:bold;
-    font-size:13px;
-    margin-bottom:10px;
+  display:inline-block;
+  background:var(--gold);
+  color:var(--dark);
+  font-size:12px;
+  font-weight:900;
+  padding:4px 9px;
+  border-radius:20px;
+  margin-bottom:10px;
 }
 
-.history-card p{
-    color:#444;
-    font-size:15px;
+.history-body h3{
+  color:var(--green);
+  font-size:17px;
+  line-height:1.35;
+  margin-bottom:9px;
 }
 
-.history-card a{
-    display:inline-block;
-    margin-top:12px;
-    color:#0b7a3b;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:13px;
+.history-body p{
+  color:var(--muted);
+  font-size:13px;
 }
 
-.loading{
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    text-align:center;
-    color:#666;
+.read-more{
+  display:inline-block;
+  margin-top:13px;
+  color:var(--green3);
+  font-size:12px;
+  font-weight:900;
 }
 
-.spinner{
-    width:35px;
-    height:35px;
-    border:4px solid #ddd;
-    border-top-color:#0b7a3b;
-    border-radius:50%;
-    animation:spin 1s linear infinite;
-    margin:0 auto 12px;
+.status{
+  background:#fff;
+  border-radius:15px;
+  padding:30px;
+  box-shadow:var(--shadow);
+  text-align:center;
+  color:var(--muted);
 }
 
-@keyframes spin{
-    to{transform:rotate(360deg);}
+.status strong{
+  display:block;
+  color:var(--green);
+  font-size:18px;
+  margin-bottom:6px;
 }
 
-.error{
-    background:#fff3f3;
-    border-left:5px solid #d93025;
-    padding:18px;
-    border-radius:8px;
-    color:#8a1c16;
+/* CANDIDATE CTA */
+
+.candidate-box{
+  background:linear-gradient(135deg,var(--green),var(--green2));
+  color:#fff;
+  border-radius:24px;
+  padding:35px;
+  display:flex;
+  align-items:center;
+  gap:25px;
+  box-shadow:var(--shadow2);
 }
 
-.empty{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    color:#666;
+.candidate-box img{
+  width:110px;
+  height:110px;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid var(--gold);
 }
+
+.candidate-box h2{
+  color:var(--gold2);
+  margin-bottom:5px;
+}
+
+.candidate-box p{
+  color:#dbece5;
+}
+
+/* FOOTER */
 
 footer{
-    margin-top:50px;
-    background:#06351d;
-    color:white;
-    text-align:center;
-    padding:25px 15px;
-    font-size:13px;
+  background:#071d16;
+  color:#b8cbc3;
+  text-align:center;
+  padding:35px 15px;
+  font-size:12px;
 }
 
 footer strong{
-    color:#8ff0b5;
+  color:var(--gold2);
 }
 
-.source{
-    margin-top:10px;
-    opacity:.8;
-}
+/* MOBILE */
 
-.source a{
-    color:#9af5bd;
+@media(max-width:800px){
+
+  .history-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
 }
 
 @media(max-width:600px){
 
-    .header-inner{
-        align-items:center;
-    }
+  .nav{
+    min-height:68px;
+  }
 
-    .brand img{
-        width:40px;
-        height:40px;
-    }
+  .brand img{
+    width:43px;
+    height:43px;
+  }
 
-    .brand-text h1{
-        font-size:15px;
-    }
+  .brand strong{
+    font-size:14px;
+  }
 
-    .brand-text span{
-        font-size:10px;
-    }
+  .back{
+    font-size:11px;
+    padding:8px 10px;
+  }
 
-    .back-btn{
-        font-size:11px;
-        padding:7px 10px;
-    }
+  .hero{
+    padding:60px 0;
+  }
 
-    .hero{
-        padding:35px 15px 25px;
-    }
+  .hero h1{
+    font-size:42px;
+  }
 
-    .hero h2{
-        font-size:27px;
-    }
+  .history-grid{
+    grid-template-columns:1fr;
+  }
 
-    .hero .calendar{
-        font-size:40px;
-    }
-
-    .section-title{
-        font-size:20px;
-    }
+  .candidate-box{
+    flex-direction:column;
+    text-align:center;
+  }
 
 }
 
-</style></head><body><header><div class="header-inner"><div class="brand"><!-- CHANGE THIS PATH IF YOUR CANDIDATE PHOTO HAS A DIFFERENT NAME --><img src="assets/candidate.jpg"
-alt="Hon. Nurudeen Abayomi Sadeeq">
+</style>
 
-<div class="brand-text">
-<h1>IMOLE 2027</h1>
-<span>Hon. Nurudeen Abayomi Sadeeq</span>
-</div></div><a href="index.html" class="back-btn">
-← Home
-</a></div></header><section class="hero"><div class="calendar">📅</div><h2>Today in History</h2><div id="todayDate">
-Loading today's date...
-</div></section><main class="container"><div class="intro"><strong>Did you know?</strong><br>
+</head>
 
-Every day has a story.
+<body>
 
-Explore important events, notable people and moments from history that happened on this date.
 
-</div><!-- EVENTS --><h3 class="section-title">
-🌍 Historical Events
-</h3><div id="events" class="cards"><div class="loading"><div class="spinner"></div>Loading historical events...
+<header>
 
-</div></div><!-- BIRTHS --><h3 class="section-title">
-🎂 Notable Births
-</h3><div id="births" class="cards"><div class="loading"><div class="spinner"></div>Loading notable births...
+<div class="container nav">
 
-</div></div><!-- DEATHS --><h3 class="section-title">
-🕊️ Notable Deaths
-</h3><div id="deaths" class="cards"><div class="loading"><div class="spinner"></div>Loading notable deaths...
+<a href="index.html"
+   class="brand">
 
-</div></div></main><footer><p>
+<img src="assets/IMG-20260728-WA0032.jpg"
+     alt="NDC logo">
+
+<div>
 <strong>IMOLE 2027</strong>
-</p><p>
-Hon. Nurudeen Abayomi Sadeeq
-</p><p>
+<small>NURUDEEN ABAYOMI SADEEQ</small>
+</div>
+
+</a>
+
+<a href="index.html"
+   class="back">
+← Back Home
+</a>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="container">
+
+<div class="badge">
+📅 DAILY KNOWLEDGE
+</div>
+
+<h1>
+Today in History
+</h1>
+
+<p>
+Important events and notable people connected to today's date.
+</p>
+
+<div class="today-date"
+     id="todayDate">
+Loading date...
+</div>
+
+</div>
+
+</section>
+
+
+<main>
+
+<div class="container">
+
+
+<!-- EVENTS -->
+
+<section class="section">
+
+<div class="section-title">
+
+<span>Historical Events</span>
+
+<h2>
+📜 Events on This Day
+</h2>
+
+</div>
+
+<div id="eventsStatus"
+     class="status">
+
+<strong>
+Loading historical events...
+</strong>
+
+Please wait.
+
+</div>
+
+<div id="events"
+     class="history-grid"
+     style="display:none">
+</div>
+
+</section>
+
+
+<!-- BIRTHS -->
+
+<section class="section">
+
+<div class="section-title">
+
+<span>Notable People</span>
+
+<h2>
+🎂 Born on This Day
+</h2>
+
+</div>
+
+<div id="birthsStatus"
+     class="status">
+
+<strong>
+Loading notable births...
+</strong>
+
+Please wait.
+
+</div>
+
+<div id="births"
+     class="history-grid"
+     style="display:none">
+</div>
+
+</section>
+
+
+<!-- DEATHS -->
+
+<section class="section">
+
+<div class="section-title">
+
+<span>Remembering History</span>
+
+<h2>
+🕯️ Died on This Day
+</h2>
+
+</div>
+
+<div id="deathsStatus"
+     class="status">
+
+<strong>
+Loading notable deaths...
+</strong>
+
+Please wait.
+
+</div>
+
+<div id="deaths"
+     class="history-grid"
+     style="display:none">
+</div>
+
+</section>
+
+
+<!-- CANDIDATE -->
+
+<section>
+
+<div class="candidate-box">
+
+<img src="assets/Hon Nurudeen Abayomi Sadeeq.jpg"
+     alt="Hon. Nurudeen Abayomi Sadeeq">
+
+<div>
+
+<h2>
+IMOLE 2027
+</h2>
+
+<p>
+Hon. Nurudeen Abayomi Sadeeq —
+Nigeria Democratic Congress, Ojo Constituency II.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<strong>IMOLE 2027</strong>
+<br>
+
+Hon. Nurudeen Abayomi Sadeeq Campaign
+<br>
+
 Nigeria Democratic Congress (NDC) |
 Ojo Constituency II
-</p><p class="source">
-Historical information provided through Wikimedia/Wikipedia.
-</p></footer><script>
 
-/*
-=========================================================
-IMOLE 2027
-TODAY IN HISTORY
-AUTOMATIC DAILY HISTORY SCRIPT
-=========================================================
-*/
+<br><br>
 
-const eventsContainer =
-    document.getElementById("events");
+© 2026 All Rights Reserved.
 
-const birthsContainer =
-    document.getElementById("births");
+</footer>
 
-const deathsContainer =
-    document.getElementById("deaths");
 
-const dateContainer =
-    document.getElementById("todayDate");
+<script src="today-history.js"></script>
 
-
-/*
----------------------------------------------------------
-GET TODAY'S DATE
----------------------------------------------------------
-*/
-
-const now = new Date();
-
-const month =
-    String(now.getMonth() + 1).padStart(2,"0");
-
-const day =
-    String(now.getDate()).padStart(2,"0");
-
-
-const formattedDate =
-    now.toLocaleDateString("en-NG",{
-        weekday:"long",
-        year:"numeric",
-        month:"long",
-        day:"numeric"
-    });
-
-
-dateContainer.textContent =
-    formattedDate;
-
-
-/*
----------------------------------------------------------
-WIKIMEDIA ON THIS DAY API
----------------------------------------------------------
-*/
-
-const API_URL =
-    `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/${month}/${day}`;
-
-
-/*
----------------------------------------------------------
-ESCAPE HTML
----------------------------------------------------------
-*/
-
-function escapeHTML(text){
-
-    if(!text) return "";
-
-    return text
-        .replace(/&/g,"&amp;")
-        .replace(/</g,"&lt;")
-        .replace(/>/g,"&gt;")
-        .replace(/"/g,"&quot;")
-        .replace(/'/g,"&#039;");
-}
-
-
-/*
----------------------------------------------------------
-CREATE CARD
----------------------------------------------------------
-*/
-
-function createCard(item){
-
-    const year =
-        escapeHTML(item.year || "");
-
-    const text =
-        escapeHTML(
-            item.text ||
-            item.extract ||
-            item.description ||
-            "Historical information"
-        );
-
-    let link = "";
-
-    if(item.pages && item.pages.length > 0){
-
-        const page =
-            item.pages[0];
-
-        if(page.content_urls &&
-           page.content_urls.desktop &&
-           page.content_urls.desktop.page){
-
-            link =
-                page.content_urls.desktop.page;
-
-        }else if(page.title){
-
-            link =
-                "https://en.wikipedia.org/wiki/" +
-                encodeURIComponent(page.title);
-
-        }
-
-    }
-
-    return `
-
-        <article class="history-card">
-
-            <span class="year">
-                ${year}
-            </span>
-
-            <p>
-                ${text}
-            </p>
-
-            ${
-                link
-                ?
-                `<a href="${link}"
-                    target="_blank"
-                    rel="noopener">
-                    Read more →
-                 </a>`
-                :
-                ""
-            }
-
-        </article>
-
-    `;
-
-}
-
-
-/*
----------------------------------------------------------
-DISPLAY DATA
----------------------------------------------------------
-*/
-
-function displayItems(container,items,limit=9){
-
-    if(!items || items.length === 0){
-
-        container.innerHTML = `
-
-            <div class="empty">
-
-                No historical information
-                is available for this category today.
-
-            </div>
-
-        `;
-
-        return;
-
-    }
-
-
-    const selected =
-        items.slice(0,limit);
-
-
-    container.innerHTML =
-        selected.map(createCard).join("");
-
-}
-
-
-/*
----------------------------------------------------------
-ERROR DISPLAY
----------------------------------------------------------
-*/
-
-function showError(){
-
-    const message = `
-
-        <div class="error">
-
-            <strong>
-                Today's history could not be loaded.
-            </strong>
-
-            <br><br>
-
-            Please check your internet connection
-            and refresh the page.
-
-        </div>
-
-    `;
-
-    eventsContainer.innerHTML = message;
-
-    birthsContainer.innerHTML = message;
-
-    deathsContainer.innerHTML = message;
-
-}
-
-
-/*
----------------------------------------------------------
-LOAD HISTORY
----------------------------------------------------------
-*/
-
-async function loadHistory(){
-
-    try{
-
-        const response =
-            await fetch(API_URL,{
-                headers:{
-                    "Accept":"application/json"
-                }
-            });
-
-
-        if(!response.ok){
-
-            throw new Error(
-                "History service unavailable"
-            );
-
-        }
-
-
-        const data =
-            await response.json();
-
-
-        /*
-        -------------------------------------------------
-        DISPLAY EVENTS
-        -------------------------------------------------
-        */
-
-        displayItems(
-            eventsContainer,
-            data.events,
-            9
-        );
-
-
-        /*
-        -------------------------------------------------
-        DISPLAY BIRTHS
-        -------------------------------------------------
-        */
-
-        displayItems(
-            birthsContainer,
-            data.births,
-            6
-        );
-
-
-        /*
-        -------------------------------------------------
-        DISPLAY DEATHS
-        -------------------------------------------------
-        */
-
-        displayItems(
-            deathsContainer,
-            data.deaths,
-            6
-        );
-
-
-    }catch(error){
-
-        console.error(
-            "Today in History error:",
-            error
-        );
-
-        showError();
-
-    }
-
-}
-
-
-/*
----------------------------------------------------------
-START
----------------------------------------------------------
-*/
-
-loadHistory();
-
-
-/*
----------------------------------------------------------
-AUTOMATIC MIDNIGHT REFRESH
----------------------------------------------------------
-*/
-
-function scheduleMidnightRefresh(){
-
-    const current =
-        new Date();
-
-    const tomorrow =
-        new Date(current);
-
-    tomorrow.setDate(
-        current.getDate() + 1
-    );
-
-    tomorrow.setHours(
-        0,0,5,0
-    );
-
-    const milliseconds =
-        tomorrow - current;
-
-
-    setTimeout(()=>{
-
-        location.reload();
-
-    },milliseconds);
-
-}
-
-
-scheduleMidnightRefresh();
-
-
-</script></body>
+</body>
 </html>
