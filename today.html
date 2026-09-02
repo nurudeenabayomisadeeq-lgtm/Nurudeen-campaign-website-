@@ -1,366 +1,1409 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 
 <meta name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      content="width=device-width,
+               initial-scale=1.0,
+               viewport-fit=cover">
 
-<title>Today in History | IMOLE 2027</title>
+<title>
+Today in History | IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq
+</title>
 
 <meta name="description"
-      content="Discover historical events, notable births and notable deaths from today's date. IMOLE 2027.">
+      content="Today in History and On This Day in Nigeria — automatically updated historical events, notable births and deaths. IMOLE 2027.">
+
+<meta name="keywords"
+      content="Today in History, Nigeria History, On This Day Nigeria, IMOLE 2027, Nurudeen Abayomi Sadeeq, Ojo Constituency II">
 
 <meta name="theme-color"
       content="#063b2d">
 
+<meta property="og:title"
+      content="Today in History | IMOLE 2027">
+
+<meta property="og:description"
+      content="Discover important historical events and Nigerian history that happened on this date.">
+
+<meta property="og:image"
+      content="assets/Hon Nurudeen Abayomi Sadeeq.jpg">
+
 <link rel="icon"
-      type="image/jpeg"
       href="assets/IMG-20260728-WA0032.jpg">
+
+<link rel="manifest"
+      href="manifest.json">
 
 <style>
 
-:root{
-  --green:#063b2d;
-  --green2:#0a5942;
-  --green3:#0d7254;
-  --gold:#d6a62e;
-  --gold2:#f1c84b;
-  --light:#f4f8f6;
-  --white:#fff;
-  --dark:#10231d;
-  --text:#30433c;
-  --muted:#6b7d75;
-  --shadow:0 12px 35px rgba(0,0,0,.10);
-  --shadow2:0 20px 55px rgba(0,0,0,.15);
+:root {
+
+    --green:#063b2d;
+    --green2:#0a5942;
+    --green3:#0d7254;
+
+    --gold:#d6a62e;
+    --gold2:#f1c84b;
+
+    --light:#f4f8f6;
+    --white:#ffffff;
+
+    --dark:#10231d;
+    --text:#30433c;
+    --muted:#6b7d75;
+
+    --danger:#c62828;
+
+    --shadow:
+        0 12px 30px rgba(0,0,0,.08);
+
+    --shadow2:
+        0 20px 45px rgba(0,0,0,.13);
+
+    --radius:20px;
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+* {
+    box-sizing:border-box;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+    scroll-behavior:smooth;
 }
 
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--light);
-  color:var(--text);
-  line-height:1.6;
+body {
+
+    margin:0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--light);
+
+    color:
+        var(--text);
+
+    line-height:
+        1.6;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
+a {
+    color:inherit;
+    text-decoration:none;
 }
 
-.container{
-  width:min(1150px,92%);
-  margin:auto;
+img {
+    max-width:100%;
 }
 
-/* HEADER */
+/* =========================================================
+   TOP BAR
+   ========================================================= */
 
-header{
-  background:var(--green);
-  color:#fff;
-  box-shadow:0 5px 20px rgba(0,0,0,.15);
+.topbar {
+
+    background:
+        var(--green);
+
+    color:
+        var(--white);
+
+    text-align:
+        center;
+
+    padding:
+        9px 15px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .8px;
 }
 
-.nav{
-  min-height:75px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+
+    background:
+        rgba(255,255,255,.97);
+
+    position:
+        sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:
+        0 4px 18px rgba(0,0,0,.07);
+
+    backdrop-filter:
+        blur(12px);
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
+.nav-container {
+
+    max-width:
+        1200px;
+
+    margin:
+        auto;
+
+    min-height:
+        72px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    padding:
+        10px 18px;
 }
 
-.brand img{
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  object-fit:cover;
-  border:2px solid var(--gold);
+.brand {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    font-weight:
+        900;
+
+    color:
+        var(--green);
+
+    white-space:
+        nowrap;
 }
 
-.brand strong{
-  display:block;
-  font-size:17px;
+.brand img {
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        50%;
+
+    border:
+        2px solid var(--gold);
 }
 
-.brand small{
-  display:block;
-  color:#cde0d8;
-  font-size:10px;
-  font-weight:700;
+.brand-text {
+
+    line-height:
+        1.1;
 }
 
-.back{
-  background:var(--gold);
-  color:var(--dark);
-  padding:10px 15px;
-  border-radius:9px;
-  font-weight:900;
-  font-size:13px;
+.brand-text strong {
+
+    display:
+        block;
+
+    font-size:
+        17px;
 }
 
-/* HERO */
+.brand-text small {
 
-.hero{
-  background:
-    linear-gradient(135deg,
-      rgba(6,59,45,.98),
-      rgba(10,89,66,.94));
-  color:#fff;
-  padding:75px 0;
-  text-align:center;
+    color:
+        var(--gold);
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
 }
 
-.hero .badge{
-  display:inline-block;
-  color:var(--gold2);
-  border:1px solid rgba(241,200,75,.6);
-  padding:7px 15px;
-  border-radius:50px;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:1px;
-  margin-bottom:15px;
+.nav-links {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        4px;
+
+    flex-wrap:
+        wrap;
+
+    justify-content:
+        flex-end;
 }
 
-.hero h1{
-  font-size:clamp(38px,7vw,70px);
-  line-height:1.05;
-  margin-bottom:15px;
+.nav-links a {
+
+    padding:
+        8px 10px;
+
+    border-radius:
+        10px;
+
+    color:
+        var(--text);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
 }
 
-.hero p{
-  color:#dcece5;
-  max-width:700px;
-  margin:auto;
+.nav-links a:hover {
+
+    background:
+        var(--light);
+
+    color:
+        var(--green);
 }
 
-.today-date{
-  margin:22px auto 0;
-  background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.18);
-  padding:12px 18px;
-  border-radius:12px;
-  width:max-content;
-  max-width:95%;
-  font-weight:900;
+.nav-links a.active {
+
+    background:
+        var(--green);
+
+    color:
+        var(--white);
 }
 
-/* MAIN */
+/* =========================================================
+   HERO
+   ========================================================= */
 
-main{
-  padding:60px 0;
+.hero {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--green2)
+        );
+
+    color:
+        var(--white);
+
+    padding:
+        75px 20px 85px;
+
+    text-align:
+        center;
 }
 
-.section{
-  margin-bottom:60px;
+.hero::before {
+
+    content:"";
+
+    position:
+        absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(241,200,75,.22),
+            transparent 35%
+        );
+
+    pointer-events:
+        none;
 }
 
-.section-title{
-  text-align:center;
-  margin-bottom:25px;
+.hero-inner {
+
+    position:
+        relative;
+
+    max-width:
+        900px;
+
+    margin:
+        auto;
 }
 
-.section-title span{
-  color:var(--green3);
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:11px;
-  font-weight:900;
+.hero-badge {
+
+    display:
+        inline-block;
+
+    background:
+        var(--gold);
+
+    color:
+        var(--green);
+
+    padding:
+        8px 15px;
+
+    border-radius:
+        999px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
+
+    margin-bottom:
+        16px;
 }
 
-.section-title h2{
-  color:var(--green);
-  font-size:32px;
-  margin-top:5px;
+.hero h1 {
+
+    margin:
+        0 0 12px;
+
+    font-size:
+        clamp(34px,7vw,68px);
+
+    line-height:
+        1.05;
+
+    font-weight:
+        950;
 }
 
-/* CARDS */
+.hero h1 span {
 
-.history-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+    color:
+        var(--gold2);
 }
 
-.history-card{
-  background:#fff;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-  border:1px solid #e2ebe7;
-  transition:.2s;
+.hero p {
+
+    max-width:
+        720px;
+
+    margin:
+        0 auto;
+
+    font-size:
+        clamp(15px,2vw,19px);
+
+    opacity:
+        .92;
 }
 
-.history-card:hover{
-  transform:translateY(-5px);
-  box-shadow:var(--shadow2);
+.hero-date {
+
+    margin-top:
+        25px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    background:
+        rgba(255,255,255,.12);
+
+    border:
+        1px solid rgba(255,255,255,.18);
+
+    padding:
+        11px 17px;
+
+    border-radius:
+        999px;
+
+    font-weight:
+        800;
 }
 
-.history-image{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  background:#dfe9e4;
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main {
+
+    max-width:
+        1200px;
+
+    margin:
+        auto;
+
+    padding:
+        45px 18px 70px;
 }
 
-.history-body{
-  padding:18px;
+.section {
+
+    margin-bottom:
+        55px;
 }
 
-.year{
-  display:inline-block;
-  background:var(--gold);
-  color:var(--dark);
-  font-size:12px;
-  font-weight:900;
-  padding:4px 9px;
-  border-radius:20px;
-  margin-bottom:10px;
+.section-heading {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        25px;
 }
 
-.history-body h3{
-  color:var(--green);
-  font-size:17px;
-  line-height:1.35;
-  margin-bottom:9px;
+.section-heading .eyebrow {
+
+    color:
+        var(--gold);
+
+    font-size:
+        12px;
+
+    font-weight:
+        900;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1.2px;
 }
 
-.history-body p{
-  color:var(--muted);
-  font-size:13px;
+.section-heading h2 {
+
+    margin:
+        5px 0;
+
+    color:
+        var(--green);
+
+    font-size:
+        clamp(25px,5vw,38px);
 }
 
-.read-more{
-  display:inline-block;
-  margin-top:13px;
-  color:var(--green3);
-  font-size:12px;
-  font-weight:900;
+.section-heading p {
+
+    max-width:
+        700px;
+
+    margin:
+        auto;
+
+    color:
+        var(--muted);
 }
 
-.status{
-  background:#fff;
-  border-radius:15px;
-  padding:30px;
-  box-shadow:var(--shadow);
-  text-align:center;
-  color:var(--muted);
+/* =========================================================
+   NIGERIA FEATURE
+   ========================================================= */
+
+.nigeria-banner {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--green2)
+        );
+
+    color:
+        var(--white);
+
+    border-radius:
+        28px;
+
+    padding:
+        30px;
+
+    margin-bottom:
+        30px;
+
+    box-shadow:
+        var(--shadow2);
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
 }
 
-.status strong{
-  display:block;
-  color:var(--green);
-  font-size:18px;
-  margin-bottom:6px;
+.nigeria-banner::after {
+
+    content:"🇳🇬";
+
+    position:
+        absolute;
+
+    right:
+        20px;
+
+    top:
+        10px;
+
+    font-size:
+        90px;
+
+    opacity:
+        .12;
 }
 
-/* CANDIDATE CTA */
+.nigeria-banner-content {
 
-.candidate-box{
-  background:linear-gradient(135deg,var(--green),var(--green2));
-  color:#fff;
-  border-radius:24px;
-  padding:35px;
-  display:flex;
-  align-items:center;
-  gap:25px;
-  box-shadow:var(--shadow2);
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    max-width:
+        760px;
 }
 
-.candidate-box img{
-  width:110px;
-  height:110px;
-  object-fit:cover;
-  border-radius:50%;
-  border:4px solid var(--gold);
+.nigeria-banner h2 {
+
+    margin:
+        0 0 7px;
+
+    font-size:
+        clamp(25px,5vw,38px);
 }
 
-.candidate-box h2{
-  color:var(--gold2);
-  margin-bottom:5px;
+.nigeria-banner p {
+
+    margin:
+        0;
+
+    opacity:
+        .9;
 }
 
-.candidate-box p{
-  color:#dbece5;
+.history-stats {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+    margin-top:
+        20px;
 }
 
-/* FOOTER */
+.history-stat {
 
-footer{
-  background:#071d16;
-  color:#b8cbc3;
-  text-align:center;
-  padding:35px 15px;
-  font-size:12px;
+    min-width:
+        120px;
+
+    padding:
+        12px 18px;
+
+    background:
+        rgba(255,255,255,.1);
+
+    border:
+        1px solid rgba(255,255,255,.14);
+
+    border-radius:
+        14px;
+
+    text-align:
+        center;
 }
 
-footer strong{
-  color:var(--gold2);
+.history-stat strong {
+
+    display:
+        block;
+
+    font-size:
+        24px;
+
+    color:
+        var(--gold2);
 }
 
-/* MOBILE */
+.history-stat span {
 
-@media(max-width:800px){
+    font-size:
+        11px;
 
-  .history-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+    opacity:
+        .85;
 
+    font-weight:
+        700;
 }
 
-@media(max-width:600px){
+/* =========================================================
+   HISTORY GRID
+   ========================================================= */
 
-  .nav{
-    min-height:68px;
-  }
+.history-grid {
 
-  .brand img{
-    width:43px;
-    height:43px;
-  }
+    display:
+        grid;
 
-  .brand strong{
-    font-size:14px;
-  }
+    grid-template-columns:
+        repeat(3,1fr);
 
-  .back{
-    font-size:11px;
-    padding:8px 10px;
-  }
+    gap:
+        20px;
+}
 
-  .hero{
-    padding:60px 0;
-  }
+.history-card {
 
-  .hero h1{
-    font-size:42px;
-  }
+    background:
+        var(--white);
 
-  .history-grid{
-    grid-template-columns:1fr;
-  }
+    border-radius:
+        var(--radius);
 
-  .candidate-box{
-    flex-direction:column;
-    text-align:center;
-  }
+    overflow:
+        hidden;
 
+    box-shadow:
+        var(--shadow);
+
+    border:
+        1px solid rgba(6,59,45,.07);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+    height:
+        100%;
+}
+
+.history-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--shadow2);
+}
+
+.history-image-wrap {
+
+    width:
+        100%;
+
+    height:
+        190px;
+
+    overflow:
+        hidden;
+
+    background:
+        #e9efec;
+}
+
+.history-image {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    display:
+        block;
+}
+
+.history-content {
+
+    padding:
+        20px;
+}
+
+.history-year {
+
+    color:
+        var(--gold);
+
+    font-size:
+        14px;
+
+    font-weight:
+        900;
+
+    margin-bottom:
+        7px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        6px;
+}
+
+.history-card h3 {
+
+    color:
+        var(--green);
+
+    margin:
+        0 0 9px;
+
+    font-size:
+        18px;
+
+    line-height:
+        1.35;
+}
+
+.history-card p {
+
+    color:
+        var(--muted);
+
+    font-size:
+        13px;
+
+    margin:
+        0 0 15px;
+}
+
+.history-link {
+
+    display:
+        inline-block;
+
+    color:
+        var(--green);
+
+    font-size:
+        13px;
+
+    font-weight:
+        900;
+
+    border-bottom:
+        2px solid var(--gold);
+
+    padding-bottom:
+        2px;
+}
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.history-empty {
+
+    background:
+        var(--white);
+
+    border-radius:
+        var(--radius);
+
+    padding:
+        35px 20px;
+
+    text-align:
+        center;
+
+    color:
+        var(--muted);
+
+    box-shadow:
+        var(--shadow);
+
+    grid-column:
+        1/-1;
+}
+
+.history-empty span {
+
+    display:
+        block;
+
+    font-size:
+        35px;
+
+    margin-bottom:
+        8px;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.history-loading {
+
+    grid-column:
+        1/-1;
+
+    background:
+        var(--white);
+
+    border-radius:
+        var(--radius);
+
+    padding:
+        45px 20px;
+
+    text-align:
+        center;
+
+    color:
+        var(--muted);
+
+    box-shadow:
+        var(--shadow);
+}
+
+.history-spinner {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    border:
+        4px solid #dce7e2;
+
+    border-top-color:
+        var(--green);
+
+    border-radius:
+        50%;
+
+    margin:
+        0 auto 15px;
+
+    animation:
+        spin 1s linear infinite;
+}
+
+@keyframes spin {
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.history-error {
+
+    grid-column:
+        1/-1;
+
+    background:
+        var(--white);
+
+    border-radius:
+        var(--radius);
+
+    padding:
+        35px 20px;
+
+    text-align:
+        center;
+
+    box-shadow:
+        var(--shadow);
+
+    border:
+        1px solid #f0d6d6;
+}
+
+.history-error-icon {
+
+    font-size:
+        36px;
+}
+
+.history-error h3 {
+
+    color:
+        var(--green);
+
+    margin:
+        8px 0;
+}
+
+.history-error p {
+
+    color:
+        var(--muted);
+
+    margin:
+        0 auto 15px;
+
+    max-width:
+        500px;
+}
+
+.history-retry {
+
+    border:
+        none;
+
+    background:
+        var(--green);
+
+    color:
+        var(--white);
+
+    padding:
+        11px 18px;
+
+    border-radius:
+        10px;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+}
+
+/* =========================================================
+   CATEGORY HEADER
+   ========================================================= */
+
+.category-header {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-bottom:
+        18px;
+
+    flex-wrap:
+        wrap;
+}
+
+.category-header h3 {
+
+    margin:
+        0;
+
+    color:
+        var(--green);
+
+    font-size:
+        22px;
+}
+
+.category-status {
+
+    color:
+        var(--muted);
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+}
+
+/* =========================================================
+   INFO BOX
+   ========================================================= */
+
+.info-box {
+
+    background:
+        var(--white);
+
+    border-left:
+        5px solid var(--gold);
+
+    padding:
+        20px;
+
+    border-radius:
+        14px;
+
+    box-shadow:
+        var(--shadow);
+
+    margin-top:
+        25px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        13px;
+}
+
+.info-box strong {
+
+    color:
+        var(--green);
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--green2)
+        );
+
+    color:
+        var(--white);
+
+    border-radius:
+        28px;
+
+    padding:
+        40px 25px;
+
+    text-align:
+        center;
+
+    box-shadow:
+        var(--shadow2);
+}
+
+.cta h2 {
+
+    margin:
+        0 0 10px;
+
+    font-size:
+        clamp(25px,5vw,38px);
+}
+
+.cta p {
+
+    max-width:
+        650px;
+
+    margin:
+        0 auto 22px;
+
+    opacity:
+        .9;
+}
+
+.cta-buttons {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    gap:
+        10px;
+
+    flex-wrap:
+        wrap;
+}
+
+.btn {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        12px 18px;
+
+    border-radius:
+        12px;
+
+    font-weight:
+        900;
+
+    font-size:
+        13px;
+}
+
+.btn-gold {
+
+    background:
+        var(--gold2);
+
+    color:
+        var(--green);
+}
+
+.btn-light {
+
+    background:
+        var(--white);
+
+    color:
+        var(--green);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    background:
+        #092b22;
+
+    color:
+        rgba(255,255,255,.8);
+
+    padding:
+        35px 18px;
+
+    text-align:
+        center;
+
+    font-size:
+        13px;
+}
+
+.footer-logo {
+
+    width:
+        55px;
+
+    height:
+        55px;
+
+    border-radius:
+        50%;
+
+    object-fit:
+        cover;
+
+    border:
+        2px solid var(--gold);
+
+    margin-bottom:
+        10px;
+}
+
+footer strong {
+
+    color:
+        var(--white);
+}
+
+.footer-links {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+    margin:
+        18px 0;
+}
+
+.footer-links a {
+
+    color:
+        var(--gold2);
+
+    font-weight:
+        700;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width:900px) {
+
+    .history-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .nav-container {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+    }
+
+    .nav-links {
+
+        width:
+            100%;
+
+        justify-content:
+            flex-start;
+
+        overflow-x:
+            auto;
+
+        flex-wrap:
+            nowrap;
+
+        padding-bottom:
+            4px;
+    }
+
+    .nav-links a {
+
+        flex:
+            0 0 auto;
+    }
+}
+
+@media (max-width:620px) {
+
+    .topbar {
+
+        font-size:
+            10px;
+    }
+
+    .nav-container {
+
+        padding:
+            9px 12px;
+    }
+
+    .brand-text strong {
+
+        font-size:
+            15px;
+    }
+
+    .brand img {
+
+        width:
+            40px;
+
+        height:
+            40px;
+    }
+
+    .hero {
+
+        padding:
+            55px 16px 65px;
+    }
+
+    main {
+
+        padding:
+            35px 13px 55px;
+    }
+
+    .history-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .history-image-wrap {
+
+        height:
+            210px;
+    }
+
+    .nigeria-banner {
+
+        padding:
+            25px 20px;
+    }
+
+    .history-stats {
+
+        justify-content:
+            stretch;
+    }
+
+    .history-stat {
+
+        flex:
+            1 1 100px;
+    }
+
+    .cta {
+
+        padding:
+            32px 18px;
+    }
 }
 
 </style>
@@ -369,182 +1412,294 @@ footer strong{
 
 <body>
 
+<!-- =====================================================
+     TOP BAR
+     ===================================================== -->
+
+<div class="topbar">
+    IMOLE 2027 • SERVICE • DEVELOPMENT • ACCOUNTABILITY
+</div>
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
 
 <header>
 
-<div class="container nav">
+<div class="nav-container">
 
 <a href="index.html"
    class="brand">
 
-<img src="assets/IMG-20260728-WA0032.jpg"
-     alt="NDC logo">
+    <img
+        src="assets/IMG-20260728-WA0032.jpg"
+        alt="Nigeria Democratic Congress">
 
-<div>
-<strong>IMOLE 2027</strong>
-<small>NURUDEEN ABAYOMI SADEEQ</small>
-</div>
+    <div class="brand-text">
+
+        <strong>IMOLE 2027</strong>
+
+        <small>
+            NURudeen ABAYOMI SADEEQ
+        </small>
+
+    </div>
 
 </a>
 
-<a href="index.html"
-   class="back">
-← Back Home
+
+<nav class="nav-links">
+
+<a href="index.html">
+    Home
 </a>
+
+<a href="about.html">
+    About
+</a>
+
+<a href="manifesto.html">
+    Manifesto
+</a>
+
+<a href="polling-units.html">
+    Polling Units
+</a>
+
+<a href="results.html">
+    Results
+</a>
+
+<a href="news.html">
+    News
+</a>
+
+<a href="events.html">
+    Events
+</a>
+
+<a href="gallery.html">
+    Gallery
+</a>
+
+<a href="media.html">
+    Media
+</a>
+
+<a href="today.html"
+   class="active">
+    📅 History
+</a>
+
+<a href="contact.html">
+    Contact
+</a>
+
+<a href="join.html">
+    Join IMOLE
+</a>
+
+</nav>
 
 </div>
 
 </header>
 
 
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
 <section class="hero">
 
-<div class="container">
+<div class="hero-inner">
 
-<div class="badge">
-📅 DAILY KNOWLEDGE
+<div class="hero-badge">
+    📚 DAILY HISTORY
 </div>
 
 <h1>
-Today in History
+    Today in <span>History</span>
 </h1>
 
 <p>
-Important events and notable people connected to today's date.
+    Discover important events, notable people
+    and Nigerian historical moments connected
+    to this date.
 </p>
 
-<div class="today-date"
-     id="todayDate">
-Loading date...
+<div class="hero-date">
+
+    📅
+
+    <span id="today-history-date">
+        Loading date...
+    </span>
+
 </div>
 
 </div>
 
 </section>
 
+
+<!-- =====================================================
+     MAIN
+     ===================================================== -->
 
 <main>
 
-<div class="container">
 
-
-<!-- EVENTS -->
-
-<section class="section">
-
-<div class="section-title">
-
-<span>Historical Events</span>
-
-<h2>
-📜 Events on This Day
-</h2>
-
-</div>
-
-<div id="eventsStatus"
-     class="status">
-
-<strong>
-Loading historical events...
-</strong>
-
-Please wait.
-
-</div>
-
-<div id="events"
-     class="history-grid"
-     style="display:none">
-</div>
-
-</section>
-
-
-<!-- BIRTHS -->
+<!-- =====================================================
+     NIGERIA SECTION
+     ===================================================== -->
 
 <section class="section">
 
-<div class="section-title">
+<div class="nigeria-banner">
 
-<span>Notable People</span>
-
-<h2>
-🎂 Born on This Day
-</h2>
-
-</div>
-
-<div id="birthsStatus"
-     class="status">
-
-<strong>
-Loading notable births...
-</strong>
-
-Please wait.
-
-</div>
-
-<div id="births"
-     class="history-grid"
-     style="display:none">
-</div>
-
-</section>
-
-
-<!-- DEATHS -->
-
-<section class="section">
-
-<div class="section-title">
-
-<span>Remembering History</span>
+<div class="nigeria-banner-content">
 
 <h2>
-🕯️ Died on This Day
-</h2>
-
-</div>
-
-<div id="deathsStatus"
-     class="status">
-
-<strong>
-Loading notable deaths...
-</strong>
-
-Please wait.
-
-</div>
-
-<div id="deaths"
-     class="history-grid"
-     style="display:none">
-</div>
-
-</section>
-
-
-<!-- CANDIDATE -->
-
-<section>
-
-<div class="candidate-box">
-
-<img src="assets/Hon Nurudeen Abayomi Sadeeq.jpg"
-     alt="Hon. Nurudeen Abayomi Sadeeq">
-
-<div>
-
-<h2>
-IMOLE 2027
+    🇳🇬 On This Day in Nigeria
 </h2>
 
 <p>
-Hon. Nurudeen Abayomi Sadeeq —
-Nigeria Democratic Congress, Ojo Constituency II.
+    Explore historical events and notable people
+    connected to Nigeria and its regions that
+    happened on this date in history.
+</p>
+
+<div class="history-stats">
+
+<div class="history-stat">
+
+<strong id="nigeria-history-count">
+    —
+</strong>
+
+<span>
+    Nigerian Entries
+</span>
+
+</div>
+
+<div class="history-stat">
+
+<strong>
+    📅
+</strong>
+
+<span id="nigeria-history-date">
+    Today's Date
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category-header">
+
+<h3>
+    🇳🇬 Nigerian History
+</h3>
+
+<span
+    class="category-status"
+    id="nigeria-history-status">
+</span>
+
+</div>
+
+
+<div
+    id="nigeria-history"
+    class="history-grid">
+
+<div class="history-loading">
+
+<div class="history-spinner"></div>
+
+<p>
+    Loading Nigerian history...
+</p>
+
+</div>
+
+</div>
+
+
+<div class="info-box">
+
+<strong>
+    About this section:
+</strong>
+
+The Nigerian history section automatically
+filters the day's Wikipedia/Wikimedia historical
+feed for entries connected with Nigeria,
+Nigerian cities, regions, historical states,
+peoples and major Nigerian historical events.
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     WORLD EVENTS
+     ===================================================== -->
+
+<section class="section">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+    WORLD HISTORY
+</div>
+
+<h2>
+    🌍 Events That Happened Today
+</h2>
+
+<p>
+    Important historical events recorded for
+    this date across the world.
+</p>
+
+</div>
+
+
+<div class="category-header">
+
+<h3>
+    📜 Historical Events
+</h3>
+
+<span
+    class="category-status"
+    id="world-events-status">
+</span>
+
+</div>
+
+
+<div
+    id="world-events"
+    class="history-grid">
+
+<div class="history-loading">
+
+<div class="history-spinner"></div>
+
+<p>
+    Loading world history...
 </p>
 
 </div>
@@ -553,30 +1708,301 @@ Nigeria Democratic Congress, Ojo Constituency II.
 
 </section>
 
+
+<!-- =====================================================
+     BIRTHS
+     ===================================================== -->
+
+<section class="section">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+    PEOPLE
 </div>
+
+<h2>
+    🎂 Born on This Day
+</h2>
+
+<p>
+    Notable people whose birthdays fall on
+    today's date.
+</p>
+
+</div>
+
+
+<div class="category-header">
+
+<h3>
+    🎂 Notable Births
+</h3>
+
+<span
+    class="category-status"
+    id="world-births-status">
+</span>
+
+</div>
+
+
+<div
+    id="world-births"
+    class="history-grid">
+
+<div class="history-loading">
+
+<div class="history-spinner"></div>
+
+<p>
+    Loading notable births...
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     DEATHS
+     ===================================================== -->
+
+<section class="section">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+    REMEMBERING HISTORY
+</div>
+
+<h2>
+    🕊️ Remembered on This Day
+</h2>
+
+<p>
+    Notable people whose deaths occurred
+    on today's date in history.
+</p>
+
+</div>
+
+
+<div class="category-header">
+
+<h3>
+    🕊️ Notable Deaths
+</h3>
+
+<span
+    class="category-status"
+    id="world-deaths-status">
+</span>
+
+</div>
+
+
+<div
+    id="world-deaths"
+    class="history-grid">
+
+<div class="history-loading">
+
+<div class="history-spinner"></div>
+
+<p>
+    Loading historical records...
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SOURCE NOTE
+     ===================================================== -->
+
+<section class="section">
+
+<div class="info-box">
+
+<strong>
+    📚 Historical Source
+</strong>
+
+<p>
+    Historical information displayed on this page
+    is automatically retrieved from Wikimedia's
+    Wikipedia On This Day service. Entries are
+    provided for educational and informational
+    purposes and link back to Wikipedia where
+    available.
+</p>
+
+<p>
+    The information changes automatically with
+    the calendar date, so the page does not need
+    to be manually updated every day.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+     ===================================================== -->
+
+<section class="section">
+
+<div class="cta">
+
+<h2>
+    Be Part of IMOLE 2027
+</h2>
+
+<p>
+    Service. Development. Accountability.
+    Together, we can build a stronger and more
+    responsive Ojo Constituency II.
+</p>
+
+<div class="cta-buttons">
+
+<a
+    href="join.html"
+    class="btn btn-gold">
+
+    🤝 Join IMOLE
+
+</a>
+
+<a
+    href="manifesto.html"
+    class="btn btn-light">
+
+    📖 Read Our Manifesto
+
+</a>
+
+</div>
+
+</div>
+
+</section>
 
 </main>
 
 
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
 <footer>
 
-<strong>IMOLE 2027</strong>
-<br>
+<img
+    src="assets/IMG-20260728-WA0032.jpg"
+    alt="Nigeria Democratic Congress"
+    class="footer-logo">
 
-Hon. Nurudeen Abayomi Sadeeq Campaign
-<br>
+<div>
 
-Nigeria Democratic Congress (NDC) |
-Ojo Constituency II
+<strong>
+    IMOLE 2027
+</strong>
 
-<br><br>
+</div>
 
-© 2026 All Rights Reserved.
+<div>
+    Hon. Nurudeen Abayomi Sadeeq
+</div>
+
+<div>
+    Nigeria Democratic Congress (NDC)
+    | Ojo Constituency II
+</div>
+
+<div class="footer-links">
+
+<a href="index.html">
+    Home
+</a>
+
+<a href="about.html">
+    About
+</a>
+
+<a href="manifesto.html">
+    Manifesto
+</a>
+
+<a href="polling-units.html">
+    Polling Units
+</a>
+
+<a href="news.html">
+    News
+</a>
+
+<a href="today.html">
+    Today in History
+</a>
+
+<a href="contact.html">
+    Contact
+</a>
+
+</div>
+
+<div>
+    © 2026 Hon. Nurudeen Abayomi Sadeeq Campaign.
+    All Rights Reserved.
+</div>
 
 </footer>
 
 
+<!-- =====================================================
+     HISTORY JAVASCRIPT
+     ===================================================== -->
+
 <script src="today-history.js"></script>
 
+
+<!-- =====================================================
+     IMAGE ERROR PROTECTION
+     ===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "error",
+    function(event) {
+
+        const target =
+            event.target;
+
+        if (
+            target &&
+            target.tagName === "IMG"
+        ) {
+
+            target.style.opacity = "0.75";
+        }
+
+    },
+    true
+);
+
+</script>
+
+
 </body>
+
 </html>
