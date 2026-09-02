@@ -1,0 +1,666 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport"
+content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Today in History | IMOLE 2027</title><meta name="description"
+content="Discover important historical events, notable births and deaths that happened on this day in history.">
+
+<meta name="theme-color" content="#0b7a3b"><style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7f5;
+    color:#222;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,#064d28,#0b7a3b);
+    color:white;
+    padding:18px 15px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.18);
+}
+
+.header-inner{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+    border-radius:50%;
+    background:white;
+    padding:3px;
+}
+
+.brand-text h1{
+    font-size:18px;
+    margin-bottom:2px;
+}
+
+.brand-text span{
+    font-size:12px;
+    opacity:.9;
+}
+
+.back-btn{
+    color:white;
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,.5);
+    padding:8px 13px;
+    border-radius:25px;
+    font-size:13px;
+}
+
+.hero{
+    background:white;
+    text-align:center;
+    padding:45px 20px 35px;
+    border-bottom:1px solid #e4e4e4;
+}
+
+.hero .calendar{
+    font-size:48px;
+    margin-bottom:8px;
+}
+
+.hero h2{
+    color:#064d28;
+    font-size:32px;
+    margin-bottom:7px;
+}
+
+#todayDate{
+    color:#666;
+    font-size:16px;
+}
+
+.container{
+    max-width:1100px;
+    margin:30px auto;
+    padding:0 15px;
+}
+
+.intro{
+    background:#e9f6ee;
+    border-left:5px solid #0b7a3b;
+    padding:16px;
+    margin-bottom:25px;
+    border-radius:8px;
+}
+
+.intro strong{
+    color:#064d28;
+}
+
+.section-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:35px 0 15px;
+    color:#064d28;
+    font-size:23px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:18px;
+}
+
+.history-card{
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+    border:1px solid #e8e8e8;
+    transition:.25s;
+}
+
+.history-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 22px rgba(0,0,0,.12);
+}
+
+.year{
+    display:inline-block;
+    background:#0b7a3b;
+    color:white;
+    padding:4px 10px;
+    border-radius:20px;
+    font-weight:bold;
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.history-card p{
+    color:#444;
+    font-size:15px;
+}
+
+.history-card a{
+    display:inline-block;
+    margin-top:12px;
+    color:#0b7a3b;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.loading{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    color:#666;
+}
+
+.spinner{
+    width:35px;
+    height:35px;
+    border:4px solid #ddd;
+    border-top-color:#0b7a3b;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+    margin:0 auto 12px;
+}
+
+@keyframes spin{
+    to{transform:rotate(360deg);}
+}
+
+.error{
+    background:#fff3f3;
+    border-left:5px solid #d93025;
+    padding:18px;
+    border-radius:8px;
+    color:#8a1c16;
+}
+
+.empty{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    color:#666;
+}
+
+footer{
+    margin-top:50px;
+    background:#06351d;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    font-size:13px;
+}
+
+footer strong{
+    color:#8ff0b5;
+}
+
+.source{
+    margin-top:10px;
+    opacity:.8;
+}
+
+.source a{
+    color:#9af5bd;
+}
+
+@media(max-width:600px){
+
+    .header-inner{
+        align-items:center;
+    }
+
+    .brand img{
+        width:40px;
+        height:40px;
+    }
+
+    .brand-text h1{
+        font-size:15px;
+    }
+
+    .brand-text span{
+        font-size:10px;
+    }
+
+    .back-btn{
+        font-size:11px;
+        padding:7px 10px;
+    }
+
+    .hero{
+        padding:35px 15px 25px;
+    }
+
+    .hero h2{
+        font-size:27px;
+    }
+
+    .hero .calendar{
+        font-size:40px;
+    }
+
+    .section-title{
+        font-size:20px;
+    }
+
+}
+
+</style></head><body><header><div class="header-inner"><div class="brand"><!-- CHANGE THIS PATH IF YOUR CANDIDATE PHOTO HAS A DIFFERENT NAME --><img src="assets/candidate.jpg"
+alt="Hon. Nurudeen Abayomi Sadeeq">
+
+<div class="brand-text">
+<h1>IMOLE 2027</h1>
+<span>Hon. Nurudeen Abayomi Sadeeq</span>
+</div></div><a href="index.html" class="back-btn">
+← Home
+</a></div></header><section class="hero"><div class="calendar">📅</div><h2>Today in History</h2><div id="todayDate">
+Loading today's date...
+</div></section><main class="container"><div class="intro"><strong>Did you know?</strong><br>
+
+Every day has a story.
+
+Explore important events, notable people and moments from history that happened on this date.
+
+</div><!-- EVENTS --><h3 class="section-title">
+🌍 Historical Events
+</h3><div id="events" class="cards"><div class="loading"><div class="spinner"></div>Loading historical events...
+
+</div></div><!-- BIRTHS --><h3 class="section-title">
+🎂 Notable Births
+</h3><div id="births" class="cards"><div class="loading"><div class="spinner"></div>Loading notable births...
+
+</div></div><!-- DEATHS --><h3 class="section-title">
+🕊️ Notable Deaths
+</h3><div id="deaths" class="cards"><div class="loading"><div class="spinner"></div>Loading notable deaths...
+
+</div></div></main><footer><p>
+<strong>IMOLE 2027</strong>
+</p><p>
+Hon. Nurudeen Abayomi Sadeeq
+</p><p>
+Nigeria Democratic Congress (NDC) |
+Ojo Constituency II
+</p><p class="source">
+Historical information provided through Wikimedia/Wikipedia.
+</p></footer><script>
+
+/*
+=========================================================
+IMOLE 2027
+TODAY IN HISTORY
+AUTOMATIC DAILY HISTORY SCRIPT
+=========================================================
+*/
+
+const eventsContainer =
+    document.getElementById("events");
+
+const birthsContainer =
+    document.getElementById("births");
+
+const deathsContainer =
+    document.getElementById("deaths");
+
+const dateContainer =
+    document.getElementById("todayDate");
+
+
+/*
+---------------------------------------------------------
+GET TODAY'S DATE
+---------------------------------------------------------
+*/
+
+const now = new Date();
+
+const month =
+    String(now.getMonth() + 1).padStart(2,"0");
+
+const day =
+    String(now.getDate()).padStart(2,"0");
+
+
+const formattedDate =
+    now.toLocaleDateString("en-NG",{
+        weekday:"long",
+        year:"numeric",
+        month:"long",
+        day:"numeric"
+    });
+
+
+dateContainer.textContent =
+    formattedDate;
+
+
+/*
+---------------------------------------------------------
+WIKIMEDIA ON THIS DAY API
+---------------------------------------------------------
+*/
+
+const API_URL =
+    `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/${month}/${day}`;
+
+
+/*
+---------------------------------------------------------
+ESCAPE HTML
+---------------------------------------------------------
+*/
+
+function escapeHTML(text){
+
+    if(!text) return "";
+
+    return text
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+}
+
+
+/*
+---------------------------------------------------------
+CREATE CARD
+---------------------------------------------------------
+*/
+
+function createCard(item){
+
+    const year =
+        escapeHTML(item.year || "");
+
+    const text =
+        escapeHTML(
+            item.text ||
+            item.extract ||
+            item.description ||
+            "Historical information"
+        );
+
+    let link = "";
+
+    if(item.pages && item.pages.length > 0){
+
+        const page =
+            item.pages[0];
+
+        if(page.content_urls &&
+           page.content_urls.desktop &&
+           page.content_urls.desktop.page){
+
+            link =
+                page.content_urls.desktop.page;
+
+        }else if(page.title){
+
+            link =
+                "https://en.wikipedia.org/wiki/" +
+                encodeURIComponent(page.title);
+
+        }
+
+    }
+
+    return `
+
+        <article class="history-card">
+
+            <span class="year">
+                ${year}
+            </span>
+
+            <p>
+                ${text}
+            </p>
+
+            ${
+                link
+                ?
+                `<a href="${link}"
+                    target="_blank"
+                    rel="noopener">
+                    Read more →
+                 </a>`
+                :
+                ""
+            }
+
+        </article>
+
+    `;
+
+}
+
+
+/*
+---------------------------------------------------------
+DISPLAY DATA
+---------------------------------------------------------
+*/
+
+function displayItems(container,items,limit=9){
+
+    if(!items || items.length === 0){
+
+        container.innerHTML = `
+
+            <div class="empty">
+
+                No historical information
+                is available for this category today.
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    const selected =
+        items.slice(0,limit);
+
+
+    container.innerHTML =
+        selected.map(createCard).join("");
+
+}
+
+
+/*
+---------------------------------------------------------
+ERROR DISPLAY
+---------------------------------------------------------
+*/
+
+function showError(){
+
+    const message = `
+
+        <div class="error">
+
+            <strong>
+                Today's history could not be loaded.
+            </strong>
+
+            <br><br>
+
+            Please check your internet connection
+            and refresh the page.
+
+        </div>
+
+    `;
+
+    eventsContainer.innerHTML = message;
+
+    birthsContainer.innerHTML = message;
+
+    deathsContainer.innerHTML = message;
+
+}
+
+
+/*
+---------------------------------------------------------
+LOAD HISTORY
+---------------------------------------------------------
+*/
+
+async function loadHistory(){
+
+    try{
+
+        const response =
+            await fetch(API_URL,{
+                headers:{
+                    "Accept":"application/json"
+                }
+            });
+
+
+        if(!response.ok){
+
+            throw new Error(
+                "History service unavailable"
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        /*
+        -------------------------------------------------
+        DISPLAY EVENTS
+        -------------------------------------------------
+        */
+
+        displayItems(
+            eventsContainer,
+            data.events,
+            9
+        );
+
+
+        /*
+        -------------------------------------------------
+        DISPLAY BIRTHS
+        -------------------------------------------------
+        */
+
+        displayItems(
+            birthsContainer,
+            data.births,
+            6
+        );
+
+
+        /*
+        -------------------------------------------------
+        DISPLAY DEATHS
+        -------------------------------------------------
+        */
+
+        displayItems(
+            deathsContainer,
+            data.deaths,
+            6
+        );
+
+
+    }catch(error){
+
+        console.error(
+            "Today in History error:",
+            error
+        );
+
+        showError();
+
+    }
+
+}
+
+
+/*
+---------------------------------------------------------
+START
+---------------------------------------------------------
+*/
+
+loadHistory();
+
+
+/*
+---------------------------------------------------------
+AUTOMATIC MIDNIGHT REFRESH
+---------------------------------------------------------
+*/
+
+function scheduleMidnightRefresh(){
+
+    const current =
+        new Date();
+
+    const tomorrow =
+        new Date(current);
+
+    tomorrow.setDate(
+        current.getDate() + 1
+    );
+
+    tomorrow.setHours(
+        0,0,5,0
+    );
+
+    const milliseconds =
+        tomorrow - current;
+
+
+    setTimeout(()=>{
+
+        location.reload();
+
+    },milliseconds);
+
+}
+
+
+scheduleMidnightRefresh();
+
+
+</script></body>
+</html>
