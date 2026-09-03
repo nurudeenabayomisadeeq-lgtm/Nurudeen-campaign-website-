@@ -1,907 +1,1711 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
 
-<meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#063b2d">
+  <meta name="color-scheme" content="light">
 
-<meta name="theme-color" content="#063b2d">
+  <meta name="description"
+        content="Meet the candidates of IMOLE 2027 — Hon. Nurudeen Abayomi Sadeeq and Hon. Seyi Sowunmi. Learn about their vision, values and commitment to Ojo.">
 
-<title>Meet Our Candidates | IMOLE 2027</title>
+  <meta name="keywords"
+        content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Seyi Sowunmi, Ojo, Nigeria Democratic Congress, NDC, Lagos">
 
-<meta name="description"
-      content="Meet the IMOLE 2027 candidates for Ojo Constituency and Ojo Federal Constituency.">
+  <meta name="author"
+        content="IMOLE 2027">
 
-<style>
+  <meta property="og:title"
+        content="Meet Our Candidates | IMOLE 2027">
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+  <meta property="og:description"
+        content="Meet Hon. Nurudeen Abayomi Sadeeq and Hon. Seyi Sowunmi — candidates committed to service, development and accountability.">
 
-html{
-    scroll-behavior:smooth;
-}
+  <meta property="og:type" content="website">
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f4f7f5;
-    color:#17251f;
-    line-height:1.6;
-}
+  <title>Meet Our Candidates | IMOLE 2027</title>
 
-a{
-    text-decoration:none;
-}
+  <style>
+    /* =========================================================
+       IMOLE 2027 — MEET OUR CANDIDATES
+       Self-contained CSS
+       ========================================================= */
 
-/* HEADER */
-
-header{
-    background:#063b2d;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.2);
-}
-
-.navbar{
-    max-width:1200px;
-    margin:auto;
-    min-height:70px;
-    padding:10px 18px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    color:white;
-}
-
-.logo img{
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    object-fit:cover;
-    border:2px solid #d4af37;
-}
-
-.logo strong{
-    display:block;
-    font-size:15px;
-}
-
-.logo small{
-    display:block;
-    color:#f0cf62;
-    font-size:9px;
-    letter-spacing:1px;
-}
-
-.nav{
-    display:flex;
-    gap:5px;
-}
-
-.nav a{
-    color:white;
-    padding:9px 11px;
-    border-radius:8px;
-    font-size:13px;
-    font-weight:bold;
-}
-
-.nav a:hover,
-.nav a.active{
-    background:#d4af37;
-    color:#063b2d;
-}
-
-.menu{
-    display:none;
-    background:none;
-    border:1px solid rgba(255,255,255,.4);
-    color:white;
-    font-size:25px;
-    width:45px;
-    height:45px;
-    border-radius:10px;
-}
-
-/* HERO */
-
-.hero{
-    background:linear-gradient(135deg,#032c21,#063b2d,#07553f);
-    color:white;
-    text-align:center;
-    padding:75px 20px;
-}
-
-.hero small{
-    color:#f0cf62;
-    font-weight:bold;
-    letter-spacing:2px;
-}
-
-.hero h1{
-    font-size:clamp(38px,7vw,65px);
-    margin:12px 0;
-}
-
-.hero h1 span{
-    color:#f0cf62;
-}
-
-.hero p{
-    max-width:700px;
-    margin:auto;
-    color:#d5e1db;
-    font-size:16px;
-}
-
-/* MAIN */
-
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:0 18px;
-}
-
-.section{
-    padding:70px 0;
-}
-
-.title{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.title small{
-    color:#0b6b50;
-    font-weight:bold;
-    letter-spacing:2px;
-}
-
-.title h2{
-    color:#063b2d;
-    font-size:36px;
-    margin:8px 0;
-}
-
-.title p{
-    color:#66746c;
-}
-
-/* CANDIDATES */
-
-.candidates{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:30px;
-}
-
-.card{
-    background:white;
-    border-radius:22px;
-    overflow:hidden;
-    box-shadow:0 12px 35px rgba(0,0,0,.12);
-    border:1px solid #e1e8e3;
-}
-
-.photo{
-    height:430px;
-    background:#063b2d;
-}
-
-.photo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center top;
-}
-
-.content{
-    padding:28px;
-}
-
-.content h3{
-    color:#063b2d;
-    font-size:25px;
-    margin-bottom:5px;
-}
-
-.position{
-    color:#0b6b50;
-    font-weight:bold;
-    font-size:14px;
-    margin-bottom:15px;
-}
-
-.content p{
-    color:#5f6d65;
-    font-size:14px;
-}
-
-.buttons{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-top:22px;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 17px;
-    border-radius:10px;
-    font-weight:bold;
-    font-size:13px;
-}
-
-.green{
-    background:#063b2d;
-    color:white;
-}
-
-.gold{
-    background:#d4af37;
-    color:#17251f;
-}
-
-.green:hover{
-    background:#0b6b50;
-}
-
-.gold:hover{
-    background:#f0cf62;
-}
-
-/* VISION */
-
-.alt{
-    background:#f7f3e7;
-}
-
-.vision{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.vision-card{
-    background:white;
-    padding:25px;
-    border-radius:18px;
-    text-align:center;
-    box-shadow:0 8px 25px rgba(0,0,0,.07);
-    border-top:4px solid #d4af37;
-}
-
-.vision-card .icon{
-    font-size:32px;
-    margin-bottom:8px;
-}
-
-.vision-card h3{
-    color:#063b2d;
-    margin-bottom:8px;
-}
-
-.vision-card p{
-    color:#66746c;
-    font-size:14px;
-}
-
-/* CTA */
-
-.cta{
-    background:#063b2d;
-    color:white;
-    text-align:center;
-    padding:70px 20px;
-}
-
-.cta h2{
-    font-size:38px;
-    margin-bottom:12px;
-}
-
-.cta p{
-    max-width:650px;
-    margin:auto auto 25px;
-    color:#d4dfda;
-}
-
-.cta .btn{
-    margin:5px;
-}
-
-/* FOOTER */
-
-footer{
-    background:#031e17;
-    color:#aebdb5;
-    padding:40px 20px 25px;
-    text-align:center;
-}
-
-footer h3{
-    color:white;
-    margin-bottom:8px;
-}
-
-footer a{
-    color:#aebdb5;
-}
-
-footer a:hover{
-    color:#f0cf62;
-}
-
-.copyright{
-    margin-top:25px;
-    padding-top:18px;
-    border-top:1px solid rgba(255,255,255,.1);
-    font-size:12px;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-    position:fixed;
-    right:18px;
-    bottom:18px;
-    width:56px;
-    height:56px;
-    border-radius:50%;
-    background:#25d366;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:26px;
-    box-shadow:0 8px 25px rgba(0,0,0,.3);
-    z-index:9999;
-}
-
-/* MOBILE */
-
-@media(max-width:850px){
-
-    .nav{
-        display:none;
-        position:absolute;
-        top:70px;
-        left:0;
-        right:0;
-        background:#063b2d;
-        flex-direction:column;
-        padding:10px 15px 18px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .nav.show{
-        display:flex;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .nav a{
-        padding:13px 15px;
+    body {
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      background: #f5f7f5;
+      color: #17352d;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    .menu{
-        display:block;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .candidates{
-        grid-template-columns:1fr;
+    img {
+      display: block;
+      max-width: 100%;
     }
 
-    .vision{
-        grid-template-columns:1fr 1fr;
+    button {
+      font-family: inherit;
     }
 
-}
+    /* =========================================================
+       HEADER
+       ========================================================= */
 
-@media(max-width:550px){
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
 
-    .hero{
-        padding:60px 17px;
+      width: 100%;
+
+      background: rgba(6, 59, 45, 0.98);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+
+      box-shadow: 0 4px 18px rgba(0,0,0,0.12);
     }
 
-    .hero h1{
-        font-size:40px;
+    .nav-container {
+      width: min(1180px, 94%);
+      margin: auto;
+
+      min-height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
     }
 
-    .section{
-        padding:55px 0;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      color: #fff;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+
+      white-space: nowrap;
     }
 
-    .photo{
-        height:390px;
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: #d4af37;
+      color: #063b2d;
+
+      font-size: 17px;
+      font-weight: 900;
+
+      box-shadow:
+        0 0 0 3px rgba(255,255,255,0.08);
     }
 
-    .content{
-        padding:22px;
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+
+      line-height: 1.05;
     }
 
-    .buttons{
-        flex-direction:column;
+    .brand-title {
+      font-size: 17px;
     }
 
-    .buttons .btn{
-        width:100%;
-        text-align:center;
+    .brand-subtitle {
+      color: #e8d99b;
+      font-size: 10px;
+      margin-top: 4px;
+      letter-spacing: 1px;
     }
 
-    .vision{
-        grid-template-columns:1fr;
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      list-style: none;
     }
 
-}
+    .nav-menu a {
+      display: block;
 
-</style>
+      color: #fff;
 
+      padding: 10px 12px;
+      border-radius: 8px;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      transition: 0.2s ease;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      background: #d4af37;
+      color: #063b2d;
+    }
+
+    .menu-button {
+      display: none;
+
+      border: 0;
+      background: transparent;
+      color: #fff;
+
+      font-size: 30px;
+      line-height: 1;
+
+      cursor: pointer;
+
+      padding: 5px;
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .hero {
+      position: relative;
+
+      min-height: 390px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 70px 20px;
+
+      background:
+        linear-gradient(
+          rgba(3, 42, 32, 0.92),
+          rgba(6, 59, 45, 0.96)
+        );
+
+      color: #fff;
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 5px;
+
+      background: #d4af37;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      width: min(850px, 94%);
+      margin: auto;
+    }
+
+    .hero-badge {
+      display: inline-block;
+
+      padding: 8px 16px;
+
+      border: 1px solid rgba(212,175,55,0.65);
+      border-radius: 30px;
+
+      color: #f0dc91;
+
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.05;
+
+      margin-bottom: 18px;
+
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      color: #d4af37;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+
+      color: #e7eee9;
+
+      font-size: clamp(16px, 2.5vw, 20px);
+    }
+
+    /* =========================================================
+       MAIN
+       ========================================================= */
+
+    main {
+      width: 100%;
+    }
+
+    .section {
+      width: min(1180px, 94%);
+      margin: auto;
+
+      padding: 70px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+
+      margin-bottom: 42px;
+    }
+
+    .section-heading .small-title {
+      color: #b58d1d;
+
+      font-size: 13px;
+      font-weight: 900;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      color: #063b2d;
+
+      font-size: clamp(30px, 5vw, 44px);
+      line-height: 1.15;
+
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      max-width: 720px;
+      margin: auto;
+
+      color: #5f6f69;
+      font-size: 16px;
+    }
+
+    /* =========================================================
+       CANDIDATE GRID
+       ========================================================= */
+
+    .candidate-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 30px;
+    }
+
+    .candidate-card {
+      background: #fff;
+
+      border-radius: 22px;
+
+      overflow: hidden;
+
+      border: 1px solid #e1e7e3;
+
+      box-shadow:
+        0 12px 35px rgba(6,59,45,0.09);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .candidate-card:hover {
+      transform: translateY(-6px);
+
+      box-shadow:
+        0 20px 45px rgba(6,59,45,0.15);
+    }
+
+    /* =========================================================
+       CANDIDATE IMAGE
+       ========================================================= */
+
+    .candidate-photo {
+      position: relative;
+
+      width: 100%;
+      height: 420px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #063b2d,
+          #0a5a44
+        );
+
+      overflow: hidden;
+    }
+
+    .candidate-photo img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center top;
+
+      background: #063b2d;
+
+      transition: transform 0.35s ease;
+    }
+
+    .candidate-card:hover .candidate-photo img {
+      transform: scale(1.025);
+    }
+
+    /* Image fallback */
+    .image-fallback {
+      position: absolute;
+      inset: 0;
+
+      display: none;
+
+      align-items: center;
+      justify-content: center;
+
+      flex-direction: column;
+
+      padding: 25px;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #063b2d,
+          #0b634b
+        );
+
+      color: #fff;
+    }
+
+    .image-fallback .fallback-icon {
+      width: 75px;
+      height: 75px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: #d4af37;
+      color: #063b2d;
+
+      font-size: 28px;
+      font-weight: 900;
+
+      margin-bottom: 15px;
+    }
+
+    .image-fallback strong {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .image-fallback small {
+      color: #dce9e3;
+    }
+
+    /* =========================================================
+       CARD CONTENT
+       ========================================================= */
+
+    .candidate-content {
+      padding: 30px;
+    }
+
+    .candidate-role {
+      display: inline-block;
+
+      padding: 6px 11px;
+
+      border-radius: 20px;
+
+      background: #edf5f1;
+      color: #086044;
+
+      font-size: 11px;
+      font-weight: 900;
+
+      letter-spacing: 0.7px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 12px;
+    }
+
+    .candidate-content h3 {
+      color: #063b2d;
+
+      font-size: clamp(24px, 4vw, 31px);
+      line-height: 1.2;
+
+      margin-bottom: 10px;
+    }
+
+    .candidate-content .constituency {
+      color: #b58d1d;
+
+      font-weight: 800;
+
+      margin-bottom: 15px;
+    }
+
+    .candidate-content p {
+      color: #5c6b65;
+
+      margin-bottom: 20px;
+    }
+
+    .candidate-values {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-bottom: 24px;
+    }
+
+    .candidate-values span {
+      padding: 6px 9px;
+
+      background: #f5f7f5;
+
+      border: 1px solid #e0e6e2;
+
+      border-radius: 7px;
+
+      font-size: 11px;
+      font-weight: 700;
+
+      color: #31554a;
+    }
+
+    .profile-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 48px;
+
+      padding: 0 20px;
+
+      border-radius: 10px;
+
+      background: #063b2d;
+      color: #fff;
+
+      font-weight: 900;
+
+      transition: 0.2s ease;
+    }
+
+    .profile-button:hover {
+      background: #d4af37;
+      color: #063b2d;
+    }
+
+    /* =========================================================
+       VISION
+       ========================================================= */
+
+    .vision-section {
+      background: #fff;
+
+      width: 100%;
+    }
+
+    .vision-box {
+      width: min(900px, 94%);
+      margin: auto;
+
+      padding: 45px 35px;
+
+      text-align: center;
+
+      border-radius: 22px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #063b2d,
+          #0b5a45
+        );
+
+      color: #fff;
+
+      box-shadow:
+        0 15px 40px rgba(6,59,45,0.15);
+    }
+
+    .vision-box .icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .vision-box h2 {
+      color: #d4af37;
+
+      font-size: clamp(27px, 5vw, 38px);
+
+      margin-bottom: 15px;
+    }
+
+    .vision-box p {
+      color: #e5eee9;
+
+      font-size: 17px;
+
+      max-width: 720px;
+
+      margin: auto;
+    }
+
+    /* =========================================================
+       VALUES
+       ========================================================= */
+
+    .values-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+      gap: 16px;
+    }
+
+    .value-card {
+      background: #fff;
+
+      padding: 25px 18px;
+
+      text-align: center;
+
+      border: 1px solid #e2e8e4;
+
+      border-radius: 15px;
+
+      box-shadow:
+        0 7px 20px rgba(6,59,45,0.05);
+    }
+
+    .value-card .value-icon {
+      width: 48px;
+      height: 48px;
+
+      margin: 0 auto 13px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: #edf5f1;
+      color: #063b2d;
+
+      font-size: 20px;
+    }
+
+    .value-card h3 {
+      color: #063b2d;
+      font-size: 16px;
+    }
+
+    /* =========================================================
+       CTA
+       ========================================================= */
+
+    .cta {
+      width: min(1180px, 94%);
+      margin: 0 auto 70px;
+
+      padding: 55px 30px;
+
+      text-align: center;
+
+      border-radius: 24px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #d4af37,
+          #e7c85f
+        );
+
+      color: #063b2d;
+
+      box-shadow:
+        0 15px 35px rgba(181,141,29,0.18);
+    }
+
+    .cta h2 {
+      font-size: clamp(28px, 5vw, 42px);
+
+      line-height: 1.15;
+
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 680px;
+
+      margin: auto auto 24px;
+
+      font-size: 16px;
+
+      color: #214b3f;
+    }
+
+    .cta-buttons {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .cta-button {
+      min-height: 48px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0 20px;
+
+      border-radius: 10px;
+
+      background: #063b2d;
+      color: #fff;
+
+      font-weight: 900;
+    }
+
+    .cta-button.secondary {
+      background: #fff;
+      color: #063b2d;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      background: #032d23;
+      color: #cfe0d9;
+
+      padding: 45px 20px 25px;
+
+      text-align: center;
+    }
+
+    .footer-brand {
+      color: #fff;
+
+      font-size: 24px;
+      font-weight: 900;
+
+      margin-bottom: 8px;
+    }
+
+    .footer-slogan {
+      color: #d4af37;
+
+      font-weight: 800;
+
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 10px 18px;
+
+      margin-bottom: 25px;
+    }
+
+    .footer-links a {
+      color: #cfe0d9;
+
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: #d4af37;
+    }
+
+    .copyright {
+      padding-top: 20px;
+
+      border-top:
+        1px solid rgba(255,255,255,0.1);
+
+      font-size: 12px;
+
+      color: #9eb5ac;
+    }
+
+    /* =========================================================
+       WHATSAPP
+       ========================================================= */
+
+    .whatsapp {
+      position: fixed;
+
+      right: 18px;
+      bottom: 18px;
+
+      z-index: 1500;
+
+      width: 58px;
+      height: 58px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: #25d366;
+      color: #fff;
+
+      font-size: 25px;
+      font-weight: 900;
+
+      box-shadow:
+        0 8px 22px rgba(0,0,0,0.2);
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.06);
+    }
+
+    /* =========================================================
+       BACK TO TOP
+       ========================================================= */
+
+    .back-top {
+      position: fixed;
+
+      right: 20px;
+      bottom: 88px;
+
+      z-index: 1400;
+
+      width: 42px;
+      height: 42px;
+
+      display: none;
+      place-items: center;
+
+      border: 0;
+      border-radius: 50%;
+
+      background: #063b2d;
+      color: #fff;
+
+      font-size: 20px;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 5px 15px rgba(0,0,0,0.18);
+    }
+
+    .back-top.show {
+      display: grid;
+    }
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .nav-menu {
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        top: 72px;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 12px;
+
+        background: #063b2d;
+
+        border-top:
+          1px solid rgba(212,175,55,0.25);
+
+        box-shadow:
+          0 15px 25px rgba(0,0,0,0.15);
+      }
+
+      .nav-menu.open {
+        display: flex;
+      }
+
+      .nav-menu a {
+        padding: 13px 15px;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .candidate-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .values-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .nav-container {
+        min-height: 65px;
+      }
+
+      .brand-mark {
+        width: 40px;
+        height: 40px;
+      }
+
+      .brand-title {
+        font-size: 15px;
+      }
+
+      .brand-subtitle {
+        font-size: 8px;
+      }
+
+      .nav-menu {
+        top: 65px;
+      }
+
+      .hero {
+        min-height: 350px;
+
+        padding:
+          55px 18px;
+      }
+
+      .section {
+        padding: 50px 0;
+      }
+
+      .candidate-photo {
+        height: 370px;
+      }
+
+      .candidate-content {
+        padding: 24px 20px;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+      }
+
+      .value-card {
+        padding: 20px 10px;
+      }
+
+      .vision-box {
+        padding: 35px 22px;
+      }
+
+      .cta {
+        padding: 40px 20px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .cta-button {
+        width: 100%;
+      }
+
+      .whatsapp {
+        right: 14px;
+        bottom: 14px;
+      }
+
+      .back-top {
+        right: 18px;
+        bottom: 82px;
+      }
+    }
+
+    @media (max-width: 380px) {
+
+      .candidate-photo {
+        height: 320px;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
 
+  <!-- =======================================================
+       HEADER
+       ======================================================= -->
 
-<!-- HEADER -->
+  <header class="header">
 
-<header>
+    <div class="nav-container">
 
-<div class="navbar">
+      <a href="index.html" class="brand">
 
-<a href="index.html" class="logo">
+        <div class="brand-mark">
+          IM
+        </div>
 
-<img src="assets/IMG-20260710-WA0004.jpg"
-     alt="IMOLE 2027">
+        <div class="brand-text">
 
-<div>
-<strong>IMOLE 2027</strong>
-<small>SERVICE • DEVELOPMENT • ACCOUNTABILITY</small>
-</div>
+          <div class="brand-title">
+            IMOLE 2027
+          </div>
 
-</a>
+          <div class="brand-subtitle">
+            WE SHINE • WE WIN
+          </div>
 
+        </div>
 
-<button class="menu"
+      </a>
+
+      <button
+        class="menu-button"
         id="menuButton"
-        type="button">
-☰
-</button>
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+
+        ☰
 
+      </button>
 
-<nav class="nav" id="navigation">
+      <nav>
 
-<a href="index.html">Home</a>
+        <ul class="nav-menu" id="navMenu">
 
-<a href="about.html" class="active">
-Meet Candidates
-</a>
+          <li>
+            <a href="index.html">
+              Home
+            </a>
+          </li>
 
-<a href="nurudeen.html">
-Nurudeen
-</a>
+          <li>
+            <a href="about.html" class="active">
+              Candidates
+            </a>
+          </li>
 
-<a href="seyi-sowunmi.html">
-Seyi Sowunmi
-</a>
+          <li>
+            <a href="manifesto.html">
+              Manifesto
+            </a>
+          </li>
 
-<a href="manifesto.html">
-Manifesto
-</a>
+          <li>
+            <a href="polling-units.html">
+              Polling Units
+            </a>
+          </li>
 
-<a href="polling-units.html">
-Polling Units
-</a>
+          <li>
+            <a href="results.html">
+              Results
+            </a>
+          </li>
 
-<a href="results.html">
-Results
-</a>
+          <li>
+            <a href="news.html">
+              News
+            </a>
+          </li>
 
-<a href="news.html">
-News
-</a>
+          <li>
+            <a href="events.html">
+              Events
+            </a>
+          </li>
 
-<a href="events.html">
-Events
-</a>
+          <li>
+            <a href="gallery.html">
+              Gallery
+            </a>
+          </li>
 
-<a href="gallery.html">
-Gallery
-</a>
+          <li>
+            <a href="contact.html">
+              Contact
+            </a>
+          </li>
 
-<a href="contact.html">
-Contact
-</a>
+          <li>
+            <a href="join.html">
+              Join Us
+            </a>
+          </li>
 
-<a href="join.html">
-Join Us
-</a>
+        </ul>
 
-</nav>
+      </nav>
 
-</div>
+    </div>
 
-</header>
+  </header>
 
 
-<!-- HERO -->
+  <!-- =======================================================
+       HERO
+       ======================================================= -->
 
-<section class="hero">
+  <section class="hero">
 
-<small>IMOLE 2027</small>
+    <div class="hero-content">
 
-<h1>
-Meet Our <span>Candidates</span>
-</h1>
+      <div class="hero-badge">
+        IMOLE 2027 • NIGERIA DEMOCRATIC CONGRESS
+      </div>
 
-<p>
-Leadership built around service, development,
-accountability and the people of Ojo.
-</p>
+      <h1>
+        Meet Our <span>Candidates</span>
+      </h1>
 
-</section>
+      <p>
+        Meet the leaders presenting a vision of
+        service, development, accountability and
+        meaningful representation for the people
+        of Ojo.
+      </p>
 
+    </div>
 
-<!-- CANDIDATES -->
+  </section>
 
-<section class="section">
 
-<div class="container">
+  <main>
 
-<div class="title">
+    <!-- =====================================================
+         CANDIDATES
+         ===================================================== -->
 
-<small>OUR CANDIDATES</small>
+    <section class="section">
 
-<h2>Leadership For Ojo</h2>
+      <div class="section-heading">
 
-<p>
-Meet the candidates representing the IMOLE 2027 vision.
-</p>
+        <div class="small-title">
+          Leadership
+        </div>
 
-</div>
+        <h2>
+          Our Candidates
+        </h2>
 
+        <p>
+          Learn more about the candidates of the
+          IMOLE 2027 movement and their commitment
+          to the people.
+        </p>
 
-<div class="candidates">
+      </div>
 
 
-<!-- NURUDEEN -->
+      <div class="candidate-grid">
 
-<div class="card">
 
-<div class="photo">
+        <!-- =================================================
+             NURUDEEN
+             ================================================= -->
 
-<img src="assets/IMG-20260710-WA0004.jpg"
-     alt="Hon. Nurudeen Abayomi Sadeeq"
-     loading="lazy">
+        <article class="candidate-card">
 
-</div>
+          <div class="candidate-photo">
 
-<div class="content">
+            <img
+              src="assets/Hon Nurudeen Abayomi Sadeeq.jpg"
+              alt="Hon. Nurudeen Abayomi Sadeeq"
+              loading="eager"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
 
-<h3>
-Hon. Nurudeen Abayomi Sadeeq
-</h3>
+            <div class="image-fallback">
 
-<div class="position">
-Lagos State House of Assembly • Ojo Constituency II
-</div>
+              <div class="fallback-icon">
+                NAS
+              </div>
 
-<p>
-A son of Ojo Constituency II committed to accessible
-representation, community development, accountability
-and practical solutions to the needs of constituents.
-</p>
+              <strong>
+                Hon. Nurudeen Abayomi Sadeeq
+              </strong>
 
-<div class="buttons">
+              <small>
+                Candidate — Ojo Constituency II
+              </small>
 
-<a href="nurudeen.html"
-   class="btn green">
-View Full Profile →
-</a>
+            </div>
 
-<a href="https://wa.me/2348033002235"
-   target="_blank"
-   rel="noopener"
-   class="btn gold">
-WhatsApp
-</a>
+          </div>
 
-</div>
 
-</div>
+          <div class="candidate-content">
 
-</div>
+            <span class="candidate-role">
+              Lagos State House of Assembly
+            </span>
 
+            <h3>
+              Hon. Nurudeen Abayomi Sadeeq
+            </h3>
 
-<!-- SEYI -->
+            <div class="constituency">
+              Ojo Constituency II
+            </div>
 
-<div class="card">
+            <p>
+              A son of Ojo Constituency II,
+              committed to accessible leadership,
+              community development and responsible
+              representation.
+            </p>
 
-<div class="photo">
+            <div class="candidate-values">
 
-<img src="assets/Hon Seyi Sowunmi.jpg"
-     alt="Hon. Seyi Sowunmi"
-     loading="lazy">
+              <span>Integrity</span>
+              <span>Accessibility</span>
+              <span>Humility</span>
+              <span>Accountability</span>
+              <span>Compassion</span>
 
-</div>
+            </div>
 
-<div class="content">
+            <a
+              href="nurudeen.html"
+              class="profile-button">
 
-<h3>
-Hon. Seyi Sowunmi
-</h3>
+              View Full Profile →
 
-<div class="position">
-House of Representatives • Ojo Federal Constituency
-</div>
+            </a>
 
-<p>
-A representative focused on legislative service,
-constituency engagement, education, skills development,
-empowerment and greater opportunities for the people
-of Ojo Federal Constituency.
-</p>
+          </div>
 
-<div class="buttons">
+        </article>
 
-<a href="seyi-sowunmi.html"
-   class="btn green">
-View Full Profile →
-</a>
 
-<a href="https://wa.me/2348033002235"
-   target="_blank"
-   rel="noopener"
-   class="btn gold">
-WhatsApp
-</a>
+        <!-- =================================================
+             SEYI SOWUNMI
+             ================================================= -->
 
-</div>
+        <article class="candidate-card">
 
-</div>
+          <div class="candidate-photo">
 
-</div>
+            <img
+              src="assets/Hon Seyi Sowunmi.jpg"
+              alt="Hon. Seyi Sowunmi"
+              loading="eager"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
 
+            <div class="image-fallback">
 
-</div>
+              <div class="fallback-icon">
+                SS
+              </div>
 
-</div>
+              <strong>
+                Hon. Seyi Sowunmi
+              </strong>
 
-</section>
+              <small>
+                Candidate — Ojo Federal Constituency
+              </small>
 
+            </div>
 
-<!-- VISION -->
+          </div>
 
-<section class="section alt">
 
-<div class="container">
+          <div class="candidate-content">
 
-<div class="title">
+            <span class="candidate-role">
+              House of Representatives
+            </span>
 
-<small>OUR VISION</small>
+            <h3>
+              Hon. Seyi Sowunmi
+            </h3>
 
-<h2>Service To The People</h2>
+            <div class="constituency">
+              Ojo Federal Constituency
+            </div>
 
-<p>
-The IMOLE 2027 vision is centred on responsible
-representation and meaningful community development.
-</p>
+            <p>
+              Focused on effective representation,
+              constituency development, youth
+              empowerment, skills development and
+              opportunities for women and young people.
+            </p>
 
-</div>
+            <div class="candidate-values">
 
+              <span>Service</span>
+              <span>Development</span>
+              <span>Empowerment</span>
+              <span>Accountability</span>
+              <span>Representation</span>
 
-<div class="vision">
+            </div>
 
+            <a
+              href="seyi-sowunmi.html"
+              class="profile-button">
 
-<div class="vision-card">
+              View Full Profile →
 
-<div class="icon">🤝</div>
+            </a>
 
-<h3>Service</h3>
+          </div>
 
-<p>
-Putting the people first and making representation
-accessible.
-</p>
+        </article>
 
-</div>
 
+      </div>
 
-<div class="vision-card">
+    </section>
 
-<div class="icon">🏗️</div>
 
-<h3>Development</h3>
+    <!-- =====================================================
+         VISION
+         ===================================================== -->
 
-<p>
-Supporting practical development that improves
-communities.
-</p>
+    <section class="vision-section">
 
-</div>
+      <div class="section">
 
+        <div class="vision-box">
 
-<div class="vision-card">
+          <div class="icon">
+            ✦
+          </div>
 
-<div class="icon">📊</div>
+          <h2>
+            Service • Development • Accountability
+          </h2>
 
-<h3>Accountability</h3>
+          <p>
+            IMOLE 2027 represents a commitment to
+            putting the people first, strengthening
+            communities and promoting transparent,
+            accessible and responsible leadership.
+          </p>
 
-<p>
-Promoting responsible and transparent leadership.
-</p>
+        </div>
 
-</div>
+      </div>
 
+    </section>
 
-<div class="vision-card">
 
-<div class="icon">🎓</div>
+    <!-- =====================================================
+         VALUES
+         ===================================================== -->
 
-<h3>Education</h3>
+    <section class="section">
 
-<p>
-Supporting educational opportunities and skills.
-</p>
+      <div class="section-heading">
 
-</div>
+        <div class="small-title">
+          What We Stand For
+        </div>
 
+        <h2>
+          Our Core Values
+        </h2>
 
-<div class="vision-card">
+      </div>
 
-<div class="icon">💼</div>
 
-<h3>Empowerment</h3>
+      <div class="values-grid">
 
-<p>
-Creating opportunities for young people, women,
-traders and entrepreneurs.
-</p>
+        <div class="value-card">
 
-</div>
+          <div class="value-icon">
+            ✓
+          </div>
 
+          <h3>
+            Integrity
+          </h3>
 
-<div class="vision-card">
+        </div>
 
-<div class="icon">🏘️</div>
 
-<h3>Community</h3>
+        <div class="value-card">
 
-<p>
-Listening to the needs and aspirations of local
-communities.
-</p>
+          <div class="value-icon">
+            ♡
+          </div>
 
-</div>
+          <h3>
+            Compassion
+          </h3>
 
+        </div>
 
-</div>
 
-</div>
+        <div class="value-card">
 
-</section>
+          <div class="value-icon">
+            ★
+          </div>
 
+          <h3>
+            Service
+          </h3>
 
-<!-- CTA -->
+        </div>
 
-<section class="cta">
 
-<div class="container">
+        <div class="value-card">
 
-<h2>
-Join IMOLE 2027
-</h2>
+          <div class="value-icon">
+            ◉
+          </div>
 
-<p>
-Be part of the movement for service, development
-and accountability.
-</p>
+          <h3>
+            Accountability
+          </h3>
 
-<a href="join.html"
-   class="btn gold">
-🤝 Join The Movement
-</a>
+        </div>
 
-<a href="https://wa.me/2348033002235"
-   target="_blank"
-   rel="noopener"
-   class="btn gold">
-💬 Contact Us
-</a>
+      </div>
 
-</div>
+    </section>
 
-</section>
 
+    <!-- =====================================================
+         CTA
+         ===================================================== -->
 
-<!-- FOOTER -->
+    <section class="cta">
 
-<footer>
+      <h2>
+        Join the IMOLE 2027 Movement
+      </h2>
 
-<h3>IMOLE 2027</h3>
+      <p>
+        Be part of a movement focused on service,
+        development, accountability and a better
+        future for our communities.
+      </p>
 
-<p>
-Nigeria Democratic Congress
-</p>
+      <div class="cta-buttons">
 
-<p>
-Service • Development • Accountability
-</p>
+        <a
+          href="join.html"
+          class="cta-button">
 
-<div class="copyright">
+          Join IMOLE 2027
 
-© <span id="year"></span> IMOLE 2027.
-All Rights Reserved.
+        </a>
 
-<br>
+        <a
+          href="https://wa.me/2348033002235"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cta-button secondary">
 
-<a href="index.html">
-Return to Home
-</a>
+          Contact Us on WhatsApp
 
-</div>
+        </a>
 
-</footer>
+      </div>
 
+    </section>
 
-<!-- WHATSAPP -->
+  </main>
 
-<a href="https://wa.me/2348033002235"
-   class="whatsapp"
-   target="_blank"
-   rel="noopener"
-   aria-label="WhatsApp">
 
-💬
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
 
-</a>
+  <footer>
 
+    <div class="footer-brand">
+      IMOLE 2027
+    </div>
 
-<script>
+    <div class="footer-slogan">
+      WE SHINE • WE WIN
+    </div>
 
-/* MOBILE MENU */
+    <div class="footer-links">
 
-const menuButton =
-document.getElementById("menuButton");
+      <a href="index.html">Home</a>
+      <a href="about.html">Candidates</a>
+      <a href="manifesto.html">Manifesto</a>
+      <a href="polling-units.html">Polling Units</a>
+      <a href="results.html">Results</a>
+      <a href="news.html">News</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="join.html">Join Us</a>
 
-const navigation =
-document.getElementById("navigation");
+    </div>
 
-menuButton.addEventListener("click", function(){
+    <div class="copyright">
 
-    navigation.classList.toggle("show");
+      © <span id="year"></span>
+      IMOLE 2027.
+      All rights reserved.
 
-});
+    </div>
 
+  </footer>
 
-/* CLOSE MENU AFTER CLICK */
 
-document.querySelectorAll("#navigation a")
-.forEach(function(link){
+  <!-- =======================================================
+       FLOATING WHATSAPP
+       ======================================================= -->
 
-    link.addEventListener("click", function(){
+  <a
+    href="https://wa.me/2348033002235"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact IMOLE 2027 on WhatsApp">
 
-        navigation.classList.remove("show");
+    ☎
+
+  </a>
+
+
+  <!-- =======================================================
+       BACK TO TOP
+       ======================================================= -->
+
+  <button
+    class="back-top"
+    id="backTop"
+    aria-label="Back to top">
+
+    ↑
+
+  </button>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+       ======================================================= -->
+
+  <script>
+
+    /* -----------------------------------------------
+       Mobile Navigation
+       ----------------------------------------------- */
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const navMenu =
+      document.getElementById("navMenu");
+
+
+    if (menuButton && navMenu) {
+
+      menuButton.addEventListener("click", function () {
+
+        const isOpen =
+          navMenu.classList.toggle("open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          isOpen ? "true" : "false"
+        );
+
+        menuButton.textContent =
+          isOpen ? "✕" : "☰";
+
+      });
+
+
+      document
+        .querySelectorAll("#navMenu a")
+        .forEach(function (link) {
+
+          link.addEventListener("click", function () {
+
+            navMenu.classList.remove("open");
+
+            menuButton.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            menuButton.textContent = "☰";
+
+          });
+
+        });
+
+    }
+
+
+    /* -----------------------------------------------
+       Current Year
+       ----------------------------------------------- */
+
+    const year =
+      document.getElementById("year");
+
+    if (year) {
+
+      year.textContent =
+        new Date().getFullYear();
+
+    }
+
+
+    /* -----------------------------------------------
+       Back To Top
+       ----------------------------------------------- */
+
+    const backTop =
+      document.getElementById("backTop");
+
+
+    window.addEventListener("scroll", function () {
+
+      if (!backTop) return;
+
+      if (window.scrollY > 450) {
+
+        backTop.classList.add("show");
+
+      } else {
+
+        backTop.classList.remove("show");
+
+      }
 
     });
 
-});
+
+    if (backTop) {
+
+      backTop.addEventListener("click", function () {
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      });
+
+    }
 
 
-/* YEAR */
+    /* -----------------------------------------------
+       Close mobile menu when clicking outside
+       ----------------------------------------------- */
 
-document.getElementById("year").textContent =
-new Date().getFullYear();
+    document.addEventListener("click", function (event) {
 
-</script>
+      if (!menuButton || !navMenu) return;
 
+      const clickedInside =
+        menuButton.contains(event.target) ||
+        navMenu.contains(event.target);
+
+      if (!clickedInside) {
+
+        navMenu.classList.remove("open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuButton.textContent = "☰";
+
+      }
+
+    });
+
+  </script>
 
 </body>
 </html>
