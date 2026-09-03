@@ -1,1752 +1,2224 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>Community Hub | IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq</title><meta name="description" content="Share your community needs, complaints, suggestions and urgent issues with the IMOLE 2027 community platform."><meta name="theme-color" content="#063b2d"><link rel="icon" href="assets/IMG-20260728-WA0032.jpg"><style>
-:root{
-  --green:#063b2d;
-  --green2:#0b6349;
-  --gold:#d6a62e;
-  --light:#f3f8f5;
-  --white:#fff;
-  --dark:#10231d;
-  --text:#30433c;
-  --muted:#6b7d75;
-  --red:#c62828;
-  --shadow:0 12px 35px rgba(0,0,0,.10);
-  --radius:20px;
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#fff;
-  color:var(--text);
-  line-height:1.6;
-  overflow-x:hidden;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-button,
-input,
-select,
-textarea{
-  font-family:inherit;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-.container{
-  width:min(1150px,92%);
-  margin:auto;
-}
-
-/* TOP BAR */
-.topbar{
-  background:var(--green);
-  color:#fff;
-  text-align:center;
-  padding:8px 15px;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.3px;
-}
-
-/* HEADER */
-header{
-  position:sticky;
-  top:0;
-  z-index:9999;
-  background:rgba(255,255,255,.97);
-  box-shadow:0 3px 18px rgba(0,0,0,.08);
-  backdrop-filter:blur(8px);
-}
-
-.navbar{
-  min-height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  min-width:0;
-}
-
-.brand img{
-  width:48px;
-  height:48px;
-  border-radius:50%;
-  object-fit:contain;
-}
-
-.brand-text strong{
-  display:block;
-  color:var(--green);
-  font-size:17px;
-  line-height:1.1;
-}
-
-.brand-text small{
-  display:block;
-  color:#777;
-  font-size:9px;
-  font-weight:800;
-  line-height:1.3;
-}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:16px;
-}
-
-.nav-links a{
-  color:#263d35;
-  font-size:12px;
-  font-weight:800;
-  transition:.2s;
-}
-
-.nav-links a:hover,
-.nav-links a.active{
-  color:var(--gold);
-}
-
-.menu-btn{
-  display:none;
-  width:44px;
-  height:44px;
-  border:0;
-  border-radius:10px;
-  background:var(--green);
-  color:#fff;
-  font-size:22px;
-  cursor:pointer;
-}
-
-/* HERO */
-.hero{
-  position:relative;
-  overflow:hidden;
-  min-height:510px;
-  display:flex;
-  align-items:center;
-  background:
-    linear-gradient(90deg,rgba(3,38,29,.97),rgba(3,38,29,.88),rgba(3,38,29,.45)),
-    url("assets/Hon Nurudeen Abayomi Sadeeq.jpg") center/cover no-repeat;
-}
-
-.hero-content{
-  max-width:760px;
-  padding:75px 0;
-  color:#fff;
-}
-
-.badge{
-  display:inline-block;
-  background:var(--gold);
-  color:var(--dark);
-  padding:8px 16px;
-  border-radius:30px;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:1px;
-  margin-bottom:18px;
-}
-
-.hero h1{
-  font-size:clamp(40px,7vw,70px);
-  line-height:1;
-  margin-bottom:18px;
-  font-weight:900;
-}
-
-.hero h1 span{
-  color:var(--gold);
-}
-
-.hero h2{
-  font-size:clamp(20px,3vw,30px);
-  margin-bottom:12px;
-}
-
-.hero p{
-  max-width:680px;
-  color:#e5f0eb;
-  font-size:16px;
-}
-
-.hero-buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:26px;
-}
-
-.btn{
-  border:0;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:46px;
-  padding:12px 20px;
-  border-radius:30px;
-  font-size:13px;
-  font-weight:900;
-  cursor:pointer;
-  transition:.2s;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-}
-
-.btn-primary{
-  background:var(--gold);
-  color:var(--dark);
-}
-
-.btn-white{
-  background:#fff;
-  color:var(--green);
-}
-
-.btn-outline{
-  border:2px solid #fff;
-  color:#fff;
-  background:transparent;
-}
-
-.btn-outline:hover{
-  background:#fff;
-  color:var(--green);
-}
-
-.btn-whatsapp{
-  background:#25d366;
-  color:#fff;
-}
-
-/* QUICK ACTIONS */
-.quick-actions{
-  margin-top:-45px;
-  position:relative;
-  z-index:5;
-}
-
-.quick-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
-}
-
-.quick-card{
-  background:#fff;
-  border-radius:18px;
-  padding:22px 15px;
-  text-align:center;
-  box-shadow:var(--shadow);
-  transition:.25s;
-  cursor:pointer;
-}
-
-.quick-card:hover{
-  transform:translateY(-5px);
-}
-
-.quick-icon{
-  width:52px;
-  height:52px;
-  margin:0 auto 10px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:var(--light);
-  font-size:25px;
-}
-
-.quick-card h3{
-  color:var(--green);
-  font-size:16px;
-  margin-bottom:4px;
-}
-
-.quick-card p{
-  color:var(--muted);
-  font-size:12px;
-}
-
-/* GENERAL */
-section{
-  padding:75px 0;
-}
-
-.section-heading{
-  max-width:760px;
-  margin:0 auto 40px;
-  text-align:center;
-}
-
-.section-heading span{
-  color:var(--gold);
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:2px;
-}
-
-.section-heading h2{
-  color:var(--green);
-  font-size:clamp(30px,5vw,44px);
-  line-height:1.15;
-  margin:7px 0 10px;
-}
-
-.section-heading p{
-  color:var(--muted);
-}
-
-/* COMMUNITY FORM */
-.community-section{
-  background:var(--light);
-}
-
-.form-wrapper{
-  max-width:900px;
-  margin:auto;
-  background:#fff;
-  border-radius:25px;
-  padding:35px;
-  box-shadow:var(--shadow);
-}
-
-.form-notice{
-  background:#eef8f2;
-  border-left:5px solid var(--green);
-  padding:15px;
-  border-radius:10px;
-  margin-bottom:25px;
-  font-size:13px;
-}
-
-.form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-
-.form-group{
-  display:flex;
-  flex-direction:column;
-}
-
-.form-group.full{
-  grid-column:1/-1;
-}
-
-label{
-  color:var(--green);
-  font-size:13px;
-  font-weight:900;
-  margin-bottom:7px;
-}
-
-input,
-select,
-textarea{
-  width:100%;
-  border:1px solid #d8e2dd;
-  border-radius:12px;
-  padding:13px 14px;
-  outline:none;
-  background:#fbfdfc;
-  color:var(--text);
-  font-size:14px;
-  transition:.2s;
-}
-
-input:focus,
-select:focus,
-textarea:focus{
-  border-color:var(--green2);
-  box-shadow:0 0 0 3px rgba(11,99,73,.08);
-  background:#fff;
-}
-
-textarea{
-  min-height:150px;
-  resize:vertical;
-}
-
-.form-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:22px;
-}
-
-.small-note{
-  margin-top:14px;
-  color:#75857f;
-  font-size:11px;
-}
-
-/* STATUS */
-.status{
-  display:none;
-  margin-top:18px;
-  padding:15px;
-  border-radius:12px;
-  font-size:13px;
-  font-weight:700;
-}
-
-.status.show{
-  display:block;
-}
-
-.status.success{
-  background:#e8f7ee;
-  color:#12633e;
-  border-left:4px solid #20a464;
-}
-
-.status.error{
-  background:#fff0f0;
-  color:#9c2020;
-  border-left:4px solid var(--red);
-}
-
-/* NEED TYPES */
-.types{
-  background:#fff;
-}
-
-.type-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.type-card{
-  padding:25px;
-  background:var(--light);
-  border-radius:18px;
-  border-top:4px solid var(--gold);
-}
-
-.type-card .icon{
-  font-size:30px;
-  margin-bottom:8px;
-}
-
-.type-card h3{
-  color:var(--green);
-  margin-bottom:6px;
-}
-
-.type-card p{
-  font-size:13px;
-  color:var(--muted);
-}
-
-/* WHATSAPP */
-.whatsapp-section{
-  background:var(--green);
-  color:#fff;
-  text-align:center;
-}
-
-.whatsapp-box{
-  max-width:800px;
-  margin:auto;
-}
-
-.whatsapp-box h2{
-  font-size:clamp(30px,5vw,45px);
-  margin-bottom:10px;
-}
-
-.whatsapp-box p{
-  color:#d8e8e2;
-  margin-bottom:25px;
-}
-
-.number{
-  color:var(--gold);
-  font-size:22px;
-  font-weight:900;
-  margin-bottom:20px;
-}
-
-/* NEWS CTA */
-.news-cta{
-  background:#fff;
-}
-
-.news-box{
-  background:var(--light);
-  border-radius:25px;
-  padding:40px 25px;
-  text-align:center;
-}
-
-.news-box h2{
-  color:var(--green);
-  font-size:32px;
-  margin-bottom:10px;
-}
-
-.news-box p{
-  max-width:700px;
-  margin:0 auto 22px;
-  color:var(--muted);
-}
-
-/* FOOTER */
-footer{
-  background:#021f17;
-  color:#c8d6d1;
-  padding:45px 0 25px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:1.4fr 1fr 1fr;
-  gap:30px;
-}
-
-.footer-brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:12px;
-}
-
-.footer-brand img{
-  width:55px;
-  height:55px;
-  object-fit:contain;
-  border-radius:50%;
-}
-
-footer h3{
-  color:#fff;
-  margin-bottom:12px;
-}
-
-footer a{
-  display:block;
-  margin:7px 0;
-  font-size:13px;
-}
-
-footer a:hover{
-  color:var(--gold);
-}
-
-.copyright{
-  border-top:1px solid rgba(255,255,255,.1);
-  margin-top:30px;
-  padding-top:20px;
-  text-align:center;
-  font-size:11px;
-}
-
-/* FLOATING BUTTONS */
-.floating-share{
-  position:fixed;
-  right:18px;
-  bottom:88px;
-  width:54px;
-  height:54px;
-  border-radius:50%;
-  background:var(--gold);
-  color:var(--dark);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:23px;
-  box-shadow:0 8px 25px rgba(0,0,0,.25);
-  z-index:9997;
-  cursor:pointer;
-  border:0;
-}
-
-.whatsapp-float{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#25d366;
-  color:#fff;
-  font-size:28px;
-  box-shadow:0 8px 25px rgba(0,0,0,.25);
-  z-index:9998;
-}
-
-/* MOBILE */
-@media(max-width:950px){
-
-  .nav-links{
-    position:absolute;
-    top:76px;
-    left:0;
-    right:0;
-    background:#fff;
-    display:none;
-    flex-direction:column;
-    align-items:stretch;
-    padding:15px 20px 25px;
-    box-shadow:0 15px 25px rgba(0,0,0,.1);
-  }
-
-  .nav-links.show{
-    display:flex;
-  }
-
-  .nav-links a{
-    padding:11px 5px;
-    border-bottom:1px solid #eee;
-  }
-
-  .menu-btn{
-    display:block;
-  }
-
-  .quick-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .type-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
-}
-
-@media(max-width:650px){
-
-  .hero{
-    min-height:570px;
-  }
-
-  .hero-content{
-    padding:65px 0;
-  }
-
-  .hero h1{
-    font-size:47px;
-  }
-
-  .quick-actions{
-    margin-top:-30px;
-  }
-
-  .quick-grid,
-  .type-grid,
-  .form-grid,
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  .form-wrapper{
-    padding:22px 17px;
-  }
-
-  .form-group.full{
-    grid-column:auto;
-  }
-
-  section{
-    padding:60px 0;
-  }
-
-  .brand-text strong{
-    font-size:14px;
-  }
-
-  .brand img{
-    width:42px;
-    height:42px;
-  }
-
-  .hero-buttons .btn{
-    width:100%;
-  }
-
-  .form-actions .btn{
-    width:100%;
-  }
-}
-</style></head><body><!-- TOP BAR --><div class="topbar">
-  IMOLE 2027 • YOUR VOICE • YOUR COMMUNITY • YOUR FUTURE
-</div><!-- HEADER --><header>
-  <div class="container navbar"><a href="index.html" class="brand">
-
-  <img
-    src="assets/IMG-20260728-WA0032.jpg"
-    alt="NDC Logo"
-    onerror="this.style.display='none';">
-
-  <div class="brand-text">
-    <strong>IMOLE 2027</strong>
-    <small>NIGERIA DEMOCRATIC CONGRESS • OJO II</small>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <meta name="theme-color" content="#063b2d">
+  <meta name="color-scheme" content="light">
+
+  <meta name="description"
+        content="Share your community need with the IMOLE 2027 movement. Report issues affecting your community in Ojo Constituency II.">
+
+  <title>Share Your Community Need | IMOLE 2027</title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="icon"
+        type="image/jpeg"
+        href="assets/IMG-20260728-WA0032.jpg">
+
+  <style>
+    :root {
+      --green: #063b2d;
+      --green2: #0a5942;
+      --green3: #0d7254;
+      --gold: #d6a62e;
+      --gold2: #f1c84b;
+
+      --light: #f4f8f6;
+      --white: #ffffff;
+      --dark: #10231d;
+      --text: #30433c;
+      --muted: #6b7d75;
+
+      --danger: #c62828;
+      --success: #087f5b;
+
+      --border: #e1ebe6;
+
+      --shadow:
+        0 12px 35px rgba(6, 59, 45, .10);
+
+      --shadow2:
+        0 20px 60px rgba(6, 59, 45, .16);
+
+      --radius: 20px;
+      --header-height: 72px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+      background:
+        linear-gradient(
+          180deg,
+          #f7faf8 0%,
+          #ffffff 45%,
+          #f3f8f5 100%
+        );
+
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font-size: 16px;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 30px));
+      margin: auto;
+    }
+
+    /* =========================
+       TOP BAR
+    ========================== */
+
+    .topbar {
+      background: var(--green);
+      color: white;
+      text-align: center;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      height: var(--header-height);
+
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid var(--border);
+
+      box-shadow:
+        0 5px 25px rgba(0,0,0,.05);
+    }
+
+    .nav {
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 15px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 45px;
+      height: 45px;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+
+      border: 2px solid var(--gold);
+
+      background: var(--light);
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-name {
+      font-weight: 900;
+      color: var(--green);
+      font-size: 18px;
+      line-height: 1.1;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      padding: 9px 10px;
+      border-radius: 10px;
+
+      font-size: 13px;
+      font-weight: 800;
+
+      color: var(--text);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: var(--light);
+      color: var(--green);
+    }
+
+    .menu-btn {
+      display: none;
+
+      border: 0;
+      background: var(--green);
+      color: white;
+
+      width: 44px;
+      height: 44px;
+
+      border-radius: 12px;
+
+      font-size: 23px;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+
+      padding: 65px 0 55px;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(241,200,75,.18),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          var(--green),
+          var(--green2)
+        );
+
+      color: white;
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 260px;
+      height: 260px;
+
+      border-radius: 50%;
+
+      right: -100px;
+      bottom: -120px;
+
+      background: rgba(241,200,75,.08);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 850px;
+      margin: auto;
+
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 7px 13px;
+
+      border-radius: 999px;
+
+      background: rgba(255,255,255,.12);
+
+      border: 1px solid rgba(255,255,255,.22);
+
+      color: var(--gold2);
+
+      font-weight: 900;
+      font-size: 13px;
+
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 58px);
+
+      line-height: 1.05;
+
+      margin-bottom: 17px;
+
+      font-weight: 950;
+
+      letter-spacing: -.8px;
+    }
+
+    .hero h1 span {
+      color: var(--gold2);
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+
+      color: rgba(255,255,255,.88);
+
+      font-size: clamp(16px, 2vw, 19px);
+    }
+
+    /* =========================
+       MAIN
+    ========================== */
+
+    main {
+      padding: 40px 0 70px;
+    }
+
+    .layout {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.7fr)
+        minmax(280px, .8fr);
+
+      gap: 25px;
+
+      align-items: start;
+    }
+
+    .card {
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+
+      box-shadow: var(--shadow);
+    }
+
+    /* =========================
+       FORM CARD
+    ========================== */
+
+    .form-card {
+      padding: clamp(20px, 4vw, 35px);
+    }
+
+    .section-title {
+      margin-bottom: 25px;
+    }
+
+    .section-title .eyebrow {
+      color: var(--green3);
+
+      font-size: 12px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.4px;
+
+      font-weight: 950;
+
+      margin-bottom: 5px;
+    }
+
+    .section-title h2 {
+      color: var(--dark);
+
+      font-size: clamp(24px, 4vw, 34px);
+
+      line-height: 1.15;
+
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+    }
+
+    .form-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 18px;
+    }
+
+    .field {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 7px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-weight: 850;
+
+      font-size: 14px;
+
+      color: var(--dark);
+    }
+
+    label span {
+      color: var(--danger);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+
+      border: 1.5px solid var(--border);
+
+      border-radius: 13px;
+
+      background: #fbfdfc;
+
+      color: var(--dark);
+
+      padding: 13px 14px;
+
+      outline: none;
+
+      transition:
+        border .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--green3);
+
+      background: white;
+
+      box-shadow:
+        0 0 0 4px rgba(13,114,84,.09);
+    }
+
+    textarea {
+      min-height: 145px;
+
+      resize: vertical;
+    }
+
+    .help {
+      color: var(--muted);
+
+      font-size: 12px;
+    }
+
+    .counter {
+      text-align: right;
+
+      color: var(--muted);
+
+      font-size: 12px;
+    }
+
+    /* =========================
+       PHOTO BOX
+    ========================== */
+
+    .photo-box {
+      border: 1.5px dashed #b8cbc2;
+
+      background: #f8fbf9;
+
+      padding: 16px;
+
+      border-radius: 15px;
+    }
+
+    .photo-box input {
+      background: white;
+    }
+
+    .photo-preview {
+      display: none;
+
+      margin-top: 12px;
+
+      max-height: 240px;
+
+      width: 100%;
+
+      object-fit: contain;
+
+      border-radius: 13px;
+
+      border: 1px solid var(--border);
+
+      background: #eef4f1;
+    }
+
+    /* =========================
+       CHECKBOX
+    ========================== */
+
+    .consent {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 10px;
+
+      padding: 15px;
+
+      background: var(--light);
+
+      border-radius: 13px;
+
+      margin-top: 5px;
+    }
+
+    .consent input {
+      width: 20px;
+      height: 20px;
+
+      margin-top: 2px;
+
+      flex: 0 0 auto;
+    }
+
+    .consent label {
+      font-weight: 650;
+
+      font-size: 13px;
+
+      color: var(--text);
+    }
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .actions {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 12px;
+
+      margin-top: 22px;
+    }
+
+    .btn {
+      min-height: 52px;
+
+      border-radius: 13px;
+
+      border: 0;
+
+      padding: 12px 16px;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      font-weight: 900;
+
+      text-align: center;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        opacity .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--green);
+
+      color: white;
+
+      box-shadow:
+        0 9px 20px rgba(6,59,45,.18);
+    }
+
+    .btn-primary:hover {
+      background: var(--green2);
+    }
+
+    .btn-secondary {
+      background: #eef4f1;
+
+      color: var(--green);
+    }
+
+    .btn-whatsapp {
+      background: #168b57;
+
+      color: white;
+    }
+
+    .btn:disabled {
+      opacity: .55;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* =========================
+       SIDE INFO
+    ========================== */
+
+    .side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .info-card {
+      padding: 23px;
+    }
+
+    .info-card h3 {
+      color: var(--dark);
+
+      font-size: 20px;
+
+      margin-bottom: 12px;
+    }
+
+    .info-card p {
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+    .steps {
+      display: grid;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .step {
+      display: grid;
+
+      grid-template-columns: 40px 1fr;
+
+      gap: 12px;
+
+      align-items: start;
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+
+      border-radius: 50%;
+
+      display: grid;
+
+      place-items: center;
+
+      background: var(--green);
+
+      color: var(--gold2);
+
+      font-weight: 950;
+    }
+
+    .step strong {
+      display: block;
+
+      color: var(--dark);
+
+      margin-bottom: 2px;
+    }
+
+    .step p {
+      font-size: 13px;
+    }
+
+    .contact-card {
+      background:
+        linear-gradient(
+          145deg,
+          var(--green),
+          var(--green2)
+        );
+
+      color: white;
+
+      border: 0;
+    }
+
+    .contact-card h3 {
+      color: white;
+    }
+
+    .contact-card p {
+      color: rgba(255,255,255,.82);
+    }
+
+    .whatsapp-big {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      margin-top: 18px;
+
+      background: white;
+
+      color: var(--green);
+
+      padding: 13px;
+
+      border-radius: 12px;
+
+      font-weight: 950;
+    }
+
+    /* =========================
+       NOTE
+    ========================== */
+
+    .important {
+      padding: 15px;
+
+      margin-top: 20px;
+
+      border-left: 4px solid var(--gold);
+
+      background: #fffaf0;
+
+      border-radius: 10px;
+
+      font-size: 13px;
+
+      color: #5e5235;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #082c22;
+
+      color: white;
+
+      padding: 35px 0;
+
+      text-align: center;
+    }
+
+    footer .footer-brand {
+      font-size: 20px;
+
+      font-weight: 950;
+
+      color: var(--gold2);
+
+      margin-bottom: 5px;
+    }
+
+    footer p {
+      color: rgba(255,255,255,.7);
+
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 8px 16px;
+
+      margin: 20px 0;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+
+      color: rgba(255,255,255,.82);
+    }
+
+    .footer-links a:hover {
+      color: var(--gold2);
+    }
+
+    /* =========================
+       FLOATING WHATSAPP
+    ========================== */
+
+    .float-wa {
+      position: fixed;
+
+      right: 18px;
+      bottom: 18px;
+
+      width: 57px;
+      height: 57px;
+
+      border-radius: 50%;
+
+      background: #168b57;
+
+      color: white;
+
+      display: grid;
+
+      place-items: center;
+
+      font-size: 27px;
+
+      box-shadow:
+        0 12px 30px rgba(0,0,0,.22);
+
+      z-index: 1200;
+    }
+
+    /* =========================
+       TOAST
+    ========================== */
+
+    .toast {
+      position: fixed;
+
+      left: 50%;
+
+      bottom: 90px;
+
+      transform:
+        translate(-50%, 20px);
+
+      opacity: 0;
+
+      pointer-events: none;
+
+      background: #10231d;
+
+      color: white;
+
+      padding: 12px 18px;
+
+      border-radius: 999px;
+
+      font-size: 13px;
+
+      font-weight: 750;
+
+      z-index: 1500;
+
+      transition:
+        opacity .25s ease,
+        transform .25s ease;
+
+      max-width: calc(100% - 30px);
+
+      text-align: center;
+    }
+
+    .toast.show {
+      opacity: 1;
+
+      transform:
+        translate(-50%, 0);
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        position: fixed;
+
+        top: var(--header-height);
+
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 12px 15px 18px;
+
+        background: white;
+
+        border-bottom: 1px solid var(--border);
+
+        box-shadow:
+          0 20px 30px rgba(0,0,0,.08);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 13px;
+
+        width: 100%;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .hero {
+        padding: 48px 0 42px;
+      }
+
+      main {
+        padding-top: 25px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .actions {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-sub {
+        display: none;
+      }
+
+      .brand-name {
+        font-size: 16px;
+      }
+
+      .brand-logo {
+        width: 41px;
+        height: 41px;
+      }
+    }
+
+    @media (max-width: 380px) {
+
+      .container {
+        width: min(100% - 20px, 1120px);
+      }
+
+      .form-card,
+      .info-card {
+        padding: 17px;
+      }
+
+      .hero h1 {
+        font-size: 31px;
+      }
+    }
+
+    /* =========================
+       ACCESSIBILITY
+    ========================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    IMOLE 2027 • Ojo Constituency II • Your Community Voice Matters
   </div>
 
-</a>
 
-<button
-  class="menu-btn"
-  id="menuBtn"
-  type="button"
-  aria-label="Open menu">
-  ☰
-</button>
+  <!-- HEADER -->
+  <header>
 
-<nav class="nav-links" id="navLinks">
+    <div class="container nav">
 
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="manifesto.html">Manifesto</a>
-  <a href="polling-units.html">Polling Units</a>
-  <a href="results.html">Results</a>
-  <a href="news.html">News</a>
-  <a href="events.html">Events</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="media.html">Media</a>
-  <a href="contact.html">Contact</a>
-  <a href="join.html">Join Us</a>
-  <a href="community.html" class="active">Community</a>
+      <a href="index.html" class="brand" aria-label="IMOLE 2027 Home">
 
-</nav>
+        <img
+          class="brand-logo"
+          src="assets/IMG-20260728-WA0032.jpg"
+          alt="Nigeria Democratic Congress logo"
+          onerror="this.style.display='none';"
+        >
 
-  </div>
-</header><!-- HERO --><section class="hero">  <div class="container"><div class="hero-content">
+        <div class="brand-text">
+          <div class="brand-name">
+            IMOLE 2027
+          </div>
 
-  <span class="badge">
-    COMMUNITY HUB
-  </span>
+          <div class="brand-sub">
+            Hon. Nurudeen Abayomi Sadeeq
+          </div>
+        </div>
 
-  <h1>
-    Your Voice.<br>
-    <span>Your Community.</span>
-  </h1>
+      </a>
 
-  <h2>
-    Share What Matters To You
-  </h2>
-
-  <p>
-    Tell us about the needs, challenges, ideas and
-    opportunities in your community. Every genuine
-    community concern deserves to be heard.
-  </p>
-
-  <div class="hero-buttons">
-
-    <a
-      href="#share"
-      class="btn btn-primary">
-      📝 Share Community Need
-    </a>
-
-    <a
-      href="https://wa.me/2348033002235"
-      target="_blank"
-      rel="noopener"
-      class="btn btn-whatsapp">
-      💬 WhatsApp Us
-    </a>
-
-  </div>
-
-</div>
-
-  </div></section><!-- QUICK ACTIONS --><div class="quick-actions">  <div class="container quick-grid"><a href="#share" class="quick-card" onclick="setType('Community Need')">
-
-  <div class="quick-icon">🏘️</div>
-
-  <h3>Community Need</h3>
-
-  <p>Tell us what your community needs.</p>
-
-</a>
-
-<a href="#share" class="quick-card" onclick="setType('Complaint')">
-
-  <div class="quick-icon">📢</div>
-
-  <h3>Complaint</h3>
-
-  <p>Report a community problem.</p>
-
-</a>
-
-<a href="#share" class="quick-card" onclick="setType('Suggestion')">
-
-  <div class="quick-icon">💡</div>
-
-  <h3>Suggestion</h3>
-
-  <p>Share an idea for improvement.</p>
-
-</a>
-
-<a href="#share" class="quick-card" onclick="setType('Urgent Issue')">
-
-  <div class="quick-icon">🚨</div>
-
-  <h3>Urgent Issue</h3>
-
-  <p>Bring an urgent matter to attention.</p>
-
-</a>
-
-  </div></div><!-- SHARE FORM --><section class="community-section" id="share">  <div class="container"><div class="section-heading">
-
-  <span>SHARE YOUR COMMUNITY NEED</span>
-
-  <h2>Let Your Voice Be Heard</h2>
-
-  <p>
-    Complete the form below. When you submit it,
-    WhatsApp will open with your message already prepared.
-  </p>
-
-</div>
-
-<div class="form-wrapper">
-
-  <div class="form-notice">
-
-    <strong>📱 How it works:</strong>
-    Fill in the details and tap
-    <strong>Send via WhatsApp</strong>.
-    Your message will be sent to the official IMOLE
-    community contact number.
-
-  </div>
-
-  <form id="communityForm">
-
-    <div class="form-grid">
-
-      <div class="form-group">
-
-        <label for="name">
-          Your Name
-        </label>
-
-        <input
-          id="name"
-          name="name"
-          type="text"
-          placeholder="Enter your name">
-
-      </div>
-
-      <div class="form-group">
-
-        <label for="phone">
-          Phone Number
-        </label>
-
-        <input
-          id="phone"
-          name="phone"
-          type="tel"
-          placeholder="08012345678">
-
-      </div>
-
-      <div class="form-group">
-
-        <label for="ward">
-          Ward
-        </label>
-
-        <select id="ward" name="ward">
-
-          <option value="">
-            Select your ward
-          </option>
-
-          <option>Ward D — Ijanikin</option>
-          <option>Ward F — Ilogbo</option>
-          <option>Ward G — Irewe</option>
-          <option>Ward I — Etegbin</option>
-          <option>Ward J — Idoluwo</option>
-          <option>Ward H</option>
-          <option>Other / Not Sure</option>
-
-        </select>
-
-      </div>
-
-      <div class="form-group">
-
-        <label for="category">
-          Type of Message
-        </label>
-
-        <select id="category" name="category">
-
-          <option value="Community Need">
-            🏘️ Community Need
-          </option>
-
-          <option value="Complaint">
-            📢 Complaint
-          </option>
-
-          <option value="Suggestion">
-            💡 Suggestion
-          </option>
-
-          <option value="Urgent Issue">
-            🚨 Urgent Issue
-          </option>
-
-          <option value="Infrastructure">
-            🛣️ Infrastructure
-          </option>
-
-          <option value="Healthcare">
-            🏥 Healthcare
-          </option>
-
-          <option value="Education">
-            🎓 Education
-          </option>
-
-          <option value="Youth">
-            👨‍👩‍👧 Youth Development
-          </option>
-
-          <option value="Traders">
-            🛍️ Traders / Business
-          </option>
-
-          <option value="Other">
-            Other
-          </option>
-
-        </select>
-
-      </div>
-
-      <div class="form-group full">
-
-        <label for="location">
-          Community / Location
-        </label>
-
-        <input
-          id="location"
-          name="location"
-          type="text"
-          placeholder="Example: Ilogbo, Shibiri, Igbede, Etegbin...">
-
-      </div>
-
-      <div class="form-group full">
-
-        <label for="message">
-          Describe Your Need / Complaint / Suggestion
-        </label>
-
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Please describe the issue clearly..."></textarea>
-
-      </div>
-
-    </div>
-
-    <div class="form-actions">
 
       <button
-        type="submit"
-        class="btn btn-whatsapp">
-        📲 Send via WhatsApp
-      </button>
-
-      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
         type="button"
-        class="btn btn-primary"
-        id="shareBtn">
-        🔗 Share Community Page
+      >
+        ☰
       </button>
 
-      <button
-        type="button"
-        class="btn"
-        id="copyBtn"
-        style="background:#eef2f0;color:#063b2d;">
-        📋 Copy Message
-      </button>
+
+      <nav class="nav-links" id="navLinks">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="manifesto.html">
+          Manifesto
+        </a>
+
+        <a href="polling-units.html">
+          Polling Units
+        </a>
+
+        <a href="results.html">
+          Results
+        </a>
+
+        <a href="news.html">
+          News
+        </a>
+
+        <a href="events.html">
+          Events
+        </a>
+
+        <a href="gallery.html">
+          Gallery
+        </a>
+
+        <a href="media.html">
+          Media
+        </a>
+
+        <a href="community.html" class="active">
+          Community
+        </a>
+
+        <a href="join.html">
+          Join IMOLE
+        </a>
+
+      </nav>
 
     </div>
 
-    <div
-      id="status"
-      class="status"
-      role="alert">
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="hero-badge">
+        📢 COMMUNITY VOICE
+      </div>
+
+      <h1>
+        Share Your <span>Community Need</span>
+      </h1>
+
+      <p>
+        Tell the IMOLE 2027 movement about issues affecting your
+        community. Your voice can help highlight priorities around
+        roads, drainage, health, schools, water, electricity,
+        markets and other community needs.
+      </p>
+
     </div>
 
-    <p class="small-note">
-      Your information is used only to help communicate
-      the matter you submit. Please do not submit passwords,
-      banking PINs or other highly sensitive information.
-    </p>
+  </section>
 
-  </form>
 
-</div>
+  <!-- MAIN -->
+  <main>
 
-  </div></section><!-- TYPES --><section class="types">  <div class="container"><div class="section-heading">
+    <div class="container layout">
 
-  <span>WHAT CAN YOU SHARE?</span>
 
-  <h2>Every Community Voice Matters</h2>
+      <!-- FORM -->
+      <section class="card form-card">
 
-  <p>
-    You can use this platform to bring attention to
-    practical issues affecting residents.
-  </p>
+        <div class="section-title">
 
-</div>
+          <div class="eyebrow">
+            COMMUNITY REPORT
+          </div>
 
-<div class="type-grid">
+          <h2>
+            Tell Us What Your Community Needs
+          </h2>
 
-  <div class="type-card">
+          <p>
+            Please provide as much useful information as possible.
+            Your report will be prepared for submission through WhatsApp.
+          </p>
 
-    <div class="icon">🛣️</div>
+        </div>
 
-    <h3>Roads & Drainage</h3>
 
-    <p>
-      Report damaged roads, blocked drainage,
-      flooding and other infrastructure concerns.
-    </p>
+        <form id="communityForm" novalidate>
 
-  </div>
 
-  <div class="type-card">
+          <div class="form-grid">
 
-    <div class="icon">🏥</div>
 
-    <h3>Healthcare</h3>
+            <!-- NAME -->
+            <div class="field">
 
-    <p>
-      Share concerns about healthcare access,
-      facilities and community health needs.
-    </p>
+              <label for="name">
+                Your Name
+                <span>*</span>
+              </label>
 
-  </div>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Enter your name"
+                autocomplete="name"
+                required
+              >
 
-  <div class="type-card">
+            </div>
 
-    <div class="icon">🎓</div>
 
-    <h3>Education</h3>
+            <!-- PHONE -->
+            <div class="field">
 
-    <p>
-      Share concerns and ideas relating to schools,
-      learning and educational opportunities.
-    </p>
+              <label for="phone">
+                Phone Number
+              </label>
 
-  </div>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="e.g. 08012345678"
+                autocomplete="tel"
+              >
 
-  <div class="type-card">
+              <div class="help">
+                Optional. Add a number if you would like the team
+                to contact you about the report.
+              </div>
 
-    <div class="icon">💼</div>
+            </div>
 
-    <h3>Jobs & Skills</h3>
 
-    <p>
-      Tell us about youth employment, skills and
-      economic opportunities in your community.
-    </p>
+            <!-- WARD -->
+            <div class="field">
 
-  </div>
+              <label for="ward">
+                Ward
+                <span>*</span>
+              </label>
 
-  <div class="type-card">
+              <select id="ward" name="ward" required>
 
-    <div class="icon">🛍️</div>
+                <option value="">
+                  Select your ward
+                </option>
 
-    <h3>Traders & Businesses</h3>
+                <option value="Ilogbo Ward">
+                  Ilogbo Ward
+                </option>
 
-    <p>
-      Share challenges affecting traders, artisans,
-      entrepreneurs and local businesses.
-    </p>
+                <option value="Irewe Ward">
+                  Irewe Ward
+                </option>
 
-  </div>
+                <option value="Ijanikin Ward">
+                  Ijanikin Ward
+                </option>
 
-  <div class="type-card">
+                <option value="Etegbin Ward">
+                  Etegbin Ward
+                </option>
 
-    <div class="icon">💡</div>
+                <option value="Idolowu Ward">
+                  Idolowu Ward
+                </option>
 
-    <h3>Your Ideas</h3>
+                <option value="Tafi Ward">
+                  Tafi Ward
+                </option>
 
-    <p>
-      Have an idea that can improve Ojo Constituency II?
-      We want to hear it.
-    </p>
+                <option value="Other / Not Sure">
+                  Other / Not Sure
+                </option>
 
-  </div>
+              </select>
 
-</div>
+            </div>
 
-  </div></section><!-- WHATSAPP --><section class="whatsapp-section">  <div class="container"><div class="whatsapp-box">
 
-  <h2>Need To Speak Directly?</h2>
+            <!-- CATEGORY -->
+            <div class="field">
 
-  <p>
-    For complaints, urgent community matters or other
-    concerns, you can contact the designated IMOLE
-    WhatsApp number directly.
-  </p>
+              <label for="category">
+                Issue Category
+                <span>*</span>
+              </label>
 
-  <div class="number">
-    08033002235
-  </div>
+              <select id="category" name="category" required>
 
+                <option value="">
+                  Select issue category
+                </option>
+
+                <option value="Roads">
+                  🛣️ Roads
+                </option>
+
+                <option value="Drainage / Flooding">
+                  🌧️ Drainage / Flooding
+                </option>
+
+                <option value="Electricity / Power">
+                  💡 Electricity / Power
+                </option>
+
+                <option value="Water">
+                  💧 Water
+                </option>
+
+                <option value="Healthcare">
+                  🏥 Healthcare
+                </option>
+
+                <option value="Education / Schools">
+                  🎓 Education / Schools
+                </option>
+
+                <option value="Security">
+                  🛡️ Security
+                </option>
+
+                <option value="Markets / Traders">
+                  🛒 Markets / Traders
+                </option>
+
+                <option value="Environment / Waste">
+                  🌱 Environment / Waste
+                </option>
+
+                <option value="Youth / Employment">
+                  👥 Youth / Employment
+                </option>
+
+                <option value="Other">
+                  📌 Other
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <!-- LOCATION -->
+            <div class="field full">
+
+              <label for="location">
+                Specific Location
+                <span>*</span>
+              </label>
+
+              <input
+                id="location"
+                name="location"
+                type="text"
+                placeholder="Street, community, landmark, bus stop or area"
+                required
+              >
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+            <div class="field full">
+
+              <label for="description">
+                Describe the Community Need
+                <span>*</span>
+              </label>
+
+              <textarea
+                id="description"
+                name="description"
+                maxlength="1000"
+                placeholder="Describe the problem, how it affects people, and any important details..."
+                required
+              ></textarea>
+
+              <div class="counter">
+                <span id="charCount">0</span>/1000
+              </div>
+
+            </div>
+
+
+            <!-- PHOTO -->
+            <div class="field full">
+
+              <label for="photo">
+                Supporting Photo
+              </label>
+
+              <div class="photo-box">
+
+                <input
+                  id="photo"
+                  name="photo"
+                  type="file"
+                  accept="image/*"
+                >
+
+                <div class="help">
+                  Optional. A photo can help explain the issue.
+                  The photo will remain on your device until you choose
+                  how to share it.
+                </div>
+
+                <img
+                  id="photoPreview"
+                  class="photo-preview"
+                  alt="Selected community issue photo preview"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- CONSENT -->
+            <div class="field full">
+
+              <div class="consent">
+
+                <input
+                  id="consent"
+                  type="checkbox"
+                  required
+                >
+
+                <label for="consent">
+                  I confirm that the information I am submitting is
+                  provided in good faith and relates to a community
+                  issue or need.
+                  <span>*</span>
+                </label>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="important">
+
+            <strong>Important:</strong>
+            This form does not automatically repair or resolve an issue.
+            It helps the IMOLE 2027 team receive and organize community
+            concerns for follow-up, advocacy and engagement.
+
+          </div>
+
+
+          <!-- BUTTONS -->
+          <div class="actions">
+
+            <button
+              type="submit"
+              class="btn btn-whatsapp"
+            >
+              💬 Send Report via WhatsApp
+            </button>
+
+            <button
+              type="reset"
+              class="btn btn-secondary"
+              id="resetBtn"
+            >
+              ↺ Clear Form
+            </button>
+
+          </div>
+
+
+        </form>
+
+      </section>
+
+
+      <!-- SIDE -->
+      <aside class="side">
+
+
+        <!-- HOW IT WORKS -->
+        <div class="card info-card">
+
+          <h3>
+            How It Works
+          </h3>
+
+          <p>
+            Sharing a community need takes only a few steps.
+          </p>
+
+
+          <div class="steps">
+
+
+            <div class="step">
+
+              <div class="step-number">
+                1
+              </div>
+
+              <div>
+
+                <strong>
+                  Tell us the issue
+                </strong>
+
+                <p>
+                  Describe the problem affecting your community.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="step">
+
+              <div class="step-number">
+                2
+              </div>
+
+              <div>
+
+                <strong>
+                  Add the location
+                </strong>
+
+                <p>
+                  Tell us the ward and specific area.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="step">
+
+              <div class="step-number">
+                3
+              </div>
+
+              <div>
+
+                <strong>
+                  Submit through WhatsApp
+                </strong>
+
+                <p>
+                  Your report will open in WhatsApp for you to send.
+                </p>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+        <!-- COMMUNITY PRIORITIES -->
+        <div class="card info-card">
+
+          <h3>
+            What Can You Report?
+          </h3>
+
+          <p>
+            You can use this page to highlight issues such as:
+          </p>
+
+          <div class="steps">
+
+            <div class="step">
+              <div class="step-number">🛣️</div>
+              <div>
+                <strong>Roads & Drainage</strong>
+                <p>Bad roads, blocked drainage and flooding.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">💡</div>
+              <div>
+                <strong>Power & Water</strong>
+                <p>Electricity and water supply concerns.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">🏥</div>
+              <div>
+                <strong>Health & Education</strong>
+                <p>Healthcare facilities and school needs.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- WHATSAPP -->
+        <div class="card info-card contact-card">
+
+          <h3>
+            Prefer WhatsApp?
+          </h3>
+
+          <p>
+            You can contact the IMOLE 2027 community team directly
+            if you prefer not to use the form.
+          </p>
+
+          <a
+            class="whatsapp-big"
+            id="directWhatsApp"
+            href="https://wa.me/2348033002235"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            💬 Open WhatsApp
+          </a>
+
+        </div>
+
+
+      </aside>
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-brand">
+        IMOLE 2027
+      </div>
+
+      <p>
+        Hon. Nurudeen Abayomi Sadeeq
+      </p>
+
+      <p>
+        Candidate for Lagos State House of Assembly,
+        Ojo Constituency II
+      </p>
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="manifesto.html">
+          Manifesto
+        </a>
+
+        <a href="polling-units.html">
+          Polling Units
+        </a>
+
+        <a href="results.html">
+          Results
+        </a>
+
+        <a href="community.html">
+          Community
+        </a>
+
+        <a href="join.html">
+          Join IMOLE
+        </a>
+
+      </div>
+
+      <p>
+        © <span id="year"></span> IMOLE 2027 •
+        Nigeria Democratic Congress
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
   <a
+    class="float-wa"
+    id="floatingWhatsApp"
     href="https://wa.me/2348033002235"
     target="_blank"
-    rel="noopener"
-    class="btn btn-whatsapp">
-    💬 Open IMOLE WhatsApp
+    rel="noopener noreferrer"
+    aria-label="Contact IMOLE 2027 on WhatsApp"
+  >
+    💬
   </a>
 
-</div>
 
-  </div></section><!-- NEWS CTA --><section class="news-cta">  <div class="container"><div class="news-box">
+  <!-- TOAST -->
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
 
-  <h2>Stay Connected With IMOLE</h2>
 
-  <p>
-    Follow the latest campaign news, community updates,
-    breaking announcements, events and media content.
-  </p>
+  <script>
 
-  <div class="hero-buttons" style="justify-content:center;">
+    "use strict";
 
-    <a
-      href="news.html"
-      class="btn btn-primary">
-      📰 Latest News
-    </a>
 
-    <a
-      href="events.html"
-      class="btn btn-white"
-      style="border:1px solid #dce5e1;">
-      📅 Events
-    </a>
+    /* =========================================
+       CONFIGURATION
+    ========================================== */
 
-    <a
-      href="media.html"
-      class="btn btn-white"
-      style="border:1px solid #dce5e1;">
-      🎵 Media Centre
-    </a>
+    const WHATSAPP_NUMBER = "2348033002235";
 
-  </div>
 
-</div>
+    /* =========================================
+       HELPERS
+    ========================================== */
 
-  </div></section><!-- FOOTER --><footer>  <div class="container"><div class="footer-grid">
+    const $ = (selector) =>
+      document.querySelector(selector);
 
-  <div>
 
-    <div class="footer-brand">
+    const showToast = (message) => {
 
-      <img
-        src="assets/IMG-20260728-WA0032.jpg"
-        alt="NDC Logo">
+      const toast = $("#toast");
 
-      <div>
+      if (!toast) return;
 
-        <strong style="color:#fff;">
-          IMOLE 2027
-        </strong>
+      toast.textContent = message;
 
-        <br>
+      toast.classList.add("show");
 
-        <small>
-          Nigeria Democratic Congress
-        </small>
+      clearTimeout(window.__toastTimer);
 
-      </div>
+      window.__toastTimer = setTimeout(() => {
 
-    </div>
+        toast.classList.remove("show");
 
-    <p>
-      Official campaign platform of Hon. Nurudeen
-      Abayomi Sadeeq, NDC candidate for Lagos State
-      House of Assembly, Ojo Constituency II.
-    </p>
+      }, 3200);
 
-  </div>
+    };
 
-  <div>
 
-    <h3>Quick Links</h3>
+    /* =========================================
+       MOBILE MENU
+    ========================================== */
 
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="manifesto.html">Manifesto</a>
-    <a href="polling-units.html">Polling Units</a>
-    <a href="news.html">News</a>
-    <a href="events.html">Events</a>
+    const menuBtn = $("#menuBtn");
+    const navLinks = $("#navLinks");
 
-  </div>
 
-  <div>
+    if (menuBtn && navLinks) {
 
-    <h3>Community</h3>
+      menuBtn.addEventListener("click", () => {
 
-    <a href="community.html">
-      Share Community Need
-    </a>
+        const isOpen =
+          navLinks.classList.toggle("open");
 
-    <a
-      href="https://wa.me/2348033002235"
-      target="_blank"
-      rel="noopener">
-      WhatsApp
-    </a>
+        menuBtn.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
 
-    <a href="join.html">
-      Join IMOLE
-    </a>
+        menuBtn.setAttribute(
+          "aria-label",
+          isOpen
+            ? "Close navigation menu"
+            : "Open navigation menu"
+        );
 
-    <a href="contact.html">
-      Contact Campaign
-    </a>
-
-  </div>
-
-</div>
-
-<div class="copyright">
-
-  © 2026 Hon. Nurudeen Abayomi Sadeeq Campaign.
-  All Rights Reserved.
-  <br>
-  Nigeria Democratic Congress (NDC) |
-  Ojo Constituency II
-
-</div>
-
-  </div></footer><!-- FLOATING SHARE --><button
-class="floating-share"
-id="floatingShare"
-aria-label="Share Community Page"
-title="Share Community Page">
-🔗
-</button>
-
-<!-- FLOATING WHATSAPP --><a
-class="whatsapp-float"
-href="https://wa.me/2348033002235"
-target="_blank"
-rel="noopener"
-aria-label="Chat with IMOLE on WhatsApp"
-title="Chat with IMOLE on WhatsApp">
-☎
-</a>
-
-<script>
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-(function(){
-
-  const menuBtn =
-    document.getElementById("menuBtn");
-
-  const navLinks =
-    document.getElementById("navLinks");
-
-  if(!menuBtn || !navLinks) return;
-
-  menuBtn.addEventListener("click",function(){
-
-    navLinks.classList.toggle("show");
-
-    menuBtn.textContent =
-      navLinks.classList.contains("show")
-      ? "✕"
-      : "☰";
-
-  });
-
-  navLinks.querySelectorAll("a")
-    .forEach(function(link){
-
-      link.addEventListener("click",function(){
-
-        navLinks.classList.remove("show");
-
-        menuBtn.textContent="☰";
+        menuBtn.textContent =
+          isOpen ? "✕" : "☰";
 
       });
 
-    });
 
-})();
+      navLinks
+        .querySelectorAll("a")
+        .forEach(link => {
 
+          link.addEventListener("click", () => {
 
-/* =========================
-   SET MESSAGE TYPE
-========================= */
+            navLinks.classList.remove("open");
 
-window.setType=function(type){
+            menuBtn.setAttribute(
+              "aria-expanded",
+              "false"
+            );
 
-  const category =
-    document.getElementById("category");
+            menuBtn.setAttribute(
+              "aria-label",
+              "Open navigation menu"
+            );
 
-  if(category){
+            menuBtn.textContent = "☰";
 
-    const options =
-      Array.from(category.options);
-
-    const match =
-      options.find(function(option){
-
-        return option.value === type;
-
-      });
-
-    if(match){
-
-      category.value = type;
-
-    }
-
-  }
-
-};
-
-
-/* =========================
-   FORM ELEMENTS
-========================= */
-
-const form =
-  document.getElementById("communityForm");
-
-const statusBox =
-  document.getElementById("status");
-
-const copyBtn =
-  document.getElementById("copyBtn");
-
-const shareBtn =
-  document.getElementById("shareBtn");
-
-const floatingShare =
-  document.getElementById("floatingShare");
-
-
-/* =========================
-   CREATE WHATSAPP MESSAGE
-========================= */
-
-function buildMessage(){
-
-  const name =
-    document.getElementById("name").value.trim();
-
-  const phone =
-    document.getElementById("phone").value.trim();
-
-  const ward =
-    document.getElementById("ward").value.trim();
-
-  const category =
-    document.getElementById("category").value.trim();
-
-  const location =
-    document.getElementById("location").value.trim();
-
-  const message =
-    document.getElementById("message").value.trim();
-
-
-  return (
-`IMOLE 2027 — COMMUNITY MESSAGE
-
-Type: ${category || "Community Message"}
-
-Name: ${name || "Not provided"}
-
-Phone: ${phone || "Not provided"}
-
-Ward: ${ward || "Not provided"}
-
-Community / Location: ${location || "Not provided"}
-
-Message:
-${message || "No message provided"}
-
-Submitted through the IMOLE Community Hub.
-
-SERVICE • DEVELOPMENT • ACCOUNTABILITY`
-  );
-
-}
-
-
-/* =========================
-   SHOW STATUS
-========================= */
-
-function showStatus(message,type){
-
-  if(!statusBox) return;
-
-  statusBox.textContent = message;
-
-  statusBox.className =
-    "status show " + type;
-
-}
-
-
-/* =========================
-   SEND TO WHATSAPP
-========================= */
-
-if(form){
-
-  form.addEventListener("submit",function(event){
-
-    event.preventDefault();
-
-    const message =
-      buildMessage();
-
-    const name =
-      document.getElementById("name").value.trim();
-
-    const location =
-      document.getElementById("location").value.trim();
-
-    const issue =
-      document.getElementById("message").value.trim();
-
-
-    if(!name){
-
-      showStatus(
-        "Please enter your name.",
-        "error"
-      );
-
-      document.getElementById("name").focus();
-
-      return;
-
-    }
-
-
-    if(!location){
-
-      showStatus(
-        "Please enter your community or location.",
-        "error"
-      );
-
-      document.getElementById("location").focus();
-
-      return;
-
-    }
-
-
-    if(!issue){
-
-      showStatus(
-        "Please describe your need, complaint or suggestion.",
-        "error"
-      );
-
-      document.getElementById("message").focus();
-
-      return;
-
-    }
-
-
-    const whatsappURL =
-      "https://wa.me/2348033002235?text=" +
-      encodeURIComponent(message);
-
-
-    showStatus(
-      "Opening WhatsApp with your community message...",
-      "success"
-    );
-
-
-    setTimeout(function(){
-
-      window.open(
-        whatsappURL,
-        "_blank",
-        "noopener"
-      );
-
-    },300);
-
-  });
-
-}
-
-
-/* =========================
-   COPY MESSAGE
-========================= */
-
-if(copyBtn){
-
-  copyBtn.addEventListener("click",function(){
-
-    const message =
-      buildMessage();
-
-
-    if(navigator.clipboard){
-
-      navigator.clipboard.writeText(message)
-        .then(function(){
-
-          showStatus(
-            "Community message copied successfully.",
-            "success"
-          );
-
-        })
-        .catch(function(){
-
-          fallbackCopy(message);
+          });
 
         });
 
-    }else{
 
-      fallbackCopy(message);
+      document.addEventListener("click", (event) => {
 
-    }
+        if (
+          !navLinks.contains(event.target) &&
+          !menuBtn.contains(event.target)
+        ) {
 
-  });
+          navLinks.classList.remove("open");
 
-}
+          menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+          );
 
+          menuBtn.textContent = "☰";
 
-function fallbackCopy(text){
-
-  const area =
-    document.createElement("textarea");
-
-  area.value=text;
-
-  area.style.position="fixed";
-  area.style.left="-9999px";
-
-  document.body.appendChild(area);
-
-  area.select();
-
-  try{
-
-    document.execCommand("copy");
-
-    showStatus(
-      "Community message copied successfully.",
-      "success"
-    );
-
-  }catch(error){
-
-    showStatus(
-      "Unable to copy automatically. Please select and copy the message.",
-      "error"
-    );
-
-  }
-
-  document.body.removeChild(area);
-
-}
-
-
-/* =========================
-   SHARE COMMUNITY PAGE
-========================= */
-
-function shareCommunityPage(){
-
-  const shareData = {
-
-    title:
-      "IMOLE 2027 Community Hub",
-
-    text:
-      "Share your community needs, complaints, suggestions and ideas with IMOLE 2027.",
-
-    url:
-      window.location.href
-
-  };
-
-
-  if(navigator.share){
-
-    navigator.share(shareData)
-      .then(function(){})
-      .catch(function(){});
-
-  }else{
-
-    if(navigator.clipboard){
-
-      navigator.clipboard.writeText(
-        window.location.href
-      )
-      .then(function(){
-
-        showStatus(
-          "Community page link copied. You can now share it with your contacts.",
-          "success"
-        );
-
-      })
-      .catch(function(){
-
-        showStatus(
-          "Copy this page address from your browser and share it.",
-          "success"
-        );
+        }
 
       });
 
-    }else{
+    }
 
-      showStatus(
-        "Use your browser's share option to share this page.",
-        "success"
+
+    /* =========================================
+       YEAR
+    ========================================== */
+
+    const year = $("#year");
+
+    if (year) {
+
+      year.textContent =
+        new Date().getFullYear();
+
+    }
+
+
+    /* =========================================
+       CHARACTER COUNTER
+    ========================================== */
+
+    const description =
+      $("#description");
+
+    const charCount =
+      $("#charCount");
+
+
+    if (description && charCount) {
+
+      const updateCounter = () => {
+
+        charCount.textContent =
+          description.value.length;
+
+      };
+
+      description.addEventListener(
+        "input",
+        updateCounter
+      );
+
+      updateCounter();
+
+    }
+
+
+    /* =========================================
+       PHOTO PREVIEW
+    ========================================== */
+
+    const photo =
+      $("#photo");
+
+    const photoPreview =
+      $("#photoPreview");
+
+
+    if (photo && photoPreview) {
+
+      photo.addEventListener(
+        "change",
+        () => {
+
+          const file =
+            photo.files &&
+            photo.files[0];
+
+          if (!file) {
+
+            photoPreview.style.display =
+              "none";
+
+            photoPreview.removeAttribute(
+              "src"
+            );
+
+            return;
+
+          }
+
+
+          if (!file.type.startsWith("image/")) {
+
+            showToast(
+              "Please select an image file."
+            );
+
+            photo.value = "";
+
+            return;
+
+          }
+
+
+          const reader =
+            new FileReader();
+
+
+          reader.onload = event => {
+
+            photoPreview.src =
+              event.target.result;
+
+            photoPreview.style.display =
+              "block";
+
+          };
+
+
+          reader.readAsDataURL(file);
+
+        }
       );
 
     }
 
-  }
 
-}
+    /* =========================================
+       FORM
+    ========================================== */
 
-
-if(shareBtn){
-
-  shareBtn.addEventListener(
-    "click",
-    shareCommunityPage
-  );
-
-}
+    const form =
+      $("#communityForm");
 
 
-if(floatingShare){
+    if (form) {
 
-  floatingShare.addEventListener(
-    "click",
-    shareCommunityPage
-  );
+      form.addEventListener(
+        "submit",
+        event => {
 
-}
+          event.preventDefault();
 
 
-/* =========================
-   IMAGE ERROR PROTECTION
-========================= */
+          if (!form.checkValidity()) {
 
-document.querySelectorAll("img")
-.forEach(function(image){
+            form.reportValidity();
 
-  image.addEventListener(
-    "error",
-    function(){
+            showToast(
+              "Please complete the required fields."
+            );
 
-      this.style.background="#e9efec";
+            return;
+
+          }
+
+
+          const name =
+            $("#name").value.trim();
+
+          const phone =
+            $("#phone").value.trim();
+
+          const ward =
+            $("#ward").value.trim();
+
+          const category =
+            $("#category").value.trim();
+
+          const location =
+            $("#location").value.trim();
+
+          const details =
+            $("#description").value.trim();
+
+
+          if (
+            !name ||
+            !ward ||
+            !category ||
+            !location ||
+            !details
+          ) {
+
+            showToast(
+              "Please complete all required fields."
+            );
+
+            return;
+
+          }
+
+
+          const message =
+`📢 IMOLE 2027 COMMUNITY REPORT
+
+Hello IMOLE 2027,
+
+I would like to share a community need.
+
+👤 Name:
+${name}
+
+📞 Phone:
+${phone || "Not provided"}
+
+📍 Ward:
+${ward}
+
+📌 Issue Category:
+${category}
+
+📍 Specific Location:
+${location}
+
+📝 Community Need:
+${details}
+
+Thank you.`;
+
+
+          const whatsappURL =
+            "https://wa.me/" +
+            WHATSAPP_NUMBER +
+            "?text=" +
+            encodeURIComponent(message);
+
+
+          /*
+            WhatsApp opens in a new tab/window.
+            On Android, this normally launches
+            WhatsApp if it is installed.
+          */
+
+          window.open(
+            whatsappURL,
+            "_blank",
+            "noopener,noreferrer"
+          );
+
+
+          showToast(
+            "Your report is ready in WhatsApp."
+          );
+
+        }
+      );
+
+
+      /* =====================================
+         RESET
+      ====================================== */
+
+      form.addEventListener(
+        "reset",
+        () => {
+
+          setTimeout(() => {
+
+            if (charCount) {
+              charCount.textContent = "0";
+            }
+
+            if (photoPreview) {
+
+              photoPreview.style.display =
+                "none";
+
+              photoPreview.removeAttribute(
+                "src"
+              );
+
+            }
+
+            showToast(
+              "Community report form cleared."
+            );
+
+          }, 0);
+
+        }
+      );
 
     }
-  );
-
-});
 
 
-/* =========================
-   CLOSE MENU WHEN CLICKING OUTSIDE
-========================= */
+    /* =========================================
+       DIRECT WHATSAPP
+    ========================================== */
 
-document.addEventListener("click",function(event){
+    const directWhatsApp =
+      $("#directWhatsApp");
 
-  const nav =
-    document.getElementById("navLinks");
+    if (directWhatsApp) {
 
-  const menu =
-    document.getElementById("menuBtn");
+      const message =
+        "Hello IMOLE 2027, I would like to share a community need.";
 
-  if(!nav || !menu) return;
+      directWhatsApp.href =
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        encodeURIComponent(message);
 
-  if(
-    nav.classList.contains("show") &&
-    !nav.contains(event.target) &&
-    !menu.contains(event.target)
-  ){
+    }
 
-    nav.classList.remove("show");
 
-    menu.textContent="☰";
+    /* =========================================
+       FLOATING WHATSAPP
+    ========================================== */
 
-  }
+    const floatingWhatsApp =
+      $("#floatingWhatsApp");
 
-});
+    if (floatingWhatsApp) {
 
-</script></body>
+      const message =
+        "Hello IMOLE 2027, I would like to share a community need.";
+
+      floatingWhatsApp.href =
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        encodeURIComponent(message);
+
+    }
+
+
+    /* =========================================
+       ESCAPE KEY
+    ========================================== */
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (
+          event.key === "Escape" &&
+          navLinks
+        ) {
+
+          navLinks.classList.remove(
+            "open"
+          );
+
+          if (menuBtn) {
+
+            menuBtn.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            menuBtn.textContent =
+              "☰";
+
+          }
+
+        }
+
+      }
+    );
+
+
+    /* =========================================
+       SERVICE WORKER
+    ========================================== */
+
+    if ("serviceWorker" in navigator) {
+
+      window.addEventListener(
+        "load",
+        () => {
+
+          navigator.serviceWorker
+            .register(
+              "./sw.js?v=20260903"
+            )
+            .then(() => {
+
+              console.log(
+                "IMOLE 2027 service worker registered."
+              );
+
+            })
+            .catch(error => {
+
+              console.warn(
+                "Service worker registration failed:",
+                error
+              );
+
+            });
+
+        }
+      );
+
+    }
+
+  </script>
+
+</body>
 </html>
