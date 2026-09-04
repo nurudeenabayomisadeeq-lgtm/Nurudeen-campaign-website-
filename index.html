@@ -30,7 +30,7 @@
       content="website">
 
 <link rel="manifest"
-      href="./manifest.json?v=20260903-05">
+      href="./manifest.json?v=20260904-06">
 
 <title>
 IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq
@@ -55,13 +55,16 @@ html{
 
 body{
     margin:0;
+
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 
     background:#f5f8f6;
+
     color:#18372d;
+
     line-height:1.6;
 
     overflow-x:hidden;
@@ -98,12 +101,15 @@ button{
 
 .topbar{
     background:#03271f;
+
     color:#fff;
+
     text-align:center;
 
     padding:7px 10px;
 
     font-size:12px;
+
     font-weight:800;
 }
 
@@ -118,6 +124,7 @@ button{
 
 header{
     position:sticky;
+
     top:0;
 
     z-index:9999;
@@ -136,7 +143,9 @@ header{
     min-height:72px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     gap:12px;
@@ -144,6 +153,7 @@ header{
 
 .brand{
     display:flex;
+
     align-items:center;
 
     gap:10px;
@@ -207,17 +217,21 @@ header{
 
 
 /* =========================================================
-   DESKTOP NAV
+   DESKTOP NAVIGATION
 ========================================================= */
 
 .nav-links{
     display:none;
+
+    align-items:center;
+
+    gap:13px;
 }
 
 .nav-links a{
     color:#21473b;
 
-    font-size:13px;
+    font-size:12px;
 
     font-weight:900;
 
@@ -259,6 +273,10 @@ header{
     font-size:14px;
 
     font-weight:800;
+}
+
+.mobile-menu a:last-child{
+    border-bottom:0;
 }
 
 
@@ -421,6 +439,12 @@ header{
     font-size:13px;
 
     font-weight:1000;
+
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
 }
 
 .btn-primary{
@@ -533,7 +557,7 @@ header{
 
 
 /* =========================================================
-   SECTIONS
+   GENERAL SECTIONS
 ========================================================= */
 
 .section{
@@ -894,6 +918,157 @@ header{
 
 
 /* =========================================================
+   FACEBOOK
+========================================================= */
+
+.facebook-section{
+    background:#f5f8f6;
+}
+
+.facebook-card{
+    max-width:900px;
+
+    margin:0 auto;
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:32px 20px;
+
+    text-align:center;
+
+    border:1px solid #dfeae5;
+
+    box-shadow:
+        0 8px 30px
+        rgba(0,0,0,.07);
+}
+
+.facebook-icon{
+    width:72px;
+    height:72px;
+
+    margin:0 auto 14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#1877f2;
+
+    color:#fff;
+
+    font-family:Arial,sans-serif;
+
+    font-size:45px;
+
+    font-weight:1000;
+
+    line-height:1;
+}
+
+.facebook-card h2{
+    color:#063b2d;
+
+    font-size:27px;
+
+    line-height:1.2;
+
+    margin-bottom:9px;
+}
+
+.facebook-card p{
+    max-width:680px;
+
+    margin:
+        0 auto 20px;
+
+    color:#68756f;
+
+    font-size:13px;
+}
+
+.facebook-buttons{
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+}
+
+.facebook-btn{
+    min-height:47px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:11px 19px;
+
+    border-radius:12px;
+
+    font-size:13px;
+
+    font-weight:1000;
+
+    transition:.2s;
+}
+
+.facebook-btn:hover{
+    transform:translateY(-2px);
+}
+
+.facebook-primary{
+    background:#1877f2;
+
+    color:#fff;
+}
+
+.facebook-secondary{
+    background:#063b2d;
+
+    color:#fff;
+}
+
+.facebook-note{
+    max-width:650px;
+
+    margin:17px auto 0;
+
+    color:#8a948f;
+
+    font-size:10px;
+
+    line-height:1.5;
+}
+
+.facebook-direct-link{
+    display:inline-block;
+
+    margin-top:12px;
+
+    color:#1877f2;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    word-break:break-all;
+}
+
+
+/* =========================================================
    COUNTDOWN
 ========================================================= */
 
@@ -1154,6 +1329,10 @@ footer{
     font-size:12px;
 }
 
+.footer-links a:hover{
+    color:#ffd84d;
+}
+
 .footer-bottom{
     border-top:
         1px solid
@@ -1187,6 +1366,7 @@ footer{
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     border-radius:50%;
@@ -1282,6 +1462,7 @@ footer{
 
     left:10px;
     right:10px;
+
     bottom:10px;
 
     z-index:11000;
@@ -1359,10 +1540,6 @@ footer{
 
     .nav-links{
         display:flex;
-
-        align-items:center;
-
-        gap:15px;
     }
 
     .hero{
@@ -1391,6 +1568,43 @@ footer{
 
 
 /* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:380px){
+
+    .brand-title{
+        font-size:15px;
+    }
+
+    .brand-sub{
+        font-size:8px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .facebook-btn{
+        width:100%;
+    }
+
+    .timer{
+        gap:4px;
+    }
+
+    .time-number{
+        font-size:18px;
+    }
+
+}
+
+
+/* =========================================================
    REDUCED MOTION
 ========================================================= */
 
@@ -1404,6 +1618,7 @@ footer{
 
     *{
         animation:none!important;
+
         transition:none!important;
     }
 
@@ -1467,12 +1682,15 @@ footer{
     <button
         class="menu-btn"
         id="menu-btn"
-        aria-label="Open navigation menu">
+        aria-label="Open navigation menu"
+        aria-expanded="false">
 
         ☰
 
     </button>
 
+
+    <!-- DESKTOP NAVIGATION -->
 
     <nav class="nav-links">
 
@@ -1510,6 +1728,10 @@ footer{
 
         <a href="./community.html">
             Community
+        </a>
+
+        <a href="#facebook">
+            Facebook
         </a>
 
         <a href="./join.html">
@@ -1569,6 +1791,10 @@ footer{
 
     <a href="./community.html">
         🤝 Community Need
+    </a>
+
+    <a href="#facebook">
+        📘 Facebook
     </a>
 
     <a href="./join.html">
@@ -1637,7 +1863,7 @@ footer{
             <a
                 href="https://wa.me/2348033002235"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 class="btn btn-whatsapp">
 
                 💬 WhatsApp Us
@@ -1665,7 +1891,10 @@ footer{
             class="hero-photo"
             src="assets/Hon%20Nurudeen%20Abayomi%20Sadeeq.jpg"
             alt="Hon. Nurudeen Abayomi Sadeeq"
-            onerror="this.onerror=null; this.src='assets/Hon Nurudeen Abayomi Sadeeq.jpg';">
+            onerror="
+                this.onerror=null;
+                this.src='assets/Hon Nurudeen Abayomi Sadeeq.jpg';
+            ">
 
     </div>
 
@@ -1894,7 +2123,7 @@ footer{
             <a
                 href="https://wa.me/2348033002235?text=Hello%20IMOLE%202027%2C%20I%20want%20to%20share%20a%20community%20need."
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 class="btn btn-whatsapp">
 
                 💬 Send via WhatsApp
@@ -2072,9 +2301,7 @@ footer{
     <div class="candidate-grid">
 
 
-        <!-- =================================================
-             NURUDEEN
-        ================================================== -->
+        <!-- NURUDEEN -->
 
         <article class="candidate-card">
 
@@ -2102,9 +2329,7 @@ footer{
 
 
                 <div class="candidate-role">
-
                     Lagos State House of Assembly
-
                 </div>
 
 
@@ -2127,9 +2352,7 @@ footer{
         </article>
 
 
-        <!-- =================================================
-             SEYI SOWUNMI
-        ================================================== -->
+        <!-- SEYI -->
 
         <article class="candidate-card">
 
@@ -2157,9 +2380,7 @@ footer{
 
 
                 <div class="candidate-role">
-
                     Federal House of Representatives
-
                 </div>
 
 
@@ -2172,9 +2393,7 @@ footer{
 
 
                 <span class="candidate-tag">
-
                     NDC • OJO FEDERAL
-
                 </span>
 
 
@@ -2184,9 +2403,7 @@ footer{
         </article>
 
 
-        <!-- =================================================
-             PETER OBI
-        ================================================== -->
+        <!-- PETER OBI -->
 
         <article class="candidate-card">
 
@@ -2214,9 +2431,7 @@ footer{
 
 
                 <div class="candidate-role">
-
                     National Leadership & Development
-
                 </div>
 
 
@@ -2231,9 +2446,7 @@ footer{
 
 
                 <span class="candidate-tag">
-
                     NATIONAL DEVELOPMENT
-
                 </span>
 
 
@@ -2241,6 +2454,109 @@ footer{
 
 
         </article>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     FACEBOOK COMMUNITY
+====================================================== -->
+
+<section
+    class="section facebook-section"
+    id="facebook">
+
+<div class="container">
+
+
+    <h2 class="section-title">
+        📘 Connect With IMOLE 2027 on Facebook
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        Follow our Facebook community for campaign updates,
+        activities, announcements, events and important
+        information about IMOLE 2027.
+
+    </p>
+
+
+    <div class="facebook-card">
+
+
+        <div class="facebook-icon">
+            f
+        </div>
+
+
+        <h2>
+            IMOLE 2027 on Facebook
+        </h2>
+
+
+        <p>
+
+            Join the conversation and stay connected with
+            Hon. Nurudeen Abayomi Sadeeq and the IMOLE 2027
+            movement on Facebook.
+
+        </p>
+
+
+        <div class="facebook-buttons">
+
+
+            <a
+                href="https://www.facebook.com/share/1Fuo5bGA6c/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="facebook-btn facebook-primary">
+
+                📘 Visit Our Facebook Page
+
+            </a>
+
+
+            <a
+                href="https://www.facebook.com/share/1Fuo5bGA6c/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="facebook-btn facebook-secondary">
+
+                👍 Follow IMOLE 2027
+
+            </a>
+
+
+        </div>
+
+
+        <div class="facebook-note">
+
+            Facebook may not allow a Share link to display
+            as a live feed inside another website.
+            The buttons above will open the Facebook link
+            directly.
+
+        </div>
+
+
+        <a
+            class="facebook-direct-link"
+            href="https://www.facebook.com/share/1Fuo5bGA6c/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            facebook.com/share/1Fuo5bGA6c/
+
+        </a>
 
 
     </div>
@@ -2300,9 +2616,7 @@ footer{
                     <span
                         class="time-number"
                         id="general-days">
-
                         00
-
                     </span>
 
                     <span class="time-label">
@@ -2317,9 +2631,7 @@ footer{
                     <span
                         class="time-number"
                         id="general-hours">
-
                         00
-
                     </span>
 
                     <span class="time-label">
@@ -2334,9 +2646,7 @@ footer{
                     <span
                         class="time-number"
                         id="general-minutes">
-
                         00
-
                     </span>
 
                     <span class="time-label">
@@ -2351,9 +2661,7 @@ footer{
                     <span
                         class="time-number"
                         id="general-seconds">
-
                         00
-
                     </span>
 
                     <span class="time-label">
@@ -2393,9 +2701,7 @@ footer{
                     <span
                         class="time-number"
                         id="imole-days">
-
                         00
-
                     </span>
 
                     <span class="time-label">
@@ -2410,9 +2716,7 @@ footer{
                     <span
                         class="time-number"
                         id="imole-hours">
-
                         00
-
                     </span>
 
                     <span class="time-label">
@@ -2427,9 +2731,7 @@ footer{
                     <span
                         class="time-number"
                         id="imole-minutes">
-
                         00
-
                     </span>
 
                     <span class="time-label">
@@ -2444,9 +2746,7 @@ footer{
                     <span
                         class="time-number"
                         id="imole-seconds">
-
                         00
-
                     </span>
 
                     <span class="time-label">
@@ -2469,7 +2769,7 @@ footer{
 
 
 <!-- ======================================================
-     MOTIVATIONAL QUOTE OF THE DAY
+     MOTIVATIONAL QUOTE
 ====================================================== -->
 
 <section class="section motivation">
@@ -2478,9 +2778,7 @@ footer{
 
 
     <h2 class="section-title">
-
         ✨ Motivational Quote of the Day
-
     </h2>
 
 
@@ -2516,7 +2814,6 @@ footer{
         <div
             class="quote-date"
             id="quote-date">
-
         </div>
 
 
@@ -2568,6 +2865,15 @@ footer{
             class="btn btn-light">
 
             🤝 Share a Community Need
+
+        </a>
+
+
+        <a
+            href="#facebook"
+            class="btn btn-green">
+
+            📘 Facebook
 
         </a>
 
@@ -2652,6 +2958,11 @@ footer{
             News
         </a>
 
+
+        <a href="./events.html">
+            Events
+        </a>
+
     </div>
 
 
@@ -2677,10 +2988,15 @@ footer{
         </a>
 
 
+        <a href="#facebook">
+            Facebook
+        </a>
+
+
         <a
             href="https://wa.me/2348033002235"
             target="_blank"
-            rel="noopener">
+            rel="noopener noreferrer">
 
             WhatsApp
 
@@ -2710,7 +3026,7 @@ footer{
     class="whatsapp-float"
     href="https://wa.me/2348033002235?text=Hello%20IMOLE%202027"
     target="_blank"
-    rel="noopener"
+    rel="noopener noreferrer"
     aria-label="Contact IMOLE 2027 on WhatsApp">
 
     💬
@@ -2802,11 +3118,14 @@ footer{
 <script>
 
 /* =========================================================
-   BASIC CONFIG
+   BASIC CONFIGURATION
 ========================================================= */
 
 const WHATSAPP_NUMBER =
     "2348033002235";
+
+const FACEBOOK_URL =
+    "https://www.facebook.com/share/1Fuo5bGA6c/";
 
 const SITE_URL =
     window.location.href;
@@ -2833,16 +3152,24 @@ if(menuBtn && mobileMenu){
         "click",
         function(){
 
-            mobileMenu.classList.toggle(
-                "active"
-            );
+            const isOpen =
+                mobileMenu.classList.toggle(
+                    "active"
+                );
+
 
             menuBtn.textContent =
-                mobileMenu.classList.contains(
-                    "active"
-                )
+                isOpen
                 ? "✕"
                 : "☰";
+
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                isOpen
+                ? "true"
+                : "false"
+            );
 
         }
     );
@@ -2865,6 +3192,11 @@ if(menuBtn && mobileMenu){
 
                         menuBtn.textContent =
                             "☰";
+
+                        menuBtn.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
 
                     }
                 );
@@ -3137,9 +3469,7 @@ const motivationalQuotes = [
 ];
 
 
-function getDayOfYear(
-    date
-){
+function getDayOfYear(date){
 
     const start =
         new Date(
@@ -3295,47 +3625,57 @@ scheduleQuoteRefresh();
 const historyData = {
 
     "1-1":{
+
         title:
             "A New Beginning",
 
         text:
             "The first day of the year is traditionally a moment for reflection, renewal and setting positive goals for the future."
+
     },
 
 
     "2-1":{
+
         title:
             "The Power of Civic Participation",
 
         text:
             "Public participation remains an important foundation of accountable governance and community development."
+
     },
 
 
     "3-1":{
+
         title:
             "Building Through Unity",
 
         text:
             "Communities demonstrate their greatest strength when people cooperate to solve shared challenges."
+
     },
 
 
     "9-3":{
+
         title:
             "September Reflection",
 
         text:
             "The beginning of September offers an opportunity to reflect on progress, renew commitments and work toward a better future."
+
     },
 
 
     "12-25":{
+
         title:
             "Christmas Day",
 
         text:
             "Christmas is widely observed as a day of celebration, generosity, peace and goodwill."
+
     }
 
 };
@@ -3463,7 +3803,7 @@ const whatsappShare =
     );
 
 
-if(shareBtn){
+if(shareBtn && shareModal){
 
     shareBtn.addEventListener(
         "click",
@@ -3479,7 +3819,7 @@ if(shareBtn){
 }
 
 
-if(closeModal){
+if(closeModal && shareModal){
 
     closeModal.addEventListener(
         "click",
@@ -3639,6 +3979,42 @@ if(whatsappShare){
 
 
 /* =========================================================
+   FACEBOOK LINK TEST / FALLBACK
+========================================================= */
+
+function setupFacebookLinks(){
+
+    const facebookLinks =
+        document.querySelectorAll(
+            'a[href*="facebook.com"]'
+        );
+
+
+    facebookLinks.forEach(
+        function(link){
+
+            link.addEventListener(
+                "click",
+                function(){
+
+                    console.log(
+                        "Opening IMOLE Facebook:",
+                        FACEBOOK_URL
+                    );
+
+                }
+            );
+
+        }
+    );
+
+}
+
+
+setupFacebookLinks();
+
+
+/* =========================================================
    ONLINE / OFFLINE
 ========================================================= */
 
@@ -3704,7 +4080,7 @@ if(
 
             navigator.serviceWorker
                 .register(
-                    "./sw.js?v=20260903-05",
+                    "./sw.js?v=20260904-06",
                     {
                         updateViaCache:
                             "none"
@@ -3769,6 +4145,16 @@ if(
 
 console.log(
     "IMOLE 2027 index.html loaded successfully."
+);
+
+console.log(
+    "Facebook:",
+    FACEBOOK_URL
+);
+
+console.log(
+    "Nurudeen image:",
+    "assets/Hon Nurudeen Abayomi Sadeeq.jpg"
 );
 
 console.log(
