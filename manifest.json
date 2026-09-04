@@ -3,13 +3,12 @@
   "short_name": "IMOLE 2027",
   "description": "Official campaign website of Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II. Service, Development and Accountability.",
 
-  "id": "./index.html",
+  "id": "./",
   "start_url": "./index.html?source=pwa",
   "scope": "./",
 
   "display": "standalone",
   "display_override": [
-    "window-controls-overlay",
     "standalone",
     "minimal-ui"
   ],
@@ -56,55 +55,32 @@
     {
       "name": "About the Candidate",
       "short_name": "Candidate",
-      "description": "Meet Hon. Nurudeen Abayomi Sadeeq",
       "url": "./about.html"
     },
     {
       "name": "Manifesto",
       "short_name": "Manifesto",
-      "description": "Read the IMOLE 2027 manifesto",
       "url": "./manifesto.html"
     },
     {
       "name": "Polling Units",
       "short_name": "Polling Units",
-      "description": "View the Ojo Constituency II polling unit directory",
       "url": "./polling-units.html"
     },
     {
       "name": "News & Updates",
       "short_name": "News",
-      "description": "Latest IMOLE 2027 campaign news and updates",
       "url": "./news.html"
     },
     {
       "name": "Events",
       "short_name": "Events",
-      "description": "Upcoming IMOLE 2027 campaign events",
       "url": "./events.html"
     },
     {
       "name": "Join the Movement",
       "short_name": "Join Us",
-      "description": "Join the IMOLE 2027 movement",
       "url": "./join.html"
-    }
-  ],
-
-  "screenshots": [
-    {
-      "src": "./assets/screenshot-home.png",
-      "sizes": "1080x1920",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "IMOLE 2027 campaign homepage"
-    },
-    {
-      "src": "./assets/screenshot-desktop.png",
-      "sizes": "1920x1080",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "IMOLE 2027 campaign website"
     }
   ]
 }
