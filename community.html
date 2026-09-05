@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
@@ -11,24 +13,29 @@
   <meta name="description"
         content="Share your community need with the IMOLE 2027 movement. Report issues affecting your community in Ojo Constituency II.">
 
+  <meta name="robots" content="index,follow">
+
   <title>Share Your Community Need | IMOLE 2027</title>
 
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="./manifest.json">
 
   <link rel="icon"
         type="image/jpeg"
-        href="assets/IMG-20260728-WA0032.jpg">
+        href="./assets/IMG-20260728-WA0032.jpg">
 
   <style>
+
     :root {
       --green: #063b2d;
       --green2: #0a5942;
       --green3: #0d7254;
+
       --gold: #d6a62e;
       --gold2: #f1c84b;
 
       --light: #f4f8f6;
       --white: #ffffff;
+
       --dark: #10231d;
       --text: #30433c;
       --muted: #6b7d75;
@@ -39,14 +46,16 @@
       --border: #e1ebe6;
 
       --shadow:
-        0 12px 35px rgba(6, 59, 45, .10);
+        0 12px 35px rgba(6,59,45,.10);
 
       --shadow2:
-        0 20px 60px rgba(6, 59, 45, .16);
+        0 20px 60px rgba(6,59,45,.16);
 
       --radius: 20px;
+
       --header-height: 72px;
     }
+
 
     * {
       box-sizing: border-box;
@@ -54,9 +63,11 @@
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       font-family:
@@ -78,9 +89,14 @@
         );
 
       color: var(--text);
+
       line-height: 1.6;
+
       min-height: 100vh;
+
+      overflow-x: hidden;
     }
+
 
     body,
     button,
@@ -90,10 +106,12 @@
       font-family: inherit;
     }
 
+
     a {
       color: inherit;
       text-decoration: none;
     }
+
 
     button,
     input,
@@ -102,70 +120,98 @@
       font-size: 16px;
     }
 
+
     button {
       cursor: pointer;
     }
+
 
     img {
       max-width: 100%;
       display: block;
     }
 
+
     .container {
-      width: min(1120px, calc(100% - 30px));
+      width: min(
+        1120px,
+        calc(100% - 30px)
+      );
+
       margin: auto;
     }
 
-    /* =========================
+
+    /* =====================================
        TOP BAR
-    ========================== */
+    ====================================== */
 
     .topbar {
       background: var(--green);
+
       color: white;
+
       text-align: center;
+
       padding: 8px 12px;
+
       font-size: 13px;
-      font-weight: 700;
+
+      font-weight: 800;
+
       letter-spacing: .2px;
     }
 
-    /* =========================
+
+    /* =====================================
        HEADER
-    ========================== */
+    ====================================== */
 
     header {
       position: sticky;
+
       top: 0;
+
       z-index: 1000;
 
       height: var(--header-height);
 
-      background: rgba(255,255,255,.96);
+      background:
+        rgba(255,255,255,.97);
+
       backdrop-filter: blur(12px);
 
-      border-bottom: 1px solid var(--border);
+      border-bottom:
+        1px solid var(--border);
 
       box-shadow:
         0 5px 25px rgba(0,0,0,.05);
     }
 
+
     .nav {
       height: 100%;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
 
       gap: 15px;
     }
 
+
     .brand {
       display: flex;
+
       align-items: center;
+
       gap: 10px;
+
       min-width: 0;
     }
+
 
     .brand-logo {
       width: 45px;
@@ -180,54 +226,79 @@
       background: var(--light);
     }
 
+
     .brand-text {
       min-width: 0;
     }
 
+
     .brand-name {
-      font-weight: 900;
+      font-weight: 950;
+
       color: var(--green);
+
       font-size: 18px;
+
       line-height: 1.1;
     }
 
+
     .brand-sub {
       font-size: 11px;
+
       color: var(--muted);
+
       font-weight: 700;
+
       white-space: nowrap;
     }
 
+
     .nav-links {
       display: flex;
+
       align-items: center;
+
       gap: 4px;
     }
 
+
     .nav-links a {
       padding: 9px 10px;
+
       border-radius: 10px;
 
       font-size: 13px;
+
       font-weight: 800;
 
       color: var(--text);
+
+      transition:
+        background .2s ease,
+        color .2s ease;
     }
+
 
     .nav-links a:hover,
     .nav-links a.active {
       background: var(--light);
+
       color: var(--green);
     }
+
 
     .menu-btn {
       display: none;
 
       border: 0;
+
       background: var(--green);
+
       color: white;
 
       width: 44px;
+
       height: 44px;
 
       border-radius: 12px;
@@ -235,12 +306,14 @@
       font-size: 23px;
     }
 
-    /* =========================
+
+    /* =====================================
        HERO
-    ========================== */
+    ====================================== */
 
     .hero {
       position: relative;
+
       overflow: hidden;
 
       padding: 65px 0 55px;
@@ -260,56 +333,90 @@
       color: white;
     }
 
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+
+      height: 300px;
+
+      border-radius: 50%;
+
+      left: -170px;
+
+      top: -180px;
+
+      background:
+        rgba(255,255,255,.035);
+    }
+
+
     .hero::after {
       content: "";
 
       position: absolute;
 
       width: 260px;
+
       height: 260px;
 
       border-radius: 50%;
 
       right: -100px;
+
       bottom: -120px;
 
-      background: rgba(241,200,75,.08);
+      background:
+        rgba(241,200,75,.08);
     }
+
 
     .hero-content {
       position: relative;
+
       z-index: 2;
 
       max-width: 850px;
+
       margin: auto;
 
       text-align: center;
     }
 
+
     .hero-badge {
       display: inline-flex;
 
       align-items: center;
+
       justify-content: center;
 
       padding: 7px 13px;
 
       border-radius: 999px;
 
-      background: rgba(255,255,255,.12);
+      background:
+        rgba(255,255,255,.12);
 
-      border: 1px solid rgba(255,255,255,.22);
+      border:
+        1px solid rgba(255,255,255,.22);
 
       color: var(--gold2);
 
       font-weight: 900;
+
       font-size: 13px;
 
       margin-bottom: 15px;
     }
 
+
     .hero h1 {
-      font-size: clamp(32px, 6vw, 58px);
+      font-size:
+        clamp(32px, 6vw, 58px);
 
       line-height: 1.05;
 
@@ -320,26 +427,123 @@
       letter-spacing: -.8px;
     }
 
+
     .hero h1 span {
       color: var(--gold2);
     }
 
+
     .hero p {
       max-width: 720px;
+
       margin: auto;
 
-      color: rgba(255,255,255,.88);
+      color:
+        rgba(255,255,255,.88);
 
-      font-size: clamp(16px, 2vw, 19px);
+      font-size:
+        clamp(16px, 2vw, 19px);
     }
 
-    /* =========================
+
+    /* =====================================
+       WARD CONTEXT
+    ====================================== */
+
+    .ward-context {
+      display: none;
+
+      margin-top: 25px;
+
+      padding: 16px 18px;
+
+      border-radius: 16px;
+
+      background:
+        rgba(255,255,255,.10);
+
+      border:
+        1px solid rgba(255,255,255,.20);
+
+      text-align: left;
+
+      backdrop-filter: blur(8px);
+    }
+
+
+    .ward-context.show {
+      display: block;
+    }
+
+
+    .ward-context strong {
+      color: var(--gold2);
+
+      font-size: 15px;
+    }
+
+
+    .ward-context p {
+      margin-top: 3px;
+
+      color:
+        rgba(255,255,255,.82);
+
+      font-size: 13px;
+    }
+
+
+    .ward-actions {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-top: 12px;
+    }
+
+
+    .ward-action {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 9px 12px;
+
+      border-radius: 10px;
+
+      background: white;
+
+      color: var(--green);
+
+      font-size: 12px;
+
+      font-weight: 900;
+    }
+
+
+    .ward-action.alt {
+      background:
+        rgba(255,255,255,.12);
+
+      color: white;
+
+      border:
+        1px solid rgba(255,255,255,.22);
+    }
+
+
+    /* =====================================
        MAIN
-    ========================== */
+    ====================================== */
 
     main {
       padding: 40px 0 70px;
     }
+
 
     .layout {
       display: grid;
@@ -353,27 +557,33 @@
       align-items: start;
     }
 
+
     .card {
       background: white;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       border-radius: var(--radius);
 
       box-shadow: var(--shadow);
     }
 
-    /* =========================
-       FORM CARD
-    ========================== */
+
+    /* =====================================
+       FORM
+    ====================================== */
 
     .form-card {
-      padding: clamp(20px, 4vw, 35px);
+      padding:
+        clamp(20px, 4vw, 35px);
     }
+
 
     .section-title {
       margin-bottom: 25px;
     }
+
 
     .section-title .eyebrow {
       color: var(--green3);
@@ -389,19 +599,23 @@
       margin-bottom: 5px;
     }
 
+
     .section-title h2 {
       color: var(--dark);
 
-      font-size: clamp(24px, 4vw, 34px);
+      font-size:
+        clamp(24px, 4vw, 34px);
 
       line-height: 1.15;
 
       margin-bottom: 8px;
     }
 
+
     .section-title p {
       color: var(--muted);
     }
+
 
     .form-grid {
       display: grid;
@@ -411,6 +625,7 @@
       gap: 18px;
     }
 
+
     .field {
       display: flex;
 
@@ -419,9 +634,11 @@
       gap: 7px;
     }
 
+
     .field.full {
       grid-column: 1 / -1;
     }
+
 
     label {
       font-weight: 850;
@@ -431,16 +648,19 @@
       color: var(--dark);
     }
 
+
     label span {
       color: var(--danger);
     }
+
 
     input,
     select,
     textarea {
       width: 100%;
 
-      border: 1.5px solid var(--border);
+      border:
+        1.5px solid var(--border);
 
       border-radius: 13px;
 
@@ -458,6 +678,7 @@
         background .2s ease;
     }
 
+
     input:focus,
     select:focus,
     textarea:focus {
@@ -466,8 +687,10 @@
       background: white;
 
       box-shadow:
-        0 0 0 4px rgba(13,114,84,.09);
+        0 0 0 4px
+        rgba(13,114,84,.09);
     }
+
 
     textarea {
       min-height: 145px;
@@ -475,11 +698,13 @@
       resize: vertical;
     }
 
+
     .help {
       color: var(--muted);
 
       font-size: 12px;
     }
+
 
     .counter {
       text-align: right;
@@ -489,12 +714,14 @@
       font-size: 12px;
     }
 
-    /* =========================
-       PHOTO BOX
-    ========================== */
+
+    /* =====================================
+       PHOTO
+    ====================================== */
 
     .photo-box {
-      border: 1.5px dashed #b8cbc2;
+      border:
+        1.5px dashed #b8cbc2;
 
       background: #f8fbf9;
 
@@ -503,9 +730,11 @@
       border-radius: 15px;
     }
 
+
     .photo-box input {
       background: white;
     }
+
 
     .photo-preview {
       display: none;
@@ -520,14 +749,29 @@
 
       border-radius: 13px;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       background: #eef4f1;
     }
 
-    /* =========================
-       CHECKBOX
-    ========================== */
+
+    .photo-warning {
+      display: none;
+
+      margin-top: 8px;
+
+      color: #8a6511;
+
+      font-size: 12px;
+
+      font-weight: 700;
+    }
+
+
+    /* =====================================
+       CONSENT
+    ====================================== */
 
     .consent {
       display: flex;
@@ -545,14 +789,17 @@
       margin-top: 5px;
     }
 
+
     .consent input {
       width: 20px;
+
       height: 20px;
 
       margin-top: 2px;
 
       flex: 0 0 auto;
     }
+
 
     .consent label {
       font-weight: 650;
@@ -562,19 +809,56 @@
       color: var(--text);
     }
 
-    /* =========================
-       BUTTONS
-    ========================== */
+
+    /* =====================================
+       IMPORTANT
+    ====================================== */
+
+    .important {
+      padding: 15px;
+
+      margin-top: 20px;
+
+      border-left:
+        4px solid var(--gold);
+
+      background: #fffaf0;
+
+      border-radius: 10px;
+
+      font-size: 13px;
+
+      color: #5e5235;
+    }
+
+
+    /* =====================================
+       ACTIONS
+    ====================================== */
 
     .actions {
       display: grid;
 
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns:
+        1fr 1fr;
 
       gap: 12px;
 
       margin-top: 22px;
     }
+
+
+    .secondary-actions {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 10px;
+
+      margin-top: 10px;
+    }
+
 
     .btn {
       min-height: 52px;
@@ -603,9 +887,12 @@
         opacity .2s ease;
     }
 
+
     .btn:hover {
-      transform: translateY(-2px);
+      transform:
+        translateY(-2px);
     }
+
 
     .btn-primary {
       background: var(--green);
@@ -613,12 +900,15 @@
       color: white;
 
       box-shadow:
-        0 9px 20px rgba(6,59,45,.18);
+        0 9px 20px
+        rgba(6,59,45,.18);
     }
+
 
     .btn-primary:hover {
       background: var(--green2);
     }
+
 
     .btn-secondary {
       background: #eef4f1;
@@ -626,30 +916,60 @@
       color: var(--green);
     }
 
+
     .btn-whatsapp {
       background: #168b57;
 
       color: white;
+
+      box-shadow:
+        0 9px 20px
+        rgba(22,139,87,.15);
     }
+
+
+    .btn-copy {
+      background:
+        #fff8df;
+
+      color:
+        #735600;
+    }
+
+
+    .btn-danger {
+      background:
+        #fff0f0;
+
+      color:
+        var(--danger);
+    }
+
 
     .btn:disabled {
       opacity: .55;
+
       cursor: not-allowed;
+
       transform: none;
     }
 
-    /* =========================
-       SIDE INFO
-    ========================== */
+
+    /* =====================================
+       SIDE
+    ====================================== */
 
     .side {
       display: grid;
+
       gap: 18px;
     }
+
 
     .info-card {
       padding: 23px;
     }
+
 
     .info-card h3 {
       color: var(--dark);
@@ -659,30 +979,38 @@
       margin-bottom: 12px;
     }
 
+
     .info-card p {
       color: var(--muted);
 
       font-size: 14px;
     }
 
+
     .steps {
       display: grid;
+
       gap: 15px;
+
       margin-top: 15px;
     }
+
 
     .step {
       display: grid;
 
-      grid-template-columns: 40px 1fr;
+      grid-template-columns:
+        40px 1fr;
 
       gap: 12px;
 
       align-items: start;
     }
 
+
     .step-number {
       width: 40px;
+
       height: 40px;
 
       border-radius: 50%;
@@ -698,6 +1026,7 @@
       font-weight: 950;
     }
 
+
     .step strong {
       display: block;
 
@@ -706,9 +1035,15 @@
       margin-bottom: 2px;
     }
 
+
     .step p {
       font-size: 13px;
     }
+
+
+    /* =====================================
+       CONTACT CARD
+    ====================================== */
 
     .contact-card {
       background:
@@ -723,13 +1058,17 @@
       border: 0;
     }
 
+
     .contact-card h3 {
       color: white;
     }
 
+
     .contact-card p {
-      color: rgba(255,255,255,.82);
+      color:
+        rgba(255,255,255,.82);
     }
+
 
     .whatsapp-big {
       display: flex;
@@ -753,29 +1092,61 @@
       font-weight: 950;
     }
 
-    /* =========================
-       NOTE
-    ========================== */
 
-    .important {
-      padding: 15px;
+    /* =====================================
+       DRAFT NOTICE
+    ====================================== */
 
-      margin-top: 20px;
+    .draft-notice {
+      display: none;
 
-      border-left: 4px solid var(--gold);
+      padding: 13px 15px;
 
-      background: #fffaf0;
+      margin-bottom: 18px;
 
-      border-radius: 10px;
+      background:
+        #eef8f3;
+
+      border:
+        1px solid #cde5d8;
+
+      border-radius: 12px;
+
+      color: var(--green);
 
       font-size: 13px;
 
-      color: #5e5235;
+      font-weight: 750;
     }
 
-    /* =========================
+
+    .draft-notice.show {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 10px;
+    }
+
+
+    .draft-clear {
+      border: 0;
+
+      background: transparent;
+
+      color: var(--danger);
+
+      font-weight: 900;
+
+      font-size: 12px;
+    }
+
+
+    /* =====================================
        FOOTER
-    ========================== */
+    ====================================== */
 
     footer {
       background: #082c22;
@@ -787,6 +1158,7 @@
       text-align: center;
     }
 
+
     footer .footer-brand {
       font-size: 20px;
 
@@ -797,11 +1169,14 @@
       margin-bottom: 5px;
     }
 
+
     footer p {
-      color: rgba(255,255,255,.7);
+      color:
+        rgba(255,255,255,.7);
 
       font-size: 13px;
     }
+
 
     .footer-links {
       display: flex;
@@ -815,27 +1190,34 @@
       margin: 20px 0;
     }
 
+
     .footer-links a {
       font-size: 13px;
 
-      color: rgba(255,255,255,.82);
+      color:
+        rgba(255,255,255,.82);
     }
 
-    .footer-links a:hover {
+
+    .footer-links:hover {
       color: var(--gold2);
     }
 
-    /* =========================
+
+    /* =====================================
        FLOATING WHATSAPP
-    ========================== */
+    ====================================== */
 
     .float-wa {
       position: fixed;
 
       right: 18px;
-      bottom: 18px;
+
+      bottom:
+        calc(18px + env(safe-area-inset-bottom));
 
       width: 57px;
+
       height: 57px;
 
       border-radius: 50%;
@@ -851,21 +1233,27 @@
       font-size: 27px;
 
       box-shadow:
-        0 12px 30px rgba(0,0,0,.22);
+        0 12px 30px
+        rgba(0,0,0,.22);
 
       z-index: 1200;
     }
 
-    /* =========================
+
+    /* =====================================
        TOAST
-    ========================== */
+    ====================================== */
 
     .toast {
       position: fixed;
 
       left: 50%;
 
-      bottom: 90px;
+      bottom:
+        calc(
+          90px +
+          env(safe-area-inset-bottom)
+        );
 
       transform:
         translate(-50%, 20px);
@@ -892,10 +1280,12 @@
         opacity .25s ease,
         transform .25s ease;
 
-      max-width: calc(100% - 30px);
+      max-width:
+        calc(100% - 30px);
 
       text-align: center;
     }
+
 
     .toast.show {
       opacity: 1;
@@ -904,9 +1294,54 @@
         translate(-50%, 0);
     }
 
-    /* =========================
+
+    /* =====================================
+       BACK TO TOP
+    ====================================== */
+
+    .back-top {
+      position: fixed;
+
+      right: 18px;
+
+      bottom:
+        calc(
+          88px +
+          env(safe-area-inset-bottom)
+        );
+
+      width: 42px;
+
+      height: 42px;
+
+      border: 0;
+
+      border-radius: 50%;
+
+      background: var(--green);
+
+      color: white;
+
+      display: none;
+
+      place-items: center;
+
+      z-index: 1100;
+
+      box-shadow:
+        0 8px 22px
+        rgba(0,0,0,.18);
+    }
+
+
+    .back-top.show {
+      display: grid;
+    }
+
+
+    /* =====================================
        MOBILE
-    ========================== */
+    ====================================== */
 
     @media (max-width: 900px) {
 
@@ -916,6 +1351,7 @@
         top: var(--header-height);
 
         left: 0;
+
         right: 0;
 
         display: none;
@@ -928,15 +1364,19 @@
 
         background: white;
 
-        border-bottom: 1px solid var(--border);
+        border-bottom:
+          1px solid var(--border);
 
         box-shadow:
-          0 20px 30px rgba(0,0,0,.08);
+          0 20px 30px
+          rgba(0,0,0,.08);
       }
+
 
       .nav-links.open {
         display: flex;
       }
+
 
       .nav-links a {
         padding: 13px;
@@ -944,14 +1384,18 @@
         width: 100%;
       }
 
+
       .menu-btn {
         display: block;
       }
 
+
       .layout {
         grid-template-columns: 1fr;
       }
+
     }
+
 
     @media (max-width: 650px) {
 
@@ -959,55 +1403,90 @@
         padding: 48px 0 42px;
       }
 
+
       main {
         padding-top: 25px;
       }
+
 
       .form-grid {
         grid-template-columns: 1fr;
       }
 
+
       .field.full {
         grid-column: auto;
       }
+
 
       .actions {
         grid-template-columns: 1fr;
       }
 
+
+      .secondary-actions {
+        grid-template-columns: 1fr;
+      }
+
+
       .brand-sub {
         display: none;
       }
+
 
       .brand-name {
         font-size: 16px;
       }
 
+
       .brand-logo {
         width: 41px;
+
         height: 41px;
       }
+
+
+      .ward-actions {
+        display: grid;
+
+        grid-template-columns: 1fr;
+      }
+
+
+      .ward-action {
+        width: 100%;
+      }
+
     }
+
 
     @media (max-width: 380px) {
 
       .container {
-        width: min(100% - 20px, 1120px);
+        width:
+          min(
+            100% - 20px,
+            1120px
+          );
       }
+
 
       .form-card,
       .info-card {
         padding: 17px;
       }
 
+
       .hero h1 {
         font-size: 31px;
       }
+
     }
 
-    /* =========================
+
+    /* =====================================
        ACCESSIBILITY
-    ========================== */
+    ====================================== */
 
     @media (prefers-reduced-motion: reduce) {
 
@@ -1015,30 +1494,47 @@
         scroll-behavior: auto;
       }
 
+
       *,
       *::before,
       *::after {
         transition: none !important;
+
         animation: none !important;
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- TOP BAR -->
+
+  <!-- =====================================
+       TOP BAR
+  ====================================== -->
+
   <div class="topbar">
     IMOLE 2027 • Ojo Constituency II • Your Community Voice Matters
   </div>
 
 
-  <!-- HEADER -->
+  <!-- =====================================
+       HEADER
+  ====================================== -->
+
   <header>
 
     <div class="container nav">
 
-      <a href="index.html" class="brand" aria-label="IMOLE 2027 Home">
+      <a
+        href="index.html"
+        class="brand"
+        aria-label="IMOLE 2027 Home"
+      >
 
         <img
           class="brand-logo"
@@ -1048,6 +1544,7 @@
         >
 
         <div class="brand-text">
+
           <div class="brand-name">
             IMOLE 2027
           </div>
@@ -1055,6 +1552,7 @@
           <div class="brand-sub">
             Hon. Nurudeen Abayomi Sadeeq
           </div>
+
         </div>
 
       </a>
@@ -1071,7 +1569,11 @@
       </button>
 
 
-      <nav class="nav-links" id="navLinks">
+      <nav
+        class="nav-links"
+        id="navLinks"
+        aria-label="Main navigation"
+      >
 
         <a href="index.html">
           Home
@@ -1109,7 +1611,10 @@
           Media
         </a>
 
-        <a href="community.html" class="active">
+        <a
+          href="community.html"
+          class="active"
+        >
           Community
         </a>
 
@@ -1124,7 +1629,10 @@
   </header>
 
 
-  <!-- HERO -->
+  <!-- =====================================
+       HERO
+  ====================================== -->
+
   <section class="hero">
 
     <div class="container hero-content">
@@ -1133,9 +1641,12 @@
         📢 COMMUNITY VOICE
       </div>
 
+
       <h1>
-        Share Your <span>Community Need</span>
+        Share Your
+        <span>Community Need</span>
       </h1>
+
 
       <p>
         Tell the IMOLE 2027 movement about issues affecting your
@@ -1144,19 +1655,85 @@
         markets and other community needs.
       </p>
 
+
+      <!-- SELECTED WARD CONTEXT -->
+
+      <div
+        class="ward-context"
+        id="wardContext"
+      >
+
+        <strong id="wardContextTitle">
+          📍 Your Selected Ward
+        </strong>
+
+        <p id="wardContextText">
+          Your community report will be associated with your selected ward.
+        </p>
+
+
+        <div class="ward-actions">
+
+          <a
+            href="#"
+            class="ward-action"
+            id="wardPollingLink"
+          >
+            🗳️ View Ward Polling Units
+          </a>
+
+
+          <a
+            href="#"
+            class="ward-action alt"
+            id="wardHomeLink"
+          >
+            🏠 Back to My Ward
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
 
   </section>
 
 
-  <!-- MAIN -->
+  <!-- =====================================
+       MAIN
+  ====================================== -->
+
   <main>
 
     <div class="container layout">
 
 
-      <!-- FORM -->
+      <!-- =================================
+           FORM
+      ================================== -->
+
       <section class="card form-card">
+
+        <div
+          class="draft-notice"
+          id="draftNotice"
+        >
+
+          <span>
+            💾 A saved draft was found on this device.
+          </span>
+
+          <button
+            type="button"
+            class="draft-clear"
+            id="clearDraftBtn"
+          >
+            Clear Draft
+          </button>
+
+        </div>
+
 
         <div class="section-title">
 
@@ -1164,9 +1741,11 @@
             COMMUNITY REPORT
           </div>
 
+
           <h2>
             Tell Us What Your Community Needs
           </h2>
+
 
           <p>
             Please provide as much useful information as possible.
@@ -1176,13 +1755,17 @@
         </div>
 
 
-        <form id="communityForm" novalidate>
+        <form
+          id="communityForm"
+          novalidate
+        >
 
 
           <div class="form-grid">
 
 
             <!-- NAME -->
+
             <div class="field">
 
               <label for="name">
@@ -1190,12 +1773,14 @@
                 <span>*</span>
               </label>
 
+
               <input
                 id="name"
                 name="name"
                 type="text"
                 placeholder="Enter your name"
                 autocomplete="name"
+                maxlength="100"
                 required
               >
 
@@ -1203,11 +1788,13 @@
 
 
             <!-- PHONE -->
+
             <div class="field">
 
               <label for="phone">
                 Phone Number
               </label>
+
 
               <input
                 id="phone"
@@ -1215,17 +1802,20 @@
                 type="tel"
                 placeholder="e.g. 08012345678"
                 autocomplete="tel"
+                maxlength="30"
               >
 
+
               <div class="help">
-                Optional. Add a number if you would like the team
-                to contact you about the report.
+                Optional. Add a number if you would like
+                the team to contact you about the report.
               </div>
 
             </div>
 
 
             <!-- WARD -->
+
             <div class="field">
 
               <label for="ward">
@@ -1233,35 +1823,47 @@
                 <span>*</span>
               </label>
 
-              <select id="ward" name="ward" required>
+
+              <select
+                id="ward"
+                name="ward"
+                required
+              >
 
                 <option value="">
                   Select your ward
                 </option>
 
+
                 <option value="Ilogbo Ward">
                   Ilogbo Ward
                 </option>
+
 
                 <option value="Irewe Ward">
                   Irewe Ward
                 </option>
 
+
                 <option value="Ijanikin Ward">
                   Ijanikin Ward
                 </option>
+
 
                 <option value="Etegbin Ward">
                   Etegbin Ward
                 </option>
 
-                <option value="Idolowu Ward">
-                  Idolowu Ward
+
+                <option value="Idoluwo Ward">
+                  Idoluwo Ward
                 </option>
+
 
                 <option value="Tafi Ward">
                   Tafi Ward
                 </option>
+
 
                 <option value="Other / Not Sure">
                   Other / Not Sure
@@ -1273,6 +1875,7 @@
 
 
             <!-- CATEGORY -->
+
             <div class="field">
 
               <label for="category">
@@ -1280,51 +1883,67 @@
                 <span>*</span>
               </label>
 
-              <select id="category" name="category" required>
+
+              <select
+                id="category"
+                name="category"
+                required
+              >
 
                 <option value="">
                   Select issue category
                 </option>
 
+
                 <option value="Roads">
                   🛣️ Roads
                 </option>
+
 
                 <option value="Drainage / Flooding">
                   🌧️ Drainage / Flooding
                 </option>
 
+
                 <option value="Electricity / Power">
                   💡 Electricity / Power
                 </option>
+
 
                 <option value="Water">
                   💧 Water
                 </option>
 
+
                 <option value="Healthcare">
                   🏥 Healthcare
                 </option>
+
 
                 <option value="Education / Schools">
                   🎓 Education / Schools
                 </option>
 
+
                 <option value="Security">
                   🛡️ Security
                 </option>
+
 
                 <option value="Markets / Traders">
                   🛒 Markets / Traders
                 </option>
 
+
                 <option value="Environment / Waste">
                   🌱 Environment / Waste
                 </option>
 
+
                 <option value="Youth / Employment">
                   👥 Youth / Employment
                 </option>
+
 
                 <option value="Other">
                   📌 Other
@@ -1336,6 +1955,7 @@
 
 
             <!-- LOCATION -->
+
             <div class="field full">
 
               <label for="location">
@@ -1343,11 +1963,13 @@
                 <span>*</span>
               </label>
 
+
               <input
                 id="location"
                 name="location"
                 type="text"
                 placeholder="Street, community, landmark, bus stop or area"
+                maxlength="180"
                 required
               >
 
@@ -1355,12 +1977,14 @@
 
 
             <!-- DESCRIPTION -->
+
             <div class="field full">
 
               <label for="description">
                 Describe the Community Need
                 <span>*</span>
               </label>
+
 
               <textarea
                 id="description"
@@ -1370,6 +1994,7 @@
                 required
               ></textarea>
 
+
               <div class="counter">
                 <span id="charCount">0</span>/1000
               </div>
@@ -1378,11 +2003,13 @@
 
 
             <!-- PHOTO -->
+
             <div class="field full">
 
               <label for="photo">
                 Supporting Photo
               </label>
+
 
               <div class="photo-box">
 
@@ -1393,11 +2020,22 @@
                   accept="image/*"
                 >
 
+
                 <div class="help">
                   Optional. A photo can help explain the issue.
-                  The photo will remain on your device until you choose
-                  how to share it.
+                  WhatsApp may require you to send the photo separately
+                  after the report text opens.
                 </div>
+
+
+                <div
+                  class="photo-warning"
+                  id="photoWarning"
+                >
+                  ⚠️ Large image selected. Consider using a smaller image
+                  for easier sharing.
+                </div>
+
 
                 <img
                   id="photoPreview"
@@ -1411,6 +2049,7 @@
 
 
             <!-- CONSENT -->
+
             <div class="field full">
 
               <div class="consent">
@@ -1421,11 +2060,15 @@
                   required
                 >
 
+
                 <label for="consent">
-                  I confirm that the information I am submitting is
-                  provided in good faith and relates to a community
-                  issue or need.
+
+                  I confirm that the information I am submitting
+                  is provided in good faith and relates to a
+                  community issue or need.
+
                   <span>*</span>
+
                 </label>
 
               </div>
@@ -1435,9 +2078,12 @@
           </div>
 
 
+          <!-- IMPORTANT -->
+
           <div class="important">
 
             <strong>Important:</strong>
+
             This form does not automatically repair or resolve an issue.
             It helps the IMOLE 2027 team receive and organize community
             concerns for follow-up, advocacy and engagement.
@@ -1445,15 +2091,18 @@
           </div>
 
 
-          <!-- BUTTONS -->
+          <!-- PRIMARY ACTIONS -->
+
           <div class="actions">
 
             <button
               type="submit"
               class="btn btn-whatsapp"
+              id="sendBtn"
             >
               💬 Send Report via WhatsApp
             </button>
+
 
             <button
               type="reset"
@@ -1466,21 +2115,50 @@
           </div>
 
 
+          <!-- SECONDARY ACTIONS -->
+
+          <div class="secondary-actions">
+
+            <button
+              type="button"
+              class="btn btn-copy"
+              id="copyBtn"
+            >
+              📋 Copy Report
+            </button>
+
+
+            <button
+              type="button"
+              class="btn btn-danger"
+              id="clearSavedBtn"
+            >
+              🗑️ Clear Saved Data
+            </button>
+
+          </div>
+
+
         </form>
 
       </section>
 
 
-      <!-- SIDE -->
+      <!-- =================================
+           SIDE INFORMATION
+      ================================== -->
+
       <aside class="side">
 
 
         <!-- HOW IT WORKS -->
+
         <div class="card info-card">
 
           <h3>
             How It Works
           </h3>
+
 
           <p>
             Sharing a community need takes only a few steps.
@@ -1496,11 +2174,13 @@
                 1
               </div>
 
+
               <div>
 
                 <strong>
                   Tell us the issue
                 </strong>
+
 
                 <p>
                   Describe the problem affecting your community.
@@ -1517,11 +2197,13 @@
                 2
               </div>
 
+
               <div>
 
                 <strong>
                   Add the location
                 </strong>
+
 
                 <p>
                   Tell us the ward and specific area.
@@ -1538,14 +2220,106 @@
                 3
               </div>
 
+
               <div>
 
                 <strong>
                   Submit through WhatsApp
                 </strong>
 
+
                 <p>
                   Your report will open in WhatsApp for you to send.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- COMMUNITY PRIORITIES -->
+
+        <div class="card info-card">
+
+          <h3>
+            What Can You Report?
+          </h3>
+
+
+          <p>
+            You can use this page to highlight issues such as:
+          </p>
+
+
+          <div class="steps">
+
+
+            <div class="step">
+
+              <div class="step-number">
+                🛣️
+              </div>
+
+
+              <div>
+
+                <strong>
+                  Roads & Drainage
+                </strong>
+
+
+                <p>
+                  Bad roads, blocked drainage and flooding.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="step">
+
+              <div class="step-number">
+                💡
+              </div>
+
+
+              <div>
+
+                <strong>
+                  Power & Water
+                </strong>
+
+
+                <p>
+                  Electricity and water supply concerns.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="step">
+
+              <div class="step-number">
+                🏥
+              </div>
+
+
+              <div>
+
+                <strong>
+                  Health & Education
+                </strong>
+
+
+                <p>
+                  Healthcare facilities and school needs.
                 </p>
 
               </div>
@@ -1558,64 +2332,25 @@
         </div>
 
 
-        <!-- COMMUNITY PRIORITIES -->
-        <div class="card info-card">
+        <!-- DIRECT WHATSAPP -->
 
-          <h3>
-            What Can You Report?
-          </h3>
-
-          <p>
-            You can use this page to highlight issues such as:
-          </p>
-
-          <div class="steps">
-
-            <div class="step">
-              <div class="step-number">🛣️</div>
-              <div>
-                <strong>Roads & Drainage</strong>
-                <p>Bad roads, blocked drainage and flooding.</p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="step-number">💡</div>
-              <div>
-                <strong>Power & Water</strong>
-                <p>Electricity and water supply concerns.</p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="step-number">🏥</div>
-              <div>
-                <strong>Health & Education</strong>
-                <p>Healthcare facilities and school needs.</p>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- WHATSAPP -->
         <div class="card info-card contact-card">
 
           <h3>
             Prefer WhatsApp?
           </h3>
 
+
           <p>
             You can contact the IMOLE 2027 community team directly
             if you prefer not to use the form.
           </p>
 
+
           <a
             class="whatsapp-big"
             id="directWhatsApp"
-            href="https://wa.me/2348033002235"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -1625,6 +2360,43 @@
         </div>
 
 
+        <!-- NAVIGATION -->
+
+        <div class="card info-card">
+
+          <h3>
+            Explore Your Ward
+          </h3>
+
+
+          <p>
+            View polling units and return to the My Ward dashboard.
+          </p>
+
+
+          <div class="steps">
+
+            <a
+              href="polling-units.html"
+              class="btn btn-secondary"
+              id="sidePollingLink"
+            >
+              🗳️ Polling Units
+            </a>
+
+
+            <a
+              href="index.html#my-ward"
+              class="btn btn-primary"
+              id="sideWardLink"
+            >
+              📍 My Ward
+            </a>
+
+          </div>
+
+        </div>
+
       </aside>
 
     </div>
@@ -1632,7 +2404,10 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =====================================
+       FOOTER
+  ====================================== -->
+
   <footer>
 
     <div class="container">
@@ -1641,14 +2416,17 @@
         IMOLE 2027
       </div>
 
+
       <p>
         Hon. Nurudeen Abayomi Sadeeq
       </p>
+
 
       <p>
         Candidate for Lagos State House of Assembly,
         Ojo Constituency II
       </p>
+
 
       <div class="footer-links">
 
@@ -1656,27 +2434,33 @@
           Home
         </a>
 
+
         <a href="manifesto.html">
           Manifesto
         </a>
+
 
         <a href="polling-units.html">
           Polling Units
         </a>
 
+
         <a href="results.html">
           Results
         </a>
 
+
         <a href="community.html">
           Community
         </a>
+
 
         <a href="join.html">
           Join IMOLE
         </a>
 
       </div>
+
 
       <p>
         © <span id="year"></span> IMOLE 2027 •
@@ -1688,11 +2472,14 @@
   </footer>
 
 
-  <!-- FLOATING WHATSAPP -->
+  <!-- =====================================
+       FLOATING WHATSAPP
+  ====================================== -->
+
   <a
     class="float-wa"
     id="floatingWhatsApp"
-    href="https://wa.me/2348033002235"
+    href="#"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Contact IMOLE 2027 on WhatsApp"
@@ -1701,7 +2488,20 @@
   </a>
 
 
+  <!-- BACK TO TOP -->
+
+  <button
+    class="back-top"
+    id="backTop"
+    type="button"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
+
+
   <!-- TOAST -->
+
   <div
     class="toast"
     id="toast"
@@ -1715,22 +2515,31 @@
     "use strict";
 
 
-    /* =========================================
+    /* =====================================
        CONFIGURATION
-    ========================================== */
+    ====================================== */
 
-    const WHATSAPP_NUMBER = "2348033002235";
+    const WHATSAPP_NUMBER =
+      "2348033002235";
 
 
-    /* =========================================
-       HELPERS
-    ========================================== */
+    const DRAFT_KEY =
+      "imole2027_community_report_draft_v2";
 
-    const $ = (selector) =>
+
+    /* =====================================
+       SELECTOR HELPER
+    ====================================== */
+
+    const $ = selector =>
       document.querySelector(selector);
 
 
-    const showToast = (message) => {
+    /* =====================================
+       TOAST
+    ====================================== */
+
+    function showToast(message) {
 
       const toast = $("#toast");
 
@@ -1740,103 +2549,136 @@
 
       toast.classList.add("show");
 
-      clearTimeout(window.__toastTimer);
+      clearTimeout(
+        window.__toastTimer
+      );
 
-      window.__toastTimer = setTimeout(() => {
+      window.__toastTimer =
+        setTimeout(() => {
 
-        toast.classList.remove("show");
+          toast.classList.remove("show");
 
-      }, 3200);
+        }, 3200);
 
-    };
+    }
 
 
-    /* =========================================
+    /* =====================================
        MOBILE MENU
-    ========================================== */
+    ====================================== */
 
-    const menuBtn = $("#menuBtn");
-    const navLinks = $("#navLinks");
+    const menuBtn =
+      $("#menuBtn");
+
+    const navLinks =
+      $("#navLinks");
 
 
     if (menuBtn && navLinks) {
 
-      menuBtn.addEventListener("click", () => {
+      menuBtn.addEventListener(
+        "click",
+        () => {
 
-        const isOpen =
-          navLinks.classList.toggle("open");
+          const isOpen =
+            navLinks.classList.toggle(
+              "open"
+            );
 
-        menuBtn.setAttribute(
-          "aria-expanded",
-          String(isOpen)
-        );
 
-        menuBtn.setAttribute(
-          "aria-label",
-          isOpen
-            ? "Close navigation menu"
-            : "Open navigation menu"
-        );
+          menuBtn.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+          );
 
-        menuBtn.textContent =
-          isOpen ? "✕" : "☰";
 
-      });
+          menuBtn.setAttribute(
+            "aria-label",
+            isOpen
+              ? "Close navigation menu"
+              : "Open navigation menu"
+          );
+
+
+          menuBtn.textContent =
+            isOpen
+              ? "✕"
+              : "☰";
+
+        }
+      );
 
 
       navLinks
         .querySelectorAll("a")
         .forEach(link => {
 
-          link.addEventListener("click", () => {
+          link.addEventListener(
+            "click",
+            () => {
 
-            navLinks.classList.remove("open");
+              navLinks.classList.remove(
+                "open"
+              );
+
+
+              menuBtn.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+
+
+              menuBtn.textContent =
+                "☰";
+
+            }
+          );
+
+        });
+
+
+      document.addEventListener(
+        "click",
+        event => {
+
+          if (
+            !navLinks.contains(
+              event.target
+            ) &&
+            !menuBtn.contains(
+              event.target
+            )
+          ) {
+
+            navLinks.classList.remove(
+              "open"
+            );
+
 
             menuBtn.setAttribute(
               "aria-expanded",
               "false"
             );
 
-            menuBtn.setAttribute(
-              "aria-label",
-              "Open navigation menu"
-            );
 
-            menuBtn.textContent = "☰";
+            menuBtn.textContent =
+              "☰";
 
-          });
-
-        });
-
-
-      document.addEventListener("click", (event) => {
-
-        if (
-          !navLinks.contains(event.target) &&
-          !menuBtn.contains(event.target)
-        ) {
-
-          navLinks.classList.remove("open");
-
-          menuBtn.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-
-          menuBtn.textContent = "☰";
+          }
 
         }
-
-      });
+      );
 
     }
 
 
-    /* =========================================
+    /* =====================================
        YEAR
-    ========================================== */
+    ====================================== */
 
-    const year = $("#year");
+    const year =
+      $("#year");
+
 
     if (year) {
 
@@ -1846,48 +2688,540 @@
     }
 
 
-    /* =========================================
+    /* =====================================
+       WARD SYSTEM
+    ====================================== */
+
+    const WARDS = {
+
+      Ilogbo: {
+        label: "Ilogbo Ward",
+        units: 80
+      },
+
+      Irewe: {
+        label: "Irewe Ward",
+        units: 9
+      },
+
+      Ijanikin: {
+        label: "Ijanikin Ward",
+        units: 43
+      },
+
+      Etegbin: {
+        label: "Etegbin Ward",
+        units: 22
+      },
+
+      Idoluwo: {
+        label: "Idoluwo Ward",
+        units: 8
+      },
+
+      Tafi: {
+        label: "Tafi Ward",
+        units: 8
+      }
+
+    };
+
+
+    function canonicalWard(value) {
+
+      if (!value) return "";
+
+
+      const clean =
+        String(value)
+          .trim()
+          .toLowerCase()
+          .replace(
+            /[_-]+/g,
+            " "
+          )
+          .replace(
+            /\s+/g,
+            " "
+          );
+
+
+      if (
+        clean === "ilogbo" ||
+        clean === "ilogbo ward" ||
+        clean === "ward f" ||
+        clean === "f"
+      ) {
+        return "Ilogbo";
+      }
+
+
+      if (
+        clean === "irewe" ||
+        clean === "irewe ward" ||
+        clean === "ward g" ||
+        clean === "g"
+      ) {
+        return "Irewe";
+      }
+
+
+      if (
+        clean === "ijanikin" ||
+        clean === "ijanikin ward" ||
+        clean === "ward d" ||
+        clean === "d"
+      ) {
+        return "Ijanikin";
+      }
+
+
+      if (
+        clean === "etegbin" ||
+        clean === "etegbin ward" ||
+        clean === "ward i" ||
+        clean === "i"
+      ) {
+        return "Etegbin";
+      }
+
+
+      if (
+        clean === "idoluwo" ||
+        clean === "idoluwo ward" ||
+        clean === "idolowu" ||
+        clean === "idolowu ward" ||
+        clean === "ward j" ||
+        clean === "j"
+      ) {
+        return "Idoluwo";
+      }
+
+
+      if (
+        clean === "tafi" ||
+        clean === "tafi ward" ||
+        clean === "taffi" ||
+        clean === "taffi ward"
+      ) {
+        return "Tafi";
+      }
+
+
+      return "";
+
+    }
+
+
+    function getUrlWard() {
+
+      const params =
+        new URLSearchParams(
+          window.location.search
+        );
+
+
+      return canonicalWard(
+        params.get("ward")
+      );
+
+    }
+
+
+    function buildWardUrl(
+      page,
+      ward
+    ) {
+
+      const canonical =
+        canonicalWard(ward);
+
+
+      if (!canonical) {
+
+        return page;
+
+      }
+
+
+      return (
+        page +
+        "?ward=" +
+        encodeURIComponent(
+          canonical
+        )
+      );
+
+    }
+
+
+    function absoluteWardUrl(
+      page,
+      ward
+    ) {
+
+      return new URL(
+        buildWardUrl(
+          page,
+          ward
+        ),
+        window.location.href
+      ).href;
+
+    }
+
+
+    /* =====================================
+       WARD UI
+    ====================================== */
+
+    const wardSelect =
+      $("#ward");
+
+
+    const wardContext =
+      $("#wardContext");
+
+
+    const wardContextTitle =
+      $("#wardContextTitle");
+
+
+    const wardContextText =
+      $("#wardContextText");
+
+
+    const wardPollingLink =
+      $("#wardPollingLink");
+
+
+    const wardHomeLink =
+      $("#wardHomeLink");
+
+
+    const sidePollingLink =
+      $("#sidePollingLink");
+
+
+    const sideWardLink =
+      $("#sideWardLink");
+
+
+    function updateWardUI(
+      ward
+    ) {
+
+      const canonical =
+        canonicalWard(ward);
+
+
+      if (
+        canonical &&
+        WARDS[canonical]
+      ) {
+
+        const info =
+          WARDS[canonical];
+
+
+        const label =
+          info.label;
+
+
+        if (wardSelect) {
+
+          const matchingOption =
+            Array.from(
+              wardSelect.options
+            ).find(
+              option =>
+                canonicalWard(
+                  option.value
+                ) === canonical
+            );
+
+
+          if (matchingOption) {
+
+            wardSelect.value =
+              matchingOption.value;
+
+          }
+
+        }
+
+
+        if (wardContext) {
+
+          wardContext.classList.add(
+            "show"
+          );
+
+        }
+
+
+        if (wardContextTitle) {
+
+          wardContextTitle.textContent =
+            "📍 " +
+            label +
+            " Selected";
+
+        }
+
+
+        if (wardContextText) {
+
+          wardContextText.textContent =
+            "Community reports submitted from this page will be prepared with " +
+            label +
+            " as the selected ward.";
+
+        }
+
+
+        if (wardPollingLink) {
+
+          wardPollingLink.href =
+            buildWardUrl(
+              "polling-units.html",
+              canonical
+            );
+
+        }
+
+
+        if (wardHomeLink) {
+
+          wardHomeLink.href =
+            buildWardUrl(
+              "index.html",
+              canonical
+            ) +
+            "#my-ward";
+
+        }
+
+
+        if (sidePollingLink) {
+
+          sidePollingLink.href =
+            buildWardUrl(
+              "polling-units.html",
+              canonical
+            );
+
+        }
+
+
+        if (sideWardLink) {
+
+          sideWardLink.href =
+            buildWardUrl(
+              "index.html",
+              canonical
+            ) +
+            "#my-ward";
+
+        }
+
+      }
+
+      else {
+
+        if (wardContext) {
+
+          wardContext.classList.remove(
+            "show"
+          );
+
+        }
+
+
+        if (wardPollingLink) {
+
+          wardPollingLink.href =
+            "polling-units.html";
+
+        }
+
+
+        if (wardHomeLink) {
+
+          wardHomeLink.href =
+            "index.html#my-ward";
+
+        }
+
+
+        if (sidePollingLink) {
+
+          sidePollingLink.href =
+            "polling-units.html";
+
+        }
+
+
+        if (sideWardLink) {
+
+          sideWardLink.href =
+            "index.html#my-ward";
+
+        }
+
+      }
+
+    }
+
+
+    /* =====================================
+       WARD SELECTION
+    ====================================== */
+
+    const initialWard =
+      getUrlWard();
+
+
+    if (initialWard) {
+
+      updateWardUI(
+        initialWard
+      );
+
+    }
+
+
+    if (wardSelect) {
+
+      wardSelect.addEventListener(
+        "change",
+        () => {
+
+          const selected =
+            canonicalWard(
+              wardSelect.value
+            );
+
+
+          updateWardUI(
+            selected
+          );
+
+
+          /*
+             Update the browser URL
+             without reloading the page.
+          */
+
+          const url =
+            new URL(
+              window.location.href
+            );
+
+
+          if (selected) {
+
+            url.searchParams.set(
+              "ward",
+              selected
+            );
+
+          }
+          else {
+
+            url.searchParams.delete(
+              "ward"
+            );
+
+          }
+
+
+          window.history.replaceState(
+            {},
+            "",
+            url.pathname +
+            (
+              url.search
+              || ""
+            ) +
+            (
+              url.hash
+              || ""
+            )
+          );
+
+
+          saveDraft();
+
+        }
+      );
+
+    }
+
+
+    /* =====================================
        CHARACTER COUNTER
-    ========================================== */
+    ====================================== */
 
     const description =
       $("#description");
+
 
     const charCount =
       $("#charCount");
 
 
-    if (description && charCount) {
+    if (
+      description &&
+      charCount
+    ) {
 
-      const updateCounter = () => {
+      const updateCounter =
+        () => {
 
-        charCount.textContent =
-          description.value.length;
+          charCount.textContent =
+            description.value.length;
 
-      };
+        };
+
 
       description.addEventListener(
         "input",
-        updateCounter
+        () => {
+
+          updateCounter();
+
+          saveDraft();
+
+        }
       );
+
 
       updateCounter();
 
     }
 
 
-    /* =========================================
+    /* =====================================
        PHOTO PREVIEW
-    ========================================== */
+    ====================================== */
 
     const photo =
       $("#photo");
+
 
     const photoPreview =
       $("#photoPreview");
 
 
-    if (photo && photoPreview) {
+    const photoWarning =
+      $("#photoWarning");
+
+
+    if (
+      photo &&
+      photoPreview
+    ) {
 
       photo.addEventListener(
         "change",
@@ -1897,29 +3231,61 @@
             photo.files &&
             photo.files[0];
 
+
           if (!file) {
 
             photoPreview.style.display =
               "none";
 
+
             photoPreview.removeAttribute(
               "src"
             );
+
+
+            if (photoWarning) {
+
+              photoWarning.style.display =
+                "none";
+
+            }
 
             return;
 
           }
 
 
-          if (!file.type.startsWith("image/")) {
+          if (
+            !file.type.startsWith(
+              "image/"
+            )
+          ) {
 
             showToast(
               "Please select an image file."
             );
 
+
             photo.value = "";
 
+
             return;
+
+          }
+
+
+          /*
+             Warn when image is larger
+             than approximately 5 MB.
+          */
+
+          if (photoWarning) {
+
+            photoWarning.style.display =
+              file.size >
+              5 * 1024 * 1024
+                ? "block"
+                : "none";
 
           }
 
@@ -1928,18 +3294,22 @@
             new FileReader();
 
 
-          reader.onload = event => {
+          reader.onload =
+            event => {
 
-            photoPreview.src =
-              event.target.result;
-
-            photoPreview.style.display =
-              "block";
-
-          };
+              photoPreview.src =
+                event.target.result;
 
 
-          reader.readAsDataURL(file);
+              photoPreview.style.display =
+                "block";
+
+            };
+
+
+          reader.readAsDataURL(
+            file
+          );
 
         }
       );
@@ -1947,13 +3317,470 @@
     }
 
 
-    /* =========================================
-       FORM
-    ========================================== */
+    /* =====================================
+       FORM REFERENCES
+    ====================================== */
 
     const form =
       $("#communityForm");
 
+
+    const nameInput =
+      $("#name");
+
+
+    const phoneInput =
+      $("#phone");
+
+
+    const categorySelect =
+      $("#category");
+
+
+    const locationInput =
+      $("#location");
+
+
+    const consent =
+      $("#consent");
+
+
+    /* =====================================
+       BUILD REPORT TEXT
+    ====================================== */
+
+    function buildReportMessage() {
+
+      const name =
+        nameInput
+          ? nameInput.value.trim()
+          : "";
+
+
+      const phone =
+        phoneInput
+          ? phoneInput.value.trim()
+          : "";
+
+
+      const ward =
+        wardSelect
+          ? wardSelect.value.trim()
+          : "";
+
+
+      const category =
+        categorySelect
+          ? categorySelect.value.trim()
+          : "";
+
+
+      const location =
+        locationInput
+          ? locationInput.value.trim()
+          : "";
+
+
+      const details =
+        description
+          ? description.value.trim()
+          : "";
+
+
+      return (
+`📢 IMOLE 2027 COMMUNITY REPORT
+
+Hello IMOLE 2027,
+
+I would like to share a community need.
+
+👤 Name:
+${name || "Not provided"}
+
+📞 Phone:
+${phone || "Not provided"}
+
+📍 Ward:
+${ward || "Not provided"}
+
+📌 Issue Category:
+${category || "Not provided"}
+
+📍 Specific Location:
+${location || "Not provided"}
+
+📝 Community Need:
+${details || "Not provided"}
+
+📷 Supporting Photo:
+${
+  photo &&
+  photo.files &&
+  photo.files[0]
+    ? "Photo selected — I will send the photo separately in WhatsApp."
+    : "No photo provided"
+}
+
+Thank you.`
+      );
+
+    }
+
+
+    /* =====================================
+       SAVE DRAFT
+    ====================================== */
+
+    function saveDraft() {
+
+      if (!form) return;
+
+
+      const data = {
+
+        name:
+          nameInput
+            ? nameInput.value
+            : "",
+
+        phone:
+          phoneInput
+            ? phoneInput.value
+            : "",
+
+        ward:
+          wardSelect
+            ? wardSelect.value
+            : "",
+
+        category:
+          categorySelect
+            ? categorySelect.value
+            : "",
+
+        location:
+          locationInput
+            ? locationInput.value
+            : "",
+
+        description:
+          description
+            ? description.value
+            : "",
+
+        consent:
+          consent
+            ? consent.checked
+            : false
+
+      };
+
+
+      try {
+
+        localStorage.setItem(
+          DRAFT_KEY,
+          JSON.stringify(data)
+        );
+
+
+        const draftNotice =
+          $("#draftNotice");
+
+
+        if (draftNotice) {
+
+          draftNotice.classList.add(
+            "show"
+          );
+
+        }
+
+      }
+      catch (error) {
+
+        console.warn(
+          "Could not save community draft:",
+          error
+        );
+
+      }
+
+    }
+
+
+    /* =====================================
+       LOAD DRAFT
+    ====================================== */
+
+    function loadDraft() {
+
+      try {
+
+        const raw =
+          localStorage.getItem(
+            DRAFT_KEY
+          );
+
+
+        if (!raw) return;
+
+
+        const data =
+          JSON.parse(raw);
+
+
+        if (!data) return;
+
+
+        if (
+          nameInput &&
+          data.name
+        ) {
+
+          nameInput.value =
+            data.name;
+
+        }
+
+
+        if (
+          phoneInput &&
+          data.phone
+        ) {
+
+          phoneInput.value =
+            data.phone;
+
+        }
+
+
+        if (
+          wardSelect &&
+          data.ward
+        ) {
+
+          wardSelect.value =
+            data.ward;
+
+          updateWardUI(
+            canonicalWard(
+              data.ward
+            )
+          );
+
+        }
+
+
+        if (
+          categorySelect &&
+          data.category
+        ) {
+
+          categorySelect.value =
+            data.category;
+
+        }
+
+
+        if (
+          locationInput &&
+          data.location
+        ) {
+
+          locationInput.value =
+            data.location;
+
+        }
+
+
+        if (
+          description &&
+          data.description
+        ) {
+
+          description.value =
+            data.description;
+
+        }
+
+
+        if (
+          consent &&
+          data.consent
+        ) {
+
+          consent.checked = true;
+
+        }
+
+
+        if (charCount) {
+
+          charCount.textContent =
+            description
+              ? description.value.length
+              : "0";
+
+        }
+
+
+        const draftNotice =
+          $("#draftNotice");
+
+
+        if (draftNotice) {
+
+          draftNotice.classList.add(
+            "show"
+          );
+
+        }
+
+
+        showToast(
+          "Saved community draft restored."
+        );
+
+      }
+      catch (error) {
+
+        console.warn(
+          "Could not load community draft:",
+          error
+        );
+
+      }
+
+    }
+
+
+    /* =====================================
+       CLEAR DRAFT
+    ====================================== */
+
+    function clearSavedDraft(
+      showMessage = true
+    ) {
+
+      try {
+
+        localStorage.removeItem(
+          DRAFT_KEY
+        );
+
+      }
+      catch (error) {
+
+        console.warn(
+          "Could not clear draft:",
+          error
+        );
+
+      }
+
+
+      const draftNotice =
+        $("#draftNotice");
+
+
+      if (draftNotice) {
+
+        draftNotice.classList.remove(
+          "show"
+        );
+
+      }
+
+
+      if (showMessage) {
+
+        showToast(
+          "Saved community data cleared."
+        );
+
+      }
+
+    }
+
+
+    const clearDraftBtn =
+      $("#clearDraftBtn");
+
+
+    const clearSavedBtn =
+      $("#clearSavedBtn");
+
+
+    if (clearDraftBtn) {
+
+      clearDraftBtn.addEventListener(
+        "click",
+        () => {
+
+          clearSavedDraft();
+
+        }
+      );
+
+    }
+
+
+    if (clearSavedBtn) {
+
+      clearSavedBtn.addEventListener(
+        "click",
+        () => {
+
+          clearSavedDraft();
+
+        }
+      );
+
+    }
+
+
+    /* =====================================
+       AUTO SAVE INPUTS
+    ====================================== */
+
+    [
+      nameInput,
+      phoneInput,
+      categorySelect,
+      locationInput,
+      description
+    ]
+    .filter(Boolean)
+    .forEach(element => {
+
+      element.addEventListener(
+        "input",
+        saveDraft
+      );
+
+
+      element.addEventListener(
+        "change",
+        saveDraft
+      );
+
+    });
+
+
+    if (consent) {
+
+      consent.addEventListener(
+        "change",
+        saveDraft
+      );
+
+    }
+
+
+    /* =====================================
+       FORM SUBMISSION
+    ====================================== */
 
     if (form) {
 
@@ -1964,49 +3791,42 @@
           event.preventDefault();
 
 
-          if (!form.checkValidity()) {
+          if (
+            !form.checkValidity()
+          ) {
 
             form.reportValidity();
+
 
             showToast(
               "Please complete the required fields."
             );
+
 
             return;
 
           }
 
 
-          const name =
-            $("#name").value.trim();
-
-          const phone =
-            $("#phone").value.trim();
-
-          const ward =
-            $("#ward").value.trim();
-
-          const category =
-            $("#category").value.trim();
-
-          const location =
-            $("#location").value.trim();
-
-          const details =
-            $("#description").value.trim();
+          const selectedWard =
+            canonicalWard(
+              wardSelect.value
+            );
 
 
           if (
-            !name ||
-            !ward ||
-            !category ||
-            !location ||
-            !details
+            !selectedWard &&
+            wardSelect.value !==
+            "Other / Not Sure"
           ) {
 
             showToast(
-              "Please complete all required fields."
+              "Please select a valid ward."
             );
+
+
+            wardSelect.focus();
+
 
             return;
 
@@ -2014,44 +3834,22 @@
 
 
           const message =
-`📢 IMOLE 2027 COMMUNITY REPORT
-
-Hello IMOLE 2027,
-
-I would like to share a community need.
-
-👤 Name:
-${name}
-
-📞 Phone:
-${phone || "Not provided"}
-
-📍 Ward:
-${ward}
-
-📌 Issue Category:
-${category}
-
-📍 Specific Location:
-${location}
-
-📝 Community Need:
-${details}
-
-Thank you.`;
+            buildReportMessage();
 
 
           const whatsappURL =
             "https://wa.me/" +
             WHATSAPP_NUMBER +
             "?text=" +
-            encodeURIComponent(message);
+            encodeURIComponent(
+              message
+            );
 
 
           /*
-            WhatsApp opens in a new tab/window.
-            On Android, this normally launches
-            WhatsApp if it is installed.
+             Keep the draft until the user
+             confirms the report has been sent.
+             This prevents accidental loss.
           */
 
           window.open(
@@ -2062,43 +3860,83 @@ Thank you.`;
 
 
           showToast(
-            "Your report is ready in WhatsApp."
+            "Your report is ready in WhatsApp. Please press Send there."
           );
 
         }
       );
 
 
-      /* =====================================
+      /* ===================================
          RESET
-      ====================================== */
+      ==================================== */
 
       form.addEventListener(
         "reset",
         () => {
 
-          setTimeout(() => {
+          setTimeout(
+            () => {
 
-            if (charCount) {
-              charCount.textContent = "0";
-            }
+              if (charCount) {
 
-            if (photoPreview) {
+                charCount.textContent =
+                  "0";
 
-              photoPreview.style.display =
-                "none";
+              }
 
-              photoPreview.removeAttribute(
-                "src"
+
+              if (photoPreview) {
+
+                photoPreview.style.display =
+                  "none";
+
+
+                photoPreview.removeAttribute(
+                  "src"
+                );
+
+              }
+
+
+              if (photoWarning) {
+
+                photoWarning.style.display =
+                  "none";
+
+              }
+
+
+              /*
+                 Keep selected URL ward
+                 after reset.
+              */
+
+              const urlWard =
+                getUrlWard();
+
+
+              if (urlWard) {
+
+                updateWardUI(
+                  urlWard
+                );
+
+              }
+
+
+              clearSavedDraft(
+                false
               );
 
-            }
 
-            showToast(
-              "Community report form cleared."
-            );
+              showToast(
+                "Community report form cleared."
+              );
 
-          }, 0);
+            },
+            0
+          );
 
         }
       );
@@ -2106,51 +3944,268 @@ Thank you.`;
     }
 
 
-    /* =========================================
+    /* =====================================
+       COPY REPORT
+    ====================================== */
+
+    const copyBtn =
+      $("#copyBtn");
+
+
+    async function copyText(
+      text
+    ) {
+
+      if (
+        navigator.clipboard &&
+        window.isSecureContext
+      ) {
+
+        await navigator.clipboard.writeText(
+          text
+        );
+
+        return true;
+
+      }
+
+
+      /*
+         Fallback for older Android
+         browsers.
+      */
+
+      const textarea =
+        document.createElement(
+          "textarea"
+        );
+
+
+      textarea.value =
+        text;
+
+
+      textarea.style.position =
+        "fixed";
+
+
+      textarea.style.opacity =
+        "0";
+
+
+      document.body.appendChild(
+        textarea
+      );
+
+
+      textarea.focus();
+
+      textarea.select();
+
+
+      let success = false;
+
+
+      try {
+
+        success =
+          document.execCommand(
+            "copy"
+          );
+
+      }
+      catch (error) {
+
+        success = false;
+
+      }
+
+
+      textarea.remove();
+
+
+      return success;
+
+    }
+
+
+    if (copyBtn) {
+
+      copyBtn.addEventListener(
+        "click",
+        async () => {
+
+          if (
+            !form.checkValidity()
+          ) {
+
+            form.reportValidity();
+
+
+            showToast(
+              "Complete the required fields first."
+            );
+
+
+            return;
+
+          }
+
+
+          const message =
+            buildReportMessage();
+
+
+          try {
+
+            const copied =
+              await copyText(
+                message
+              );
+
+
+            if (copied) {
+
+              showToast(
+                "Community report copied."
+              );
+
+            }
+            else {
+
+              showToast(
+                "Copy was not available on this browser."
+              );
+
+            }
+
+          }
+          catch (error) {
+
+            console.warn(
+              error
+            );
+
+
+            showToast(
+              "Unable to copy the report."
+            );
+
+          }
+
+        }
+      );
+
+    }
+
+
+    /* =====================================
        DIRECT WHATSAPP
-    ========================================== */
+    ====================================== */
 
     const directWhatsApp =
       $("#directWhatsApp");
 
-    if (directWhatsApp) {
+
+    function genericWhatsAppURL() {
 
       const message =
         "Hello IMOLE 2027, I would like to share a community need.";
 
-      directWhatsApp.href =
+
+      return (
         "https://wa.me/" +
         WHATSAPP_NUMBER +
         "?text=" +
-        encodeURIComponent(message);
+        encodeURIComponent(
+          message
+        )
+      );
 
     }
 
 
-    /* =========================================
+    if (directWhatsApp) {
+
+      directWhatsApp.href =
+        genericWhatsAppURL();
+
+    }
+
+
+    /* =====================================
        FLOATING WHATSAPP
-    ========================================== */
+    ====================================== */
 
     const floatingWhatsApp =
       $("#floatingWhatsApp");
 
+
     if (floatingWhatsApp) {
 
-      const message =
-        "Hello IMOLE 2027, I would like to share a community need.";
-
       floatingWhatsApp.href =
-        "https://wa.me/" +
-        WHATSAPP_NUMBER +
-        "?text=" +
-        encodeURIComponent(message);
+        genericWhatsAppURL();
 
     }
 
 
-    /* =========================================
+    /* =====================================
+       BACK TO TOP
+    ====================================== */
+
+    const backTop =
+      $("#backTop");
+
+
+    if (backTop) {
+
+      window.addEventListener(
+        "scroll",
+        () => {
+
+          if (
+            window.scrollY >
+            500
+          ) {
+
+            backTop.classList.add(
+              "show"
+            );
+
+          }
+          else {
+
+            backTop.classList.remove(
+              "show"
+            );
+
+          }
+
+        },
+        {
+          passive: true
+        }
+      );
+
+
+      backTop.addEventListener(
+        "click",
+        () => {
+
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+
+        }
+      );
+
+    }
+
+
+    /* =====================================
        ESCAPE KEY
-    ========================================== */
+    ====================================== */
 
     document.addEventListener(
       "keydown",
@@ -2165,12 +4220,20 @@ Thank you.`;
             "open"
           );
 
+
           if (menuBtn) {
 
             menuBtn.setAttribute(
               "aria-expanded",
               "false"
             );
+
+
+            menuBtn.setAttribute(
+              "aria-label",
+              "Open navigation menu"
+            );
+
 
             menuBtn.textContent =
               "☰";
@@ -2183,11 +4246,36 @@ Thank you.`;
     );
 
 
-    /* =========================================
-       SERVICE WORKER
-    ========================================== */
+    /* =====================================
+       INITIALIZE
+    ====================================== */
 
-    if ("serviceWorker" in navigator) {
+    /*
+       URL ward has priority over saved
+       draft ward.
+    */
+
+    if (initialWard) {
+
+      updateWardUI(
+        initialWard
+      );
+
+    }
+    else {
+
+      loadDraft();
+
+    }
+
+
+    /* =====================================
+       SERVICE WORKER
+    ====================================== */
+
+    if (
+      "serviceWorker" in navigator
+    ) {
 
       window.addEventListener(
         "load",
@@ -2195,23 +4283,32 @@ Thank you.`;
 
           navigator.serviceWorker
             .register(
-              "./sw.js?v=20260903"
+              "./sw.js?v=20260905-03",
+              {
+                updateViaCache:
+                  "none"
+              }
             )
-            .then(() => {
+            .then(
+              registration => {
 
-              console.log(
-                "IMOLE 2027 service worker registered."
-              );
+                console.log(
+                  "IMOLE 2027 service worker registered:",
+                  registration.scope
+                );
 
-            })
-            .catch(error => {
+              }
+            )
+            .catch(
+              error => {
 
-              console.warn(
-                "Service worker registration failed:",
-                error
-              );
+                console.warn(
+                  "Service worker registration failed:",
+                  error
+                );
 
-            });
+              }
+            );
 
         }
       );
