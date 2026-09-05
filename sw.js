@@ -1,398 +1,869 @@
 /* ============================================================
-   IMOLE 2027 — Progressive Web App Service Worker
-   Candidate: Hon. Nurudeen Abayomi Sadeeq
-   Party: Nigeria Democratic Congress (NDC)
+   IMOLE 2027 — PROGRESSIVE WEB APP SERVICE WORKER
+   ============================================================
 
-   File: sw.js
-   Version: 2026-09-03-03
+   Candidate:
+   Hon. Nurudeen Abayomi Sadeeq
+
+   Position:
+   Lagos State House of Assembly
+   Ojo Constituency II
+
+   Party:
+   Nigeria Democratic Congress (NDC)
+
+   Brand:
+   IMOLE 2027
+
+   FILE:
+   sw.js
+
+   VERSION:
+   2026-09-05-06
 
    IMPORTANT:
-   - This file must be named exactly: sw.js
-   - Place it in the ROOT of the website repository.
-   - index.html should register: ./sw.js
+   ------------------------------------------------------------
+   • Keep this file in the ROOT of the website.
+   • File name must be exactly: sw.js
+   • Pages should register ./sw.js?v=VERSION
+   • HTML uses NETWORK-FIRST.
+   • Images use CACHE-FIRST.
+   • CSS/JS use STALE-WHILE-REVALIDATE.
+   • MP3/audio range requests bypass the service worker.
+   • External websites/APIs are NOT intercepted.
+   • Old caches are automatically deleted.
    ============================================================ */
 
 "use strict";
+
 
 /* ============================================================
    1. VERSIONING
    ============================================================ */
 
-const SW_VERSION = "2026-09-03-03";
+const SW_VERSION = "2026-09-05-06";
 
-const STATIC_CACHE = `imole-static-${SW_VERSION}`;
-const RUNTIME_CACHE = `imole-runtime-${SW_VERSION}`;
-const IMAGE_CACHE = `imole-images-${SW_VERSION}`;
+const STATIC_CACHE =
+    `imole-static-${SW_VERSION}`;
+
+const RUNTIME_CACHE =
+    `imole-runtime-${SW_VERSION}`;
+
+const IMAGE_CACHE =
+    `imole-images-${SW_VERSION}`;
 
 
 /* ============================================================
-   2. BASE PATH
-   Works on:
-   - GitHub Pages
-   - Netlify
-   - Custom domains
+   2. SERVICE WORKER SCOPE
    ============================================================ */
 
-const BASE_PATH = new URL("./", self.registration.scope).pathname;
+const SW_SCOPE =
+    self.registration.scope;
+
+const BASE_PATH =
+    new URL("./", SW_SCOPE).pathname;
 
 
 /* ============================================================
-   3. IMPORTANT WEBSITE FILES
+   3. WEBSITE CORE FILES
+   ============================================================
+
+   These files are pre-cached during installation.
+
+   Individual files are cached separately so that one missing
+   optional page will NOT break the entire installation.
    ============================================================ */
 
 const CORE_FILES = [
+
     "./",
+
     "./index.html",
+
     "./manifest.json",
 
     "./about.html",
+
     "./manifesto.html",
+
     "./polling-units.html",
+
     "./results.html",
+
     "./news.html",
+
     "./events.html",
+
     "./gallery.html",
+
     "./media.html",
+
     "./today.html",
+
     "./contact.html",
+
     "./join.html",
+
     "./community.html",
 
     "./today-history.js"
+
 ];
 
 
 /* ============================================================
-   4. INSTALL EVENT
+   4. OPTIONAL CORE ASSETS
+   ============================================================
+
+   These are intentionally optional.
+
+   If an asset does not exist, installation continues normally.
    ============================================================ */
 
-self.addEventListener("install", event => {
+const OPTIONAL_ASSETS = [
 
-    console.log(
-        `[IMOLE SW] Installing version ${SW_VERSION}`
-    );
+    "./assets/IMG-20260728-WA0032.jpg",
 
-    event.waitUntil(
+    "./assets/Hon Nurudeen Abayomi Sadeeq.jpg",
 
-        caches.open(STATIC_CACHE)
+    "./assets/Hon Seyi Sowunmi.jpg",
 
-            .then(cache => {
+    "./assets/Mr Peter Obi.jpg"
 
-                console.log(
-                    "[IMOLE SW] Pre-caching core website files..."
-                );
-
-                /*
-                 * We intentionally do not fail the entire
-                 * installation if one optional file is missing.
-                 */
-
-                return Promise.allSettled(
-
-                    CORE_FILES.map(file => {
-
-                        const url = new URL(
-                            file,
-                            self.registration.scope
-                        ).href;
-
-                        return fetch(
-                            new Request(url, {
-                                cache: "no-store"
-                            })
-                        )
-                        .then(response => {
-
-                            if (!response.ok) {
-                                throw new Error(
-                                    `HTTP ${response.status}: ${url}`
-                                );
-                            }
-
-                            return cache.put(url, response);
-                        })
-                        .catch(error => {
-
-                            console.warn(
-                                "[IMOLE SW] Could not cache:",
-                                file,
-                                error
-                            );
-
-                        });
-
-                    })
-
-                );
-
-            })
-
-            .then(() => {
-
-                /*
-                 * Activate the new service worker immediately.
-                 */
-
-                return self.skipWaiting();
-
-            })
-
-    );
-
-});
+];
 
 
 /* ============================================================
-   5. ACTIVATE EVENT
+   5. INSTALL
    ============================================================ */
 
-self.addEventListener("activate", event => {
+self.addEventListener(
+    "install",
+    event => {
 
-    console.log(
-        `[IMOLE SW] Activating version ${SW_VERSION}`
-    );
+        console.log(
+            `[IMOLE SW] Installing ${SW_VERSION}`
+        );
 
-    event.waitUntil(
+        event.waitUntil(
 
-        Promise.all([
+            precacheCoreFiles()
 
-            /*
-             * Remove old caches.
-             */
+                .then(() => {
 
-            caches.keys()
-                .then(cacheNames => {
-
-                    return Promise.all(
-
-                        cacheNames.map(cacheName => {
-
-                            if (
-
-                                cacheName !== STATIC_CACHE &&
-                                cacheName !== RUNTIME_CACHE &&
-                                cacheName !== IMAGE_CACHE
-
-                            ) {
-
-                                console.log(
-                                    "[IMOLE SW] Removing old cache:",
-                                    cacheName
-                                );
-
-                                return caches.delete(cacheName);
-
-                            }
-
-                        })
-
+                    console.log(
+                        "[IMOLE SW] Core files cached."
                     );
 
-                }),
+                })
 
-            /*
-             * Immediately control all open pages.
-             */
+                .catch(error => {
 
-            self.clients.claim()
+                    console.warn(
+                        "[IMOLE SW] Pre-cache warning:",
+                        error
+                    );
 
-        ])
+                })
 
-    );
+                .then(() => {
 
-});
+                    /*
+                     * Activate the newest worker immediately.
+                     */
+
+                    return self.skipWaiting();
+
+                })
+
+        );
+
+    }
+);
 
 
 /* ============================================================
-   6. MESSAGE HANDLER
+   6. PRE-CACHE CORE FILES
    ============================================================ */
 
-self.addEventListener("message", event => {
+async function precacheCoreFiles() {
 
-    if (!event.data) {
-        return;
-    }
-
-    /*
-     * Allows the webpage to tell the service worker
-     * to activate immediately.
-     */
-
-    if (event.data.type === "SKIP_WAITING") {
-
-        self.skipWaiting();
-
-    }
+    const cache =
+        await caches.open(STATIC_CACHE);
 
 
     /*
-     * Optional cache cleanup command.
+     * Cache each file individually.
+
+     * This prevents one missing file from stopping
+     * the entire service worker installation.
      */
 
-    if (event.data.type === "CLEAR_CACHE") {
+    await Promise.all(
+
+        CORE_FILES.map(
+            async file => {
+
+                const url =
+                    new URL(
+                        file,
+                        SW_SCOPE
+                    ).href;
+
+                try {
+
+                    const response =
+                        await fetch(
+                            new Request(
+                                url,
+                                {
+                                    cache: "no-store"
+                                }
+                            )
+                        );
+
+                    if (
+                        response &&
+                        response.ok
+                    ) {
+
+                        await cache.put(
+                            url,
+                            response.clone()
+                        );
+
+                        console.log(
+                            "[IMOLE SW] Cached:",
+                            file
+                        );
+
+                    } else {
+
+                        console.warn(
+                            "[IMOLE SW] Could not cache:",
+                            file,
+                            response
+                                ? response.status
+                                : "no response"
+                        );
+
+                    }
+
+                } catch (error) {
+
+                    console.warn(
+                        "[IMOLE SW] Optional file unavailable:",
+                        file,
+                        error
+                    );
+
+                }
+
+            }
+        )
+
+    );
+
+
+    /*
+     * Optional images/assets.
+     */
+
+    await Promise.all(
+
+        OPTIONAL_ASSETS.map(
+            async file => {
+
+                const url =
+                    new URL(
+                        file,
+                        SW_SCOPE
+                    ).href;
+
+                try {
+
+                    const response =
+                        await fetch(
+                            new Request(
+                                url,
+                                {
+                                    cache: "no-store"
+                                }
+                            )
+                        );
+
+                    if (
+                        response &&
+                        response.ok
+                    ) {
+
+                        await cache.put(
+                            url,
+                            response.clone()
+                        );
+
+                    }
+
+                } catch (error) {
+
+                    console.warn(
+                        "[IMOLE SW] Optional asset not cached:",
+                        file
+                    );
+
+                }
+
+            }
+        )
+
+    );
+
+}
+
+
+/* ============================================================
+   7. ACTIVATE
+   ============================================================ */
+
+self.addEventListener(
+    "activate",
+    event => {
+
+        console.log(
+            `[IMOLE SW] Activating ${SW_VERSION}`
+        );
 
         event.waitUntil(
 
             Promise.all([
 
-                caches.delete(STATIC_CACHE),
-                caches.delete(RUNTIME_CACHE),
-                caches.delete(IMAGE_CACHE)
+                removeOldCaches(),
+
+                self.clients.claim()
 
             ])
 
         );
 
     }
-
-});
+);
 
 
 /* ============================================================
-   7. FETCH EVENT
+   8. REMOVE OLD CACHES
    ============================================================ */
 
-self.addEventListener("fetch", event => {
+async function removeOldCaches() {
 
-    const request = event.request;
-
-    /*
-     * Only handle GET requests.
-     */
-
-    if (request.method !== "GET") {
-        return;
-    }
-
-    const url = new URL(request.url);
-
-    /*
-     * Do not interfere with external websites/services.
-     *
-     * This is important for:
-     * - WhatsApp
-     * - Google
-     * - YouTube
-     * - external APIs
-     * - analytics
-     */
-
-    if (url.origin !== self.location.origin) {
-        return;
-    }
+    const cacheNames =
+        await caches.keys();
 
 
-    /* --------------------------------------------------------
-       NAVIGATION / HTML PAGES
-       -------------------------------------------------------- */
+    await Promise.all(
 
-    if (
+        cacheNames.map(
+            async cacheName => {
 
-        request.mode === "navigate" ||
-        request.destination === "document" ||
-        url.pathname.endsWith(".html") ||
-        url.pathname === BASE_PATH
+                /*
+                 * Preserve only caches belonging
+                 * to the current version.
+                 */
 
-    ) {
+                const keep =
 
-        event.respondWith(
+                    cacheName === STATIC_CACHE ||
 
-            networkFirstHTML(request)
+                    cacheName === RUNTIME_CACHE ||
 
-        );
-
-        return;
-    }
+                    cacheName === IMAGE_CACHE;
 
 
-    /* --------------------------------------------------------
-       IMAGES
-       -------------------------------------------------------- */
+                if (!keep) {
 
-    if (
+                    console.log(
+                        "[IMOLE SW] Deleting old cache:",
+                        cacheName
+                    );
 
-        request.destination === "image" ||
-        /\.(png|jpg|jpeg|gif|webp|svg|ico)$/i.test(url.pathname)
+                    await caches.delete(
+                        cacheName
+                    );
 
-    ) {
+                }
 
-        event.respondWith(
-
-            cacheFirstImage(request)
-
-        );
-
-        return;
-    }
-
-
-    /* --------------------------------------------------------
-       CSS / JAVASCRIPT / FONTS / STATIC FILES
-       -------------------------------------------------------- */
-
-    if (
-
-        request.destination === "script" ||
-        request.destination === "style" ||
-        request.destination === "font" ||
-        /\.(css|js|json|woff|woff2|ttf|otf)$/i.test(url.pathname)
-
-    ) {
-
-        event.respondWith(
-
-            staleWhileRevalidate(request)
-
-        );
-
-        return;
-    }
-
-
-    /* --------------------------------------------------------
-       EVERYTHING ELSE
-       -------------------------------------------------------- */
-
-    event.respondWith(
-
-        staleWhileRevalidate(request)
+            }
+        )
 
     );
 
-});
+}
 
 
 /* ============================================================
-   8. NETWORK-FIRST HTML STRATEGY
-   ============================================================
-
-   IMPORTANT:
-   HTML is deliberately network-first.
-
-   This means:
-   - New index.html is fetched from GitHub/Netlify first.
-   - Old cached HTML is not preferred.
-   - If internet fails, cached HTML is used.
+   9. MESSAGE HANDLER
    ============================================================ */
 
-async function networkFirstHTML(request) {
+self.addEventListener(
+    "message",
+    event => {
 
-    const cache = await caches.open(RUNTIME_CACHE);
+        if (!event.data) {
+            return;
+        }
 
-    try {
 
-        const networkResponse = await fetch(
+        /*
+         * Force the waiting service worker to activate.
+         */
 
-            new Request(request, {
-                cache: "no-store"
-            })
+        if (
+            event.data.type ===
+            "SKIP_WAITING"
+        ) {
+
+            self.skipWaiting();
+
+        }
+
+
+        /*
+         * Clear all IMOLE caches.
+
+         * Useful for troubleshooting.
+         */
+
+        if (
+            event.data.type ===
+            "CLEAR_CACHE"
+        ) {
+
+            event.waitUntil(
+
+                Promise.all([
+
+                    caches.delete(
+                        STATIC_CACHE
+                    ),
+
+                    caches.delete(
+                        RUNTIME_CACHE
+                    ),
+
+                    caches.delete(
+                        IMAGE_CACHE
+                    )
+
+                ])
+
+            );
+
+        }
+
+
+        /*
+         * Clear ALL caches controlled by this
+         * service worker version family.
+         */
+
+        if (
+            event.data.type ===
+            "CLEAR_ALL_IMOLE_CACHES"
+        ) {
+
+            event.waitUntil(
+
+                caches.keys()
+                    .then(names =>
+
+                        Promise.all(
+
+                            names
+                                .filter(
+                                    name =>
+                                        name.startsWith(
+                                            "imole-"
+                                        )
+                                )
+                                .map(
+                                    name =>
+                                        caches.delete(
+                                            name
+                                        )
+                                )
+
+                        )
+
+                    )
+
+            );
+
+        }
+
+    }
+);
+
+
+/* ============================================================
+   10. FETCH EVENT
+   ============================================================ */
+
+self.addEventListener(
+    "fetch",
+    event => {
+
+        const request =
+            event.request;
+
+
+        /*
+         * Only GET requests.
+         */
+
+        if (
+            request.method !==
+            "GET"
+        ) {
+
+            return;
+
+        }
+
+
+        const url =
+            new URL(
+                request.url
+            );
+
+
+        /* ----------------------------------------------------
+           NEVER INTERCEPT EXTERNAL WEBSITES
+           ----------------------------------------------------
+
+           Examples:
+           • WhatsApp
+           • Facebook
+           • YouTube
+           • Google
+           • rss2json
+           • external APIs
+           • social media
+           ---------------------------------------------------- */
+
+        if (
+            url.origin !==
+            self.location.origin
+        ) {
+
+            return;
+
+        }
+
+
+        /* ----------------------------------------------------
+           IMPORTANT:
+           NEVER CACHE sw.js ITSELF
+           ----------------------------------------------------
+
+           This is extremely important for PWA updates.
+
+           Otherwise the service worker could accidentally
+           receive an old cached copy of itself.
+           ---------------------------------------------------- */
+
+        if (
+            url.pathname.endsWith(
+                "/sw.js"
+            )
+        ) {
+
+            return;
+
+        }
+
+
+        /* ----------------------------------------------------
+           BYPASS AUDIO RANGE REQUESTS
+           ----------------------------------------------------
+
+           MP3 players frequently use HTTP Range requests.
+
+           Intercepting these requests can cause:
+           • songs not playing
+           • seeking problems
+           • partial audio errors
+           • "can't play this file" messages
+
+           Therefore audio/range requests go directly
+           to the network/browser.
+           ---------------------------------------------------- */
+
+        if (
+            request.headers.get(
+                "range"
+            )
+        ) {
+
+            return;
+
+        }
+
+
+        /* ----------------------------------------------------
+           AUDIO FILES
+           ---------------------------------------------------- */
+
+        if (
+
+            request.destination ===
+            "audio"
+
+            ||
+
+            /\.(mp3|wav|ogg|m4a|aac|flac)$/i
+                .test(
+                    url.pathname
+                )
+
+        ) {
+
+            /*
+             * Do not cache campaign audio automatically.
+             *
+             * This protects playback and prevents
+             * very large MP3 files filling the cache.
+             */
+
+            event.respondWith(
+                fetch(request)
+            );
+
+            return;
+
+        }
+
+
+        /* ----------------------------------------------------
+           HTML / PAGE NAVIGATION
+           ---------------------------------------------------- */
+
+        if (
+
+            request.mode ===
+            "navigate"
+
+            ||
+
+            request.destination ===
+            "document"
+
+            ||
+
+            url.pathname.endsWith(
+                ".html"
+            )
+
+            ||
+
+            url.pathname ===
+            BASE_PATH
+
+        ) {
+
+            event.respondWith(
+
+                networkFirstHTML(
+                    request
+                )
+
+            );
+
+            return;
+
+        }
+
+
+        /* ----------------------------------------------------
+           IMAGES
+           ---------------------------------------------------- */
+
+        if (
+
+            request.destination ===
+            "image"
+
+            ||
+
+            /\.(png|jpg|jpeg|gif|webp|svg|ico|avif)$/i
+                .test(
+                    url.pathname
+                )
+
+        ) {
+
+            event.respondWith(
+
+                cacheFirstImage(
+                    request
+                )
+
+            );
+
+            return;
+
+        }
+
+
+        /* ----------------------------------------------------
+           CSS / JAVASCRIPT / FONTS
+           ---------------------------------------------------- */
+
+        if (
+
+            request.destination ===
+            "script"
+
+            ||
+
+            request.destination ===
+            "style"
+
+            ||
+
+            request.destination ===
+            "font"
+
+            ||
+
+            /\.(css|js|woff|woff2|ttf|otf)$/i
+                .test(
+                    url.pathname
+                )
+
+        ) {
+
+            event.respondWith(
+
+                staleWhileRevalidate(
+                    request
+                )
+
+            );
+
+            return;
+
+        }
+
+
+        /* ----------------------------------------------------
+           MANIFEST
+           ---------------------------------------------------- */
+
+        if (
+            url.pathname.endsWith(
+                "/manifest.json"
+            )
+        ) {
+
+            event.respondWith(
+
+                networkFirstStatic(
+                    request
+                )
+
+            );
+
+            return;
+
+        }
+
+
+        /* ----------------------------------------------------
+           JSON / SAME-ORIGIN DATA
+           ---------------------------------------------------- */
+
+        if (
+            url.pathname.endsWith(
+                ".json"
+            )
+        ) {
+
+            event.respondWith(
+
+                networkFirstStatic(
+                    request
+                )
+
+            );
+
+            return;
+
+        }
+
+
+        /* ----------------------------------------------------
+           OTHER SAME-ORIGIN FILES
+           ---------------------------------------------------- */
+
+        event.respondWith(
+
+            staleWhileRevalidate(
+                request
+            )
 
         );
 
-        if (networkResponse && networkResponse.ok) {
+    }
+);
+
+
+/* ============================================================
+   11. NETWORK-FIRST HTML
+   ============================================================
+
+   This is the most important part of the new system.
+
+   ONLINE:
+   -----------------------
+   Browser gets the newest HTML from the server.
+
+   OFFLINE:
+   -----------------------
+   Browser gets cached HTML.
+
+   This prevents old HTML from permanently taking priority.
+   ============================================================ */
+
+async function networkFirstHTML(
+    request
+) {
+
+    const cache =
+        await caches.open(
+            RUNTIME_CACHE
+        );
+
+
+    try {
+
+        const networkResponse =
+            await fetch(
+                new Request(
+                    request,
+                    {
+                        cache:
+                            "no-store"
+                    }
+                )
+            );
+
+
+        if (
+            networkResponse &&
+            networkResponse.ok
+        ) {
 
             /*
-             * Store the newest HTML response.
+             * Save the newest version.
              */
 
             await cache.put(
@@ -400,12 +871,46 @@ async function networkFirstHTML(request) {
                 networkResponse.clone()
             );
 
+
+            /*
+             * Also update the static cache
+             * for ordinary HTML pages.
+             */
+
+            try {
+
+                const staticCache =
+                    await caches.open(
+                        STATIC_CACHE
+                    );
+
+                const cleanURL =
+                    new URL(
+                        request.url
+                    ).href;
+
+                await staticCache.put(
+                    cleanURL,
+                    networkResponse.clone()
+                );
+
+            } catch (error) {
+
+                console.warn(
+                    "[IMOLE SW] Static HTML update skipped:",
+                    error
+                );
+
+            }
+
+
             return networkResponse;
 
         }
 
+
         throw new Error(
-            `Network response was not OK: ${networkResponse.status}`
+            `HTTP ${networkResponse.status}`
         );
 
     }
@@ -413,58 +918,142 @@ async function networkFirstHTML(request) {
     catch (error) {
 
         console.warn(
-            "[IMOLE SW] Network unavailable. Using cached HTML.",
-            error
+            "[IMOLE SW] Offline HTML fallback:",
+            request.url
         );
 
 
         /*
-         * Try the exact requested page first.
+         * First:
+         * Try exact URL.
          */
 
-        const cachedPage = await cache.match(request);
+        const exactCache =
+            await cache.match(
+                request
+            );
 
-        if (cachedPage) {
-            return cachedPage;
+
+        if (exactCache) {
+
+            return exactCache;
+
         }
 
 
         /*
-         * Try the static cache.
+         * Second:
+         * Try without query parameters.
+
+         * This is important for:
+         *
+         * news.html?ward=Ilogbo
+         * events.html?ward=Ilogbo
+         * community.html?ward=Ilogbo
+         * polling-units.html?ward=Ilogbo
          */
 
-        const staticCache = await caches.open(STATIC_CACHE);
+        const cleanURL =
+            new URL(
+                request.url
+            );
 
-        const staticPage = await staticCache.match(request);
+        cleanURL.search = "";
 
-        if (staticPage) {
-            return staticPage;
+
+        const cleanRequest =
+            new Request(
+                cleanURL.href,
+                {
+                    method: "GET"
+                }
+            );
+
+
+        const cleanCache =
+            await cache.match(
+                cleanRequest
+            );
+
+
+        if (cleanCache) {
+
+            return cleanCache;
+
         }
 
 
         /*
-         * If the requested page does not exist in cache,
-         * return index.html as the offline fallback.
+         * Third:
+         * Static cache.
          */
 
-        const indexURL = new URL(
-            "./index.html",
-            self.registration.scope
-        ).href;
+        const staticCache =
+            await caches.open(
+                STATIC_CACHE
+            );
+
+
+        const staticExact =
+            await staticCache.match(
+                request
+            );
+
+
+        if (staticExact) {
+
+            return staticExact;
+
+        }
+
+
+        const staticClean =
+            await staticCache.match(
+                cleanRequest
+            );
+
+
+        if (staticClean) {
+
+            return staticClean;
+
+        }
+
+
+        /*
+         * Fourth:
+         * Use index.html as the offline fallback.
+         */
+
+        const indexURL =
+            new URL(
+                "./index.html",
+                SW_SCOPE
+            ).href;
 
 
         const cachedIndex =
-            await cache.match(indexURL) ||
-            await staticCache.match(indexURL);
+
+            await cache.match(
+                indexURL
+            )
+
+            ||
+
+            await staticCache.match(
+                indexURL
+            );
 
 
         if (cachedIndex) {
+
             return cachedIndex;
+
         }
 
 
         /*
-         * Last-resort offline page.
+         * Final fallback.
          */
 
         return offlineResponse();
@@ -475,54 +1064,89 @@ async function networkFirstHTML(request) {
 
 
 /* ============================================================
-   9. IMAGE CACHE STRATEGY
+   12. IMAGE CACHE
+   ============================================================
+
+   Strategy:
+   CACHE FIRST + background update
+
+   This gives faster loading for:
+   • Candidate photo
+   • NDC logo
+   • Gallery images
+   • Campaign images
    ============================================================ */
 
-async function cacheFirstImage(request) {
+async function cacheFirstImage(
+    request
+) {
 
-    const cache = await caches.open(IMAGE_CACHE);
+    const cache =
+        await caches.open(
+            IMAGE_CACHE
+        );
 
-    /*
-     * Look for an existing image first.
-     */
 
-    const cached = await cache.match(request);
+    const cached =
+        await cache.match(
+            request
+        );
+
 
     if (cached) {
 
         /*
-         * Update the image quietly in the background.
+         * Refresh the image silently.
          */
 
-        fetch(request)
-            .then(response => {
+        fetch(
+            new Request(
+                request,
+                {
+                    cache:
+                        "no-store"
+                }
+            )
+        )
+            .then(
+                response => {
 
-                if (response && response.ok) {
+                    if (
+                        response &&
+                        response.ok
+                    ) {
 
-                    cache.put(
-                        request,
-                        response.clone()
-                    );
+                        return cache.put(
+                            request,
+                            response.clone()
+                        );
+
+                    }
 
                 }
-
-            })
-            .catch(() => {});
+            )
+            .catch(
+                () => {}
+            );
 
 
         return cached;
+
     }
 
 
-    /*
-     * Image not cached — download it.
-     */
-
     try {
 
-        const response = await fetch(request);
+        const response =
+            await fetch(
+                request
+            );
 
-        if (response && response.ok) {
+
+        if (
+            response &&
+            response.ok
+        ) {
 
             await cache.put(
                 request,
@@ -531,6 +1155,7 @@ async function cacheFirstImage(request) {
 
         }
 
+
         return response;
 
     }
@@ -538,15 +1163,17 @@ async function cacheFirstImage(request) {
     catch (error) {
 
         console.warn(
-            "[IMOLE SW] Image could not be loaded:",
+            "[IMOLE SW] Image unavailable:",
             request.url
         );
+
 
         return new Response(
             "",
             {
                 status: 404,
-                statusText: "Image unavailable offline"
+                statusText:
+                    "Image unavailable offline"
             }
         );
 
@@ -556,53 +1183,65 @@ async function cacheFirstImage(request) {
 
 
 /* ============================================================
-   10. STALE-WHILE-REVALIDATE
-   ============================================================
-
-   Used for:
-   - JavaScript
-   - CSS
-   - fonts
-   - JSON
-   - other static files
-
-   Existing cached version loads quickly while the newest
-   version is downloaded in the background.
+   13. STALE-WHILE-REVALIDATE
    ============================================================ */
 
-async function staleWhileRevalidate(request) {
+async function staleWhileRevalidate(
+    request
+) {
 
-    const cache = await caches.open(STATIC_CACHE);
+    const cache =
+        await caches.open(
+            STATIC_CACHE
+        );
 
-    const cachedResponse = await cache.match(request);
+
+    const cachedResponse =
+        await cache.match(
+            request
+        );
 
 
-    const networkPromise = fetch(
+    const networkPromise =
 
-        new Request(request, {
-            cache: "no-store"
-        })
-
-    )
-    .then(response => {
-
-        if (response && response.ok) {
-
-            cache.put(
+        fetch(
+            new Request(
                 request,
-                response.clone()
+                {
+                    cache:
+                        "no-store"
+                }
+            )
+        )
+
+            .then(
+                async response => {
+
+                    if (
+                        response &&
+                        response.ok
+                    ) {
+
+                        await cache.put(
+                            request,
+                            response.clone()
+                        );
+
+                    }
+
+
+                    return response;
+
+                }
+            )
+
+            .catch(
+                () => null
             );
-
-        }
-
-        return response;
-
-    })
-    .catch(() => null);
 
 
     /*
-     * If cached version exists, use it immediately.
+     * Cached version is immediately returned.
      */
 
     if (cachedResponse) {
@@ -613,10 +1252,13 @@ async function staleWhileRevalidate(request) {
 
 
     /*
-     * Otherwise wait for network.
+     * No cached version.
+     * Wait for network.
      */
 
-    const networkResponse = await networkPromise;
+    const networkResponse =
+        await networkPromise;
+
 
     if (networkResponse) {
 
@@ -625,15 +1267,12 @@ async function staleWhileRevalidate(request) {
     }
 
 
-    /*
-     * Nothing available.
-     */
-
     return new Response(
         "",
         {
             status: 503,
-            statusText: "Resource unavailable offline"
+            statusText:
+                "Resource unavailable offline"
         }
     );
 
@@ -641,7 +1280,104 @@ async function staleWhileRevalidate(request) {
 
 
 /* ============================================================
-   11. OFFLINE FALLBACK PAGE
+   14. NETWORK-FIRST STATIC FILE
+   ============================================================ */
+
+async function networkFirstStatic(
+    request
+) {
+
+    const cache =
+        await caches.open(
+            RUNTIME_CACHE
+        );
+
+
+    try {
+
+        const response =
+            await fetch(
+                new Request(
+                    request,
+                    {
+                        cache:
+                            "no-store"
+                    }
+                )
+            );
+
+
+        if (
+            response &&
+            response.ok
+        ) {
+
+            await cache.put(
+                request,
+                response.clone()
+            );
+
+            return response;
+
+        }
+
+
+        throw new Error(
+            `HTTP ${response.status}`
+        );
+
+    }
+
+    catch (error) {
+
+        const cached =
+            await cache.match(
+                request
+            );
+
+
+        if (cached) {
+
+            return cached;
+
+        }
+
+
+        const staticCache =
+            await caches.open(
+                STATIC_CACHE
+            );
+
+
+        const staticCached =
+            await staticCache.match(
+                request
+            );
+
+
+        if (staticCached) {
+
+            return staticCached;
+
+        }
+
+
+        return new Response(
+            "",
+            {
+                status: 503,
+                statusText:
+                    "Resource unavailable offline"
+            }
+        );
+
+    }
+
+}
+
+
+/* ============================================================
+   15. OFFLINE FALLBACK
    ============================================================ */
 
 function offlineResponse() {
@@ -658,10 +1394,14 @@ function offlineResponse() {
 
 <meta name="viewport"
       content="width=device-width,
-               initial-scale=1.0">
+               initial-scale=1.0,
+               viewport-fit=cover">
 
 <meta name="theme-color"
       content="#063b2d">
+
+<meta name="color-scheme"
+      content="light">
 
 <title>IMOLE 2027 — Offline</title>
 
@@ -671,9 +1411,14 @@ function offlineResponse() {
     box-sizing: border-box;
 }
 
+html,
 body {
-
     margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
 
     min-height: 100vh;
 
@@ -683,7 +1428,8 @@ body {
 
     justify-content: center;
 
-    padding: 24px;
+    padding:
+        24px;
 
     font-family:
         Arial,
@@ -697,59 +1443,90 @@ body {
             #0b5d45
         );
 
-    color: white;
+    color:
+        #ffffff;
 
-    text-align: center;
+    text-align:
+        center;
 
 }
 
 .card {
 
-    width: 100%;
+    width:
+        100%;
 
-    max-width: 460px;
+    max-width:
+        460px;
 
-    padding: 35px 25px;
+    padding:
+        35px 25px;
 
-    border-radius: 22px;
+    border-radius:
+        24px;
 
     background:
-        rgba(255,255,255,0.10);
+        rgba(
+            255,
+            255,
+            255,
+            0.10
+        );
 
     border:
         1px solid
-        rgba(255,255,255,0.20);
+        rgba(
+            255,
+            255,
+            255,
+            0.20
+        );
 
     box-shadow:
         0 20px 60px
-        rgba(0,0,0,0.25);
+        rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
 
 }
 
 .logo {
 
-    width: 90px;
+    width:
+        90px;
 
-    height: 90px;
+    height:
+        90px;
 
     margin:
         0 auto 20px;
 
-    border-radius: 50%;
+    border-radius:
+        50%;
 
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    background: white;
+    background:
+        #ffffff;
 
-    color: #063b2d;
+    color:
+        #063b2d;
 
-    font-size: 42px;
+    font-size:
+        42px;
 
-    font-weight: bold;
+    font-weight:
+        900;
 
 }
 
@@ -758,48 +1535,87 @@ h1 {
     margin:
         0 0 10px;
 
-    font-size: 28px;
+    font-size:
+        28px;
+
+}
+
+h2 {
+
+    margin:
+        0 0 15px;
+
+    font-size:
+        17px;
+
+    opacity:
+        0.95;
 
 }
 
 p {
 
-    line-height: 1.6;
+    line-height:
+        1.65;
 
-    opacity: 0.92;
+    opacity:
+        0.92;
 
 }
 
 button {
 
-    margin-top: 15px;
+    margin-top:
+        15px;
 
     padding:
-        14px 22px;
+        14px 24px;
 
-    border: none;
+    border:
+        none;
 
-    border-radius: 50px;
+    border-radius:
+        50px;
 
-    background: white;
+    background:
+        #ffffff;
 
-    color: #063b2d;
+    color:
+        #063b2d;
 
-    font-size: 16px;
+    font-size:
+        16px;
 
-    font-weight: bold;
+    font-weight:
+        800;
 
-    cursor: pointer;
+    cursor:
+        pointer;
+
+}
+
+button:active {
+
+    transform:
+        scale(
+            0.97
+        );
 
 }
 
 .small {
 
-    margin-top: 20px;
+    margin-top:
+        20px;
 
-    font-size: 13px;
+    font-size:
+        13px;
 
-    opacity: 0.75;
+    line-height:
+        1.6;
+
+    opacity:
+        0.75;
 
 }
 
@@ -819,25 +1635,36 @@ button {
         IMOLE 2027
     </h1>
 
+    <h2>
+        Service • Development • Accountability
+    </h2>
+
     <p>
         You are currently offline.
     </p>
 
     <p>
-        Some previously visited campaign
+        Some previously visited IMOLE 2027
         pages may still be available.
-        Please reconnect to the internet
-        and try again.
+        Reconnect to the internet and try again
+        for the latest campaign information.
     </p>
 
-    <button onclick="location.reload()">
+    <button
+        onclick="location.reload()">
         Try Again
     </button>
 
     <div class="small">
+
         Hon. Nurudeen Abayomi Sadeeq<br>
+
         Lagos State House of Assembly<br>
-        Ojo Constituency II
+
+        Ojo Constituency II<br>
+
+        Nigeria Democratic Congress (NDC)
+
     </div>
 
 </div>
@@ -848,10 +1675,9 @@ button {
 
 `;
 
+
     return new Response(
-
         html,
-
         {
             status: 503,
 
@@ -864,14 +1690,13 @@ button {
             }
 
         }
-
     );
 
 }
 
 
 /* ============================================================
-   12. SERVICE WORKER ERROR PROTECTION
+   16. GLOBAL ERROR PROTECTION
    ============================================================ */
 
 self.addEventListener(
@@ -880,7 +1705,8 @@ self.addEventListener(
 
         console.error(
             "[IMOLE SW] Error:",
-            event.error || event.message
+            event.error ||
+            event.message
         );
 
     }
@@ -892,7 +1718,7 @@ self.addEventListener(
     event => {
 
         console.error(
-            "[IMOLE SW] Unhandled promise rejection:",
+            "[IMOLE SW] Unhandled rejection:",
             event.reason
         );
 
@@ -901,10 +1727,9 @@ self.addEventListener(
 
 
 /* ============================================================
-   13. READY
+   17. SERVICE WORKER READY
    ============================================================ */
 
 console.log(
-    `%cIMOLE 2027 Service Worker ${SW_VERSION} loaded`,
-    "font-weight:bold;"
+    `[IMOLE SW] IMOLE 2027 Service Worker ${SW_VERSION} loaded`
 );
