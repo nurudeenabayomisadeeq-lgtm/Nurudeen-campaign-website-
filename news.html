@@ -7,67 +7,65 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
+<meta name="theme-color" content="#063b2d">
+<meta name="color-scheme" content="light">
+
 <title>News & Newspaper Headlines | IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq</title>
 
 <meta name="description"
-      content="IMOLE 2027 News Centre — latest newspaper headlines, breaking news, Lagos news, Ojo Constituency II updates, campaign news and community information.">
+      content="IMOLE 2027 News Centre — latest Nigeria, Lagos, Ojo Constituency II, politics, business, sports and world headlines, plus campaign and community updates.">
 
 <meta name="keywords"
-      content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Ojo news, Lagos news, Nigeria news, newspaper headlines, breaking news, NDC">
+      content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Ojo Constituency II, Ojo news, Lagos news, Nigeria news, NDC, Nigeria Democratic Congress, campaign news">
 
-<meta name="theme-color" content="#063b2d">
+<meta name="author"
+      content="IMOLE 2027">
 
-<meta property="og:title"
-      content="IMOLE 2027 News Centre">
+<meta name="robots"
+      content="index, follow">
 
-<meta property="og:description"
-      content="Latest newspaper headlines, breaking news and IMOLE 2027 campaign updates.">
-
-<meta property="og:image"
-      content="assets/Hon Nurudeen Abayomi Sadeeq.jpg">
-
-<meta property="og:type"
-      content="website">
-
-<link rel="icon"
-      href="assets/IMG-20260728-WA0032.jpg">
+<link rel="canonical"
+      href="news.html">
 
 <link rel="manifest"
       href="manifest.json">
 
+<link rel="icon"
+      type="image/jpeg"
+      href="assets/IMG-20260728-WA0032.jpg">
+
+<link rel="apple-touch-icon"
+      href="assets/IMG-20260728-WA0032.jpg">
+
+<meta property="og:type"
+      content="website">
+
+<meta property="og:title"
+      content="IMOLE 2027 | News Centre">
+
+<meta property="og:description"
+      content="Latest headlines, campaign updates and community information for Ojo Constituency II.">
+
+<meta property="og:image"
+      content="assets/Hon Nurudeen Abayomi Sadeeq.jpg">
+
+<meta property="og:url"
+      content="news.html">
+
+<meta name="twitter:card"
+      content="summary_large_image">
+
+<meta name="twitter:title"
+      content="IMOLE 2027 | News Centre">
+
+<meta name="twitter:description"
+      content="Latest headlines and campaign updates from IMOLE 2027.">
+
+<meta name="twitter:image"
+      content="assets/Hon Nurudeen Abayomi Sadeeq.jpg">
+
 
 <style>
-
-/* =========================================================
-   IMOLE 2027 NEWS CENTRE
-   SINGLE-FILE NEWS SYSTEM
-========================================================= */
-
-:root{
-
-  --green:#063b2d;
-  --green2:#0a5942;
-  --green3:#0d7255;
-
-  --gold:#d6a62e;
-  --gold2:#f1c95a;
-
-  --white:#ffffff;
-  --light:#f4f8f6;
-  --lighter:#f8fbfa;
-
-  --dark:#10231d;
-  --text:#30433c;
-  --muted:#6b7c75;
-
-  --red:#c62828;
-  --red2:#e53935;
-
-  --shadow:0 12px 35px rgba(0,0,0,.10);
-  --shadow2:0 5px 20px rgba(0,0,0,.07);
-
-  --radius:20px;
-}
 
 *{
   box-sizing:border-box;
@@ -80,23 +78,14 @@ html{
 }
 
 body{
-
   font-family:
-  Arial,
-  Helvetica,
-  sans-serif;
-
-  background:#fff;
-  color:var(--text);
-
+    Arial,
+    Helvetica,
+    sans-serif;
+  background:#f5f8f6;
+  color:#17352d;
   line-height:1.6;
-
   overflow-x:hidden;
-}
-
-img{
-  max-width:100%;
-  display:block;
 }
 
 a{
@@ -104,1693 +93,1189 @@ a{
   text-decoration:none;
 }
 
+img{
+  max-width:100%;
+  display:block;
+}
+
 button,
 input,
 select{
-  font-family:inherit;
-}
-
-button{
-  cursor:pointer;
-}
-
-.container{
-  width:min(1180px,92%);
-  margin:auto;
+  font:inherit;
 }
 
 
-/* =========================================================
-   TOP BAR
-========================================================= */
-
-.topbar{
-
-  background:var(--green);
-
-  color:#fff;
-
-  text-align:center;
-
-  padding:9px 15px;
-
-  font-size:12px;
-
-  font-weight:800;
-
-  letter-spacing:.3px;
-}
-
-
-/* =========================================================
+/* =========================
    HEADER
-========================================================= */
+========================= */
 
-header{
-
+.site-header{
   position:sticky;
-
   top:0;
-
-  z-index:9999;
-
-  background:
-  rgba(255,255,255,.97);
-
-  box-shadow:
-  0 3px 18px rgba(0,0,0,.08);
-
-  backdrop-filter:blur(10px);
+  z-index:1000;
+  background:#063b2d;
+  color:#fff;
+  box-shadow:0 3px 15px rgba(0,0,0,.18);
 }
 
-.navbar{
-
-  min-height:76px;
-
+.header-inner{
+  max-width:1200px;
+  margin:auto;
+  min-height:68px;
+  padding:10px 16px;
   display:flex;
-
   align-items:center;
-
   justify-content:space-between;
-
-  gap:20px;
+  gap:14px;
 }
 
 .brand{
-
   display:flex;
-
   align-items:center;
-
   gap:10px;
-
   min-width:0;
 }
 
-.brand img{
-
-  width:48px;
-
-  height:48px;
-
+.brand-logo{
+  width:44px;
+  height:44px;
   object-fit:cover;
-
   border-radius:50%;
-
-  background:#eee;
+  background:#fff;
+  border:2px solid rgba(255,255,255,.8);
 }
 
 .brand-text{
-
-  line-height:1.1;
+  min-width:0;
 }
 
-.brand-text strong{
-
-  display:block;
-
-  color:var(--green);
-
+.brand-title{
   font-size:17px;
-}
-
-.brand-text small{
-
-  display:block;
-
-  color:#777;
-
-  font-size:9px;
-
-  font-weight:800;
-
-  margin-top:4px;
-}
-
-.nav-links{
-
-  display:flex;
-
-  align-items:center;
-
-  gap:17px;
-}
-
-.nav-links a{
-
-  color:#253c34;
-
-  font-size:12px;
-
-  font-weight:800;
-
-  transition:.2s;
-}
-
-.nav-links a:hover,
-.nav-links a.active{
-
-  color:var(--gold);
-}
-
-.menu-btn{
-
-  display:none;
-
-  width:44px;
-
-  height:44px;
-
-  border:0;
-
-  border-radius:10px;
-
-  background:var(--green);
-
-  color:#fff;
-
-  font-size:22px;
-}
-
-
-/* =========================================================
-   PAGE HERO
-========================================================= */
-
-.page-hero{
-
-  position:relative;
-
-  min-height:420px;
-
-  display:flex;
-
-  align-items:center;
-
-  overflow:hidden;
-
-  background:
-
-  linear-gradient(
-    90deg,
-    rgba(3,38,29,.97),
-    rgba(3,38,29,.82),
-    rgba(3,38,29,.42)
-  ),
-
-  url("assets/Hon Nurudeen Abayomi Sadeeq.jpg")
-  center/cover no-repeat;
-}
-
-.page-hero-content{
-
-  color:#fff;
-
-  max-width:800px;
-
-  padding:70px 0;
-}
-
-.hero-badge{
-
-  display:inline-block;
-
-  background:var(--gold);
-
-  color:#10231d;
-
-  padding:8px 15px;
-
-  border-radius:30px;
-
-  font-size:11px;
-
   font-weight:900;
-
-  letter-spacing:1px;
-
-  margin-bottom:16px;
-}
-
-.page-hero h1{
-
-  font-size:
-  clamp(38px,7vw,70px);
-
-  line-height:1.02;
-
-  margin-bottom:15px;
-
-  font-weight:900;
-}
-
-.page-hero h1 span{
-
-  color:var(--gold);
-}
-
-.page-hero p{
-
-  max-width:720px;
-
-  color:#e8f4ef;
-
-  font-size:16px;
-}
-
-
-/* =========================================================
-   BREAKING NEWS TICKER
-========================================================= */
-
-.breaking-wrap{
-
-  background:#111;
-
-  color:#fff;
-
-  overflow:hidden;
-
-  border-bottom:
-  3px solid var(--gold);
-}
-
-.breaking-inner{
-
-  display:flex;
-
-  align-items:center;
-
-  min-height:48px;
-}
-
-.breaking-label{
-
-  flex:0 0 auto;
-
-  background:var(--red);
-
-  color:#fff;
-
-  padding:10px 16px;
-
-  font-size:11px;
-
-  font-weight:900;
-
-  letter-spacing:1px;
-
-  z-index:2;
-}
-
-.ticker{
-
-  flex:1;
-
-  overflow:hidden;
-
-  position:relative;
-
+  letter-spacing:.4px;
   white-space:nowrap;
 }
 
-.ticker-track{
+.brand-subtitle{
+  font-size:11px;
+  opacity:.85;
+  white-space:nowrap;
+}
 
-  display:inline-block;
+.menu-toggle{
+  width:44px;
+  height:44px;
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:10px;
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  cursor:pointer;
+  font-size:24px;
+}
 
-  padding-left:100%;
+.main-nav{
+  display:none;
+  position:absolute;
+  left:0;
+  right:0;
+  top:68px;
+  background:#063b2d;
+  padding:10px 14px 16px;
+  box-shadow:0 10px 20px rgba(0,0,0,.18);
+}
 
-  animation:
-  tickerMove 35s linear infinite;
+.main-nav.open{
+  display:block;
+}
 
-  font-size:13px;
-
+.main-nav a{
+  display:block;
+  padding:12px 10px;
+  border-radius:8px;
+  font-size:14px;
   font-weight:700;
 }
 
-.ticker:hover .ticker-track{
+.main-nav a:hover,
+.main-nav a.active{
+  background:#0b6049;
+}
 
-  animation-play-state:paused;
+@media(min-width:950px){
+
+  .menu-toggle{
+    display:none;
+  }
+
+  .main-nav{
+    position:static;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:3px;
+    padding:0;
+    background:transparent;
+    box-shadow:none;
+  }
+
+  .main-nav a{
+    padding:9px 8px;
+    font-size:12px;
+  }
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:330px;
+  position:relative;
+  background:
+    linear-gradient(
+      rgba(3,44,34,.76),
+      rgba(3,44,34,.84)
+    ),
+    url("assets/Hon Nurudeen Abayomi Sadeeq.jpg")
+    center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+
+.hero-inner{
+  width:min(920px,94%);
+  padding:50px 15px;
+}
+
+.hero-badge{
+  display:inline-block;
+  background:#fff;
+  color:#063b2d;
+  border-radius:999px;
+  padding:7px 14px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.7px;
+  margin-bottom:14px;
+}
+
+.hero h1{
+  font-size:clamp(30px,7vw,58px);
+  line-height:1.05;
+  margin-bottom:12px;
+  font-weight:1000;
+}
+
+.hero p{
+  max-width:760px;
+  margin:auto;
+  font-size:15px;
+  opacity:.94;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin-top:22px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:10px 17px;
+  border-radius:9px;
+  border:0;
+  cursor:pointer;
+  font-weight:800;
+  font-size:13px;
+}
+
+.btn-primary{
+  background:#fff;
+  color:#063b2d;
+}
+
+.btn-green{
+  background:#087552;
+  color:#fff;
+}
+
+.btn-outline{
+  background:transparent;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.65);
+}
+
+
+/* =========================
+   BREAKING TICKER
+========================= */
+
+.ticker-wrap{
+  background:#b20d0d;
+  color:#fff;
+  display:flex;
+  align-items:stretch;
+  min-height:44px;
+  overflow:hidden;
+}
+
+.ticker-label{
+  flex:0 0 auto;
+  background:#7d0505;
+  padding:11px 12px;
+  font-weight:900;
+  font-size:11px;
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+
+.ticker-window{
+  flex:1;
+  overflow:hidden;
+  position:relative;
+}
+
+#breakingTicker{
+  white-space:nowrap;
+  display:inline-block;
+  padding:10px 0 10px 100%;
+  animation:tickerMove 28s linear infinite;
+  font-size:12px;
+  font-weight:700;
 }
 
 @keyframes tickerMove{
-
-  0%{
+  from{
     transform:translateX(0);
   }
-
-  100%{
+  to{
     transform:translateX(-100%);
   }
 }
 
 
-/* =========================================================
-   NEWS CONTROL BAR
-========================================================= */
+/* =========================
+   GENERAL LAYOUT
+========================= */
 
-.news-controls-section{
-
-  background:var(--light);
-
-  padding:25px 0;
-
-  border-bottom:1px solid #e1eae6;
+.container{
+  width:min(1180px,94%);
+  margin:auto;
 }
 
-.controls{
-
-  display:grid;
-
-  grid-template-columns:
-  1.5fr .8fr .8fr auto;
-
-  gap:12px;
-
-  align-items:center;
+.section{
+  padding:32px 0;
 }
 
-.search-box{
-
-  position:relative;
+.section-title{
+  text-align:center;
+  margin-bottom:18px;
 }
 
-.search-box input{
-
-  width:100%;
-
-  min-height:48px;
-
-  border:
-  1px solid #d5e1dc;
-
-  border-radius:12px;
-
-  padding:
-  0 16px 0 45px;
-
-  outline:none;
-
-  background:#fff;
-
-  font-size:14px;
-
-  color:var(--dark);
+.section-title h2{
+  color:#063b2d;
+  font-size:clamp(23px,5vw,34px);
+  line-height:1.15;
 }
 
-.search-box input:focus{
-
-  border-color:var(--green);
-
-  box-shadow:
-  0 0 0 3px
-  rgba(6,59,45,.08);
-}
-
-.search-icon{
-
-  position:absolute;
-
-  left:15px;
-
-  top:50%;
-
-  transform:translateY(-50%);
-
-  font-size:17px;
-
-  color:#777;
-}
-
-.controls select{
-
-  width:100%;
-
-  min-height:48px;
-
-  border:
-  1px solid #d5e1dc;
-
-  border-radius:12px;
-
-  background:#fff;
-
-  padding:0 12px;
-
-  outline:none;
-
-  color:var(--dark);
-
+.section-title p{
+  color:#64756e;
   font-size:13px;
-
-  font-weight:700;
+  margin-top:5px;
 }
 
-.control-btn{
 
-  min-height:48px;
+/* =========================
+   MY WARD
+========================= */
 
-  padding:
-  0 18px;
+.ward-panel{
+  margin-top:20px;
+  background:#fff;
+  border:1px solid #dce8e2;
+  border-radius:16px;
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
+  overflow:hidden;
+}
 
-  border:0;
-
-  border-radius:12px;
-
-  background:var(--green);
-
+.ward-banner{
+  background:
+    linear-gradient(
+      135deg,
+      #063b2d,
+      #087552
+    );
   color:#fff;
+  padding:18px;
+}
 
+.ward-banner-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.ward-banner h3{
+  font-size:20px;
+  line-height:1.2;
+}
+
+.ward-banner p{
+  font-size:12px;
+  opacity:.9;
+  margin-top:4px;
+}
+
+.ward-icon{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(255,255,255,.14);
+  font-size:21px;
+}
+
+.ward-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:15px;
+}
+
+.ward-actions a,
+.ward-actions button{
+  border:1px solid rgba(255,255,255,.35);
+  background:rgba(255,255,255,.1);
+  color:#fff;
+  border-radius:8px;
+  padding:9px 11px;
+  font-size:11px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.ward-actions a:hover,
+.ward-actions button:hover{
+  background:#fff;
+  color:#063b2d;
+}
+
+.ward-controls{
+  padding:15px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+  background:#f9fbfa;
+}
+
+.control-group label{
+  display:block;
+  font-size:11px;
   font-weight:900;
-
-  font-size:13px;
-
-  transition:.2s;
+  color:#52655e;
+  margin-bottom:5px;
 }
 
-.control-btn:hover{
+.control-group input,
+.control-group select{
+  width:100%;
+  min-height:45px;
+  border:1px solid #cddbd5;
+  border-radius:9px;
+  padding:9px 11px;
+  background:#fff;
+  color:#17352d;
+  outline:none;
+}
 
-  background:var(--green2);
+.control-group input:focus,
+.control-group select:focus{
+  border-color:#087552;
+  box-shadow:0 0 0 3px rgba(8,117,82,.08);
+}
 
-  transform:translateY(-1px);
+@media(min-width:700px){
+
+  .ward-controls{
+    grid-template-columns:
+      1.2fr
+      1fr
+      1fr
+      auto;
+    align-items:end;
+  }
+
 }
 
 
-/* =========================================================
+/* =========================
    STATUS
-========================================================= */
+========================= */
 
 .status-bar{
-
+  margin-top:15px;
+  background:#fff;
+  border:1px solid #dce8e2;
+  border-radius:10px;
+  padding:10px 12px;
   display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
   flex-wrap:wrap;
-
-  gap:10px;
-
-  margin-top:14px;
-
-  font-size:12px;
-
-  color:var(--muted);
-
-  font-weight:700;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  font-size:11px;
 }
 
 .status-left{
-
   display:flex;
-
   align-items:center;
-
-  gap:8px;
+  gap:7px;
 }
 
 .status-dot{
-
   width:9px;
-
   height:9px;
-
   border-radius:50%;
-
-  background:#25a55b;
-
-  box-shadow:
-  0 0 0 4px
-  rgba(37,165,91,.12);
+  background:#777;
 }
 
-.status-dot.loading{
-
-  background:var(--gold);
+.status-dot.online{
+  background:#07945e;
 }
 
 .status-dot.error{
+  background:#d71919;
+}
 
-  background:var(--red);
+.status-dot.loading{
+  background:#e5a400;
+}
+
+#lastUpdated{
+  color:#687871;
 }
 
 
-/* =========================================================
-   SECTION
-========================================================= */
-
-section{
-
-  padding:70px 0;
-}
-
-.section-heading{
-
-  text-align:center;
-
-  max-width:760px;
-
-  margin:
-  0 auto 40px;
-}
-
-.section-heading span{
-
-  display:block;
-
-  color:var(--gold);
-
-  font-size:12px;
-
-  letter-spacing:2px;
-
-  font-weight:900;
-}
-
-.section-heading h2{
-
-  color:var(--green);
-
-  font-size:
-  clamp(28px,5vw,43px);
-
-  line-height:1.15;
-
-  margin:
-  8px 0 10px;
-}
-
-.section-heading p{
-
-  color:var(--muted);
-
-  font-size:14px;
-}
-
-
-/* =========================================================
-   FEATURED HEADLINE
-========================================================= */
-
-.featured{
-
-  background:#fff;
-}
+/* =========================
+   FEATURED
+========================= */
 
 .featured-card{
-
-  display:grid;
-
-  grid-template-columns:
-  1.1fr 1fr;
-
-  min-height:330px;
-
-  background:var(--green);
-
-  border-radius:25px;
-
+  background:#fff;
+  border-radius:16px;
   overflow:hidden;
-
-  box-shadow:var(--shadow);
+  border:1px solid #dce8e2;
+  box-shadow:0 7px 24px rgba(0,0,0,.07);
+  display:grid;
+  grid-template-columns:1fr;
 }
 
 .featured-image{
-
-  min-height:330px;
-
+  min-height:230px;
   background:
-  linear-gradient(
-    rgba(6,59,45,.2),
-    rgba(6,59,45,.2)
-  ),
-  url("assets/Hon Nurudeen Abayomi Sadeeq.jpg")
-  center/cover no-repeat;
+    linear-gradient(
+      rgba(6,59,45,.15),
+      rgba(6,59,45,.15)
+    ),
+    url("assets/Hon Nurudeen Abayomi Sadeeq.jpg")
+    center/cover no-repeat;
 }
 
 .featured-content{
-
-  color:#fff;
-
-  padding:42px;
-
-  display:flex;
-
-  flex-direction:column;
-
-  justify-content:center;
+  padding:22px;
 }
 
-.featured-tag{
-
+.story-label{
   display:inline-block;
-
-  width:max-content;
-
-  background:var(--gold);
-
-  color:var(--dark);
-
-  padding:6px 12px;
-
-  border-radius:20px;
-
+  background:#e8f4ef;
+  color:#086546;
+  border-radius:999px;
+  padding:5px 9px;
   font-size:10px;
-
   font-weight:900;
-
-  margin-bottom:15px;
+  text-transform:uppercase;
 }
 
-.featured-content h2{
-
-  font-size:
-  clamp(24px,4vw,39px);
-
-  line-height:1.15;
-
-  margin-bottom:13px;
+.featured-content h3{
+  font-size:clamp(20px,4vw,30px);
+  color:#063b2d;
+  line-height:1.2;
+  margin:10px 0;
 }
 
 .featured-content p{
-
-  color:#dceae5;
-
-  font-size:14px;
-
-  margin-bottom:20px;
+  color:#5c6d66;
+  font-size:13px;
 }
 
+.featured-meta{
+  margin-top:10px;
+  color:#7b8882;
+  font-size:10px;
+}
 
-/* =========================================================
-   BUTTONS
-========================================================= */
-
-.btn{
-
+.featured-link{
   display:inline-flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  gap:7px;
-
-  min-height:44px;
-
-  padding:
-  0 18px;
-
-  border-radius:25px;
-
-  border:2px solid transparent;
-
-  font-size:12px;
-
-  font-weight:900;
-
-  transition:.2s;
-}
-
-.btn-primary{
-
-  background:var(--gold);
-
-  color:var(--dark);
-}
-
-.btn-primary:hover{
-
-  transform:translateY(-2px);
-}
-
-.btn-white{
-
-  background:#fff;
-
-  color:var(--green);
-}
-
-.btn-outline{
-
-  border-color:#fff;
-
+  margin-top:15px;
+  padding:10px 14px;
+  background:#063b2d;
   color:#fff;
+  border-radius:8px;
+  font-size:12px;
+  font-weight:800;
 }
 
-.btn-outline:hover{
+@media(min-width:760px){
 
-  background:#fff;
+  .featured-card{
+    grid-template-columns:42% 58%;
+  }
 
-  color:var(--green);
+  .featured-image{
+    min-height:330px;
+  }
+
 }
 
 
-/* =========================================================
+/* =========================
    HEADLINE GRID
-========================================================= */
+========================= */
 
-.headlines{
+.news-heading-row{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:14px;
+}
 
-  background:var(--lighter);
+.news-heading-row h2{
+  color:#063b2d;
+  font-size:23px;
+}
+
+.result-count{
+  color:#718078;
+  font-size:11px;
+  font-weight:700;
 }
 
 .headline-grid{
-
   display:grid;
-
-  grid-template-columns:
-  repeat(3,1fr);
-
-  gap:22px;
+  grid-template-columns:1fr;
+  gap:14px;
 }
 
-.headline-card{
+@media(min-width:620px){
+  .headline-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
 
+@media(min-width:960px){
+  .headline-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+.news-card{
   background:#fff;
-
-  border-radius:18px;
-
+  border:1px solid #dce8e2;
+  border-radius:13px;
   overflow:hidden;
-
-  box-shadow:var(--shadow2);
-
-  border:
-  1px solid #e7efeb;
-
-  transition:.25s;
-
+  box-shadow:0 4px 15px rgba(0,0,0,.05);
   display:flex;
-
   flex-direction:column;
+  min-width:0;
 }
 
-.headline-card:hover{
-
-  transform:translateY(-5px);
-
-  box-shadow:var(--shadow);
+.news-card-image{
+  height:170px;
+  background:#eaf0ed center/cover no-repeat;
+  position:relative;
 }
 
-.headline-top{
-
-  padding:15px 17px 0;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-  gap:10px;
-}
-
-.source{
-
-  color:var(--green);
-
-  font-size:11px;
-
-  font-weight:900;
-
-  text-transform:uppercase;
-}
-
-.headline-category{
-
-  color:var(--gold);
-
+.news-card-source{
+  position:absolute;
+  top:9px;
+  left:9px;
+  background:rgba(6,59,45,.92);
+  color:#fff;
+  border-radius:6px;
+  padding:5px 7px;
   font-size:9px;
-
   font-weight:900;
-
-  text-transform:uppercase;
 }
 
-.headline-body{
-
-  padding:15px 17px 18px;
-
+.news-card-body{
+  padding:14px;
+  display:flex;
+  flex-direction:column;
   flex:1;
 }
 
-.headline-body h3{
-
-  color:var(--green);
-
-  font-size:19px;
-
+.news-card h3{
+  color:#063b2d;
+  font-size:16px;
   line-height:1.3;
+  margin-bottom:8px;
+}
 
+.news-card p{
+  color:#65736e;
+  font-size:12px;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+.news-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+  margin-top:9px;
+}
+
+.news-tag{
+  background:#edf5f1;
+  color:#28705b;
+  border-radius:999px;
+  padding:4px 7px;
+  font-size:9px;
+  font-weight:800;
+}
+
+.news-date{
+  color:#87918d;
+  font-size:9px;
+  margin-top:8px;
+}
+
+.news-read{
+  display:inline-flex;
+  align-self:flex-start;
+  margin-top:auto;
+  padding-top:11px;
+  color:#087552;
+  font-size:11px;
+  font-weight:900;
+}
+
+.news-read:hover{
+  text-decoration:underline;
+}
+
+
+/* =========================
+   STATES
+========================= */
+
+.state-box{
+  grid-column:1/-1;
+  background:#fff;
+  border:1px dashed #cbd9d2;
+  border-radius:14px;
+  padding:28px 18px;
+  text-align:center;
+  color:#6c7b75;
+}
+
+.state-icon{
+  font-size:30px;
+  margin-bottom:7px;
+}
+
+.state-box h3{
+  color:#36554a;
+  font-size:16px;
+  margin-bottom:4px;
+}
+
+.state-box p{
+  font-size:12px;
+}
+
+
+/* =========================
+   CAMPAIGN NEWS
+========================= */
+
+.campaign-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+
+@media(min-width:700px){
+  .campaign-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+.campaign-card{
+  background:#fff;
+  border:1px solid #dce8e2;
+  border-radius:13px;
+  padding:18px;
+  box-shadow:0 4px 14px rgba(0,0,0,.05);
+}
+
+.campaign-icon{
+  width:42px;
+  height:42px;
+  border-radius:10px;
+  background:#e8f4ef;
+  color:#087552;
+  display:grid;
+  place-items:center;
+  font-size:21px;
   margin-bottom:10px;
 }
 
-.headline-body p{
-
-  color:var(--muted);
-
-  font-size:13px;
-
-  line-height:1.6;
-
-  margin-bottom:12px;
+.campaign-card h3{
+  color:#063b2d;
+  font-size:16px;
+  margin-bottom:5px;
 }
 
-.headline-time{
-
-  color:#899790;
-
-  font-size:10px;
-
-  font-weight:700;
-
-  margin-bottom:15px;
+.campaign-card p{
+  color:#65736e;
+  font-size:12px;
 }
 
-.headline-footer{
-
-  padding:
-  0 17px 17px;
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  gap:8px;
-}
-
-.read-btn{
-
-  background:var(--green);
-
-  color:#fff;
-
-  border:0;
-
-  padding:9px 13px;
-
-  border-radius:20px;
-
-  font-size:10px;
-
-  font-weight:900;
-}
-
-.share-btn{
-
-  background:#25d366;
-
-  color:#fff;
-
-  border:0;
-
-  padding:9px 13px;
-
-  border-radius:20px;
-
-  font-size:10px;
-
+.campaign-card a{
+  display:inline-block;
+  margin-top:12px;
+  color:#087552;
+  font-size:11px;
   font-weight:900;
 }
 
 
-/* =========================================================
-   LOADING
-========================================================= */
+/* =========================
+   SOURCES
+========================= */
 
-.loading-box{
+.source-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
 
-  grid-column:
-  1 / -1;
+@media(min-width:650px){
+  .source-grid{
+    grid-template-columns:repeat(4,1fr);
+  }
+}
 
+.source-box{
+  background:#fff;
+  border:1px solid #dce8e2;
+  border-radius:12px;
+  padding:15px;
   text-align:center;
-
-  padding:60px 20px;
-
-  color:var(--muted);
 }
+
+.source-box strong{
+  display:block;
+  color:#063b2d;
+  font-size:13px;
+}
+
+.source-box span{
+  display:block;
+  margin-top:3px;
+  color:#7a8781;
+  font-size:10px;
+}
+
+
+/* =========================
+   COMMUNITY CTA
+========================= */
+
+.community-cta{
+  background:
+    linear-gradient(
+      135deg,
+      #063b2d,
+      #087552
+    );
+  color:#fff;
+  border-radius:17px;
+  padding:26px 20px;
+  text-align:center;
+}
+
+.community-cta h2{
+  font-size:clamp(22px,5vw,31px);
+}
+
+.community-cta p{
+  max-width:650px;
+  margin:7px auto 0;
+  font-size:13px;
+  opacity:.92;
+}
+
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:16px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#04291f;
+  color:#dceae4;
+  margin-top:35px;
+}
+
+.footer-inner{
+  max-width:1180px;
+  width:94%;
+  margin:auto;
+  padding:35px 0 20px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:25px;
+}
+
+@media(min-width:700px){
+  .footer-inner{
+    grid-template-columns:1.5fr 1fr 1fr;
+  }
+}
+
+.footer-brand{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+}
+
+.footer-brand img{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#fff;
+}
+
+footer h3{
+  color:#fff;
+  font-size:15px;
+  margin-bottom:8px;
+}
+
+footer p,
+footer li,
+footer a{
+  font-size:11px;
+}
+
+footer p{
+  color:#b8cbc3;
+}
+
+.footer-links{
+  list-style:none;
+}
+
+.footer-links li{
+  margin-bottom:6px;
+}
+
+.footer-links a:hover{
+  color:#fff;
+  text-decoration:underline;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding:14px 3%;
+  text-align:center;
+  font-size:10px;
+  color:#9db1a9;
+}
+
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.whatsapp-float{
+  position:fixed;
+  right:15px;
+  bottom:74px;
+  width:53px;
+  height:53px;
+  border-radius:50%;
+  background:#16a765;
+  color:#fff;
+  display:grid;
+  place-items:center;
+  font-size:25px;
+  box-shadow:0 7px 22px rgba(0,0,0,.25);
+  z-index:900;
+}
+
+.whatsapp-float:hover{
+  transform:scale(1.05);
+}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+.back-top{
+  position:fixed;
+  right:15px;
+  bottom:137px;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  border:0;
+  background:#063b2d;
+  color:#fff;
+  cursor:pointer;
+  display:none;
+  place-items:center;
+  box-shadow:0 5px 16px rgba(0,0,0,.2);
+  z-index:900;
+}
+
+.back-top.show{
+  display:grid;
+}
+
+
+/* =========================
+   MOBILE STICKY ACTIONS
+========================= */
+
+.mobile-actions{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:850;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(10px);
+  border-top:1px solid #d8e3de;
+  padding:7px 8px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:6px;
+}
+
+.mobile-actions a,
+.mobile-actions button{
+  border:0;
+  background:#edf4f1;
+  color:#063b2d;
+  border-radius:7px;
+  padding:8px 3px;
+  text-align:center;
+  font-size:9px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.mobile-actions a.primary{
+  background:#063b2d;
+  color:#fff;
+}
+
+@media(min-width:800px){
+  .mobile-actions{
+    display:none;
+  }
+
+  .whatsapp-float{
+    bottom:25px;
+  }
+
+  .back-top{
+    bottom:87px;
+  }
+}
+
+
+/* =========================
+   LOADING SPINNER
+========================= */
 
 .spinner{
-
-  width:45px;
-
-  height:45px;
-
-  border:
-  4px solid #dce8e3;
-
-  border-top-color:var(--green);
-
+  width:27px;
+  height:27px;
+  border:3px solid #d8e6df;
+  border-top-color:#087552;
   border-radius:50%;
-
-  animation:
-  spin .8s linear infinite;
-
-  margin:
-  0 auto 15px;
+  animation:spin .8s linear infinite;
+  margin:0 auto 10px;
 }
 
 @keyframes spin{
-
   to{
     transform:rotate(360deg);
   }
 }
 
 
-/* =========================================================
-   EMPTY
-========================================================= */
-
-.empty-box{
-
-  grid-column:
-  1 / -1;
-
-  text-align:center;
-
-  background:#fff;
-
-  border-radius:18px;
-
-  padding:45px 20px;
-
-  border:
-  1px solid #e5eee9;
-}
-
-.empty-box strong{
-
-  display:block;
-
-  color:var(--green);
-
-  font-size:20px;
-
-  margin-bottom:8px;
-}
-
-.empty-box p{
-
-  color:var(--muted);
-
-  font-size:13px;
-}
-
-
-/* =========================================================
-   IMOLE CAMPAIGN NEWS
-========================================================= */
-
-.campaign-news{
-
-  background:#fff;
-}
-
-.campaign-grid{
-
-  display:grid;
-
-  grid-template-columns:
-  repeat(3,1fr);
-
-  gap:20px;
-}
-
-.campaign-card{
-
-  background:var(--light);
-
-  border-radius:18px;
-
-  padding:25px;
-
-  border-left:
-  4px solid var(--gold);
-
-  box-shadow:
-  0 4px 16px rgba(0,0,0,.05);
-}
-
-.campaign-card .tag{
-
-  color:var(--gold);
-
-  font-size:10px;
-
-  font-weight:900;
-
-  letter-spacing:1px;
-}
-
-.campaign-card h3{
-
-  color:var(--green);
-
-  font-size:20px;
-
-  margin:8px 0;
-}
-
-.campaign-card p{
-
-  font-size:13px;
-
-  color:var(--text);
-
-  margin-bottom:17px;
-}
-
-
-/* =========================================================
-   NEWSPAPER SOURCES
-========================================================= */
-
-.sources{
-
-  background:var(--light);
-}
-
-.source-grid{
-
-  display:grid;
-
-  grid-template-columns:
-  repeat(4,1fr);
-
-  gap:15px;
-}
-
-.source-box{
-
-  background:#fff;
-
-  padding:22px;
-
-  text-align:center;
-
-  border-radius:16px;
-
-  box-shadow:
-  0 4px 15px rgba(0,0,0,.05);
-}
-
-.source-box strong{
-
-  display:block;
-
-  color:var(--green);
-
-  font-size:17px;
-
-  margin-bottom:5px;
-}
-
-.source-box span{
-
-  display:block;
-
-  color:var(--muted);
-
-  font-size:10px;
-
-  font-weight:700;
-}
-
-
-/* =========================================================
-   COMMUNITY CTA
-========================================================= */
-
-.community{
-
-  background:
-
-  linear-gradient(
-    135deg,
-    var(--green),
-    #021f17
-  );
-
-  color:#fff;
-
-  text-align:center;
-}
-
-.community h2{
-
-  font-size:
-  clamp(28px,5vw,46px);
-
-  margin-bottom:10px;
-}
-
-.community p{
-
-  max-width:720px;
-
-  margin:
-  0 auto 25px;
-
-  color:#dbeae4;
-
-  font-size:14px;
-}
-
-.community-buttons{
-
-  display:flex;
-
-  justify-content:center;
-
-  flex-wrap:wrap;
-
-  gap:10px;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer{
-
-  background:#021f17;
-
-  color:#c7d6d0;
-
-  padding:45px 0 25px;
-}
-
-.footer-grid{
-
-  display:grid;
-
-  grid-template-columns:
-  1.4fr 1fr 1fr;
-
-  gap:30px;
-}
-
-.footer-brand{
-
-  display:flex;
-
-  align-items:center;
-
-  gap:12px;
-
-  margin-bottom:12px;
-}
-
-.footer-brand img{
-
-  width:55px;
-
-  height:55px;
-
-  object-fit:cover;
-
-  border-radius:50%;
-}
-
-footer h3{
-
-  color:#fff;
-
-  margin-bottom:12px;
-
-  font-size:17px;
-}
-
-footer p{
-
-  font-size:13px;
-}
-
-footer a{
-
-  display:block;
-
-  margin:7px 0;
-
-  font-size:13px;
-}
-
-footer a:hover{
-
-  color:var(--gold);
-}
-
-.copyright{
-
-  border-top:
-  1px solid rgba(255,255,255,.1);
-
-  margin-top:30px;
-
-  padding-top:20px;
-
-  text-align:center;
-
-  font-size:11px;
-}
-
-
-/* =========================================================
-   FLOATING WHATSAPP
-========================================================= */
-
-.whatsapp-float{
-
-  position:fixed;
-
-  right:18px;
-
-  bottom:18px;
-
-  width:58px;
-
-  height:58px;
-
-  border-radius:50%;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  background:#25d366;
-
-  color:#fff;
-
-  font-size:27px;
-
-  box-shadow:
-  0 7px 25px rgba(0,0,0,.25);
-
-  z-index:9998;
-
-  transition:.2s;
-}
-
-.whatsapp-float:hover{
-
-  transform:scale(1.08);
-}
-
-
-/* =========================================================
-   BACK TO TOP
-========================================================= */
-
-.back-top{
-
-  position:fixed;
-
-  right:18px;
-
-  bottom:88px;
-
-  width:42px;
-
-  height:42px;
-
-  border:0;
-
-  border-radius:50%;
-
-  background:var(--green);
-
-  color:#fff;
-
-  font-size:18px;
-
-  opacity:0;
-
-  visibility:hidden;
-
-  transition:.2s;
-
-  z-index:9997;
-}
-
-.back-top.show{
-
-  opacity:1;
-
-  visibility:visible;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:1000px){
-
-  .nav-links{
-
-    position:absolute;
-
-    left:0;
-
-    right:0;
-
-    top:76px;
-
-    background:#fff;
-
-    display:none;
-
-    flex-direction:column;
-
-    align-items:stretch;
-
-    padding:15px 20px 25px;
-
-    box-shadow:
-    0 15px 25px rgba(0,0,0,.1);
-  }
-
-  .nav-links.show{
-
-    display:flex;
-  }
-
-  .nav-links a{
-
-    padding:11px 5px;
-
-    border-bottom:
-    1px solid #eee;
-  }
-
-  .menu-btn{
-
-    display:block;
-  }
-
-  .controls{
-
-    grid-template-columns:
-    1fr 1fr;
-  }
-
-  .search-box{
-
-    grid-column:
-    1 / -1;
-  }
-
-  .featured-card{
-
-    grid-template-columns:
-    1fr;
-  }
-
-  .featured-image{
-
-    min-height:280px;
-  }
-
-  .headline-grid{
-
-    grid-template-columns:
-    repeat(2,1fr);
-  }
-
-  .campaign-grid{
-
-    grid-template-columns:
-    repeat(2,1fr);
-  }
-
-  .source-grid{
-
-    grid-template-columns:
-    repeat(2,1fr);
-  }
-
-  .footer-grid{
-
-    grid-template-columns:
-    1fr 1fr;
-  }
-}
-
-
-@media(max-width:650px){
-
-  .brand-text strong{
-
-    font-size:14px;
-  }
-
-  .brand-text small{
-
-    font-size:8px;
-  }
-
-  .brand img{
-
-    width:42px;
-
-    height:42px;
-  }
-
-  .page-hero{
-
-    min-height:500px;
-  }
-
-  .page-hero-content{
-
-    padding:60px 0;
-  }
-
-  .page-hero h1{
-
-    font-size:45px;
-  }
-
-  .breaking-inner{
-
-    min-height:44px;
-  }
-
-  .breaking-label{
-
-    padding:
-    9px 10px;
-
-    font-size:9px;
-  }
-
-  .ticker-track{
-
-    font-size:11px;
-  }
-
-  section{
-
-    padding:55px 0;
-  }
-
-  .controls{
-
-    grid-template-columns:
-    1fr;
-  }
-
-  .search-box{
-
-    grid-column:auto;
-  }
-
-  .headline-grid,
-  .campaign-grid,
-  .source-grid,
-  .footer-grid{
-
-    grid-template-columns:
-    1fr;
-  }
-
-  .featured-content{
-
-    padding:28px;
-  }
-
-  .featured-image{
-
-    min-height:230px;
-  }
-
-  .status-bar{
-
-    align-items:flex-start;
-
-    flex-direction:column;
-  }
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
-
-:focus-visible{
-
-  outline:
-  3px solid var(--gold);
-
-  outline-offset:3px;
-}
-
-
-/* =========================================================
+/* =========================
    PRINT
-========================================================= */
+========================= */
 
 @media print{
 
-  header,
-  .topbar,
-  .breaking-wrap,
-  .news-controls-section,
+  .site-header,
+  .ticker-wrap,
+  .mobile-actions,
   .whatsapp-float,
   .back-top,
-  footer{
-
-    display:none !important;
+  .hero-buttons,
+  .ward-actions,
+  .ward-controls,
+  .community-cta{
+    display:none!important;
   }
 
   body{
-
     background:#fff;
   }
 
-  section{
+}
 
-    padding:25px 0;
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
   }
+
+  #breakingTicker{
+    animation:none;
+    padding-left:10px;
+  }
+
+}
+
+
+/* =========================
+   SAFE IMAGE FALLBACK
+========================= */
+
+img.image-failed{
+  object-fit:cover;
+  background:#dfeae5;
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- ======================================================
-     TOP BAR
-====================================================== -->
+<!-- =========================
+     HEADER
+========================= -->
 
-<div class="topbar">
+<header class="site-header">
 
-  📰 IMOLE 2027 NEWS CENTRE
-  •
-  SERVICE • DEVELOPMENT • ACCOUNTABILITY
-
-</div>
-
-
-<!-- ======================================================
-     NAVIGATION
-====================================================== -->
-
-<header>
-
-  <div class="container navbar">
+  <div class="header-inner">
 
     <a href="index.html"
        class="brand"
-       aria-label="IMOLE 2027 Home">
+       id="homeBrandLink">
 
       <img
+        class="brand-logo"
         src="assets/IMG-20260728-WA0032.jpg"
-        alt="Nigeria Democratic Congress NDC Logo"
-        onerror="this.style.display='none';">
+        alt="NDC Logo"
+        onerror="this.style.display='none'">
 
       <div class="brand-text">
-
-        <strong>IMOLE 2027</strong>
-
-        <small>
-          NIGERIA DEMOCRATIC CONGRESS • OJO II
-        </small>
-
+        <div class="brand-title">IMOLE 2027</div>
+        <div class="brand-subtitle">
+          Hon. Nurudeen Abayomi Sadeeq
+        </div>
       </div>
 
     </a>
 
 
     <button
-      class="menu-btn"
-      id="menuBtn"
-      type="button"
-      aria-label="Open navigation">
-
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation"
+      aria-expanded="false">
       ☰
-
     </button>
 
 
     <nav
-      class="nav-links"
-      id="navLinks">
+      class="main-nav"
+      id="mainNav"
+      aria-label="Main navigation">
 
-      <a href="index.html">
-        Home
-      </a>
+      <a href="index.html" data-nav="home">Home</a>
 
-      <a href="about.html">
-        About
-      </a>
+      <a href="about.html">About</a>
 
-      <a href="manifesto.html">
-        Manifesto
-      </a>
+      <a href="manifesto.html">Manifesto</a>
 
-      <a href="polling-units.html">
+      <a href="polling-units.html"
+         data-ward-link="polling">
         Polling Units
       </a>
 
-      <a href="results.html">
-        Results
-      </a>
+      <a href="results.html">Results</a>
 
       <a href="news.html"
-         class="active">
+         class="active"
+         data-nav="news">
         News
       </a>
 
-      <a href="events.html">
+      <a href="events.html"
+         data-ward-link="events">
         Events
       </a>
 
-      <a href="gallery.html">
-        Gallery
-      </a>
+      <a href="gallery.html">Gallery</a>
 
-      <a href="media.html">
-        Media
-      </a>
+      <a href="media.html">Media</a>
 
-      <a href="contact.html">
-        Contact
-      </a>
+      <a href="contact.html">Contact</a>
 
-      <a href="join.html">
-        Join Us
-      </a>
+      <a href="join.html">Join Us</a>
 
     </nav>
 
@@ -1799,32 +1284,51 @@ footer a:hover{
 </header>
 
 
-<!-- ======================================================
-     PAGE HERO
-====================================================== -->
 
-<section class="page-hero">
+<!-- =========================
+     HERO
+========================= -->
 
-  <div class="container">
+<section class="hero">
 
-    <div class="page-hero-content">
+  <div class="hero-inner">
 
-      <div class="hero-badge">
-        IMOLE 2027 • NEWS CENTRE
-      </div>
+    <span class="hero-badge">
+      IMOLE 2027 • NEWS CENTRE
+    </span>
 
-      <h1>
-        Latest
-        <span>News.</span>
-      </h1>
+    <h1>
+      News & Headlines
+    </h1>
 
-      <p>
+    <p>
+      Stay informed with current headlines from Nigeria,
+      Lagos, Ojo Constituency II and around the world,
+      alongside IMOLE 2027 community information.
+    </p>
 
-        Stay informed with the latest newspaper headlines,
-        breaking news, Lagos updates, Ojo community information
-        and IMOLE 2027 campaign activities.
+    <div class="hero-buttons">
 
-      </p>
+      <a
+        href="index.html"
+        class="btn btn-primary"
+        id="heroHomeLink">
+        🏠 Home
+      </a>
+
+      <a
+        href="polling-units.html"
+        class="btn btn-outline"
+        id="heroPollingLink">
+        🗳️ My Ward
+      </a>
+
+      <a
+        href="community.html"
+        class="btn btn-outline"
+        id="heroCommunityLink">
+        📣 Report a Need
+      </a>
 
     </div>
 
@@ -1833,28 +1337,21 @@ footer a:hover{
 </section>
 
 
-<!-- ======================================================
-     BREAKING NEWS
-====================================================== -->
 
-<div class="breaking-wrap">
+<!-- =========================
+     BREAKING TICKER
+========================= -->
 
-  <div class="container breaking-inner">
+<div class="ticker-wrap">
 
-    <div class="breaking-label">
-      🚨 BREAKING
-    </div>
+  <div class="ticker-label">
+    🔴 BREAKING
+  </div>
 
-    <div class="ticker">
+  <div class="ticker-window">
 
-      <div
-        class="ticker-track"
-        id="breakingTicker">
-
-        Loading latest headlines...
-
-      </div>
-
+    <div id="breakingTicker">
+      Loading latest headlines...
     </div>
 
   </div>
@@ -1862,87 +1359,222 @@ footer a:hover{
 </div>
 
 
-<!-- ======================================================
-     NEWS CONTROLS
-====================================================== -->
 
-<section class="news-controls-section">
+<main>
+
+
+<!-- =========================
+     MY WARD PANEL
+========================= -->
+
+<section class="section"
+         id="my-ward-news">
 
   <div class="container">
 
-    <div class="controls">
+    <div class="section-title">
+
+      <h2>
+        🧭 My Ward News
+      </h2>
+
+      <p>
+        Select your ward to keep your news centre connected
+        to your community.
+      </p>
+
+    </div>
 
 
-      <div class="search-box">
+    <div class="ward-panel">
 
-        <span class="search-icon">
-          🔍
-        </span>
+      <div class="ward-banner">
 
-        <input
-          type="search"
-          id="searchInput"
-          placeholder="Search headlines, Lagos, Ojo, Nigeria..."
-          autocomplete="off">
+        <div class="ward-banner-top">
+
+          <div>
+
+            <h3 id="selectedWardTitle">
+              🧭 Viewing news for All Wards
+            </h3>
+
+            <p id="selectedWardDescription">
+              General headlines remain available while
+              ward-specific campaign updates can be added.
+            </p>
+
+          </div>
+
+          <div class="ward-icon">
+            📰
+          </div>
+
+        </div>
+
+
+        <div class="ward-actions">
+
+          <a
+            href="index.html"
+            id="backToMyWard">
+            ← Back to My Ward
+          </a>
+
+          <a
+            href="polling-units.html"
+            id="viewWardPolling">
+            🗳️ Ward Polling Units
+          </a>
+
+          <a
+            href="community.html"
+            id="shareCommunityNeed">
+            📣 Community Need
+          </a>
+
+          <a
+            href="events.html"
+            id="wardEvents">
+            📅 Ward Events
+          </a>
+
+          <button
+            type="button"
+            id="shareWardNews">
+            📤 Share Ward News
+          </button>
+
+          <button
+            type="button"
+            id="copyWardNews">
+            📋 Copy Link
+          </button>
+
+        </div>
 
       </div>
 
 
-      <select id="categoryFilter">
+      <div class="ward-controls">
 
-        <option value="all">
-          All Categories
-        </option>
+        <div class="control-group">
 
-        <option value="Nigeria">
-          Nigeria
-        </option>
+          <label for="wardFilter">
+            Select Ward
+          </label>
 
-        <option value="Lagos">
-          Lagos
-        </option>
+          <select id="wardFilter">
 
-        <option value="Ojo">
-          Ojo
-        </option>
+            <option value="all">
+              All Wards
+            </option>
 
-        <option value="Politics">
-          Politics
-        </option>
+            <option value="Ilogbo">
+              Ilogbo Ward — Ward F
+            </option>
 
-        <option value="Business">
-          Business
-        </option>
+            <option value="Irewe">
+              Irewe Ward — Ward G
+            </option>
 
-        <option value="Sports">
-          Sports
-        </option>
+            <option value="Ijanikin">
+              Ijanikin Ward — Ward D
+            </option>
 
-        <option value="World">
-          World
-        </option>
+            <option value="Etegbin">
+              Etegbin Ward — Ward I
+            </option>
 
-      </select>
+            <option value="Idoluwo">
+              Idoluwo Ward — Ward J
+            </option>
 
+            <option value="Tafi">
+              Tafi Ward
+            </option>
 
-      <select id="sourceFilter">
+          </select>
 
-        <option value="all">
-          All Sources
-        </option>
-
-      </select>
+        </div>
 
 
-      <button
-        class="control-btn"
-        id="refreshBtn"
-        type="button">
+        <div class="control-group">
 
-        🔄 Refresh
+          <label for="searchInput">
+            Search Headlines
+          </label>
 
-      </button>
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search news..."
+            autocomplete="off">
 
+        </div>
+
+
+        <div class="control-group">
+
+          <label for="categoryFilter">
+            Category
+          </label>
+
+          <select id="categoryFilter">
+
+            <option value="all">
+              All Categories
+            </option>
+
+            <option value="Nigeria">
+              Nigeria
+            </option>
+
+            <option value="Lagos">
+              Lagos
+            </option>
+
+            <option value="Ojo">
+              Ojo
+            </option>
+
+            <option value="Politics">
+              Politics
+            </option>
+
+            <option value="Business">
+              Business
+            </option>
+
+            <option value="Sports">
+              Sports
+            </option>
+
+            <option value="World">
+              World
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="control-group">
+
+          <label for="sourceFilter">
+            Source
+          </label>
+
+          <select id="sourceFilter">
+
+            <option value="all">
+              All Sources
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
 
     </div>
 
@@ -1957,15 +1589,14 @@ footer a:hover{
         </span>
 
         <span id="statusText">
-          Preparing automatic news feed...
+          Preparing news feed...
         </span>
 
       </div>
 
-
-      <div id="lastUpdated">
-        Last update: —
-      </div>
+      <span id="lastUpdated">
+        Not updated yet
+      </span>
 
     </div>
 
@@ -1974,101 +1605,99 @@ footer a:hover{
 </section>
 
 
-<!-- ======================================================
-     FEATURED NEWS
-====================================================== -->
 
-<section class="featured">
+<!-- =========================
+     FEATURED NEWS
+========================= -->
+
+<section class="section"
+         style="padding-top:10px">
 
   <div class="container">
 
-    <div class="section-heading">
-
-      <span>
-        TOP STORY
-      </span>
+    <div class="section-title">
 
       <h2>
-        Today's Featured Headline
+        Featured Headline
       </h2>
 
       <p>
-        The latest major headline available from the
-        automatic news feed.
+        The latest available headline matching your
+        current filters.
       </p>
 
     </div>
 
 
-    <article
+    <div
       class="featured-card"
       id="featuredCard">
 
-      <div class="featured-image"></div>
-
+      <div
+        class="featured-image"
+        id="featuredImage">
+      </div>
 
       <div class="featured-content">
 
-        <span class="featured-tag">
-          LATEST NEWS
+        <span
+          class="story-label"
+          id="featuredCategory">
+          Latest
         </span>
 
-        <h2 id="featuredTitle">
+        <h3 id="featuredTitle">
           Loading latest headline...
-        </h2>
+        </h3>
 
         <p id="featuredDescription">
-          Please wait while the latest news is loaded.
+          Please wait while the news centre retrieves
+          current headlines.
         </p>
 
-        <div>
-
-          <a
-            href="#"
-            id="featuredLink"
-            class="btn btn-primary"
-            target="_blank"
-            rel="noopener">
-
-            Read Full Story →
-
-          </a>
-
+        <div
+          class="featured-meta"
+          id="featuredMeta">
         </div>
+
+        <a
+          href="#"
+          id="featuredLink"
+          class="featured-link"
+          target="_blank"
+          rel="noopener noreferrer">
+          Read Full Story →
+        </a>
 
       </div>
 
-    </article>
+    </div>
 
   </div>
 
 </section>
 
 
-<!-- ======================================================
-     NEWSPAPER HEADLINES
-====================================================== -->
 
-<section class="headlines">
+<!-- =========================
+     ALL HEADLINES
+========================= -->
+
+<section class="section">
 
   <div class="container">
 
-    <div class="section-heading">
-
-      <span>
-        AUTOMATIC NEWSPAPER HEADLINES
-      </span>
+    <div class="news-heading-row">
 
       <h2>
         Latest Headlines
       </h2>
 
-      <p>
-
-        Headlines are automatically collected from publicly
-        available news feeds and refreshed periodically.
-
-      </p>
+      <span
+        class="result-count"
+        id="resultCount">
+        Showing 0 headlines
+      </span>
 
     </div>
 
@@ -2077,16 +1706,16 @@ footer a:hover{
       class="headline-grid"
       id="headlineGrid">
 
-      <div class="loading-box">
+      <div class="state-box">
 
         <div class="spinner"></div>
 
-        <strong>
-          Loading newspaper headlines...
-        </strong>
+        <h3>
+          Loading headlines
+        </h3>
 
         <p>
-          Connecting to available news feeds.
+          Connecting to the latest available news feeds...
         </p>
 
       </div>
@@ -2098,29 +1727,25 @@ footer a:hover{
 </section>
 
 
-<!-- ======================================================
-     IMOLE CAMPAIGN NEWS
-====================================================== -->
 
-<section class="campaign-news">
+<!-- =========================
+     CAMPAIGN / COMMUNITY NEWS
+========================= -->
+
+<section class="section"
+         style="background:#edf5f1">
 
   <div class="container">
 
-    <div class="section-heading">
-
-      <span>
-        IMOLE 2027
-      </span>
+    <div class="section-title">
 
       <h2>
-        Campaign News & Updates
+        IMOLE 2027 Updates
       </h2>
 
       <p>
-
-        Official campaign information, community engagements
-        and activities of Hon. Nurudeen Abayomi Sadeeq.
-
+        Connect with campaign activities and community
+        engagement channels.
       </p>
 
     </div>
@@ -2131,8 +1756,8 @@ footer a:hover{
 
       <article class="campaign-card">
 
-        <div class="tag">
-          IMOLE 2027
+        <div class="campaign-icon">
+          📅
         </div>
 
         <h3>
@@ -2140,19 +1765,14 @@ footer a:hover{
         </h3>
 
         <p>
-
-          The IMOLE movement continues to engage residents,
-          community leaders, women, youths, traders and
-          stakeholders across Ojo Constituency II.
-
+          Follow campaign activities, stakeholder
+          engagement and community programmes.
         </p>
 
         <a
           href="events.html"
-          class="btn btn-primary">
-
-          View Activities →
-
+          id="campaignEventsLink">
+          View Events →
         </a>
 
       </article>
@@ -2160,8 +1780,8 @@ footer a:hover{
 
       <article class="campaign-card">
 
-        <div class="tag">
-          COMMUNITY
+        <div class="campaign-icon">
+          📣
         </div>
 
         <h3>
@@ -2169,21 +1789,14 @@ footer a:hover{
         </h3>
 
         <p>
-
-          Residents can communicate community concerns,
-          suggestions and development needs directly through
-          the campaign's WhatsApp channel.
-
+          Report a community need or issue for the
+          campaign team to receive through WhatsApp.
         </p>
 
         <a
-          href="https://wa.me/2348033002235?text=Hello%20IMOLE%202027%2C%20I%20would%20like%20to%20share%20a%20community%20need."
-          class="btn btn-primary"
-          target="_blank"
-          rel="noopener">
-
-          Share A Need →
-
+          href="community.html"
+          id="campaignCommunityLink">
+          Report a Need →
         </a>
 
       </article>
@@ -2191,8 +1804,8 @@ footer a:hover{
 
       <article class="campaign-card">
 
-        <div class="tag">
-          NEWS CENTRE
+        <div class="campaign-icon">
+          🤝
         </div>
 
         <h3>
@@ -2200,19 +1813,12 @@ footer a:hover{
         </h3>
 
         <p>
-
-          Check this page regularly for campaign updates,
-          community information and automatically refreshed
-          newspaper headlines.
-
+          Join the IMOLE 2027 movement and stay connected
+          with campaign information.
         </p>
 
-        <a
-          href="join.html"
-          class="btn btn-primary">
-
-          Join IMOLE →
-
+        <a href="join.html">
+          Join the Movement →
         </a>
 
       </article>
@@ -2225,29 +1831,24 @@ footer a:hover{
 </section>
 
 
-<!-- ======================================================
-     NEWS SOURCES
-====================================================== -->
 
-<section class="sources">
+<!-- =========================
+     NEWS SOURCES
+========================= -->
+
+<section class="section">
 
   <div class="container">
 
-    <div class="section-heading">
-
-      <span>
-        NEWS SOURCES
-      </span>
+    <div class="section-title">
 
       <h2>
-        Headlines From Across Nigeria
+        News Categories
       </h2>
 
       <p>
-
-        The automatic feed searches relevant public news
-        sources and news indexes.
-
+        Explore the major news areas available through
+        the automatic headline system.
       </p>
 
     </div>
@@ -2255,58 +1856,25 @@ footer a:hover{
 
     <div class="source-grid">
 
-
       <div class="source-box">
-
-        <strong>
-          Nigeria
-        </strong>
-
-        <span>
-          National Headlines
-        </span>
-
+        <strong>🇳🇬 Nigeria</strong>
+        <span>National headlines</span>
       </div>
 
-
       <div class="source-box">
-
-        <strong>
-          Lagos
-        </strong>
-
-        <span>
-          Lagos News
-        </span>
-
+        <strong>🌆 Lagos</strong>
+        <span>Lagos developments</span>
       </div>
 
-
       <div class="source-box">
-
-        <strong>
-          Ojo
-        </strong>
-
-        <span>
-          Local & Community News
-        </span>
-
+        <strong>📍 Ojo</strong>
+        <span>Local Ojo headlines</span>
       </div>
 
-
       <div class="source-box">
-
-        <strong>
-          Politics
-        </strong>
-
-        <span>
-          Political Headlines
-        </span>
-
+        <strong>🏛️ Politics</strong>
+        <span>Political developments</span>
       </div>
-
 
     </div>
 
@@ -2315,47 +1883,43 @@ footer a:hover{
 </section>
 
 
-<!-- ======================================================
-     COMMUNITY CTA
-====================================================== -->
 
-<section class="community">
+<!-- =========================
+     COMMUNITY CTA
+========================= -->
+
+<section class="section">
 
   <div class="container">
 
-    <h2>
-      Your Community Voice Matters
-    </h2>
+    <div class="community-cta">
 
-    <p>
+      <h2>
+        Your Community. Your Voice.
+      </h2>
 
-      Have a community concern, suggestion, development need
-      or important information? Send it directly to the IMOLE
-      communication channel.
+      <p>
+        If there is an important issue affecting your
+        street, community or ward, share it with the
+        IMOLE 2027 campaign team.
+      </p>
 
-    </p>
+      <div class="cta-buttons">
 
+        <a
+          href="community.html"
+          class="btn btn-primary"
+          id="ctaCommunityLink">
+          📣 Share a Community Need
+        </a>
 
-    <div class="community-buttons">
+        <a
+          href="contact.html"
+          class="btn btn-outline">
+          ☎️ Contact Campaign
+        </a>
 
-      <a
-        href="https://wa.me/2348033002235?text=Hello%20IMOLE%202027%2C%20I%20want%20to%20report%20a%20community%20issue."
-        class="btn btn-primary"
-        target="_blank"
-        rel="noopener">
-
-        📲 Report A Community Issue
-
-      </a>
-
-
-      <a
-        href="contact.html"
-        class="btn btn-outline">
-
-        Contact Campaign
-
-      </a>
+      </div>
 
     </div>
 
@@ -2364,444 +1928,958 @@ footer a:hover{
 </section>
 
 
-<!-- ======================================================
+</main>
+
+
+
+<!-- =========================
      FOOTER
-====================================================== -->
+========================= -->
 
 <footer>
 
-  <div class="container">
-
-    <div class="footer-grid">
+  <div class="footer-inner">
 
 
-      <div>
+    <div>
 
-        <div class="footer-brand">
+      <div class="footer-brand">
 
-          <img
-            src="assets/IMG-20260728-WA0032.jpg"
-            alt="NDC Logo">
+        <img
+          src="assets/IMG-20260728-WA0032.jpg"
+          alt="NDC Logo"
+          onerror="this.style.display='none'">
 
-          <div>
+        <div>
 
-            <strong>
-              IMOLE 2027
-            </strong>
+          <h3>
+            IMOLE 2027
+          </h3>
 
-            <br>
-
-            <small>
-              Nigeria Democratic Congress
-            </small>
-
-          </div>
+          <p>
+            Hon. Nurudeen Abayomi Sadeeq
+          </p>
 
         </div>
 
-
-        <p>
-
-          Official campaign platform of Hon. Nurudeen
-          Abayomi Sadeeq, NDC candidate for Lagos State
-          House of Assembly, Ojo Constituency II.
-
-        </p>
-
       </div>
 
+      <p style="margin-top:12px">
 
-      <div>
+        Service • Development • Accountability
 
-        <h3>
-          Quick Links
-        </h3>
+      </p>
 
-        <a href="index.html">
-          Home
-        </a>
+      <p style="margin-top:6px">
 
-        <a href="about.html">
-          About
-        </a>
+        Nigeria Democratic Congress (NDC)
 
-        <a href="manifesto.html">
-          Manifesto
-        </a>
-
-        <a href="polling-units.html">
-          Polling Units
-        </a>
-
-        <a href="results.html">
-          Results
-        </a>
-
-        <a href="news.html">
-          News
-        </a>
-
-        <a href="events.html">
-          Events
-        </a>
-
-      </div>
-
-
-      <div>
-
-        <h3>
-          Connect
-        </h3>
-
-        <a
-          href="https://wa.me/2348033002235"
-          target="_blank"
-          rel="noopener">
-
-          WhatsApp
-
-        </a>
-
-        <a
-          href="https://www.facebook.com/share/18FMQMca51/"
-          target="_blank"
-          rel="noopener">
-
-          Facebook
-
-        </a>
-
-        <a href="join.html">
-          Join IMOLE
-        </a>
-
-        <a href="contact.html">
-          Contact Campaign
-        </a>
-
-      </div>
-
+      </p>
 
     </div>
 
 
-    <div class="copyright">
+    <div>
 
-      © 2026 Hon. Nurudeen Abayomi Sadeeq Campaign.
-      All Rights Reserved.
+      <h3>
+        Quick Links
+      </h3>
 
-      <br>
+      <ul class="footer-links">
 
-      Nigeria Democratic Congress (NDC) |
-      Ojo Constituency II
+        <li>
+          <a href="index.html"
+             id="footerHomeLink">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="polling-units.html"
+             id="footerPollingLink">
+            Polling Units
+          </a>
+        </li>
+
+        <li>
+          <a href="events.html"
+             id="footerEventsLink">
+            Events
+          </a>
+        </li>
+
+        <li>
+          <a href="community.html"
+             id="footerCommunityLink">
+            Community Need
+          </a>
+        </li>
+
+        <li>
+          <a href="join.html">
+            Join Us
+          </a>
+        </li>
+
+      </ul>
 
     </div>
+
+
+    <div>
+
+      <h3>
+        Connect
+      </h3>
+
+      <ul class="footer-links">
+
+        <li>
+          <a
+            href="https://wa.me/2348033002235"
+            target="_blank"
+            rel="noopener noreferrer">
+            WhatsApp
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.facebook.com/share/18FMQMca51/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Facebook
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">
+            Contact Campaign
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    © 2026 IMOLE 2027 • Hon. Nurudeen Abayomi Sadeeq
+    • All rights reserved.
 
   </div>
 
 </footer>
 
 
-<!-- ======================================================
+
+<!-- =========================
      FLOATING WHATSAPP
-====================================================== -->
+========================= -->
 
 <a
   class="whatsapp-float"
   href="https://wa.me/2348033002235"
   target="_blank"
-  rel="noopener"
-  aria-label="Chat with IMOLE on WhatsApp">
-
+  rel="noopener noreferrer"
+  aria-label="Contact IMOLE 2027 on WhatsApp">
   ☎
-
 </a>
 
 
-<!-- ======================================================
+
+<!-- =========================
      BACK TO TOP
-====================================================== -->
+========================= -->
 
 <button
   class="back-top"
   id="backTop"
-  type="button"
   aria-label="Back to top">
-
   ↑
-
 </button>
 
 
-<!-- ======================================================
-     JAVASCRIPT
-====================================================== -->
+
+<!-- =========================
+     MOBILE ACTIONS
+========================= -->
+
+<div class="mobile-actions">
+
+  <a
+    href="index.html"
+    id="mobileHomeLink">
+    🏠<br>Home
+  </a>
+
+  <a
+    href="polling-units.html"
+    id="mobilePollingLink">
+    🗳️<br>My Ward
+  </a>
+
+  <a
+    href="events.html"
+    id="mobileEventsLink">
+    📅<br>Events
+  </a>
+
+  <a
+    href="community.html"
+    id="mobileCommunityLink"
+    class="primary">
+    📣<br>Report
+  </a>
+
+</div>
+
+
 
 <script>
 
 /* =========================================================
-   IMOLE 2027 AUTOMATIC NEWS SYSTEM
+   IMOLE 2027 NEWS CENTRE
+   My Ward + Automatic News Feed
 ========================================================= */
 
-(function(){
 
-"use strict";
+/* =========================
+   BASIC CONFIGURATION
+========================= */
 
+const WHATSAPP_NUMBER = "2348033002235";
 
-/* =========================================================
-   CONFIGURATION
-========================================================= */
+const REFRESH_INTERVAL = 10 * 60 * 1000;
 
-/*
- * No Google Apps Script URL is required.
- *
- * The system currently uses public Google News RSS feeds
- * through an RSS-to-JSON service.
- *
- * Later, if you obtain your own Apps Script /exec URL,
- * the backend can be connected here without redesigning
- * the page.
- */
-
-const WHATSAPP_NUMBER =
-  "2348033002235";
+const MAX_HEADLINES = 30;
 
 
-/*
- * Automatic refresh interval.
- *
- * 10 minutes.
- */
+/* =========================
+   WARD DEFINITIONS
+========================= */
 
-const REFRESH_INTERVAL =
-  10 * 60 * 1000;
+const WARDS = {
 
-
-/*
- * Maximum number of displayed headlines.
- */
-
-const MAX_HEADLINES =
-  30;
-
-
-/* =========================================================
-   NEWS FEEDS
-========================================================= */
-
-const feeds = [
-
-  {
-    name:"Nigeria",
-    category:"Nigeria",
-    query:"Nigeria news"
+  Ilogbo:{
+    name:"Ilogbo",
+    code:"F",
+    label:"Ilogbo Ward — Ward F",
+    aliases:[
+      "Ilogbo",
+      "Ward F",
+      "F",
+      "Ilogbo Ward"
+    ]
   },
 
-  {
-    name:"Lagos",
-    category:"Lagos",
-    query:"Lagos Nigeria news"
+  Irewe:{
+    name:"Irewe",
+    code:"G",
+    label:"Irewe Ward — Ward G",
+    aliases:[
+      "Irewe",
+      "Ward G",
+      "G",
+      "Irewe Ward"
+    ]
   },
 
-  {
-    name:"Ojo",
-    category:"Ojo",
-    query:"Ojo Lagos Nigeria news"
+  Ijanikin:{
+    name:"Ijanikin",
+    code:"D",
+    label:"Ijanikin Ward — Ward D",
+    aliases:[
+      "Ijanikin",
+      "Ward D",
+      "D",
+      "Ijanikin Ward"
+    ]
   },
 
-  {
-    name:"Politics",
-    category:"Politics",
-    query:"Nigeria politics"
+  Etegbin:{
+    name:"Etegbin",
+    code:"I",
+    label:"Etegbin Ward — Ward I",
+    aliases:[
+      "Etegbin",
+      "Ward I",
+      "I",
+      "Etegbin Ward"
+    ]
   },
 
-  {
-    name:"Business",
-    category:"Business",
-    query:"Nigeria business economy"
+  Idoluwo:{
+    name:"Idoluwo",
+    code:"J",
+    label:"Idoluwo Ward — Ward J",
+    aliases:[
+      "Idoluwo",
+      "Idolowu",
+      "Ward J",
+      "J",
+      "Idoluwo Ward",
+      "Idolowu Ward"
+    ]
   },
 
-  {
-    name:"Sports",
-    category:"Sports",
-    query:"Nigeria sports"
-  },
-
-  {
-    name:"World",
-    category:"World",
-    query:"world news"
+  Tafi:{
+    name:"Tafi",
+    code:"",
+    label:"Tafi Ward",
+    aliases:[
+      "Tafi",
+      "Taffi",
+      "Tafi Ward",
+      "Taffi Ward"
+    ]
   }
 
-];
+};
 
 
-/* =========================================================
+/* =========================
    DOM ELEMENTS
-========================================================= */
+========================= */
 
-const grid =
-  document.getElementById(
-    "headlineGrid"
-  );
+const wardFilter =
+  document.getElementById("wardFilter");
 
 const searchInput =
-  document.getElementById(
-    "searchInput"
-  );
+  document.getElementById("searchInput");
 
 const categoryFilter =
-  document.getElementById(
-    "categoryFilter"
-  );
+  document.getElementById("categoryFilter");
 
 const sourceFilter =
-  document.getElementById(
-    "sourceFilter"
-  );
+  document.getElementById("sourceFilter");
 
-const refreshBtn =
-  document.getElementById(
-    "refreshBtn"
-  );
+const headlineGrid =
+  document.getElementById("headlineGrid");
 
-const statusText =
-  document.getElementById(
-    "statusText"
-  );
-
-const statusDot =
-  document.getElementById(
-    "statusDot"
-  );
-
-const lastUpdated =
-  document.getElementById(
-    "lastUpdated"
-  );
-
-const featuredTitle =
-  document.getElementById(
-    "featuredTitle"
-  );
-
-const featuredDescription =
-  document.getElementById(
-    "featuredDescription"
-  );
-
-const featuredLink =
-  document.getElementById(
-    "featuredLink"
-  );
+const resultCount =
+  document.getElementById("resultCount");
 
 const breakingTicker =
-  document.getElementById(
-    "breakingTicker"
-  );
+  document.getElementById("breakingTicker");
+
+const statusText =
+  document.getElementById("statusText");
+
+const statusDot =
+  document.getElementById("statusDot");
+
+const lastUpdated =
+  document.getElementById("lastUpdated");
+
+const selectedWardTitle =
+  document.getElementById("selectedWardTitle");
+
+const selectedWardDescription =
+  document.getElementById("selectedWardDescription");
+
+const featuredTitle =
+  document.getElementById("featuredTitle");
+
+const featuredDescription =
+  document.getElementById("featuredDescription");
+
+const featuredCategory =
+  document.getElementById("featuredCategory");
+
+const featuredMeta =
+  document.getElementById("featuredMeta");
+
+const featuredLink =
+  document.getElementById("featuredLink");
+
+const featuredImage =
+  document.getElementById("featuredImage");
 
 
-/* =========================================================
-   INTERNAL DATA
-========================================================= */
+/* =========================
+   APP STATE
+========================= */
 
 let allNews = [];
 
-let isLoading = false;
+let filteredNews = [];
+
+let currentWard = "all";
 
 
-/* =========================================================
-   HELPERS
-========================================================= */
+/* =========================
+   WARD NORMALIZATION
+========================= */
 
-function escapeHTML(value){
-
-  if(
-    value === null ||
-    value === undefined
-  ){
-
-    return "";
-
-  }
-
-  return String(value)
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
-
-}
-
-
-function stripHTML(value){
+function canonicalWard(value){
 
   if(!value){
+    return "all";
+  }
 
-    return "";
+  const clean =
+    String(value)
+      .trim()
+      .toLowerCase();
+
+  if(
+    clean === "all" ||
+    clean === "all wards" ||
+    clean === "all-w" ||
+    clean === "all_wards"
+  ){
+    return "all";
+  }
+
+  for(const key of Object.keys(WARDS)){
+
+    const ward = WARDS[key];
+
+    if(
+      key.toLowerCase() === clean ||
+      ward.name.toLowerCase() === clean ||
+      ward.code.toLowerCase() === clean ||
+      ward.label.toLowerCase() === clean ||
+      ward.aliases.some(
+        alias =>
+          alias.toLowerCase() === clean
+      )
+    ){
+      return key;
+    }
 
   }
 
-  const div =
-    document.createElement("div");
+  return "all";
+}
 
-  div.innerHTML =
-    value;
 
-  return div.textContent ||
-         div.innerText ||
-         "";
+/* =========================
+   GET WARD FROM URL
+========================= */
+
+function getUrlWard(){
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+  return canonicalWard(
+    params.get("ward")
+  );
 
 }
 
 
-function truncate(
-  text,
-  length
+/* =========================
+   BUILD WARD URL
+========================= */
+
+function buildWardUrl(page, ward){
+
+  const canonical =
+    canonicalWard(ward);
+
+  const base =
+    new URL(
+      page,
+      window.location.href
+    );
+
+  if(canonical !== "all"){
+
+    base.searchParams.set(
+      "ward",
+      canonical
+    );
+
+  }
+
+  return base.href;
+
+}
+
+
+/* =========================
+   UPDATE URL WITHOUT RELOAD
+========================= */
+
+function updateWardUrl(){
+
+  const canonical =
+    canonicalWard(currentWard);
+
+  const url =
+    new URL(
+      window.location.href
+    );
+
+  if(canonical === "all"){
+
+    url.searchParams.delete("ward");
+
+  }else{
+
+    url.searchParams.set(
+      "ward",
+      canonical
+    );
+
+  }
+
+  history.replaceState(
+    {},
+    "",
+    url.pathname +
+    url.search +
+    url.hash
+  );
+
+}
+
+
+/* =========================
+   WARD UI
+========================= */
+
+function updateWardUI(){
+
+  const canonical =
+    canonicalWard(currentWard);
+
+  if(canonical === "all"){
+
+    selectedWardTitle.textContent =
+      "🧭 Viewing news for All Wards";
+
+    selectedWardDescription.textContent =
+      "General headlines are shown across the news centre. Select a ward to connect your browsing experience to your community.";
+
+  }else{
+
+    const ward =
+      WARDS[canonical];
+
+    selectedWardTitle.textContent =
+      "🧭 Viewing news for " +
+      ward.name +
+      " Ward";
+
+    selectedWardDescription.textContent =
+      ward.label +
+      " • General headlines remain visible while ward-specific updates can be supported.";
+
+  }
+
+  wardFilter.value =
+    canonical;
+
+}
+
+
+/* =========================
+   UPDATE WARD LINKS
+========================= */
+
+function updateWardLinks(){
+
+  const ward =
+    currentWard;
+
+  const homeUrl =
+    buildWardUrl(
+      "index.html",
+      ward
+    ) + (
+      canonicalWard(ward) !== "all"
+        ? "#my-ward"
+        : ""
+    );
+
+  const pollingUrl =
+    buildWardUrl(
+      "polling-units.html",
+      ward
+    );
+
+  const communityUrl =
+    buildWardUrl(
+      "community.html",
+      ward
+    );
+
+  const eventsUrl =
+    buildWardUrl(
+      "events.html",
+      ward
+    );
+
+  const newsUrl =
+    buildWardUrl(
+      "news.html",
+      ward
+    );
+
+
+  const links = {
+
+    backToMyWard:homeUrl,
+
+    viewWardPolling:pollingUrl,
+
+    shareCommunityNeed:communityUrl,
+
+    wardEvents:eventsUrl,
+
+    heroHomeLink:homeUrl,
+
+    heroPollingLink:pollingUrl,
+
+    heroCommunityLink:communityUrl,
+
+    campaignEventsLink:eventsUrl,
+
+    campaignCommunityLink:communityUrl,
+
+    ctaCommunityLink:communityUrl,
+
+    footerHomeLink:homeUrl,
+
+    footerPollingLink:pollingUrl,
+
+    footerEventsLink:eventsUrl,
+
+    footerCommunityLink:communityUrl,
+
+    mobileHomeLink:homeUrl,
+
+    mobilePollingLink:pollingUrl,
+
+    mobileEventsLink:eventsUrl,
+
+    mobileCommunityLink:communityUrl,
+
+    homeBrandLink:homeUrl
+
+  };
+
+
+  Object.keys(links).forEach(id => {
+
+    const element =
+      document.getElementById(id);
+
+    if(element){
+      element.href =
+        links[id];
+    }
+
+  });
+
+
+  document
+    .querySelectorAll(
+      "[data-ward-link='polling']"
+    )
+    .forEach(link => {
+      link.href = pollingUrl;
+    });
+
+
+  document
+    .querySelectorAll(
+      "[data-ward-link='events']"
+    )
+    .forEach(link => {
+      link.href = eventsUrl;
+    });
+
+
+  document
+    .querySelectorAll(
+      "[data-nav='home']"
+    )
+    .forEach(link => {
+      link.href = homeUrl;
+    });
+
+}
+
+
+/* =========================
+   WARD-SPECIFIC NEWS CLASSIFIER
+========================= */
+
+/*
+  Live RSS stories are treated as general unless
+  the headline/description clearly mentions one
+  of the known wards.
+
+  This prevents aggressive or unsafe mislabelling.
+*/
+
+function classifyWard(item){
+
+  const text =
+    (
+      (item.title || "") +
+      " " +
+      (item.description || "") +
+      " " +
+      (item.source || "")
+    ).toLowerCase();
+
+
+  const checks = [
+
+    {
+      ward:"Ilogbo",
+      words:[
+        "ilogbo ward",
+        "ilogbo"
+      ]
+    },
+
+    {
+      ward:"Irewe",
+      words:[
+        "irewe ward",
+        "irewe"
+      ]
+    },
+
+    {
+      ward:"Ijanikin",
+      words:[
+        "ijanikin ward",
+        "ijanikin"
+      ]
+    },
+
+    {
+      ward:"Etegbin",
+      words:[
+        "etegbin ward",
+        "etegbin"
+      ]
+    },
+
+    {
+      ward:"Idoluwo",
+      words:[
+        "idoluwo ward",
+        "idolowu ward",
+        "idoluwo",
+        "idolowu"
+      ]
+    },
+
+    {
+      ward:"Tafi",
+      words:[
+        "tafi ward",
+        "taffi ward",
+        "tafi",
+        "taffi"
+      ]
+    }
+
+  ];
+
+
+  for(const itemCheck of checks){
+
+    for(const word of itemCheck.words){
+
+      if(text.includes(word)){
+
+        return itemCheck.ward;
+
+      }
+
+    }
+
+  }
+
+  return "all";
+
+}
+
+
+/* =========================
+   RSS FEEDS
+========================= */
+
+const FEEDS = {
+
+  Nigeria:{
+    query:"Nigeria news"
+  },
+
+  Lagos:{
+    query:"Lagos Nigeria news"
+  },
+
+  Ojo:{
+    query:"Ojo Lagos Nigeria news"
+  },
+
+  Politics:{
+    query:"Nigeria politics"
+  },
+
+  Business:{
+    query:"Nigeria business economy"
+  },
+
+  Sports:{
+    query:"Nigeria sports"
+  },
+
+  World:{
+    query:"world news"
+  }
+
+};
+
+
+/* =========================
+   RSS URL
+========================= */
+
+function googleNewsRss(query){
+
+  return (
+    "https://news.google.com/rss/search?" +
+    "q=" +
+    encodeURIComponent(query) +
+    "&hl=en-NG" +
+    "&gl=NG" +
+    "&ceid=NG:en"
+  );
+
+}
+
+
+/* =========================
+   RSS2JSON URL
+========================= */
+
+function rss2jsonUrl(rssUrl){
+
+  return (
+    "https://api.rss2json.com/v1/api.json?rss_url=" +
+    encodeURIComponent(rssUrl)
+  );
+
+}
+
+
+/* =========================
+   FETCH WITH TIMEOUT
+========================= */
+
+async function fetchJson(
+  url,
+  timeout = 15000
 ){
 
-  text =
-    text ||
-    "";
+  const controller =
+    new AbortController();
 
-  if(
-    text.length <= length
-  ){
+  const timer =
+    setTimeout(
+      () => controller.abort(),
+      timeout
+    );
 
-    return text;
+  try{
+
+    const response =
+      await fetch(
+        url,
+        {
+          signal:
+            controller.signal,
+          cache:"no-store"
+        }
+      );
+
+    if(!response.ok){
+
+      throw new Error(
+        "HTTP " +
+        response.status
+      );
+
+    }
+
+    return await response.json();
+
+  }finally{
+
+    clearTimeout(timer);
 
   }
-
-  return text.substring(
-    0,
-    length
-  ) + "...";
 
 }
 
 
-function formatDate(date){
+/* =========================
+   CLEAN HTML
+========================= */
 
-  if(!date){
+function stripHtml(value){
 
-    return "Recently";
+  const div =
+    document.createElement(
+      "div"
+    );
 
+  div.innerHTML =
+    value || "";
+
+  return (
+    div.textContent ||
+    div.innerText ||
+    ""
+  )
+    .replace(/\s+/g," ")
+    .trim();
+
+}
+
+
+/* =========================
+   DATE FORMAT
+========================= */
+
+function formatDate(value){
+
+  if(!value){
+    return "Date unavailable";
   }
 
-  const d =
-    new Date(date);
+  const date =
+    new Date(value);
 
   if(
-    isNaN(d.getTime())
+    Number.isNaN(
+      date.getTime()
+    )
   ){
 
-    return "Recently";
+    return "Date unavailable";
 
   }
 
-  return d.toLocaleString(
+  return date.toLocaleString(
     "en-NG",
     {
       dateStyle:"medium",
@@ -2812,605 +2890,277 @@ function formatDate(date){
 }
 
 
-function timeAgo(date){
+/* =========================
+   NORMALIZE STORY
+========================= */
 
-  if(!date){
-
-    return "Recently";
-
-  }
-
-  const d =
-    new Date(date);
-
-  if(
-    isNaN(d.getTime())
-  ){
-
-    return "Recently";
-
-  }
-
-  const seconds =
-    Math.floor(
-      (Date.now() -
-       d.getTime()) /
-      1000
-    );
-
-  if(seconds < 60){
-
-    return "Just now";
-
-  }
-
-  const minutes =
-    Math.floor(
-      seconds / 60
-    );
-
-  if(minutes < 60){
-
-    return minutes +
-      " minute" +
-      (minutes === 1 ? "" : "s") +
-      " ago";
-
-  }
-
-  const hours =
-    Math.floor(
-      minutes / 60
-    );
-
-  if(hours < 24){
-
-    return hours +
-      " hour" +
-      (hours === 1 ? "" : "s") +
-      " ago";
-
-  }
-
-  const days =
-    Math.floor(
-      hours / 24
-    );
-
-  if(days < 7){
-
-    return days +
-      " day" +
-      (days === 1 ? "" : "s") +
-      " ago";
-
-  }
-
-  return formatDate(date);
-
-}
-
-
-/* =========================================================
-   STATUS
-========================================================= */
-
-function setStatus(
-  text,
-  type
+function normalizeStory(
+  item,
+  category
 ){
 
-  statusText.textContent =
-    text;
-
-  statusDot.classList.remove(
-    "loading",
-    "error"
-  );
-
-  if(type === "loading"){
-
-    statusDot.classList.add(
-      "loading"
+  const title =
+    stripHtml(
+      item.title
     );
 
-  }
-
-  if(type === "error"){
-
-    statusDot.classList.add(
-      "error"
+  const description =
+    stripHtml(
+      item.description ||
+      item.content ||
+      ""
     );
 
-  }
+  const source =
+    stripHtml(
+      item.author ||
+      item.source ||
+      category
+    );
+
+
+  const story = {
+
+    title,
+
+    description,
+
+    link:
+      item.link ||
+      "#",
+
+    pubDate:
+      item.pubDate ||
+      item.isoDate ||
+      "",
+
+    source,
+
+    category,
+
+    image:
+      item.thumbnail ||
+      item.enclosure?.link ||
+      "",
+
+    ward:"all"
+
+  };
+
+
+  story.ward =
+    classifyWard(
+      story
+    );
+
+
+  return story;
 
 }
 
 
-/* =========================================================
-   GOOGLE NEWS RSS URL
-========================================================= */
+/* =========================
+   DEDUPLICATION KEY
+========================= */
 
-function makeGoogleNewsURL(
-  query
+function normalizeTitle(
+  title
 ){
 
-  return (
-    "https://news.google.com/rss/search?q=" +
-    encodeURIComponent(query) +
-    "&hl=en-NG" +
-    "&gl=NG" +
-    "&ceid=NG:en"
-  );
+  return String(title || "")
+    .toLowerCase()
+    .replace(
+      /[^a-z0-9\s]/g,
+      ""
+    )
+    .replace(
+      /\s+/g,
+      " "
+    )
+    .trim();
 
 }
 
 
-/* =========================================================
-   RSS FETCH
-========================================================= */
-
-async function fetchFeed(
-  feed
-){
-
-  const rssURL =
-    makeGoogleNewsURL(
-      feed.query
-    );
-
-
-  /*
-   * RSS2JSON converts the public RSS feed
-   * into browser-readable JSON.
-   */
-
-  const apiURL =
-    "https://api.rss2json.com/v1/api.json?rss_url=" +
-    encodeURIComponent(
-      rssURL
-    );
-
-
-  const controller =
-    new AbortController();
-
-
-  const timeout =
-    setTimeout(
-      function(){
-
-        controller.abort();
-
-      },
-      15000
-    );
-
-
-  try{
-
-    const response =
-      await fetch(
-        apiURL,
-        {
-          method:"GET",
-          cache:"no-store",
-          signal:
-            controller.signal
-        }
-      );
-
-
-    clearTimeout(
-      timeout
-    );
-
-
-    if(!response.ok){
-
-      throw new Error(
-        "News feed unavailable"
-      );
-
-    }
-
-
-    const data =
-      await response.json();
-
-
-    if(
-      !data ||
-      !Array.isArray(
-        data.items
-      )
-    ){
-
-      throw new Error(
-        "Invalid feed"
-      );
-
-    }
-
-
-    return data.items.map(
-      function(item){
-
-        const title =
-          stripHTML(
-            item.title
-          );
-
-
-        const description =
-          stripHTML(
-            item.description ||
-            item.content ||
-            ""
-          );
-
-
-        return {
-
-          id:
-            item.guid ||
-            item.link ||
-            title,
-
-          title:
-            title,
-
-          description:
-            truncate(
-              description,
-              180
-            ),
-
-          link:
-            item.link ||
-            "#",
-
-          published:
-            item.pubDate ||
-            new Date().toISOString(),
-
-          source:
-            feed.name,
-
-          category:
-            feed.category
-
-        };
-
-      }
-    );
-
-  }catch(error){
-
-    clearTimeout(
-      timeout
-    );
-
-    console.warn(
-      "Feed error:",
-      feed.name,
-      error
-    );
-
-    return [];
-
-  }
-
-}
-
-
-/* =========================================================
-   LOAD ALL FEEDS
-========================================================= */
+/* =========================
+   LOAD ALL NEWS
+========================= */
 
 async function loadNews(){
 
-  if(isLoading){
+  setLoadingState();
 
-    return;
+  const collected = [];
 
-  }
-
-  isLoading =
-    true;
-
-
-  setStatus(
-    "Updating newspaper headlines...",
-    "loading"
-  );
-
-
-  if(refreshBtn){
-
-    refreshBtn.disabled =
-      true;
-
-    refreshBtn.textContent =
-      "⏳ Loading...";
-
-  }
-
-
-  /*
-   * Show loading screen only when
-   * no previous news exists.
-   */
-
-  if(
-    allNews.length === 0
-  ){
-
-    grid.innerHTML = `
-
-      <div class="loading-box">
-
-        <div class="spinner"></div>
-
-        <strong>
-          Loading newspaper headlines...
-        </strong>
-
-        <p>
-          Please wait while available
-          news feeds are checked.
-        </p>
-
-      </div>
-
-    `;
-
-  }
-
-
-  try{
-
-    const results =
-      await Promise.all(
-        feeds.map(
-          fetchFeed
-        )
-      );
-
-
-    let combined =
-      [];
-
-
-    results.forEach(
-      function(items){
-
-        combined =
-          combined.concat(
-            items
-          );
-
-      }
+  const feedEntries =
+    Object.entries(
+      FEEDS
     );
 
 
-    /*
-     * Remove duplicates.
-     */
+  const requests =
+    feedEntries.map(
+      async ([category, config]) => {
 
-    const seen =
-      new Set();
+        try{
 
+          const rssUrl =
+            googleNewsRss(
+              config.query
+            );
 
-    combined =
-      combined.filter(
-        function(item){
-
-          const key =
-            (
-              item.title ||
-              ""
-            )
-            .toLowerCase()
-            .replace(
-              /[^a-z0-9]/g,
-              ""
+          const data =
+            await fetchJson(
+              rss2jsonUrl(
+                rssUrl
+              )
             );
 
 
           if(
-            seen.has(key)
+            data &&
+            Array.isArray(
+              data.items
+            )
           ){
 
-            return false;
+            data.items
+              .slice(0,10)
+              .forEach(item => {
+
+                const story =
+                  normalizeStory(
+                    item,
+                    category
+                  );
+
+                if(
+                  story.title &&
+                  story.link
+                ){
+
+                  collected.push(
+                    story
+                  );
+
+                }
+
+              });
 
           }
 
+        }catch(error){
 
-          seen.add(key);
-
-          return true;
+          console.warn(
+            "Feed failed:",
+            category,
+            error
+          );
 
         }
-      );
-
-
-    /*
-     * Sort newest first.
-     */
-
-    combined.sort(
-      function(a,b){
-
-        return (
-          new Date(
-            b.published
-          ).getTime()
-        ) -
-        (
-          new Date(
-            a.published
-          ).getTime()
-        );
 
       }
     );
 
 
-    allNews =
-      combined.slice(
-        0,
-        MAX_HEADLINES
-      );
-
-
-    updateSourceFilter();
-
-    renderNews();
-
-    updateFeatured();
-
-    updateTicker();
-
-
-    if(
-      allNews.length > 0
-    ){
-
-      setStatus(
-        allNews.length +
-        " headlines loaded automatically.",
-        "success"
-      );
-
-    }else{
-
-      setStatus(
-        "Live news feeds are temporarily unavailable. Showing the news centre.",
-        "error"
-      );
-
-    }
-
-
-    lastUpdated.textContent =
-      "Last update: " +
-      new Date().toLocaleTimeString(
-        "en-NG",
-        {
-          hour:"2-digit",
-          minute:"2-digit"
-        }
-      );
-
-
-  }catch(error){
-
-    console.error(
-      error
-    );
-
-
-    setStatus(
-      "Unable to update the live news feed right now.",
-      "error"
-    );
-
-  }
-
-
-  isLoading =
-    false;
-
-
-  if(refreshBtn){
-
-    refreshBtn.disabled =
-      false;
-
-    refreshBtn.textContent =
-      "🔄 Refresh";
-
-  }
-
-}
-
-
-/* =========================================================
-   SOURCE FILTER
-========================================================= */
-
-function updateSourceFilter(){
-
-  const sources =
-    [...new Set(
-      allNews.map(
-        function(item){
-          return item.source;
-        }
-      )
-    )];
-
-
-  const current =
-    sourceFilter.value;
-
-
-  sourceFilter.innerHTML =
-    `<option value="all">
-       All Sources
-     </option>`;
-
-
-  sources.forEach(
-    function(source){
-
-      const option =
-        document.createElement(
-          "option"
-        );
-
-      option.value =
-        source;
-
-      option.textContent =
-        source;
-
-      sourceFilter.appendChild(
-        option
-      );
-
-    }
+  await Promise.all(
+    requests
   );
 
 
-  if(
-    sources.includes(
-      current
-    )
-  ){
+  const seen =
+    new Set();
 
-    sourceFilter.value =
-      current;
+  const unique = [];
+
+
+  collected
+    .sort(
+      (a,b) =>
+        new Date(b.pubDate) -
+        new Date(a.pubDate)
+    )
+    .forEach(item => {
+
+      const key =
+        normalizeTitle(
+          item.title
+        );
+
+      if(
+        !key ||
+        seen.has(key)
+      ){
+
+        return;
+
+      }
+
+      seen.add(key);
+
+      unique.push(item);
+
+    });
+
+
+  allNews =
+    unique.slice(
+      0,
+      MAX_HEADLINES
+    );
+
+
+  populateSources();
+
+  applyFilters();
+
+
+  if(allNews.length){
+
+    setOnlineState(
+      "Latest headlines loaded"
+    );
+
+  }else{
+
+    setErrorState(
+      "No headlines were returned by the available feeds."
+    );
 
   }
+
+
+  lastUpdated.textContent =
+    "Updated " +
+    new Date().toLocaleString(
+      "en-NG",
+      {
+        dateStyle:"medium",
+        timeStyle:"short"
+      }
+    );
 
 }
 
 
-/* =========================================================
+/* =========================
    FILTER NEWS
-========================================================= */
+========================= */
 
-function getFilteredNews(){
+function applyFilters(){
+
+  const ward =
+    canonicalWard(
+      currentWard
+    );
 
   const search =
     (
       searchInput.value ||
       ""
     )
-    .trim()
-    .toLowerCase();
+      .trim()
+      .toLowerCase();
 
 
   const category =
@@ -3421,43 +3171,402 @@ function getFilteredNews(){
     sourceFilter.value;
 
 
-  return allNews.filter(
-    function(item){
-
-      const text =
-        (
-          item.title +
-          " " +
-          item.description +
-          " " +
-          item.source +
-          " " +
-          item.category
-        )
-        .toLowerCase();
+  filteredNews =
+    allNews.filter(
+      item => {
 
 
-      const matchesSearch =
-        !search ||
-        text.includes(
+        /*
+          Ward logic:
+
+          - General stories are ALWAYS visible.
+          - Ward stories are visible when their ward
+            matches the selected ward.
+          - Selecting All Wards shows everything.
+        */
+
+        const wardMatch =
+          ward === "all" ||
+          item.ward === "all" ||
+          item.ward === ward;
+
+
+        if(!wardMatch){
+          return false;
+        }
+
+
+        const categoryMatch =
+          category === "all" ||
+          item.category === category;
+
+
+        if(!categoryMatch){
+          return false;
+        }
+
+
+        const sourceMatch =
+          source === "all" ||
+          item.source === source;
+
+
+        if(!sourceMatch){
+          return false;
+        }
+
+
+        if(!search){
+          return true;
+        }
+
+
+        const searchable =
+          (
+            item.title +
+            " " +
+            item.description +
+            " " +
+            item.source +
+            " " +
+            item.category +
+            " " +
+            item.ward
+          ).toLowerCase();
+
+
+        return searchable.includes(
           search
         );
 
-
-      const matchesCategory =
-        category === "all" ||
-        item.category === category;
+      }
+    );
 
 
-      const matchesSource =
-        source === "all" ||
-        item.source === source;
+  renderFeatured();
+
+  renderHeadlines();
+
+  renderTicker();
+
+}
 
 
-      return (
-        matchesSearch &&
-        matchesCategory &&
-        matchesSource
+/* =========================
+   POPULATE SOURCE FILTER
+========================= */
+
+function populateSources(){
+
+  const sources =
+    [
+      ...new Set(
+        allNews
+          .map(item => item.source)
+          .filter(Boolean)
+      )
+    ]
+    .sort(
+      (a,b) =>
+        a.localeCompare(b)
+    );
+
+
+  sourceFilter.innerHTML = "";
+
+  const allOption =
+    document.createElement(
+      "option"
+    );
+
+  allOption.value =
+    "all";
+
+  allOption.textContent =
+    "All Sources";
+
+  sourceFilter.appendChild(
+    allOption
+  );
+
+
+  sources.forEach(source => {
+
+    const option =
+      document.createElement(
+        "option"
+      );
+
+    option.value =
+      source;
+
+    option.textContent =
+      source;
+
+    sourceFilter.appendChild(
+      option
+    );
+
+  });
+
+}
+
+
+/* =========================
+   RENDER FEATURED
+========================= */
+
+function renderFeatured(){
+
+  let story =
+    filteredNews[0];
+
+
+  /*
+    If the selected filters produce no ward-specific
+    item, general news should remain available.
+  */
+
+  if(!story){
+
+    story =
+      allNews.find(
+        item =>
+          item.ward === "all"
+      );
+
+  }
+
+
+  if(!story){
+
+    featuredTitle.textContent =
+      "No featured headline available";
+
+    featuredDescription.textContent =
+      "Try another ward, category, source or search term.";
+
+    featuredCategory.textContent =
+      "No Results";
+
+    featuredMeta.textContent =
+      "";
+
+    featuredLink.style.display =
+      "none";
+
+    featuredImage.style.backgroundImage =
+      'url("assets/Hon Nurudeen Abayomi Sadeeq.jpg")';
+
+    return;
+
+  }
+
+
+  featuredTitle.textContent =
+    story.title;
+
+
+  featuredDescription.textContent =
+    story.description ||
+    "Open the source to read the complete story.";
+
+
+  featuredCategory.textContent =
+    story.category;
+
+
+  featuredMeta.textContent =
+    [
+      story.source,
+      formatDate(
+        story.pubDate
+      ),
+      story.ward !== "all"
+        ? story.ward + " Ward"
+        : "General"
+    ]
+      .filter(Boolean)
+      .join(" • ");
+
+
+  featuredLink.href =
+    story.link;
+
+
+  featuredLink.style.display =
+    "inline-flex";
+
+
+  const image =
+    story.image ||
+    "assets/Hon Nurudeen Abayomi Sadeeq.jpg";
+
+
+  featuredImage.style.backgroundImage =
+    'url("' +
+    image.replace(
+      /"/g,
+      '\\"'
+    ) +
+    '")';
+
+}
+
+
+/* =========================
+   RENDER HEADLINES
+========================= */
+
+function renderHeadlines(){
+
+  headlineGrid.innerHTML = "";
+
+
+  resultCount.textContent =
+    "Showing " +
+    filteredNews.length +
+    " headline" +
+    (
+      filteredNews.length === 1
+        ? ""
+        : "s"
+    );
+
+
+  if(!filteredNews.length){
+
+    const state =
+      document.createElement(
+        "div"
+      );
+
+    state.className =
+      "state-box";
+
+    state.innerHTML = `
+      <div class="state-icon">🔎</div>
+      <h3>No headlines found</h3>
+      <p>
+        Try changing your search, category, source or ward.
+        General headlines remain available when they are returned
+        by the live feeds.
+      </p>
+    `;
+
+    headlineGrid.appendChild(
+      state
+    );
+
+    return;
+
+  }
+
+
+  filteredNews.forEach(
+    (story,index) => {
+
+      const article =
+        document.createElement(
+          "article"
+        );
+
+      article.className =
+        "news-card";
+
+
+      const image =
+        story.image ||
+        "assets/Hon Nurudeen Abayomi Sadeeq.jpg";
+
+
+      const wardLabel =
+        story.ward === "all"
+          ? "General"
+          : story.ward + " Ward";
+
+
+      article.innerHTML = `
+
+        <div
+          class="news-card-image"
+          style="background-image:url('${escapeCssUrl(image)}')">
+
+          <span
+            class="news-card-source">
+            ${escapeHtml(
+              story.source ||
+              story.category
+            )}
+          </span>
+
+        </div>
+
+
+        <div class="news-card-body">
+
+          <h3>
+            ${escapeHtml(
+              story.title
+            )}
+          </h3>
+
+
+          <p>
+            ${escapeHtml(
+              story.description ||
+              "Read the full story from the original source."
+            )}
+          </p>
+
+
+          <div class="news-meta">
+
+            <span class="news-tag">
+              ${escapeHtml(
+                story.category
+              )}
+            </span>
+
+            <span class="news-tag">
+              ${escapeHtml(
+                wardLabel
+              )}
+            </span>
+
+          </div>
+
+
+          <div class="news-date">
+
+            ${escapeHtml(
+              formatDate(
+                story.pubDate
+              )
+            )}
+
+          </div>
+
+
+          <a
+            class="news-read"
+            href="${escapeAttribute(
+              story.link
+            )}"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Read Full Story →
+
+          </a>
+
+        </div>
+
+      `;
+
+
+      headlineGrid.appendChild(
+        article
       );
 
     }
@@ -3466,292 +3575,664 @@ function getFilteredNews(){
 }
 
 
-/* =========================================================
-   RENDER NEWS CARDS
-========================================================= */
+/* =========================
+   ESCAPE HELPERS
+========================= */
 
-function renderNews(){
+function escapeHtml(value){
 
-  const items =
-    getFilteredNews();
-
-
-  if(
-    items.length === 0
-  ){
-
-    grid.innerHTML = `
-
-      <div class="empty-box">
-
-        <strong>
-          No matching headlines found
-        </strong>
-
-        <p>
-          Try another search word or category.
-        </p>
-
-      </div>
-
-    `;
-
-    return;
-
-  }
-
-
-  grid.innerHTML =
-    items.map(
-      function(item){
-
-        const title =
-          escapeHTML(
-            item.title
-          );
-
-        const description =
-          escapeHTML(
-            truncate(
-              item.description,
-              160
-            )
-          );
-
-        const source =
-          escapeHTML(
-            item.source
-          );
-
-        const category =
-          escapeHTML(
-            item.category
-          );
-
-        const published =
-          escapeHTML(
-            item.published
-          );
-
-        const link =
-          escapeHTML(
-            item.link
-          );
-
-
-        const shareText =
-          encodeURIComponent(
-            item.title +
-            " — IMOLE 2027 News Centre"
-          );
-
-
-        return `
-
-          <article class="headline-card">
-
-            <div class="headline-top">
-
-              <span class="source">
-                ${source}
-              </span>
-
-              <span class="headline-category">
-                ${category}
-              </span>
-
-            </div>
-
-
-            <div class="headline-body">
-
-              <h3>
-                ${title}
-              </h3>
-
-              <p>
-                ${description}
-              </p>
-
-              <div class="headline-time">
-
-                🕒
-                ${timeAgo(
-                  published
-                )}
-
-              </div>
-
-            </div>
-
-
-            <div class="headline-footer">
-
-              <a
-                href="${link}"
-                class="read-btn"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                Read Full Story →
-
-              </a>
-
-
-              <a
-                href="https://wa.me/?text=${shareText}"
-                class="share-btn"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                WhatsApp
-
-              </a>
-
-            </div>
-
-          </article>
-
-        `;
-
-      }
+  return String(value || "")
+    .replace(
+      /&/g,
+      "&amp;"
     )
-    .join("");
-
-}
-
-
-/* =========================================================
-   FEATURED STORY
-========================================================= */
-
-function updateFeatured(){
-
-  if(
-    allNews.length === 0
-  ){
-
-    featuredTitle.textContent =
-      "News feed temporarily unavailable";
-
-    featuredDescription.textContent =
-      "Please use the refresh button to try again.";
-
-    featuredLink.href =
-      "#";
-
-    return;
-
-  }
-
-
-  const item =
-    allNews[0];
-
-
-  featuredTitle.textContent =
-    item.title;
-
-
-  featuredDescription.textContent =
-    item.description ||
-    "Latest headline from the automatic news feed.";
-
-
-  featuredLink.href =
-    item.link ||
-    "#";
-
-}
-
-
-/* =========================================================
-   BREAKING TICKER
-========================================================= */
-
-function updateTicker(){
-
-  if(
-    allNews.length === 0
-  ){
-
-    breakingTicker.textContent =
-      "Latest news is temporarily unavailable.";
-
-    return;
-
-  }
-
-
-  const tickerItems =
-    allNews
-      .slice(0,10)
-      .map(
-        function(item){
-
-          return (
-            item.source +
-            ": " +
-            item.title
-          );
-
-        }
-      );
-
-
-  breakingTicker.textContent =
-    tickerItems.join(
-      "     •     "
+    .replace(
+      /</g,
+      "&lt;"
+    )
+    .replace(
+      />/g,
+      "&gt;"
+    )
+    .replace(
+      /"/g,
+      "&quot;"
+    )
+    .replace(
+      /'/g,
+      "&#039;"
     );
 
 }
 
 
-/* =========================================================
+function escapeAttribute(value){
+
+  return escapeHtml(
+    value
+  );
+
+}
+
+
+function escapeCssUrl(value){
+
+  return String(
+    value ||
+    ""
+  )
+    .replace(
+      /\\/g,
+      "\\\\"
+    )
+    .replace(
+      /'/g,
+      "\\'"
+    )
+    .replace(
+      /\)/g,
+      "\\)"
+    );
+
+}
+
+
+/* =========================
+   TICKER
+========================= */
+
+function renderTicker(){
+
+  const stories =
+    filteredNews.length
+      ? filteredNews
+      : allNews;
+
+
+  if(!stories.length){
+
+    breakingTicker.textContent =
+      "No headlines available at the moment.";
+
+    return;
+
+  }
+
+
+  const tickerText =
+    stories
+      .slice(0,12)
+      .map(
+        story =>
+          "📰 " +
+          story.title
+      )
+      .join(
+        "     •     "
+      );
+
+
+  breakingTicker.textContent =
+    tickerText;
+
+}
+
+
+/* =========================
+   LOADING STATE
+========================= */
+
+function setLoadingState(){
+
+  statusDot.className =
+    "status-dot loading";
+
+  statusText.textContent =
+    "Loading latest headlines...";
+
+}
+
+
+/* =========================
+   ONLINE STATE
+========================= */
+
+function setOnlineState(
+  message
+){
+
+  statusDot.className =
+    "status-dot online";
+
+  statusText.textContent =
+    message;
+
+}
+
+
+/* =========================
+   ERROR STATE
+========================= */
+
+function setErrorState(
+  message
+){
+
+  statusDot.className =
+    "status-dot error";
+
+  statusText.textContent =
+    message;
+
+}
+
+
+/* =========================
+   WARD CHANGE
+========================= */
+
+wardFilter.addEventListener(
+  "change",
+  function(){
+
+    currentWard =
+      canonicalWard(
+        this.value
+      );
+
+    updateWardUrl();
+
+    updateWardUI();
+
+    updateWardLinks();
+
+    applyFilters();
+
+    window.scrollTo({
+      top:
+        document
+          .getElementById(
+            "my-ward-news"
+          )
+          .offsetTop -
+        80,
+      behavior:"smooth"
+    });
+
+  }
+);
+
+
+/* =========================
    SEARCH
-========================================================= */
+========================= */
 
-if(searchInput){
+searchInput.addEventListener(
+  "input",
+  applyFilters
+);
 
-  searchInput.addEventListener(
-    "input",
-    renderNews
+
+/* =========================
+   CATEGORY
+========================= */
+
+categoryFilter.addEventListener(
+  "change",
+  applyFilters
+);
+
+
+/* =========================
+   SOURCE
+========================= */
+
+sourceFilter.addEventListener(
+  "change",
+  applyFilters
+);
+
+
+/* =========================
+   SHARE WARD NEWS
+========================= */
+
+function shareWardNews(){
+
+  const ward =
+    canonicalWard(
+      currentWard
+    );
+
+
+  const label =
+    ward === "all"
+      ? "IMOLE 2027 News Centre"
+      : WARDS[ward].label;
+
+
+  const url =
+    buildWardUrl(
+      "news.html",
+      ward
+    );
+
+
+  const text =
+    "📰 " +
+    label +
+    " — IMOLE 2027 News Centre\n\n" +
+    "Stay informed with the latest headlines and community information.\n\n" +
+    url;
+
+
+  if(
+    navigator.share
+  ){
+
+    navigator.share({
+      title:
+        "IMOLE 2027 News Centre",
+      text:
+        text,
+      url:
+        url
+    }).catch(
+      () => {}
+    );
+
+    return;
+
+  }
+
+
+  openWhatsAppShare(
+    text
   );
 
 }
 
 
-if(categoryFilter){
+/* =========================
+   COPY WARD NEWS LINK
+========================= */
 
-  categoryFilter.addEventListener(
-    "change",
-    renderNews
+async function copyWardNewsLink(){
+
+  const url =
+    buildWardUrl(
+      "news.html",
+      currentWard
+    );
+
+
+  const success =
+    await copyText(
+      url
+    );
+
+
+  if(success){
+
+    const oldText =
+      document
+        .getElementById(
+          "copyWardNews"
+        )
+        .textContent;
+
+
+    document
+      .getElementById(
+        "copyWardNews"
+      )
+      .textContent =
+      "✓ Copied";
+
+
+    setTimeout(
+      () => {
+
+        document
+          .getElementById(
+            "copyWardNews"
+          )
+          .textContent =
+          oldText;
+
+      },
+      1800
+    );
+
+  }else{
+
+    openWhatsAppShare(
+      "IMOLE 2027 News Centre\n" +
+      url
+    );
+
+  }
+
+}
+
+
+/* =========================
+   COPY TEXT
+========================= */
+
+async function copyText(
+  text
+){
+
+  try{
+
+    if(
+      navigator.clipboard &&
+      window.isSecureContext
+    ){
+
+      await navigator
+        .clipboard
+        .writeText(
+          text
+        );
+
+      return true;
+
+    }
+
+  }catch(error){
+
+    console.warn(
+      "Clipboard API failed",
+      error
+    );
+
+  }
+
+
+  try{
+
+    const textarea =
+      document.createElement(
+        "textarea"
+      );
+
+    textarea.value =
+      text;
+
+    textarea.style.position =
+      "fixed";
+
+    textarea.style.left =
+      "-9999px";
+
+    document.body.appendChild(
+      textarea
+    );
+
+    textarea.focus();
+
+    textarea.select();
+
+    const copied =
+      document.execCommand(
+        "copy"
+      );
+
+    textarea.remove();
+
+    return copied;
+
+  }catch(error){
+
+    return false;
+
+  }
+
+}
+
+
+/* =========================
+   WHATSAPP SHARE
+========================= */
+
+function openWhatsAppShare(
+  text
+){
+
+  const url =
+    "https://wa.me/?text=" +
+    encodeURIComponent(
+      text
+    );
+
+
+  window.open(
+    url,
+    "_blank",
+    "noopener,noreferrer"
   );
 
 }
 
 
-if(sourceFilter){
+/* =========================
+   BUTTON EVENTS
+========================= */
 
-  sourceFilter.addEventListener(
-    "change",
-    renderNews
-  );
-
-}
-
-
-/* =========================================================
-   REFRESH BUTTON
-========================================================= */
-
-if(refreshBtn){
-
-  refreshBtn.addEventListener(
+document
+  .getElementById(
+    "shareWardNews"
+  )
+  .addEventListener(
     "click",
-    function(){
+    shareWardNews
+  );
 
-      loadNews();
+
+document
+  .getElementById(
+    "copyWardNews"
+  )
+  .addEventListener(
+    "click",
+    copyWardNewsLink
+  );
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuToggle =
+  document.getElementById(
+    "menuToggle"
+  );
+
+const mainNav =
+  document.getElementById(
+    "mainNav"
+  );
+
+
+menuToggle.addEventListener(
+  "click",
+  function(){
+
+    const isOpen =
+      mainNav.classList.toggle(
+        "open"
+      );
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      String(isOpen)
+    );
+
+    menuToggle.textContent =
+      isOpen
+        ? "✕"
+        : "☰";
+
+  }
+);
+
+
+/* =========================
+   CLOSE MOBILE MENU
+========================= */
+
+document
+  .querySelectorAll(
+    ".main-nav a"
+  )
+  .forEach(
+    link => {
+
+      link.addEventListener(
+        "click",
+        () => {
+
+          mainNav.classList.remove(
+            "open"
+          );
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          menuToggle.textContent =
+            "☰";
+
+        }
+      );
+
+    }
+  );
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+const backTop =
+  document.getElementById(
+    "backTop"
+  );
+
+
+window.addEventListener(
+  "scroll",
+  function(){
+
+    if(
+      window.scrollY > 450
+    ){
+
+      backTop.classList.add(
+        "show"
+      );
+
+    }else{
+
+      backTop.classList.remove(
+        "show"
+      );
+
+    }
+
+  },
+  {
+    passive:true
+  }
+);
+
+
+backTop.addEventListener(
+  "click",
+  function(){
+
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+
+  }
+);
+
+
+/* =========================
+   IMAGE ERROR HANDLING
+========================= */
+
+document
+  .addEventListener(
+    "error",
+    function(event){
+
+      const target =
+        event.target;
+
+      if(
+        target &&
+        target.tagName === "IMG"
+      ){
+
+        target.classList.add(
+          "image-failed"
+        );
+
+      }
+
+    },
+    true
+  );
+
+
+/* =========================
+   SERVICE WORKER
+   IMPORTANT:
+   DO NOT UNREGISTER SW.
+========================= */
+
+if(
+  "serviceWorker" in navigator
+){
+
+  window.addEventListener(
+    "load",
+    () => {
+
+      navigator.serviceWorker
+        .register(
+          "./sw.js?v=20260905-05",
+          {
+            updateViaCache:
+              "none"
+          }
+        )
+        .then(
+          registration => {
+
+            console.log(
+              "IMOLE service worker registered:",
+              registration.scope
+            );
+
+          }
+        )
+        .catch(
+          error => {
+
+            console.warn(
+              "Service worker registration failed:",
+              error
+            );
+
+          }
+        );
 
     }
   );
@@ -3759,12 +4240,42 @@ if(refreshBtn){
 }
 
 
-/* =========================================================
-   AUTO REFRESH
-========================================================= */
+/* =========================
+   INITIALIZE WARD
+========================= */
+
+function initializeWard(){
+
+  currentWard =
+    getUrlWard();
+
+
+  wardFilter.value =
+    currentWard;
+
+
+  updateWardUI();
+
+  updateWardLinks();
+
+}
+
+
+/* =========================
+   INITIAL LOAD
+========================= */
+
+initializeWard();
+
+loadNews();
+
+
+/* =========================
+   AUTOMATIC REFRESH
+========================= */
 
 setInterval(
-  function(){
+  () => {
 
     loadNews();
 
@@ -3773,215 +4284,77 @@ setInterval(
 );
 
 
-/* =========================================================
-   INITIAL LOAD
-========================================================= */
+/* =========================
+   BROWSER BACK/FORWARD
+========================= */
 
-loadNews();
+window.addEventListener(
+  "popstate",
+  function(){
 
+    currentWard =
+      getUrlWard();
 
-})();
+    updateWardUI();
 
+    updateWardLinks();
 
-/* =========================================================
-   MOBILE NAVIGATION
-========================================================= */
-
-(function(){
-
-  const menuBtn =
-    document.getElementById(
-      "menuBtn"
-    );
-
-  const navLinks =
-    document.getElementById(
-      "navLinks"
-    );
-
-
-  if(
-    !menuBtn ||
-    !navLinks
-  ){
-
-    return;
+    applyFilters();
 
   }
+);
 
 
-  menuBtn.addEventListener(
-    "click",
-    function(){
+/* =========================
+   VISIBILITY REFRESH
+========================= */
 
-      navLinks.classList.toggle(
-        "show"
-      );
+document.addEventListener(
+  "visibilitychange",
+  function(){
 
-      const opened =
-        navLinks.classList.contains(
-          "show"
-        );
+    if(
+      document.visibilityState ===
+      "visible"
+    ){
 
-      menuBtn.setAttribute(
-        "aria-expanded",
-        opened
-          ? "true"
-          : "false"
-      );
+      /*
+        Only refresh if the page has been
+        inactive for a meaningful period.
+      */
 
-    }
-  );
-
-
-  navLinks
-    .querySelectorAll("a")
-    .forEach(
-      function(link){
-
-        link.addEventListener(
-          "click",
-          function(){
-
-            navLinks.classList.remove(
-              "show"
-            );
-
-          }
-        );
-
-      }
-    );
-
-})();
-
-
-/* =========================================================
-   BACK TO TOP
-========================================================= */
-
-(function(){
-
-  const backTop =
-    document.getElementById(
-      "backTop"
-    );
-
-
-  if(!backTop){
-
-    return;
-
-  }
-
-
-  window.addEventListener(
-    "scroll",
-    function(){
+      const now =
+        Date.now();
 
       if(
-        window.scrollY > 500
+        !window.lastNewsRefresh ||
+        now -
+        window.lastNewsRefresh >
+        5 * 60 * 1000
       ){
 
-        backTop.classList.add(
-          "show"
-        );
+        window.lastNewsRefresh =
+          now;
 
-      }else{
-
-        backTop.classList.remove(
-          "show"
-        );
+        loadNews();
 
       }
 
     }
-  );
-
-
-  backTop.addEventListener(
-    "click",
-    function(){
-
-      window.scrollTo({
-        top:0,
-        behavior:"smooth"
-      });
-
-    }
-  );
-
-})();
-
-
-/* =========================================================
-   SERVICE WORKER CACHE PROTECTION
-========================================================= */
-
-(function(){
-
-  if(
-    "serviceWorker" in navigator
-  ){
-
-    window.addEventListener(
-      "load",
-      function(){
-
-        navigator.serviceWorker
-          .getRegistrations()
-          .then(
-            function(registrations){
-
-              registrations.forEach(
-                function(registration){
-
-                  registration.unregister();
-
-                }
-              );
-
-            }
-          )
-          .catch(
-            function(){
-
-            }
-          );
-
-      }
-    );
 
   }
+);
 
-})();
 
+/* =========================
+   RECORD REFRESH TIME
+========================= */
 
-/* =========================================================
-   IMAGE FALLBACK
-========================================================= */
-
-document
-  .querySelectorAll("img")
-  .forEach(
-    function(image){
-
-      image.addEventListener(
-        "error",
-        function(){
-
-          this.style.background =
-            "#e9efec";
-
-        }
-      );
-
-    }
-  );
+window.lastNewsRefresh =
+  Date.now();
 
 
 </script>
-
 
 </body>
 </html>
