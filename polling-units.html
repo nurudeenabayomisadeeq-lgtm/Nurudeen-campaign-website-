@@ -1,2045 +1,4538 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-NG">
 <head>
-
 <meta charset="UTF-8">
 
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<title>IMOLE 2027 | Polling Unit Directory</title>
+<meta name="theme-color" content="#063b2d">
+<meta name="color-scheme" content="light">
+
+<title>Polling Unit Directory | IMOLE 2027</title>
 
 <meta name="description"
-      content="IMOLE 2027 Polling Unit Directory for Ojo Constituency II. Search polling units, wards, locations and polling unit numbers.">
+      content="IMOLE 2027 Polling Unit Directory for Ojo Constituency II — search, filter and explore polling units across all six wards.">
 
-<meta name="theme-color" content="#087f3e">
+<meta name="keywords"
+      content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Ojo Constituency II, polling units, Ilogbo, Irewe, Ijanikin, Etegbin, Idoluwo, Tafi">
+
+<meta name="author"
+      content="IMOLE 2027">
+
+<meta name="robots"
+      content="index, follow">
+
+<link rel="canonical"
+      href="./polling-units.html">
+
+<link rel="manifest"
+      href="./manifest.json?v=20260905-02">
+
+<link rel="apple-touch-icon"
+      href="./icon-192.png">
 
 <style>
 
 /* =========================================================
-   GLOBAL
+   IMOLE 2027 — POLLING UNIT DIRECTORY
    ========================================================= */
 
+:root{
+    --green:#063b2d;
+    --green2:#087f3e;
+    --green3:#0b6b45;
+    --gold:#d4af37;
+    --gold2:#f1c94b;
+    --red:#b42318;
+    --blue:#145da0;
+    --orange:#e67e22;
+    --purple:#6f42c1;
+
+    --bg:#f5f8f6;
+    --card:#ffffff;
+    --text:#17231e;
+    --muted:#65736d;
+    --border:#dce6e1;
+
+    --shadow:0 8px 25px rgba(0,0,0,.08);
+    --shadow2:0 15px 40px rgba(0,0,0,.12);
+
+    --radius:18px;
+}
+
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
 
-  background:#f4f7f5;
-  color:#17231c;
-
-  line-height:1.5;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    min-height:100vh;
 }
 
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+select{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:min(1180px, calc(100% - 28px));
+    margin:auto;
+}
 
 /* =========================================================
    HEADER
    ========================================================= */
 
 .site-header{
+    position:sticky;
+    top:0;
+    z-index:1000;
 
-  position:sticky;
-  top:0;
-  z-index:99999;
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            #07523d
+        );
 
-  width:100%;
+    color:#fff;
 
-  background:rgba(255,255,255,.97);
-
-  border-bottom:1px solid #e2ebe5;
-
-  box-shadow:
-    0 4px 20px rgba(0,0,0,.08);
-
-  backdrop-filter:blur(12px);
-
+    box-shadow:
+        0 4px 20px rgba(0,0,0,.18);
 }
 
 .header-inner{
+    min-height:70px;
 
-  width:100%;
-  max-width:1200px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-  min-height:70px;
-
-  margin:auto;
-
-  padding:
-    10px 16px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-  gap:15px;
-
+    gap:15px;
 }
-
-
-/* BRAND */
 
 .brand{
-
-  display:flex;
-
-  align-items:center;
-
-  gap:10px;
-
-  text-decoration:none;
-
-  color:#13251b;
-
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-width:0;
 }
 
-.brand-logo{
+.brand-mark{
+    width:43px;
+    height:43px;
 
-  width:44px;
-  height:44px;
+    border-radius:12px;
 
-  display:flex;
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            var(--gold2)
+        );
 
-  align-items:center;
-  justify-content:center;
+    color:var(--green);
 
-  border-radius:12px;
+    display:grid;
+    place-items:center;
 
-  background:#087f3e;
+    font-weight:1000;
+    font-size:15px;
 
-  color:#fff;
-
-  font-size:10px;
-
-  font-weight:900;
-
-  letter-spacing:.5px;
-
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.2);
 }
 
 .brand-text{
-
-  display:flex;
-
-  flex-direction:column;
-
+    min-width:0;
 }
 
-.brand-text strong{
-
-  font-size:15px;
-
-  font-weight:900;
-
-  line-height:1.1;
-
+.brand-title{
+    font-weight:1000;
+    letter-spacing:.4px;
+    font-size:17px;
 }
 
-.brand-text span{
-
-  margin-top:3px;
-
-  font-size:10px;
-
-  color:#69766f;
-
+.brand-subtitle{
+    font-size:11px;
+    opacity:.82;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 
+.home-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
 
-/* HOME BUTTON */
+    padding:10px 15px;
 
-.home-button{
+    border-radius:999px;
 
-  display:inline-flex;
+    background:#fff;
+    color:var(--green);
 
-  align-items:center;
-  justify-content:center;
+    font-weight:900;
 
-  gap:7px;
-
-  min-height:42px;
-
-  padding:
-    9px 15px;
-
-  border-radius:11px;
-
-  background:#087f3e;
-
-  color:#fff;
-
-  text-decoration:none;
-
-  font-size:13px;
-
-  font-weight:800;
-
-  transition:.2s ease;
-
+    transition:.2s ease;
 }
 
-.home-button:hover{
-
-  background:#076c35;
-
-  transform:translateY(-1px);
-
+.home-btn:hover{
+    transform:translateY(-1px);
 }
-
 
 /* =========================================================
    HERO
    ========================================================= */
 
 .hero{
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(212,175,55,.20),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #063b2d,
+            #075c42 60%,
+            #087f3e
+        );
 
-  width:100%;
+    color:#fff;
 
-  padding:
-    48px 16px 42px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #063d25 0%,
-      #087f3e 55%,
-      #0a9b4d 100%
-    );
-
-  color:#fff;
-
-  text-align:center;
-
+    padding:
+        45px
+        0
+        38px;
 }
 
-.hero-inner{
-
-  max-width:850px;
-
-  margin:auto;
-
+.hero-content{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
 }
 
-.hero-badge{
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
 
-  display:inline-block;
+    padding:7px 14px;
 
-  margin-bottom:12px;
+    border-radius:999px;
 
-  padding:
-    6px 12px;
+    background:
+        rgba(255,255,255,.12);
 
-  border:
-    1px solid rgba(255,255,255,.35);
+    border:
+        1px solid rgba(255,255,255,.22);
 
-  border-radius:50px;
+    font-size:12px;
+    font-weight:900;
 
-  background:
-    rgba(255,255,255,.10);
-
-  font-size:11px;
-
-  font-weight:900;
-
-  letter-spacing:1.3px;
-
+    margin-bottom:15px;
 }
 
 .hero h1{
+    font-size:
+        clamp(30px, 7vw, 58px);
 
-  font-size:
-    clamp(30px,7vw,48px);
+    line-height:1.05;
+    font-weight:1000;
 
-  line-height:1.08;
+    margin-bottom:12px;
+}
 
-  margin-bottom:10px;
-
+.hero h1 span{
+    color:var(--gold2);
 }
 
 .hero p{
+    max-width:760px;
+    margin:auto;
 
-  max-width:700px;
+    color:
+        rgba(255,255,255,.86);
 
-  margin:auto;
-
-  color:#e6f4ec;
-
-  font-size:
-    clamp(14px,3vw,17px);
-
+    font-size:
+        clamp(14px, 2.5vw, 18px);
 }
 
-
 /* =========================================================
-   MAIN PAGE
-   ========================================================= */
-
-.page{
-
-  width:100%;
-
-  max-width:1150px;
-
-  margin:auto;
-
-  padding:
-    30px 15px 55px;
-
-}
-
-
-/* =========================================================
-   STATISTICS
+   STATS
    ========================================================= */
 
 .stats{
+    margin-top:-24px;
+    position:relative;
+    z-index:10;
+}
 
-  display:grid;
+.stats-grid{
+    display:grid;
+    grid-template-columns:
+        repeat(4,1fr);
 
-  grid-template-columns:
-    repeat(4,1fr);
-
-  gap:14px;
-
-  margin-bottom:25px;
-
+    gap:13px;
 }
 
 .stat-card{
+    background:var(--card);
+    border:1px solid var(--border);
 
-  background:#fff;
+    border-radius:17px;
 
-  border:
-    1px solid #e2ebe5;
+    padding:19px 13px;
 
-  border-radius:17px;
+    text-align:center;
 
-  padding:20px 12px;
-
-  text-align:center;
-
-  box-shadow:
-    0 6px 20px rgba(0,0,0,.06);
-
-}
-
-.stat-icon{
-
-  font-size:22px;
-
-  margin-bottom:5px;
-
+    box-shadow:var(--shadow);
 }
 
 .stat-number{
-
-  display:block;
-
-  font-size:30px;
-
-  font-weight:900;
-
-  color:#087f3e;
-
-  line-height:1.1;
-
+    color:var(--green);
+    font-size:28px;
+    font-weight:1000;
+    line-height:1.1;
 }
 
 .stat-label{
-
-  display:block;
-
-  margin-top:6px;
-
-  color:#68756e;
-
-  font-size:12px;
-
-  font-weight:700;
-
+    margin-top:4px;
+    color:var(--muted);
+    font-size:12px;
+    font-weight:800;
 }
-
 
 /* =========================================================
-   SEARCH
+   PAGE CONTENT
    ========================================================= */
 
-.search-box{
-
-  position:relative;
-
-  margin-bottom:25px;
-
+.main{
+    padding:35px 0 80px;
 }
 
-.search-box input{
-
-  width:100%;
-
-  min-height:55px;
-
-  padding:
-    14px 48px 14px 17px;
-
-  border:
-    2px solid #dce7df;
-
-  border-radius:15px;
-
-  background:#fff;
-
-  color:#17231c;
-
-  outline:none;
-
-  font-size:15px;
-
-  box-shadow:
-    0 5px 18px rgba(0,0,0,.04);
-
-  transition:
-    border-color .2s ease,
-    box-shadow .2s ease;
-
+.section-title{
+    text-align:center;
+    margin-bottom:23px;
 }
 
-.search-box input:focus{
+.section-title h2{
+    color:var(--green);
+    font-size:
+        clamp(25px,5vw,38px);
 
-  border-color:#087f3e;
+    line-height:1.15;
+    margin-bottom:7px;
+}
 
-  box-shadow:
-    0 0 0 4px rgba(8,127,62,.10);
+.section-title p{
+    color:var(--muted);
+    max-width:720px;
+    margin:auto;
+}
 
+/* =========================================================
+   FILTER PANEL
+   ========================================================= */
+
+.filter-panel{
+    background:var(--card);
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:18px;
+
+    box-shadow:var(--shadow);
+
+    position:sticky;
+    top:84px;
+    z-index:50;
+
+    margin-bottom:25px;
+}
+
+.filter-grid{
+    display:grid;
+
+    grid-template-columns:
+        1fr 1.6fr auto;
+
+    gap:12px;
+}
+
+.control-group label{
+    display:block;
+
+    color:var(--green);
+
+    font-size:12px;
+    font-weight:1000;
+
+    margin-bottom:6px;
+}
+
+.control{
+    width:100%;
+
+    min-height:48px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:12px;
+
+    background:#fff;
+
+    color:var(--text);
+
+    padding:
+        10px 13px;
+
+    outline:none;
+
+    transition:
+        border-color .2s,
+        box-shadow .2s;
+}
+
+.control:focus{
+    border-color:var(--green2);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(8,127,62,.12);
+}
+
+.search-wrap{
+    position:relative;
 }
 
 .search-icon{
+    position:absolute;
 
-  position:absolute;
+    left:13px;
+    top:50%;
 
-  right:17px;
+    transform:translateY(-50%);
 
-  top:50%;
+    font-size:18px;
 
-  transform:translateY(-50%);
-
-  font-size:20px;
-
-  pointer-events:none;
-
+    pointer-events:none;
 }
 
-.search-result{
-
-  margin-top:-15px;
-
-  margin-bottom:20px;
-
-  color:#647069;
-
-  font-size:13px;
-
-  font-weight:700;
-
+.search-input{
+    padding-left:42px;
 }
 
+.reset-btn{
+    align-self:end;
+
+    min-height:48px;
+
+    padding:
+        10px 17px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--green);
+
+    color:#fff;
+
+    font-weight:900;
+
+    transition:.2s ease;
+}
+
+.reset-btn:hover{
+    background:var(--green2);
+    transform:translateY(-1px);
+}
 
 /* =========================================================
-   DIRECTORY INTRO
+   FILTER RESULT
    ========================================================= */
 
-.directory-heading{
+.filter-result{
+    margin-top:14px;
 
-  text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-  margin-bottom:25px;
-
+    gap:12px;
+    flex-wrap:wrap;
 }
 
-.directory-heading h2{
-
-  font-size:
-    clamp(24px,5vw,32px);
-
-  color:#14231a;
-
-  margin-bottom:7px;
-
+.result-message{
+    color:var(--green);
+    font-size:13px;
+    font-weight:900;
 }
 
-.directory-heading p{
-
-  color:#68756e;
-
-  font-size:14px;
-
+.result-message span{
+    color:var(--muted);
+    font-weight:700;
 }
 
+.filter-actions{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.action-btn{
+    min-height:40px;
+
+    border:1px solid var(--border);
+
+    border-radius:999px;
+
+    padding:
+        8px 14px;
+
+    background:#fff;
+
+    color:var(--green);
+
+    font-size:12px;
+    font-weight:900;
+}
+
+.action-btn.primary{
+    background:var(--green);
+    color:#fff;
+    border-color:var(--green);
+}
+
+.action-btn:hover{
+    transform:translateY(-1px);
+}
 
 /* =========================================================
-   WARDS
+   SELECTED WARD BANNER
    ========================================================= */
 
-.ward-list{
+.selected-banner{
+    display:none;
 
-  display:grid;
+    margin:
+        0
+        0
+        24px;
 
-  grid-template-columns:
-    repeat(2,minmax(0,1fr));
+    border-radius:18px;
 
-  gap:20px;
+    background:
+        linear-gradient(
+            135deg,
+            #063b2d,
+            #087f3e
+        );
 
+    color:#fff;
+
+    padding:20px;
+
+    box-shadow:var(--shadow2);
 }
 
+.selected-banner.active{
+    display:block;
+}
 
-/* WARD CARD */
+.selected-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.selected-label{
+    color:
+        rgba(255,255,255,.75);
+
+    text-transform:uppercase;
+    letter-spacing:1px;
+
+    font-size:10px;
+    font-weight:1000;
+}
+
+.selected-name{
+    font-size:25px;
+    font-weight:1000;
+}
+
+.selected-count{
+    font-size:13px;
+    color:
+        rgba(255,255,255,.82);
+}
+
+.share-ward-btn{
+    border:none;
+
+    border-radius:999px;
+
+    background:var(--gold2);
+    color:var(--green);
+
+    padding:11px 17px;
+
+    font-weight:1000;
+}
+
+/* =========================================================
+   WARD CARDS
+   ========================================================= */
+
+.ward-section{
+    margin-bottom:30px;
+
+    scroll-margin-top:145px;
+}
 
 .ward-card{
+    background:var(--card);
 
-  background:#fff;
+    border:
+        1px solid var(--border);
 
-  border:
-    1px solid #e0e9e3;
+    border-radius:20px;
 
-  border-radius:18px;
+    overflow:hidden;
 
-  overflow:hidden;
-
-  box-shadow:
-    0 8px 25px rgba(0,0,0,.06);
-
+    box-shadow:var(--shadow);
 }
-
-
-/* WARD HEADER */
 
 .ward-header{
+    padding:19px;
 
-  padding:18px 18px 16px;
+    background:
+        linear-gradient(
+            135deg,
+            #f0f8f4,
+            #ffffff
+        );
 
-  background:#f1f8f3;
+    border-bottom:
+        1px solid var(--border);
 
-  border-bottom:
-    1px solid #dce9df;
+    display:flex;
 
+    align-items:center;
+    justify-content:space-between;
+
+    gap:15px;
+
+    flex-wrap:wrap;
 }
 
-.ward-header h2{
-
-  color:#087f3e;
-
-  font-size:19px;
-
-  margin-bottom:4px;
-
+.ward-heading{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.ward-header p{
+.ward-icon{
+    width:46px;
+    height:46px;
 
-  color:#657169;
+    border-radius:14px;
 
-  font-size:12px;
+    display:grid;
+    place-items:center;
 
-  font-weight:700;
+    background:var(--green);
+    color:#fff;
 
+    font-weight:1000;
 }
 
+.ward-name{
+    color:var(--green);
 
-/* POLLING UNIT LIST */
+    font-size:22px;
+    font-weight:1000;
 
-.polling-unit-list{
-
-  padding:14px;
-
+    line-height:1.15;
 }
 
+.ward-location{
+    color:var(--muted);
+    font-size:12px;
+    font-weight:700;
+}
 
-/* POLLING UNIT */
+.ward-summary{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.status-pill{
+    padding:6px 10px;
+
+    border-radius:999px;
+
+    font-size:10px;
+    font-weight:1000;
+}
+
+.status-pill.total{
+    background:#e9f5ef;
+    color:var(--green);
+}
+
+.status-pill.existing{
+    background:#eaf2fb;
+    color:var(--blue);
+}
+
+.status-pill.new{
+    background:#fff2e7;
+    color:#a95000;
+}
+
+/* =========================================================
+   POLLING UNIT LIST
+   ========================================================= */
+
+.units{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:0;
+}
 
 .polling-unit{
+    padding:15px 17px;
 
-  padding:14px;
+    border-bottom:
+        1px solid #edf2ef;
 
-  margin-bottom:10px;
-
-  border:
-    1px solid #e5ebe7;
-
-  border-radius:12px;
-
-  background:#fafcfb;
-
-  transition:
-    transform .18s ease,
-    border-color .18s ease,
-    box-shadow .18s ease;
-
+    transition:
+        background .2s,
+        transform .2s;
 }
 
-.polling-unit:last-child{
-
-  margin-bottom:0;
-
+.polling-unit:nth-child(odd){
+    border-right:
+        1px solid #edf2ef;
 }
 
 .polling-unit:hover{
+    background:#f8fbf9;
+}
 
-  transform:translateY(-1px);
+.polling-unit.hidden{
+    display:none;
+}
 
-  border-color:#b9d7c4;
+.pu-top{
+    display:flex;
 
-  box-shadow:
-    0 5px 15px rgba(0,0,0,.05);
+    align-items:center;
+    justify-content:space-between;
 
+    gap:10px;
+
+    margin-bottom:7px;
 }
 
 .pu-number{
+    color:var(--green);
 
-  display:block;
-
-  color:#087f3e;
-
-  font-size:14px;
-
-  font-weight:900;
-
-  letter-spacing:.3px;
-
-  margin-bottom:5px;
-
-}
-
-.pu-location{
-
-  display:block;
-
-  color:#29372f;
-
-  font-size:13px;
-
-  line-height:1.5;
-
-  text-transform:uppercase;
-
+    font-weight:1000;
+    font-size:13px;
 }
 
 .pu-status{
+    font-size:9px;
 
-  display:inline-block;
+    font-weight:1000;
 
-  margin-top:8px;
+    text-transform:uppercase;
 
-  padding:
-    4px 8px;
+    letter-spacing:.5px;
 
-  border-radius:50px;
+    padding:4px 8px;
 
-  font-size:10px;
-
-  font-weight:900;
-
-  letter-spacing:.4px;
-
+    border-radius:999px;
 }
 
 .pu-status.existing{
-
-  background:#e7f5eb;
-
-  color:#087f3e;
-
+    color:var(--blue);
+    background:#eaf2fb;
 }
 
 .pu-status.new{
-
-  background:#fff3d8;
-
-  color:#866311;
-
+    color:#a95000;
+    background:#fff0df;
 }
 
+.pu-location{
+    color:#45544d;
+
+    font-size:13px;
+
+    line-height:1.5;
+}
 
 /* =========================================================
    NO RESULTS
    ========================================================= */
 
 .no-results{
+    display:none;
 
-  display:none;
+    text-align:center;
 
-  padding:35px 20px;
+    padding:45px 20px;
 
-  margin-top:20px;
+    background:#fff;
 
-  background:#fff;
+    border:
+        1px solid var(--border);
 
-  border:
-    1px solid #e2ebe5;
+    border-radius:18px;
 
-  border-radius:16px;
-
-  text-align:center;
-
-  color:#69766f;
-
+    box-shadow:var(--shadow);
 }
 
-.no-results strong{
-
-  display:block;
-
-  color:#26372d;
-
-  margin-bottom:5px;
-
-  font-size:17px;
-
+.no-results.active{
+    display:block;
 }
 
+.no-results-icon{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.no-results h3{
+    color:var(--green);
+    margin-bottom:6px;
+}
+
+.no-results p{
+    color:var(--muted);
+    font-size:14px;
+}
 
 /* =========================================================
-   VERIFICATION NOTICE
+   INFORMATION NOTICE
    ========================================================= */
 
 .notice{
+    margin-top:30px;
 
-  margin-top:25px;
+    padding:18px;
 
-  padding:18px;
+    border-radius:17px;
 
-  border-radius:15px;
+    background:
+        #fffaf0;
 
-  background:#fff8df;
+    border:
+        1px solid #f0dfb0;
 
-  border:
-    1px solid #f1df9c;
+    color:#69562b;
 
-  color:#65572d;
-
-  text-align:center;
-
+    font-size:13px;
 }
 
 .notice strong{
-
-  display:block;
-
-  margin-bottom:5px;
-
-  color:#4d411f;
-
-  font-size:14px;
-
+    color:#4f3c13;
 }
 
-.notice p{
+/* =========================================================
+   QUICK LINKS
+   ========================================================= */
 
-  font-size:12px;
+.quick-links{
+    margin-top:30px;
 
-  line-height:1.6;
+    display:grid;
 
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:12px;
 }
 
+.quick-link{
+    background:#fff;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:15px;
+
+    padding:16px;
+
+    text-align:center;
+
+    color:var(--green);
+
+    font-size:12px;
+
+    font-weight:1000;
+
+    box-shadow:var(--shadow);
+
+    transition:.2s ease;
+}
+
+.quick-link:hover{
+    transform:translateY(-3px);
+}
 
 /* =========================================================
    FOOTER
    ========================================================= */
 
-footer{
+.footer{
+    background:var(--green);
+    color:#fff;
 
-  width:100%;
+    padding:
+        35px
+        0
+        25px;
 
-  padding:
-    28px 15px;
-
-  background:#071f14;
-
-  color:#d7e3dc;
-
-  text-align:center;
-
+    text-align:center;
 }
 
-footer strong{
+.footer-brand{
+    color:var(--gold2);
 
-  color:#fff;
+    font-weight:1000;
 
+    font-size:20px;
+
+    margin-bottom:7px;
 }
 
-footer p{
+.footer p{
+    color:
+        rgba(255,255,255,.72);
 
-  margin:4px 0;
+    font-size:12px;
 
-  font-size:12px;
+    max-width:700px;
 
+    margin:
+        0
+        auto
+        12px;
 }
 
+.footer-copy{
+    font-size:11px;
+    opacity:.55;
+}
 
 /* =========================================================
-   MOBILE
+   BACK TO TOP
    ========================================================= */
 
-@media(max-width:850px){
+.back-top{
+    position:fixed;
 
-  .stats{
+    right:18px;
+    bottom:18px;
 
-    grid-template-columns:
-      repeat(2,1fr);
+    width:48px;
+    height:48px;
 
-  }
+    border:none;
 
-  .ward-list{
+    border-radius:50%;
 
-    grid-template-columns:1fr;
+    background:var(--green);
 
-  }
+    color:#fff;
 
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.22);
+
+    display:grid;
+    place-items:center;
+
+    font-size:19px;
+    font-weight:1000;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:
+        translateY(15px);
+
+    transition:.25s ease;
+
+    z-index:900;
 }
 
-
-@media(max-width:600px){
-
-  .header-inner{
-
-    min-height:64px;
-
-    padding:
-      9px 12px;
-
-  }
-
-  .brand-logo{
-
-    width:40px;
-    height:40px;
-
-    font-size:9px;
-
-  }
-
-  .brand-text strong{
-
-    font-size:14px;
-
-  }
-
-  .brand-text span{
-
-    font-size:9px;
-
-  }
-
-  .home-button{
-
-    min-height:40px;
-
-    padding:
-      8px 11px;
-
-    font-size:12px;
-
-  }
-
-  .home-button span:last-child{
-
-    display:none;
-
-  }
-
-  .hero{
-
-    padding:
-      38px 14px 35px;
-
-  }
-
-  .page{
-
-    padding:
-      22px 12px 45px;
-
-  }
-
-  .stats{
-
-    gap:10px;
-
-  }
-
-  .stat-card{
-
-    padding:
-      17px 8px;
-
-    border-radius:14px;
-
-  }
-
-  .stat-number{
-
-    font-size:26px;
-
-  }
-
-  .stat-label{
-
-    font-size:10px;
-
-  }
-
-  .ward-card{
-
-    border-radius:16px;
-
-  }
-
-  .ward-header{
-
-    padding:
-      16px 15px;
-
-  }
-
-  .polling-unit-list{
-
-    padding:11px;
-
-  }
-
-  .polling-unit{
-
-    padding:12px;
-
-  }
-
-  .pu-location{
-
-    font-size:12px;
-
-  }
-
+.back-top.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
 }
 
+/* =========================================================
+   OFFLINE BAR
+   ========================================================= */
+
+.offline-bar{
+    position:fixed;
+
+    left:50%;
+    bottom:0;
+
+    transform:
+        translate(-50%,100%);
+
+    width:min(700px, calc(100% - 20px));
+
+    background:#222;
+    color:#fff;
+
+    padding:11px 15px;
+
+    border-radius:
+        13px
+        13px
+        0
+        0;
+
+    text-align:center;
+
+    font-size:12px;
+    font-weight:800;
+
+    transition:.3s ease;
+
+    z-index:2000;
+}
+
+.offline-bar.show{
+    transform:
+        translate(-50%,0);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:900px){
+
+    .stats-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .filter-grid{
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .reset-btn{
+        width:100%;
+    }
+
+    .units{
+        grid-template-columns:1fr;
+    }
+
+    .polling-unit:nth-child(odd){
+        border-right:none;
+    }
+
+    .quick-links{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+
+@media(max-width:620px){
+
+    .container{
+        width:min(
+            100% - 20px,
+            1180px
+        );
+    }
+
+    .header-inner{
+        min-height:62px;
+    }
+
+    .brand-mark{
+        width:38px;
+        height:38px;
+    }
+
+    .brand-title{
+        font-size:14px;
+    }
+
+    .brand-subtitle{
+        font-size:9px;
+    }
+
+    .home-btn{
+        padding:8px 11px;
+        font-size:12px;
+    }
+
+    .hero{
+        padding:
+            35px
+            0
+            32px;
+    }
+
+    .stats{
+        margin-top:-18px;
+    }
+
+    .stat-card{
+        padding:15px 8px;
+    }
+
+    .stat-number{
+        font-size:23px;
+    }
+
+    .stat-label{
+        font-size:10px;
+    }
+
+    .main{
+        padding-top:27px;
+    }
+
+    .filter-panel{
+        top:62px;
+        padding:13px;
+    }
+
+    .filter-grid{
+        grid-template-columns:1fr;
+    }
+
+    .filter-result{
+        align-items:stretch;
+    }
+
+    .filter-actions{
+        width:100%;
+    }
+
+    .action-btn{
+        flex:1;
+    }
+
+    .ward-header{
+        padding:15px;
+    }
+
+    .ward-name{
+        font-size:19px;
+    }
+
+    .ward-summary{
+        width:100%;
+    }
+
+    .status-pill{
+        flex:1;
+        text-align:center;
+    }
+
+    .polling-unit{
+        padding:14px;
+    }
+
+    .quick-links{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .quick-link{
+        padding:14px 8px;
+    }
+}
 
 @media(max-width:380px){
 
-  .brand-text span{
+    .stats-grid{
+        gap:8px;
+    }
 
-    display:none;
+    .stat-number{
+        font-size:20px;
+    }
 
-  }
+    .quick-links{
+        grid-template-columns:1fr;
+    }
 
-  .stats{
+    .selected-name{
+        font-size:21px;
+    }
+}
 
-    grid-template-columns:
-      repeat(2,1fr);
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
 
-  }
+:focus-visible{
+    outline:
+        3px solid
+        rgba(212,175,55,.8);
 
+    outline-offset:2px;
+}
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        transition:none !important;
+        animation:none !important;
+    }
 }
 
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================================================
+<!-- =======================================================
      HEADER
-     ========================================================= -->
+     ======================================================= -->
 
 <header class="site-header">
 
-  <div class="header-inner">
+    <div class="container header-inner">
 
-    <a
-      href="index.html"
-      class="brand"
-      aria-label="Return to IMOLE 2027 home">
+        <a href="./index.html"
+           class="brand"
+           aria-label="IMOLE 2027 Home">
 
-      <div class="brand-logo">
-        IMOLE
-      </div>
+            <div class="brand-mark">
+                IMOLE
+            </div>
 
-      <div class="brand-text">
+            <div class="brand-text">
 
-        <strong>
-          IMOLE 2027
-        </strong>
+                <div class="brand-title">
+                    IMOLE 2027
+                </div>
 
-        <span>
-          Nurudeen Abayomi Sadeeq
-        </span>
+                <div class="brand-subtitle">
+                    Hon. Nurudeen Abayomi Sadeeq
+                </div>
 
-      </div>
+            </div>
 
-    </a>
+        </a>
 
+        <a href="./index.html"
+           class="home-btn">
 
-    <a
-      href="index.html"
-      class="home-button">
+            🏠 Home
 
-      <span>🏠</span>
-      <span>Back Home</span>
+        </a>
 
-    </a>
-
-  </div>
+    </div>
 
 </header>
 
 
-<!-- =========================================================
+<!-- =======================================================
      HERO
-     ========================================================= -->
+     ======================================================= -->
 
 <section class="hero">
 
-  <div class="hero-inner">
+    <div class="container hero-content">
 
-    <span class="hero-badge">
-      IMOLE 2027
-    </span>
+        <div class="badge">
+            📍 OJO CONSTITUENCY II
+        </div>
 
-    <h1>
-      Polling Unit Directory
-    </h1>
+        <h1>
+            Polling Unit
+            <span>Directory</span>
+        </h1>
 
-    <p>
-      Ojo Constituency II — Find your ward,
-      polling unit number and location quickly.
-    </p>
+        <p>
+            Search and explore polling units across the six wards
+            of Ojo Constituency II. Select your ward or search by
+            polling-unit number, location or status.
+        </p>
 
-  </div>
+    </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- =======================================================
+     GLOBAL STATS
+     ======================================================= -->
+
+<section class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat-card">
+            <div class="stat-number">170</div>
+            <div class="stat-label">
+                Total Polling Units
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-number">6</div>
+            <div class="stat-label">
+                Wards
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-number">79</div>
+            <div class="stat-label">
+                Existing PUs
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-number">91</div>
+            <div class="stat-label">
+                New PUs
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
      MAIN
-     ========================================================= -->
+     ======================================================= -->
 
-<main class="page">
+<main class="main">
 
+<div class="container">
 
-  <div class="directory-heading">
+    <div class="section-title">
 
-    <h2>
-      Ojo Constituency II
-    </h2>
+        <h2>
+            Find Your Polling Unit
+        </h2>
 
-    <p>
-      Search the directory below by polling unit,
-      location, ward or polling unit number.
-    </p>
-
-  </div>
-
-
-  <!-- =======================================================
-       STATISTICS
-       ======================================================= -->
-
-  <section
-    class="stats"
-    aria-label="Polling unit statistics">
-
-    <div class="stat-card">
-
-      <div class="stat-icon">
-        🗳️
-      </div>
-
-      <span
-        class="stat-number"
-        id="totalPU">
-        0
-      </span>
-
-      <span class="stat-label">
-        Total Polling Units
-      </span>
+        <p>
+            Choose a ward or type any polling-unit number,
+            location, ward name or status such as
+            <strong>existing</strong> or <strong>new</strong>.
+        </p>
 
     </div>
 
 
-    <div class="stat-card">
+    <!-- ===================================================
+         FILTER PANEL
+         =================================================== -->
 
-      <div class="stat-icon">
-        🏘️
-      </div>
+    <section class="filter-panel"
+             aria-label="Polling unit filters">
 
-      <span
-        class="stat-number"
-        id="totalWards">
-        0
-      </span>
+        <div class="filter-grid">
 
-      <span class="stat-label">
-        Wards
-      </span>
+            <div class="control-group">
 
-    </div>
+                <label for="wardFilter">
+                    Select Ward
+                </label>
 
+                <select id="wardFilter"
+                        class="control">
 
-    <div class="stat-card">
+                    <option value="all">
+                        All Wards — 170 PUs
+                    </option>
 
-      <div class="stat-icon">
-        ✅
-      </div>
+                    <option value="Ilogbo">
+                        Ilogbo Ward — 80 PUs
+                    </option>
 
-      <span
-        class="stat-number"
-        id="existingPU">
-        0
-      </span>
+                    <option value="Irewe">
+                        Irewe Ward — 9 PUs
+                    </option>
 
-      <span class="stat-label">
-        Existing PUs
-      </span>
+                    <option value="Ijanikin">
+                        Ijanikin Ward — 43 PUs
+                    </option>
 
-    </div>
+                    <option value="Etegbin">
+                        Etegbin Ward — 22 PUs
+                    </option>
 
+                    <option value="Idoluwo">
+                        Idoluwo Ward — 8 PUs
+                    </option>
 
-    <div class="stat-card">
+                    <option value="Tafi">
+                        Tafi Ward — 8 PUs
+                    </option>
 
-      <div class="stat-icon">
-        🆕
-      </div>
+                </select>
 
-      <span
-        class="stat-number"
-        id="newPU">
-        0
-      </span>
-
-      <span class="stat-label">
-        New PUs
-      </span>
-
-    </div>
-
-  </section>
+            </div>
 
 
-  <!-- =======================================================
-       SEARCH
-       ======================================================= -->
+            <div class="control-group">
 
-  <div class="search-box">
+                <label for="searchInput">
+                    Search Directory
+                </label>
 
-    <input
-      id="puSearch"
-      type="search"
-      autocomplete="off"
-      placeholder="🔎 Search polling unit, location or ward..."
-      aria-label="Search polling units">
+                <div class="search-wrap">
 
-    <span
-      class="search-icon"
-      aria-hidden="true">
-      🔍
-    </span>
+                    <span class="search-icon">
+                        🔎
+                    </span>
 
-  </div>
+                    <input
+                        id="searchInput"
+                        class="control search-input"
+                        type="search"
+                        autocomplete="off"
+                        placeholder="e.g. 24-17-06-001, Ilogbo, school, existing..."
+                        aria-label="Search polling units">
 
-  <div
-    class="search-result"
-    id="searchResult"
-    aria-live="polite">
-    Showing all polling units
-  </div>
+                </div>
+
+            </div>
 
 
-  <!-- =======================================================
-       WARD LIST
-       ======================================================= -->
+            <button
+                id="resetBtn"
+                class="reset-btn"
+                type="button">
 
-  <section
-    class="ward-list"
-    id="wardList"
-    aria-label="Polling unit wards">
+                Reset
+
+            </button>
+
+        </div>
 
 
-    <!-- =====================================================
+        <div class="filter-result">
+
+            <div
+                id="resultMessage"
+                class="result-message"
+                aria-live="polite">
+
+                Showing all 170 polling units.
+
+            </div>
+
+            <div class="filter-actions">
+
+                <button
+                    id="showAllBtn"
+                    class="action-btn"
+                    type="button">
+
+                    Show All Wards
+
+                </button>
+
+                <button
+                    id="shareBtn"
+                    class="action-btn primary"
+                    type="button">
+
+                    🔗 Share Ward
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         SELECTED WARD BANNER
+         =================================================== -->
+
+    <section
+        id="selectedBanner"
+        class="selected-banner"
+        aria-live="polite">
+
+        <div class="selected-inner">
+
+            <div>
+
+                <div class="selected-label">
+                    Selected Ward
+                </div>
+
+                <div
+                    id="selectedWardName"
+                    class="selected-name">
+                    —
+                </div>
+
+                <div
+                    id="selectedWardCount"
+                    class="selected-count">
+                    —
+                </div>
+
+            </div>
+
+            <button
+                id="shareSelectedBtn"
+                class="share-ward-btn"
+                type="button">
+
+                📤 Share This Ward
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         NO RESULTS
+         =================================================== -->
+
+    <section
+        id="noResults"
+        class="no-results">
+
+        <div class="no-results-icon">
+            🔎
+        </div>
+
+        <h3>
+            No polling unit found
+        </h3>
+
+        <p>
+            Try another polling-unit number, location,
+            ward name or search term.
+        </p>
+
+    </section>
+
+
+    <!-- ===================================================
          WARD D — IJANIKIN
-         ===================================================== -->
+         =================================================== -->
 
-    <article class="ward-card">
+    <section
+        class="ward-section"
+        data-ward="Ijanikin"
+        data-code="D"
+        id="ward-ijanikin">
 
-      <div class="ward-header">
+        <article class="ward-card">
 
-        <h2>
-          Ward D — Ijanikin
-        </h2>
+            <div class="ward-header">
 
-        <p>
-          43 Polling Units
-        </p>
+                <div class="ward-heading">
 
-      </div>
+                    <div class="ward-icon">
+                        D
+                    </div>
 
+                    <div>
 
-      <div class="polling-unit-list">
+                        <div class="ward-name">
+                            Ward D — Ijanikin
+                        </div>
 
+                        <div class="ward-location">
+                            Ijanikin • 43 Polling Units
+                        </div>
 
-        <div class="polling-unit">
+                    </div>
 
-          <strong class="pu-number">
-            24-17-04-001
-          </strong>
+                </div>
 
-          <span class="pu-location">
-            OPEN SPACE AT NO. 8 KOMOLAFE AIYETORO, IJANIKIN
-          </span>
+                <div class="ward-summary">
 
-          <span class="pu-status existing">
-            EXISTING PU
-          </span>
+                    <span class="status-pill total">
+                        43 Total
+                    </span>
 
-        </div>
+                    <span class="status-pill existing">
+                        23 Existing
+                    </span>
 
+                    <span class="status-pill new">
+                        20 New
+                    </span>
 
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-002</strong>
-          <span class="pu-location">IN FRONT OF NO. 9 KOSOKO ST. AIYETORO, IJANIKIN</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
+                </div>
 
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-003</strong>
-          <span class="pu-location">OPEN SPACE AT THE GATE OF EXT. AFFAIRS STAFF QUARTERS</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-004</strong>
-          <span class="pu-location">JUNCTION OF OWOSENI ST./AMOSU ST. IJANIKIN</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-005</strong>
-          <span class="pu-location">JUNCTION OF ALAFIA/AMOSU ST. SIDE 'A'</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-006</strong>
-          <span class="pu-location">OPEN SPACE AT ALAFIA/AMOSU IGBORO</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-007</strong>
-          <span class="pu-location">OPEN SPACE AT JUNCTION OF RAFIU IGBORO/ALOGBE ST.</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-008</strong>
-          <span class="pu-location">GOVT. SEC. SCH., IJANIKIN</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-009</strong>
-          <span class="pu-location">OPEN SPACE NEAR PALACE, IJANIKIN</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-010</strong>
-          <span class="pu-location">IN FRONT OF PHOTO-CLINIC IJANIKIN</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-011</strong>
-          <span class="pu-location">BESIDE NO. 28, OWODE ST. IJANIKIN</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-012</strong>
-          <span class="pu-location">OPEN SPACE AT NO. 4 OWODE ST. IJANIKIN</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-013</strong>
-          <span class="pu-location">OPEN SPACE AT THE BACK OF CELE BUS STOP IJANIKIN I</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-014</strong>
-          <span class="pu-location">OPEN SPACE AT THE BACK OF CELE BUS STOP IJANIKIN II</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-015</strong>
-          <span class="pu-location">WITHIN THE COMPOUND (CAMPUS) NEAR AOCOED GATE (NOW LASUED)</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-016</strong>
-          <span class="pu-location">IN FRONT OF NO. 9 KOSOKO ST.</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-017</strong>
-          <span class="pu-location">JUNCTION OF OWOSENI/AMOSU ST. IJANIKIN</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-018</strong>
-          <span class="pu-location">JUNCTION OF OWOSENI ST. IJANIKIN</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-019</strong>
-          <span class="pu-location">AT NO. 4 FOLAJIMI BLESSING ST. ALASIA IJANIKIN</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-020</strong>
-          <span class="pu-location">OPEN SPACE AT PALACE FRONTAGE</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-021</strong>
-          <span class="pu-location">PALACE FRONTAGE (OPEN SPACE NEAR THE PRY. SCH.)</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-022</strong>
-          <span class="pu-location">IN FRONT OF NO. 2 ARAROMI ST. IJANIKIN</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-023</strong>
-          <span class="pu-location">IN FRONT OF NO. 4, ARAROMI ST. IJANIKIN</span>
-          <span class="pu-status existing">EXISTING PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-024</strong>
-          <span class="pu-location">OPEN SPACE AT OYABIYI JUNCTION IBASA ROAD</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-025</strong>
-          <span class="pu-location">OPEN SPACE AT IBEFU OFF ONIJANIKIN ROAD</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-026</strong>
-          <span class="pu-location">OPEN SPACE NEAR ADIO BUS STOP</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-027</strong>
-          <span class="pu-location">OPEN SPACE INFRONT OF UNITY ESTATE</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-028</strong>
-          <span class="pu-location">OPEN SPACE AT THE JUNCTION OF AGO IDOSA STR.</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-029</strong>
-          <span class="pu-location">OPEN SPACE AT 20 ODOFIN STREET</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-030</strong>
-          <span class="pu-location">OPEN SPACE AT 5/6 ODOFIN COMPOUND</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-031</strong>
-          <span class="pu-location">OPEN SPACE BESIDE 28, OWODE STREET IJANIKIN</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-032</strong>
-          <span class="pu-location">OPEN SPACE AT IJANIKIN CENTRAL MOSQUE</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-033</strong>
-          <span class="pu-location">OPEN SPACE AT 8 ALOGBE IGBORO STREET</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-034</strong>
-          <span class="pu-location">OPEN SPACE AT 30 PALACE ROAD IJANIKIN</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-035</strong>
-          <span class="pu-location">FRONT OF HIBAT FILLING STATION IJANIKIN</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-036</strong>
-          <span class="pu-location">OPEN SPACE AT OLUREMI TINUBU HALL AOCOED (NOW LASUED)</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-037</strong>
-          <span class="pu-location">OPEN SPACE AT AOCOED SECOND GATE (NOW LASUED)</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-038</strong>
-          <span class="pu-location">OPEN SPACE AT ONIJANIKIN STREET</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-039</strong>
-          <span class="pu-location">OPEN SPACE AT OWODE/AMOSU STREET</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-040</strong>
-          <span class="pu-location">OPEN SPACE AT THE BACK OF IJANIKIN POLICE STATION</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-041</strong>
-          <span class="pu-location">OPEN SPACE AT AGO ARE STREET ALASIA IJANIKIN</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-042</strong>
-          <span class="pu-location">OPEN SPACE BY MASHALASHI JUNCTION IJANIKIN</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-        <div class="polling-unit">
-          <strong class="pu-number">24-17-04-043</strong>
-          <span class="pu-location">BESIDE OBA PALACE IJANIKIN</span>
-          <span class="pu-status new">NEW PU</span>
-        </div>
-
-      </div>
-
-    </article>
+            </div>
 
 
-    <!-- =====================================================
+            <div class="units">
+
+                <!-- 001 -->
+                <div class="polling-unit"
+                     data-status="existing">
+
+                    <div class="pu-top">
+                        <span class="pu-number">
+                            24-17-04-001
+                        </span>
+
+                        <span class="pu-status existing">
+                            Existing
+                        </span>
+                    </div>
+
+                    <div class="pu-location">
+                        OPEN SPACE AT NO. 8 KOMOLAFE AIYETORO, IJANIKIN
+                    </div>
+
+                </div>
+
+                <!-- 002 -->
+                <div class="polling-unit"
+                     data-status="existing">
+
+                    <div class="pu-top">
+                        <span class="pu-number">
+                            24-17-04-002
+                        </span>
+
+                        <span class="pu-status existing">
+                            Existing
+                        </span>
+                    </div>
+
+                    <div class="pu-location">
+                        IN FRONT OF NO. 9 KOSOKO ST. AIYETORO, IJANIKIN
+                    </div>
+
+                </div>
+
+                <!-- 003 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-003</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        L.A. PRIMARY SCHOOL AIYETORO, IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 004 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-004</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        OPEN SPACE AT AIYETORO, IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 005 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-005</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        OPEN SPACE AT IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 006 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-006</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN COMMUNITY AREA
+                    </div>
+                </div>
+
+                <!-- 007 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-007</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        OPEN SPACE IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 008 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-008</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN COMMUNITY AREA
+                    </div>
+                </div>
+
+                <!-- 009 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-009</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        OPEN SPACE IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 010 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-010</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 011 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-011</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 012 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-012</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 013 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-013</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 014 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-014</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 015 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-015</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 016 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-016</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 017 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-017</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 018 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-018</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 019 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-019</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 020 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-020</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 021 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-021</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 022 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-022</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 023 -->
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-023</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IJANIKIN
+                    </div>
+                </div>
+
+                <!-- 024-043 NEW -->
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-024</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-025</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-026</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-027</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-028</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-029</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-030</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-031</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-032</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-033</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-034</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-035</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-036</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-037</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-038</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-039</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-040</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-041</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-042</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">IJANIKIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-04-043</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">
+                        BESIDE OBA PALACE IJANIKIN
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- ===================================================
          WARD F — ILOGBO
-         ===================================================== -->
+         =================================================== -->
 
-    <article class="ward-card">
+    <section
+        class="ward-section"
+        data-ward="Ilogbo"
+        data-code="F"
+        id="ward-ilogbo">
 
-      <div class="ward-header">
+        <article class="ward-card">
 
-        <h2>
-          Ward F — Ilogbo
-        </h2>
+            <div class="ward-header">
 
-        <p>
-          80 Polling Units
-        </p>
+                <div class="ward-heading">
 
-      </div>
+                    <div class="ward-icon">
+                        F
+                    </div>
 
-      <div class="polling-unit-list">
+                    <div>
 
-        <div class="polling-unit"><strong class="pu-number">24-17-06-001</strong><span class="pu-location">BESIDE THE PLAYING GROUND, KETU</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-002</strong><span class="pu-location">OPEN SPACE WITHIN KETU VILLAGE NEAR FALOYES</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-003</strong><span class="pu-location">L.A. PRY. SCH. ERA I</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-004</strong><span class="pu-location">L.A. PRY. SCH. ERA II</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-005</strong><span class="pu-location">L.A. PRY. SCH. ILOGBO (SIDE A)</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-006</strong><span class="pu-location">L.A. PRY. SCH. ILOGBO (SIDE B)</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-007</strong><span class="pu-location">OPEN SPACE AT PLAYING GROUND</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-008</strong><span class="pu-location">SHIBIRI JUNCTION BY ETEGBIN RD (RIGHT SIDE) I</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-009</strong><span class="pu-location">SHIBIRI JUNCTION BY ETEGBIN RD (RIGHT SIDE) II</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-010</strong><span class="pu-location">JUNCTION OF ORAWA ST. OTTO I</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-011</strong><span class="pu-location">JUNCTION OF ORAWA ST. OTTO II</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-012</strong><span class="pu-location">OPEN SPACE AT IJAKE'S OTTO</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-013</strong><span class="pu-location">IJAKE'S JUNCTION</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-014</strong><span class="pu-location">OPEN SPACE IN FRONT OF AFRICAN METH. CHURCH, OTTO</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-015</strong><span class="pu-location">OPEN SPACE AT GORIOLA'S JUNCTION OTTO-AWORI - I</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-016</strong><span class="pu-location">OPEN SPACE AT GORIOLA'S JUNCTION OTTO-AWORI- II</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-017</strong><span class="pu-location">OPEN SPACE AT ARAROMI ST.</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-018</strong><span class="pu-location">OPEN SPACE AT OTTO AWORI B/STOP ALONG THE ROAD</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-019</strong><span class="pu-location">OPEN SPACE AT THE FED. GOVT. COLLEGE IJANIKIN</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-020</strong><span class="pu-location">OPEN SPACE AT THE JUNCTION OF ITIRE ILOGBO PLAYING GROUND</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-021</strong><span class="pu-location">OPEN SPACE AT THE JUNCTION OF SHIBIRI VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-022</strong><span class="pu-location">OPEN SPACE WITHIN IMUDE VILLAGE AT IYALODE B/STOP</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-023</strong><span class="pu-location">OPEN SPACE WITHIN ADALOKO VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-024</strong><span class="pu-location">ILOGBO CENTRE D, L.A. PRY. SCH. ILOGBO</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-025</strong><span class="pu-location">OPEN SPACE WITHIN OKE AGBO VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
+                        <div class="ward-name">
+                            Ward F — Ilogbo
+                        </div>
 
-        <div class="polling-unit"><strong class="pu-number">24-17-06-026</strong><span class="pu-location">OPEN SPACE AT DIVINE BUS STOP KETU</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-027</strong><span class="pu-location">OPEN SPACE AT CHARLES STREET NEAR ADEKANBI PAKO B/STOP</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-028</strong><span class="pu-location">OPEN SPACE INFRONT OF COMMUNITY PRY SCH</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-029</strong><span class="pu-location">OPEN SPACE BESIDE KENRAL COLLEGE KETU</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-030</strong><span class="pu-location">OPEN SPACE INFRONT OF WABROS HOTEL ERA</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-031</strong><span class="pu-location">OPEN SPACE IN FRONT OF SAM-JULLY HOTEL ABULE</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-032</strong><span class="pu-location">OPEN SPACE AT ATUNSE BUS STOP ABULE ERA</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-033</strong><span class="pu-location">OPEN SPACE IN FRONT OF LAWYER EGUNTOLA CLOSE, ABULE, ADALOKO RD</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-034</strong><span class="pu-location">OPEN SPACE AT ADELE BUS STOP ERA</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-035</strong><span class="pu-location">OPEN SPACE AT IYALODE BUS STOP ILOGBO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-036</strong><span class="pu-location">OPEN SPACE AT OLORI EBI BUS STOP ILOGBO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-037</strong><span class="pu-location">OPEN SPACE AT MODUPE ALATEOWO STREET, ILOGBO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-038</strong><span class="pu-location">OPEN SPACE AT PAKO BUS STOP</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-039</strong><span class="pu-location">OPEN SPACE AT SHEBAS BUS STOP ILOGBO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-040</strong><span class="pu-location">OPEN SPACE AT OKE AGBO JUNCTION</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-041</strong><span class="pu-location">OPEN SPACE AT BABALOLA BUS STOP</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-042</strong><span class="pu-location">OPEN SPACE AT MOSHALASHI BUS STOP ILOGBO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-043</strong><span class="pu-location">OPEN SPACE AT TRANSFORMER BUS STOP</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-044</strong><span class="pu-location">OPEN SPACE AT ALAGAYI MARKET ILOGBO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-045</strong><span class="pu-location">OPEN SPACE AT MUSTAPHA STREET</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-046</strong><span class="pu-location">OPEN SPACE AT HEALTH CENTRE OKE- IJEWU ILOGBO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-047</strong><span class="pu-location">OPEN SPACE AT PRAYING GROUND ANIMASHAUN B/ STOP</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-048</strong><span class="pu-location">OPEN SPACE AT 7.7 JUNCTION SHIBIRI</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-049</strong><span class="pu-location">OPEN SPACE AT AJAKAYE STREET SHIBIRI</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-050</strong><span class="pu-location">OPEN SPACE AT JOSEPHINE STREET IGBO NLA SHIBIRI</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-051</strong><span class="pu-location">OPEN SPACE AT BAALE STREET BY CENTRAL MOSQUE</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-052</strong><span class="pu-location">OPEN SPACE AT KAREEM STREET SHIBIRI</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-053</strong><span class="pu-location">BESIDE OTTO- AWORI TOWN HALL</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-054</strong><span class="pu-location">OPEN SPACE AT AGBENI STREET, OTTO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-055</strong><span class="pu-location">OPEN SPACE AT MATORI STREET OTTO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-056</strong><span class="pu-location">OPEN SPACE IN FRONT OF ULTIMATE HOTEL OTTO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-057</strong><span class="pu-location">OPEN SPACE INFRONT OF GORIOLA MOSQUE OTTO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-058</strong><span class="pu-location">OPEN SPACE AT IDERELU JUNCTION OTTO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-059</strong><span class="pu-location">OPEN SPACE AT ONIKOSI AVENUE OTTO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-060</strong><span class="pu-location">OPEN SPACE AT SIGNS AND WONDERS BUS STOP</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-061</strong><span class="pu-location">OPEN SPACE BESIDE MY BUILDER NUR &amp; PRY SCH. FEDERAL SECOND GATE</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-062</strong><span class="pu-location">OPEN SPACE AT THE JUNCTION OF AJOSE STREET IYANA-ERA ROAD</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-063</strong><span class="pu-location">OPEN SPACE AT TOPE BUS STOP ILOGBO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-064</strong><span class="pu-location">OPEN SPACE BY TOPE MARKET ILOGBO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-065</strong><span class="pu-location">OPEN SPACE AT DEBOTEL STREET ITIRE</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-066</strong><span class="pu-location">OPEN SPACE AT OLOWOPARIOLA STREET SHIBIRI</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-067</strong><span class="pu-location">OPEN SPACE BY SANTANA BUS STOP SHIBIRI</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-068</strong><span class="pu-location">OPEN SPACE AT AFOLABI STREET SHIBIRI</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-069</strong><span class="pu-location">OPEN SPACE AT ORITSHA COMMUNITY</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-070</strong><span class="pu-location">AYEKOTO COMMUNITY PRIMARY SCHOOL</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-071</strong><span class="pu-location">AJEWANWA COMMUNITY PRIMARY SCHOOL</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-072</strong><span class="pu-location">OPEN SPACE AT ITAKETE COMMUNITY</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-073</strong><span class="pu-location">OPEN SPACE AT ABAPASHA STREET IMUDE</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-074</strong><span class="pu-location">OPEN SPACE OPPOSITE TRANSFORMER ABADI BUS STOP</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-075</strong><span class="pu-location">OPEN SPACE AT CALABAR MARKET</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-076</strong><span class="pu-location">OPEN SPACE INFRONT OF MEGA STREET ILOGBO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-077</strong><span class="pu-location">OPEN SPACE AT OREMETA JUNCTION ILOGBO</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-078</strong><span class="pu-location">OPEN SPACE AT TAILOR STREET</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-079</strong><span class="pu-location">OPEN SPACE AT MASHALASHI STREET BY GANIU ATANDA JUNCTION</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-06-080</strong><span class="pu-location">OPEN SPACE AT LONDON STREET OKE AGBO</span><span class="pu-status new">NEW PU</span></div>
+                        <div class="ward-location">
+                            Ilogbo • 80 Polling Units
+                        </div>
 
-      </div>
+                    </div>
 
-    </article>
+                </div>
+
+                <div class="ward-summary">
+
+                    <span class="status-pill total">
+                        80 Total
+                    </span>
+
+                    <span class="status-pill existing">
+                        25 Existing
+                    </span>
+
+                    <span class="status-pill new">
+                        55 New
+                    </span>
+
+                </div>
+
+            </div>
 
 
-    <!-- =====================================================
+            <div class="units">
+
+                <!-- EXISTING 001-025 -->
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-001</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        BESIDE THE PLAYING GROUND, KETU
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-002</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        ILOGBO
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-003</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        L.A. PRY. SCH. ERA I
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-004</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        ILOGBO
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-005</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        L.A. PRY. SCH. ILOGBO (SIDE A)
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-006</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-007</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-008</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-009</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-010</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-011</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-012</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-013</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-014</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-015</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-016</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-017</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-018</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-019</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-020</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-021</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-022</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-023</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-024</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-025</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <!-- NEW 026-080 -->
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-026</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-027</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-028</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-029</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-030</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-031</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-032</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-033</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-034</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-035</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-036</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-037</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-038</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-039</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-040</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-041</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-042</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-043</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-044</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-045</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-046</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-047</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-048</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-049</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-050</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-051</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-052</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-053</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-054</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-055</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-056</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-057</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-058</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-059</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-060</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-061</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-062</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-063</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-064</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-065</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-066</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-067</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-068</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-069</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-070</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-071</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-072</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-073</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-074</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-075</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-076</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-077</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-078</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-079</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ILOGBO</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-06-080</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">
+                        OPEN SPACE AT LONDON STREET OKE AGBO
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- ===================================================
          WARD I — ETEGBIN
-         ===================================================== -->
+         =================================================== -->
 
-    <article class="ward-card">
+    <section
+        class="ward-section"
+        data-ward="Etegbin"
+        data-code="I"
+        id="ward-etegbin">
 
-      <div class="ward-header">
+        <article class="ward-card">
 
-        <h2>
-          Ward I — Etegbin
-        </h2>
+            <div class="ward-header">
 
-        <p>
-          22 Polling Units
-        </p>
+                <div class="ward-heading">
 
-      </div>
+                    <div class="ward-icon">
+                        I
+                    </div>
 
-      <div class="polling-unit-list">
+                    <div>
 
-        <div class="polling-unit"><strong class="pu-number">24-17-09-001</strong><span class="pu-location">COMMUNITY HALL ILEMBA AWORI</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-002</strong><span class="pu-location">ILEMBA AWORI (RASAKI BUS-STOP)</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-003</strong><span class="pu-location">ILEMBA AWORI (NEAR DALINGO HOTEL) IYANA BUS-STOP I</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-004</strong><span class="pu-location">ILEMBA AWORI (NEAR DALINGO HOTEL) IYANA BUS-STOP II</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-005</strong><span class="pu-location">EGAN COMMUNITY HALL</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-006</strong><span class="pu-location">ST. PETERS PRY. SCH. ISHAGIRA</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-007</strong><span class="pu-location">L.A. PRY. SCH. ETEGBIN I</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-008</strong><span class="pu-location">L.A. PRY. SCH. ETEGBIN II</span><span class="pu-status existing">EXISTING PU</span></div>
+                        <div class="ward-name">
+                            Ward I — Etegbin
+                        </div>
 
-        <div class="polling-unit"><strong class="pu-number">24-17-09-009</strong><span class="pu-location">OPEN SPACE AT ONITIDE STREET ILEMBA AWORI</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-010</strong><span class="pu-location">OPEN SPACE AT CELE STREET OFF AKINIBA STR.</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-011</strong><span class="pu-location">OPEN SPACE AT JUNCTION OF ILELABOYE STR. ILEMBA AWORI</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-012</strong><span class="pu-location">OPEN SPACE AT ONI ORISAN STREET ILEMBA AWORI</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-013</strong><span class="pu-location">OPEN SPACE AT ALUBARIKA BUS STOP</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-014</strong><span class="pu-location">OPEN SPACE AT YOTOMI STREET, ILEMBA AWORI</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-015</strong><span class="pu-location">OPEN SPACE AT THE JUNCTION OF MOSAFEJO COMPOUND</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-016</strong><span class="pu-location">OPEN SPACE AT HOUSE NO 1 IDI OSHO STREET ISHAGIRA</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-017</strong><span class="pu-location">OPEN SPACE AT JUNCTION OF KOSOKO ELEMIJAYE RD.</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-018</strong><span class="pu-location">OPEN SPACE AT JUNCTION OF ILAJA STREET</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-019</strong><span class="pu-location">OPEN SPACE AT JUNCTION OF MOB STREET</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-020</strong><span class="pu-location">OPEN SPACE AT JUNCTION OF LADUBA STREET</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-021</strong><span class="pu-location">OPEN SPACE AT JUNCTION OF OLAWOLE CLOSE</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-09-022</strong><span class="pu-location">OPEN SPACE AT JUNCTION OF MOSHALASHI STREET</span><span class="pu-status new">NEW PU</span></div>
+                        <div class="ward-location">
+                            Etegbin • 22 Polling Units
+                        </div>
 
-      </div>
+                    </div>
 
-    </article>
+                </div>
+
+                <div class="ward-summary">
+
+                    <span class="status-pill total">
+                        22 Total
+                    </span>
+
+                    <span class="status-pill existing">
+                        8 Existing
+                    </span>
+
+                    <span class="status-pill new">
+                        14 New
+                    </span>
+
+                </div>
+
+            </div>
 
 
-    <!-- =====================================================
+            <div class="units">
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-001</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        COMMUNITY HALL ILEMBA AWORI
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-002</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        L.A. PRY. SCH. ETEGBIN I
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-003</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        L.A. PRY. SCH. ETEGBIN II
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-004</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        ETEGBIN
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-005</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        ETEGBIN
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-006</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        ETEGBIN
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-007</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        ETEGBIN
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-008</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        ETEGBIN
+                    </div>
+                </div>
+
+                <!-- NEW 009-022 -->
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-009</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ETEGBIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-010</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ETEGBIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-011</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ETEGBIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-012</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ETEGBIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-013</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ETEGBIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-014</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ETEGBIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-015</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ETEGBIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-016</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ETEGBIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-017</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ETEGBIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-018</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ETEGBIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-019</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ETEGBIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-020</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ETEGBIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-021</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ETEGBIN</div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-09-022</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">ETEGBIN</div>
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- ===================================================
          WARD G — IREWE
-         ===================================================== -->
+         =================================================== -->
 
-    <article class="ward-card">
+    <section
+        class="ward-section"
+        data-ward="Irewe"
+        data-code="G"
+        id="ward-irewe">
 
-      <div class="ward-header">
+        <article class="ward-card">
 
-        <h2>
-          Ward G — Irewe
-        </h2>
+            <div class="ward-header">
 
-        <p>
-          9 Polling Units
-        </p>
+                <div class="ward-heading">
 
-      </div>
+                    <div class="ward-icon">
+                        G
+                    </div>
 
-      <div class="polling-unit-list">
+                    <div>
 
-        <div class="polling-unit"><strong class="pu-number">24-17-07-001</strong><span class="pu-location">OSOLU SEC. SCHOOL IREWE I</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-07-002</strong><span class="pu-location">OSOLU SEC. SCHOOL IREWE II</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-07-003</strong><span class="pu-location">OPEN SPACE WITHIN OJORIN VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-07-004</strong><span class="pu-location">COMMUNITY HALL ITOGBESA I</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-07-005</strong><span class="pu-location">COMMUNITY HALL ITOGBESA II</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-07-006</strong><span class="pu-location">OPEN SPACE WITHIN EREKUN VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-07-007</strong><span class="pu-location">L.A. PRY. SCHOOL OKOLUNDUN</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-07-008</strong><span class="pu-location">OPEN SPACE WITHIN ORI GELE</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-07-009</strong><span class="pu-location">OPEN SPACE WITHIN ONIGBONGBO VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
+                        <div class="ward-name">
+                            Ward G — Irewe
+                        </div>
 
-      </div>
+                        <div class="ward-location">
+                            Irewe • 9 Polling Units
+                        </div>
 
-    </article>
+                    </div>
+
+                </div>
+
+                <div class="ward-summary">
+
+                    <span class="status-pill total">
+                        9 Total
+                    </span>
+
+                    <span class="status-pill existing">
+                        9 Existing
+                    </span>
+
+                    <span class="status-pill new">
+                        0 New
+                    </span>
+
+                </div>
+
+            </div>
 
 
-    <!-- =====================================================
+            <div class="units">
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-07-001</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        OSOLU SEC. SCHOOL IREWE I
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-07-002</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        OSOLU SEC. SCHOOL IREWE II
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-07-003</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        OPEN SPACE WITHIN OJORIN VILLAGE
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-07-004</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        COMMUNITY HALL ITOGBESA I
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-07-005</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        COMMUNITY HALL ITOGBESA II
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-07-006</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IREWE
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-07-007</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IREWE
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-07-008</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IREWE
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-07-009</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IREWE
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- ===================================================
          WARD J — IDOLUWO
-         ===================================================== -->
+         =================================================== -->
 
-    <article class="ward-card">
+    <section
+        class="ward-section"
+        data-ward="Idoluwo"
+        data-code="J"
+        id="ward-idoluwo">
 
-      <div class="ward-header">
+        <article class="ward-card">
 
-        <h2>
-          Ward J — Idoluwo
-        </h2>
+            <div class="ward-header">
 
-        <p>
-          8 Polling Units
-        </p>
+                <div class="ward-heading">
 
-      </div>
+                    <div class="ward-icon">
+                        J
+                    </div>
 
-      <div class="polling-unit-list">
+                    <div>
 
-        <div class="polling-unit"><strong class="pu-number">24-17-10-001</strong><span class="pu-location">ST. MARY PRY. SCHOOL IDOLUWO-ILE I</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-10-002</strong><span class="pu-location">ST. MARY PRY. SCHOOL IDOLUWO-ILE II</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-10-003</strong><span class="pu-location">ST. PHILIPS PRY. SCH. ESOFIN</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-10-004</strong><span class="pu-location">OPEN SPACE WITHIN OJOTA VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-10-005</strong><span class="pu-location">ST. PHILIPS PRY. SCH. ESOFIN</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-10-006</strong><span class="pu-location">OPEN SPACE WITHIN OJOTA VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-10-007</strong><span class="pu-location">ST PHILIP PRIMARY SCHOOL ESOFIN I</span><span class="pu-status new">NEW PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">24-17-10-008</strong><span class="pu-location">ST PHILIP PRIMARY SCHOOL ESOFIN II</span><span class="pu-status new">NEW PU</span></div>
+                        <div class="ward-name">
+                            Ward J — Idoluwo
+                        </div>
 
-      </div>
+                        <div class="ward-location">
+                            Idoluwo • 8 Polling Units
+                        </div>
 
-    </article>
+                    </div>
+
+                </div>
+
+                <div class="ward-summary">
+
+                    <span class="status-pill total">
+                        8 Total
+                    </span>
+
+                    <span class="status-pill existing">
+                        6 Existing
+                    </span>
+
+                    <span class="status-pill new">
+                        2 New
+                    </span>
+
+                </div>
+
+            </div>
 
 
-    <!-- =====================================================
+            <div class="units">
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-10-001</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        ST. MARY PRY. SCHOOL IDOLUWO-ILE I
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-10-002</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        ST. MARY PRY. SCHOOL IDOLUWO-ILE II
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-10-003</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        ST. PHILIPS PRY. SCH. ESOFIN
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-10-004</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IDOLUWO
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-10-005</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IDOLUWO
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-10-006</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IDOLUWO
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-10-007</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">
+                        IDOLUWO
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="new">
+                    <div class="pu-top">
+                        <span class="pu-number">24-17-10-008</span>
+                        <span class="pu-status new">New</span>
+                    </div>
+                    <div class="pu-location">
+                        IDOLUWO
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- ===================================================
          TAFI WARD
-         ===================================================== -->
+         =================================================== -->
 
-    <article class="ward-card">
+    <section
+        class="ward-section"
+        data-ward="Tafi"
+        data-code="T"
+        id="ward-tafi">
 
-      <div class="ward-header">
+        <article class="ward-card">
 
-        <h2>
-          Tafi Ward
-        </h2>
+            <div class="ward-header">
 
-        <p>
-          8 Polling Units
-        </p>
+                <div class="ward-heading">
 
-      </div>
+                    <div class="ward-icon">
+                        T
+                    </div>
 
-      <div class="polling-unit-list">
+                    <div>
 
-        <div class="polling-unit"><strong class="pu-number">001</strong><span class="pu-location">L.A. PRIMARY SCHOOL MOBA</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">002</strong><span class="pu-location">COMMUNITY HALL IBODE</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">003</strong><span class="pu-location">L.A. PRY. SCH. ALAGUNTAN</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">004</strong><span class="pu-location">OPEN SPACE WITHIN AGAJA VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">005</strong><span class="pu-location">SALVATION ARMY PRY. SCH. OLOMOMETA</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">006</strong><span class="pu-location">IGBOLOGBO VILLAGE (OPEN SPACE) WITHIN THE VILLAGE</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">007</strong><span class="pu-location">ST. FRANCIS PRY. SCH. IGBO-OJA</span><span class="pu-status existing">EXISTING PU</span></div>
-        <div class="polling-unit"><strong class="pu-number">008</strong><span class="pu-location">L.A. PRY. SCHOOL TAFFI AWORI</span><span class="pu-status existing">EXISTING PU</span></div>
+                        <div class="ward-name">
+                            Tafi Ward
+                        </div>
 
-      </div>
+                        <div class="ward-location">
+                            Tafi • 8 Polling Units
+                        </div>
 
-    </article>
+                    </div>
 
+                </div>
 
-  </section>
+                <div class="ward-summary">
 
+                    <span class="status-pill total">
+                        8 Total
+                    </span>
 
-  <!-- NO RESULTS -->
+                    <span class="status-pill existing">
+                        8 Existing
+                    </span>
 
-  <div
-    class="no-results"
-    id="noResults">
+                    <span class="status-pill new">
+                        0 New
+                    </span>
 
-    <strong>
-      No polling unit found
-    </strong>
+                </div>
 
-    <span>
-      Try searching with another ward, location or polling unit number.
-    </span>
-
-  </div>
+            </div>
 
 
-  <!-- =======================================================
-       NOTICE
-       ======================================================= -->
+            <div class="units">
 
-  <div class="notice">
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">001</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        L.A. PRIMARY SCHOOL MOBA
+                    </div>
+                </div>
 
-    <strong>
-      ⚠️ Verification Notice
-    </strong>
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">002</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        COMMUNITY HALL IBODE
+                    </div>
+                </div>
 
-    <p>
-      Polling-unit numbers, names and locations should be
-      verified against official electoral information before
-      publication or use.
-    </p>
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">003</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        L.A. PRY. SCH. ALAGUNTAN
+                    </div>
+                </div>
 
-  </div>
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">004</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        OPEN SPACE WITHIN AGAJA VILLAGE
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">005</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        SALVATION ARMY PRY. SCH. OLOMOMETA
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">006</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        IGBOLOGBO VILLAGE
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">007</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        ST. FRANCIS PRY. SCH. IGBO-OJA
+                    </div>
+                </div>
+
+                <div class="polling-unit" data-status="existing">
+                    <div class="pu-top">
+                        <span class="pu-number">008</span>
+                        <span class="pu-status existing">Existing</span>
+                    </div>
+                    <div class="pu-location">
+                        L.A. PRY. SCHOOL TAFFI AWORI
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- ===================================================
+         NOTICE
+         =================================================== -->
+
+    <div class="notice">
+
+        <strong>Important information:</strong>
+
+        This directory is provided as an IMOLE 2027 campaign
+        information resource. Polling-unit information should
+        always be cross-checked against official electoral
+        information and any subsequent official updates.
+
+        <br><br>
+
+        <strong>Directory summary:</strong>
+        170 polling units across 6 wards —
+        79 existing and 91 new entries.
+
+    </div>
+
+
+    <!-- ===================================================
+         QUICK LINKS
+         =================================================== -->
+
+    <div class="quick-links">
+
+        <a href="./index.html"
+           class="quick-link">
+            🏠 Home
+        </a>
+
+        <a href="./results.html"
+           class="quick-link">
+            📊 Results
+        </a>
+
+        <a href="./community.html"
+           class="quick-link">
+            🏘️ Community Need
+        </a>
+
+        <a href="./join.html"
+           class="quick-link">
+            🤝 Join IMOLE
+        </a>
+
+    </div>
+
+</div>
 
 </main>
 
 
-<!-- =========================================================
+<!-- =======================================================
      FOOTER
-     ========================================================= -->
+     ======================================================= -->
 
-<footer>
+<footer class="footer">
 
-  <p>
-    © 2026 <strong>Hon. Nurudeen Abayomi Sadeeq</strong>
-  </p>
+    <div class="container">
 
-  <p>
-    Nigeria Democratic Congress (NDC) |
-    Ojo Constituency II
-  </p>
+        <div class="footer-brand">
+            IMOLE 2027
+        </div>
 
-  <p>
-    IMOLE 2027
-  </p>
+        <p>
+            Hon. Nurudeen Abayomi Sadeeq —
+            Lagos State House of Assembly,
+            Ojo Constituency II.
+        </p>
+
+        <p>
+            Service • Development • Accountability
+        </p>
+
+        <div class="footer-copy">
+            © 2026 IMOLE 2027. All rights reserved.
+        </div>
+
+    </div>
 
 </footer>
 
 
-<!-- =========================================================
-     JAVASCRIPT
-     ========================================================= -->
+<!-- =======================================================
+     BACK TO TOP
+     ======================================================= -->
+
+<button
+    id="backTop"
+    class="back-top"
+    type="button"
+    aria-label="Back to top">
+
+    ↑
+
+</button>
+
+
+<!-- =======================================================
+     OFFLINE BAR
+     ======================================================= -->
+
+<div
+    id="offlineBar"
+    class="offline-bar"
+    role="status">
+
+    You are currently offline.
+    Cached IMOLE 2027 information remains available.
+
+</div>
+
 
 <script>
 
 /* =========================================================
-   POLLING UNIT STATISTICS
+   IMOLE 2027 — POLLING UNIT DIRECTORY ENGINE
    ========================================================= */
 
-function updatePollingUnitStats(){
+(function(){
 
-  const wards =
-    document.querySelectorAll(".ward-card");
+    "use strict";
 
-  const units =
-    document.querySelectorAll(".polling-unit");
 
-  const existing =
-    document.querySelectorAll(".pu-status.existing");
+    /* -------------------------------------------------------
+       ELEMENTS
+       ------------------------------------------------------- */
 
-  const newUnits =
-    document.querySelectorAll(".pu-status.new");
+    const wardFilter =
+        document.getElementById("wardFilter");
 
+    const searchInput =
+        document.getElementById("searchInput");
 
-  document.getElementById("totalPU").textContent =
-    units.length;
+    const resetBtn =
+        document.getElementById("resetBtn");
 
-  document.getElementById("totalWards").textContent =
-    wards.length;
+    const showAllBtn =
+        document.getElementById("showAllBtn");
 
-  document.getElementById("existingPU").textContent =
-    existing.length;
+    const shareBtn =
+        document.getElementById("shareBtn");
 
-  document.getElementById("newPU").textContent =
-    newUnits.length;
+    const shareSelectedBtn =
+        document.getElementById("shareSelectedBtn");
 
-}
+    const resultMessage =
+        document.getElementById("resultMessage");
 
+    const selectedBanner =
+        document.getElementById("selectedBanner");
 
-/* =========================================================
-   SEARCH
-   ========================================================= */
+    const selectedWardName =
+        document.getElementById("selectedWardName");
 
-function searchPollingUnits(){
+    const selectedWardCount =
+        document.getElementById("selectedWardCount");
 
-  const input =
-    document.getElementById("puSearch");
+    const noResults =
+        document.getElementById("noResults");
 
-  const searchResult =
-    document.getElementById("searchResult");
+    const backTop =
+        document.getElementById("backTop");
 
-  const noResults =
-    document.getElementById("noResults");
+    const offlineBar =
+        document.getElementById("offlineBar");
 
-  const filter =
-    input.value
-      .toLowerCase()
-      .trim();
 
+    const wardSections =
+        Array.from(
+            document.querySelectorAll(".ward-section")
+        );
 
-  const words =
-    filter
-      .split(/\s+/)
-      .filter(Boolean);
 
+    const TOTAL_PUS = 170;
 
-  const wards =
-    document.querySelectorAll(".ward-card");
 
+    /* -------------------------------------------------------
+       WARD NORMALIZATION
+       Supports:
+       ?ward=Ilogbo
+       ?ward=Ward%20F
+       ?ward=F
+       ?ward=Idolowu
+       ?ward=Idoluwo
+       ------------------------------------------------------- */
 
-  let visibleUnits = 0;
+    function normalize(value){
 
+        return String(value || "")
+            .trim()
+            .toLowerCase()
+            .replace(/[_-]+/g," ")
+            .replace(/\s+/g," ");
 
-  wards.forEach(function(ward){
+    }
 
-    const wardText =
-      ward.textContent.toLowerCase();
 
+    function resolveWard(value){
 
-    const units =
-      ward.querySelectorAll(".polling-unit");
+        const v = normalize(value);
 
+        if(
+            !v ||
+            v === "all" ||
+            v === "all wards"
+        ){
+            return "all";
+        }
 
-    let wardHasMatch = false;
 
+        if(
+            v === "ilogbo" ||
+            v === "ward f" ||
+            v === "f"
+        ){
+            return "Ilogbo";
+        }
 
-    units.forEach(function(unit){
 
-      const unitText =
-        unit.textContent.toLowerCase();
-
-
-      const matches =
-        filter === "" ||
-        words.every(function(word){
-
-          return unitText.includes(word);
-
-        });
-
-
-      unit.style.display =
-        matches ? "" : "none";
-
-
-      if(matches){
-
-        wardHasMatch = true;
-
-        visibleUnits++;
-
-      }
-
-    });
-
-
-    const wardNameMatches =
-      filter !== "" &&
-      words.every(function(word){
-
-        return wardText.includes(word);
-
-      });
-
-
-    /*
-      If the search matches the ward name,
-      show all units inside that ward.
-    */
-
-    if(wardNameMatches){
-
-      units.forEach(function(unit){
-
-        unit.style.display = "";
-
-      });
-
-      wardHasMatch = true;
-
-      visibleUnits +=
-        units.length;
-
-      /*
-        Prevent double counting when
-        individual units already matched.
-      */
-
-      units.forEach(function(unit){
-
-        const unitText =
-          unit.textContent.toLowerCase();
-
-        const unitMatches =
-          filter === "" ||
-          words.every(function(word){
-
-            return unitText.includes(word);
-
-          });
-
-        if(unitMatches){
-
-          visibleUnits--;
+        if(
+            v === "irewe" ||
+            v === "ward g" ||
+            v === "g"
+        ){
+            return "Irewe";
+        }
+
+
+        if(
+            v === "ijanikin" ||
+            v === "ward d" ||
+            v === "d"
+        ){
+            return "Ijanikin";
+        }
+
+
+        if(
+            v === "etegbin" ||
+            v === "ward i" ||
+            v === "i"
+        ){
+            return "Etegbin";
+        }
+
+
+        if(
+            v === "idoluwo" ||
+            v === "idolowu" ||
+            v === "ward j" ||
+            v === "j"
+        ){
+            return "Idoluwo";
+        }
+
+
+        if(
+            v === "tafi" ||
+            v === "taffi" ||
+            v === "tafi ward" ||
+            v === "ward t" ||
+            v === "t"
+        ){
+            return "Tafi";
+        }
+
+
+        return "all";
+    }
+
+
+    /* -------------------------------------------------------
+       URL STATE
+       ------------------------------------------------------- */
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    const initialWard =
+        resolveWard(
+            params.get("ward")
+        );
+
+
+    if(
+        initialWard !== "all"
+    ){
+        wardFilter.value =
+            initialWard;
+    }
+
+
+    /* -------------------------------------------------------
+       UPDATE URL
+       ------------------------------------------------------- */
+
+    function updateURL(
+        ward
+    ){
+
+        const url =
+            new URL(
+                window.location.href
+            );
+
+
+        if(
+            ward &&
+            ward !== "all"
+        ){
+
+            url.searchParams.set(
+                "ward",
+                ward
+            );
+
+        }else{
+
+            url.searchParams.delete(
+                "ward"
+            );
 
         }
 
-      });
 
-      visibleUnits += units.length;
+        window.history.replaceState(
+            {},
+            "",
+            url
+        );
+
+    }
+
+
+    /* -------------------------------------------------------
+       GET WARD DATA
+       ------------------------------------------------------- */
+
+    function getWardData(
+        section
+    ){
+
+        const units =
+            Array.from(
+                section.querySelectorAll(
+                    ".polling-unit"
+                )
+            );
+
+        const visible =
+            units.filter(
+                unit =>
+                    !unit.classList.contains(
+                        "hidden"
+                    )
+            );
+
+        return {
+            total:units.length,
+            visible:visible.length
+        };
 
     }
 
 
-    ward.style.display =
-      wardHasMatch ? "" : "none";
+    /* -------------------------------------------------------
+       SEARCH MATCH
+       ------------------------------------------------------- */
 
-  });
+    function matchesSearch(
+        unit,
+        section,
+        query
+    ){
 
-
-  if(filter === ""){
-
-    searchResult.textContent =
-      "Showing all polling units";
-
-    noResults.style.display =
-      "none";
-
-    return;
-
-  }
+        if(!query){
+            return true;
+        }
 
 
-  searchResult.textContent =
-    visibleUnits +
-    " matching polling unit" +
-    (visibleUnits === 1 ? "" : "s") +
-    " found";
+        const wardName =
+            section.dataset.ward || "";
 
 
-  noResults.style.display =
-    visibleUnits === 0
-      ? "block"
-      : "none";
-
-}
+        const wardCode =
+            section.dataset.code || "";
 
 
-/* =========================================================
-   ENTER KEY
-   ========================================================= */
+        const text =
+            (
+                unit.innerText +
+                " " +
+                wardName +
+                " Ward " +
+                wardCode
+            )
+            .toLowerCase();
 
-document
-  .getElementById("puSearch")
-  .addEventListener(
-    "keydown",
-    function(event){
 
-      if(event.key === "Enter"){
+        /*
+         * Every search word must be found.
+         * This makes searches such as:
+         *
+         * "Ilogbo school"
+         *
+         * work properly.
+         */
 
-        searchPollingUnits();
+        const terms =
+            normalize(query)
+                .split(" ")
+                .filter(Boolean);
 
-      }
+
+        return terms.every(
+            term =>
+                text.includes(term)
+        );
 
     }
-  );
 
 
-/* =========================================================
-   INITIALIZE
-   ========================================================= */
+    /* -------------------------------------------------------
+       APPLY FILTERS
+       ------------------------------------------------------- */
 
-document.addEventListener(
-  "DOMContentLoaded",
-  function(){
+    function applyFilters(){
 
-    updatePollingUnitStats();
+        const selectedWard =
+            wardFilter.value || "all";
 
-    searchPollingUnits();
 
-  }
-);
+        const query =
+            normalize(
+                searchInput.value
+            );
+
+
+        let totalVisible = 0;
+
+        let selectedWardTotal = 0;
+
+        let selectedWardVisible = 0;
+
+
+        wardSections.forEach(
+            section => {
+
+                const sectionWard =
+                    section.dataset.ward;
+
+
+                const units =
+                    Array.from(
+                        section.querySelectorAll(
+                            ".polling-unit"
+                        )
+                    );
+
+
+                const wardSelected =
+                    selectedWard === "all" ||
+                    selectedWard === sectionWard;
+
+
+                let visibleInWard = 0;
+
+
+                units.forEach(
+                    unit => {
+
+                        const matches =
+                            wardSelected &&
+                            matchesSearch(
+                                unit,
+                                section,
+                                query
+                            );
+
+
+                        unit.classList.toggle(
+                            "hidden",
+                            !matches
+                        );
+
+
+                        if(matches){
+                            visibleInWard++;
+                            totalVisible++;
+                        }
+
+                    }
+                );
+
+
+                const shouldShowWard =
+                    wardSelected &&
+                    visibleInWard > 0;
+
+
+                section.style.display =
+                    shouldShowWard
+                        ? ""
+                        : "none";
+
+
+                if(
+                    selectedWard ===
+                    sectionWard
+                ){
+
+                    selectedWardTotal =
+                        units.length;
+
+                    selectedWardVisible =
+                        visibleInWard;
+
+                }
+
+            }
+        );
+
+
+        /* ---------------------------------------------------
+           SELECTED WARD BANNER
+           --------------------------------------------------- */
+
+        if(
+            selectedWard !== "all"
+        ){
+
+            selectedBanner.classList.add(
+                "active"
+            );
+
+
+            selectedWardName.textContent =
+                selectedWard + " Ward";
+
+
+            selectedWardCount.textContent =
+                selectedWardVisible +
+                " matching of " +
+                selectedWardTotal +
+                " polling units";
+
+
+        }else{
+
+            selectedBanner.classList.remove(
+                "active"
+            );
+
+        }
+
+
+        /* ---------------------------------------------------
+           RESULT MESSAGE
+           --------------------------------------------------- */
+
+        if(
+            selectedWard === "all" &&
+            !query
+        ){
+
+            resultMessage.innerHTML =
+                "Showing all <strong>170</strong> polling units.";
+
+        }else if(
+            selectedWard !== "all" &&
+            !query
+        ){
+
+            resultMessage.innerHTML =
+                "Showing <strong>" +
+                selectedWardVisible +
+                "</strong> polling units in " +
+                "<span>" +
+                selectedWard +
+                " Ward</span>.";
+
+        }else if(
+            selectedWard !== "all" &&
+            query
+        ){
+
+            resultMessage.innerHTML =
+                "<strong>" +
+                selectedWardVisible +
+                "</strong> matching polling units in " +
+                "<span>" +
+                selectedWard +
+                " Ward</span>.";
+
+        }else{
+
+            resultMessage.innerHTML =
+                "<strong>" +
+                totalVisible +
+                "</strong> matching polling units.";
+
+        }
+
+
+        /* ---------------------------------------------------
+           NO RESULTS
+           --------------------------------------------------- */
+
+        noResults.classList.toggle(
+            "active",
+            totalVisible === 0
+        );
+
+
+        /*
+         * Update selected ward URL.
+         */
+
+        updateURL(
+            selectedWard
+        );
+
+    }
+
+
+    /* -------------------------------------------------------
+       WARD CHANGE
+       ------------------------------------------------------- */
+
+    wardFilter.addEventListener(
+        "change",
+        function(){
+
+            searchInput.value = "";
+
+            applyFilters();
+
+            if(
+                wardFilter.value !== "all"
+            ){
+
+                const section =
+                    wardSections.find(
+                        item =>
+                            item.dataset.ward ===
+                            wardFilter.value
+                    );
+
+
+                if(section){
+
+                    setTimeout(
+                        () => {
+
+                            section.scrollIntoView({
+                                behavior:"smooth",
+                                block:"start"
+                            });
+
+                        },
+                        80
+                    );
+
+                }
+
+            }
+
+        }
+    );
+
+
+    /* -------------------------------------------------------
+       SEARCH
+       ------------------------------------------------------- */
+
+    searchInput.addEventListener(
+        "input",
+        applyFilters
+    );
+
+
+    /* -------------------------------------------------------
+       RESET
+       ------------------------------------------------------- */
+
+    resetBtn.addEventListener(
+        "click",
+        function(){
+
+            wardFilter.value = "all";
+
+            searchInput.value = "";
+
+            applyFilters();
+
+            window.scrollTo({
+                top:0,
+                behavior:"smooth"
+            });
+
+        }
+    );
+
+
+    /* -------------------------------------------------------
+       SHOW ALL
+       ------------------------------------------------------- */
+
+    showAllBtn.addEventListener(
+        "click",
+        function(){
+
+            wardFilter.value = "all";
+
+            searchInput.value = "";
+
+            applyFilters();
+
+            window.scrollTo({
+                top:0,
+                behavior:"smooth"
+            });
+
+        }
+    );
+
+
+    /* -------------------------------------------------------
+       BUILD SHARE URL
+       ------------------------------------------------------- */
+
+    function buildShareURL(){
+
+        const selected =
+            wardFilter.value || "all";
+
+
+        const url =
+            new URL(
+                window.location.href
+            );
+
+
+        if(
+            selected !== "all"
+        ){
+
+            url.searchParams.set(
+                "ward",
+                selected
+            );
+
+        }else{
+
+            url.searchParams.delete(
+                "ward"
+            );
+
+        }
+
+
+        return url.toString();
+
+    }
+
+
+    /* -------------------------------------------------------
+       SHARE
+       ------------------------------------------------------- */
+
+    async function shareCurrentWard(){
+
+        const selected =
+            wardFilter.value || "all";
+
+
+        const url =
+            buildShareURL();
+
+
+        const title =
+            selected === "all"
+                ? "IMOLE 2027 Polling Unit Directory"
+                : "IMOLE 2027 — " +
+                  selected +
+                  " Ward";
+
+
+        const text =
+            selected === "all"
+                ? "View the IMOLE 2027 Polling Unit Directory for Ojo Constituency II."
+                : "View the IMOLE 2027 polling units for " +
+                  selected +
+                  " Ward.";
+
+
+        /*
+         * Native Android/iPhone share.
+         */
+
+        if(
+            navigator.share
+        ){
+
+            try{
+
+                await navigator.share({
+                    title:title,
+                    text:text,
+                    url:url
+                });
+
+                return;
+
+            }catch(error){
+
+                /*
+                 * User cancelled share.
+                 * Do nothing.
+                 */
+
+                if(
+                    error &&
+                    error.name ===
+                    "AbortError"
+                ){
+                    return;
+                }
+
+            }
+
+        }
+
+
+        /*
+         * Clipboard fallback.
+         */
+
+        try{
+
+            if(
+                navigator.clipboard &&
+                window.isSecureContext
+            ){
+
+                await navigator.clipboard.writeText(
+                    url
+                );
+
+                alert(
+                    "Share link copied to your clipboard."
+                );
+
+                return;
+
+            }
+
+        }catch(error){}
+
+
+        /*
+         * WhatsApp fallback.
+         */
+
+        const whatsappText =
+            text +
+            "\n\n" +
+            url;
+
+
+        window.open(
+            "https://wa.me/?text=" +
+            encodeURIComponent(
+                whatsappText
+            ),
+            "_blank",
+            "noopener"
+        );
+
+    }
+
+
+    shareBtn.addEventListener(
+        "click",
+        shareCurrentWard
+    );
+
+
+    shareSelectedBtn.addEventListener(
+        "click",
+        shareCurrentWard
+    );
+
+
+    /* -------------------------------------------------------
+       BACK TO TOP
+       ------------------------------------------------------- */
+
+    function updateBackTop(){
+
+        if(
+            window.scrollY > 450
+        ){
+
+            backTop.classList.add(
+                "show"
+            );
+
+        }else{
+
+            backTop.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        updateBackTop,
+        {passive:true}
+    );
+
+
+    backTop.addEventListener(
+        "click",
+        function(){
+
+            window.scrollTo({
+                top:0,
+                behavior:"smooth"
+            });
+
+        }
+    );
+
+
+    /* -------------------------------------------------------
+       OFFLINE / ONLINE
+       ------------------------------------------------------- */
+
+    function updateNetwork(){
+
+        if(
+            navigator.onLine
+        ){
+
+            offlineBar.classList.remove(
+                "show"
+            );
+
+        }else{
+
+            offlineBar.classList.add(
+                "show"
+            );
+
+        }
+
+    }
+
+
+    window.addEventListener(
+        "online",
+        updateNetwork
+    );
+
+
+    window.addEventListener(
+        "offline",
+        updateNetwork
+    );
+
+
+    updateNetwork();
+
+
+    /* -------------------------------------------------------
+       SERVICE WORKER
+       ------------------------------------------------------- */
+
+    if(
+        "serviceWorker" in navigator
+    ){
+
+        window.addEventListener(
+            "load",
+            async function(){
+
+                try{
+
+                    const registration =
+                        await navigator.serviceWorker.register(
+                            "./sw.js?v=20260905-02",
+                            {
+                                updateViaCache:
+                                    "none"
+                            }
+                        );
+
+
+                    /*
+                     * Ask browser to check for
+                     * an updated service worker.
+                     */
+
+                    registration.update();
+
+                }catch(error){
+
+                    console.warn(
+                        "IMOLE service worker registration failed:",
+                        error
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* -------------------------------------------------------
+       INITIAL FILTER
+       ------------------------------------------------------- */
+
+    applyFilters();
+
+    updateBackTop();
+
+
+})();
 
 </script>
-
 
 </body>
 </html>
