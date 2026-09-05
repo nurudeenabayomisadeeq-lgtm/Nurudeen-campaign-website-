@@ -1,66 +1,360 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Events & Schedule | IMOLE 2027</title><meta name="description" content="Official IMOLE 2027 campaign events, meetings, ward activities, stakeholder engagements and community visits of Hon. Nurudeen Abayomi Sadeeq."><meta name="keywords" content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Ojo Constituency II, Nigeria Democratic Congress, NDC, Lagos Assembly, campaign events"><meta name="theme-color" content="#111111"><link rel="stylesheet" href="./assets/css/style.css">
-<link rel="manifest" href="./manifest.json"><style>
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Events & Schedule | IMOLE 2027</title>
+
+<meta name="description"
+      content="Official IMOLE 2027 campaign events, ward activities, stakeholder engagements and community visits of Hon. Nurudeen Abayomi Sadeeq.">
+
+<meta name="keywords"
+      content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Ojo Constituency II, Nigeria Democratic Congress, NDC, Lagos Assembly, campaign events">
+
+<meta name="theme-color"
+      content="#063b2d">
+
+<meta name="color-scheme"
+      content="light">
+
+<link rel="canonical"
+      href="./events.html">
+
+<link rel="stylesheet"
+      href="./assets/css/style.css">
+
+<link rel="manifest"
+      href="./manifest.json">
+
+<style>
+
+/* =========================================================
+   IMOLE 2027 EVENTS PAGE
+   WARD-AWARE • MOBILE-FIRST • PWA READY
+========================================================= */
+
+:root{
+    --green:#063b2d;
+    --green2:#087f5b;
+    --green3:#0b9b70;
+    --gold:#d4af37;
+    --dark:#111;
+    --text:#222;
+    --muted:#667085;
+    --light:#f6f7f8;
+    --white:#fff;
+    --border:#e5e7eb;
+    --shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
 *{
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f6f7f8;
-    color:#222;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+    background:var(--light);
+    color:var(--text);
 }
+
+button,
+input,
+select{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+/* =========================================================
+   PAGE
+========================================================= */
 
 .events-page{
+    width:100%;
     max-width:1150px;
     margin:auto;
-    padding:35px 15px 80px;
+    padding:25px 15px 90px;
 }
 
-/* PAGE HERO */
+/* =========================================================
+   HERO
+========================================================= */
+
 .events-hero{
     text-align:center;
     padding:45px 20px;
-    margin-bottom:30px;
+    margin-bottom:22px;
     border-radius:24px;
-    background:linear-gradient(135deg,#111,#333);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            #111
+        );
+
     color:#fff;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    box-shadow:
+        0 12px 35px
+        rgba(0,0,0,.16);
 }
 
 .events-hero .badge{
     display:inline-block;
+
     padding:8px 15px;
+
     border-radius:30px;
-    background:rgba(255,255,255,.14);
+
+    background:
+        rgba(255,255,255,.13);
+
     font-size:13px;
-    font-weight:bold;
+    font-weight:800;
+
     margin-bottom:12px;
 }
 
 .events-hero h1{
     margin:8px 0 12px;
     font-size:42px;
+    line-height:1.15;
 }
 
 .events-hero p{
     max-width:800px;
     margin:auto;
     line-height:1.8;
-    opacity:.95;
+    opacity:.96;
 }
 
-/* NEXT EVENT */
+/* =========================================================
+   MY WARD CONTEXT
+========================================================= */
+
+.ward-context{
+    display:none;
+
+    background:#fff;
+
+    border:2px solid
+        rgba(6,59,45,.12);
+
+    border-left:
+        6px solid var(--green);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    margin-bottom:25px;
+
+    box-shadow:var(--shadow);
+}
+
+.ward-context.show{
+    display:block;
+}
+
+.ward-context-top{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+}
+
+.ward-icon{
+    width:48px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:#e8f5f0;
+
+    font-size:24px;
+
+    flex-shrink:0;
+}
+
+.ward-context h2{
+    margin:0 0 5px;
+    font-size:21px;
+    color:var(--green);
+}
+
+.ward-context p{
+    margin:0;
+    color:#555;
+    line-height:1.6;
+}
+
+.ward-context-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-top:15px;
+}
+
+.context-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:42px;
+
+    padding:10px 14px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-weight:800;
+    font-size:13px;
+
+    border:1px solid var(--border);
+
+    background:#f8f8f8;
+
+    color:#222;
+}
+
+.context-btn.primary{
+    background:var(--green);
+    color:#fff;
+    border-color:var(--green);
+}
+
+.context-btn.gold{
+    background:#fff8df;
+    color:#745b00;
+    border-color:#ead68a;
+}
+
+/* =========================================================
+   WARD SELECTOR
+========================================================= */
+
+.ward-selector{
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    margin-bottom:25px;
+
+    box-shadow:var(--shadow);
+}
+
+.ward-selector-grid{
+    display:grid;
+
+    grid-template-columns:
+        minmax(180px,1fr)
+        auto;
+
+    gap:12px;
+
+    align-items:end;
+}
+
+.ward-selector label{
+    display:block;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    margin-bottom:7px;
+
+    color:#444;
+}
+
+.ward-select{
+    width:100%;
+
+    min-height:48px;
+
+    padding:12px 14px;
+
+    border:1px solid var(--border);
+
+    border-radius:11px;
+
+    background:#fff;
+
+    outline:none;
+}
+
+.ward-select:focus{
+    border-color:var(--green);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(6,59,45,.10);
+}
+
+.selector-actions{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.selector-btn{
+    min-height:48px;
+
+    padding:11px 15px;
+
+    border:0;
+
+    border-radius:11px;
+
+    background:#eee;
+
+    color:#222;
+
+    font-weight:800;
+}
+
+.selector-btn.primary{
+    background:var(--green);
+    color:#fff;
+}
+
+/* =========================================================
+   NEXT EVENT
+========================================================= */
+
 .next-event{
     background:#fff;
+
     border-radius:20px;
+
     padding:28px 20px;
+
     text-align:center;
+
     margin-bottom:35px;
-    box-shadow:0 6px 22px rgba(0,0,0,.10);
+
+    box-shadow:var(--shadow);
 }
 
 .next-event h2{
@@ -70,53 +364,79 @@ body{
 
 .next-title{
     font-size:20px;
-    font-weight:bold;
+    font-weight:800;
     margin:12px 0;
 }
 
 .next-date{
     font-size:16px;
     margin-bottom:18px;
+    color:#555;
 }
 
 .countdown{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+        repeat(4,1fr);
+
     gap:12px;
+
     max-width:620px;
+
     margin:auto;
 }
 
 .count-box{
-    background:#f1f1f1;
+    background:#f1f3f4;
+
     border-radius:14px;
+
     padding:15px 8px;
 }
 
 .count-box strong{
     display:block;
+
     font-size:28px;
+
+    color:var(--green);
 }
 
 .count-box span{
     font-size:12px;
-    font-weight:bold;
+
+    font-weight:800;
 }
 
-/* INFORMATION */
+/* =========================================================
+   QUICK INFORMATION
+========================================================= */
+
 .info-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px,1fr)
+        );
+
     gap:18px;
+
     margin-bottom:40px;
 }
 
 .info-card{
     background:#fff;
+
     border-radius:18px;
+
     padding:24px;
+
     text-align:center;
-    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+    box-shadow:var(--shadow);
 }
 
 .info-icon{
@@ -131,9 +451,13 @@ body{
 .info-card p{
     line-height:1.6;
     margin:0;
+    color:#555;
 }
 
-/* SECTION */
+/* =========================================================
+   SECTION
+========================================================= */
+
 .section-heading{
     text-align:center;
     margin:45px 0 25px;
@@ -146,70 +470,163 @@ body{
 
 .section-heading p{
     line-height:1.6;
+    color:#555;
 }
 
-/* TOOLS */
+/* =========================================================
+   TOOLS
+========================================================= */
+
 .event-tools{
     background:#fff;
+
     padding:20px;
+
     border-radius:18px;
+
     margin-bottom:28px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+    box-shadow:var(--shadow);
 }
 
 .search-box{
     width:100%;
+
+    min-height:50px;
+
     padding:14px 15px;
+
     border:1px solid #ddd;
-    border-radius:10px;
+
+    border-radius:11px;
+
     font-size:16px;
+
     outline:none;
 }
 
 .search-box:focus{
-    border-color:#222;
+    border-color:var(--green);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(6,59,45,.08);
 }
 
 .filters{
     display:flex;
+
     flex-wrap:wrap;
+
     justify-content:center;
+
     gap:9px;
+
     margin-top:15px;
 }
 
 .filter{
     border:0;
+
     background:#eee;
+
     padding:10px 15px;
+
     border-radius:25px;
+
     font-weight:bold;
+
     cursor:pointer;
 }
 
 .filter.active{
-    background:#222;
+    background:var(--green);
+
     color:#fff;
 }
 
-/* EVENTS */
+/* =========================================================
+   RESULT BAR
+========================================================= */
+
+.result-bar{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin:0 0 18px;
+
+    padding:13px 15px;
+
+    background:#fff;
+
+    border-radius:13px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0,0,0,.05);
+}
+
+.result-count{
+    font-weight:800;
+
+    color:var(--green);
+}
+
+.active-context{
+    font-size:13px;
+
+    color:#666;
+}
+
+/* =========================================================
+   EVENTS
+========================================================= */
+
 .event-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(290px,1fr)
+        );
+
     gap:22px;
 }
 
 .event-card{
     background:#fff;
+
     border-radius:19px;
+
     padding:24px;
-    box-shadow:0 5px 20px rgba(0,0,0,.09);
-    transition:.25s ease;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,.09);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+    border-top:
+        4px solid
+        var(--green);
 }
 
 .event-card:hover{
     transform:translateY(-4px);
-    box-shadow:0 9px 25px rgba(0,0,0,.13);
+
+    box-shadow:
+        0 9px 25px
+        rgba(0,0,0,.13);
 }
 
 .event-card.hide{
@@ -218,84 +635,180 @@ body{
 
 .event-badge{
     display:inline-block;
+
     padding:7px 12px;
-    background:#eee;
+
+    background:#eaf4f0;
+
+    color:var(--green);
+
     border-radius:20px;
+
     font-size:12px;
-    font-weight:bold;
+
+    font-weight:800;
+
     margin-bottom:10px;
 }
 
 .event-card h3{
     font-size:21px;
+
     line-height:1.4;
+
     margin:8px 0 16px;
 }
 
 .event-detail{
     margin:10px 0;
+
     line-height:1.6;
 }
 
 .event-description{
     line-height:1.7;
+
     margin-top:15px;
+
+    color:#555;
 }
 
 .event-actions{
     display:flex;
+
     flex-wrap:wrap;
+
     gap:9px;
+
     margin-top:18px;
 }
 
 .event-btn{
-    display:inline-block;
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
     padding:11px 15px;
+
     border-radius:9px;
+
     background:#eee;
+
     color:#222;
+
     text-decoration:none;
+
     font-weight:bold;
+
     font-size:14px;
 }
 
-.event-btn:hover{
-    background:#ddd;
+.event-btn.primary{
+    background:var(--green);
+
+    color:#fff;
 }
 
-/* EMPTY */
+.event-btn.gold{
+    background:#fff7d7;
+
+    color:#765e00;
+}
+
+.event-btn:hover{
+    opacity:.9;
+}
+
+/* =========================================================
+   EVENT STATUS
+========================================================= */
+
+.event-status{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    margin-top:4px;
+
+    color:#777;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
 .no-results{
     display:none;
+
     text-align:center;
+
     background:#fff;
+
     border-radius:16px;
+
     padding:30px;
+
     margin-top:20px;
+
+    box-shadow:var(--shadow);
 }
 
 .no-results.show{
     display:block;
 }
 
-/* NOTICE */
-.notice{
-    margin-top:45px;
-    background:#fff;
-    border-radius:20px;
-    padding:30px 22px;
-    text-align:center;
-    line-height:1.8;
-    box-shadow:0 5px 18px rgba(0,0,0,.08);
+.no-results h3{
+    margin-top:0;
 }
 
-/* CTA */
+/* =========================================================
+   NOTICE
+========================================================= */
+
+.notice{
+    margin-top:45px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:30px 22px;
+
+    text-align:center;
+
+    line-height:1.8;
+
+    box-shadow:var(--shadow);
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
 .join-cta{
     margin-top:35px;
-    background:#222;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            #111
+        );
+
     color:#fff;
+
     border-radius:20px;
+
     padding:38px 22px;
+
     text-align:center;
 }
 
@@ -305,29 +818,101 @@ body{
 
 .join-cta p{
     max-width:700px;
+
     margin:10px auto 22px;
+
     line-height:1.7;
 }
 
 .join-cta a{
     display:inline-block;
+
     background:#fff;
-    color:#222;
+
+    color:var(--green);
+
     padding:13px 22px;
+
     border-radius:9px;
+
     text-decoration:none;
+
     font-weight:bold;
 }
 
-/* MOBILE */
+/* =========================================================
+   FLOATING BUTTONS
+========================================================= */
+
+.floating-actions{
+    position:fixed;
+
+    right:15px;
+
+    bottom:18px;
+
+    z-index:999;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:9px;
+}
+
+.float-btn{
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    border:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--green);
+
+    color:#fff;
+
+    box-shadow:
+        0 7px 20px
+        rgba(0,0,0,.2);
+
+    text-decoration:none;
+
+    font-size:20px;
+}
+
+.float-btn.back{
+    background:#222;
+
+    display:none;
+}
+
+.float-btn.back.show{
+    display:flex;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media(max-width:700px){
 
     .events-page{
-        padding:20px 12px 60px;
+        padding:
+            18px
+            11px
+            75px;
     }
 
     .events-hero{
         padding:32px 16px;
+
         border-radius:19px;
     }
 
@@ -339,8 +924,40 @@ body{
         font-size:14px;
     }
 
+    .ward-selector-grid{
+        grid-template-columns:1fr;
+    }
+
+    .selector-actions{
+        width:100%;
+    }
+
+    .selector-btn{
+        flex:1;
+    }
+
+    .ward-context-top{
+        gap:10px;
+    }
+
+    .ward-context h2{
+        font-size:18px;
+    }
+
+    .ward-context-actions{
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+    }
+
+    .context-btn{
+        width:100%;
+        text-align:center;
+    }
+
     .countdown{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
     .count-box strong{
@@ -358,389 +975,906 @@ body{
     .section-heading h2{
         font-size:25px;
     }
+
+    .result-bar{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
 }
-</style></head><body><main class="events-page"><!-- HERO --><section class="events-hero"><div class="badge">IMOLE 2027 • EVENTS & ACTIVITIES</div>
 
-<h1>Campaign Events</h1>
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
 
-<p>
-    Follow meetings, ward activities, stakeholder engagements,
-    community visits and other activities of
-    <strong>Hon. Nurudeen Abayomi Sadeeq</strong>
-    and the IMOLE 2027 movement.
-</p>
+@media(prefers-reduced-motion:reduce){
 
-</section><!-- NEXT EVENT --><section class="next-event"><h2>📅 Next Campaign Event</h2>
+    *,
+    *::before,
+    *::after{
+        scroll-behavior:auto !important;
+        transition:none !important;
+        animation:none !important;
+    }
 
-<div class="next-title" id="nextEventTitle">
-    IMOLE 2027 Campaign Activity
-</div>
+}
 
-<div class="next-date" id="nextEventDate">
-    Event details will be announced soon.
-</div>
+</style>
 
-<div class="countdown">
+</head>
 
-    <div class="count-box">
-        <strong id="days">00</strong>
-        <span>DAYS</span>
+<body>
+
+<main class="events-page">
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="events-hero">
+
+    <div class="badge">
+        IMOLE 2027 • EVENTS & ACTIVITIES
     </div>
 
-    <div class="count-box">
-        <strong id="hours">00</strong>
-        <span>HOURS</span>
-    </div>
+    <h1>Campaign Events</h1>
 
-    <div class="count-box">
-        <strong id="minutes">00</strong>
-        <span>MINUTES</span>
-    </div>
-
-    <div class="count-box">
-        <strong id="seconds">00</strong>
-        <span>SECONDS</span>
-    </div>
-
-</div>
-
-</section><!-- QUICK INFORMATION --><section class="info-grid"><div class="info-card">
-    <div class="info-icon">📍</div>
-    <h3>Ward Activities</h3>
     <p>
-        Follow IMOLE 2027 activities across the six wards
-        of Ojo Constituency II.
+        Follow meetings, ward activities,
+        stakeholder engagements,
+        community visits and other activities
+        of <strong>Hon. Nurudeen Abayomi Sadeeq</strong>
+        and the IMOLE 2027 movement.
     </p>
-</div>
 
-<div class="info-card">
-    <div class="info-icon">🤝</div>
-    <h3>Stakeholder Meetings</h3>
+</section>
+
+
+<!-- =====================================================
+     MY WARD CONTEXT
+===================================================== -->
+
+<section
+    class="ward-context"
+    id="wardContext"
+    aria-live="polite">
+
+    <div class="ward-context-top">
+
+        <div class="ward-icon">
+            📍
+        </div>
+
+        <div>
+
+            <h2 id="wardContextTitle">
+                My Ward Events
+            </h2>
+
+            <p id="wardContextText">
+                Showing events and activities
+                for your selected ward.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="ward-context-actions">
+
+        <a
+            id="backToMyWard"
+            class="context-btn primary"
+            href="./index.html#my-ward">
+            ← My Ward
+        </a>
+
+        <a
+            id="wardPollingLink"
+            class="context-btn"
+            href="./polling-units.html">
+            🗳️ Polling Units
+        </a>
+
+        <a
+            id="wardCommunityLink"
+            class="context-btn"
+            href="./community.html">
+            📝 Report Need
+        </a>
+
+        <a
+            id="wardNewsLink"
+            class="context-btn"
+            href="./news.html">
+            📰 Ward News
+        </a>
+
+        <button
+            type="button"
+            class="context-btn gold"
+            id="shareWardBtn">
+            📤 Share
+        </button>
+
+        <button
+            type="button"
+            class="context-btn"
+            id="copyWardBtn">
+            🔗 Copy Link
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WARD SELECTOR
+===================================================== -->
+
+<section class="ward-selector">
+
+    <div class="ward-selector-grid">
+
+        <div>
+
+            <label for="wardSelect">
+                View Events by Ward
+            </label>
+
+            <select
+                id="wardSelect"
+                class="ward-select">
+
+                <option value="">
+                    All Wards
+                </option>
+
+                <option value="Ilogbo">
+                    Ilogbo Ward — 80 PUs
+                </option>
+
+                <option value="Irewe">
+                    Irewe Ward — 9 PUs
+                </option>
+
+                <option value="Ijanikin">
+                    Ijanikin Ward — 43 PUs
+                </option>
+
+                <option value="Etegbin">
+                    Etegbin Ward — 22 PUs
+                </option>
+
+                <option value="Idoluwo">
+                    Idoluwo Ward — 8 PUs
+                </option>
+
+                <option value="Tafi">
+                    Tafi Ward — 8 PUs
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="selector-actions">
+
+            <button
+                type="button"
+                id="showAllBtn"
+                class="selector-btn primary">
+                All Wards
+            </button>
+
+            <button
+                type="button"
+                id="sharePageBtn"
+                class="selector-btn">
+                📤 Share
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     NEXT EVENT
+===================================================== -->
+
+<section class="next-event">
+
+    <h2>
+        📅 Next Campaign Event
+    </h2>
+
+    <div
+        class="next-title"
+        id="nextEventTitle">
+        IMOLE 2027 Campaign Activity
+    </div>
+
+    <div
+        class="next-date"
+        id="nextEventDate">
+
+        Event details will be announced soon.
+
+    </div>
+
+    <div class="countdown">
+
+        <div class="count-box">
+            <strong id="days">00</strong>
+            <span>DAYS</span>
+        </div>
+
+        <div class="count-box">
+            <strong id="hours">00</strong>
+            <span>HOURS</span>
+        </div>
+
+        <div class="count-box">
+            <strong id="minutes">00</strong>
+            <span>MINUTES</span>
+        </div>
+
+        <div class="count-box">
+            <strong id="seconds">00</strong>
+            <span>SECONDS</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     QUICK INFORMATION
+===================================================== -->
+
+<section class="info-grid">
+
+    <div class="info-card">
+
+        <div class="info-icon">📍</div>
+
+        <h3>Ward Activities</h3>
+
+        <p>
+            Follow IMOLE 2027 activities
+            across the six wards of
+            Ojo Constituency II.
+        </p>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">🤝</div>
+
+        <h3>Stakeholder Meetings</h3>
+
+        <p>
+            Engagements with community leaders,
+            stakeholders, women, youths
+            and supporters.
+        </p>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">🏘️</div>
+
+        <h3>Community Visits</h3>
+
+        <p>
+            Connecting directly with communities
+            and listening to the people of
+            Ojo Constituency II.
+        </p>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">📢</div>
+
+        <h3>Campaign Activities</h3>
+
+        <p>
+            Stay updated with campaign programmes
+            and important IMOLE 2027 announcements.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECTION HEADING
+===================================================== -->
+
+<div class="section-heading">
+
+    <h2>
+        Upcoming Activities
+    </h2>
+
     <p>
-        Engagements with community leaders, stakeholders,
-        women, youths and supporters.
+        Search or filter campaign activities below.
     </p>
-</div>
-
-<div class="info-card">
-    <div class="info-icon">🏘️</div>
-    <h3>Community Visits</h3>
-    <p>
-        Connecting directly with communities and listening
-        to the people of Ojo Constituency II.
-    </p>
-</div>
-
-<div class="info-card">
-    <div class="info-icon">📢</div>
-    <h3>Campaign Activities</h3>
-    <p>
-        Stay updated with campaign programmes and
-        important IMOLE 2027 announcements.
-    </p>
-</div>
-
-</section><!-- EVENTS --><div class="section-heading"><h2>Upcoming Activities</h2>
-
-<p>
-    Search or filter campaign activities below.
-</p>
-
-</div><!-- SEARCH --><section class="event-tools"><input
-    type="search"
-    id="eventSearch"
-    class="search-box"
-    placeholder="🔎 Search events, wards, locations..."
-    aria-label="Search campaign events"
->
-
-<div class="filters">
-
-    <button class="filter active" data-filter="all">
-        All
-    </button>
-
-    <button class="filter" data-filter="ward">
-        Ward
-    </button>
-
-    <button class="filter" data-filter="community">
-        Community
-    </button>
-
-    <button class="filter" data-filter="stakeholder">
-        Stakeholder
-    </button>
-
-    <button class="filter" data-filter="campaign">
-        Campaign
-    </button>
 
 </div>
 
-</section><div class="event-grid" id="eventGrid"><!-- ILOGBO -->
-<article class="event-card"
-         data-category="ward"
-         data-search="ilogbo ward meeting imoile 2027">
 
-    <span class="event-badge">WARD ACTIVITY</span>
+<!-- =====================================================
+     SEARCH & FILTER
+===================================================== -->
 
-    <h3>📍 Ilogbo Ward Engagement</h3>
+<section class="event-tools">
+
+    <input
+        type="search"
+        id="eventSearch"
+        class="search-box"
+        placeholder="🔎 Search events, wards, locations..."
+        aria-label="Search campaign events"
+        autocomplete="off"
+    >
+
+    <div class="filters">
+
+        <button
+            type="button"
+            class="filter active"
+            data-filter="all">
+            All
+        </button>
+
+        <button
+            type="button"
+            class="filter"
+            data-filter="ward">
+            Ward
+        </button>
+
+        <button
+            type="button"
+            class="filter"
+            data-filter="community">
+            Community
+        </button>
+
+        <button
+            type="button"
+            class="filter"
+            data-filter="stakeholder">
+            Stakeholder
+        </button>
+
+        <button
+            type="button"
+            class="filter"
+            data-filter="campaign">
+            Campaign
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     RESULT BAR
+===================================================== -->
+
+<div class="result-bar">
+
+    <div
+        class="result-count"
+        id="resultCount">
+        Showing 9 activities
+    </div>
+
+    <div
+        class="active-context"
+        id="activeContext">
+        All wards
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     EVENTS
+===================================================== -->
+
+<div
+    class="event-grid"
+    id="eventGrid">
+
+
+<!-- =====================================================
+     ILOGBO
+===================================================== -->
+
+<article
+    class="event-card"
+    data-category="ward"
+    data-ward="Ilogbo"
+    data-search="ilogbo ward meeting imoile 2027">
+
+    <span class="event-badge">
+        WARD ACTIVITY
+    </span>
+
+    <h3>
+        📍 Ilogbo Ward Engagement
+    </h3>
 
     <div class="event-detail">
-        📅 <strong>Date:</strong> To be announced
+        📅 <strong>Date:</strong>
+        To be announced
     </div>
 
     <div class="event-detail">
-        📍 <strong>Location:</strong> Ilogbo Ward
+        📍 <strong>Location:</strong>
+        Ilogbo Ward
+    </div>
+
+    <div class="event-status">
+        ● Awaiting official confirmation
     </div>
 
     <p class="event-description">
-        IMOLE 2027 engagement with residents, supporters,
-        community stakeholders, women and youths in Ilogbo Ward.
+        IMOLE 2027 engagement with residents,
+        supporters, community stakeholders,
+        women and youths in Ilogbo Ward.
     </p>
 
     <div class="event-actions">
-        <a href="./contact.html" class="event-btn">
-            Contact Team
+
+        <a
+            href="./polling-units.html?ward=Ilogbo"
+            class="event-btn primary">
+            🗳️ Ward PUs
         </a>
+
+        <a
+            href="./community.html?ward=Ilogbo"
+            class="event-btn">
+            📝 Report Need
+        </a>
+
     </div>
 
 </article>
 
 
-<!-- IREWE -->
-<article class="event-card"
-         data-category="ward"
-         data-search="irewe ward meeting imoile 2027">
+<!-- =====================================================
+     IREWE
+===================================================== -->
 
-    <span class="event-badge">WARD ACTIVITY</span>
+<article
+    class="event-card"
+    data-category="ward"
+    data-ward="Irewe"
+    data-search="irewe ward meeting imoile 2027">
 
-    <h3>📍 Irewe Ward Engagement</h3>
+    <span class="event-badge">
+        WARD ACTIVITY
+    </span>
+
+    <h3>
+        📍 Irewe Ward Engagement
+    </h3>
 
     <div class="event-detail">
-        📅 <strong>Date:</strong> To be announced
+        📅 <strong>Date:</strong>
+        To be announced
     </div>
 
     <div class="event-detail">
-        📍 <strong>Location:</strong> Irewe Ward
+        📍 <strong>Location:</strong>
+        Irewe Ward
+    </div>
+
+    <div class="event-status">
+        ● Awaiting official confirmation
     </div>
 
     <p class="event-description">
-        Community engagement and mobilisation activities
-        across Irewe Ward.
+        Community engagement and mobilisation
+        activities across Irewe Ward.
     </p>
 
     <div class="event-actions">
-        <a href="./contact.html" class="event-btn">
-            Contact Team
+
+        <a
+            href="./polling-units.html?ward=Irewe"
+            class="event-btn primary">
+            🗳️ Ward PUs
         </a>
+
+        <a
+            href="./community.html?ward=Irewe"
+            class="event-btn">
+            📝 Report Need
+        </a>
+
     </div>
 
 </article>
 
 
-<!-- IJANIKIN -->
-<article class="event-card"
-         data-category="ward"
-         data-search="ijanikin ward meeting imoile 2027">
+<!-- =====================================================
+     IJANIKIN
+===================================================== -->
 
-    <span class="event-badge">WARD ACTIVITY</span>
+<article
+    class="event-card"
+    data-category="ward"
+    data-ward="Ijanikin"
+    data-search="ijanikin ward meeting imoile 2027">
 
-    <h3>📍 Ijanikin Ward Engagement</h3>
+    <span class="event-badge">
+        WARD ACTIVITY
+    </span>
+
+    <h3>
+        📍 Ijanikin Ward Engagement
+    </h3>
 
     <div class="event-detail">
-        📅 <strong>Date:</strong> To be announced
+        📅 <strong>Date:</strong>
+        To be announced
     </div>
 
     <div class="event-detail">
-        📍 <strong>Location:</strong> Ijanikin Ward
+        📍 <strong>Location:</strong>
+        Ijanikin Ward
+    </div>
+
+    <div class="event-status">
+        ● Awaiting official confirmation
     </div>
 
     <p class="event-description">
-        IMOLE 2027 ward engagement focused on listening
-        to residents and strengthening grassroots participation.
+        IMOLE 2027 ward engagement focused
+        on listening to residents and strengthening
+        grassroots participation.
     </p>
 
     <div class="event-actions">
-        <a href="./contact.html" class="event-btn">
-            Contact Team
+
+        <a
+            href="./polling-units.html?ward=Ijanikin"
+            class="event-btn primary">
+            🗳️ Ward PUs
         </a>
+
+        <a
+            href="./community.html?ward=Ijanikin"
+            class="event-btn">
+            📝 Report Need
+        </a>
+
     </div>
 
 </article>
 
 
-<!-- ETEGBIN -->
-<article class="event-card"
-         data-category="ward"
-         data-search="etegbin ward meeting imoile 2027">
+<!-- =====================================================
+     ETEGBIN
+===================================================== -->
 
-    <span class="event-badge">WARD ACTIVITY</span>
+<article
+    class="event-card"
+    data-category="ward"
+    data-ward="Etegbin"
+    data-search="etegbin ward meeting imoile 2027">
 
-    <h3>📍 Etegbin Ward Engagement</h3>
+    <span class="event-badge">
+        WARD ACTIVITY
+    </span>
+
+    <h3>
+        📍 Etegbin Ward Engagement
+    </h3>
 
     <div class="event-detail">
-        📅 <strong>Date:</strong> To be announced
+        📅 <strong>Date:</strong>
+        To be announced
     </div>
 
     <div class="event-detail">
-        📍 <strong>Location:</strong> Etegbin Ward
+        📍 <strong>Location:</strong>
+        Etegbin Ward
+    </div>
+
+    <div class="event-status">
+        ● Awaiting official confirmation
     </div>
 
     <p class="event-description">
-        Grassroots engagement with residents, youths,
-        women and community stakeholders in Etegbin Ward.
+        Grassroots engagement with residents,
+        youths, women and community stakeholders
+        in Etegbin Ward.
     </p>
 
     <div class="event-actions">
-        <a href="./contact.html" class="event-btn">
-            Contact Team
+
+        <a
+            href="./polling-units.html?ward=Etegbin"
+            class="event-btn primary">
+            🗳️ Ward PUs
         </a>
+
+        <a
+            href="./community.html?ward=Etegbin"
+            class="event-btn">
+            📝 Report Need
+        </a>
+
     </div>
 
 </article>
 
 
-<!-- IDOLOWU -->
-<article class="event-card"
-         data-category="ward"
-         data-search="idolowu ward meeting imoile 2027">
+<!-- =====================================================
+     IDOLUWO
+===================================================== -->
 
-    <span class="event-badge">WARD ACTIVITY</span>
+<article
+    class="event-card"
+    data-category="ward"
+    data-ward="Idoluwo"
+    data-search="idolowu idoluwo ward meeting imoile 2027">
 
-    <h3>📍 Idolowu Ward Engagement</h3>
+    <span class="event-badge">
+        WARD ACTIVITY
+    </span>
+
+    <h3>
+        📍 Idoluwo Ward Engagement
+    </h3>
 
     <div class="event-detail">
-        📅 <strong>Date:</strong> To be announced
+        📅 <strong>Date:</strong>
+        To be announced
     </div>
 
     <div class="event-detail">
-        📍 <strong>Location:</strong> Idolowu Ward
+        📍 <strong>Location:</strong>
+        Idoluwo Ward
+    </div>
+
+    <div class="event-status">
+        ● Awaiting official confirmation
     </div>
 
     <p class="event-description">
-        Community outreach and grassroots engagement
-        across Idolowu Ward.
+        Community outreach and grassroots
+        engagement across Idoluwo Ward.
     </p>
 
     <div class="event-actions">
-        <a href="./contact.html" class="event-btn">
-            Contact Team
+
+        <a
+            href="./polling-units.html?ward=Idoluwo"
+            class="event-btn primary">
+            🗳️ Ward PUs
         </a>
+
+        <a
+            href="./community.html?ward=Idoluwo"
+            class="event-btn">
+            📝 Report Need
+        </a>
+
     </div>
 
 </article>
 
 
-<!-- TAFI -->
-<article class="event-card"
-         data-category="ward"
-         data-search="tafi ward meeting imoile 2027">
+<!-- =====================================================
+     TAFI
+===================================================== -->
 
-    <span class="event-badge">WARD ACTIVITY</span>
+<article
+    class="event-card"
+    data-category="ward"
+    data-ward="Tafi"
+    data-search="tafi taffi ward meeting imoile 2027">
 
-    <h3>📍 Tafi Ward Engagement</h3>
+    <span class="event-badge">
+        WARD ACTIVITY
+    </span>
+
+    <h3>
+        📍 Tafi Ward Engagement
+    </h3>
 
     <div class="event-detail">
-        📅 <strong>Date:</strong> To be announced
+        📅 <strong>Date:</strong>
+        To be announced
     </div>
 
     <div class="event-detail">
-        📍 <strong>Location:</strong> Tafi Ward
+        📍 <strong>Location:</strong>
+        Tafi Ward
+    </div>
+
+    <div class="event-status">
+        ● Awaiting official confirmation
     </div>
 
     <p class="event-description">
-        IMOLE 2027 grassroots engagement and mobilisation
-        across Tafi Ward.
+        IMOLE 2027 grassroots engagement
+        and mobilisation across Tafi Ward.
     </p>
 
     <div class="event-actions">
-        <a href="./contact.html" class="event-btn">
-            Contact Team
+
+        <a
+            href="./polling-units.html?ward=Tafi"
+            class="event-btn primary">
+            🗳️ Ward PUs
         </a>
+
+        <a
+            href="./community.html?ward=Tafi"
+            class="event-btn">
+            📝 Report Need
+        </a>
+
     </div>
 
 </article>
 
 
-<!-- STAKEHOLDER -->
-<article class="event-card"
-         data-category="stakeholder"
-         data-search="stakeholder meeting leaders imoile 2027">
+<!-- =====================================================
+     STAKEHOLDER
+===================================================== -->
 
-    <span class="event-badge">STAKEHOLDER</span>
+<article
+    class="event-card"
+    data-category="stakeholder"
+    data-ward="all"
+    data-search="stakeholder meeting leaders imoile 2027 ojo constituency ii">
 
-    <h3>🤝 Stakeholder Engagement</h3>
+    <span class="event-badge">
+        STAKEHOLDER
+    </span>
+
+    <h3>
+        🤝 Stakeholder Engagement
+    </h3>
 
     <div class="event-detail">
-        📅 <strong>Date:</strong> To be announced
+        📅 <strong>Date:</strong>
+        To be announced
     </div>
 
     <div class="event-detail">
-        📍 <strong>Location:</strong> Ojo Constituency II
+        📍 <strong>Location:</strong>
+        Ojo Constituency II
+    </div>
+
+    <div class="event-status">
+        ● Awaiting official confirmation
     </div>
 
     <p class="event-description">
-        Engagement with community leaders, stakeholders,
-        political leaders and supporters of the IMOLE 2027 movement.
+        Engagement with community leaders,
+        stakeholders, political leaders and
+        supporters of the IMOLE 2027 movement.
     </p>
 
     <div class="event-actions">
-        <a href="./contact.html" class="event-btn">
+
+        <a
+            href="./contact.html"
+            class="event-btn primary">
             Contact Team
         </a>
+
     </div>
 
 </article>
 
 
-<!-- COMMUNITY -->
-<article class="event-card"
-         data-category="community"
-         data-search="community visit outreach ojo constituency two imoile 2027">
+<!-- =====================================================
+     COMMUNITY
+===================================================== -->
 
-    <span class="event-badge">COMMUNITY</span>
+<article
+    class="event-card"
+    data-category="community"
+    data-ward="all"
+    data-search="community visit outreach ojo constituency two imoile 2027">
 
-    <h3>🏘️ Community Outreach</h3>
+    <span class="event-badge">
+        COMMUNITY
+    </span>
+
+    <h3>
+        🏘️ Community Outreach
+    </h3>
 
     <div class="event-detail">
-        📅 <strong>Date:</strong> To be announced
+        📅 <strong>Date:</strong>
+        To be announced
     </div>
 
     <div class="event-detail">
-        📍 <strong>Location:</strong> Ojo Constituency II
+        📍 <strong>Location:</strong>
+        Ojo Constituency II
+    </div>
+
+    <div class="event-status">
+        ● Awaiting official confirmation
     </div>
 
     <p class="event-description">
-        Direct community engagement designed to hear from
-        residents and discuss practical development priorities.
+        Direct community engagement designed
+        to hear from residents and discuss
+        practical development priorities.
     </p>
 
     <div class="event-actions">
-        <a href="./contact.html" class="event-btn">
-            Contact Team
+
+        <a
+            href="./community.html"
+            class="event-btn primary">
+            📝 Community Need
         </a>
+
     </div>
 
 </article>
 
 
-<!-- CAMPAIGN -->
-<article class="event-card"
-         data-category="campaign"
-         data-search="imoile 2027 campaign rally mobilisation campaign">
+<!-- =====================================================
+     CAMPAIGN
+===================================================== -->
 
-    <span class="event-badge">CAMPAIGN</span>
+<article
+    class="event-card"
+    data-category="campaign"
+    data-ward="all"
+    data-search="imoile 2027 campaign rally mobilisation campaign ojo">
 
-    <h3>📢 IMOLE 2027 Campaign Activity</h3>
+    <span class="event-badge">
+        CAMPAIGN
+    </span>
+
+    <h3>
+        📢 IMOLE 2027 Campaign Activity
+    </h3>
 
     <div class="event-detail">
-        📅 <strong>Date:</strong> To be announced
+        📅 <strong>Date:</strong>
+        To be announced
     </div>
 
     <div class="event-detail">
-        📍 <strong>Location:</strong> Ojo Constituency II
+        📍 <strong>Location:</strong>
+        Ojo Constituency II
+    </div>
+
+    <div class="event-status">
+        ● Awaiting official confirmation
     </div>
 
     <p class="event-description">
@@ -749,133 +1883,717 @@ body{
     </p>
 
     <div class="event-actions">
-        <a href="./join.html" class="event-btn">
+
+        <a
+            href="./join.html"
+            class="event-btn primary">
             Join IMOLE
         </a>
+
     </div>
 
 </article>
 
-</div><div class="no-results" id="noResults"><h3>🔎 No Events Found</h3>
 
-<p>
-    Try another search word or select a different category.
-</p>
+</div>
 
-</div><!-- NOTICE --><section class="notice"><h2>📢 Event Updates</h2>
 
-<p>
-    Event dates, venues and programme details will be
-    published on this page as they are officially confirmed.
-    Please check this page regularly for updates.
-</p>
+<!-- =====================================================
+     NO RESULTS
+===================================================== -->
 
-</section><!-- CTA --><section class="join-cta"><h2>🤝 Be Part of IMOLE 2027</h2>
+<div
+    class="no-results"
+    id="noResults">
 
-<p>
-    Join the movement for Service, Development and Accountability
-    in Ojo Constituency II.
-</p>
+    <h3>
+        🔎 No Events Found
+    </h3>
 
-<a href="./join.html">
-    Join IMOLE 2027
-</a>
+    <p>
+        No event matches your current
+        ward, category or search selection.
+    </p>
 
-</section></main><script>
-/* =====================================================
-   EVENTS SEARCH & FILTER
-===================================================== */
+    <button
+        type="button"
+        class="selector-btn primary"
+        id="resetFiltersBtn">
+        Reset Filters
+    </button>
+
+</div>
+
+
+<!-- =====================================================
+     NOTICE
+===================================================== -->
+
+<section class="notice">
+
+    <h2>
+        📢 Event Updates
+    </h2>
+
+    <p>
+        Event dates, venues and programme details
+        will be published on this page as they are
+        officially confirmed. Please check this page
+        regularly for updates.
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="join-cta">
+
+    <h2>
+        🤝 Be Part of IMOLE 2027
+    </h2>
+
+    <p>
+        Join the movement for
+        <strong>
+            Service, Development and Accountability
+        </strong>
+        in Ojo Constituency II.
+    </p>
+
+    <a href="./join.html">
+        Join IMOLE 2027
+    </a>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FLOATING ACTIONS
+===================================================== -->
+
+<div class="floating-actions">
+
+    <a
+        class="float-btn"
+        href="https://wa.me/2348033002235"
+        target="_blank"
+        rel="noopener"
+        aria-label="Contact IMOLE 2027 on WhatsApp">
+        💬
+    </a>
+
+    <button
+        type="button"
+        class="float-btn back"
+        id="backTop"
+        aria-label="Back to top">
+        ↑
+    </button>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   IMOLE 2027 EVENTS ENGINE
+========================================================= */
 
 (function(){
 
-    const searchInput =
-        document.getElementById("eventSearch");
-
-    const filters =
-        document.querySelectorAll(".filter");
-
-    const cards =
-        document.querySelectorAll(".event-card");
-
-    const noResults =
-        document.getElementById("noResults");
-
-    let activeFilter = "all";
+"use strict";
 
 
-    function filterEvents(){
+/* =========================================================
+   CONFIGURATION
+========================================================= */
 
-        const search =
-            searchInput.value
-                .toLowerCase()
-                .trim();
+const WHATSAPP_NUMBER =
+    "2348033002235";
 
-        let visible = 0;
+const WARDS = {
 
-        cards.forEach(function(card){
+    Ilogbo:{
+        label:"Ilogbo Ward",
+        units:80
+    },
 
-            const category =
-                card.dataset.category || "";
+    Irewe:{
+        label:"Irewe Ward",
+        units:9
+    },
 
-            const text =
-                (
-                    card.dataset.search +
-                    " " +
-                    card.textContent
-                ).toLowerCase();
+    Ijanikin:{
+        label:"Ijanikin Ward",
+        units:43
+    },
 
-            const matchesSearch =
-                !search ||
-                text.includes(search);
+    Etegbin:{
+        label:"Etegbin Ward",
+        units:22
+    },
 
-            const matchesFilter =
-                activeFilter === "all" ||
-                category === activeFilter;
+    Idoluwo:{
+        label:"Idoluwo Ward",
+        units:8
+    },
 
-            if(matchesSearch && matchesFilter){
-
-                card.classList.remove("hide");
-
-                visible++;
-
-            }else{
-
-                card.classList.add("hide");
-
-            }
-
-        });
-
-        if(visible === 0){
-
-            noResults.classList.add("show");
-
-        }else{
-
-            noResults.classList.remove("show");
-
-        }
-
+    Tafi:{
+        label:"Tafi Ward",
+        units:8
     }
 
+};
 
-    searchInput.addEventListener(
-        "input",
-        filterEvents
+
+/* =========================================================
+   WARD ALIASES
+========================================================= */
+
+function canonicalWard(value){
+
+    if(!value){
+        return "";
+    }
+
+    const v =
+        decodeURIComponent(String(value))
+        .trim()
+        .toLowerCase();
+
+    const aliases = {
+
+        "ilogbo":"Ilogbo",
+        "ilogbo ward":"Ilogbo",
+        "ward f":"Ilogbo",
+        "f":"Ilogbo",
+
+        "irewe":"Irewe",
+        "irewe ward":"Irewe",
+        "ward g":"Irewe",
+        "g":"Irewe",
+
+        "ijanikin":"Ijanikin",
+        "ijanikin ward":"Ijanikin",
+        "ward d":"Ijanikin",
+        "d":"Ijanikin",
+
+        "etegbin":"Etegbin",
+        "etegbin ward":"Etegbin",
+        "ward i":"Etegbin",
+        "i":"Etegbin",
+
+        "idoluwo":"Idoluwo",
+        "idoluwo ward":"Idoluwo",
+        "idolowu":"Idoluwo",
+        "idolowu ward":"Idoluwo",
+        "ward j":"Idoluwo",
+        "j":"Idoluwo",
+
+        "tafi":"Tafi",
+        "tafi ward":"Tafi",
+        "taffi":"Tafi",
+        "taffi ward":"Tafi"
+
+    };
+
+    return aliases[v] || "";
+
+}
+
+
+/* =========================================================
+   URL HELPERS
+========================================================= */
+
+function getUrlWard(){
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    return canonicalWard(
+        params.get("ward")
+    );
+
+}
+
+
+function buildWardUrl(page,ward){
+
+    const cleanWard =
+        canonicalWard(ward);
+
+    if(!cleanWard){
+        return "./" + page;
+    }
+
+    return "./" +
+        page +
+        "?ward=" +
+        encodeURIComponent(cleanWard);
+
+}
+
+
+function absoluteWardUrl(page,ward){
+
+    return new URL(
+        buildWardUrl(page,ward),
+        window.location.href
+    ).href;
+
+}
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const searchInput =
+    document.getElementById(
+        "eventSearch"
+    );
+
+const filters =
+    document.querySelectorAll(
+        ".filter"
+    );
+
+const cards =
+    document.querySelectorAll(
+        ".event-card"
+    );
+
+const noResults =
+    document.getElementById(
+        "noResults"
+    );
+
+const resultCount =
+    document.getElementById(
+        "resultCount"
+    );
+
+const activeContext =
+    document.getElementById(
+        "activeContext"
+    );
+
+const wardSelect =
+    document.getElementById(
+        "wardSelect"
+    );
+
+const showAllBtn =
+    document.getElementById(
+        "showAllBtn"
+    );
+
+const sharePageBtn =
+    document.getElementById(
+        "sharePageBtn"
+    );
+
+const wardContext =
+    document.getElementById(
+        "wardContext"
+    );
+
+const wardContextTitle =
+    document.getElementById(
+        "wardContextTitle"
+    );
+
+const wardContextText =
+    document.getElementById(
+        "wardContextText"
+    );
+
+const backToMyWard =
+    document.getElementById(
+        "backToMyWard"
+    );
+
+const wardPollingLink =
+    document.getElementById(
+        "wardPollingLink"
+    );
+
+const wardCommunityLink =
+    document.getElementById(
+        "wardCommunityLink"
+    );
+
+const wardNewsLink =
+    document.getElementById(
+        "wardNewsLink"
+    );
+
+const shareWardBtn =
+    document.getElementById(
+        "shareWardBtn"
+    );
+
+const copyWardBtn =
+    document.getElementById(
+        "copyWardBtn"
+    );
+
+const resetFiltersBtn =
+    document.getElementById(
+        "resetFiltersBtn"
     );
 
 
-    filters.forEach(function(button){
+/* =========================================================
+   STATE
+========================================================= */
+
+let selectedWard =
+    getUrlWard();
+
+let activeFilter =
+    "all";
+
+
+/* =========================================================
+   UPDATE URL
+========================================================= */
+
+function updateUrl(ward){
+
+    const url =
+        new URL(
+            window.location.href
+        );
+
+    if(ward){
+
+        url.searchParams.set(
+            "ward",
+            ward
+        );
+
+    }else{
+
+        url.searchParams.delete(
+            "ward"
+        );
+
+    }
+
+    window.history.replaceState(
+        {},
+        "",
+        url.pathname +
+        (url.search ? url.search : "") +
+        url.hash
+    );
+
+}
+
+
+/* =========================================================
+   WARD CONTEXT
+========================================================= */
+
+function updateWardContext(){
+
+    if(!selectedWard){
+
+        wardContext.classList.remove(
+            "show"
+        );
+
+        activeContext.textContent =
+            "All wards";
+
+        wardSelect.value = "";
+
+        return;
+    }
+
+
+    const ward =
+        WARDS[selectedWard];
+
+    wardContext.classList.add(
+        "show"
+    );
+
+    wardContextTitle.textContent =
+        ward.label +
+        " Events";
+
+    wardContextText.textContent =
+        "Showing campaign activities connected to " +
+        ward.label +
+        ". This ward has " +
+        ward.units +
+        " polling units in the current directory.";
+
+    activeContext.textContent =
+        ward.label;
+
+    wardSelect.value =
+        selectedWard;
+
+
+    backToMyWard.href =
+        "./index.html?ward=" +
+        encodeURIComponent(selectedWard) +
+        "#my-ward";
+
+    wardPollingLink.href =
+        buildWardUrl(
+            "polling-units.html",
+            selectedWard
+        );
+
+    wardCommunityLink.href =
+        buildWardUrl(
+            "community.html",
+            selectedWard
+        );
+
+    wardNewsLink.href =
+        buildWardUrl(
+            "news.html",
+            selectedWard
+        );
+
+}
+
+
+/* =========================================================
+   EVENT FILTER
+========================================================= */
+
+function filterEvents(){
+
+    const search =
+        searchInput.value
+            .toLowerCase()
+            .trim();
+
+    let visible = 0;
+
+
+    cards.forEach(function(card){
+
+        const category =
+            card.dataset.category ||
+            "";
+
+        const cardWard =
+            canonicalWard(
+                card.dataset.ward ||
+                ""
+            );
+
+        const rawSearch =
+            (
+                card.dataset.search ||
+                ""
+            );
+
+        const text =
+            (
+                rawSearch +
+                " " +
+                card.textContent
+            )
+            .toLowerCase();
+
+
+        const matchesSearch =
+            !search ||
+            text.includes(search);
+
+
+        const matchesFilter =
+            activeFilter === "all" ||
+            category === activeFilter;
+
+
+        let matchesWard = true;
+
+
+        if(selectedWard){
+
+            /*
+              Ward-specific cards match only
+              the selected ward.
+
+              General constituency-wide events
+              remain visible.
+            */
+
+            matchesWard =
+                cardWard === selectedWard ||
+                cardWard === "all" ||
+                cardWard === "";
+
+        }
+
+
+        if(
+            matchesSearch &&
+            matchesFilter &&
+            matchesWard
+        ){
+
+            card.classList.remove(
+                "hide"
+            );
+
+            visible++;
+
+        }else{
+
+            card.classList.add(
+                "hide"
+            );
+
+        }
+
+    });
+
+
+    resultCount.textContent =
+        "Showing " +
+        visible +
+        " activit" +
+        (
+            visible === 1
+                ? "y"
+                : "ies"
+        );
+
+
+    if(!visible){
+
+        noResults.classList.add(
+            "show"
+        );
+
+    }else{
+
+        noResults.classList.remove(
+            "show"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   SELECT WARD
+========================================================= */
+
+function selectWard(ward){
+
+    selectedWard =
+        canonicalWard(ward);
+
+    updateUrl(
+        selectedWard
+    );
+
+    updateWardContext();
+
+    filterEvents();
+
+}
+
+
+/* =========================================================
+   WARD SELECT EVENT
+========================================================= */
+
+wardSelect.addEventListener(
+    "change",
+    function(){
+
+        selectWard(
+            this.value
+        );
+
+    }
+);
+
+
+/* =========================================================
+   SHOW ALL
+========================================================= */
+
+showAllBtn.addEventListener(
+    "click",
+    function(){
+
+        selectWard("");
+
+        searchInput.value = "";
+
+        activeFilter = "all";
+
+        filters.forEach(
+            function(btn){
+
+                btn.classList.remove(
+                    "active"
+                );
+
+                if(
+                    btn.dataset.filter ===
+                    "all"
+                ){
+
+                    btn.classList.add(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================================================
+   CATEGORY FILTER
+========================================================= */
+
+filters.forEach(
+    function(button){
 
         button.addEventListener(
             "click",
             function(){
 
-                filters.forEach(function(btn){
-                    btn.classList.remove("active");
-                });
+                filters.forEach(
+                    function(btn){
 
-                button.classList.add("active");
+                        btn.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+                button.classList.add(
+                    "active"
+                );
 
                 activeFilter =
                     button.dataset.filter;
@@ -885,46 +2603,260 @@ body{
             }
         );
 
-    });
+    }
+);
 
-})();
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+searchInput.addEventListener(
+    "input",
+    filterEvents
+);
 
 
-/* =====================================================
+/* =========================================================
+   RESET
+========================================================= */
+
+resetFiltersBtn.addEventListener(
+    "click",
+    function(){
+
+        searchInput.value = "";
+
+        activeFilter = "all";
+
+        filters.forEach(
+            function(btn){
+
+                btn.classList.remove(
+                    "active"
+                );
+
+                if(
+                    btn.dataset.filter ===
+                    "all"
+                ){
+
+                    btn.classList.add(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+
+        filterEvents();
+
+    }
+);
+
+
+/* =========================================================
+   SHARE PAGE
+========================================================= */
+
+async function shareCurrentPage(){
+
+    const wardText =
+        selectedWard
+            ? WARDS[selectedWard].label
+            : "Ojo Constituency II";
+
+    const shareUrl =
+        selectedWard
+            ? absoluteWardUrl(
+                "events.html",
+                selectedWard
+              )
+            : window.location.href;
+
+    const shareText =
+        "IMOLE 2027 Events — " +
+        wardText +
+        "\n\n" +
+        "Follow campaign activities, " +
+        "community engagements and events " +
+        "of Hon. Nurudeen Abayomi Sadeeq.\n\n" +
+        shareUrl;
+
+
+    if(
+        navigator.share
+    ){
+
+        try{
+
+            await navigator.share({
+
+                title:
+                    "IMOLE 2027 Events",
+
+                text:
+                    shareText,
+
+                url:
+                    shareUrl
+
+            });
+
+            return;
+
+        }catch(error){
+
+            if(
+                error &&
+                error.name ===
+                "AbortError"
+            ){
+
+                return;
+
+            }
+
+        }
+
+    }
+
+
+    const whatsappUrl =
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        encodeURIComponent(
+            shareText
+        );
+
+    window.open(
+        whatsappUrl,
+        "_blank",
+        "noopener"
+    );
+
+}
+
+
+sharePageBtn.addEventListener(
+    "click",
+    shareCurrentPage
+);
+
+shareWardBtn.addEventListener(
+    "click",
+    shareCurrentPage
+);
+
+
+/* =========================================================
+   COPY WARD LINK
+========================================================= */
+
+async function copyWardLink(){
+
+    const url =
+        selectedWard
+            ? absoluteWardUrl(
+                "events.html",
+                selectedWard
+              )
+            : window.location.href;
+
+
+    try{
+
+        await navigator.clipboard.writeText(
+            url
+        );
+
+        copyWardBtn.textContent =
+            "✅ Copied!";
+
+        setTimeout(
+            function(){
+
+                copyWardBtn.textContent =
+                    "🔗 Copy Link";
+
+            },
+            1800
+        );
+
+    }catch(error){
+
+        window.prompt(
+            "Copy this link:",
+            url
+        );
+
+    }
+
+}
+
+
+copyWardBtn.addEventListener(
+    "click",
+    copyWardLink
+);
+
+
+/* =========================================================
    NEXT EVENT COUNTDOWN
-===================================================== */
+========================================================= */
 
 (function(){
 
     /*
-      No confirmed event date has been supplied yet.
-      The timer therefore remains at zero until a real
-      event date is entered below.
+      No confirmed event date has been
+      supplied yet.
+
+      Keep this null until an official
+      date/time is confirmed.
 
       Example:
+
       const targetDate =
-      new Date("2026-09-20T10:00:00+01:00");
+          new Date(
+              "2026-09-20T10:00:00+01:00"
+          );
     */
 
-    const targetDate = null;
+    const targetDate =
+        null;
+
 
     const title =
-        document.getElementById("nextEventTitle");
+        document.getElementById(
+            "nextEventTitle"
+        );
 
     const dateText =
-        document.getElementById("nextEventDate");
+        document.getElementById(
+            "nextEventDate"
+        );
 
     const days =
-        document.getElementById("days");
+        document.getElementById(
+            "days"
+        );
 
     const hours =
-        document.getElementById("hours");
+        document.getElementById(
+            "hours"
+        );
 
     const minutes =
-        document.getElementById("minutes");
+        document.getElementById(
+            "minutes"
+        );
 
     const seconds =
-        document.getElementById("seconds");
+        document.getElementById(
+            "seconds"
+        );
 
 
     function update(){
@@ -937,14 +2869,16 @@ body{
             seconds.textContent = "00";
 
             return;
+
         }
 
 
         const now =
-            new Date().getTime();
+            Date.now();
 
         const distance =
-            targetDate.getTime() - now;
+            targetDate.getTime() -
+            now;
 
 
         if(distance <= 0){
@@ -958,51 +2892,87 @@ body{
                 "Event is happening now or has ended.";
 
             return;
+
         }
 
 
         const d =
             Math.floor(
-                distance / (1000 * 60 * 60 * 24)
+                distance /
+                (
+                    1000 *
+                    60 *
+                    60 *
+                    24
+                )
             );
 
         const h =
             Math.floor(
-                (distance /
-                (1000 * 60 * 60)) % 24
+                (
+                    distance /
+                    (
+                        1000 *
+                        60 *
+                        60
+                    )
+                ) % 24
             );
 
         const m =
             Math.floor(
-                (distance /
-                (1000 * 60)) % 60
+                (
+                    distance /
+                    (
+                        1000 *
+                        60
+                    )
+                ) % 60
             );
 
         const s =
             Math.floor(
-                (distance / 1000) % 60
+                (
+                    distance /
+                    1000
+                ) % 60
             );
 
 
         days.textContent =
-            String(d).padStart(2,"0");
+            String(d).padStart(
+                2,
+                "0"
+            );
 
         hours.textContent =
-            String(h).padStart(2,"0");
+            String(h).padStart(
+                2,
+                "0"
+            );
 
         minutes.textContent =
-            String(m).padStart(2,"0");
+            String(m).padStart(
+                2,
+                "0"
+            );
 
         seconds.textContent =
-            String(s).padStart(2,"0");
+            String(s).padStart(
+                2,
+                "0"
+            );
 
 
         dateText.textContent =
             targetDate.toLocaleString(
                 "en-NG",
                 {
-                    dateStyle:"full",
-                    timeStyle:"short"
+                    dateStyle:
+                        "full",
+
+                    timeStyle:
+                        "short"
                 }
             );
 
@@ -1011,31 +2981,164 @@ body{
 
     update();
 
-    setInterval(update,1000);
+    setInterval(
+        update,
+        1000
+    );
 
 })();
 
 
-/* =====================================================
-   GITHUB PAGES HOME SAFETY
-===================================================== */
+/* =========================================================
+   BACK TO TOP
+========================================================= */
 
-(function(){
+const backTop =
+    document.getElementById(
+        "backTop"
+    );
 
-    /*
-      Ensure any Home links on this page always use
-      the GitHub Pages homepage.
-    */
 
-    document.querySelectorAll(
-        'a[href="/"], a[href="home.html"], a[href="Home.html"]'
-    ).forEach(function(link){
+window.addEventListener(
+    "scroll",
+    function(){
 
-        link.href = "./index.html";
+        if(
+            window.scrollY >
+            500
+        ){
 
-    });
+            backTop.classList.add(
+                "show"
+            );
+
+        }else{
+
+            backTop.classList.remove(
+                "show"
+            );
+
+        }
+
+    },
+    {
+        passive:true
+    }
+);
+
+
+backTop.addEventListener(
+    "click",
+    function(){
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    }
+);
+
+
+/* =========================================================
+   HOME LINK SAFETY
+========================================================= */
+
+document.querySelectorAll(
+    'a[href="/"],' +
+    'a[href="home.html"],' +
+    'a[href="Home.html"]'
+).forEach(
+    function(link){
+
+        link.href =
+            "./index.html";
+
+    }
+);
+
+
+/* =========================================================
+   INITIALISE
+========================================================= */
+
+updateWardContext();
+
+filterEvents();
+
+
+/* =========================================================
+   DEEP-LINK SCROLL
+========================================================= */
+
+if(selectedWard){
+
+    setTimeout(
+        function(){
+
+            const context =
+                document.getElementById(
+                    "wardContext"
+                );
+
+            if(context){
+
+                context.scrollIntoView({
+                    behavior:"smooth",
+                    block:"start"
+                });
+
+            }
+
+        },
+        250
+    );
+
+}
 
 })();
 
-</script></body>
+
+/* =========================================================
+   PWA SERVICE WORKER
+========================================================= */
+
+if(
+    "serviceWorker" in navigator
+){
+
+    window.addEventListener(
+        "load",
+        function(){
+
+            navigator.serviceWorker
+                .register(
+                    "./sw.js?v=20260905-04",
+                    {
+                        updateViaCache:
+                            "none"
+                    }
+                )
+                .catch(
+                    function(error){
+
+                        console.warn(
+                            "IMOLE service worker registration failed:",
+                            error
+                        );
+
+                    }
+                );
+
+        }
+    );
+
+}
+
+</script>
+
+</body>
 </html>
