@@ -22,16 +22,17 @@
   <style>
     :root {
       --green: #063b2d;
-      --green-light: #0b5d45;
+      --deep-green: #03271e;
+      --light-green: #0b6848;
       --gold: #e5b84b;
       --cream: #fffaf0;
+      --white: #ffffff;
       --ink: #18251f;
       --muted: #647169;
-      --line: #e4eae5;
-      --white: #ffffff;
-      --soft: #f0f6f1;
-      --shadow: 0 18px 48px rgba(4, 45, 33, 0.12);
-      --radius: 22px;
+      --line: #e0e9e2;
+      --soft: #f1f7f2;
+      --shadow: 0 15px 40px rgba(4,45,33,.10);
+      --radius: 20px;
     }
 
     * {
@@ -45,16 +46,15 @@
 
     body {
       margin: 0;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", Arial, sans-serif;
-      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
       background: #f7faf7;
+      color: var(--ink);
       line-height: 1.65;
     }
 
     img {
-      display: block;
       max-width: 100%;
+      display: block;
     }
 
     a {
@@ -68,31 +68,27 @@
       font: inherit;
     }
 
-    button {
-      cursor: pointer;
-    }
-
-    .wrap {
+    .container {
       width: min(1160px, calc(100% - 32px));
       margin: auto;
     }
 
-    .topline {
-      padding: 8px 0;
-      background: #042b21;
-      color: #eaf5ef;
-      font-size: 0.82rem;
+    .topbar {
+      background: var(--deep-green);
+      color: white;
+      padding: 9px 0;
+      font-size: .82rem;
     }
 
-    .topline .wrap {
+    .topbar-inner {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      gap: 10px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
-    .topline a {
+    .topbar a {
+      color: white;
       text-decoration: none;
     }
 
@@ -100,12 +96,12 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255, 255, 255, 0.97);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(6, 59, 45, 0.1);
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 3px 12px rgba(0,0,0,.03);
     }
 
-    .navrow {
+    .nav {
       min-height: 76px;
       display: flex;
       align-items: center;
@@ -117,246 +113,219 @@
       display: flex;
       align-items: center;
       gap: 11px;
-      min-width: 0;
       text-decoration: none;
+      min-width: 0;
     }
 
     .brand img {
       width: 47px;
       height: 47px;
       object-fit: contain;
-      border-radius: 14px;
+      border-radius: 12px;
     }
 
     .brand strong {
       display: block;
       color: var(--green);
       font-size: 1rem;
-      line-height: 1.2;
+      line-height: 1.3;
     }
 
     .brand small {
       display: block;
-      color: #6a776f;
-      font-size: 0.7rem;
-      font-weight: 850;
-      letter-spacing: 0.09em;
+      color: #647169;
+      font-size: .69rem;
+      font-weight: bold;
+      letter-spacing: .08em;
     }
 
-    .navlinks {
+    .menu-button {
+      display: none;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--green);
+      border-radius: 10px;
+      padding: 9px 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .nav-links {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
     }
 
-    .navlinks a {
+    .nav-links a {
       text-decoration: none;
-      font-size: 0.88rem;
-      font-weight: 750;
+      font-size: .84rem;
+      font-weight: bold;
       color: #263b31;
     }
 
-    .navlinks a:hover {
-      color: var(--green-light);
+    .nav-links a:hover {
+      color: var(--light-green);
     }
 
-    .navlinks .nav-cta {
-      padding: 10px 15px;
-      border-radius: 99px;
+    .nav-links .nav-cta {
       background: var(--gold);
-      color: #1f281e;
-    }
-
-    .menu-btn {
-      display: none;
-      padding: 9px 12px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: white;
-      color: var(--green);
-      font-weight: 850;
+      padding: 10px 14px;
+      border-radius: 30px;
     }
 
     .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 66px 0 62px;
       color: white;
+      padding: 66px 0;
+      overflow: hidden;
       background:
-        radial-gradient(circle at 85% 20%, rgba(229, 184, 75, 0.22), transparent 25%),
-        linear-gradient(125deg, #03291f 0%, #07543d 65%, #0b6a4b 100%);
+        radial-gradient(circle at 85% 20%, rgba(229,184,75,.2), transparent 27%),
+        linear-gradient(125deg, #03291f, #07543d 68%, #0b6848);
     }
 
     .hero-grid {
-      position: relative;
-      z-index: 1;
       display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
+      grid-template-columns: 1.1fr .9fr;
       align-items: center;
       gap: 42px;
     }
 
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 12px;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 99px;
-      color: #fff5d7;
-      font-size: 0.76rem;
-      font-weight: 850;
-      letter-spacing: 0.08em;
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 30px;
+      padding: 7px 13px;
+      color: #fff0bf;
+      font-size: .76rem;
+      font-weight: bold;
+      letter-spacing: .07em;
       text-transform: uppercase;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--gold);
     }
 
     h1 {
       margin: 20px 0;
-      font-size: clamp(2.35rem, 5.4vw, 4.7rem);
-      line-height: 1.04;
-      letter-spacing: -0.045em;
+      font-size: clamp(2.3rem, 5.4vw, 4.6rem);
+      line-height: 1.05;
+      letter-spacing: -.04em;
     }
 
-    .hero h1 span {
+    h1 span {
       color: var(--gold);
     }
 
     .hero p {
-      max-width: 610px;
-      color: #e4f0e9;
-      font-size: 1.06rem;
+      color: #e2eee6;
+      font-size: 1.04rem;
+      max-width: 620px;
     }
 
-    .hero-actions {
+    .actions {
       display: flex;
-      gap: 12px;
       flex-wrap: wrap;
+      gap: 12px;
       margin-top: 25px;
     }
 
-    .btn {
+    .button {
       display: inline-flex;
-      align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 13px 19px;
+      align-items: center;
+      padding: 12px 18px;
+      border-radius: 30px;
       border: 1px solid transparent;
-      border-radius: 99px;
       text-decoration: none;
-      font-weight: 850;
+      font-weight: bold;
       cursor: pointer;
     }
 
-    .btn-gold {
+    .button-gold {
       background: var(--gold);
-      color: #17251c;
+      color: #1e291f;
     }
 
-    .btn-light {
-      border-color: rgba(255, 255, 255, 0.45);
-      background: rgba(255, 255, 255, 0.06);
+    .button-light {
+      border-color: rgba(255,255,255,.45);
       color: white;
+      background: rgba(255,255,255,.06);
     }
 
-    .btn-green {
+    .button-green {
       background: var(--green);
       color: white;
     }
 
-    .btn-outline {
-      border-color: #cbd8ce;
+    .button-outline {
       background: white;
+      border-color: #cbd9ce;
       color: var(--green);
     }
 
     .hero-note {
-      margin-top: 17px;
-      color: #c9ded2 !important;
-      font-size: 0.82rem !important;
+      font-size: .82rem !important;
+      color: #c6ded0 !important;
+      margin-top: 18px;
     }
 
-    .hero-photo {
-      position: relative;
-      max-width: 440px;
+    .hero-image-frame {
+      max-width: 430px;
       margin: auto;
-    }
-
-    .photo-frame {
       padding: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 30px;
-      background: rgba(255, 255, 255, 0.09);
-      box-shadow: 0 25px 65px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 28px;
+      background: rgba(255,255,255,.08);
+      box-shadow: 0 25px 60px rgba(0,0,0,.2);
     }
 
-    .photo-frame img {
+    .hero-image-frame img {
       width: 100%;
-      aspect-ratio: 4 / 4.4;
+      aspect-ratio: 4 / 4.5;
       object-fit: cover;
-      object-position: center top;
-      border-radius: 21px;
-      background: #e8eee9;
+      object-position: top center;
+      border-radius: 19px;
+      background: #e9eee9;
     }
 
-    .photo-caption {
-      position: absolute;
-      bottom: 22px;
-      left: -18px;
-      padding: 13px 17px;
-      border-radius: 16px;
+    .hero-caption {
+      display: inline-block;
+      margin-top: 14px;
       background: white;
       color: var(--green);
+      padding: 11px 17px;
+      border-radius: 13px;
+      font-weight: bold;
       box-shadow: var(--shadow);
     }
 
-    .photo-caption strong,
-    .photo-caption small {
-      display: block;
-    }
-
-    .photo-caption small {
-      color: #617066;
-    }
-
     .ticker {
-      padding: 11px 0;
       background: var(--gold);
-      color: #1d2a20;
+      color: #1c2a20;
       text-align: center;
-      font-size: 0.9rem;
-      font-weight: 900;
-      letter-spacing: 0.035em;
+      padding: 12px;
+      font-weight: bold;
+      letter-spacing: .04em;
     }
 
     .section {
-      padding: 70px 0;
+      padding: 68px 0;
     }
 
-    .section-white {
+    .white-section {
       background: white;
     }
 
-    .section-soft {
+    .soft-section {
       background: var(--soft);
     }
 
-    .section-head {
-      max-width: 720px;
+    .section-heading {
+      max-width: 760px;
       margin-bottom: 28px;
     }
 
     .kicker {
-      color: #a87916;
-      font-size: 0.76rem;
-      font-weight: 900;
-      letter-spacing: 0.14em;
+      color: #997016;
+      font-size: .77rem;
+      font-weight: bold;
+      letter-spacing: .13em;
       text-transform: uppercase;
     }
 
@@ -364,13 +333,12 @@
       margin: 9px 0 13px;
       color: var(--green);
       font-size: clamp(1.8rem, 3.5vw, 2.7rem);
-      line-height: 1.12;
-      letter-spacing: -0.03em;
+      line-height: 1.15;
     }
 
-    .section-head p {
-      margin: 0;
+    .section-heading p {
       color: var(--muted);
+      margin: 0;
     }
 
     .grid {
@@ -378,12 +346,12 @@
       gap: 18px;
     }
 
-    .two {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0,1fr));
     }
 
-    .three {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0,1fr));
     }
 
     .card {
@@ -391,124 +359,116 @@
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: white;
-      box-shadow: 0 7px 24px rgba(10, 53, 35, 0.035);
+      box-shadow: 0 7px 22px rgba(10,53,35,.035);
     }
 
     .card h3 {
-      margin: 0 0 8px;
       color: var(--green);
-      font-size: 1.13rem;
+      margin: 0 0 9px;
     }
 
     .card p {
-      margin: 0;
       color: var(--muted);
+      margin: 0;
     }
 
-    .iconbox {
-      display: grid;
+    .icon {
       width: 44px;
       height: 44px;
-      margin-bottom: 15px;
+      display: grid;
       place-items: center;
-      border-radius: 14px;
-      background: #eaf4ec;
+      border-radius: 13px;
+      background: #e8f3eb;
       color: var(--green);
-      font-size: 1.25rem;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
     }
 
-    .values {
+    .pills {
       display: flex;
       flex-wrap: wrap;
       gap: 9px;
-      margin-top: 20px;
+      margin-top: 17px;
     }
 
     .pill {
-      padding: 7px 12px;
-      border-radius: 99px;
       background: #e8f3eb;
       color: #14543c;
-      font-size: 0.82rem;
-      font-weight: 800;
+      padding: 7px 12px;
+      border-radius: 30px;
+      font-size: .82rem;
+      font-weight: bold;
     }
 
-    .countdown-wrap {
+    .countdown-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(2,minmax(0,1fr));
       gap: 18px;
     }
 
-    .countdown {
+    .countdown-card {
+      color: white;
       padding: 25px;
       border-radius: var(--radius);
-      background: linear-gradient(135deg, #063b2d, #0c6849);
-      color: white;
+      background: linear-gradient(135deg, #063b2d, #0b6848);
       box-shadow: var(--shadow);
     }
 
-    .countdown:nth-child(2) {
-      background: linear-gradient(135deg, #292d24, #6d5317);
+    .countdown-card:nth-child(2) {
+      background: linear-gradient(135deg, #2e3228, #705618);
     }
 
-    .countdown .label {
-      color: #f7d981;
-      font-size: 0.78rem;
-      font-weight: 900;
-      letter-spacing: 0.08em;
+    .countdown-label {
+      color: #f7dc8d;
+      font-weight: bold;
+      font-size: .78rem;
       text-transform: uppercase;
+      letter-spacing: .08em;
     }
 
-    .countdown h3 {
-      margin: 7px 0;
+    .countdown-card h3 {
+      margin: 8px 0;
       font-size: 1.3rem;
     }
 
-    .countdown .date {
-      color: #e0ece4;
-      font-size: 0.9rem;
+    .countdown-date {
+      color: #e1ece4;
+      font-size: .9rem;
     }
 
     .digits {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4,minmax(0,1fr));
       gap: 8px;
       margin-top: 18px;
     }
 
     .digit {
-      padding: 12px 4px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 13px;
-      background: rgba(255, 255, 255, 0.12);
       text-align: center;
+      padding: 12px 4px;
+      background: rgba(255,255,255,.12);
+      border-radius: 12px;
     }
 
     .digit b {
       display: block;
-      font-size: 1.5rem;
-      line-height: 1.2;
+      font-size: 1.45rem;
+      line-height: 1.4;
     }
 
     .digit small {
-      font-size: 0.65rem;
+      font-size: .66rem;
       text-transform: uppercase;
     }
 
-    .note {
-      margin-top: 13px;
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
-
-    .person {
-      padding: 0;
+    .person-card {
       overflow: hidden;
+      padding: 0;
     }
 
-    .person img {
+    .person-card img {
       width: 100%;
-      height: 245px;
+      height: 250px;
       object-fit: cover;
       object-position: top center;
       background: #e5ece7;
@@ -520,60 +480,174 @@
 
     .role {
       display: inline-block;
-      margin-bottom: 9px;
-      padding: 5px 9px;
-      border-radius: 99px;
       background: #fff2cc;
       color: #815d0c;
-      font-size: 0.72rem;
-      font-weight: 900;
+      border-radius: 30px;
+      padding: 5px 9px;
+      font-size: .72rem;
+      font-weight: bold;
+      margin-bottom: 9px;
     }
 
-    .person h3 {
-      margin: 0 0 4px;
+    .person-body h3 {
+      margin: 0 0 7px;
     }
 
-    .person p {
-      font-size: 0.9rem;
+    .person-body p {
+      font-size: .9rem;
     }
 
-    .verify {
-      margin-top: 12px !important;
-      color: #77847b !important;
-      font-size: 0.76rem !important;
+    .quote-box {
+      background: linear-gradient(130deg, #fff7dc, #ffffff);
+      border: 1px solid #efdfb0;
+      padding: 28px;
+      border-radius: var(--radius);
+    }
+
+    .quote-mark {
+      color: #b1841f;
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+
+    .quote-box blockquote {
+      color: var(--green);
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .quote-box cite {
+      color: var(--muted);
+      font-size: .9rem;
+      font-style: normal;
+    }
+
+    .history-grid {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 15px;
+    }
+
+    .history-card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: white;
+      overflow-wrap: anywhere;
+    }
+
+    .history-card h3 {
+      color: var(--green);
+      font-size: 1rem;
+    }
+
+    .history-card p {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .history-year {
+      color: #997016;
+      font-weight: bold;
+    }
+
+    .small-note {
+      color: var(--muted);
+      font-size: .83rem;
+      margin-top: 15px;
     }
 
     .news-card {
       display: flex;
-      min-height: 205px;
       flex-direction: column;
+      min-height: 210px;
     }
 
-    .news-card .date {
-      color: #99700e;
-      font-size: 0.75rem;
-      font-weight: 900;
-      letter-spacing: 0.07em;
+    .news-label {
+      color: #997016;
+      font-size: .76rem;
+      font-weight: bold;
       text-transform: uppercase;
-    }
-
-    .news-card h3 {
-      margin-top: 10px;
     }
 
     .news-card a {
       margin-top: auto;
       padding-top: 15px;
       color: var(--green);
-      font-weight: 850;
+      font-weight: bold;
       text-decoration: none;
     }
 
-    .finder {
+    .gallery-card {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 225px;
+      object-fit: cover;
+      object-position: top center;
+      background: #e5ece7;
+    }
+
+    .gallery-caption {
+      padding: 17px;
+    }
+
+    .gallery-caption h3 {
+      margin: 0 0 5px;
+    }
+
+    .gallery-caption p {
+      color: var(--muted);
+      margin: 0;
+      font-size: .9rem;
+    }
+
+    .ward-card {
+      border-top: 4px solid var(--gold);
+    }
+
+    .ward-card h3 {
+      margin-top: 0;
+    }
+
+    .form-layout {
       display: grid;
-      grid-template-columns: 1fr 1fr auto;
-      align-items: end;
-      gap: 12px;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .form-aside {
+      padding: 25px;
+      border-radius: var(--radius);
+      background: var(--green);
+      color: white;
+    }
+
+    .form-aside h3 {
+      margin-top: 0;
+    }
+
+    .form-aside p,
+    .form-aside li {
+      color: #dbe9df;
+    }
+
+    .form-card {
+      background: white;
+      padding: 23px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 15px;
     }
 
     .field {
@@ -584,105 +658,24 @@
 
     .field label {
       color: #263d31;
-      font-size: 0.84rem;
-      font-weight: 850;
+      font-size: .84rem;
+      font-weight: bold;
     }
 
     .field input,
     .field select,
     .field textarea {
       width: 100%;
-      padding: 12px 13px;
+      padding: 12px;
       border: 1px solid #d9e2db;
-      border-radius: 12px;
-      outline: none;
+      border-radius: 11px;
       background: #fcfefc;
       color: var(--ink);
-    }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      border-color: #398565;
-      box-shadow: 0 0 0 3px rgba(57, 133, 101, 0.12);
     }
 
     .field textarea {
       min-height: 120px;
       resize: vertical;
-    }
-
-    .field small {
-      color: var(--muted);
-      font-size: 0.75rem;
-    }
-
-    .finder-results {
-      margin-top: 18px;
-    }
-
-    .result-row {
-      margin-top: 9px;
-      padding: 14px;
-      border: 1px solid var(--line);
-      border-radius: 13px;
-      background: white;
-    }
-
-    .result-row strong {
-      display: block;
-      color: var(--green);
-    }
-
-    .empty {
-      padding: 18px;
-      border: 1px solid #f0dfac;
-      border-radius: 14px;
-      background: #fff9e9;
-      color: #6a5519;
-    }
-
-    .form-shell {
-      display: grid;
-      grid-template-columns: 0.75fr 1.25fr;
-      align-items: start;
-      gap: 25px;
-    }
-
-    .form-aside {
-      position: sticky;
-      top: 100px;
-      padding: 27px;
-      border-radius: var(--radius);
-      background: var(--green);
-      color: white;
-    }
-
-    .form-aside h3 {
-      margin: 0 0 10px;
-      font-size: 1.45rem;
-    }
-
-    .form-aside p,
-    .form-aside li {
-      color: #d9e8df;
-    }
-
-    .form-aside li {
-      margin: 8px 0;
-    }
-
-    .form-card {
-      padding: 25px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: white;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 15px;
     }
 
     .field.full {
@@ -691,14 +684,14 @@
 
     .consent {
       display: flex;
-      align-items: flex-start;
       gap: 10px;
-      color: #536158;
-      font-size: 0.82rem;
+      align-items: flex-start;
+      color: var(--muted);
+      font-size: .82rem;
+      margin-top: 15px;
     }
 
     .consent input {
-      width: auto;
       margin-top: 5px;
     }
 
@@ -710,64 +703,56 @@
     }
 
     .status {
-      margin-top: 12px;
       color: var(--green);
-      font-size: 0.86rem;
-      font-weight: 750;
-    }
-
-    .preview {
-      display: none;
-      max-width: 180px;
-      max-height: 180px;
-      border-radius: 12px;
-      object-fit: cover;
+      font-weight: bold;
+      font-size: .86rem;
+      margin-top: 12px;
     }
 
     .cta-band {
-      padding: 42px 0;
       background: linear-gradient(120deg, #063b2d, #0b6848);
       color: white;
+      padding: 40px 0;
     }
 
-    .cta-band .wrap {
+    .cta-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 24px;
     }
 
-    .cta-band h2 {
-      margin: 0 0 7px;
-      font-size: clamp(1.5rem, 3vw, 2.3rem);
+    .cta-inner h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem,3vw,2.2rem);
     }
 
-    .cta-band p {
+    .cta-inner p {
       margin: 0;
       color: #dcebe1;
     }
 
     .footer {
-      padding: 45px 0 20px;
       background: #03271e;
       color: white;
+      padding: 45px 0 20px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3,minmax(0,1fr));
       gap: 25px;
     }
 
     .footer h3 {
-      margin-top: 0;
       color: var(--gold);
+      margin-top: 0;
     }
 
     .footer p,
     .footer li {
       color: #d5e3da;
-      font-size: 0.9rem;
+      font-size: .9rem;
     }
 
     .footer a {
@@ -780,114 +765,102 @@
     }
 
     .copyright {
-      margin-top: 30px;
+      border-top: 1px solid rgba(255,255,255,.17);
+      margin-top: 28px;
       padding-top: 17px;
-      border-top: 1px solid rgba(255, 255, 255, 0.17);
       color: #c2d4c9;
-      font-size: 0.78rem;
+      font-size: .78rem;
     }
 
-    .floating-wa {
+    .whatsapp-float {
       position: fixed;
-      right: 16px;
-      bottom: 16px;
       z-index: 90;
+      right: 15px;
+      bottom: 15px;
       padding: 13px 17px;
-      border-radius: 99px;
+      border-radius: 40px;
       background: #16864b;
       color: white;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
-      font-size: 0.9rem;
-      font-weight: 900;
       text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 8px 25px rgba(0,0,0,.2);
     }
 
     @media (max-width: 950px) {
-      .navlinks {
-        gap: 10px;
+      .nav-links {
+        gap: 9px;
       }
 
-      .navlinks a {
-        font-size: 0.8rem;
+      .nav-links a {
+        font-size: .77rem;
       }
 
       .hero-grid {
-        gap: 25px;
-      }
-
-      .form-shell {
-        grid-template-columns: 1fr;
-      }
-
-      .form-aside {
-        position: static;
+        gap: 24px;
       }
     }
 
     @media (max-width: 720px) {
-      .topline .wrap {
+      .topbar-inner {
         justify-content: center;
         text-align: center;
       }
 
-      .navrow {
+      .nav {
         min-height: 68px;
       }
 
-      .menu-btn {
+      .menu-button {
         display: block;
       }
 
-      .navlinks {
+      .nav-links {
         display: none;
         position: absolute;
         top: 68px;
         left: 12px;
         right: 12px;
         padding: 15px;
-        border: 1px solid var(--line);
-        border-radius: 16px;
         background: white;
+        border: 1px solid var(--line);
+        border-radius: 15px;
         box-shadow: var(--shadow);
       }
 
-      .navlinks.open {
+      .nav-links.open {
         display: flex;
-        align-items: stretch;
         flex-direction: column;
+        align-items: stretch;
       }
 
-      .navlinks a {
+      .nav-links a {
         padding: 8px 6px;
-        font-size: 0.92rem;
+        font-size: .93rem;
       }
 
       .hero {
-        padding: 46px 0;
+        padding: 45px 0;
       }
 
       .hero-grid,
-      .two,
-      .three,
-      .countdown-wrap,
-      .footer-grid {
+      .grid-2,
+      .grid-3,
+      .countdown-grid,
+      .history-grid,
+      .footer-grid,
+      .form-layout {
         grid-template-columns: 1fr;
       }
 
-      .hero-photo {
-        width: min(100%, 390px);
-        margin-top: 15px;
-      }
-
-      .photo-caption {
-        left: 0;
+      .hero-image-frame {
+        max-width: 390px;
+        margin-top: 10px;
       }
 
       .section {
-        padding: 52px 0;
+        padding: 50px 0;
       }
 
-      .finder,
       .form-grid {
         grid-template-columns: 1fr;
       }
@@ -900,7 +873,7 @@
         padding: 17px;
       }
 
-      .cta-band .wrap {
+      .cta-inner {
         align-items: flex-start;
         flex-direction: column;
       }
@@ -910,7 +883,7 @@
       }
 
       .digit b {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
       }
     }
 
@@ -918,37 +891,28 @@
       html {
         scroll-behavior: auto;
       }
-
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-      }
     }
   </style>
 </head>
 
 <body>
-  <div class="topline">
-    <div class="wrap">
+
+  <div class="topbar">
+    <div class="container topbar-inner">
       <span>IMOLE 2027 • Ojo Constituency II, Lagos State</span>
       <span>
-        <a href="mailto:nurudeenabayomisadeeq@gmail.com">Email the team</a>
-        &nbsp; | &nbsp;
+        <a href="mailto:nurudeenabayomisadeeq@gmail.com">Email</a>
+        &nbsp;|&nbsp;
         <a href="tel:+2348033002235">Call the team</a>
       </span>
     </div>
   </div>
 
   <header class="header">
-    <div class="wrap navrow">
-      <a class="brand" href="#home" aria-label="IMOLE 2027 homepage">
-        <img
-          src="./assets/icon-192.png"
-          alt="IMOLE 2027 logo"
-          onerror="this.style.display='none'"
-        >
+    <div class="container nav">
+
+      <a class="brand" href="#home" aria-label="IMOLE 2027 home">
+        <img src="./assets/icon-192.png" alt="IMOLE 2027 logo">
         <span>
           <strong>IMOLE 2027</strong>
           <small>WE WIN • WE SHINE</small>
@@ -956,34 +920,36 @@
       </a>
 
       <button
-        class="menu-btn"
-        id="menuBtn"
+        class="menu-button"
+        id="menuButton"
         type="button"
         aria-expanded="false"
-        aria-controls="mainNav"
-      >☰ Menu</button>
+        aria-controls="navigation">
+        ☰ Menu
+      </button>
 
-      <nav class="navlinks" id="mainNav" aria-label="Main navigation">
+      <nav class="nav-links" id="navigation" aria-label="Main navigation">
         <a href="#about">About</a>
-        <a href="#countdowns">Election dates</a>
         <a href="#priorities">Priorities</a>
         <a href="#team">Profiles</a>
-        <a href="#news">Updates</a>
-        <a href="#polling">Ward information</a>
-        <a href="#results">Results</a>
+        <a href="#history">History</a>
+        <a href="#news">News</a>
+        <a href="#media">Media</a>
+        <a href="./poling-Units.html">Polling Units</a>
         <a class="nav-cta" href="#community">Share a need</a>
       </nav>
+
     </div>
   </header>
 
   <main id="home">
+
+    <!-- HERO -->
     <section class="hero">
-      <div class="wrap hero-grid">
+      <div class="container hero-grid">
+
         <div>
-          <div class="eyebrow">
-            <span class="dot"></span>
-            Service • Development • Accountability
-          </div>
+          <div class="eyebrow">Service • Development • Accountability</div>
 
           <h1>
             Ojo's future.<br>
@@ -992,93 +958,114 @@
 
           <p>
             Meet Hon. Nurudeen Abayomi Sadeeq, a son of Ojo Constituency II
-            committed to listening to residents, elevating community concerns
-            and working for practical development with accountability.
+            committed to listening to residents, raising community concerns
+            and promoting practical development and accountability.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-gold" href="#about">Meet Hon. Sadeeq →</a>
-            <a class="btn btn-light" href="#community">Share a community need</a>
+          <div class="actions">
+            <a class="button button-gold" href="#about">Meet Hon. Sadeeq →</a>
+            <a class="button button-light" href="#community">Share a community need</a>
           </div>
 
           <p class="hero-note">
-            Lagos State House of Assembly • Ojo Constituency II •
-            Nigeria Democratic Congress (NDC)
+            Lagos State House of Assembly • Ojo Constituency II
+            • Nigeria Democratic Congress (NDC)
           </p>
         </div>
 
-        <div class="hero-photo">
-          <div class="photo-frame">
+        <div>
+          <div class="hero-image-frame">
             <img
               src="./assets/Hon Nurudeen Abayomi Sadeeq.jpg"
               alt="Hon. Nurudeen Abayomi Sadeeq"
-              fetchpriority="high"
-              onerror="this.alt='Hon. Nurudeen Abayomi Sadeeq — campaign portrait'"
-            >
+              fetchpriority="high">
           </div>
 
-          <div class="photo-caption">
-            <strong>IMOLE 2027</strong>
-            <small>We Win • We Shine</small>
+          <div class="hero-caption">
+            IMOLE 2027 — We Win • We Shine
           </div>
         </div>
+
       </div>
     </section>
 
     <div class="ticker">
-      IMOLE 2027 &nbsp; • &nbsp; ALAUSA STRAIGHT &nbsp; • &nbsp; WE WIN • WE SHINE
+      IMOLE 2027 • ALAUSA STRAIGHT • WE WIN • WE SHINE
     </div>
 
-    <section class="section" id="about">
-      <div class="wrap grid two" style="align-items:center">
-        <div class="section-head">
-          <div class="kicker">Know the person</div>
-          <h2>A community-first approach to representation.</h2>
-          <p>
-            Hon. Nurudeen Abayomi Sadeeq's public profile is rooted in Ojo
-            Constituency II and the everyday needs of its residents. His
-            campaign message emphasises listening, accessibility, integrity
-            and responsible representation.
-          </p>
+    <!-- ABOUT -->
+    <section class="section white-section" id="about">
+      <div class="container">
 
-          <div class="values">
-            <span class="pill">Integrity</span>
-            <span class="pill">Accessibility</span>
-            <span class="pill">Humility</span>
-            <span class="pill">Accountability</span>
-            <span class="pill">Compassion</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Our commitment</h3>
+        <div class="section-heading">
+          <div class="kicker">Meet the candidate</div>
+          <h2>Leadership that listens. Service that shows.</h2>
           <p>
-            Listen carefully. Represent responsibly. Communicate clearly.
-            Follow up on community concerns and report progress honestly.
-            Development requires partnership between residents, communities
-            and public institutions.
+            Hon. Nurudeen Abayomi Sadeeq is presenting a community-focused
+            vision for Ojo Constituency II built around accessibility,
+            practical development and public accountability.
           </p>
         </div>
+
+        <div class="grid grid-2">
+
+          <article class="card">
+            <div class="icon">◎</div>
+            <h3>Rooted in Ojo</h3>
+            <p>
+              A community-minded profile shaped by local relationships
+              and the everyday concerns of residents, traders, families,
+              young people and community groups.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">✓</div>
+            <h3>Our guiding values</h3>
+            <p>
+              Integrity, accessibility, humility, accountability and
+              compassion should guide public service and engagement
+              with constituents.
+            </p>
+
+            <div class="pills">
+              <span class="pill">Integrity</span>
+              <span class="pill">Accessibility</span>
+              <span class="pill">Humility</span>
+              <span class="pill">Accountability</span>
+              <span class="pill">Compassion</span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="actions">
+          <a class="button button-green" href="./nurudeen.html">Read full profile →</a>
+        </div>
+
       </div>
     </section>
 
-    <section class="section section-white" id="countdowns">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="kicker">Election calendar</div>
-          <h2>Key dates to keep in view</h2>
+    <!-- COUNTDOWN -->
+    <section class="section soft-section" id="countdown">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">Planning ahead</div>
+          <h2>IMOLE 2027 countdown</h2>
           <p>
-            These countdowns display the dates supplied for campaign planning.
-            Please confirm the applicable election dates against the official
-            timetable before publishing them as confirmed dates.
+            Campaign milestones help the team plan and stay organised.
+            Verify official election dates with INEC before publishing
+            them as confirmed dates.
           </p>
         </div>
 
-        <div class="countdown-wrap">
-          <article class="countdown">
-            <div class="label">Campaign-supplied date</div>
-            <h3>General Election Countdown</h3>
-            <div class="date">16 January 2027</div>
+        <div class="countdown-grid">
+
+          <article class="countdown-card">
+            <div class="countdown-label">Campaign planning milestone</div>
+            <h3>January 16, 2027</h3>
+            <div class="countdown-date">Campaign-supplied date</div>
 
             <div class="digits" data-countdown="2027-01-16T00:00:00+01:00">
               <div class="digit"><b>00</b><small>Days</small></div>
@@ -1088,10 +1075,10 @@
             </div>
           </article>
 
-          <article class="countdown">
-            <div class="label">Additional campaign date</div>
-            <h3>Second Election Countdown</h3>
-            <div class="date">6 February 2027</div>
+          <article class="countdown-card">
+            <div class="countdown-label">Campaign planning milestone</div>
+            <h3>February 6, 2027</h3>
+            <div class="countdown-date">Campaign-supplied date</div>
 
             <div class="digits" data-countdown="2027-02-06T00:00:00+01:00">
               <div class="digit"><b>00</b><small>Days</small></div>
@@ -1100,399 +1087,456 @@
               <div class="digit"><b>00</b><small>Seconds</small></div>
             </div>
           </article>
+
         </div>
 
-        <p class="note">
-          Important: these are campaign-provided dates, not an official
-          election notice. Confirm the correct dates and election descriptions
-          with INEC before treating either countdown as official.
+        <p class="small-note">
+          These are campaign-supplied dates, not confirmation of an official
+          election timetable.
+          <a href="https://www.inecnigeria.org/" target="_blank" rel="noopener noreferrer">
+            Check INEC's official website.
+          </a>
         </p>
+
       </div>
     </section>
 
-    <section class="section section-soft" id="priorities">
-      <div class="wrap">
-        <div class="section-head">
+    <!-- PRIORITIES -->
+    <section class="section" id="priorities">
+      <div class="container">
+
+        <div class="section-heading">
           <div class="kicker">Community priorities</div>
           <h2>Listening to the issues that shape daily life</h2>
           <p>
-            Residents can use the community form below to document local
-            concerns. The topics here are areas for community discussion,
-            not a claim that any specific project has already been delivered.
+            Residents can use the website to share concerns and ideas.
+            The following areas are priorities for community discussion,
+            not claims that projects have already been delivered.
           </p>
         </div>
 
-        <div class="grid three">
+        <div class="grid grid-3">
+
           <article class="card">
-            <div class="iconbox">⌁</div>
+            <div class="icon">⌁</div>
             <h3>Roads and drainage</h3>
-            <p>
-              Document road access problems, flooding, blocked drains and
-              locations that need attention.
-            </p>
+            <p>Document road access problems, flooding and blocked drains.</p>
           </article>
 
           <article class="card">
-            <div class="iconbox">✚</div>
+            <div class="icon">✚</div>
             <h3>Health and sanitation</h3>
-            <p>
-              Highlight access to health facilities, clean water, sanitation
-              and environmental services.
-            </p>
+            <p>Highlight concerns about health facilities, water and sanitation.</p>
           </article>
 
           <article class="card">
-            <div class="iconbox">▤</div>
+            <div class="icon">▤</div>
             <h3>Schools and skills</h3>
-            <p>
-              Raise school infrastructure concerns and ideas for learning,
-              training and youth development.
-            </p>
+            <p>Raise education infrastructure and youth development concerns.</p>
           </article>
 
           <article class="card">
-            <div class="iconbox">⌂</div>
+            <div class="icon">⌂</div>
             <h3>Markets and livelihoods</h3>
-            <p>
-              Share traders' concerns about market conditions, public
-              facilities and small businesses.
-            </p>
+            <p>Share traders' concerns about market facilities and livelihoods.</p>
           </article>
 
           <article class="card">
-            <div class="iconbox">✦</div>
+            <div class="icon">✦</div>
             <h3>Youth and women</h3>
-            <p>
-              Suggest practical opportunities, safer public spaces and
-              inclusive community programmes.
-            </p>
+            <p>Suggest opportunities, training and inclusive community programmes.</p>
           </article>
 
           <article class="card">
-            <div class="iconbox">◎</div>
-            <h3>Public accountability</h3>
-            <p>
-              Help make community needs visible and encourage transparent
-              follow-up and reporting.
-            </p>
+            <div class="icon">◎</div>
+            <h3>Accountability</h3>
+            <p>Encourage transparent follow-up and clear community reporting.</p>
           </article>
+
         </div>
+
       </div>
     </section>
 
-    <section class="section" id="team">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="kicker">Candidate and leadership profiles</div>
-          <h2>People connected to the public conversation</h2>
+    <!-- PROFILES -->
+    <section class="section white-section" id="team">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">Profiles</div>
+          <h2>People connected to Ojo's public conversation</h2>
           <p>
-            The profiles below provide introductory information. Confirm
-            current offices, party affiliations and nomination status against
-            official sources before publishing those details as definitive.
+            These introductory profiles use the campaign's existing image
+            filenames. Verify current positions and affiliations before
+            describing them as official or definitive.
           </p>
         </div>
 
-        <div class="grid three">
-          <article class="card person">
+        <div class="grid grid-3">
+
+          <article class="card person-card">
             <img
               src="./assets/Hon Nurudeen Abayomi Sadeeq.jpg"
               alt="Hon. Nurudeen Abayomi Sadeeq"
-              loading="lazy"
-            >
+              loading="lazy">
+
             <div class="person-body">
-              <span class="role">State Assembly • Ojo II</span>
+              <span class="role">IMOLE 2027 • Ojo II</span>
               <h3>Hon. Nurudeen Abayomi Sadeeq</h3>
-              <p>
-                Campaign profile for Ojo Constituency II, Lagos State House
-                of Assembly.
-              </p>
-              <p class="verify">
-                Campaign identity: IMOLE 2027. Verify official nomination
-                information before publication.
+              <p>Campaign profile for Lagos State House of Assembly, Ojo Constituency II.</p>
+              <p style="margin-top:12px">
+                <a href="./nurudeen.html">Full profile →</a>
               </p>
             </div>
           </article>
 
-          <article class="card person">
+          <article class="card person-card">
             <img
               src="./assets/Hon Seyi Sowunmi.jpg"
               alt="Hon. Seyi Sowunmi"
-              loading="lazy"
-              onerror="this.style.display='none'"
-            >
+              loading="lazy">
+
             <div class="person-body">
               <span class="role">Ojo Federal Constituency</span>
               <h3>Hon. Seyi Sowunmi</h3>
-              <p>
-                Public profile associated with representation and community
-                development in Ojo Federal Constituency.
-              </p>
-              <p class="verify">
-                Confirm current office and election status before publication.
-              </p>
+              <p>Public profile associated with representation and community development in Ojo.</p>
             </div>
           </article>
 
-          <article class="card person">
+          <article class="card person-card">
             <img
               src="./assets/Mr Peter Obi.jpg"
               alt="Mr. Peter Obi"
               loading="lazy"
-              onerror="this.style.display='none'"
-            >
+              onerror="this.style.display='none'">
+
             <div class="person-body">
               <span class="role">National public figure</span>
               <h3>Mr. Peter Obi</h3>
-              <p>
-                Former Governor of Anambra State and former presidential
-                candidate.
-              </p>
-              <p class="verify">
-                This is a general public profile, not an endorsement claim.
-              </p>
+              <p>Former Governor of Anambra State and former presidential candidate.</p>
             </div>
           </article>
 
-          <article class="card person">
+          <article class="card person-card">
             <img
               src="./assets/Funsho Doherty.jpg"
-              alt="Mr. Funsho Doherty"
+              alt="Funsho Doherty"
               loading="lazy"
-              onerror="this.style.display='none'"
-            >
+              onerror="this.style.display='none'">
+
             <div class="person-body">
-              <span class="role">Lagos public figure</span>
-              <h3>Mr. Funsho Doherty</h3>
-              <p>
-                Public figure associated with civic and political engagement
-                in Lagos State.
-              </p>
-              <p class="verify">
-                Verify current candidacy and party information before
-                describing him as an official candidate.
-              </p>
+              <span class="role">Public leadership</span>
+              <h3>Funsho Doherty</h3>
+              <p>Campaign and public engagement photo archive.</p>
             </div>
           </article>
 
-          <article class="card person">
+          <article class="card person-card">
             <img
               src="./assets/Hon Moshood Salvador.jpg"
               alt="Hon. Moshood Salvador"
               loading="lazy"
-              onerror="this.style.display='none'"
-            >
+              onerror="this.style.display='none'">
+
             <div class="person-body">
-              <span class="role">Lagos public figure</span>
+              <span class="role">Public leadership</span>
               <h3>Hon. Moshood Salvador</h3>
-              <p>
-                Public profile included for campaign and political information.
-              </p>
-              <p class="verify">
-                Confirm current office, party and candidacy information before
-                publication.
-              </p>
+              <p>Campaign and public engagement photo archive.</p>
             </div>
           </article>
+
         </div>
+
       </div>
     </section>
 
-    <section class="section section-white" id="news">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="kicker">News and community updates</div>
-          <h2>From the community</h2>
-          <p>
-            Use this section to publish dated, verified campaign announcements,
-            community visits, education updates and approved photographs.
+    <!-- QUOTE OF THE DAY -->
+    <section class="section soft-section" id="quote">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">Daily inspiration</div>
+          <h2>Quote of the Day</h2>
+          <p>A thought to encourage service, responsibility and community spirit.</p>
+        </div>
+
+        <div class="quote-box">
+          <div class="quote-mark">“</div>
+          <blockquote id="dailyQuote">
+            Alone we can do so little; together we can do so much.
+          </blockquote>
+          <cite id="quoteAuthor">— Helen Keller</cite>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TODAY IN HISTORY -->
+    <section class="section" id="history">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">Learn something today</div>
+          <h2>Today in History</h2>
+          <p id="historyDate">Historical events from today's date.</p>
+          <p id="historyStatus" class="small-note" aria-live="polite">
+            Loading historical events…
           </p>
         </div>
 
-        <div class="grid three">
-          <article class="card news-card">
-            <div class="date">Community engagement</div>
-            <h3>Listening to residents across Ojo</h3>
-            <p>
-              Publish a report from each visit, the issues residents raised
-              and the agreed follow-up actions.
-            </p>
-            <a href="#community">Share a community concern →</a>
-          </article>
-
-          <article class="card news-card">
-            <div class="date">Education and youth</div>
-            <h3>Investing in Ojo's future</h3>
-            <p>
-              Publish verified updates about education, skills, youth
-              initiatives and opportunities for young people.
-            </p>
-            <a href="#priorities">Explore community priorities →</a>
-          </article>
-
-          <article class="card news-card">
-            <div class="date">Public information</div>
-            <h3>Stay informed and involved</h3>
-            <p>
-              Follow official notices and confirm election information with
-              the relevant electoral authorities.
-            </p>
-            <a href="https://www.inecnigeria.org/" target="_blank" rel="noopener noreferrer">
-              Visit INEC's website →
-            </a>
+        <div class="history-grid" id="historyResults" aria-live="polite">
+          <article class="history-card">
+            <div class="history-year">📚 Today</div>
+            <h3>Loading history…</h3>
+            <p>Historical entries will appear here when available.</p>
           </article>
         </div>
 
-        <p class="note">
-          These are starter content cards, not claims that a particular event
-          has already taken place. Replace them with dated, verified updates.
+        <p class="small-note">
+          Historical information is retrieved from Wikipedia's public
+          on-this-day feed. An internet connection is required.
         </p>
+
       </div>
     </section>
 
-    <section class="section section-soft" id="polling">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="kicker">Ward information</div>
-          <h2>Find your ward's PVC collection-centre information</h2>
+    <!-- NEWS -->
+    <section class="section white-section" id="news">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">News and updates</div>
+          <h2>From the IMOLE community</h2>
+          <p>Visit the news page for published campaign announcements and updates.</p>
+        </div>
+
+        <div class="grid grid-3">
+
+          <article class="card news-card">
+            <div class="news-label">Community engagement</div>
+            <h3>Listening to local priorities</h3>
+            <p>
+              Community feedback can help document concerns about roads,
+              drainage, education, health and livelihoods.
+            </p>
+            <a href="./news.html">Visit campaign news →</a>
+          </article>
+
+          <article class="card news-card">
+            <div class="news-label">Youth and education</div>
+            <h3>Investing in the future of Ojo</h3>
+            <p>
+              Education, skills and opportunities for young people remain
+              important topics for community discussion.
+            </p>
+            <a href="./news.html">Read updates →</a>
+          </article>
+
+          <article class="card news-card">
+            <div class="news-label">Campaign information</div>
+            <h3>Stay connected with IMOLE 2027</h3>
+            <p>
+              Follow published announcements, events and campaign information.
+            </p>
+            <a href="./news.html">All news and updates →</a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MEDIA GALLERY -->
+    <section class="section" id="media">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">Photos and moments</div>
+          <h2>Media Gallery</h2>
           <p>
-            Select a ward to view the currently listed collection-centre
-            information. These locations are not a substitute for an official
-            polling-unit directory.
+            Explore campaign and public engagement photographs from the
+            existing website image library.
           </p>
         </div>
 
-        <div class="card">
-          <div class="finder">
-            <div class="field">
-              <label for="wardSelect">Select ward</label>
-              <select id="wardSelect">
-                <option value="">Choose a ward</option>
-                <option value="Ijanikin">Ijanikin</option>
-                <option value="Ilogbo">Ilogbo</option>
-                <option value="Irewe">Irewe</option>
-                <option value="Etegbin">Etegbin</option>
-                <option value="Idolowu">Idolowu</option>
-                <option value="Tafi">Tafi</option>
-              </select>
-            </div>
+        <div class="grid grid-3">
 
-            <div class="field">
-              <label for="puSearch">Search ward or centre</label>
-              <input
-                id="puSearch"
-                type="search"
-                placeholder="Enter a ward or centre name"
-              >
-            </div>
+          <article class="card gallery-card">
+            <img
+              src="./assets/Hon Nurudeen Abayomi Sadeeq.jpg"
+              alt="Hon. Nurudeen Abayomi Sadeeq"
+              loading="lazy">
 
-            <button class="btn btn-green" type="button" id="searchPu">
-              Search
-            </button>
-          </div>
-
-          <div class="finder-results" id="puResults" aria-live="polite">
-            <div class="empty">
-              Choose a ward to view its PVC collection-centre information.
+            <div class="gallery-caption">
+              <h3>IMOLE 2027</h3>
+              <p>Hon. Nurudeen Abayomi Sadeeq</p>
             </div>
-          </div>
+          </article>
+
+          <article class="card gallery-card">
+            <img
+              src="./assets/Hon Seyi Sowunmi.jpg"
+              alt="Hon. Seyi Sowunmi"
+              loading="lazy">
+
+            <div class="gallery-caption">
+              <h3>Ojo public engagement</h3>
+              <p>Hon. Seyi Sowunmi</p>
+            </div>
+          </article>
+
+          <article class="card gallery-card">
+            <img
+              src="./assets/Mr Peter Obi.jpg"
+              alt="Mr. Peter Obi"
+              loading="lazy"
+              onerror="this.style.display='none'">
+
+            <div class="gallery-caption">
+              <h3>Public leadership</h3>
+              <p>Campaign photo archive</p>
+            </div>
+          </article>
+
         </div>
 
-        <div class="grid three" style="margin-top:18px">
-          <article class="card">
-            <h3>Ward D • Ijanikin</h3>
+        <div class="actions">
+          <a class="button button-green" href="./gallery.html">Open Full Gallery →</a>
+          <a class="button button-outline" href="./media.html">More Media →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- POLLING UNITS -->
+    <section class="section soft-section" id="polling">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">Ward information</div>
+          <h2>Ojo Constituency II — Ward Guide</h2>
+          <p>
+            Use the dedicated polling-unit page to find individual
+            polling-unit records. PVC collection centres and polling units
+            are not necessarily the same location.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+
+          <article class="card ward-card">
+            <h3>Ijanikin • Ward D</h3>
             <p><strong>PVC collection centre:</strong> Anglican Primary School.</p>
+            <p class="small-note">Campaign working count: 43 polling units.</p>
           </article>
 
-          <article class="card">
-            <h3>Ward F • Ilogbo</h3>
+          <article class="card ward-card">
+            <h3>Ilogbo • Ward F</h3>
             <p><strong>PVC collection centre:</strong> L.A. Primary School.</p>
+            <p class="small-note">Campaign working count: 80 polling units.</p>
           </article>
 
-          <article class="card">
-            <h3>Ward G • Irewe</h3>
+          <article class="card ward-card">
+            <h3>Irewe • Ward G</h3>
             <p><strong>PVC collection centre:</strong> Osolu Secondary School.</p>
+            <p class="small-note">Campaign working count: 9 polling units.</p>
           </article>
 
-          <article class="card">
-            <h3>Ward I • Etegbin</h3>
+          <article class="card ward-card">
+            <h3>Etegbin • Ward I</h3>
             <p><strong>PVC collection centre:</strong> L.A. Primary School.</p>
+            <p class="small-note">Campaign working count: 22 polling units.</p>
           </article>
 
-          <article class="card">
-            <h3>Ward J • Idolowu</h3>
+          <article class="card ward-card">
+            <h3>Idolowu • Ward J</h3>
             <p><strong>PVC collection centre:</strong> St. Mary Primary School, Idoluwo.</p>
+            <p class="small-note">Campaign working count: 8 polling units.</p>
           </article>
 
-          <article class="card">
+          <article class="card ward-card">
             <h3>Tafi</h3>
             <p><strong>PVC collection centre:</strong> L.A. Primary School, Alagutan.</p>
+            <p class="small-note">Campaign working count: 8 polling units. Ward designation requires confirmation.</p>
           </article>
+
         </div>
 
-        <p class="note">
-          Confirm current collection arrangements and polling-unit locations
-          with INEC before travelling. A complete, verified polling-unit
-          directory has not yet been added to this homepage.
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="results">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="kicker">Election results</div>
-          <h2>Transparent, verified reporting</h2>
+        <article class="card" style="margin-top:20px">
+          <h3>Find your polling unit</h3>
           <p>
-            Official results will be published here when available and verified.
-            Do not treat campaign estimates or unofficial figures as certified
-            election results.
+            The six campaign working counts total 170 polling units.
+            Individual polling-unit names and locations should be checked
+            against the latest official INEC records before publication.
           </p>
-        </div>
 
-        <div class="card">
-          <h3>Results status</h3>
-          <p>
-            No verified official results have been entered into this section.
-            When results become available, publish the source and clearly
-            identify the relevant ward, polling unit, party, candidate and
-            reported vote totals.
-          </p>
-          <p class="note">
-            Official election information:
-            <a href="https://www.inecnigeria.org/" target="_blank" rel="noopener noreferrer">
-              Independent National Electoral Commission (INEC)
+          <div class="actions">
+            <a class="button button-green" href="./poling-Units.html">
+              Open Polling-Unit Directory →
             </a>
-          </p>
-        </div>
+
+            <a
+              class="button button-outline"
+              href="https://www.inecnigeria.org/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Visit INEC ↗
+            </a>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <section class="section section-white" id="community">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="kicker">Your voice matters</div>
-          <h2>Share a community need</h2>
+    <!-- RESULTS -->
+    <section class="section white-section" id="results">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">Election information</div>
+          <h2>Transparent and verified reporting</h2>
           <p>
-            Tell the team what needs attention in your area. Please provide
-            accurate information and avoid including sensitive information
-            about other people.
+            Official election results should only be published when available
+            and verified against an appropriate official source.
           </p>
         </div>
 
-        <div class="form-shell">
+        <article class="card">
+          <h3>Results information</h3>
+          <p>
+            This homepage does not display unverified election results.
+            Please check official announcements before relying on any figures.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- COMMUNITY REPORT FORM -->
+    <section class="section" id="community">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">Your voice matters</div>
+          <h2>Share a Community Need</h2>
+          <p>
+            Tell the team about an issue in your area. This form prepares
+            a WhatsApp message; it does not automatically send or store
+            your report on a central server.
+          </p>
+        </div>
+
+        <div class="form-layout">
+
           <aside class="form-aside">
             <h3>Help document local needs.</h3>
-            <p>
-              This form prepares a report you can send to the IMOLE team
-              through WhatsApp. It does not submit information to a central
-              database.
-            </p>
+            <p>Accurate reports help describe the issue and where it is happening.</p>
 
             <ul>
-              <li>Choose your ward.</li>
-              <li>Describe the location clearly.</li>
-              <li>Explain the issue and its effect.</li>
-              <li>Review your report before sending it.</li>
+              <li>Select your ward.</li>
+              <li>Describe the location.</li>
+              <li>Explain the concern and its impact.</li>
+              <li>Review your report before sending.</li>
             </ul>
 
             <p>
@@ -1504,36 +1548,36 @@
           </aside>
 
           <form class="form-card" id="communityForm">
+
             <div class="form-grid">
+
               <div class="field">
-                <label for="cWard">Ward *</label>
-                <select id="cWard" name="ward" required>
+                <label for="ward">Ward *</label>
+                <select id="ward" required>
                   <option value="">Select your ward</option>
-                  <option value="Ijanikin (Ward D)">Ijanikin (Ward D)</option>
-                  <option value="Ilogbo (Ward F)">Ilogbo (Ward F)</option>
-                  <option value="Irewe (Ward G)">Irewe (Ward G)</option>
-                  <option value="Etegbin (Ward I)">Etegbin (Ward I)</option>
-                  <option value="Idolowu (Ward J)">Idolowu (Ward J)</option>
-                  <option value="Tafi">Tafi</option>
-                  <option value="Other / Not sure">Other / Not sure</option>
+                  <option>Ijanikin (Ward D)</option>
+                  <option>Ilogbo (Ward F)</option>
+                  <option>Irewe (Ward G)</option>
+                  <option>Etegbin (Ward I)</option>
+                  <option>Idolowu (Ward J)</option>
+                  <option>Tafi — ward designation to confirm</option>
+                  <option>Other / Not sure</option>
                 </select>
               </div>
 
               <div class="field">
-                <label for="cLocation">Community, street or landmark *</label>
+                <label for="location">Community, street or landmark *</label>
                 <input
-                  id="cLocation"
-                  name="location"
+                  id="location"
                   required
                   maxlength="180"
-                  placeholder="e.g. street, junction or nearby landmark"
-                >
+                  placeholder="Street, junction or landmark">
               </div>
 
               <div class="field full">
-                <label for="cCategory">Category *</label>
-                <select id="cCategory" name="category" required>
-                  <option value="">Choose issue category</option>
+                <label for="category">Issue category *</label>
+                <select id="category" required>
+                  <option value="">Choose a category</option>
                   <option>Roads / transport</option>
                   <option>Flooding / drainage</option>
                   <option>Water / sanitation</option>
@@ -1552,523 +1596,436 @@
               </div>
 
               <div class="field full">
-                <label for="cDescription">Describe the concern *</label>
+                <label for="description">Describe the concern *</label>
                 <textarea
-                  id="cDescription"
-                  name="description"
+                  id="description"
                   required
                   minlength="10"
                   maxlength="2000"
-                  placeholder="What is the problem, where is it happening, and how does it affect residents?"
-                ></textarea>
-                <small>
-                  Please do not include sensitive personal information about
-                  other people.
-                </small>
-              </div>
-
-              <div class="field full">
-                <label for="cPhoto">Attach a photo (optional)</label>
-                <input id="cPhoto" name="photo" type="file" accept="image/*">
-                <small>
-                  The image is previewed in your browser only. It will not be
-                  attached automatically to the WhatsApp message.
-                </small>
-                <img class="preview" id="photoPreview" alt="Selected photo preview">
+                  placeholder="What is the problem, where is it happening, and how does it affect residents?"></textarea>
               </div>
 
               <div class="field">
-                <label for="cName">Your name (optional)</label>
-                <input id="cName" name="name" maxlength="120" autocomplete="name">
+                <label for="name">Your name (optional)</label>
+                <input id="name" maxlength="120">
               </div>
 
               <div class="field">
-                <label for="cPhone">Phone number (optional)</label>
-                <input id="cPhone" name="phone" type="tel" maxlength="35" autocomplete="tel">
+                <label for="phone">Phone number (optional)</label>
+                <input id="phone" type="tel" maxlength="30">
               </div>
 
-              <div class="field full">
-                <label for="cEmail">Email (optional)</label>
-                <input id="cEmail" name="email" type="email" maxlength="160" autocomplete="email">
-              </div>
-
-              <div class="field full">
-                <label class="consent">
-                  <input id="cConsent" type="checkbox" required>
-                  <span>
-                    I agree that the details I enter may be included in a report
-                    that I choose to send to the IMOLE team using WhatsApp.
-                    I understand the report is not submitted until I send the
-                    WhatsApp message.
-                  </span>
-                </label>
-              </div>
             </div>
+
+            <label class="consent">
+              <input type="checkbox" id="consent" required>
+              <span>
+                I agree to share this information with the IMOLE team for
+                follow-up. I have not included private information about another person.
+              </span>
+            </label>
 
             <div class="form-actions">
-              <button class="btn btn-green" type="button" id="sendReport">
-                Prepare WhatsApp report
+              <button class="button button-green" type="submit">
+                Prepare WhatsApp Report ↗
               </button>
 
-              <button class="btn btn-outline" type="button" id="copyReport">
-                Copy report text
+              <button class="button button-outline" type="button" id="copyReport">
+                Copy Report
               </button>
 
-              <button class="btn btn-outline" type="button" id="saveDraft">
-                Save draft on this device
-              </button>
-
-              <button class="btn btn-outline" type="button" id="clearForm">
-                Clear form
+              <button class="button button-outline" type="reset">
+                Clear Form
               </button>
             </div>
 
-            <div class="status" id="formStatus" aria-live="polite"></div>
+            <p class="status" id="formStatus" aria-live="polite"></p>
 
-            <p class="note">
-              Drafts are stored in this browser on this device only. Do not save
-              a draft on a shared device if it contains contact details.
-            </p>
           </form>
+
         </div>
+
       </div>
     </section>
 
+    <!-- CALL TO ACTION -->
     <section class="cta-band">
-      <div class="wrap">
+      <div class="container cta-inner">
         <div>
-          <h2>Ojo's progress starts with listening.</h2>
-          <p>
-            Share a concern, follow verified updates and help keep community
-            issues visible.
-          </p>
+          <h2>Ojo's future is a shared responsibility.</h2>
+          <p>Stay informed, share community concerns and follow IMOLE 2027 updates.</p>
         </div>
 
-        <a class="btn btn-gold" href="#community">Share a community need →</a>
+        <a
+          class="button button-gold"
+          href="https://wa.me/2348033002235"
+          target="_blank"
+          rel="noopener noreferrer">
+          Connect on WhatsApp →
+        </a>
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="wrap">
+    <div class="container">
+
       <div class="footer-grid">
+
         <div>
           <h3>IMOLE 2027</h3>
           <p>
             Hon. Nurudeen Abayomi Sadeeq<br>
             Lagos State House of Assembly<br>
-            Ojo Constituency II, Lagos State.
+            Ojo Constituency II
           </p>
           <p><strong>Service • Development • Accountability</strong></p>
         </div>
 
         <div>
-          <h3>Contact the team</h3>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="./nurudeen.html">Candidate profile</a></li>
+            <li><a href="./gallery.html">Photo gallery</a></li>
+            <li><a href="./news.html">News and updates</a></li>
+            <li><a href="./poling-Units.html">Polling-unit directory</a></li>
+            <li><a href="./today.html">Today in History</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
           <p>
-            Office: 1 Sibe Sibe Bus Stop, Etegbin Odo Road,
+            1 Sibe Sibe Bus Stop, Etegbin Odo Road,
             Etegbin Town, Ojo, Lagos.
           </p>
+
           <p>
-            Phone:
-            <a href="tel:+2348033002235">0803 300 2235</a><br>
-            Phone:
-            <a href="tel:+2348029877808">0802 987 7808</a><br>
-            Email:
+            <a href="tel:+2348033002235">08033002235</a><br>
+            <a href="tel:+2348029877808">08029877808</a><br>
             <a href="mailto:nurudeenabayomisadeeq@gmail.com">
               nurudeenabayomisadeeq@gmail.com
             </a>
           </p>
-        </div>
-
-        <div>
-          <h3>Connect and verify</h3>
-          <ul>
-            <li>
-              <a
-                href="https://www.facebook.com/share/1Fuo5bGA6c/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >Facebook updates</a>
-            </li>
-            <li>
-              <a
-                href="https://wa.me/2348033002235"
-                target="_blank"
-                rel="noopener noreferrer"
-              >WhatsApp the team</a>
-            </li>
-            <li>
-              <a
-                href="https://www.inecnigeria.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >INEC official website</a>
-            </li>
-          </ul>
 
           <p>
-            Party identity stated for this campaign: Nigeria Democratic
-            Congress (NDC).
+            <a
+              href="https://www.facebook.com/share/1Fuo5bGA6c/"
+              target="_blank"
+              rel="noopener noreferrer">
+              Facebook Page ↗
+            </a>
           </p>
         </div>
+
       </div>
 
       <div class="copyright">
-        © <span id="yearNow"></span> IMOLE 2027.
-        Campaign information should be checked against official notices.
-        This website is not an official INEC website.
+        © <span id="currentYear"></span>
+        IMOLE 2027 • Hon. Nurudeen Abayomi Sadeeq.
+        Official election information should be confirmed with INEC.
       </div>
+
     </div>
   </footer>
 
   <a
-    class="floating-wa"
+    class="whatsapp-float"
     href="https://wa.me/2348033002235"
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Contact IMOLE on WhatsApp"
-  >WhatsApp ↗</a>
+    aria-label="Contact IMOLE on WhatsApp">
+    WhatsApp ↗
+  </a>
 
   <script>
-    (() => {
-      "use strict";
+    "use strict";
 
-      const $ = id => document.getElementById(id);
+    /* MOBILE NAVIGATION */
+    const menuButton = document.getElementById("menuButton");
+    const navigation = document.getElementById("navigation");
 
-      $("yearNow").textContent = new Date().getFullYear();
+    menuButton.addEventListener("click", function () {
+      const open = navigation.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(open));
+      menuButton.textContent = open ? "✕ Close" : "☰ Menu";
+    });
 
-      // Mobile navigation
-      const menuBtn = $("menuBtn");
-      const nav = $("mainNav");
-
-      menuBtn.addEventListener("click", () => {
-        const open = nav.classList.toggle("open");
-
-        menuBtn.setAttribute("aria-expanded", String(open));
-        menuBtn.textContent = open ? "✕ Close" : "☰ Menu";
+    navigation.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navigation.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰ Menu";
       });
+    });
 
-      nav.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-          nav.classList.remove("open");
-          menuBtn.setAttribute("aria-expanded", "false");
-          menuBtn.textContent = "☰ Menu";
+    /* COPYRIGHT YEAR */
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    /* COUNTDOWNS */
+    function updateCountdowns() {
+      document.querySelectorAll("[data-countdown]").forEach(function (element) {
+        const target = new Date(element.dataset.countdown).getTime();
+        const difference = target - Date.now();
+
+        const values = difference <= 0
+          ? [0, 0, 0, 0]
+          : [
+              Math.floor(difference / 86400000),
+              Math.floor((difference % 86400000) / 3600000),
+              Math.floor((difference % 3600000) / 60000),
+              Math.floor((difference % 60000) / 1000)
+            ];
+
+        element.querySelectorAll(".digit b").forEach(function (digit, index) {
+          digit.textContent = String(values[index]).padStart(2, "0");
         });
       });
+    }
 
-      // Election countdowns
-      const pad = number => String(number).padStart(2, "0");
+    updateCountdowns();
+    setInterval(updateCountdowns, 1000);
 
-      function updateCountdowns() {
-        document.querySelectorAll("[data-countdown]").forEach(element => {
-          const target = new Date(element.dataset.countdown).getTime();
-          const difference = target - Date.now();
-
-          const values = difference <= 0
-            ? [0, 0, 0, 0]
-            : [
-                Math.floor(difference / 86400000),
-                Math.floor((difference % 86400000) / 3600000),
-                Math.floor((difference % 3600000) / 60000),
-                Math.floor((difference % 60000) / 1000)
-              ];
-
-          element.querySelectorAll(".digit b").forEach((digit, index) => {
-            digit.textContent = pad(values[index]);
-          });
-        });
+    /* QUOTE OF THE DAY */
+    const quotes = [
+      {
+        text: "Alone we can do so little; together we can do so much.",
+        author: "— Helen Keller"
+      },
+      {
+        text: "The time is always right to do what is right.",
+        author: "— Martin Luther King Jr."
+      },
+      {
+        text: "Great things are done by a series of small things brought together.",
+        author: "— Vincent van Gogh"
+      },
+      {
+        text: "The best way to find yourself is to lose yourself in the service of others.",
+        author: "— Commonly attributed to Mahatma Gandhi; wording varies"
+      },
+      {
+        text: "A genuine leader is not a searcher for consensus but a molder of consensus.",
+        author: "— Martin Luther King Jr."
+      },
+      {
+        text: "We make a living by what we get, but we make a life by what we give.",
+        author: "— Commonly attributed to Winston Churchill"
+      },
+      {
+        text: "The purpose of human life is to serve, and to show compassion and the will to help others.",
+        author: "— Albert Schweitzer"
       }
+    ];
 
-      updateCountdowns();
-      setInterval(updateCountdowns, 1000);
+    const today = new Date();
+    const dayNumber = Math.floor(
+      Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) / 86400000
+    );
 
-      // Ward and PVC collection-centre information
-      const wardCentres = {
-        Ijanikin: {
-          ward: "Ward D",
-          centre: "Anglican Primary School"
-        },
-        Ilogbo: {
-          ward: "Ward F",
-          centre: "L.A. Primary School"
-        },
-        Irewe: {
-          ward: "Ward G",
-          centre: "Osolu Secondary School"
-        },
-        Etegbin: {
-          ward: "Ward I",
-          centre: "L.A. Primary School"
-        },
-        Idolowu: {
-          ward: "Ward J",
-          centre: "St. Mary Primary School, Idoluwo"
-        },
-        Tafi: {
-          ward: "Ward to confirm",
-          centre: "L.A. Primary School, Alagutan"
-        }
-      };
+    const quote = quotes[
+      ((dayNumber % quotes.length) + quotes.length) % quotes.length
+    ];
 
-      function showWardInformation() {
-        const ward = $("wardSelect").value;
-        const term = $("puSearch").value.trim().toLowerCase();
-        const output = $("puResults");
+    document.getElementById("dailyQuote").textContent = quote.text;
+    document.getElementById("quoteAuthor").textContent = quote.author;
 
-        if (!ward) {
-          output.innerHTML =
-            '<div class="empty">Choose a ward to view its PVC collection-centre information.</div>';
-          return;
-        }
+    /* TODAY IN HISTORY
+       Uses Wikipedia's public on-this-day API.
+       A live internet connection is required. */
+    async function loadTodayInHistory() {
+      const results = document.getElementById("historyResults");
+      const status = document.getElementById("historyStatus");
+      const dateLabel = document.getElementById("historyDate");
 
-        const information = wardCentres[ward];
+      const month = today.getMonth() + 1;
+      const day = today.getDate();
 
-        if (!information) {
-          output.innerHTML =
-            '<div class="empty">No directory entry is available yet. Please confirm current information with INEC.</div>';
-          return;
-        }
-
-        const searchable =
-          (ward + " " + information.ward + " " + information.centre).toLowerCase();
-
-        if (term && !searchable.includes(term)) {
-          output.innerHTML =
-            '<div class="empty">No match in the currently published PVC collection-centre information. A complete polling-unit directory has not yet been added.</div>';
-          return;
-        }
-
-        const row = document.createElement("div");
-        row.className = "result-row";
-
-        const heading = document.createElement("strong");
-        heading.textContent = ward + " — " + information.ward;
-
-        const centre = document.createElement("p");
-        centre.textContent = "PVC collection centre: " + information.centre;
-
-        const note = document.createElement("p");
-        note.className = "note";
-        note.textContent =
-          "This is collection-centre information, not a verified list of polling units.";
-
-        row.append(heading, centre, note);
-        output.replaceChildren(row);
-      }
-
-      $("searchPu").addEventListener("click", showWardInformation);
-      $("wardSelect").addEventListener("change", showWardInformation);
-
-      $("puSearch").addEventListener("keydown", event => {
-        if (event.key === "Enter") {
-          event.preventDefault();
-          showWardInformation();
-        }
+      dateLabel.textContent = today.toLocaleDateString("en-NG", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric"
       });
 
-      // Community Needs form
-      const form = $("communityForm");
-      const status = $("formStatus");
-      const draftKey = "imole2027_community_needs_draft_v3";
-
-      const fields = [
-        "cWard",
-        "cLocation",
-        "cCategory",
-        "cDescription",
-        "cName",
-        "cPhone",
-        "cEmail"
-      ];
-
-      function setStatus(message) {
-        status.textContent = message;
-      }
-
-      function getFormData() {
-        const data = {};
-
-        fields.forEach(id => {
-          data[id] = $(id).value;
-        });
-
-        data.savedAt = new Date().toISOString();
-        return data;
-      }
-
-      function buildReport() {
-        const data = getFormData();
-
-        return [
-          "IMOLE 2027 — COMMUNITY NEEDS REPORT",
-          "",
-          "Ward: " + (data.cWard || "Not provided"),
-          "Community / street / landmark: " + (data.cLocation || "Not provided"),
-          "Category: " + (data.cCategory || "Not provided"),
-          "",
-          "Description:",
-          data.cDescription || "Not provided",
-          "",
-          "Contact details (optional):",
-          "Name: " + (data.cName || "Not provided"),
-          "Phone: " + (data.cPhone || "Not provided"),
-          "Email: " + (data.cEmail || "Not provided"),
-          "",
-          "Consent recorded in browser: " + ($("cConsent").checked ? "Yes" : "No"),
-          "Prepared from the IMOLE 2027 website community form."
-        ].join("\n");
-      }
-
-      function validateForm() {
-        if (!form.reportValidity()) {
-          return false;
-        }
-
-        if (!$("cConsent").checked) {
-          setStatus("Please confirm consent before preparing the report.");
-          return false;
-        }
-
-        return true;
-      }
-
-      // Prepare a WhatsApp report. The visitor must still press Send.
-      $("sendReport").addEventListener("click", () => {
-        if (!validateForm()) {
-          return;
-        }
-
-        const report = buildReport();
-        const url =
-          "https://wa.me/2348033002235?text=" + encodeURIComponent(report);
-
-        setStatus(
-          "WhatsApp is opening. Review the prepared message and press Send in WhatsApp to submit it. Photos are not attached automatically."
+      try {
+        const response = await fetch(
+          "https://en.wikipedia.org/api/rest_v1/feed/onthisday/events/" +
+          String(month).padStart(2, "0") + "/" +
+          String(day).padStart(2, "0"),
+          { headers: { "Accept": "application/json" } }
         );
 
-        window.open(url, "_blank", "noopener,noreferrer");
-      });
-
-      // Copy the report
-      $("copyReport").addEventListener("click", async () => {
-        if (!validateForm()) {
-          return;
+        if (!response.ok) {
+          throw new Error("Historical data is currently unavailable.");
         }
 
-        const report = buildReport();
+        const data = await response.json();
+        const events = (data.events || []).slice(0, 6);
 
-        try {
-          await navigator.clipboard.writeText(report);
-          setStatus("Report text copied. You can paste it into WhatsApp.");
-        } catch (error) {
-          const area = document.createElement("textarea");
-          area.value = report;
-          document.body.appendChild(area);
-          area.select();
-
-          const copied = document.execCommand("copy");
-          area.remove();
-
-          setStatus(
-            copied
-              ? "Report text copied."
-              : "Copy was blocked by the browser. Please select and copy the report manually."
-          );
-        }
-      });
-
-      // Save a local draft on this device
-      $("saveDraft").addEventListener("click", () => {
-        try {
-          localStorage.setItem(draftKey, JSON.stringify(getFormData()));
-          setStatus("Draft saved on this device in this browser only.");
-        } catch (error) {
-          setStatus("Draft could not be saved in this browser.");
-        }
-      });
-
-      // Clear form and local draft
-      $("clearForm").addEventListener("click", () => {
-        if (!confirm("Clear the form and saved draft on this device?")) {
-          return;
+        if (!events.length) {
+          throw new Error("No historical events were returned.");
         }
 
-        form.reset();
+        results.replaceChildren();
 
-        try {
-          localStorage.removeItem(draftKey);
-        } catch (error) {
-          // The form can still be cleared if browser storage is unavailable.
-        }
+        events.forEach(function (event) {
+          const article = document.createElement("article");
+          article.className = "history-card";
 
-        $("photoPreview").removeAttribute("src");
-        $("photoPreview").style.display = "none";
+          const year = document.createElement("div");
+          year.className = "history-year";
+          year.textContent = event.year || "Historical event";
 
-        setStatus("Form and saved draft cleared.");
-      });
+          const title = document.createElement("h3");
+          title.textContent = event.text || "Historical event";
 
-      // Restore a previously saved local draft
-      try {
-        const saved = JSON.parse(localStorage.getItem(draftKey) || "null");
+          const description = document.createElement("p");
+          description.textContent =
+            "Explore this event and its historical context.";
 
-        if (saved) {
-          fields.forEach(id => {
-            if (saved[id] !== undefined) {
-              $(id).value = saved[id];
-            }
-          });
+          article.append(year, title, description);
 
-          setStatus(
-            "A saved draft was restored from this browser. Please review it before sending."
-          );
-        }
-      } catch (error) {
-        // Continue if local storage is unavailable or contains invalid data.
-      }
+          const page = event.pages && event.pages[0];
 
-      // Preview a selected image locally
-      $("cPhoto").addEventListener("change", () => {
-        const file = $("cPhoto").files && $("cPhoto").files[0];
-        const image = $("photoPreview");
+          if (page && page.content_urls && page.content_urls.desktop) {
+            const link = document.createElement("a");
+            link.href = page.content_urls.desktop.page;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.textContent = "Read more ↗";
+            link.className = "history-link";
+            article.appendChild(link);
+          }
 
-        if (!file) {
-          image.style.display = "none";
-          image.removeAttribute("src");
-          return;
-        }
-
-        if (!file.type.startsWith("image/")) {
-          setStatus("Please choose an image file.");
-          return;
-        }
-
-        const reader = new FileReader();
-
-        reader.onload = () => {
-          image.src = reader.result;
-          image.style.display = "block";
-        };
-
-        reader.readAsDataURL(file);
-      });
-
-      // Register the website service worker.
-      // The matching service-worker update will be provided as File 2.
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("./sw.js?v=2026-10-15-02", {
-              updateViaCache: "none"
-            })
-            .then(registration => {
-              registration.update().catch(() => {});
-            })
-            .catch(error => {
-              console.warn("Service worker registration failed:", error);
-            });
+          results.appendChild(article);
         });
+
+        status.textContent =
+          "Historical entries loaded. Read more through the linked references.";
+
+      } catch (error) {
+        results.replaceChildren();
+
+        const article = document.createElement("article");
+        article.className = "history-card";
+
+        const title = document.createElement("h3");
+        title.textContent = "History is temporarily unavailable";
+
+        const description = document.createElement("p");
+        description.textContent =
+          "Please check your internet connection or try again later.";
+
+        article.append(title, description);
+        results.appendChild(article);
+
+        status.textContent =
+          "Unable to retrieve historical entries at this time.";
       }
-    })();
+    }
+
+    loadTodayInHistory();
+
+    /* COMMUNITY NEEDS FORM
+       Prepares a WhatsApp message; does not submit automatically. */
+    const communityForm = document.getElementById("communityForm");
+    const formStatus = document.getElementById("formStatus");
+
+    function getReportText() {
+      return [
+        "IMOLE 2027 — COMMUNITY NEEDS REPORT",
+        "",
+        "Ward: " + document.getElementById("ward").value,
+        "Location: " + document.getElementById("location").value,
+        "Category: " + document.getElementById("category").value,
+        "",
+        "Description:",
+        document.getElementById("description").value,
+        "",
+        "Name: " + (document.getElementById("name").value || "Not provided"),
+        "Phone: " + (document.getElementById("phone").value || "Not provided")
+      ].join("\n");
+    }
+
+    function validateReport() {
+      if (!communityForm.reportValidity()) {
+        return false;
+      }
+
+      if (!document.getElementById("consent").checked) {
+        formStatus.textContent =
+          "Please confirm consent before preparing your report.";
+        return false;
+      }
+
+      return true;
+    }
+
+    communityForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!validateReport()) {
+        return;
+      }
+
+      const message = getReportText();
+
+      formStatus.textContent =
+        "WhatsApp is opening. Review your message and press Send in WhatsApp.";
+
+      window.open(
+        "https://wa.me/2348033002235?text=" + encodeURIComponent(message),
+        "_blank",
+        "noopener,noreferrer"
+      );
+    });
+
+    document.getElementById("copyReport").addEventListener("click", async function () {
+      if (!validateReport()) {
+        return;
+      }
+
+      const text = getReportText();
+
+      try {
+        await navigator.clipboard.writeText(text);
+        formStatus.textContent = "Report copied. You can paste it into WhatsApp.";
+      } catch (error) {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+
+        const copied = document.execCommand("copy");
+        textarea.remove();
+
+        formStatus.textContent = copied
+          ? "Report copied."
+          : "Copy was blocked. Please copy the report manually.";
+      }
+    });
+
+    communityForm.addEventListener("reset", function () {
+      formStatus.textContent = "";
+    });
+
+    /* PWA SERVICE WORKER
+       The repository's actual service-worker filename must be used.
+       This registration assumes service-worker.js exists at the site root. */
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./service-worker.js", {
+          updateViaCache: "none"
+        }).catch(function (error) {
+          console.warn("Service worker registration failed:", error);
+        });
+      });
+    }
   </script>
+
 </body>
 </html>
