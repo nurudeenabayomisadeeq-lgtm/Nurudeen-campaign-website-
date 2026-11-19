@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#064b36">
-<meta name="description" content="IMOLE 2027 - Official campaign website of Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II. Service, Development and Accountability.">
+<meta name="description" content="IMOLE 2027 - Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II. Service, Development and Accountability.">
 <meta name="keywords" content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Ojo Constituency II, Nigeria Democratic Congress, NDC">
 <meta property="og:title" content="IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq">
-<meta property="og:description" content="Service. Development. Accountability. Alausa Straight!">
+<meta property="og:description" content="A Better and Greater Ojo Is Possible. Service. Development. Accountability.">
 <meta property="og:type" content="website">
 <meta name="author" content="IMOLE Strategic and Communication Team">
 <title>IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq</title>
@@ -18,19 +18,12 @@
 
 <style>
 :root{
---green:#064b36;
---green2:#087653;
---deep:#032e22;
---gold:#c9a45c;
---gold2:#e7d2a1;
---ivory:#fffdf6;
---cream:#f7f3e8;
---ink:#17251f;
---muted:#69766e;
---white:#fff;
---line:#e8e4d8;
---shadow:0 12px 35px rgba(3,46,34,.09);
---radius:16px;
+--green:#064b36;--green2:#087653;--deep:#032e22;
+--gold:#c9a45c;--gold2:#e7d2a1;
+--ivory:#fffdf6;--cream:#f7f3e8;
+--ink:#17251f;--muted:#69766e;--white:#fff;
+--line:#e8e4d8;--shadow:0 12px 35px rgba(3,46,34,.09);
+--radius:16px
 }
 *{box-sizing:border-box;scroll-behavior:smooth}
 body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--ivory);line-height:1.7}
@@ -46,7 +39,7 @@ header{position:sticky;top:0;z-index:1000;background:rgba(255,253,246,.97);backd
 .brand{display:flex;align-items:center;gap:10px;font-family:Montserrat,sans-serif;font-size:20px;font-weight:900;color:var(--green);white-space:nowrap}
 .brand img{width:48px;height:48px;object-fit:contain;border-radius:50%;border:2px solid var(--gold);padding:3px;background:white}
 .brand span{color:var(--gold)}
-nav{display:flex;align-items:center;gap:14px;font-size:10px;font-weight:900}
+nav{display:flex;align-items:center;gap:13px;font-size:10px;font-weight:900}
 nav a{padding:8px 0;transition:.2s}
 nav a:hover{color:var(--gold)}
 .menu{display:none;background:var(--green);border:0;color:white;border-radius:8px;padding:9px 13px;font-size:22px}
@@ -100,7 +93,19 @@ section{padding:75px 0}
 .person .party{color:#98712e;font-weight:900}
 .candidate-highlight{border:2px solid var(--gold)}
 .three-candidates{background:var(--cream)}
-.three-candidates .person img{height:310px}
+.profiles-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}
+.profile-card{display:grid;grid-template-columns:185px 1fr;gap:0;background:white;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:var(--shadow)}
+.profile-card>img{width:100%;height:100%;min-height:270px;max-height:390px;object-fit:cover;object-position:top;background:#eee9dc}
+.profile-copy{padding:19px}
+.profile-copy h3{font-family:Montserrat,sans-serif;color:var(--green);font-size:18px;line-height:1.25;margin:7px 0 10px}
+.profile-copy p{font-size:12px;color:var(--muted);margin:8px 0}
+.profile-role{font-size:9px;letter-spacing:1.2px;font-weight:900;color:#98712e}
+.profile-focus{border-top:1px solid var(--line);padding-top:10px}
+.profile-focus strong{color:var(--green)}
+.profile-featured{border:2px solid var(--gold);grid-column:1/-1;grid-template-columns:260px 1fr}
+.profile-featured>img{min-height:340px}
+.profile-featured .profile-copy h3{font-size:24px}
+.profile-note{margin-top:22px;text-align:center;color:var(--muted);font-size:11px}
 .team-card{text-align:center;border-top:3px solid var(--gold)}
 .team-card strong{color:#98712e;font-size:11px;text-transform:uppercase}
 .wards{background:#f8f6ed}
@@ -172,6 +177,17 @@ nav.show{display:flex}
 .grid{grid-template-columns:repeat(2,1fr)}
 .footer-grid{grid-template-columns:1fr 1fr}
 }
+@media(max-width:760px){
+.profiles-grid{grid-template-columns:1fr}
+.profile-featured{grid-column:auto}
+.profile-card{grid-template-columns:125px 1fr}
+.profile-card>img{min-height:240px}
+.profile-featured{grid-template-columns:125px 1fr}
+.profile-featured>img{min-height:320px}
+.profile-copy{padding:14px}
+.profile-copy h3{font-size:16px}
+.profile-featured .profile-copy h3{font-size:19px}
+}
 @media(max-width:560px){
 .container{width:92%}
 section{padding:52px 0}
@@ -184,18 +200,20 @@ section{padding:52px 0}
 .grid,.news-grid{grid-template-columns:1fr}
 .person-grid{grid-template-columns:repeat(2,1fr);gap:10px}
 .person img{height:190px}
-.three-candidates .person img{height:205px}
 .form-grid{grid-template-columns:1fr}
 .stats{grid-template-columns:repeat(2,1fr)}
 .footer-grid{grid-template-columns:1fr}
 .values{grid-template-columns:1fr 1fr}
 .float-wa{right:10px;bottom:12px}
 }
+@media(max-width:420px){
+.profile-card,.profile-featured{grid-template-columns:1fr}
+.profile-card>img,.profile-featured>img{height:230px;min-height:0;max-height:230px;object-fit:cover;object-position:top}
+}
 </style>
 </head>
 
 <body>
-
 <div class="topbar">
 IMOLE 2027 <span>•</span> SERVICE <span>•</span> DEVELOPMENT <span>•</span> ACCOUNTABILITY <span>•</span> ALAUSA STRAIGHT
 </div>
@@ -212,6 +230,7 @@ IMOLE 2027 <span>•</span> SERVICE <span>•</span> DEVELOPMENT <span>•</span
 <a href="#about">ABOUT</a>
 <a href="#manifesto">MANIFESTO</a>
 <a href="#leaders">LEADERS</a>
+<a href="#candidate-profiles">MEET OUR CANDIDATES</a>
 <a href="#team">COUNCIL</a>
 <a href="#wards">WARDS</a>
 <a href="#tracker">POLLING UNITS</a>
@@ -276,12 +295,9 @@ IMOLE 2027 <span>•</span> SERVICE <span>•</span> DEVELOPMENT <span>•</span
 <p>As a businessman and community-minded leader, his vision is to promote practical representation that puts residents first.</p>
 <h3 style="color:var(--green)">Our Leadership Values</h3>
 <div class="values">
-<span>✓ Integrity</span>
-<span>✓ Accessibility</span>
-<span>✓ Humility</span>
-<span>✓ Accountability</span>
-<span>✓ Compassion</span>
-<span>✓ Community Service</span>
+<span>✓ Integrity</span><span>✓ Accessibility</span>
+<span>✓ Humility</span><span>✓ Accountability</span>
+<span>✓ Compassion</span><span>✓ Community Service</span>
 </div>
 <a class="btn btn-green" href="#manifesto" style="margin-top:20px">READ OUR MANIFESTO</a>
 </div>
@@ -320,67 +336,122 @@ IMOLE 2027 <span>•</span> SERVICE <span>•</span> DEVELOPMENT <span>•</span
 <p>United in the vision of a better Nigeria and a greater Ojo.</p>
 </div>
 <div class="person-grid">
-
 <div class="person">
 <img src="assets/Mr%20Peter%20Obi.jpg" alt="Mr. Peter Obi">
-<div><h3>Mr. Peter Obi</h3><p class="party">NDC Presidential Leadership</p></div>
+<div><h3>Mr. Peter Obi</h3><p class="party">National Political Leadership</p></div>
 </div>
-
 <div class="person">
-<img src="assets/Ok.jpg" alt="Rabiu Kwankwaso">
-<div><h3>Rabiu Kwankwaso</h3><p class="party">NDC National Leadership</p></div>
+<img src="assets/Ok.jpg" alt="Rabiu Musa Kwankwaso">
+<div><h3>Rabiu Musa Kwankwaso</h3><p class="party">National Political Leadership</p></div>
 </div>
-
 <div class="person">
 <img src="assets/Salvador.jpg" alt="Hon. Moshood Salvador">
 <div><h3>Hon. Moshood Salvador</h3><p class="party">NDC Leadership</p></div>
 </div>
-
 <div class="person">
 <img src="assets/Funsho.jpg" alt="Funsho Doherty">
 <div><h3>Funsho Doherty</h3><p class="party">NDC Leadership</p></div>
 </div>
-
 <div class="person">
 <img src="assets/Hon%20Seyi%20Sowunmi.jpg" alt="Hon. Seyi Sowunmi">
 <div><h3>Hon. Seyi Sowunmi</h3><p class="party">Ojo Federal Constituency</p></div>
 </div>
-
 <div class="person">
 <img src="assets/Adisa.jpg" alt="Hon. Adisa Adeosun">
 <div><h3>Hon. Adisa Adeosun</h3><p class="party">Ojo Constituency I</p></div>
 </div>
-
 <div class="person candidate-highlight">
 <img src="assets/Hon%20Nurudeen%20Abayomi%20Sadeeq.jpg" alt="Hon. Nurudeen Abayomi Sadeeq">
 <div><h3>Hon. Nurudeen Abayomi Sadeeq</h3><p class="party">Ojo Constituency II • IMOLE 2027</p></div>
 </div>
-
 </div>
 </div>
 </section>
 
-<section class="three-candidates">
+<section class="three-candidates" id="candidate-profiles">
 <div class="container">
 <div class="section-head">
-<small>ONE CONSTITUENCY, ONE VISION</small>
-<h2>A Better and Greater Ojo Is Possible</h2>
-<p>Stronger representation through cooperation, unity and service.</p>
+<small>MEET OUR LEADERS AND CANDIDATES</small>
+<h2>Seven Profiles. One Shared Vision.</h2>
+<p>Meet the political leaders and candidates featured in the IMOLE 2027 campaign platform.</p>
 </div>
-<div class="grid">
-<div class="person">
+
+<div class="profiles-grid">
+
+<article class="profile-card">
+<img src="assets/Mr%20Peter%20Obi.jpg" alt="Mr. Peter Obi">
+<div class="profile-copy">
+<span class="profile-role">NATIONAL POLITICAL LEADER</span>
+<h3>Mr. Peter Obi</h3>
+<p>Mr. Peter Obi is a prominent Nigerian political figure whose public message has centred on prudent leadership, accountability, productivity and people-focused governance.</p>
+<p class="profile-focus"><strong>Public focus:</strong> Responsible leadership • Economic opportunity • Accountability</p>
+</div>
+</article>
+
+<article class="profile-card">
+<img src="assets/Ok.jpg" alt="Rabiu Musa Kwankwaso">
+<div class="profile-copy">
+<span class="profile-role">NATIONAL POLITICAL LEADER</span>
+<h3>Rabiu Musa Kwankwaso</h3>
+<p>Rabiu Musa Kwankwaso is a recognised Nigerian political leader associated with public administration, political organisation and advocacy for education and human-capital development.</p>
+<p class="profile-focus"><strong>Public focus:</strong> Education • Human-capital development • Public leadership</p>
+</div>
+</article>
+
+<article class="profile-card">
+<img src="assets/Salvador.jpg" alt="Hon. Moshood Salvador">
+<div class="profile-copy">
+<span class="profile-role">NDC LEADERSHIP</span>
+<h3>Hon. Moshood Salvador</h3>
+<p>Hon. Moshood Salvador is part of the wider NDC political leadership and party engagement structure, contributing to political organisation and stakeholder participation.</p>
+<p class="profile-focus"><strong>Leadership focus:</strong> Party organisation • Stakeholder engagement • Political participation</p>
+</div>
+</article>
+
+<article class="profile-card">
+<img src="assets/Funsho.jpg" alt="Funsho Doherty">
+<div class="profile-copy">
+<span class="profile-role">NDC LEADERSHIP</span>
+<h3>Funsho Doherty</h3>
+<p>Funsho Doherty is a public figure and political leader whose public engagement has emphasised transparency, responsible governance and stronger public institutions.</p>
+<p class="profile-focus"><strong>Public focus:</strong> Transparency • Good governance • Public accountability</p>
+</div>
+</article>
+
+<article class="profile-card">
 <img src="assets/Hon%20Seyi%20Sowunmi.jpg" alt="Hon. Seyi Sowunmi">
-<div><h3>Hon. Seyi Sowunmi</h3><p>Ojo Federal Constituency</p></div>
+<div class="profile-copy">
+<span class="profile-role">OJO FEDERAL CONSTITUENCY</span>
+<h3>Hon. Seyi Sowunmi</h3>
+<p>Hon. Seyi Sowunmi is the Ojo Federal Constituency candidate featured in this campaign platform. His campaign vision centres on effective federal representation, listening to constituents and bringing Ojo's development needs to the national level.</p>
+<p class="profile-focus"><strong>Constituency focus:</strong> Federal representation • Community development • Accountability</p>
 </div>
-<div class="person">
+</article>
+
+<article class="profile-card">
 <img src="assets/Adisa.jpg" alt="Hon. Adisa Adeosun">
-<div><h3>Hon. Adisa Adeosun</h3><p>Ojo Constituency I</p></div>
+<div class="profile-copy">
+<span class="profile-role">OJO CONSTITUENCY I</span>
+<h3>Hon. Adisa Adeosun</h3>
+<p>Hon. Adisa Adeosun is presented as the NDC candidate for Ojo Constituency I, with a focus on responsive state-level representation and ensuring that community priorities are heard.</p>
+<p class="profile-focus"><strong>Constituency focus:</strong> Constituency representation • Public services • Community voice</p>
 </div>
-<div class="person candidate-highlight">
+</article>
+
+<article class="profile-card profile-featured">
 <img src="assets/Hon%20Nurudeen%20Abayomi%20Sadeeq.jpg" alt="Hon. Nurudeen Abayomi Sadeeq">
-<div><h3>Hon. Nurudeen Abayomi Sadeeq</h3><p>Ojo Constituency II</p></div>
+<div class="profile-copy">
+<span class="profile-role">OJO CONSTITUENCY II • IMOLE 2027</span>
+<h3>Hon. Nurudeen Abayomi Sadeeq</h3>
+<p>Hon. Nurudeen Abayomi Sadeeq is a son of Ojo Constituency II who grew up and has worked within the community. As a businessman and community-minded leader, he believes representation must be accessible, compassionate and accountable.</p>
+<p>His vision is to advocate for practical improvements in roads, drainage, education, healthcare, market facilities, youth and women's opportunities, while ensuring that every ward has a voice.</p>
+<p class="profile-focus"><strong>Constituency focus:</strong> Roads and drainage • Education and healthcare • Youth and women empowerment • Accountable representation</p>
+<a class="btn btn-green" href="#manifesto">READ IMOLE MANIFESTO</a>
 </div>
+</article>
+
 </div>
+<div class="profile-note">Profiles describe public roles and areas of focus. Policy priorities are campaign commitments and proposals, not claims of completed projects.</div>
 </div>
 </section>
 
@@ -710,6 +781,7 @@ Submitting the form opens WhatsApp with your information for the campaign team. 
 <a href="#about">About the Candidate</a>
 <a href="#manifesto">Manifesto</a>
 <a href="#leaders">NDC Leadership</a>
+<a href="#candidate-profiles">Meet Our Candidates</a>
 <a href="#team">Campaign Council</a>
 <a href="#wards">Our Wards</a>
 <a href="#tracker">Polling Units</a>
@@ -765,7 +837,6 @@ document.getElementById("hours").textContent=Math.floor((distance%86400000)/3600
 document.getElementById("minutes").textContent=Math.floor((distance%3600000)/60000);
 document.getElementById("seconds").textContent=Math.floor((distance%60000)/1000);
 }
-
 updateCountdown();
 setInterval(updateCountdown,1000);
 document.getElementById("year").textContent=new Date().getFullYear();
@@ -775,28 +846,23 @@ const CAMPAIGN_WHATSAPP="2348033002235";
 
 function sendCampaignForm(formId,title){
 const form=document.getElementById(formId);
-
 form.addEventListener("submit",function(e){
 e.preventDefault();
 const data=new FormData(this);
 let message=title+"\n\n";
-
 for(const [key,value] of data.entries()){
 if(value)message+=key.toUpperCase()+": "+value+"\n";
 }
-
 message+="\nIMOLE 2027 Campaign Website";
 const url="https://wa.me/"+CAMPAIGN_WHATSAPP+"?text="+encodeURIComponent(message);
 window.open(url,"_blank","noopener,noreferrer");
 });
 }
-
 sendCampaignForm("needsForm","IMOLE 2027 COMMUNITY NEEDS SUBMISSION");
 sendCampaignForm("volunteerForm","IMOLE 2027 VOLUNTEER REGISTRATION");
 
 /* AUTOMATIC NEWS FEED */
 const newsFeed=document.getElementById("newsFeed");
-
 const newsFeeds=[
 "https://news.google.com/rss/search?q=Nigeria+politics&hl=en-NG&gl=NG&ceid=NG:en",
 "https://news.google.com/rss/search?q=Lagos+politics&hl=en-NG&gl=NG&ceid=NG:en",
@@ -805,65 +871,48 @@ const newsFeeds=[
 
 async function loadNews(){
 newsFeed.innerHTML='<div class="news-loading">Loading the latest political news...</div>';
-
 try{
-const results=await Promise.all(
-newsFeeds.map(async feed=>{
+const results=await Promise.all(newsFeeds.map(async feed=>{
 const api="https://api.rss2json.com/v1/api.json?rss_url="+encodeURIComponent(feed);
 const response=await fetch(api);
 if(!response.ok)throw new Error("News service unavailable");
 const data=await response.json();
 return data.items||[];
-})
-);
-
+}));
 const allItems=results.flat();
-const uniqueItems=allItems.filter((item,index,self)=>
-index===self.findIndex(x=>x.link===item.link)
-);
-
+const uniqueItems=allItems.filter((item,index,self)=>index===self.findIndex(x=>x.link===item.link));
 uniqueItems.sort((a,b)=>new Date(b.pubDate)-new Date(a.pubDate));
 const items=uniqueItems.slice(0,12);
-
 if(!items.length)throw new Error("No news available");
 newsFeed.innerHTML="";
-
 items.forEach(item=>{
 const card=document.createElement("article");
 card.className="news-card";
-
 const title=document.createElement("h3");
 title.textContent=item.title||"Nigeria Political News";
-
 const description=document.createElement("p");
 description.textContent=(item.description||"Read the full story from the original publisher.").replace(/<[^>]*>/g,"").slice(0,180);
-
 const meta=document.createElement("div");
 meta.className="news-meta";
 meta.textContent=item.author||"NEWS UPDATE";
-
 const link=document.createElement("a");
 link.href=item.link;
 link.target="_blank";
 link.rel="noopener noreferrer";
 link.textContent="READ FULL STORY →";
-
 card.append(meta,title,description,link);
 newsFeed.appendChild(card);
 });
-
 }catch(error){
 newsFeed.innerHTML='<div class="notice" style="grid-column:1/-1">The automatic news service is temporarily unavailable. Please refresh later.</div>';
 }
 }
-
 loadNews();
 document.getElementById("refreshNews").addEventListener("click",loadNews);
 
 /* MANUAL ELECTION RESULTS DASHBOARD */
 const RESULTS_KEY="IMOLE_2027_MANUAL_RESULTS_V1";
 let electionResults=[];
-
 try{
 electionResults=JSON.parse(localStorage.getItem(RESULTS_KEY)||"[]");
 if(!Array.isArray(electionResults))electionResults=[];
@@ -884,42 +933,32 @@ alert("Unable to save entries in this browser.");
 
 function updateResultsDashboard(){
 resultsBody.innerHTML="";
-
 let totalImole=0;
 let totalOthers=0;
-
 electionResults.forEach(item=>{
 totalImole+=Number(item.imole)||0;
 totalOthers+=Number(item.others)||0;
-
 const tr=document.createElement("tr");
-
 [item.unit,item.ward,item.imole,item.others,item.accredited].forEach(value=>{
 const td=document.createElement("td");
 td.textContent=value;
 tr.appendChild(td);
 });
-
 resultsBody.appendChild(tr);
 });
-
 if(!electionResults.length){
 resultsBody.innerHTML='<tr><td colspan="5">No entries yet.</td></tr>';
 }
-
 document.getElementById("resultUnits").textContent=electionResults.length;
 document.getElementById("resultVotes").textContent=totalImole;
 document.getElementById("resultOther").textContent=totalOthers;
-
 const percentage=Math.min(100,Math.round((electionResults.length/170)*100));
 document.getElementById("resultTurnout").textContent=percentage+"%";
 }
 
 resultsForm.addEventListener("submit",function(e){
 e.preventDefault();
-
 const data=new FormData(this);
-
 const item={
 unit:data.get("unit").trim(),
 ward:data.get("ward"),
@@ -929,12 +968,10 @@ accredited:Number(data.get("accredited"))||0,
 remarks:data.get("remarks"),
 date:new Date().toISOString()
 };
-
 if(!item.unit||!item.ward){
 alert("Please enter the polling unit and ward.");
 return;
 }
-
 electionResults.push(item);
 saveResults();
 updateResultsDashboard();
@@ -947,16 +984,9 @@ if(!electionResults.length){
 alert("There are no results to export yet.");
 return;
 }
-
 const headings=["Polling Unit","Ward","IMOLE Votes","Other Votes","Accredited Voters","Remarks","Date"];
-const rows=electionResults.map(item=>[
-item.unit,item.ward,item.imole,item.others,item.accredited,item.remarks,item.date
-]);
-
-const csv=[headings,...rows].map(row=>
-row.map(value=>'"'+String(value??"").replace(/"/g,'""')+'"').join(",")
-).join("\n");
-
+const rows=electionResults.map(item=>[item.unit,item.ward,item.imole,item.others,item.accredited,item.remarks,item.date]);
+const csv=[headings,...rows].map(row=>row.map(value=>'"'+String(value??"").replace(/"/g,'""')+'"').join(",")).join("\n");
 const blob=new Blob([csv],{type:"text/csv;charset=utf-8;"});
 const url=URL.createObjectURL(blob);
 const link=document.createElement("a");
@@ -982,7 +1012,6 @@ this.style.background="#eee9dc";
 this.alt=this.alt+" (Image unavailable)";
 });
 });
-
 </script>
 
 </body>
