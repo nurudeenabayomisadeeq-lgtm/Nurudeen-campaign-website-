@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#064b36">
-<meta name="description" content="IMOLE 2027 - Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II. Service, Development and Accountability.">
-<meta name="keywords" content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Ojo Constituency II, Nigeria Democratic Congress, NDC">
+<meta name="description" content="IMOLE 2027 - Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II. Discover Ojo, its people, communities, culture and development opportunities.">
+<meta name="keywords" content="IMOLE 2027, Nurudeen Abayomi Sadeeq, Ojo Lagos, Ojo Constituency I, Ojo Constituency II, Discover Ojo, Nigeria Democratic Congress, NDC">
 <meta property="og:title" content="IMOLE 2027 | Hon. Nurudeen Abayomi Sadeeq">
 <meta property="og:description" content="A Better and Greater Ojo Is Possible. Service. Development. Accountability.">
 <meta property="og:type" content="website">
@@ -163,6 +163,89 @@ footer p{font-size:12px;color:#c4d3c9}
 .copy{text-align:center;border-top:1px solid #ffffff25;margin-top:35px;padding-top:18px;font-size:11px;color:#c4d3c9}
 .float-wa{position:fixed;bottom:20px;right:18px;z-index:900;background:#159b56;color:white;padding:13px 17px;border-radius:40px;font-size:12px;font-weight:900;box-shadow:0 5px 20px #0003}
 .hidden{display:none!important}
+
+/* DISCOVER OJO */
+.discover-hero{
+background:linear-gradient(120deg,#032e22,#07583e);
+color:white;padding:65px 25px;border-radius:20px;
+text-align:center;position:relative;overflow:hidden;
+}
+.discover-hero:before{
+content:"OJO";position:absolute;right:2%;bottom:-65px;
+font-family:Montserrat;font-size:180px;font-weight:900;
+color:#ffffff09;pointer-events:none
+}
+.discover-hero h2{
+font-family:Montserrat;font-size:clamp(30px,5vw,53px);
+line-height:1.15;color:white;margin:12px 0
+}
+.discover-hero p{max-width:760px;margin:12px auto;color:#e4eee7}
+.discover-kicker{
+color:var(--gold2);font-size:11px;letter-spacing:2px;font-weight:900
+}
+.discover-intro{
+max-width:900px;margin:35px auto;text-align:center;color:var(--muted)
+}
+.discover-stats{
+display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:30px 0
+}
+.discover-stat{
+padding:20px;background:var(--green);color:white;border-radius:12px;text-align:center
+}
+.discover-stat strong{
+display:block;color:var(--gold2);font-family:Montserrat;font-size:34px
+}
+.discover-stat span{font-size:10px;font-weight:800;letter-spacing:1px}
+.constituency-block{
+margin:35px 0;padding:25px;background:#f8f6ed;
+border:1px solid var(--line);border-radius:17px
+}
+.constituency-title{
+display:flex;justify-content:space-between;align-items:center;
+gap:15px;flex-wrap:wrap;margin-bottom:20px
+}
+.constituency-title h3{
+font-family:Montserrat;color:var(--green);font-size:23px;margin:0
+}
+.constituency-title span{
+background:var(--green);color:white;padding:7px 12px;
+border-radius:30px;font-size:10px;font-weight:900
+}
+.discover-ward-grid{
+display:grid;grid-template-columns:repeat(3,1fr);gap:15px
+}
+.discover-ward{
+background:white;border:1px solid var(--line);
+border-radius:12px;padding:18px;box-shadow:var(--shadow);
+border-top:4px solid var(--gold)
+}
+.discover-ward .ward-code{
+font-family:Montserrat;font-size:25px;font-weight:900;color:var(--gold)
+}
+.discover-ward h4{font-family:Montserrat;color:var(--green);font-size:16px;margin:5px 0}
+.discover-ward p{font-size:11px;color:var(--muted);margin:7px 0}
+.discover-ward .ward-meta{
+font-size:10px;color:#98712e;font-weight:900;margin-top:10px
+}
+.discover-topic-grid{
+display:grid;grid-template-columns:repeat(3,1fr);gap:18px
+}
+.discover-topic{
+background:white;padding:22px;border:1px solid var(--line);
+border-radius:14px;box-shadow:var(--shadow)
+}
+.discover-topic .topic-icon{
+font-size:28px;color:var(--gold)
+}
+.discover-topic h3{color:var(--green);font-family:Montserrat;font-size:16px}
+.discover-topic p{font-size:12px;color:var(--muted)}
+.discover-note{font-size:11px;color:var(--muted);margin-top:20px}
+.story-box{
+background:var(--cream);border:1px solid var(--line);
+padding:25px;border-radius:15px;margin-top:30px
+}
+.story-box h3{color:var(--green);font-family:Montserrat}
+.story-box p{font-size:13px;color:var(--muted)}
 @media(max-width:1050px){
 nav{display:none;position:absolute;top:76px;left:0;right:0;background:var(--ivory);padding:20px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;max-height:80vh;overflow:auto}
 nav.show{display:flex}
@@ -176,6 +259,8 @@ nav.show{display:flex}
 .person-grid{grid-template-columns:repeat(2,1fr)}
 .grid{grid-template-columns:repeat(2,1fr)}
 .footer-grid{grid-template-columns:1fr 1fr}
+.discover-ward-grid{grid-template-columns:repeat(2,1fr)}
+.discover-topic-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:760px){
 .profiles-grid{grid-template-columns:1fr}
@@ -205,6 +290,11 @@ section{padding:52px 0}
 .footer-grid{grid-template-columns:1fr}
 .values{grid-template-columns:1fr 1fr}
 .float-wa{right:10px;bottom:12px}
+.discover-stats{grid-template-columns:1fr}
+.discover-ward-grid,.discover-topic-grid{grid-template-columns:1fr}
+.constituency-block{padding:15px}
+.discover-hero{padding:45px 18px}
+.discover-hero:before{font-size:110px}
 }
 @media(max-width:420px){
 .profile-card,.profile-featured{grid-template-columns:1fr}
@@ -230,9 +320,10 @@ IMOLE 2027 <span>•</span> SERVICE <span>•</span> DEVELOPMENT <span>•</span
 <a href="#about">ABOUT</a>
 <a href="#manifesto">MANIFESTO</a>
 <a href="#leaders">LEADERS</a>
-<a href="#candidate-profiles">MEET OUR CANDIDATES</a>
+<a href="#candidate-profiles">CANDIDATES</a>
 <a href="#team">COUNCIL</a>
-<a href="#wards">WARDS</a>
+<a href="#wards">OUR WARDS</a>
+<a href="#discover-ojo">DISCOVER OJO</a>
 <a href="#tracker">POLLING UNITS</a>
 <a href="#results">RESULTS</a>
 <a href="#events">EVENTS</a>
@@ -276,7 +367,7 @@ IMOLE 2027 <span>•</span> SERVICE <span>•</span> DEVELOPMENT <span>•</span
 <section style="padding:35px 0;background:var(--cream)">
 <div class="container stats">
 <div class="stat"><strong>170</strong><span>POLLING UNITS</span></div>
-<div class="stat"><strong>6</strong><span>WARDS</span></div>
+<div class="stat"><strong>6</strong><span>CAMPAIGN WARDS</span></div>
 <div class="stat"><strong>1</strong><span>CONSTITUENCY</span></div>
 <div class="stat"><strong>2027</strong><span>IMOLE MOVEMENT</span></div>
 </div>
@@ -375,7 +466,6 @@ IMOLE 2027 <span>•</span> SERVICE <span>•</span> DEVELOPMENT <span>•</span
 <h2>Seven Profiles. One Shared Vision.</h2>
 <p>Meet the political leaders and candidates featured in the IMOLE 2027 campaign platform.</p>
 </div>
-
 <div class="profiles-grid">
 
 <article class="profile-card">
@@ -484,12 +574,261 @@ IMOLE 2027 <span>•</span> SERVICE <span>•</span> DEVELOPMENT <span>•</span
 <p>Every ward matters. Every community deserves representation.</p>
 </div>
 <div class="grid">
-<div class="card ward-card"><strong>WARD D</strong><h3>Ijanikin</h3><span class="tag">43 Polling Units</span><p>Centre: Anglican Primary School, Ijanikin.</p></div>
-<div class="card ward-card"><strong>WARD F</strong><h3>Ilogbo</h3><span class="tag">80 Polling Units</span><p>Centre: L.A. Primary School, Ilogbo.</p></div>
-<div class="card ward-card"><strong>WARD G</strong><h3>Irewe</h3><span class="tag">9 Polling Units</span><p>Centre: Osolu Secondary School, Irewe.</p></div>
-<div class="card ward-card"><strong>WARD H</strong><h3>Tafi</h3><span class="tag">8 Polling Units</span><p>Centre: L.A. Primary School, Alagutan.</p></div>
-<div class="card ward-card"><strong>WARD I</strong><h3>Etegbin</h3><span class="tag">22 Polling Units</span><p>Centre: L.A. Primary School, Etegbin.</p></div>
-<div class="card ward-card"><strong>WARD J</strong><h3>Idolowu</h3><span class="tag">8 Polling Units</span><p>Centre: St. Mary Primary School, Idoluwo.</p></div>
+<div class="card ward-card"><strong>WARD D</strong><h3>Ijanikin</h3><span class="tag">43 Campaign Planning PUs</span><p>INEC Registration Area 04. Centre: Anglican Primary School, Ijanikin.</p></div>
+<div class="card ward-card"><strong>WARD F</strong><h3>Ilogbo</h3><span class="tag">80 Campaign Planning PUs</span><p>INEC Registration Area 06. Centre: L.A. Primary School, Ilogbo.</p></div>
+<div class="card ward-card"><strong>WARD G</strong><h3>Irewe</h3><span class="tag">9 Campaign Planning PUs</span><p>INEC Registration Area 07. Centre: Osolu Secondary School, Irewe.</p></div>
+<div class="card ward-card"><strong>WARD H</strong><h3>Tafi</h3><span class="tag">8 Campaign Planning PUs</span><p>INEC Registration Area 08. Centre: L.A. Primary School, Alagutan.</p></div>
+<div class="card ward-card"><strong>WARD I</strong><h3>Etegbin</h3><span class="tag">22 Campaign Planning PUs</span><p>INEC Registration Area 09. Centre: L.A. Primary School, Etegbin.</p></div>
+<div class="card ward-card"><strong>WARD J</strong><h3>Idolowu</h3><span class="tag">8 Campaign Planning PUs</span><p>INEC Registration Area 10. Centre: St. Mary Primary School, Idoluwo.</p></div>
+</div>
+</div>
+</section>
+
+<!-- DISCOVER OJO: COMPLETE 11-WARD DIRECTORY -->
+<section id="discover-ojo">
+<div class="container">
+<div class="discover-hero">
+<div class="discover-kicker">OUR LAND • OUR PEOPLE • OUR FUTURE</div>
+<h2>DISCOVER OJO</h2>
+<p>Explore the communities, people, heritage, enterprise and development opportunities that make Ojo an important part of Lagos State.</p>
+<a class="btn btn-gold" href="#ojo-wards">EXPLORE ALL 11 WARDS</a>
+</div>
+
+<div class="discover-intro">
+<h2 style="font-family:Montserrat;color:var(--green)">Welcome to Ojo, Lagos State</h2>
+<p>Ojo is a Local Government Area in the Lagos metropolitan region, with a diverse mix of urban neighbourhoods, traditional communities, commercial centres and riverine settlements. Its people, businesses, institutions and natural environment all contribute to the identity and development of Lagos.</p>
+<p>This section is designed as a growing community directory: a place to learn about Ojo, discover its wards and celebrate the people and places that make it home.</p>
+</div>
+
+<div class="discover-stats">
+<div class="discover-stat"><strong>11</strong><span>INEC REGISTRATION AREAS</span></div>
+<div class="discover-stat"><strong>2</strong><span>STATE ASSEMBLY CONSTITUENCIES</span></div>
+<div class="discover-stat"><strong>OJO</strong><span>ONE SHARED HOME</span></div>
+</div>
+
+<div class="section-head" id="ojo-wards">
+<small>EXPLORE OUR COMMUNITIES</small>
+<h2>All 11 Wards of Ojo</h2>
+<p>Ojo's 11 INEC Registration Areas are grouped below by their commonly recognised Lagos State House of Assembly constituency grouping.</p>
+</div>
+
+<div class="constituency-block">
+<div class="constituency-title">
+<h3>Ojo Constituency I</h3>
+<span>5 REGISTRATION AREAS</span>
+</div>
+<div class="discover-ward-grid">
+
+<article class="discover-ward">
+<div class="ward-code">01</div>
+<h4>Ojo Town</h4>
+<p>One of Ojo's principal urban communities and a key centre of local administration, commerce and everyday community life.</p>
+<div class="ward-meta">INEC CODE: 01</div>
+<div class="ward-meta">Registration centre: St. Michael's Primary School, Ojo Town</div>
+</article>
+
+<article class="discover-ward">
+<div class="ward-code">02</div>
+<h4>Okokomaiko</h4>
+<p>A major residential and commercial community within Ojo, with active trading, transport and neighbourhood activity.</p>
+<div class="ward-meta">INEC CODE: 02</div>
+<div class="ward-meta">Registration centre: FOA Primary School, Okokomaiko</div>
+</article>
+
+<article class="discover-ward">
+<div class="ward-code">03</div>
+<h4>Ajangbadi</h4>
+<p>A recognised Ojo community with established neighbourhoods, local enterprise and community institutions.</p>
+<div class="ward-meta">INEC CODE: 03</div>
+<div class="ward-meta">Registration centre: Aganju Aka Primary School, Ajangbadi</div>
+</article>
+
+<article class="discover-ward">
+<div class="ward-code">05</div>
+<h4>Iba</h4>
+<p>A community within Ojo with residential neighbourhoods, businesses and links to the wider Lagos metropolitan area.</p>
+<div class="ward-meta">INEC CODE: 05</div>
+<div class="ward-meta">Registration centre: L.A. Primary School, Iba</div>
+</article>
+
+<article class="discover-ward">
+<div class="ward-code">11</div>
+<h4>Sabo-Oniba</h4>
+<p>A recognised registration area within Ojo, with its own community identity and local development priorities.</p>
+<div class="ward-meta">INEC CODE: 11</div>
+<div class="ward-meta">Registration centre: Sabo-Oniba Primary School, Sabo</div>
+</article>
+
+</div>
+</div>
+
+<div class="constituency-block">
+<div class="constituency-title">
+<h3>Ojo Constituency II</h3>
+<span>6 REGISTRATION AREAS</span>
+</div>
+<div class="discover-ward-grid">
+
+<article class="discover-ward">
+<div class="ward-code">04</div>
+<h4>Ijanikin</h4>
+<p>An established community in Ojo with residential areas, schools, local businesses and connections to surrounding settlements.</p>
+<div class="ward-meta">INEC CODE: 04 • CAMPAIGN LABEL: WARD D</div>
+<div class="ward-meta">Centre: Anglican Primary School, Ijanikin</div>
+</article>
+
+<article class="discover-ward">
+<div class="ward-code">06</div>
+<h4>Ilogbo</h4>
+<p>A community with local trading, residential neighbourhoods and links to surrounding communities in Ojo.</p>
+<div class="ward-meta">INEC CODE: 06 • CAMPAIGN LABEL: WARD F</div>
+<div class="ward-meta">Centre: L.A. Primary School, Ilogbo</div>
+</article>
+
+<article class="discover-ward">
+<div class="ward-code">07</div>
+<h4>Irewe</h4>
+<p>A riverine community with a distinctive local identity and development priorities that include transport, access and public services.</p>
+<div class="ward-meta">INEC CODE: 07 • CAMPAIGN LABEL: WARD G</div>
+<div class="ward-meta">Centre: Osolu Secondary School, Irewe</div>
+</article>
+
+<article class="discover-ward">
+<div class="ward-code">08</div>
+<h4>Tafi</h4>
+<p>A community within the riverine area of Ojo, with local settlements and community needs that deserve visibility and attention.</p>
+<div class="ward-meta">INEC CODE: 08 • CAMPAIGN LABEL: WARD H</div>
+<div class="ward-meta">Centre: L.A. Primary School, Alagutan</div>
+</article>
+
+<article class="discover-ward">
+<div class="ward-code">09</div>
+<h4>Etegbin</h4>
+<p>A riverine community with a strong local identity, community networks and important needs around access, infrastructure and services.</p>
+<div class="ward-meta">INEC CODE: 09 • CAMPAIGN LABEL: WARD I</div>
+<div class="ward-meta">Centre: L.A. Primary School, Etegbin</div>
+</article>
+
+<article class="discover-ward">
+<div class="ward-code">10</div>
+<h4>Idolowu</h4>
+<p>A community in Ojo Constituency II with local institutions, residents and development priorities that form part of Ojo's wider story.</p>
+<div class="ward-meta">INEC CODE: 10 • CAMPAIGN LABEL: WARD J</div>
+<div class="ward-meta">Centre: St. Mary Primary School, Idoluwo</div>
+</article>
+
+</div>
+</div>
+
+<div class="section-head" style="margin-top:55px">
+<small>THE MANY SIDES OF OJO</small>
+<h2>Our People, Heritage and Opportunities</h2>
+<p>Ojo's story is bigger than its ward boundaries. These are important areas we can continue documenting together.</p>
+</div>
+
+<div class="discover-topic-grid">
+<div class="discover-topic">
+<div class="topic-icon">🏛️</div>
+<h3>History and Heritage</h3>
+<p>Document Ojo's history, Awori heritage, traditional institutions, community stories and the contributions of earlier generations.</p>
+</div>
+<div class="discover-topic">
+<div class="topic-icon">🎭</div>
+<h3>Culture and Traditions</h3>
+<p>Celebrate local customs, festivals, traditional music, food, crafts and cultural events across Ojo's communities.</p>
+</div>
+<div class="discover-topic">
+<div class="topic-icon">🏪</div>
+<h3>Markets and Businesses</h3>
+<p>Highlight markets, shops, traders, artisans, entrepreneurs and local businesses that contribute to Ojo's economy.</p>
+</div>
+<div class="discover-topic">
+<div class="topic-icon">🎓</div>
+<h3>Education and Skills</h3>
+<p>Build a directory of schools, learning centres, vocational opportunities and skills development initiatives.</p>
+</div>
+<div class="discover-topic">
+<div class="topic-icon">🌊</div>
+<h3>Riverine Communities</h3>
+<p>Recognise the identity and priorities of waterfront communities, including access, transport, water and essential services.</p>
+</div>
+<div class="discover-topic">
+<div class="topic-icon">🌱</div>
+<h3>Environment and Development</h3>
+<p>Document local concerns such as drainage, flooding, sanitation, roads, waste management and environmental protection.</p>
+</div>
+<div class="discover-topic">
+<div class="topic-icon">🏥</div>
+<h3>Healthcare</h3>
+<p>Showcase health facilities and identify areas where access to healthcare and community health services can improve.</p>
+</div>
+<div class="discover-topic">
+<div class="topic-icon">🚌</div>
+<h3>Transport and Connectivity</h3>
+<p>Explore the roads, waterways, transport links and access routes connecting Ojo's different communities.</p>
+</div>
+<div class="discover-topic">
+<div class="topic-icon">📸</div>
+<h3>Ojo Photo Archive</h3>
+<p>Create a growing collection of historical and modern photographs showing Ojo's people, landmarks, events and everyday life.</p>
+</div>
+</div>
+
+<div class="story-box">
+<h3>My Ojo, My Story</h3>
+<p>Do you have an old photograph, an important community story, information about a local landmark, or a development issue that deserves attention? We welcome contributions from residents and people with a connection to Ojo.</p>
+<p>Submissions will be reviewed before publication. Photographs and personal stories should only be shared with the contributor's permission.</p>
+<a class="btn btn-green" href="#ojo-story-form">SHARE YOUR OJO STORY</a>
+</div>
+</div>
+</section>
+
+<section id="ojo-story-form" style="background:var(--cream)">
+<div class="container">
+<div class="section-head">
+<small>HELP DOCUMENT OUR COMMUNITY</small>
+<h2>Share Your Ojo Story</h2>
+<p>Help us build a reliable community record of Ojo's history, people, places and development priorities.</p>
+</div>
+<form class="standard-form" id="ojoStoryForm">
+<div class="form-grid">
+<div><label>Your Name</label><input name="name" required placeholder="Your full name"></div>
+<div><label>Phone Number</label><input name="phone" placeholder="Phone number"></div>
+</div>
+<label>Ward or Community</label>
+<select name="ward" required>
+<option value="">Select a ward or community</option>
+<option>Ojo Town - Constituency I</option>
+<option>Okokomaiko - Constituency I</option>
+<option>Ajangbadi - Constituency I</option>
+<option>Iba - Constituency I</option>
+<option>Sabo-Oniba - Constituency I</option>
+<option>Ijanikin - Constituency II</option>
+<option>Ilogbo - Constituency II</option>
+<option>Irewe - Constituency II</option>
+<option>Tafi - Constituency II</option>
+<option>Etegbin - Constituency II</option>
+<option>Idolowu - Constituency II</option>
+<option>Other Ojo community</option>
+</select>
+<label>What would you like to share?</label>
+<select name="category" required>
+<option value="">Choose a category</option>
+<option>History and heritage</option>
+<option>Culture and traditions</option>
+<option>Community development story</option>
+<option>Local business or market</option>
+<option>Education or healthcare</option>
+<option>Infrastructure or environment</option>
+<option>Old photograph or archive</option>
+<option>Other community information</option>
+</select>
+<label>Your Story or Information</label>
+<textarea name="story" required placeholder="Tell us about the place, person, history or issue you want to share."></textarea>
+<button class="btn btn-green" type="submit">SEND MY OJO STORY</button>
+</form>
+<div class="notice" style="max-width:780px;margin:15px auto">
+This form opens WhatsApp with your submission. Please do not send private information or photographs of people without their permission.
 </div>
 </div>
 </section>
@@ -502,27 +841,27 @@ IMOLE 2027 <span>•</span> SERVICE <span>•</span> DEVELOPMENT <span>•</span
 <p>Six wards. One constituency. A complete grassroots structure.</p>
 </div>
 <div class="stats">
-<div class="stat"><strong>170</strong><span>TOTAL POLLING UNITS</span></div>
+<div class="stat"><strong>170</strong><span>TOTAL CAMPAIGN PLANNING UNITS</span></div>
 <div class="stat"><strong>80</strong><span>WARD F • ILOGBO</span></div>
 <div class="stat"><strong>43</strong><span>WARD D • IJANIKIN</span></div>
 <div class="stat"><strong>47</strong><span>OTHER FOUR WARDS</span></div>
 </div>
 <div class="table-wrap">
 <table>
-<thead><tr><th>Ward</th><th>Community</th><th>Polling Units</th><th>Registration Centre</th></tr></thead>
+<thead><tr><th>Campaign Ward</th><th>Community</th><th>Campaign Planning Units</th><th>Registration Centre</th></tr></thead>
 <tbody>
-<tr><td>D</td><td>Ijanikin</td><td>43</td><td>Anglican Primary School</td></tr>
-<tr><td>F</td><td>Ilogbo</td><td>80</td><td>L.A. Primary School</td></tr>
-<tr><td>G</td><td>Irewe</td><td>9</td><td>Osolu Secondary School</td></tr>
-<tr><td>H</td><td>Tafi</td><td>8</td><td>L.A. Primary School, Alagutan</td></tr>
-<tr><td>I</td><td>Etegbin</td><td>22</td><td>L.A. Primary School</td></tr>
-<tr><td>J</td><td>Idolowu</td><td>8</td><td>St. Mary Primary School</td></tr>
-<tr class="total-row"><td colspan="2">TOTAL</td><td>170</td><td>Six Wards</td></tr>
+<tr><td>D (INEC 04)</td><td>Ijanikin</td><td>43</td><td>Anglican Primary School</td></tr>
+<tr><td>F (INEC 06)</td><td>Ilogbo</td><td>80</td><td>L.A. Primary School</td></tr>
+<tr><td>G (INEC 07)</td><td>Irewe</td><td>9</td><td>Osolu Secondary School</td></tr>
+<tr><td>H (INEC 08)</td><td>Tafi</td><td>8</td><td>L.A. Primary School, Alagutan</td></tr>
+<tr><td>I (INEC 09)</td><td>Etegbin</td><td>22</td><td>L.A. Primary School</td></tr>
+<tr><td>J (INEC 10)</td><td>Idolowu</td><td>8</td><td>St. Mary Primary School</td></tr>
+<tr class="total-row"><td colspan="2">TOTAL</td><td>170</td><td>Six Campaign Wards</td></tr>
 </tbody>
 </table>
 </div>
 <div class="notice" style="margin-top:20px">
-Our campaign organisation target is 170 polling units across the six wards. These are campaign planning figures and should be checked against the official INEC polling-unit register.
+The 170 figure is the campaign's planning and coverage target supplied for this website. It is not presented as the official INEC polling-unit total. Confirm the current polling-unit register and any changes with INEC before using these figures for election administration.
 </div>
 <div class="card" style="margin-top:20px">
 <h3>Polling Unit Agent Registration</h3>
@@ -773,6 +1112,7 @@ Submitting the form opens WhatsApp with your information for the campaign team. 
 <h3>IMOLE 2027</h3>
 <p>Official campaign platform of Hon. Nurudeen Abayomi Sadeeq for Lagos State House of Assembly, Ojo Constituency II.</p>
 <p>Service • Development • Accountability</p>
+<p><strong>Discover Ojo:</strong><br>Celebrating the communities, people, heritage and opportunities of Ojo Local Government Area.</p>
 <p><strong>Campaign Office:</strong><br>1 Sibe Sibe Bus Stop, Etegbin Odo Road, Etegbin Town, Ojo, Lagos State.</p>
 <p><strong>Email:</strong><br><a href="mailto:nurudeenabayomisadeeq@gmail.com">nurudeenabayomisadeeq@gmail.com</a></p>
 </div>
@@ -784,6 +1124,7 @@ Submitting the form opens WhatsApp with your information for the campaign team. 
 <a href="#candidate-profiles">Meet Our Candidates</a>
 <a href="#team">Campaign Council</a>
 <a href="#wards">Our Wards</a>
+<a href="#discover-ojo">Discover Ojo</a>
 <a href="#tracker">Polling Units</a>
 <a href="#results">Results Centre</a>
 </div>
@@ -791,6 +1132,7 @@ Submitting the form opens WhatsApp with your information for the campaign team. 
 <h3>GET INVOLVED</h3>
 <a href="#volunteer">Volunteer</a>
 <a href="#needs">Community Needs</a>
+<a href="#ojo-story-form">Share Your Ojo Story</a>
 <a href="#events">Campaign Events</a>
 <a href="#news">Political News</a>
 <a href="#media">Campaign Music</a>
@@ -858,8 +1200,10 @@ const url="https://wa.me/"+CAMPAIGN_WHATSAPP+"?text="+encodeURIComponent(message
 window.open(url,"_blank","noopener,noreferrer");
 });
 }
+
 sendCampaignForm("needsForm","IMOLE 2027 COMMUNITY NEEDS SUBMISSION");
 sendCampaignForm("volunteerForm","IMOLE 2027 VOLUNTEER REGISTRATION");
+sendCampaignForm("ojoStoryForm","DISCOVER OJO - COMMUNITY STORY SUBMISSION");
 
 /* AUTOMATIC NEWS FEED */
 const newsFeed=document.getElementById("newsFeed");
