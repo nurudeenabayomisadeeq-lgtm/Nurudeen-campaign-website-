@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-NG">
 <head>
@@ -136,6 +135,29 @@ nav a:hover{color:var(--gold)}
 .topic{background:white;border:1px solid var(--border);border-radius:9px;padding:18px}
 .topic h3{font-size:15px;color:var(--green);margin-bottom:6px}
 .topic p{font-size:12px}
+
+/* 2023 ELECTORAL STATISTICS */
+.electoral-section{background:#fff}
+.electoral-intro{max-width:850px;margin:0 auto 25px;text-align:center}
+.electoral-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:25px 0}
+.electoral-summary-card{background:var(--light);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:center}
+.electoral-summary-card strong{display:block;color:var(--green);font-family:Montserrat,sans-serif;font-size:clamp(24px,4vw,34px);font-weight:900}
+.electoral-summary-card span{font-size:10px;font-weight:800;letter-spacing:.7px;color:#59665f}
+.electoral-table-wrap{width:100%;overflow-x:auto;border:1px solid var(--border);border-radius:10px;box-shadow:var(--shadow);background:white}
+.electoral-table{width:100%;border-collapse:collapse;min-width:650px;text-align:left}
+.electoral-table th{background:var(--deep);color:white;padding:15px;font-size:11px;letter-spacing:.5px}
+.electoral-table td{padding:14px 15px;border-bottom:1px solid var(--border);font-size:13px}
+.electoral-table tbody tr:nth-child(even){background:#f7faf7}
+.electoral-table tbody tr:hover{background:#edf5ef}
+.electoral-table .total-row{background:#eaf3ed;font-weight:900;color:var(--green)}
+.electoral-table .total-row td{border-top:2px solid var(--gold);border-bottom:0}
+.electoral-table td:nth-child(3),.electoral-table td:nth-child(4),.electoral-table th:nth-child(3),.electoral-table th:nth-child(4){text-align:right;font-variant-numeric:tabular-nums}
+.electoral-note{margin-top:22px}
+.electoral-note strong{color:#51462d}
+.electoral-explanation{font-size:12px;margin-top:14px;background:#f4f7f3;border-radius:8px;padding:16px}
+.electoral-explanation h3{font-size:14px;color:var(--green);margin-bottom:6px}
+.electoral-explanation p{font-size:12px}
+
 .standard{max-width:750px;margin:auto;background:white;border:1px solid var(--border);border-radius:12px;padding:25px;box-shadow:var(--shadow)}
 .standard label,.results-box label{display:block;font-size:12px;font-weight:800;margin:12px 0 5px}
 input,select,textarea{width:100%;border:1px solid #d7e0d9;border-radius:6px;padding:12px;background:white;outline:none}
@@ -191,7 +213,7 @@ section{padding:55px 0}
 .people{grid-template-columns:repeat(2,1fr)}
 .person img{height:180px}
 .candidate img{height:280px}
-.discover-stats{grid-template-columns:1fr}
+.discover-stats,.electoral-summary{grid-template-columns:1fr}
 .results-form-grid,.form-grid{grid-template-columns:1fr}
 .full{grid-column:auto}
 .results-box,.standard{padding:17px}
@@ -219,7 +241,9 @@ section{padding:55px 0}
 <a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#manifesto">MANIFESTO</a>
 <a href="#leaders">LEADERS</a><a href="#candidate-profiles">CANDIDATES</a>
 <a href="#team">CAMPAIGN COUNCIL</a><a href="#wards">OUR WARDS</a>
-<a href="#discover-ojo">DISCOVER OJO</a><a href="#flyer-gallery">FLYER GALLERY</a>
+<a href="#discover-ojo">DISCOVER OJO</a>
+<a href="#electoral-statistics">2023 STATISTICS</a>
+<a href="#flyer-gallery">FLYER GALLERY</a>
 <a href="#tracker">POLLING UNITS</a><a href="#results">RESULTS</a>
 <a href="#events">EVENTS</a><a href="#news">NEWS</a><a href="#media">MEDIA</a>
 <a href="#volunteer">JOIN US</a><a href="#contact">CONTACT</a>
@@ -414,6 +438,101 @@ section{padding:55px 0}
 </div>
 </section>
 
+<!-- 2023 HISTORICAL ELECTORAL STATISTICS -->
+<section class="electoral-section" id="electoral-statistics">
+<div class="container">
+<div class="section-head">
+<small>OJO CONSTITUENCY II • HISTORICAL DATA</small>
+<h2>2023 Electoral Statistics</h2>
+<p>A ward-by-ward presentation of the historical registered-voter figures currently available for constituency planning.</p>
+</div>
+
+<div class="electoral-intro">
+<p>The table below presents the provisional 2023 working figures for the six wards of Ojo Constituency II. It is provided as a historical reference for planning and information.</p>
+</div>
+
+<div class="electoral-summary">
+<div class="electoral-summary-card">
+<strong>6</strong>
+<span>WARDS COVERED</span>
+</div>
+<div class="electoral-summary-card">
+<strong>170</strong>
+<span>CAMPAIGN PLANNING POLLING UNITS</span>
+</div>
+<div class="electoral-summary-card">
+<strong>94,718</strong>
+<span>PROVISIONAL REGISTERED VOTERS</span>
+</div>
+</div>
+
+<div class="electoral-table-wrap">
+<table class="electoral-table">
+<thead>
+<tr>
+<th>Ward</th>
+<th>Ward Code</th>
+<th>Polling Units</th>
+<th>Registered Voters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ijanikin</td>
+<td>24/17/04</td>
+<td>43</td>
+<td>22,986</td>
+</tr>
+<tr>
+<td>Ilogbo</td>
+<td>24/17/06</td>
+<td>80</td>
+<td>47,378</td>
+</tr>
+<tr>
+<td>Irewe</td>
+<td>24/17/07</td>
+<td>9</td>
+<td>4,041</td>
+</tr>
+<tr>
+<td>Tafi</td>
+<td>24/17/08</td>
+<td>8</td>
+<td>2,680</td>
+</tr>
+<tr>
+<td>Etegbin</td>
+<td>24/17/09</td>
+<td>22</td>
+<td>13,344</td>
+</tr>
+<tr>
+<td>Idolowu (Idoluwo)</td>
+<td>24/17/10</td>
+<td>8</td>
+<td>4,289</td>
+</tr>
+<tr class="total-row">
+<td colspan="2">TOTAL</td>
+<td>170</td>
+<td>94,718</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="notice electoral-note">
+<strong>Data qualification:</strong> These figures are a provisional historical working dataset supplied for IMOLE 2027 constituency planning. They have not yet been independently certified against an official INEC document. They should not be interpreted as current registration figures, PVC collection figures or election turnout.
+</div>
+
+<div class="electoral-explanation">
+<h3>Understanding the electoral figures</h3>
+<p><strong>Registered voters</strong> are people listed on the voter register. <strong>PVC collection</strong> refers to the collection of Permanent Voter Cards by registered voters. <strong>Accredited voters and turnout</strong> refer to voters who actually participate in an election. <strong>Valid votes</strong> and <strong>rejected ballots</strong> are separate election-result measures. These figures must not be treated as interchangeable.</p>
+</div>
+</div>
+</section>
+
 <section id="tracker">
 <div class="container">
 <div class="section-head"><small>IMOLE FIELD ORGANISATION</small><h2>Polling Units Directory</h2><p>Find a polling unit and confirm its ward using the campaign directory.</p></div>
@@ -526,6 +645,8 @@ section{padding:55px 0}
 <h3>QUICK LINKS</h3>
 <a href="#about">About the Candidate</a><a href="#manifesto">Manifesto</a>
 <a href="#candidate-profiles">Our Candidates</a><a href="#wards">Our Wards</a>
+<a href="#discover-ojo">Discover Ojo</a>
+<a href="#electoral-statistics">2023 Electoral Statistics</a>
 <a href="#flyer-gallery">Flyer Gallery</a><a href="#results">Polling Unit Reporting</a>
 </div>
 <div>
