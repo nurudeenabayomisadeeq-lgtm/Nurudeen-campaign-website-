@@ -67,8 +67,6 @@ nav a:hover{color:var(--gold)}
 .promo-rotator{font-weight:900;color:var(--green);font-size:13px;letter-spacing:1px;margin-top:12px}
 .promo-rotator span{display:none}
 .promo-rotator span:first-child{display:inline}
-
-/* FLYER SLIDESHOW */
 .flyer-showcase{background:#f5f8f4;padding:55px 0}
 .flyer-slider{position:relative;max-width:850px;margin:auto;background:var(--deep);border-radius:15px;padding:14px;box-shadow:var(--shadow)}
 .flyer-slide{display:none;text-align:center}
@@ -83,8 +81,6 @@ nav a:hover{color:var(--gold)}
 .flyer-dot{width:11px;height:11px;border:0;border-radius:50%;background:#b7c6bc;cursor:pointer}
 .flyer-dot.active{background:var(--gold);transform:scale(1.25)}
 .flyer-note{text-align:center;font-size:12px;margin-top:12px}
-
-/* GALLERY */
 .flyer-gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .flyer-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:white;box-shadow:var(--shadow)}
 .flyer-card img{width:100%;height:350px;object-fit:contain;background:#f3f5f2;padding:8px;cursor:zoom-in}
@@ -98,7 +94,6 @@ nav a:hover{color:var(--gold)}
 .lightbox-close{position:absolute;top:12px;right:22px;border:0;background:transparent;color:white;font-size:40px;cursor:pointer}
 .lightbox-download{display:inline-block;margin-top:15px;background:var(--gold);color:var(--deep);padding:11px 20px;border-radius:7px;font-size:12px;font-weight:900}
 .lightbox-caption{color:white;margin-top:10px;font-size:13px}
-
 .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:45px}
 .about-photo img{width:100%;height:420px;object-fit:cover;object-position:top;border-radius:12px;box-shadow:var(--shadow)}
 .values{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
@@ -135,8 +130,6 @@ nav a:hover{color:var(--gold)}
 .topic{background:white;border:1px solid var(--border);border-radius:9px;padding:18px}
 .topic h3{font-size:15px;color:var(--green);margin-bottom:6px}
 .topic p{font-size:12px}
-
-/* 2023 ELECTORAL STATISTICS */
 .electoral-section{background:#fff}
 .electoral-intro{max-width:850px;margin:0 auto 25px;text-align:center}
 .electoral-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:25px 0}
@@ -157,7 +150,6 @@ nav a:hover{color:var(--gold)}
 .electoral-explanation{font-size:12px;margin-top:14px;background:#f4f7f3;border-radius:8px;padding:16px}
 .electoral-explanation h3{font-size:14px;color:var(--green);margin-bottom:6px}
 .electoral-explanation p{font-size:12px}
-
 .standard{max-width:750px;margin:auto;background:white;border:1px solid var(--border);border-radius:12px;padding:25px;box-shadow:var(--shadow)}
 .standard label,.results-box label{display:block;font-size:12px;font-weight:800;margin:12px 0 5px}
 input,select,textarea{width:100%;border:1px solid #d7e0d9;border-radius:6px;padding:12px;background:white;outline:none}
@@ -191,7 +183,6 @@ footer .footer-grid>div>a:not(.brand){display:block;margin:9px 0}
 footer .brand{color:white}
 .copy{border-top:1px solid #ffffff20;margin-top:30px;padding-top:18px;text-align:center;font-size:11px;color:#b9c9bf}
 .float-wa{position:fixed;right:18px;bottom:18px;z-index:999;background:#168b50;color:white;padding:13px 18px;border-radius:30px;font-size:11px;font-weight:900;box-shadow:0 5px 20px #0003}
-
 @media(max-width:950px){
 nav{display:none;position:absolute;top:100%;left:0;width:100%;background:white;padding:18px;box-shadow:var(--shadow);flex-direction:column;align-items:flex-start;max-height:75vh;overflow:auto}
 nav.show{display:flex}
@@ -241,12 +232,10 @@ section{padding:55px 0}
 <a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#manifesto">MANIFESTO</a>
 <a href="#leaders">LEADERS</a><a href="#candidate-profiles">CANDIDATES</a>
 <a href="#team">CAMPAIGN COUNCIL</a><a href="#wards">OUR WARDS</a>
-<a href="#discover-ojo">DISCOVER OJO</a>
-<a href="#electoral-statistics">2023 STATISTICS</a>
-<a href="#flyer-gallery">FLYER GALLERY</a>
-<a href="#tracker">POLLING UNITS</a><a href="#results">RESULTS</a>
-<a href="#events">EVENTS</a><a href="#news">NEWS</a><a href="#media">MEDIA</a>
-<a href="#volunteer">JOIN US</a><a href="#contact">CONTACT</a>
+<a href="#discover-ojo">DISCOVER OJO</a><a href="#electoral-statistics">2023 STATISTICS</a>
+<a href="#flyer-gallery">FLYER GALLERY</a><a href="#tracker">POLLING UNITS</a>
+<a href="#results">RESULTS</a><a href="#events">EVENTS</a><a href="#news">NEWS</a>
+<a href="#media">MEDIA</a><a href="#volunteer">JOIN US</a><a href="#contact">CONTACT</a>
 </nav>
 </div>
 </header>
@@ -272,16 +261,15 @@ section{padding:55px 0}
 </div>
 </section>
 
-<!-- HOMEPAGE FLYER SLIDESHOW -->
 <section class="flyer-showcase" id="flyer-slideshow">
 <div class="container">
 <div class="section-head"><small>IMOLE 2027 CAMPAIGN MATERIALS</small><h2>Our Campaign Flyers</h2><p>Explore our campaign messages, vision and commitment to a better and greater Ojo.</p></div>
 <div class="flyer-slider">
 <div class="flyer-slide active"><img src="assets/Flyer1.jpg" alt="IMOLE 2027 Flyer 1" data-flyer="0"><div class="flyer-caption">IMOLE 2027 • CAMPAIGN FLYER 1</div></div>
 <div class="flyer-slide"><img src="assets/Flyer2.jpg" alt="IMOLE 2027 Flyer 2" data-flyer="1"><div class="flyer-caption">IMOLE 2027 • CAMPAIGN FLYER 2</div></div>
-<div class="flyer-slide"><img src="assets/flyer3.jpg" alt="IMOLE 2027 Flyer 3" data-flyer="2"><div class="flyer-caption">IMOLE 2027 • CAMPAIGN FLYER 3</div></div>
+<div class="flyer-slide"><img src="assets/Flyer3.jpg" alt="IMOLE 2027 Flyer 3" data-flyer="2"><div class="flyer-caption">IMOLE 2027 • CAMPAIGN FLYER 3</div></div>
 <div class="flyer-slide"><img src="assets/Flyer4.jpg" alt="IMOLE 2027 Flyer 4" data-flyer="3"><div class="flyer-caption">IMOLE 2027 • CAMPAIGN FLYER 4</div></div>
-<div class="flyer-slide"><img src="assets/flyer5.jpg" alt="IMOLE 2027 Flyer 5" data-flyer="4"><div class="flyer-caption">IMOLE 2027 • CAMPAIGN FLYER 5</div></div>
+<div class="flyer-slide"><img src="assets/Flyer5.jpg" alt="IMOLE 2027 Flyer 5" data-flyer="4"><div class="flyer-caption">IMOLE 2027 • CAMPAIGN FLYER 5</div></div>
 <button class="flyer-arrow flyer-prev" id="flyerPrev" aria-label="Previous flyer">‹</button>
 <button class="flyer-arrow flyer-next" id="flyerNext" aria-label="Next flyer">›</button>
 </div>
@@ -312,21 +300,19 @@ section{padding:55px 0}
 </div>
 </section>
 
-<!-- FULL FLYER GALLERY -->
 <section class="flyer-gallery" id="flyer-gallery">
 <div class="container">
 <div class="section-head"><small>IMOLE 2027 MEDIA CENTRE</small><h2>Campaign Flyer Gallery</h2><p>View, enlarge and download our five campaign flyers.</p></div>
 <div class="flyer-gallery-grid">
 <div class="flyer-card"><img src="assets/Flyer1.jpg" alt="Campaign flyer 1" data-flyer="0"><div class="flyer-card-copy"><h3>IMOLE 2027 — Flyer 1</h3><button class="btn btn-green enlarge-flyer" data-flyer="0">ENLARGE FLYER</button><a class="btn btn-gold" href="assets/Flyer1.jpg" download="IMOLE-2027-Flyer-1.jpg">DOWNLOAD</a></div></div>
 <div class="flyer-card"><img src="assets/Flyer2.jpg" alt="Campaign flyer 2" data-flyer="1"><div class="flyer-card-copy"><h3>IMOLE 2027 — Flyer 2</h3><button class="btn btn-green enlarge-flyer" data-flyer="1">ENLARGE FLYER</button><a class="btn btn-gold" href="assets/Flyer2.jpg" download="IMOLE-2027-Flyer-2.jpg">DOWNLOAD</a></div></div>
-<div class="flyer-card"><img src="assets/flyer3.jpg" alt="Campaign flyer 3" data-flyer="2"><div class="flyer-card-copy"><h3>IMOLE 2027 — Flyer 3</h3><button class="btn btn-green enlarge-flyer" data-flyer="2">ENLARGE FLYER</button><a class="btn btn-gold" href="assets/flyer3.jpg" download="IMOLE-2027-Flyer-3.jpg">DOWNLOAD</a></div></div>
+<div class="flyer-card"><img src="assets/Flyer3.jpg" alt="Campaign flyer 3" data-flyer="2"><div class="flyer-card-copy"><h3>IMOLE 2027 — Flyer 3</h3><button class="btn btn-green enlarge-flyer" data-flyer="2">ENLARGE FLYER</button><a class="btn btn-gold" href="assets/Flyer3.jpg" download="IMOLE-2027-Flyer-3.jpg">DOWNLOAD</a></div></div>
 <div class="flyer-card"><img src="assets/Flyer4.jpg" alt="Campaign flyer 4" data-flyer="3"><div class="flyer-card-copy"><h3>IMOLE 2027 — Flyer 4</h3><button class="btn btn-green enlarge-flyer" data-flyer="3">ENLARGE FLYER</button><a class="btn btn-gold" href="assets/Flyer4.jpg" download="IMOLE-2027-Flyer-4.jpg">DOWNLOAD</a></div></div>
-<div class="flyer-card"><img src="assets/flyer5.jpg" alt="Campaign flyer 5" data-flyer="4"><div class="flyer-card-copy"><h3>IMOLE 2027 — Flyer 5</h3><button class="btn btn-green enlarge-flyer" data-flyer="4">ENLARGE FLYER</button><a class="btn btn-gold" href="assets/flyer5.jpg" download="IMOLE-2027-Flyer-5.jpg">DOWNLOAD</a></div></div>
+<div class="flyer-card"><img src="assets/Flyer5.jpg" alt="Campaign flyer 5" data-flyer="4"><div class="flyer-card-copy"><h3>IMOLE 2027 — Flyer 5</h3><button class="btn btn-green enlarge-flyer" data-flyer="4">ENLARGE FLYER</button><a class="btn btn-gold" href="assets/Flyer5.jpg" download="IMOLE-2027-Flyer-5.jpg">DOWNLOAD</a></div></div>
 </div>
 </div>
 </section>
 
-<!-- FLYER IMAGE ENLARGEMENT -->
 <div class="flyer-lightbox" id="flyerLightbox" role="dialog" aria-modal="true" aria-label="Enlarged campaign flyer">
 <button class="lightbox-close" id="closeLightbox" aria-label="Close">×</button>
 <div class="lightbox-content">
@@ -438,7 +424,6 @@ section{padding:55px 0}
 </div>
 </section>
 
-<!-- 2023 HISTORICAL ELECTORAL STATISTICS -->
 <section class="electoral-section" id="electoral-statistics">
 <div class="container">
 <div class="section-head">
@@ -446,86 +431,29 @@ section{padding:55px 0}
 <h2>2023 Electoral Statistics</h2>
 <p>A ward-by-ward presentation of the historical registered-voter figures currently available for constituency planning.</p>
 </div>
-
 <div class="electoral-intro">
 <p>The table below presents the provisional 2023 working figures for the six wards of Ojo Constituency II. It is provided as a historical reference for planning and information.</p>
 </div>
-
 <div class="electoral-summary">
-<div class="electoral-summary-card">
-<strong>6</strong>
-<span>WARDS COVERED</span>
+<div class="electoral-summary-card"><strong>6</strong><span>WARDS COVERED</span></div>
+<div class="electoral-summary-card"><strong>170</strong><span>CAMPAIGN PLANNING POLLING UNITS</span></div>
+<div class="electoral-summary-card"><strong>94,718</strong><span>PROVISIONAL REGISTERED VOTERS</span></div>
 </div>
-<div class="electoral-summary-card">
-<strong>170</strong>
-<span>CAMPAIGN PLANNING POLLING UNITS</span>
-</div>
-<div class="electoral-summary-card">
-<strong>94,718</strong>
-<span>PROVISIONAL REGISTERED VOTERS</span>
-</div>
-</div>
-
 <div class="electoral-table-wrap">
 <table class="electoral-table">
-<thead>
-<tr>
-<th>Ward</th>
-<th>Ward Code</th>
-<th>Polling Units</th>
-<th>Registered Voters</th>
-</tr>
-</thead>
+<thead><tr><th>Ward</th><th>Ward Code</th><th>Polling Units</th><th>Registered Voters</th></tr></thead>
 <tbody>
-<tr>
-<td>Ijanikin</td>
-<td>24/17/04</td>
-<td>43</td>
-<td>22,986</td>
-</tr>
-<tr>
-<td>Ilogbo</td>
-<td>24/17/06</td>
-<td>80</td>
-<td>47,378</td>
-</tr>
-<tr>
-<td>Irewe</td>
-<td>24/17/07</td>
-<td>9</td>
-<td>4,041</td>
-</tr>
-<tr>
-<td>Tafi</td>
-<td>24/17/08</td>
-<td>8</td>
-<td>2,680</td>
-</tr>
-<tr>
-<td>Etegbin</td>
-<td>24/17/09</td>
-<td>22</td>
-<td>13,344</td>
-</tr>
-<tr>
-<td>Idolowu (Idoluwo)</td>
-<td>24/17/10</td>
-<td>8</td>
-<td>4,289</td>
-</tr>
-<tr class="total-row">
-<td colspan="2">TOTAL</td>
-<td>170</td>
-<td>94,718</td>
-</tr>
+<tr><td>Ijanikin</td><td>24/17/04</td><td>43</td><td>22,986</td></tr>
+<tr><td>Ilogbo</td><td>24/17/06</td><td>80</td><td>47,378</td></tr>
+<tr><td>Irewe</td><td>24/17/07</td><td>9</td><td>4,041</td></tr>
+<tr><td>Tafi</td><td>24/17/08</td><td>8</td><td>2,680</td></tr>
+<tr><td>Etegbin</td><td>24/17/09</td><td>22</td><td>13,344</td></tr>
+<tr><td>Idolowu (Idoluwo)</td><td>24/17/10</td><td>8</td><td>4,289</td></tr>
+<tr class="total-row"><td colspan="2">TOTAL</td><td>170</td><td>94,718</td></tr>
 </tbody>
 </table>
 </div>
-
-<div class="notice electoral-note">
-<strong>Data qualification:</strong> These figures are a provisional historical working dataset supplied for IMOLE 2027 constituency planning. They have not yet been independently certified against an official INEC document. They should not be interpreted as current registration figures, PVC collection figures or election turnout.
-</div>
-
+<div class="notice electoral-note"><strong>Data qualification:</strong> These figures are a provisional historical working dataset supplied for IMOLE 2027 constituency planning. They have not yet been independently certified against an official INEC document. They should not be interpreted as current registration figures, PVC collection figures or election turnout.</div>
 <div class="electoral-explanation">
 <h3>Understanding the electoral figures</h3>
 <p><strong>Registered voters</strong> are people listed on the voter register. <strong>PVC collection</strong> refers to the collection of Permanent Voter Cards by registered voters. <strong>Accredited voters and turnout</strong> refer to voters who actually participate in an election. <strong>Valid votes</strong> and <strong>rejected ballots</strong> are separate election-result measures. These figures must not be treated as interchangeable.</p>
@@ -643,11 +571,14 @@ section{padding:55px 0}
 </div>
 <div>
 <h3>QUICK LINKS</h3>
-<a href="#about">About the Candidate</a><a href="#manifesto">Manifesto</a>
-<a href="#candidate-profiles">Our Candidates</a><a href="#wards">Our Wards</a>
+<a href="#about">About the Candidate</a>
+<a href="#manifesto">Manifesto</a>
+<a href="#candidate-profiles">Our Candidates</a>
+<a href="#wards">Our Wards</a>
 <a href="#discover-ojo">Discover Ojo</a>
 <a href="#electoral-statistics">2023 Electoral Statistics</a>
-<a href="#flyer-gallery">Flyer Gallery</a><a href="#results">Polling Unit Reporting</a>
+<a href="#flyer-gallery">Flyer Gallery</a>
+<a href="#results">Polling Unit Reporting</a>
 </div>
 <div>
 <h3>CONTACT US</h3>
@@ -712,13 +643,14 @@ rotatingMessages[rotatingIndex].style.display="inline";
 },3000);
 }
 
-/* FIVE-FLYER SLIDESHOW */
+/* FIVE-FLYER SLIDESHOW
+   Exact GitHub filenames: capital F in every filename. */
 const flyerFiles=[
 "assets/Flyer1.jpg",
 "assets/Flyer2.jpg",
-"assets/flyer3.jpg",
+"assets/Flyer3.jpg",
 "assets/Flyer4.jpg",
-"assets/flyer5.jpg"
+"assets/Flyer5.jpg"
 ];
 
 const flyerSlides=document.querySelectorAll(".flyer-slide");
